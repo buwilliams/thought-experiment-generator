@@ -134,6 +134,12 @@ async fn main() -> Result<()> {
     if cli.read || cli.show.is_some() {
         let cached = teg::cache::load_tree_state(&topic)
             .ok_or_else(|| anyhow::anyhow!("No cached results found for this topic. Run without --read first."))?;
+
+        // Ensure summary.md exists
+        if cached.phase == teg::cache::TreePhase::Done {
+            let _ = teg::cache::save_summary(&topic, &cached);
+        }
+
         let tree = teg::engine::tree_runner::build_tree(
             &topic, cached.draw_pool, cached.branches, vec![],
         )?;
