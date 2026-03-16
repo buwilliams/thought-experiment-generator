@@ -83,6 +83,10 @@ pub struct Cli {
     /// Read cached results and display without running
     #[arg(long, default_value_t = false)]
     pub read: bool,
+
+    /// Show full details for a specific node (e.g. --show 3.5 for branch 3, depth 5)
+    #[arg(long)]
+    pub show: Option<String>,
 }
 
 #[tokio::main]
@@ -127,23 +131,21 @@ async fn main() -> Result<()> {
         anyhow::bail!("Topic cannot be empty");
     }
 
-    if cli.read {
-        match teg::cache::load_tree_state(&topic) {
-            Some(cached) => {
-                let tree = teg::engine::tree_runner::build_tree(
-                    &topic, cached.draw_pool, cached.branches, vec![],
-                )?;
-                if cli.output == "json" {
-                    println!("{}", serde_json::to_string_pretty(&tree.branches)?);
-                } else {
-                    print_results(&tree);
-                }
-                return Ok(());
-            }
-            None => {
-                anyhow::bail!("No cached results found for this topic. Run without --read first.");
-            }
+    if cli.read || cli.show.is_some() {
+        let cached = teg::cache::load_tree_state(&topic)
+            .ok_or_else(|| anyhow::anyhow!("No cached results found for this topic. Run without --read first."))?;
+        let tree = teg::engine::tree_runner::build_tree(
+            &topic, cached.draw_pool, cached.branches, vec![],
+        )?;
+
+        if let Some(key) = &cli.show {
+            print_node_detail(&tree, key)?;
+        } else if cli.output == "json" {
+            println!("{}", serde_json::to_string_pretty(&tree.branches)?);
+        } else {
+            print_results(&tree);
         }
+        return Ok(());
     }
 
     if cli.fresh {
@@ -189,50 +191,92 @@ fn node_title(node: &teg::types::Node) -> String {
 }
 
 fn print_results(tree: &Tree) {
-    let total_nodes: usize = tree.branches.iter().map(|b| b.nodes.len()).sum();
-
-    println!("\n{}", "=".repeat(60));
-    println!("RESULTS\n");
-
     if tree.branches.is_empty() {
-        println!("No branches completed.");
+        println!("\nNo branches completed.");
         return;
     }
 
+    // Collect all nodes with their branch index
+    let mut all_nodes: Vec<(usize, &teg::types::Node)> = tree
+        .branches
+        .iter()
+        .enumerate()
+        .flat_map(|(bi, b)| b.nodes.iter().map(move |n| (bi + 1, n)))
+        .collect();
+
+    all_nodes.sort_by(|a, b| {
+        b.1.deutsch_score
+            .overall_score
+            .partial_cmp(&a.1.deutsch_score.overall_score)
+            .unwrap()
+    });
+
+    let total_nodes: usize = tree.branches.iter().map(|b| b.nodes.len()).sum();
     println!(
-        "{} branches, {} thought experiments, {} novel quads\n",
+        "\n{} branches, {} thought experiments, {} novel quads\n",
         tree.branches.len(),
         total_nodes,
         tree.draw_pool.novel.len()
     );
 
-    // Top 3 as compact chains
-    for (i, branch_id) in tree.top_trajectories.iter().enumerate() {
-        let branch = match tree.branches.iter().find(|b| &b.id == branch_id) {
-            Some(b) => b,
-            None => continue,
-        };
+    println!("{:<8} {:<8} {}", "Key", "Score", "Title");
+    println!("{}", "-".repeat(70));
 
-        let traj = branch.trajectory_score.unwrap_or(0.0);
-        println!("#{} (score {:.2}): {}", i + 1, traj,
-            branch.nodes.iter()
-                .map(|n| node_title(n))
-                .collect::<Vec<_>>()
-                .join(" -> "));
-    }
-
-    // Best single node
-    let best_node = tree.branches.iter()
-        .flat_map(|b| b.nodes.iter())
-        .max_by(|a, b| a.deutsch_score.overall_score.partial_cmp(&b.deutsch_score.overall_score).unwrap());
-
-    if let Some(node) = best_node {
+    for (branch_idx, node) in &all_nodes {
+        let key = format!("{}.{}", branch_idx, node.depth);
+        let title = node_title(node);
         println!(
-            "\nBest single score: {:.2} — {}",
-            node.deutsch_score.overall_score,
-            node_title(node)
+            "{:<8} {:<8.2} {}",
+            key, node.deutsch_score.overall_score, title
         );
     }
 
-    println!("\nUse --read --output json for full details.");
+    println!("\nUse --show <key> to see full details, e.g. --show 1.5");
+}
+
+fn print_node_detail(tree: &Tree, key: &str) -> anyhow::Result<()> {
+    let parts: Vec<&str> = key.split('.').collect();
+    if parts.len() != 2 {
+        anyhow::bail!("Invalid key format. Use <branch>.<depth>, e.g. 3.5");
+    }
+
+    let branch_idx: usize = parts[0]
+        .parse::<usize>()
+        .map_err(|_| anyhow::anyhow!("Invalid branch number"))?;
+    let depth: u32 = parts[1]
+        .parse()
+        .map_err(|_| anyhow::anyhow!("Invalid depth number"))?;
+
+    if branch_idx == 0 || branch_idx > tree.branches.len() {
+        anyhow::bail!(
+            "Branch {} not found. Valid range: 1-{}",
+            branch_idx,
+            tree.branches.len()
+        );
+    }
+
+    let branch = &tree.branches[branch_idx - 1];
+    let node = branch
+        .nodes
+        .iter()
+        .find(|n| n.depth == depth)
+        .ok_or_else(|| anyhow::anyhow!("Depth {} not found in branch {}", depth, branch_idx))?;
+
+    println!("\n[{}.{}] Score: {:.2}\n", branch_idx, depth, node.deutsch_score.overall_score);
+    println!("{}\n", node.thought_experiment);
+
+    let ds = &node.deutsch_score;
+    println!("Deutsch score breakdown:");
+    println!("  Hard to vary:        {:.2}", ds.hard_to_vary);
+    println!("  Reach:               {:.2}", ds.reach);
+    println!("  Minimal assumptions: {:.2}", ds.minimal_assumptions);
+    println!("  Tension resolution:  {:.2}", ds.tension_resolution);
+    println!("  Overall:             {:.2}", ds.overall_score);
+    println!("  Justification: {}", ds.justification);
+
+    if let Some(tension) = &node.unresolved_tension {
+        println!("\nUnresolved tension: {}", tension.tension);
+    }
+
+    Ok(())
 }
