@@ -1,6 +1,8 @@
 # Thought Experiment Generator
 
-Can LLMs create new knowledge? A depth-bounded branching search over explanation space. Given a topic, the system draws structured knowledge fragments from three pools (background, universal, novel), generates hypothetical thought experiments via LLM, and filters them for coherence and explanatory quality using Deutschian criteria. The novel pool compounds discoveries into future draws, making each pass better than the last. The [core argument](docs/llms-as-universal-explainer.md): LLMs can create new knowledge by randomly colliding objects, relationships, and properties, biased by background knowledge, and filtering the results for explanatory quality. Inspired by [Brett Hall's discussion](https://www.youtube.com/watch?v=iHINpU_Di58) ([transcript](docs/reaction-to-vishal-misra-transcript.md)) on whether LLMs can create new knowledge, drawing on David Deutsch's epistemology.
+Can LLMs create new knowledge? This system tries to find out. Give it a topic and it generates thought experiments, scores them for explanatory quality, and uses the best discoveries to make better guesses on the next pass. The result is a tree of progressively deeper insights about your topic that neither you nor the LLM started with.
+
+Under the hood, it collides structured knowledge fragments from three pools (topic facts, cross-domain vocabulary, and its own prior discoveries), filters through coherence and [Deutschian criteria](docs/llms-as-universal-explainer.md), and compounds what survives into future draws. Inspired by [Brett Hall's discussion](https://www.youtube.com/watch?v=iHINpU_Di58) ([transcript](docs/reaction-to-vishal-misra-transcript.md)) on whether LLMs can create new knowledge, drawing on David Deutsch's epistemology.
 
 ## Usage
 
