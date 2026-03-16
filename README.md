@@ -44,14 +44,12 @@ The default `--max-calls 500` gets you through setup, roots, and ~4-5 full branc
 
 **1. Background init** (2 LLM calls, cached). The LLM generates 50 facts about your topic, then extracts structured knowledge fragments called quads (object, relationship, object, property) from those facts.
 
-**2. Three-pool draw system.** Every draw samples from three pools:
+**2. Draw and generate.** To create a thought experiment, the system draws 4 objects, 3 relationships, and 2 properties from three pools, then sends them to the LLM with the topic as context:
 - **Background** -- quads from the topic's facts (what is known)
 - **Universal** -- ~50k domain-agnostic vocabulary terms (what is possible)
 - **Novel** -- quads earned by high-scoring discoveries during the run (what has been found)
 
-The novel pool starts empty and grows as the tree runs, shifting the ratio from 50/50/0 toward 30/30/40. This is what makes the tree compound its own discoveries.
-
-**3. Atom structure.** Each thought experiment is generated from a 4/3/2 draw: 4 objects, 3 relationships, 2 properties. Half drawn from background/novel, half from universal. Derived empirically from Einstein's journal entries.
+Half the slots draw from background/novel, half from universal. The collision between domain knowledge and cross-domain vocabulary is what forces novel scenarios. The novel pool starts empty and grows as the tree runs, compounding discoveries into better future draws.
 
 **4. Filter stack** (cheap to expensive, per draw):
 - Grammar check (no LLM) -- is this valid language?
