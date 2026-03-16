@@ -8,10 +8,8 @@ Design phase — no source code yet.
 
 ## Documents
 
-- [Design Document](docs/thought-experiment-generator-design-doc.md) — Full architecture spec: data structures, LLM prompt templates, filter stack, tree structure, CLI parameters, and build order
 - [LLMs as Universal Explainer](docs/llms-as-universal-explainer.md) — Motivation and theoretical argument for the project
-- [Reaction to Vishal Misra (transcript)](docs/reaction-to-vishal-misra-transcript.md) — Transcript and commentary on LLM limitations and knowledge creation
-
+- [Design Document](docs/thought-experiment-generator-design-doc.md) — Full architecture spec: data structures, LLM prompt templates, filter stack, tree structure, CLI parameters, and build order
 ## Inspiration
 
-- [Reaction to Vishal Misra](https://www.youtube.com/watch?v=iHINpU_Di58) — Brett Hall's video discussing whether LLMs can create new knowledge, drawing on David Deutsch's epistemology
+- [Reaction to Vishal Misra](https://www.youtube.com/watch?v=iHINpU_Di58) ([transcript](docs/reaction-to-vishal-misra-transcript.md)) — Brett Hall's video discussing whether LLMs can create new knowledge, drawing on David Deutsch's epistemology
