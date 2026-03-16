@@ -34,13 +34,13 @@ impl Quad {
         }
     }
 
-    pub fn new_universal(term: String) -> Self {
+    pub fn new_universal_rich(object_a: String, relationship: String, object_b: String, property: String) -> Self {
         Self {
             id: Uuid::new_v4(),
-            object_a: term.clone(),
-            relationship: "is".to_string(),
-            object_b: term,
-            property: "identity".to_string(),
+            object_a,
+            relationship,
+            object_b,
+            property,
             source: QuadSource::Universal,
             provenance: None,
         }

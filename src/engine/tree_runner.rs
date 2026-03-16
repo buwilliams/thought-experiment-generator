@@ -284,21 +284,12 @@ async fn load_or_init_background(
 }
 
 async fn load_or_generate_vocab(client: &LlmClient) -> Result<Vec<crate::types::Quad>> {
-    let vocab_path = std::path::Path::new("data/universal_vocabulary.txt");
-    if vocab_path.exists() {
-        return vocab::load_universal_vocabulary(vocab_path);
+    let data_dir = std::path::Path::new("data");
+
+    if !data_dir.join("vocab_objects.txt").exists() {
+        info!("No vocabulary files found, generating starter vocabulary...");
+        vocab::generate_vocabulary(client).await?;
     }
 
-    info!("No vocabulary file found, generating starter vocabulary...");
-    let terms = vocab::generate_vocabulary(client).await?;
-    if let Err(e) = std::fs::create_dir_all("data") {
-        tracing::warn!("Failed to create data dir: {e}");
-    }
-    if let Err(e) = std::fs::write(vocab_path, terms.join("\n")) {
-        tracing::warn!("Failed to save vocabulary: {e}");
-    }
-    Ok(terms
-        .into_iter()
-        .map(|t| crate::types::Quad::new_universal(t))
-        .collect())
+    vocab::load_universal_vocabulary(data_dir)
 }

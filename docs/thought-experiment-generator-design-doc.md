@@ -60,9 +60,9 @@ Tractability comes from good guessing, not coverage. The background knowledge is
 Every [draw](#glossary) at every [node](#glossary) samples from three pools simultaneously:
 
 ```
-BACKGROUND  — what is known       (from corpus, pre-existing)
-UNIVERSAL   — what is possible    (from vocabulary, domain-agnostic)
-NOVEL       — what has been found (from tree survivors, earned)
+BACKGROUND  — what is known       (quads from corpus facts about the topic)
+UNIVERSAL   — what is possible    (quads from cross-domain vocabulary: objects, relationships, properties)
+NOVEL       — what has been found (quads earned by high-scoring tree survivors)
 ```
 
 **Default ratio at initialization:** 50% background / 50% universal / 0% novel
@@ -529,7 +529,7 @@ Return JSON only:
 ## Build Order
 
 ```
-1.  Universal vocabulary          flat file, ~50k terms
+1.  Universal vocabulary          three files: objects, relationships, properties
 2.  Quad extractor                corpus text → quads (Prompt 2)
 3.  Single TE generator           4/3/2 draw → thought experiment (Prompt 3)
 4.  Coherence filter              (Prompt 4)
@@ -566,7 +566,7 @@ Return JSON only:
 | **Trajectory score** | LLM judgment of cumulative explanatory reach across the full branch path from root to current node |
 | **Draw** | Sampling from topic + path + quads across the three pools |
 | **Background pool** | Quads extracted from LLM-generated corpus facts about the topic |
-| **Universal pool** | Quads sampled from the domain-agnostic ~50k vocabulary |
+| **Universal pool** | Quads built from cross-domain vocabulary (objects, relationships, properties randomly combined) |
 | **Novel pool** | Quads earned by high-scoring survivors during the tree run |
 | **Provenance** | A random ID assigned to each novel quad at creation time |
 | **Depth limit** | Maximum number of nodes per branch (default: 10) |

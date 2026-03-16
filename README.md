@@ -31,7 +31,7 @@ cargo run -- "your topic" \
 
 ### LLM call budget
 
-Each run costs LLM calls. Background init and vocabulary are cached after the first run, so re-runs and resumes are cheaper.
+Each run costs LLM calls. Background init (2 calls) and vocabulary (3 calls) are cached after the first run, so re-runs and resumes are cheaper.
 
 | Goal | Estimated calls |
 |---|---|
@@ -45,11 +45,11 @@ The default `--max-calls 500` gets you through setup, roots, and ~4-5 full branc
 **1. Background init** (2 LLM calls, cached). The LLM generates 50 facts about your topic, then extracts structured knowledge fragments called quads (object, relationship, object, property) from those facts.
 
 **2. Draw and generate.** To create a thought experiment, the system draws 4 objects, 3 relationships, and 2 properties from three pools, then sends them to the LLM with the topic as context:
-- **Background** -- quads from the topic's facts (what is known)
-- **Universal** -- ~50k domain-agnostic vocabulary terms (what is possible)
-- **Novel** -- quads earned by high-scoring discoveries during the run (what has been found)
+- **Background** -- quads from the topic's facts, e.g. `("50/30/20 rule", "was popularized by", "Elizabeth Warren", "credibility")`
+- **Universal** -- quads built from cross-domain vocabulary, e.g. `("entropy", "resists", "order", "stability")`
+- **Novel** -- quads earned by high-scoring discoveries during the run
 
-Half the slots draw from background/novel, half from universal. The collision between domain knowledge and cross-domain vocabulary is what forces novel scenarios. The novel pool starts empty and grows as the tree runs, compounding discoveries into better future draws.
+Half the slots draw from background/novel, half from universal. The collision between domain knowledge and cross-domain quads is what forces novel scenarios. The novel pool starts empty and grows as the tree runs, compounding discoveries into better future draws.
 
 **4. Filter stack** (cheap to expensive, per draw):
 - Grammar check (no LLM) -- is this valid language?
