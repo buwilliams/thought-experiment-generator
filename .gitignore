@@ -2,8 +2,8 @@
 /target
 Cargo.lock
 
-# Runtime data
-/data/cache/
+# Runtime data (experiment results are committed)
+# /data/cache/
 
 # Environment / secrets
 .env
