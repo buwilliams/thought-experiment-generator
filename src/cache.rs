@@ -117,16 +117,10 @@ fn node_title(node: &Node) -> String {
 
 pub fn save_summary(topic: &str, state: &CachedTreeState) -> Result<()> {
     let dir = cache_dir(topic);
-    let total_nodes: usize = state.branches.iter().map(|b| b.nodes.len()).sum();
+    let experiments_dir = dir.join("experiments");
+    std::fs::create_dir_all(&experiments_dir)?;
 
-    let mut out = String::new();
-    out.push_str(&format!("# {topic}\n\n"));
-    out.push_str(&format!(
-        "{} branches, {} thought experiments, {} novel quads\n\n",
-        state.branches.len(),
-        total_nodes,
-        state.draw_pool.novel.len()
-    ));
+    let total_nodes: usize = state.branches.iter().map(|b| b.nodes.len()).sum();
 
     // Collect all nodes ranked by score
     let mut all_nodes: Vec<(usize, &Node)> = state
@@ -141,16 +135,71 @@ pub fn save_summary(topic: &str, state: &CachedTreeState) -> Result<()> {
             .unwrap()
     });
 
-    out.push_str("| Key | Score | Title |\n");
-    out.push_str("|-----|-------|-------|\n");
-    for (branch_idx, node) in &all_nodes {
+    // Write individual markdown files for top 10
+    for (rank, (branch_idx, node)) in all_nodes.iter().take(10).enumerate() {
+        let title = node_title(node);
+        let slug = slugify(&title);
+        let filename = format!("{:02}-{}.md", rank + 1, slug);
         let key = format!("{}.{}", branch_idx, node.depth);
-        out.push_str(&format!(
-            "| {} | {:.2} | {} |\n",
-            key,
-            node.deutsch_score.overall_score,
-            node_title(node)
-        ));
+        let ds = &node.deutsch_score;
+
+        let mut content = String::new();
+        content.push_str(&format!("# {title}\n\n"));
+        content.push_str(&format!("**Key:** {key} | **Score:** {:.2} | **Branch:** {} | **Depth:** {}\n\n", ds.overall_score, branch_idx, node.depth));
+        content.push_str(&node.thought_experiment);
+        content.push_str("\n\n---\n\n");
+        content.push_str("## Deutsch Score\n\n");
+        content.push_str(&format!("| Criterion | Score |\n"));
+        content.push_str(&format!("|-----------|-------|\n"));
+        content.push_str(&format!("| Hard to vary | {:.2} |\n", ds.hard_to_vary));
+        content.push_str(&format!("| Reach | {:.2} |\n", ds.reach));
+        content.push_str(&format!("| Minimal assumptions | {:.2} |\n", ds.minimal_assumptions));
+        content.push_str(&format!("| Tension resolution | {:.2} |\n", ds.tension_resolution));
+        content.push_str(&format!("| **Overall** | **{:.2}** |\n\n", ds.overall_score));
+        content.push_str(&format!("**Justification:** {}\n", ds.justification));
+
+        if let Some(tension) = &node.unresolved_tension {
+            content.push_str(&format!("\n## Unresolved Tension\n\n{}\n", tension.tension));
+        }
+
+        std::fs::write(experiments_dir.join(&filename), &content)?;
+    }
+
+    // Build summary.md with links
+    let mut out = String::new();
+    out.push_str(&format!("# {topic}\n\n"));
+    out.push_str(&format!(
+        "{} branches, {} thought experiments, {} novel quads\n\n",
+        state.branches.len(),
+        total_nodes,
+        state.draw_pool.novel.len()
+    ));
+
+    out.push_str("| Rank | Key | Score | Title |\n");
+    out.push_str("|------|-----|-------|-------|\n");
+    for (rank, (branch_idx, node)) in all_nodes.iter().enumerate() {
+        let title = node_title(node);
+        let key = format!("{}.{}", branch_idx, node.depth);
+        if rank < 10 {
+            let slug = slugify(&title);
+            let filename = format!("{:02}-{}.md", rank + 1, slug);
+            out.push_str(&format!(
+                "| {} | {} | {:.2} | [{}](experiments/{}) |\n",
+                rank + 1,
+                key,
+                node.deutsch_score.overall_score,
+                title,
+                filename
+            ));
+        } else {
+            out.push_str(&format!(
+                "| {} | {} | {:.2} | {} |\n",
+                rank + 1,
+                key,
+                node.deutsch_score.overall_score,
+                title
+            ));
+        }
     }
 
     // Top trajectories
@@ -173,8 +222,23 @@ pub fn save_summary(topic: &str, state: &CachedTreeState) -> Result<()> {
         ));
     }
 
-    let path = dir.join("summary.md");
-    std::fs::write(&path, &out)?;
-    info!("Saved summary.md");
+    std::fs::write(dir.join("summary.md"), &out)?;
+    let written = all_nodes.len().min(10);
+    info!("Saved summary.md and {} experiment files", written);
     Ok(())
+}
+
+fn slugify(title: &str) -> String {
+    title
+        .to_lowercase()
+        .chars()
+        .map(|c| if c.is_alphanumeric() { c } else { '-' })
+        .collect::<String>()
+        .split('-')
+        .filter(|s| !s.is_empty())
+        .collect::<Vec<_>>()
+        .join("-")
+        .chars()
+        .take(60)
+        .collect()
 }
