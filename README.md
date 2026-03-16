@@ -1,6 +1,6 @@
 # Thought Experiment Generator
 
-A system for exploring topics by running a depth-bounded branching search over explanation space. It collides structured knowledge fragments from three pools (background, universal, novel), generates hypothetical thought experiments via LLM, and filters them through a coherence and Deutsch score pipeline to surface genuinely novel insights.
+Can LLMs create new knowledge? The conjecture: yes, through a narrowing search architecture algorithm that gets better with each pass. Given a topic, the system draws structured knowledge fragments from three pools (background, universal, novel), generates hypothetical thought experiments via LLM, and filters them for coherence and explanatory quality using Deutschian criteria. Humans guide the process, but at a critical threshold of search quality, the system's outputs become reliable enough to judge its next outputs, enabling recursive self-improvement without scaling compute.
 
 ## Status
 
