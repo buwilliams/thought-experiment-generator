@@ -61,10 +61,9 @@ impl Config {
         let api_key = match &provider {
             LlmProvider::Anthropic => std::env::var("ANTHROPIC_API_KEY")
                 .map_err(|_| anyhow::anyhow!("ANTHROPIC_API_KEY not set"))?,
-            LlmProvider::AnthropicToken => std::env::var("ANTHROPIC_TOKEN")
-                .or_else(|_| std::env::var("ANTHROPIC_API_KEY"))
+            LlmProvider::AnthropicToken => std::env::var("CLAUDE_CODE_OAUTH_TOKEN")
                 .map_err(|_| anyhow::anyhow!(
-                    "ANTHROPIC_TOKEN not set. Set it to your Claude Max session token."
+                    "CLAUDE_CODE_OAUTH_TOKEN not set. Set it to your Claude Max session token."
                 ))?,
             LlmProvider::OpenAi => std::env::var("OPENAI_API_KEY")
                 .map_err(|_| anyhow::anyhow!("OPENAI_API_KEY not set"))?,
