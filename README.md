@@ -5,14 +5,18 @@ A depth-bounded branching search over explanation space. Given a topic, the syst
 ## Usage
 
 ```sh
-# Defaults work out of the box (requires ANTHROPIC_API_KEY or ANTHROPIC_TOKEN env var)
+# Default: uses claude-sonnet-4-6, requires ANTHROPIC_API_KEY env var
 cargo run -- "your topic"
 
-# Anthropic API key
-ANTHROPIC_API_KEY=sk-... cargo run -- "your topic"
+# Resume a previous run (cached automatically by topic)
+cargo run -- "your topic"
 
-# Claude Max subscription (session token)
-ANTHROPIC_TOKEN=... cargo run -- --provider anthropic-token "your topic"
+# Start fresh, clearing cached background + tree state
+cargo run -- --fresh "your topic"
+
+# Use a different model
+cargo run -- --model claude-haiku-4-5-20251001 "your topic"   # cheaper/faster
+cargo run -- --model claude-opus-4-6 "your topic"             # highest quality
 
 # OpenAI
 OPENAI_API_KEY=sk-... cargo run -- --provider openai --model gpt-4o "your topic"
@@ -22,7 +26,7 @@ cargo run -- "your topic" \
   --depth 10 --branches 10 --draws 100 \
   --threshold 0.7 --novel-threshold 0.85 \
   --max-calls 500 --max-concurrent 5 \
-  --temperature 1.2 --output text
+  --temperature 1.0 --output text
 ```
 
 ## Documents

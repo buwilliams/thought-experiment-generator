@@ -38,7 +38,7 @@ pub async fn generate_root_branches(
 
         // Generate TE
         let te = match te_generator::generate_thought_experiment(
-            client, topic, &draw, &[], None,
+            client, topic, &draw, &[], None, config.temperature,
         )
         .await
         {

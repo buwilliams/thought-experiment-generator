@@ -39,8 +39,8 @@ pub struct Cli {
     #[arg(long, default_value_t = 100)]
     pub draws: u32,
 
-    /// LLM temperature for generation
-    #[arg(long, default_value_t = 1.2)]
+    /// LLM temperature for generation (0.0-1.0)
+    #[arg(long, default_value_t = 1.0)]
     pub temperature: f64,
 
     /// Objects per thought experiment atom
@@ -74,6 +74,10 @@ pub struct Cli {
     /// Output format: "text" or "json"
     #[arg(long, default_value = "text")]
     pub output: String,
+
+    /// Clear cache and start fresh
+    #[arg(long, default_value_t = false)]
+    pub fresh: bool,
 }
 
 #[tokio::main]
@@ -116,6 +120,10 @@ async fn main() -> Result<()> {
 
     if topic.is_empty() {
         anyhow::bail!("Topic cannot be empty");
+    }
+
+    if cli.fresh {
+        teg::cache::clear_cache(&topic)?;
     }
 
     println!("\n=== Thought Experiment Generator ===");

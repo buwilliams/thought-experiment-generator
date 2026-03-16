@@ -1,9 +1,10 @@
 use rand::prelude::*;
+use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 
 use super::quad::Quad;
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PoolRatio {
     pub background: f64,
     pub universal: f64,
@@ -20,7 +21,7 @@ impl PoolRatio {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AtomConfig {
     pub objects: u32,
     pub relationships: u32,
@@ -37,7 +38,7 @@ impl Default for AtomConfig {
     }
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DrawResult {
     pub objects: Vec<String>,
     pub relationships: Vec<String>,
@@ -45,7 +46,7 @@ pub struct DrawResult {
     pub quads_used: Vec<Uuid>,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DrawPool {
     pub background: Vec<Quad>,
     pub universal: Vec<Quad>,

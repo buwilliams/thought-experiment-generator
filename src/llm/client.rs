@@ -106,7 +106,7 @@ impl LlmClient {
     async fn call_anthropic(&self, prompt: &str, temperature: f64) -> Result<String> {
         let body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 4096,
+            "max_tokens": 8192,
             "temperature": temperature,
             "messages": [
                 {"role": "user", "content": prompt}
@@ -148,7 +148,7 @@ impl LlmClient {
     async fn call_anthropic_token(&self, prompt: &str, temperature: f64) -> Result<String> {
         let body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 4096,
+            "max_tokens": 8192,
             "temperature": temperature,
             "messages": [
                 {"role": "user", "content": prompt}
@@ -189,7 +189,7 @@ impl LlmClient {
     async fn call_openai(&self, prompt: &str, temperature: f64) -> Result<String> {
         let body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 4096,
+            "max_tokens": 8192,
             "temperature": temperature,
             "messages": [
                 {"role": "user", "content": prompt}

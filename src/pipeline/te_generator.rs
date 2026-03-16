@@ -11,6 +11,7 @@ pub async fn generate_thought_experiment(
     draw: &DrawResult,
     accumulated_path: &[Node],
     unresolved_tension: Option<&UnresolvedTension>,
+    temperature: f64,
 ) -> Result<String> {
     let tension_text = unresolved_tension.map(|t| t.tension.as_str());
 
@@ -24,7 +25,7 @@ pub async fn generate_thought_experiment(
     };
 
     let prompt = prompts::te_generation(&params);
-    let te = client.call_raw(&prompt, 1.2).await?;
+    let te = client.call_raw(&prompt, temperature).await?;
     Ok(te.trim().to_string())
 }
 

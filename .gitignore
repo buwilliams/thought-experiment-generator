@@ -2,6 +2,9 @@
 /target
 Cargo.lock
 
+# Runtime data
+/data/cache/
+
 # Environment / secrets
 .env
 .env.local

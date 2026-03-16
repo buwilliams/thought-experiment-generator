@@ -54,6 +54,7 @@ pub async fn run_branch(
                 &draw,
                 &accumulated_path,
                 latest_tension.as_ref(),
+                config.temperature,
             )
             .await
             {
