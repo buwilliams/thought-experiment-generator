@@ -177,6 +177,17 @@ async fn main() -> Result<()> {
     Ok(())
 }
 
+fn node_title(node: &teg::types::Node) -> String {
+    node.thought_experiment
+        .lines()
+        .find(|l| !l.trim().is_empty())
+        .unwrap_or("(untitled)")
+        .trim()
+        .trim_start_matches('#')
+        .trim()
+        .to_string()
+}
+
 fn print_results(tree: &Tree) {
     let total_nodes: usize = tree.branches.iter().map(|b| b.nodes.len()).sum();
 
@@ -188,102 +199,40 @@ fn print_results(tree: &Tree) {
         return;
     }
 
-    // Summary table
-    println!("Branches: {}  |  Nodes: {}  |  Novel quads: {}  |  Cross-pollinations: {}\n",
-        tree.branches.len(), total_nodes, tree.draw_pool.novel.len(), tree.cross_pollinations.len());
+    println!(
+        "{} branches, {} thought experiments, {} novel quads\n",
+        tree.branches.len(),
+        total_nodes,
+        tree.draw_pool.novel.len()
+    );
 
-    println!("{:<8} {:<10} {:<8} {:<12} {}",
-        "Rank", "Traj.", "Best", "Depths", "Root thought experiment");
-    println!("{}", "-".repeat(80));
-
-    for (i, branch) in tree.branches.iter().enumerate() {
-        let traj = branch.trajectory_score.unwrap_or(0.0);
-        let best = branch.nodes.iter()
-            .map(|n| n.deutsch_score.overall_score)
-            .fold(0.0f64, f64::max);
-        let depths = format!("{}/{}", branch.nodes.len(), branch.depth_limit);
-
-        // First line of root thought experiment as preview
-        let preview = branch.nodes.first()
-            .map(|n| {
-                let te = n.thought_experiment.trim();
-                // Skip markdown headers
-                let text = te.lines()
-                    .find(|l| !l.trim().is_empty() && !l.starts_with('#'))
-                    .unwrap_or(te.lines().next().unwrap_or(""));
-                let text = text.trim();
-                if text.len() > 50 {
-                    format!("{}...", &text[..50])
-                } else {
-                    text.to_string()
-                }
-            })
-            .unwrap_or_default();
-
-        println!("#{:<7} {:<10.2} {:<8.2} {:<12} {}",
-            i + 1, traj, best, depths, preview);
-    }
-
-    // Top 3 detailed view
-    println!("\n{}", "=".repeat(60));
-    println!("TOP TRAJECTORIES\n");
-
+    // Top 3 as compact chains
     for (i, branch_id) in tree.top_trajectories.iter().enumerate() {
         let branch = match tree.branches.iter().find(|b| &b.id == branch_id) {
             Some(b) => b,
             None => continue,
         };
 
-        let is_cross = !branch.parent_branch_ids.is_empty();
-        let label = if is_cross { "Cross-pollination" } else { "Trajectory" };
-
-        println!(
-            "#{} {} (trajectory score: {:.2})\n",
-            i + 1,
-            label,
-            branch.trajectory_score.unwrap_or(0.0)
-        );
-
-        // Show the chain as: title + score + tension for each depth
-        for node in &branch.nodes {
-            // Extract title (first non-empty line, often a markdown header)
-            let title = node.thought_experiment.lines()
-                .find(|l| !l.trim().is_empty())
-                .unwrap_or("(untitled)")
-                .trim()
-                .trim_start_matches('#')
-                .trim();
-
-            print!(
-                "  depth {} [{:.2}] {}",
-                node.depth, node.deutsch_score.overall_score, title
-            );
-
-            if let Some(tension) = &node.unresolved_tension {
-                let t = &tension.tension;
-                let short = if t.len() > 80 {
-                    format!("{}...", &t[..80])
-                } else {
-                    t.clone()
-                };
-                println!("\n           -> {short}");
-            } else {
-                println!();
-            }
-        }
-
-        println!();
+        let traj = branch.trajectory_score.unwrap_or(0.0);
+        println!("#{} (score {:.2}): {}", i + 1, traj,
+            branch.nodes.iter()
+                .map(|n| node_title(n))
+                .collect::<Vec<_>>()
+                .join(" -> "));
     }
 
-    // Show the single best node
+    // Best single node
     let best_node = tree.branches.iter()
         .flat_map(|b| b.nodes.iter())
         .max_by(|a, b| a.deutsch_score.overall_score.partial_cmp(&b.deutsch_score.overall_score).unwrap());
 
     if let Some(node) = best_node {
-        println!("{}", "=".repeat(60));
-        println!("BEST SINGLE THOUGHT EXPERIMENT (score: {:.2})\n", node.deutsch_score.overall_score);
-        println!("{}", node.thought_experiment);
-        println!();
+        println!(
+            "\nBest single score: {:.2} — {}",
+            node.deutsch_score.overall_score,
+            node_title(node)
+        );
     }
+
+    println!("\nUse --read --output json for full details.");
 }
