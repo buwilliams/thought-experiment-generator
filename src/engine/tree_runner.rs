@@ -162,6 +162,10 @@ async fn run_from_phase(
             if client.budget_exhausted() {
                 break;
             }
+            // Only compare branches at similar depth (design doc constraint)
+            if branches[i].current_depth != branches[j].current_depth {
+                continue;
+            }
             if let Ok(Some(result)) = cross_pollination::check_cross_pollination(
                 &client,
                 topic,

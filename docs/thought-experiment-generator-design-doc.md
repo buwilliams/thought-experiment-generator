@@ -203,11 +203,11 @@ High-scoring [survivors](#glossary) shape future draws. Lower-scoring survivors 
 ```
 --depth            Depth limit per branch (default: 10)
 --branches         Number of root branches (default: 10)
---threshold        Survivor score threshold (default: 0.7)
+--threshold        Survivor score threshold (default: 0.6)
 --novel-threshold  Novel pool admission threshold (default: 0.85)
 --ratio            Background/universal ratio (default: 0.5)
 --draws            Max draws per depth before moving on (default: 100)
---temperature      LLM temperature for generation (default: 1.2)
+--temperature      LLM temperature for generation (default: 1.0)
 --objects          Objects per thought experiment atom (default: 4)
 --relationships    Relationships per thought experiment atom (default: 3)
 --properties       Properties per thought experiment atom (default: 2)
