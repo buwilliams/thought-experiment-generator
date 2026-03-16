@@ -1,11 +1,8 @@
-# Dependencies
-node_modules/
-venv/
-.venv/
-__pycache__/
-*.pyc
+# Rust
+/target
+Cargo.lock
 
-# Environment
+# Environment / secrets
 .env
 .env.local
 
@@ -18,11 +15,6 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
-
-# Build
-dist/
-build/
-*.egg-info/
 
 # Zone.Identifier files (WSL)
 *:Zone.Identifier
