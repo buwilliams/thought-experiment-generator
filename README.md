@@ -13,6 +13,12 @@ cargo run -- "your topic"
 # Resume a previous run (cached automatically by topic)
 cargo run -- "your topic"
 
+# Read results ranked by score (no LLM calls)
+cargo run -- --read "your topic"
+
+# Show full details for a specific result (branch.depth)
+cargo run -- --show 7.7 "your topic"
+
 # Start fresh, clearing cached background + tree state
 cargo run -- --fresh "your topic"
 
