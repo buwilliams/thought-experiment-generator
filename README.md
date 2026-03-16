@@ -42,26 +42,21 @@ The default `--max-calls 500` gets you through setup, roots, and ~4-5 full branc
 
 ## How It Works
 
-**1. Background init** (2 LLM calls, cached). The LLM generates 50 facts about your topic, then extracts structured knowledge fragments called quads (object, relationship, object, property) from those facts.
+**1. Learn about the topic.** The LLM generates 50 facts about your topic and extracts structured knowledge fragments called quads: `(object, relationship, object, property)`. For example, a topic about budgeting might produce `("50/30/20 rule", "was popularized by", "Elizabeth Warren", "credibility")`. These form the **background pool**. The system also loads a cross-domain vocabulary of objects, relationships, and properties that have nothing to do with your topic, like `("entropy", "resists", "order", "stability")`. These form the **universal pool**.
 
-**2. Draw and generate.** To create a thought experiment, the system draws 4 objects, 3 relationships, and 2 properties from three pools, then sends them to the LLM with the topic as context:
-- **Background** -- quads from the topic's facts, e.g. `("50/30/20 rule", "was popularized by", "Elizabeth Warren", "credibility")`
-- **Universal** -- quads built from cross-domain vocabulary, e.g. `("entropy", "resists", "order", "stability")`
-- **Novel** -- quads earned by high-scoring discoveries during the run
+**2. Generate a thought experiment.** The system randomly draws 4 objects, 3 relationships, and 2 properties from both pools, half from each. It sends these elements plus the topic to the LLM, which writes a thought experiment that collides them into a novel scenario. The randomness from the universal pool forces surprising combinations that pure topic knowledge would never produce.
 
-Half the slots draw from background/novel, half from universal. The collision between domain knowledge and cross-domain quads is what forces novel scenarios. The novel pool starts empty and grows as the tree runs, compounding discoveries into better future draws.
+**3. Filter for quality.** Each thought experiment passes through a series of checks. First, a grammar check (no LLM call). Then the LLM judges coherence: is it internally consistent and non-trivially related to the topic? Then the LLM scores it on Deutsch criteria: is it hard to vary, does it reach beyond its inputs, does it use minimal assumptions, does it resolve a tension? If the score is below 0.6, it's discarded and a new draw is attempted (up to 100 times).
 
-**4. Filter stack** (cheap to expensive, per draw):
-- Grammar check (no LLM) -- is this valid language?
-- Coherence filter (1 LLM call) -- internally consistent and non-trivially related to topic?
-- Deutsch scorer (1 LLM call) -- hard to vary, reaches beyond inputs, minimal assumptions, resolves tension?
-- Survivor threshold -- score >= 0.6?
+**4. Extract what's unresolved.** When a thought experiment survives, the LLM identifies what remains unexplained or paradoxical. This unresolved tension becomes the starting point for the next thought experiment in the chain.
 
-**5. Tree search.** 10 root branches, each running to depth 10. At each depth, the system draws, generates, and filters until a survivor is found (up to 100 attempts). Each survivor's unresolved tension feeds into the next depth's generation, so the chain builds progressively, like Einstein's train thought experiment building on the frozen light wave. Low scores don't trigger pruning. Only depth limit, circularity, or vocabulary exhaustion terminate a branch.
+**5. Deepen the chain.** Steps 2-4 repeat, but now the LLM sees the full chain so far and the latest unresolved tension. Each new thought experiment builds on what came before, the way Einstein's train-and-lightning-bolts built on his earlier frozen-light-wave scenario. A single chain running 10 levels deep is called a **branch**.
 
-**6. Cross-pollination.** After branches complete, the system checks pairs for complementary unresolved tensions. Complementary pairs merge into new branches that neither could reach alone.
+**6. Run many branches in parallel.** The system starts 10 branches from different root thought experiments and runs them all to depth 10. High-scoring discoveries from any branch get added to a **novel pool**, which feeds into future draws across all branches. This is what makes the system compound its own discoveries.
 
-**7. Trajectory scoring.** Each completed branch is scored on cumulative explanatory reach. Results are ranked and displayed.
+**7. Cross-pollinate.** After branches complete, the system checks pairs for complementary unresolved tensions. If two branches are stuck on tensions that would resolve each other, they merge into a new branch that neither could reach alone.
+
+**8. Score and rank.** Each completed branch is scored on cumulative explanatory reach across the full chain. Results are ranked and displayed.
 
 ## Documents
 
