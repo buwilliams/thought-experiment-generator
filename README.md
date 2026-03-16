@@ -48,9 +48,9 @@ The default `--max-calls 500` gets you through setup, roots, and ~4-5 full branc
 
 **3. Filter for quality.** Each thought experiment passes through a series of checks. First, a grammar check (no LLM call). Then the LLM judges coherence: is it internally consistent and non-trivially related to the topic? Then the LLM scores it on Deutsch criteria: is it hard to vary, does it reach beyond its inputs, does it use minimal assumptions, does it resolve a tension? If the score is below the survivor threshold (default 0.6), it's discarded and a new draw is attempted (default up to 100 times per depth).
 
-**4. Extract what's unresolved.** When a thought experiment survives, the LLM identifies what remains unexplained or paradoxical. This unresolved tension becomes the starting point for the next thought experiment in the chain.
+**4. Extract what's unresolved.** When a thought experiment survives, the LLM identifies what remains unexplained or paradoxical. This unresolved tension becomes the starting point for the next thought experiment in the chain. If no thought experiment survives after the draw limit (default 100 attempts), the branch terminates.
 
-**5. Deepen the chain.** Steps 2-4 repeat, but now the LLM sees the full chain so far and the latest unresolved tension. Each new thought experiment builds on what came before, the way Einstein's train-and-lightning-bolts built on his earlier frozen-light-wave scenario. A single chain running to the depth limit (default 10) is called a **branch**.
+**5. Deepen the chain.** Steps 2-4 repeat at the next depth, but now the LLM sees the full chain so far and the latest unresolved tension. Each new thought experiment builds on what came before, the way Einstein's train-and-lightning-bolts built on his earlier frozen-light-wave scenario. A single chain running to the depth limit (default 10) is called a **branch**.
 
 **6. Run many branches in parallel.** The system starts 10 branches from different root thought experiments and runs them all to the depth limit. High-scoring discoveries from any branch (above the novel threshold, default 0.85) get added to a **novel pool**, which feeds into future draws across all branches. This is what makes the system compound its own discoveries.
 
