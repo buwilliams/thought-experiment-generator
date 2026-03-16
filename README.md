@@ -35,10 +35,11 @@ Each run costs LLM calls. Background init (2 calls) and vocabulary (3 calls) are
 
 | Goal | Estimated calls |
 |---|---|
-| One branch to full depth (10), scored | ~100-135 |
-| Full run (10 branches, depth 10, cross-pollination) | ~900-1100 |
+| First-run setup (background + vocabulary) | ~5 (cached after) |
+| One branch to full depth (10), scored | ~100-140 |
+| Full run (10 branches, depth 10, cross-pollination) | ~900-1400 |
 
-The default `--max-calls 500` gets you through setup, roots, and ~4-5 full branches. Run the same topic again to resume and spend more budget.
+The default `--max-calls 500` gets you through setup, roots, and a few full branches. Run the same topic again to resume and spend more budget.
 
 ## How It Works
 
