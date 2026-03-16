@@ -1,41 +1,24 @@
 # Thought Experiment Generator
 
-A depth-bounded branching search over explanation space. Given a topic, the system draws structured knowledge fragments from three pools (background, universal, novel), generates hypothetical thought experiments via LLM, and filters them for coherence and explanatory quality using Deutschian criteria. The novel pool compounds discoveries into future draws, making each pass better than the last. The [core argument](docs/llms-as-universal-explainer.md): LLMs can create new knowledge through informed guessing and iterative filtering.
+A depth-bounded branching search over explanation space. Given a topic, the system draws structured knowledge fragments from three pools (background, universal, novel), generates hypothetical thought experiments via LLM, and filters them for coherence and explanatory quality using Deutschian criteria. The novel pool compounds discoveries into future draws, making each pass better than the last. The [core argument](docs/llms-as-universal-explainer.md): LLMs can create new knowledge by randomly colliding objects, relationships, and properties, biased by background knowledge, and filtering the results for explanatory quality.
 
 ## Usage
 
-```
-cargo run -- "why does light always travel at the same speed"
-```
-
-### Authentication
-
-**Anthropic API key:**
-```
+```sh
+# Anthropic API key
 ANTHROPIC_API_KEY=sk-... cargo run -- "your topic"
-```
 
-**Claude Max subscription (session token):**
-```
+# Claude Max subscription (session token)
 ANTHROPIC_TOKEN=... cargo run -- --provider anthropic-token "your topic"
-```
 
-**OpenAI:**
-```
+# OpenAI
 OPENAI_API_KEY=sk-... cargo run -- --provider openai --model gpt-4o "your topic"
-```
 
-### Options
-
-```
---depth             Depth limit per branch (default: 10)
---branches          Number of root branches (default: 10)
---threshold         Survivor score threshold (default: 0.7)
---novel-threshold   Novel pool admission threshold (default: 0.85)
---draws             Max draws per depth (default: 100)
---temperature       LLM generation temperature (default: 1.2)
---max-concurrent    Parallel LLM calls (default: 5)
---output            "text" or "json" (default: text)
+# Options (all optional)
+cargo run -- "your topic" \
+  --depth 10 --branches 10 --draws 100 \
+  --threshold 0.7 --novel-threshold 0.85 \
+  --temperature 1.2 --max-concurrent 5 --output text
 ```
 
 ## Documents
