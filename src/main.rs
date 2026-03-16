@@ -79,6 +79,10 @@ pub struct Cli {
     /// Clear cache and start fresh
     #[arg(long, default_value_t = false)]
     pub fresh: bool,
+
+    /// Read cached results and display without running
+    #[arg(long, default_value_t = false)]
+    pub read: bool,
 }
 
 #[tokio::main]
@@ -121,6 +125,25 @@ async fn main() -> Result<()> {
 
     if topic.is_empty() {
         anyhow::bail!("Topic cannot be empty");
+    }
+
+    if cli.read {
+        match teg::cache::load_tree_state(&topic) {
+            Some(cached) => {
+                let tree = teg::engine::tree_runner::build_tree(
+                    &topic, cached.draw_pool, cached.branches, vec![],
+                )?;
+                if cli.output == "json" {
+                    println!("{}", serde_json::to_string_pretty(&tree.branches)?);
+                } else {
+                    print_results(&tree);
+                }
+                return Ok(());
+            }
+            None => {
+                anyhow::bail!("No cached results found for this topic. Run without --read first.");
+            }
+        }
     }
 
     if cli.fresh {

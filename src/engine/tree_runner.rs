@@ -234,7 +234,7 @@ async fn run_from_phase(
     build_tree(topic, pool.read().await.clone(), branches, cross_pollinations)
 }
 
-fn build_tree(
+pub fn build_tree(
     topic: &str,
     draw_pool: DrawPool,
     mut branches: Vec<Branch>,
