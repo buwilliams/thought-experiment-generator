@@ -57,7 +57,7 @@ Half the slots draw from background/novel, half from universal. The collision be
 - Deutsch scorer (1 LLM call) -- hard to vary, reaches beyond inputs, minimal assumptions, resolves tension?
 - Survivor threshold -- score >= 0.6?
 
-**5. Tree search.** 10 root branches, each running to depth 10. At each depth, the system draws, generates, and filters until a survivor is found (up to 100 attempts). Low scores don't trigger pruning. Only depth limit, circularity, or vocabulary exhaustion terminate a branch.
+**5. Tree search.** 10 root branches, each running to depth 10. At each depth, the system draws, generates, and filters until a survivor is found (up to 100 attempts). Each survivor's unresolved tension feeds into the next depth's generation, so the chain builds progressively, like Einstein's train thought experiment building on the frozen light wave. Low scores don't trigger pruning. Only depth limit, circularity, or vocabulary exhaustion terminate a branch.
 
 **6. Cross-pollination.** After branches complete, the system checks pairs for complementary unresolved tensions. Complementary pairs merge into new branches that neither could reach alone.
 
