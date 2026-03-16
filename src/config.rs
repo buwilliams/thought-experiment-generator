@@ -27,6 +27,7 @@ pub struct Config {
     pub bg_universal_ratio: f64,
     pub draws_per_depth: u32,
     pub temperature: f64,
+    pub max_calls: Option<u64>,
     pub atom: AtomConfig,
     pub llm: LlmConfig,
 }
@@ -46,6 +47,7 @@ impl Config {
         relationships: u32,
         properties: u32,
         max_concurrent: usize,
+        max_calls: Option<u64>,
     ) -> anyhow::Result<Self> {
         let provider = match provider_str {
             "anthropic" => LlmProvider::Anthropic,
@@ -76,6 +78,7 @@ impl Config {
             bg_universal_ratio: ratio,
             draws_per_depth: draws,
             temperature,
+            max_calls,
             atom: AtomConfig {
                 objects,
                 relationships,

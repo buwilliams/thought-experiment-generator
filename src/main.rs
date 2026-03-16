@@ -67,6 +67,10 @@ pub struct Cli {
     #[arg(long, default_value_t = 5)]
     pub max_concurrent: usize,
 
+    /// Max total LLM calls (budget cap, 0 = unlimited)
+    #[arg(long, default_value_t = 500)]
+    pub max_calls: u64,
+
     /// Output format: "text" or "json"
     #[arg(long, default_value = "text")]
     pub output: String,
@@ -95,6 +99,7 @@ async fn main() -> Result<()> {
         cli.relationships,
         cli.properties,
         cli.max_concurrent,
+        if cli.max_calls == 0 { None } else { Some(cli.max_calls) },
     )?;
 
     // Get topic interactively if not provided
@@ -115,14 +120,20 @@ async fn main() -> Result<()> {
 
     println!("\n=== Thought Experiment Generator ===");
     println!("Topic: {topic}");
+    let budget_str = match config.max_calls {
+        Some(n) => format!("{n}"),
+        None => "unlimited".to_string(),
+    };
     println!(
-        "Config: depth={}, branches={}, threshold={:.2}, draws/depth={}\n",
-        config.depth_limit, config.num_branches, config.survivor_threshold, config.draws_per_depth
+        "Config: depth={}, branches={}, threshold={:.2}, draws/depth={}, max_calls={}\n",
+        config.depth_limit, config.num_branches, config.survivor_threshold, config.draws_per_depth, budget_str
     );
 
-    let llm_client = Arc::new(LlmClient::new(config.llm.clone()));
+    let llm_client = Arc::new(LlmClient::new(config.llm.clone(), config.max_calls));
 
-    let tree = tree_runner::run_tree(llm_client, &config, &topic).await?;
+    let tree = tree_runner::run_tree(Arc::clone(&llm_client), &config, &topic).await?;
+
+    println!("LLM calls used: {}", llm_client.calls_made());
 
     // Output results
     if cli.output == "json" {

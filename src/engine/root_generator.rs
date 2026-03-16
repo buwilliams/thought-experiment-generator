@@ -28,7 +28,7 @@ pub async fn generate_root_branches(
 
     info!("Generating {} root branches...", config.num_branches);
 
-    while branches.len() < config.num_branches as usize && total_draws < max_total_draws {
+    while branches.len() < config.num_branches as usize && total_draws < max_total_draws && !client.budget_exhausted() {
         total_draws += 1;
 
         let draw = {

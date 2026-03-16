@@ -25,6 +25,12 @@ pub async fn run_branch(
     let start_depth = branch.current_depth + 1;
 
     for depth in start_depth..=branch.depth_limit {
+        if client.budget_exhausted() {
+            info!("Branch {} stopping at depth {}: call budget exhausted", branch.id, depth);
+            branch.status = BranchStatus::Terminated;
+            return Ok(());
+        }
+
         let mut draws_attempted: u32 = 0;
         let mut survivor_found = false;
 
@@ -32,7 +38,7 @@ pub async fn run_branch(
         let accumulated_path: Vec<Node> = branch.nodes.clone();
         let latest_tension = branch.latest_tension().cloned();
 
-        while draws_attempted < config.draws_per_depth && !survivor_found {
+        while draws_attempted < config.draws_per_depth && !survivor_found && !client.budget_exhausted() {
             draws_attempted += 1;
 
             // Draw from pools

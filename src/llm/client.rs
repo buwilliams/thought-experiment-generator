@@ -1,10 +1,11 @@
 use std::sync::Arc;
+use std::sync::atomic::{AtomicU64, Ordering};
 use std::time::Duration;
 
 use anyhow::{Context, Result};
 use serde::de::DeserializeOwned;
 use tokio::sync::Semaphore;
-use tracing::{debug, warn};
+use tracing::{debug, info, warn};
 
 use crate::config::{LlmConfig, LlmProvider};
 use crate::llm::parser::parse_llm_json;
@@ -13,10 +14,12 @@ pub struct LlmClient {
     http: reqwest::Client,
     config: LlmConfig,
     semaphore: Arc<Semaphore>,
+    call_count: AtomicU64,
+    max_calls: Option<u64>,
 }
 
 impl LlmClient {
-    pub fn new(config: LlmConfig) -> Self {
+    pub fn new(config: LlmConfig, max_calls: Option<u64>) -> Self {
         let semaphore = Arc::new(Semaphore::new(config.max_concurrent));
         let http = reqwest::Client::builder()
             .timeout(Duration::from_secs(120))
@@ -26,7 +29,26 @@ impl LlmClient {
             http,
             config,
             semaphore,
+            call_count: AtomicU64::new(0),
+            max_calls,
         }
+    }
+
+    /// Number of LLM calls made so far.
+    pub fn calls_made(&self) -> u64 {
+        self.call_count.load(Ordering::Relaxed)
+    }
+
+    /// Budget remaining, or None if unlimited.
+    pub fn budget_remaining(&self) -> Option<u64> {
+        self.max_calls.map(|max| max.saturating_sub(self.calls_made()))
+    }
+
+    /// Returns true if the call budget has been exhausted.
+    pub fn budget_exhausted(&self) -> bool {
+        self.max_calls
+            .map(|max| self.calls_made() >= max)
+            .unwrap_or(false)
     }
 
     /// Send a prompt and parse a JSON response of type T.
@@ -37,7 +59,14 @@ impl LlmClient {
 
     /// Raw string response.
     pub async fn call_raw(&self, prompt: &str, temperature: f64) -> Result<String> {
+        if self.budget_exhausted() {
+            anyhow::bail!("LLM call budget exhausted ({} calls)", self.calls_made());
+        }
         let _permit = self.semaphore.acquire().await?;
+        let count = self.call_count.fetch_add(1, Ordering::Relaxed) + 1;
+        if let Some(max) = self.max_calls {
+            info!("LLM call {count}/{max}");
+        }
         self.call_with_retry(prompt, temperature, 3).await
     }
 

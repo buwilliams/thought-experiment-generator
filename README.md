@@ -14,11 +14,12 @@ ANTHROPIC_TOKEN=... cargo run -- --provider anthropic-token "your topic"
 # OpenAI
 OPENAI_API_KEY=sk-... cargo run -- --provider openai --model gpt-4o "your topic"
 
-# Options (all optional)
+# Options (all optional, defaults shown)
 cargo run -- "your topic" \
   --depth 10 --branches 10 --draws 100 \
   --threshold 0.7 --novel-threshold 0.85 \
-  --temperature 1.2 --max-concurrent 5 --output text
+  --max-calls 500 --max-concurrent 5 \
+  --temperature 1.2 --output text
 ```
 
 ## Documents
