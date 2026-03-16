@@ -5,6 +5,9 @@ A depth-bounded branching search over explanation space. Given a topic, the syst
 ## Usage
 
 ```sh
+# Defaults work out of the box (requires ANTHROPIC_API_KEY or ANTHROPIC_TOKEN env var)
+cargo run -- "your topic"
+
 # Anthropic API key
 ANTHROPIC_API_KEY=sk-... cargo run -- "your topic"
 
