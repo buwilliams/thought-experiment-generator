@@ -24,7 +24,7 @@ pub struct Cli {
     pub branches: u32,
 
     /// Survivor score threshold
-    #[arg(long, default_value_t = 0.7)]
+    #[arg(long, default_value_t = 0.6)]
     pub threshold: f64,
 
     /// Novel pool admission threshold

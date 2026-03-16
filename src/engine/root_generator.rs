@@ -5,7 +5,7 @@ use anyhow::Result;
 use rand::rngs::StdRng;
 use rand::SeedableRng;
 use tokio::sync::RwLock;
-use tracing::{debug, info};
+use tracing::{debug, info, warn};
 use uuid::Uuid;
 
 use crate::config::Config;
@@ -43,29 +43,48 @@ pub async fn generate_root_branches(
         .await
         {
             Ok(te) => te,
-            Err(_) => continue,
+            Err(e) => {
+                warn!("Draw {total_draws}: TE generation failed: {e}");
+                continue;
+            }
         };
 
         // Grammar check
         if !te_generator::grammar_check(&te) {
+            info!("Draw {total_draws}: failed grammar check");
             continue;
         }
 
         // Coherence
         let coherence = match coherence_filter::check_coherence(client, topic, &te).await {
             Ok(c) => c,
-            Err(_) => continue,
+            Err(e) => {
+                warn!("Draw {total_draws}: coherence check error: {e}");
+                continue;
+            }
         };
         if !coherence.passes {
+            info!(
+                "Draw {total_draws}: failed coherence (consistent={}, relevant={}): {} / {}",
+                coherence.internally_consistent, coherence.topic_relevant,
+                coherence.consistent_reason, coherence.relevant_reason
+            );
             continue;
         }
 
         // Deutsch score
         let score = match deutsch_scorer::score_deutsch(client, topic, &te, &[]).await {
             Ok(s) => s,
-            Err(_) => continue,
+            Err(e) => {
+                warn!("Draw {total_draws}: Deutsch scoring error: {e}");
+                continue;
+            }
         };
         if score.overall_score < config.survivor_threshold {
+            info!(
+                "Draw {total_draws}: below threshold ({:.2} < {:.2}): {}",
+                score.overall_score, config.survivor_threshold, score.justification
+            );
             continue;
         }
 
