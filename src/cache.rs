@@ -126,16 +126,16 @@ pub fn save_critique(topic: &str, n: u32, critique: &Critique) -> Result<()> {
     Ok(())
 }
 
-// --- summary.txt ---
+// --- summary.md ---
 
 pub fn summary_path(topic: &str) -> PathBuf {
-    cache_dir(topic).join("summary.txt")
+    cache_dir(topic).join("summary.md")
 }
 
 pub fn save_summary(topic: &str, text: &str) -> Result<()> {
     let dir = ensure_dir(topic)?;
-    std::fs::write(dir.join("summary.txt"), text)?;
-    tracing::info!("Saved summary.txt");
+    std::fs::write(dir.join("summary.md"), text)?;
+    tracing::info!("Saved summary.md");
     Ok(())
 }
 

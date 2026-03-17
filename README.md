@@ -87,7 +87,7 @@ The novelty in this system comes from the **randomness algorithm, not the LLM**.
 
 Reach and Novelty measure different things: Reach is the harder bar (new territory); Novelty is reframing within known knowledge. Each dimension is scored 0.0–1.0. Scores are saved as `NNN-experiment-criticize.json`.
 
-**5. Rank and summarize.** Results are sorted by total score (reach + novelty + falsifiable, max 3.0). The top 5 are summarized in 20 words each. Everything is written to `summary.txt`.
+**5. Rank and summarize.** Results are sorted by total score (reach + novelty + falsifiable, max 3.0). The top 5 are summarized in 20 words each. Everything is written to `summary.md`.
 
 ## Output Files
 
@@ -100,7 +100,7 @@ generated.txt                    — sentences generated from word pairs
 001-experiment.txt               — thought experiment #1
 001-experiment-criticize.json    — scores for experiment #1
 ...
-summary.txt                      — ranked table + top 5 summaries
+summary.md                      — ranked table + top 5 summaries
 ```
 
 ## Documents

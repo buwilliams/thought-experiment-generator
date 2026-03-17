@@ -76,7 +76,7 @@ Criticism runs at low temperature (0.2) for consistent scoring. Generation runs 
 
 ### Phase 4: Results
 
-Results are sorted by total score. A summary is written to `summary.txt` containing:
+Results are sorted by total score. A summary is written to `summary.md` containing:
 
 - A ranked table: experiment name, reach, novelty, falsifiable, total score, with links to experiment and critique files
 - Top 5 thought experiments with a 20-word LLM-generated summary each
@@ -201,7 +201,7 @@ generated.txt                    — sentences generated from word groups
 001-experiment.txt               — thought experiment #1
 001-experiment-criticize.json    — scores for experiment #1
 ...
-summary.txt                      — ranked table + top 5 summaries
+summary.md                      — ranked table + top 5 summaries
 ```
 
 The hash is derived from the topic string (lowercased, trimmed) so the same topic always maps to the same directory. Changing parameters does not invalidate the cache — use `--fresh` to start over.
