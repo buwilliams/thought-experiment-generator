@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Extends known self-evaluation failure ideas to ontology shifts, protocol invention, anomalous inputs, and delayed feedback.",
+  "novelty": 0.78,
+  "novelty_why": "Non-obviously unifies evaluator bias, paradigm change, nonsense handling, and temporal confounding under recursive self-improvement.",
+  "falsifiable": 0.74,
+  "falsifiable_why": "Testable via systems with recursive judges under ontology shifts, noisy directives, and delayed-feedback environments.",
+  "explanation": "Self-improving judges can recursively amplify hidden evaluation biases and reject the innovations needed for real progress."
+}

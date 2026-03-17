@@ -1,0 +1,9 @@
+{
+  "reach": 0.29,
+  "reach_why": "It sharpens existing skepticism about recombination, architecture, and benchmarks, but does not open a fundamentally new explanatory domain.",
+  "novelty": 0.67,
+  "novelty_why": "It non-obviously links language reuse, inherited priors, benchmark leakage, and explanation-versus-truth into one coherent critique.",
+  "falsifiable": 0.82,
+  "falsifiable_why": "Counterexamples could show recombination or architecture alone producing novel explanations, or benchmarks reliably detecting genuinely new knowledge.",
+  "explanation": "Competence with old words and known benchmarks does not by itself demonstrate genuinely new explanatory knowledge."
+}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "Extends familiar generation-versus-justification critiques to architecture-scaling debates, but does not open wholly new explanatory territory.",
+  "novelty": 0.68,
+  "novelty_why": "Non-obviously links institutional constraints, pretrained priors, and semantic-thin outputs to challenge architecture-only knowledge claims.",
+  "falsifiable": 0.79,
+  "falsifiable_why": "Could be undermined by cases where architecture alone yields robust truth, or where outputs reliably track understanding.",
+  "explanation": "Settings shape candidate generation, but truth and resilient knowledge require more than architecture, fluency, or social uptake."
+}

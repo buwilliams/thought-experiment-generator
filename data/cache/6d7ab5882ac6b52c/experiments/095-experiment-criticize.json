@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Mostly synthesizes known concerns: prompt leakage, priors, gradualism, and evaluation artifacts; little genuinely new explanatory territory.",
+  "novelty": 0.68,
+  "novelty_why": "Non-obviously unifies prompt-embedded structure, pretrained compression, threshold skepticism, and bizarre-truth world-modeling under one evaluative frame.",
+  "falsifiable": 0.79,
+  "falsifiable_why": "Testable by controlled prompt ablations, pretraining variation, emergence analyses, and counterexamples separating imitation from genuine inference.",
+  "explanation": "Apparent insight may reflect prompt and prior structure, making emergence and novelty judgments unreliable without careful disentangling."
+}

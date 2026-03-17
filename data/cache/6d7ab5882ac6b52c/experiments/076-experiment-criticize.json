@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Extends known critique of fluency bias to discovery architectures, but does not open wholly unprecedented explanatory territory.",
+  "novelty": 0.79,
+  "novelty_why": "Non-obviously links linguistic filtering, thought-experiment search, and missed measurement/protocol innovations under one failure mode.",
+  "falsifiable": 0.88,
+  "falsifiable_why": "Test by comparing filtered versus unfiltered systems on tasks where truths are awkwardly expressed or protocol-centered.",
+  "explanation": "Fluent explanation filters can hide true, crucial discoveries, especially awkward measurement or protocol innovations."
+}

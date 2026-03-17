@@ -1,0 +1,9 @@
+{
+  "reach": 0.28,
+  "reach_why": "Mostly extends known concerns about observer effects, novelty laundering, and filtering bias rather than opening new territory.",
+  "novelty": 0.71,
+  "novelty_why": "Non-obviously links introspection probes, source-pool contamination, cliché filters, and social normalization of idea theft.",
+  "falsifiable": 0.86,
+  "falsifiable_why": "Test probe effects, pool-mixing controls, filter ablations, and whether strange outputs predict genuine explanatory gains.",
+  "explanation": "It warns that polished, self-narrated explanations can mask recycled ideas while systems suppress genuinely novel strangeness."
+}

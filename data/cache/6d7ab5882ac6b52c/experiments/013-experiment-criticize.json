@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "Mostly extends existing debates on search, creativity, and hard-to-vary explanations rather than opening new territory.",
+  "novelty": 0.68,
+  "novelty_why": "Non-obviously links bounded search failure, human creativity parity, and hidden human priors in evaluation.",
+  "falsifiable": 0.79,
+  "falsifiable_why": "Counterexamples could operationalize hard-to-vary scoring without tacit priors or distinguish human creativity from bounded search.",
+  "explanation": "It exposes circularity in judging creativity by search limits plus undefined hard-to-vary standards."
+}

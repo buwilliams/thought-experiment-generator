@@ -1,0 +1,9 @@
+{
+  "reach": 0.28,
+  "reach_why": "Extends familiar skepticism about novelty metrics; does not clearly introduce a fundamentally new explanatory framework.",
+  "novelty": 0.67,
+  "novelty_why": "Non-obviously links source-mixing errors, anthropomorphic journaling, and language underdetermination in novelty evaluation.",
+  "falsifiable": 0.84,
+  "falsifiable_why": "Can be tested by controlled evaluations showing journaling and pool-mixing do or do not distort novelty judgments.",
+  "explanation": "Novelty judgments need structural analysis, not surface surprise, wording, or first-person self-reports."
+}

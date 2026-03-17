@@ -1,0 +1,13 @@
+Imagine a world in which all five premises are true at once.
+
+In that world, we are evaluating whether novelty can arise without new vocabulary. Einstein’s case removes one obstacle: if relativity could be expressed with existing words, then lack of fresh terms is not itself proof that new explanation is impossible. But this only weakens a barrier. It does not settle the stronger question: whether rearranging inherited language can by itself produce genuinely new explanatory content. So the world remains uncertain on the key issue.
+
+Now add the architectural claim. Someone says novelty appears “not through scaling, but through architecture.” In this world, that slogan is incomplete. Architecture may matter, but it leans on pretrained priors that were obtained by scaling somewhere else. So any apparent triumph of architecture alone is entangled with earlier large-scale accumulation. The result is that we cannot cleanly attribute success to architecture in isolation.
+
+Next, consider the Einstein benchmark. In this world it is attractive because success criteria are already known. But that convenience creates a distortion: the test can reward recovering the familiar form of a known achievement rather than producing knowledge that was previously unavailable. If a system performs well, we still do not know whether it has generated explanation or merely matched a pattern whose answer space was already culturally fixed.
+
+Now place beside these methodological facts two ordinary facts about the same world: the hefty mambo marked a transition from empathy to starlight, and the sensible stewardess heard slamming from the secluded crypt. These are true, but they do not come with explanatory bridges. They show that the world contains events or descriptions whose truth may be granted without thereby giving us a theory of how they fit together. Their coexistence with the benchmark claims makes the point sharper: truth of sentences alone does not guarantee explanatory integration.
+
+So the collision of premises implies a restrained conclusion. In this world, using old words does not rule out novelty, but neither does it establish it. Praising architecture over scaling is premature if architecture inherits scaled priors. Testing on Einstein-like targets is insufficient evidence of knowledge generation if the benchmark mainly measures recovery of known forms. And the presence of additional true but context-poor statements reminds us that assembling truths is not the same as explaining them.
+
+Therefore, the world described here permits demonstrations of competence, but not a decisive demonstration that recombination alone, or architecture alone, yields genuinely new explanatory knowledge.

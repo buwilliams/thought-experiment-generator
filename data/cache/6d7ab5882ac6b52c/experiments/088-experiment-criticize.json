@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Recursive evaluator failure and misaligned search narrowing are known concerns; surreal facts add framing, not new territory.",
+  "novelty": 0.68,
+  "novelty_why": "It links self-judgment failure, search-space miscounting, and detached heuristics into one cautionary picture.",
+  "falsifiable": 0.79,
+  "falsifiable_why": "Claims can be tested by recursive systems outperforming despite evaluator flaws, or by counterexamples separating narrowing from distortion.",
+  "explanation": "Self-improvement can amplify evaluator errors, making efficient search converge on self-approved but wrong outputs."
+}

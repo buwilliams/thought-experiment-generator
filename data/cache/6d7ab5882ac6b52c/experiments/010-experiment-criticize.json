@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Extends familiar critiques of retrieval and benchmark bias, but does not open clearly unprecedented explanatory territory.",
+  "novelty": 0.68,
+  "novelty_why": "Non-obviously links prompt structure, ontology change, and evaluation filters as joint barriers to frontier discovery.",
+  "falsifiable": 0.84,
+  "falsifiable_why": "Could be challenged by systems that discover ontology-shifting ideas despite current-filter evaluation and suggestive prompts.",
+  "explanation": "Current filters and prompts can reward reconstruction while suppressing genuinely new, ontology-changing discoveries."
+}

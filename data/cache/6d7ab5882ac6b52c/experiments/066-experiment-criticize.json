@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Extends known concerns about priors, heuristics, and anthropomorphic probes, but does not open wholly new explanatory territory.",
+  "novelty": 0.74,
+  "novelty_why": "Non-obviously links universal priors, heuristic shells, and introspective probing under rare-fact preservation.",
+  "falsifiable": 0.86,
+  "falsifiable_why": "Test by comparing models on rare-fact tasks, heuristic transfer, and introspective reports against ground-tracking performance.",
+  "explanation": "Convincing explanations can fail to track rare truths when priors smooth anomalies and heuristics lose their grounding."
+}

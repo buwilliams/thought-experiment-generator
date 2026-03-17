@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "Mostly extends known critiques of language-centric AI and self-improvement, not a wholly new explanatory domain.",
+  "novelty": 0.72,
+  "novelty_why": "Non-obviously links ontology change, mathematical discovery, and evaluator bugs into one failure mode.",
+  "falsifiable": 0.86,
+  "falsifiable_why": "Test by comparing language-heavy self-improvers against systems with mathematical and ontology-revising capacities.",
+  "explanation": "Fluent self-praise can mask stalled discovery when real progress needs mathematics and changing conceptual primitives."
+}

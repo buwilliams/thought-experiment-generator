@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Mostly extends existing debates on explanation, generalization, and evaluation bias rather than opening wholly new territory.",
+  "novelty": 0.68,
+  "novelty_why": "Non-obviously links damaged evidence, anomalous content, and human-evaluated architectures to limits of explanatory reach.",
+  "falsifiable": 0.72,
+  "falsifiable_why": "Could be challenged by systems producing robust explanations beyond historical styles despite corrupted evidence and anomalies.",
+  "explanation": "It questions whether plausible explanation can exceed inherited evaluative habits under anomalous, damaged evidence."
+}

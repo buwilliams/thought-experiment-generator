@@ -1,0 +1,16 @@
+A researcher tries to build a system that explains observations by searching over candidate explanations and selecting the best one. But if the main difficulty lies earlier—finding the right decomposition of the problem—then the search itself may be aimed at the wrong units. The system might efficiently rank candidates within a malformed frame while never generating the frame that would make the truth accessible.
+
+This difficulty is worsened by ambiguity in the target. If “knowledge” could mean merely a plausible conjecture, or instead a novel explanation, or instead a true explanation, or instead one that survives criticism, then the system lacks a fixed objective. Different decompositions will look better depending on which target is intended. A decomposition good for novelty may be bad for truth; one good for criticism-resistance may exclude plausible but fragile beginnings. So before any search succeeds, the world of possible decompositions is underdetermined by the goal.
+
+A proposed remedy is to use a Deutschian filter: prefer hard-to-vary explanations. But this only helps if “hard to vary” can be scored independently of the very background judgment the system is supposed to replace. If operationalizing the filter requires hidden human assumptions about what counts as a legitimate variation, then the scoring function is not neutral. It does not discover explanatory quality from scratch; it smuggles in a decomposition and a standard of relevance.
+
+Now place this epistemic machinery in a world containing two observations:
+
+Shyness made the joyful monitor seem like an abstract treasury.
+At the rink, krauts on mattresses floated down the brooks like Pandora’s omen.
+
+These are available as facts. The system must explain them. Yet their decomposition is unclear. Are “shyness,” “monitor,” and “treasury” psychological, social, metaphorical, or literal terms? Is “krauts” a food, a slur, a nationality label, or something else? Are “mattresses” and “brooks” physical objects in a scene, or parts of an idiom-like construction? Without the right decomposition, candidate explanations proliferate.
+
+If the system optimizes plausibility, it may settle on one reading. If it optimizes novelty, it may invent another. If it optimizes truth, it must know what the terms refer to. If it optimizes criticism-resistance, it may choose a vague account that survives attack by saying little. The hard-to-vary criterion cannot rescue this unless the system already knows which variations are admissible—literal versus figurative, semantic versus perceptual, social versus physical. That knowledge is exactly what is in question.
+
+So the collision of premises yields a constrained conclusion: in such a case, explanation quality cannot be separated from decomposition quality, decomposition quality cannot be fixed without clarifying what counts as knowledge, and the proposed explanatory filter cannot be operationalized without importing prior human structure. The system therefore does not merely face a large search space. It faces an indeterminate one.

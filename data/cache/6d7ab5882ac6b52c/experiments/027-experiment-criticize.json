@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "Extends familiar selection-bias critiques to AI explanation pipelines, but does not open wholly new explanatory territory.",
+  "novelty": 0.71,
+  "novelty_why": "Non-obviously links judge bias, candidate-pool design, and pretrained priors into one failure mode.",
+  "falsifiable": 0.88,
+  "falsifiable_why": "Test by varying pool composition, judge criteria, and pretraining dependence; compare overlooked explanations and performance.",
+  "explanation": "It argues the evaluation pipeline may systematically suppress genuinely alien but better explanations."
+}

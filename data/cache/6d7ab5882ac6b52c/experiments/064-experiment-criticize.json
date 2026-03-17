@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "It sharpens existing debates on recombination and novelty, but does not open clearly unprecedented explanatory territory.",
+  "novelty": 0.71,
+  "novelty_why": "It non-obviously links search guidance, pool-mixing failure, and domain differences in evaluating apparent explanatory novelty.",
+  "falsifiable": 0.78,
+  "falsifiable_why": "Counterexamples showing principled novel explanations, or tests separating remixing from genuine basin escape, could refute it.",
+  "explanation": "Apparent AI novelty may be guided recombination, especially in thought-experiment domains, not genuine escape from inherited conceptual basins."
+}

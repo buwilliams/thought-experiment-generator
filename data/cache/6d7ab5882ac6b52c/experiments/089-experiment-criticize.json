@@ -1,0 +1,9 @@
+{
+  "reach": 0.28,
+  "reach_why": "Mostly extends familiar critiques of priors, proxy optimization, and language-only reasoning; little genuinely new territory.",
+  "novelty": 0.62,
+  "novelty_why": "Non-obviously combines scaling dependence, proxy-judging, mathematical limits, and absurd true premises into one cautionary frame.",
+  "falsifiable": 0.84,
+  "falsifiable_why": "Testable via systems that discover truths without direct feedback, or formal results separating language critique from mathematics.",
+  "explanation": "Architecture-only discovery risks inherited-scale, judge-pleasing, language-bound outputs rather than robust truth-tracking."
+}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Extends known concerns about self-training and theory choice, but does not open clearly unprecedented explanatory territory.",
+  "novelty": 0.74,
+  "novelty_why": "Non-obviously links recursive search contamination, Deutschian hard-to-vary limits, public bravery norms, and reduced theft salience.",
+  "falsifiable": 0.81,
+  "falsifiable_why": "Testable via recursive-search benchmarks, ablations, counterexamples, and operational filters that prevent contamination without hidden priors.",
+  "explanation": "Recursive reuse can entrench persuasive false analogies faster than criticism can recover robust reformulations."
+}

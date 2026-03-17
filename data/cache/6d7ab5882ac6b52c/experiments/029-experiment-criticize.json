@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Combines known worries about priors, feedback loops, and compression; not wholly new territory.",
+  "novelty": 0.76,
+  "novelty_why": "Non-obviously links Deutschian hard-to-vary criteria with recursive search contamination and elegant falsehood bias.",
+  "falsifiable": 0.84,
+  "falsifiable_why": "Test by constructing systems where recursive compounding and compression do not increase polished falsehoods.",
+  "explanation": "Self-reinforcing search can mistake human-biased, compressed elegance for truth and stabilize error."
+}

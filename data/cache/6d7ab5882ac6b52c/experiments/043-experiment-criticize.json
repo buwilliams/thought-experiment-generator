@@ -1,0 +1,9 @@
+{
+  "reach": 0.28,
+  "reach_why": "Mostly extends known worries about simplicity bias, underdetermination, and evaluator misspecification rather than opening new territory.",
+  "novelty": 0.71,
+  "novelty_why": "Non-obviously links compression bias, hard-to-vary scoring, search priors, and human opacity into one failure mode.",
+  "falsifiable": 0.82,
+  "falsifiable_why": "Test by comparing compressed versus messy-ground-truth domains; counterexamples weaken the claimed convergence distortion.",
+  "explanation": "Concise evaluators can systematically prefer elegant falsehoods over messy truths under uncertain search and human-shaped criteria."
+}

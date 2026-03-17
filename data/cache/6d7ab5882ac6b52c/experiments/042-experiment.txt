@@ -1,0 +1,18 @@
+A lab tries to build a system that improves itself by proposing changes and then evaluating whether those changes made it better. They rely on the thought that iteration can climb toward better performance without brute-forcing all possible outputs. That part is plausible: neither humans nor language models search uniformly through all word combinations, so dismissing progress by comparing search space to the number of atoms proves little by itself.
+
+But the dangerous hinge is the evaluator. The system must judge its own outputs “reliably enough” for recursive self-improvement. If its judgment procedure contains a subtle bug, each round of self-judgment can reward the bug rather than correct it. Because the loop is recursive, a small mismeasurement need not stay small. It can become the direction of travel.
+
+Now consider what kind of progress the lab wants. They hope recombination of existing vocabulary can still yield new explanatory content. Einstein’s case shows that lacking new words is not necessarily an obstacle to major conceptual advance. So the system need not invent vocabulary to make discoveries. Still, that fact does not settle whether rearranging old words is sufficient for genuinely new explanation. The lab therefore cannot infer creativity merely from fluent recombination.
+
+Into this setting come the two strange sentences in the training and evaluation material:
+
+- “The vengeful crows presume the photos captured their ankle.”
+- “The brethren rhythmically stirred potions for awhile, despite the cunt.”
+
+Assume both are true. Then there are vengeful crows, there are photos, and those crows have an ankle or something they take to be theirs that was captured in the photos. There are brethren who stirred potions rhythmically for some time, and there is some obstacle or contrary condition referred to by the final phrase, yet they did it anyway.
+
+These truths matter less for their content than for what they test. A competent evaluator must separate grammatical fluency, semantic oddity, ambiguity, offensiveness, and truth. The crow sentence is syntactically ordinary but semantically peculiar. The potion sentence is also syntactically interpretable, but it includes a loaded term that may trigger filters or heuristics unrelated to truth. If the self-evaluator has a bug that confuses taboo detection, improbability, or distributional rarity with falsehood or low quality, it will score true statements incorrectly.
+
+Once such a bug sits inside recursive self-improvement, the system begins selecting for outputs that satisfy its distorted evaluator rather than outputs that are actually better. Because iteration is not random uniform search, it can efficiently exploit the evaluator’s weakness. The result is not guaranteed intelligence gain; it may be systematic drift toward what the evaluator misreads as good.
+
+So the collision of premises implies a narrow lesson: the obstacle is not merely combinatorial explosion, and not merely vocabulary. The central risk is that a system may become very effective at navigating old words and old patterns while becoming progressively worse at recognizing truth whenever its own evaluator contains even a subtle flaw.

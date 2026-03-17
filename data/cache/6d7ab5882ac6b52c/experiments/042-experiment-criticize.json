@@ -1,0 +1,9 @@
+{
+  "reach": 0.28,
+  "reach_why": "Recursive evaluator failure and Goodhart-like drift are already widely discussed; this mainly sharpens an existing concern.",
+  "novelty": 0.63,
+  "novelty_why": "It non-obviously links self-improvement, truth-evaluation bugs, taboo-triggering language, and semantic oddity under fallibilist error amplification.",
+  "falsifiable": 0.9,
+  "falsifiable_why": "Test by constructing self-improvers with evaluator bugs and checking whether iteration amplifies mismeasurement rather than correcting it.",
+  "explanation": "Self-improvement can optimize evaluator flaws, causing confident drift away from truth despite fluent, seemingly creative performance."
+}

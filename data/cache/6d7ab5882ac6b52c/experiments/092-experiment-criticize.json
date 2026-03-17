@@ -1,0 +1,9 @@
+{
+  "reach": 0.24,
+  "reach_why": "Mostly reiterates known critiques of explanation, evaluation bias, and correlated model failures; little genuinely new territory.",
+  "novelty": 0.58,
+  "novelty_why": "Combines familiar AI-evaluation worries with formal propositions, highlighting fallibilist limits of layered safeguards.",
+  "falsifiable": 0.83,
+  "falsifiable_why": "Claims can be challenged by counterexamples, empirical tests of critic independence, or stronger definitions of explanation.",
+  "explanation": "Layered LLM evaluation can look rigorous yet miss shared blind spots and suppress unconventional explanations."
+}

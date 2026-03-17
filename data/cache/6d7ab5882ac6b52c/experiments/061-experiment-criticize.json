@@ -1,0 +1,9 @@
+{
+  "reach": 0.24,
+  "reach_why": "Mostly reiterates existing concerns about prompt leakage, priors, and misleading combinatorics; little genuinely new explanatory territory.",
+  "novelty": 0.58,
+  "novelty_why": "Connects prompt-latency, priors, and search-space critiques into one skeptical frame about apparent knowledge creation.",
+  "falsifiable": 0.79,
+  "falsifiable_why": "Can be challenged by prompts with controlled information, priors, and outputs showing genuine explanatory novelty despite constraints.",
+  "explanation": "Knowledge-creation claims depend on prior structure and prompt content, not merely successful output or huge combinatorial possibilities."
+}

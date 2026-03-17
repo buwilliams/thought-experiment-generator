@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "Extends known selection-bias and search-space ideas; unlikely wholly unprecedented as an explanatory claim.",
+  "novelty": 0.76,
+  "novelty_why": "Non-obviously links generative curation, pseudo-novelty, nuisance theft, and public silence into one frame.",
+  "falsifiable": 0.82,
+  "falsifiable_why": "Test by varying pool composition and theft frequency, then checking novelty and confrontation predictions.",
+  "explanation": "Real innovation depends on hidden candidate curation, not vast combinatorics or visible conflict."
+}

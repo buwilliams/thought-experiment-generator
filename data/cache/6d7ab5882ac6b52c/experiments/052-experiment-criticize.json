@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "It sharpens familiar skepticism about architecture, benchmarks, and search, but does not open fundamentally new explanatory territory.",
+  "novelty": 0.62,
+  "novelty_why": "It non-obviously links benchmark ambiguity, inherited priors, and opaque social salience under one fallibilist caution.",
+  "falsifiable": 0.79,
+  "falsifiable_why": "Counterexamples, ablations, transfer tests, or proving architecture-only performance could undermine its central ambiguity claim.",
+  "explanation": "Visible success and public salience are weak evidence for true underlying understanding or causal source."
+}

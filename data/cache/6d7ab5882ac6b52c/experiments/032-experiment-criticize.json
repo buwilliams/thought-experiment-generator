@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Extends familiar critiques of inductive bias and recombination, but does not open wholly unprecedented explanatory territory.",
+  "novelty": 0.72,
+  "novelty_why": "Non-obviously links novelty pools, selection heuristics, and inherited human evaluative filters into one critique.",
+  "falsifiable": 0.84,
+  "falsifiable_why": "Test by varying filters and pools, then measuring whether outputs exceed inherited explanatory styles.",
+  "explanation": "Apparent model novelty may mask inherited human judgment shaping selection, interpretation, and explanatory style."
+}
