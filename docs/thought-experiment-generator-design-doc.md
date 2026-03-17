@@ -50,7 +50,7 @@ For each thought experiment (1 through `--experiments`):
 
 The LLM acts as a reasoner, not a storyteller. It does not invent novelty or try to be creative. It follows the logic of the forced collision.
 
-Output: `NNN-experiment.txt`
+Output: `experiments/NNN-experiment.txt`
 
 All experiments run concurrently. Each is independently seeded from the pools.
 
@@ -68,7 +68,7 @@ Reach and Novelty measure different things: Reach is the harder bar (genuinely n
 
 **Total score** = reach + novelty + falsifiable (max: 3.0)
 
-Output: `NNN-experiment-criticize.json`
+Output: `experiments/NNN-experiment-criticize.json`
 
 Criticism runs at low temperature (0.2) for consistent scoring. Generation runs at the configured temperature (default: 1.0).
 
@@ -195,13 +195,13 @@ Total score = `reach + novelty + falsifiable` (max: 3.0)
 All output lives in `data/cache/[topic-hash]/`:
 
 ```
-background.txt                   — sentence pool about the topic
-words.txt                        — random word groups
-generated.txt                    — sentences generated from word groups
-001-experiment.txt               — thought experiment #1
-001-experiment-criticize.json    — scores for experiment #1
+background.txt                             — sentence pool about the topic
+words.txt                                  — random word groups
+generated.txt                              — sentences generated from word groups
+experiments/001-experiment.txt             — thought experiment #1
+experiments/001-experiment-criticize.json  — scores for experiment #1
 ...
-summary.md                      — ranked table + top 5 summaries
+summary.md                                 — ranked table + top 5 summaries
 ```
 
 The hash is derived from the topic string (lowercased, trimmed) so the same topic always maps to the same directory. Changing parameters does not invalidate the cache — use `--fresh` to start over.
@@ -214,8 +214,8 @@ Each phase is independently resumable:
 - If `background.txt` exists, background generation is skipped
 - If `words.txt` exists, word selection is skipped
 - If `generated.txt` exists, sentence generation is skipped
-- If `NNN-experiment.txt` exists, that experiment's generation is skipped
-- If `NNN-experiment-criticize.json` exists, that experiment's criticism is skipped
+- If `experiments/NNN-experiment.txt` exists, that experiment's generation is skipped
+- If `experiments/NNN-experiment-criticize.json` exists, that experiment's criticism is skipped
 
 Interrupted runs pick up where they left off.
 

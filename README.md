@@ -78,7 +78,7 @@ The novelty in this system comes from the **randomness algorithm, not the LLM**.
 
 **2. Create generated sentences.** Random words are drawn from a large word list and grouped into lines (default: 5 words per line, 50 lines). The LLM turns each line into a sentence that *preserves the strangeness* of the word combination — it is explicitly told not to normalize the words into familiar claims. These strange-seeded sentences force the system into territory that topic knowledge alone would never reach. Cached in `words.txt` and `generated.txt`.
 
-**3. Combine into thought experiments.** For each experiment, the system picks a random sample of background and generated sentences (default: 3 background, 2 generated) and treats them as axioms — the LLM assumes all are simultaneously true and reasons out what that implies about the world. It does not try to be creative; it follows the logic of the collision. Each is saved as `NNN-experiment.txt`.
+**3. Combine into thought experiments.** For each experiment, the system picks a random sample of background and generated sentences (default: 3 background, 2 generated) and treats them as axioms — the LLM assumes all are simultaneously true and reasons out what that implies about the world. It does not try to be creative; it follows the logic of the collision. Each is saved as `experiments/NNN-experiment.txt`.
 
 **4. Criticize using fallibilism.** Each thought experiment is scored on three criteria:
 - **Reach** — does it break beyond the existing corpus of human knowledge into genuinely new territory?
@@ -94,13 +94,13 @@ Reach and Novelty measure different things: Reach is the harder bar (new territo
 All output lives in `data/cache/[topic-hash]/`:
 
 ```
-background.txt                   — sentence pool about the topic
-words.txt                        — random word pairs
-generated.txt                    — sentences generated from word pairs
-001-experiment.txt               — thought experiment #1
-001-experiment-criticize.json    — scores for experiment #1
+background.txt                             — sentence pool about the topic
+words.txt                                  — random word groups
+generated.txt                              — sentences generated from word groups
+experiments/001-experiment.txt             — thought experiment #1
+experiments/001-experiment-criticize.json  — scores for experiment #1
 ...
-summary.md                      — ranked table + top 5 summaries
+summary.md                                 — ranked table + top 5 summaries
 ```
 
 ## Documents

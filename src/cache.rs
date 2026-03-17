@@ -33,6 +33,16 @@ fn ensure_dir(topic: &str) -> Result<PathBuf> {
     Ok(dir)
 }
 
+fn experiments_dir(topic: &str) -> PathBuf {
+    cache_dir(topic).join("experiments")
+}
+
+fn ensure_experiments_dir(topic: &str) -> Result<PathBuf> {
+    let dir = experiments_dir(topic);
+    std::fs::create_dir_all(&dir)?;
+    Ok(dir)
+}
+
 // --- background.txt ---
 
 pub fn background_path(topic: &str) -> PathBuf {
@@ -84,10 +94,10 @@ pub fn save_generated(topic: &str, lines: &[String]) -> Result<()> {
     Ok(())
 }
 
-// --- NNN-experiment.txt ---
+// --- experiments/NNN-experiment.txt ---
 
 pub fn experiment_path(topic: &str, n: u32) -> PathBuf {
-    cache_dir(topic).join(format!("{:03}-experiment.txt", n))
+    experiments_dir(topic).join(format!("{:03}-experiment.txt", n))
 }
 
 pub fn experiment_exists(topic: &str, n: u32) -> bool {
@@ -99,15 +109,15 @@ pub fn load_experiment(topic: &str, n: u32) -> Option<String> {
 }
 
 pub fn save_experiment(topic: &str, n: u32, text: &str) -> Result<()> {
-    let dir = ensure_dir(topic)?;
+    let dir = ensure_experiments_dir(topic)?;
     std::fs::write(dir.join(format!("{:03}-experiment.txt", n)), text)?;
     Ok(())
 }
 
-// --- NNN-experiment-criticize.json ---
+// --- experiments/NNN-experiment-criticize.json ---
 
 pub fn critique_path(topic: &str, n: u32) -> PathBuf {
-    cache_dir(topic).join(format!("{:03}-experiment-criticize.json", n))
+    experiments_dir(topic).join(format!("{:03}-experiment-criticize.json", n))
 }
 
 pub fn critique_exists(topic: &str, n: u32) -> bool {
@@ -120,7 +130,7 @@ pub fn load_critique(topic: &str, n: u32) -> Option<Critique> {
 }
 
 pub fn save_critique(topic: &str, n: u32, critique: &Critique) -> Result<()> {
-    let dir = ensure_dir(topic)?;
+    let dir = ensure_experiments_dir(topic)?;
     let json = serde_json::to_string_pretty(critique)?;
     std::fs::write(dir.join(format!("{:03}-experiment-criticize.json", n)), json)?;
     Ok(())

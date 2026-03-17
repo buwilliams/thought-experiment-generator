@@ -184,11 +184,12 @@ async fn generate_summary(client: &LlmClient, config: &Config, topic: &str) -> R
     out.push_str("|---|-----------|-------|---------|-------------|-------|\n");
     for (rank, (n, _, c)) in results.iter().enumerate() {
         let name = format!("{:03}-experiment.txt", n);
+        let path = format!("experiments/{}", name);
         out.push_str(&format!(
             "| {} | [{}]({}) | {:.2} | {:.2} | {:.2} | {:.2} |\n",
             rank + 1,
             name,
-            name,
+            path,
             c.reach,
             c.novelty,
             c.falsifiable,
@@ -206,11 +207,12 @@ async fn generate_summary(client: &LlmClient, config: &Config, topic: &str) -> R
             .await
             .unwrap_or_else(|_| "(summary unavailable)".to_string());
         let name = format!("{:03}-experiment.txt", n);
+        let path = format!("experiments/{}", name);
         out.push_str(&format!(
             "**{}. [{}]({})**  \n{}\n\n",
             rank + 1,
             name,
-            name,
+            path,
             summary.trim()
         ));
     }
