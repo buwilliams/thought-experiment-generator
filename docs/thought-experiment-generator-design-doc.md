@@ -237,7 +237,3 @@ Interrupted runs pick up where they left off.
 | **Falsifiable** | Whether a thought experiment is testable or disprovable |
 | **Total score** | Sum of reach + novelty + falsifiable (max 3.0) |
 | **Fallibilism** | The epistemological principle that knowledge grows through conjecture and criticism (Popper/Deutsch) |
-
----
-
-*Last updated: 2026-03-18*
