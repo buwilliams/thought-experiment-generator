@@ -62,7 +62,7 @@ Each thought experiment is scored independently using the principles of fallibil
 
 - **Reach** (0.0–1.0) — does it propose something no prior work has proposed, breaking into genuinely new explanatory territory?
 - **Novelty** (0.0–1.0) — does it reframe or connect existing knowledge in a non-obvious way?
-- **Falsifiable** (0.0–1.0) — is it testable or disprovable?
+- **Falsifiable** (0.0–1.0) — can it be shown to be wrong, whether by experiment, counterexample, logical contradiction, or proof of independence from its premises?
 
 Reach and Novelty measure different things: Reach is the harder bar (genuinely new territory beyond the corpus of human knowledge); Novelty is reframing within known knowledge. Each score is accompanied by a brief explanation (≤20 words). A short overall explanation (≤20 words) is also generated.
 
@@ -128,7 +128,7 @@ Using the principles of fallibilism decide:
 - Reach: Why (in 20 words or less)?
 - Novelty: Does it reframe or connect existing knowledge in a non-obvious way, score 0.0–1.0?
 - Novelty: Why (in 20 words or less)?
-- Falsifiable: Is the thought experiment falsifiable, score 0.0–1.0?
+- Falsifiable: Can this thought experiment be shown to be wrong — whether by experiment, counterexample, logical contradiction, or proof of independence from its premises, score 0.0–1.0?
 - Falsifiable: Why (in 20 words or less)?
 - In less than 20 words, what does it explain or mean?
 
@@ -234,6 +234,6 @@ Interrupted runs pick up where they left off.
 | **Pool size** | Total sentences in the background and generated pools |
 | **Reach** | Whether a thought experiment breaks beyond the existing corpus of human knowledge into new territory |
 | **Novelty** | Whether a thought experiment reframes or connects existing knowledge in a non-obvious way |
-| **Falsifiable** | Whether a thought experiment is testable or disprovable |
+| **Falsifiable** | Whether a thought experiment can be shown to be wrong — by experiment, counterexample, logical contradiction, or proof of independence from its premises |
 | **Total score** | Sum of reach + novelty + falsifiable (max 3.0) |
 | **Fallibilism** | The epistemological principle that knowledge grows through conjecture and criticism (Popper/Deutsch) |

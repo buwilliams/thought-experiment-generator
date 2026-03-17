@@ -39,7 +39,7 @@ Using the principles of fallibilism decide:
 - Reach: Why (in 20 words or less)?
 - Novelty: Does it reframe or connect existing knowledge in a non-obvious way, score 0.0 - 1.0?
 - Novelty: Why (in 20 words or less)?
-- Falsifiable: Is the thought experiment falsifiable, score 0.0 - 1.0?
+- Falsifiable: Can this thought experiment be shown to be wrong — whether by experiment, counterexample, logical contradiction, or proof of independence from its premises, score 0.0 - 1.0?
 - Falsifiable: Why (in 20 words or less)?
 - In less than 20 words, what does it explain or mean?
 

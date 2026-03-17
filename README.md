@@ -90,7 +90,7 @@ The novelty in this system comes from the **randomness algorithm, not the LLM**.
 **4. Criticize using fallibilism.** Each thought experiment is scored on three criteria:
 - **Reach** — does it break beyond the existing corpus of human knowledge into genuinely new territory?
 - **Novelty** — does it reframe or connect existing knowledge in a non-obvious way?
-- **Falsifiable** — is it testable or disprovable?
+- **Falsifiable** — can it be shown to be wrong, whether by experiment, counterexample, logical contradiction, or proof of independence from its premises?
 
 Reach and Novelty measure different things: Reach is the harder bar (new territory); Novelty is reframing within known knowledge. Each dimension is scored 0.0–1.0. Scores are saved as `experiments/NNN-experiment-criticize.json`.
 
