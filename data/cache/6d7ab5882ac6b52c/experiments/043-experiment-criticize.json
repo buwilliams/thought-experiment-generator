@@ -1,9 +1,0 @@
-{
-  "reach": 0.42,
-  "reach_why": "Extends familiar AI-evaluation skepticism, but does not clearly introduce a fundamentally unprecedented explanatory framework.",
-  "novelty": 0.78,
-  "novelty_why": "Non-obviously links novelty judgment, evaluator authority, paraphrase ambiguity, and undecidable language-like outputs.",
-  "falsifiable": 0.31,
-  "falsifiable_why": "Raises testable pressures, but core claims remain underdetermined by unspecified criteria and shifting classifications.",
-  "explanation": "It exposes instability in judging AI novelty when human evaluators are necessary yet possibly inadequate."
-}

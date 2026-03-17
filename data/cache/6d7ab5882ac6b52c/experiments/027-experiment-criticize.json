@@ -1,9 +1,0 @@
-{
-  "reach": 0.28,
-  "reach_why": "Mostly reiterates known concerns about scale, search, and formalization; little genuinely new explanatory territory is established.",
-  "novelty": 0.52,
-  "novelty_why": "Non-obviously links architecture-vs-scale debates with physics formalization standards and evidential isolation requirements.",
-  "falsifiable": 0.61,
-  "falsifiable_why": "Claims are testable via ablations, candidate-budget controls, and post-formalization comparisons, though some terms remain underspecified.",
-  "explanation": "Architecture-only progress claims remain provisional unless separated from hidden scale and validated through formalized outcomes."
-}

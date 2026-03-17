@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Extends familiar critiques of bias, scaling, and legibility; does not open wholly new explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links hidden scaling dependence, evaluator selection, and suppression of strange truths into one failure pipeline.",
-  "falsifiable": 0.66,
-  "falsifiable_why": "Test by varying priors, evaluator filters, and weird-but-true tasks, then measuring discovery loss.",
-  "explanation": "Optimizing for familiar judgment may hide scaling dependence and systematically reject true but initially unintelligible explanations."
-}

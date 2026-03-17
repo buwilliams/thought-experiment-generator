@@ -1,9 +1,0 @@
-{
-  "reach": 0.42,
-  "reach_why": "Extends known critiques of ontology-ladenness and search bias, but does not open wholly unprecedented explanatory territory.",
-  "novelty": 0.76,
-  "novelty_why": "Non-obviously links parser bias, historical reconstruction, tractability, and nonsense-like tokens into one circularity critique.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Partly testable by comparing decompositions and search outcomes, but key claims about true causal structure remain underdetermined.",
-  "explanation": "Discovery systems may circularly mistake parser-imposed ontology for reality, excluding breakthroughs requiring alien intermediate concepts."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.24,
-  "reach_why": "Mostly synthesizes familiar concerns about evaluator alignment, proxy failure, and representational limits rather than opening new territory.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously links lexical novelty skepticism, recursive evaluation instability, and schema compression into one critique.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Testable by comparing compressed self-improving systems against richer representations and independent evaluators on explanatory tasks.",
-  "explanation": "Apparent self-improving explanation can be illusory when proxies, judges, and representations are unreliable."
-}

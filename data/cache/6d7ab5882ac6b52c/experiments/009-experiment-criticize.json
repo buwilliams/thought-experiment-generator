@@ -1,9 +1,0 @@
-{
-  "reach": 0.29,
-  "reach_why": "It sharpens existing skepticism about generative originality, but does not open clearly new explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "It non-obviously links style imitation, abstract retrieval, and burden-of-proof standards for architecture-only claims.",
-  "falsifiable": 0.74,
-  "falsifiable_why": "Its claims can be tested by controlled ablations separating stylistic fluency, retrieval, and narrowing effects.",
-  "explanation": "Apparent creative rediscovery may be retrieval; architecture-only claims need evidence isolating narrowing from pretrained knowledge."
-}

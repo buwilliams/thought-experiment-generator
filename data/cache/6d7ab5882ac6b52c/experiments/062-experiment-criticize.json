@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Questions AI explanatory novelty, but this concern already exists in philosophy of science and AI evaluation.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously links linguistic neutrality, benchmark bias, and underdetermination in assessing explanatory discovery.",
-  "falsifiable": 0.42,
-  "falsifiable_why": "Parts are testable via broader benchmarks, but core claim about beyond-human-memory discovery remains operationally vague.",
-  "explanation": "Current AI evidence cannot decide whether outputs are genuine discovery or eloquent recombination."
-}

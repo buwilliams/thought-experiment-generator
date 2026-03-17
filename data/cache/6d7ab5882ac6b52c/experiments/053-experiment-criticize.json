@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "It cautions against overclaiming AI discovery, but stays within established skepticism about self-evaluation and validation.",
-  "novelty": 0.62,
-  "novelty_why": "It links ontology misalignment, evaluator drift, and external validation into one critique of apparent machine discovery.",
-  "falsifiable": 0.56,
-  "falsifiable_why": "Claims about evaluator stability, ontology mismatch, and validation dependence can be operationalized and empirically tested.",
-  "explanation": "AI-generated thought experiments are only candidates, not knowledge, without stable evaluation and external empirical validation."
-}

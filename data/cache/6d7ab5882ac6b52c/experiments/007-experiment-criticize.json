@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Extends known concerns about optimization bias and evaluation limits, but does not open wholly new explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links fluency filters, lexical novelty, and present-judgment optimization to breakthrough suppression.",
-  "falsifiable": 0.78,
-  "falsifiable_why": "Test by comparing filters and optimization regimes on later-recognized high-value explanations versus polished weak ones.",
-  "explanation": "Surface fluency screens miss the real signal; present-judgment optimization can discard conceptually valuable but initially misread explanations."
-}

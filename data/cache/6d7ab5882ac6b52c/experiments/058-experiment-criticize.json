@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Extends known critiques of LLM evaluation, but does not open clearly unprecedented explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously links simulacra, recursive evaluation drift, hard-to-vary criteria, and opaque axioms into one failure mode.",
-  "falsifiable": 0.61,
-  "falsifiable_why": "Testable by comparing recursive pipelines against human judgments on genuine insight versus stylistic reconstruction tasks.",
-  "explanation": "Recursive LLM self-evaluation cannot reliably certify genuine conceptual insight without external human interpretive judgment."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.63,
-  "reach_why": "Combines forgetting, benchmark selection, recursive synthetic validation, and opaque truths into one architectural skepticism argument.",
-  "novelty": 0.82,
-  "novelty_why": "Non-obviously links memory compression, cultural curation, self-referential pipelines, and semantic opacity under fallibilist limits.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Parts are testable via benchmark shifts and synthetic-recursion ablations, but total claim is partly epistemic.",
-  "explanation": "Memory pruning is necessary, yet confidence in pruning correctness is structurally unreliable."
-}

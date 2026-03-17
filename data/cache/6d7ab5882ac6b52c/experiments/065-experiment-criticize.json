@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Extends known concerns about model collapse, recursion, and epistemic drift, but does not open wholly new explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "Connects weirdness tolerance, recursive LLM criticism, and phase-transition criteria in a non-obvious epistemic framing.",
-  "falsifiable": 0.57,
-  "falsifiable_why": "Partly testable via recursive-pipeline drift and calibration studies, but key threshold claims lack operational measures.",
-  "explanation": "Recursive LLM self-judgment can launder weird, ungrounded content into seemingly reliable analysis without measurable trust criteria."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Critiques search, simplicity, and recombination limits, but stays within familiar debates on explanation and generation.",
-  "novelty": 0.71,
-  "novelty_why": "Connects rarity bottlenecks, theory-ladenness of simplicity, and meaningless true axioms into one critique.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Pipeline performance, rarity sensitivity, and filtering criteria can be tested, but key terms remain framework-dependent.",
-  "explanation": "It argues explanation-finding cannot escape search rarity or evaluation uncertainty by renaming them."
-}

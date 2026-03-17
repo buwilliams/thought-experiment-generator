@@ -1,9 +1,0 @@
-{
-  "reach": 0.42,
-  "reach_why": "Extends known search-memory tradeoff ideas to question generation and provisional preservation under uncertainty.",
-  "novelty": 0.76,
-  "novelty_why": "Non-obviously links forgetting, explanatory filtering, and autonomous question selection as one architectural tension.",
-  "falsifiable": 0.61,
-  "falsifiable_why": "Testable by comparing architectures on delayed-value recovery, overload, and question-generation performance.",
-  "explanation": "Useful inquiry must preserve some illegible ideas because future questions can transform their value."
-}

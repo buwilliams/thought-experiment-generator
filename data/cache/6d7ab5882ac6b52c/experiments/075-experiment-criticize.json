@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Mostly extends familiar exploration-exploitation and creativity debates; benchmarkless novelty question is open, not clearly unprecedented.",
-  "novelty": 0.68,
-  "novelty_why": "Connects search dynamics, weirdness tolerance, and meaningless tokens into one fallibilist framing of creative discovery.",
-  "falsifiable": 0.41,
-  "falsifiable_why": "Parts are testable in systems behavior, but core claims remain underspecified and metaphorical.",
-  "explanation": "Creative systems need disciplined expansion and pruning to separate genuine novelty from seductive, untestable noise."
-}

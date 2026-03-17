@@ -1,9 +1,0 @@
-{
-  "reach": 0.18,
-  "reach_why": "Mostly reiterates known worries about correlated evaluators, fluency, and ungrounded synthesis rather than opening new explanatory territory.",
-  "novelty": 0.61,
-  "novelty_why": "Connects fallibilism, evaluator-generator bias, and semantically unstable premises into a sharp underdetermination critique.",
-  "falsifiable": 0.57,
-  "falsifiable_why": "Testable by comparing human and model-family judges on nonsense-premise syntheses versus grounded controls.",
-  "explanation": "Fluent AI syntheses can appear insightful while merely recycling patterns or amplifying shared, ungrounded error."
-}

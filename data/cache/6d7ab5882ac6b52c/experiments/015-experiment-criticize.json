@@ -1,9 +1,0 @@
-{
-  "reach": 0.28,
-  "reach_why": "It critiques known issues in search, relevance, analogy, and self-evaluation rather than opening a clearly new explanatory domain.",
-  "novelty": 0.67,
-  "novelty_why": "It non-obviously links problem selection, equivalence standards, irrelevant truths, and undefined thresholds into one failure model.",
-  "falsifiable": 0.41,
-  "falsifiable_why": "Parts are testable, but the central threshold critique lacks operational definitions, limiting decisive empirical refutation.",
-  "explanation": "More outputs do not ensure explanatory progress; relevance, equivalence, and measurable reliability thresholds determine whether explanation succeeds."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Extends known concerns about shared-model evaluation and framing error, but does not open wholly unprecedented explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links ontological bias, problem selection, and judge-generator coupling into one failure mode.",
-  "falsifiable": 0.66,
-  "falsifiable_why": "Testable by comparing shared-family judges against independent judges on misframed tasks and nonsense-premise handling.",
-  "explanation": "Shared biases can make systems confidently validate polished explanations for wrongly framed problems."
-}

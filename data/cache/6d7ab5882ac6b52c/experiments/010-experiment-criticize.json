@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Combines familiar ideas on framework dependence, search expansion, and path dependence; not wholly new territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links simplicity relativity with recursive search lock-in and deliberate expansion phases.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Parts are testable in search systems, but key terms remain representation-dependent and underspecified.",
-  "explanation": "Discovery can mistake temporary simplicity for deep progress and become locked into contingent abstractions."
-}

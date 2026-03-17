@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Combines known concerns about recursive evaluation, optimization bias, and parsimony limits; implications are cautionary, not wholly unprecedented.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously links synthetic-chain contamination with fallibilist caution about dismissing alien truths under present evaluative filters.",
-  "falsifiable": 0.56,
-  "falsifiable_why": "Parts are testable: recursive critics, optimization effects, and filtering losses; total claim remains partly philosophical and underdetermined.",
-  "explanation": "Current evaluative filters can recursively amplify error and erase genuine novelty, especially when true inputs appear alien or unjustified."
-}
