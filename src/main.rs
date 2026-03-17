@@ -1,4 +1,4 @@
-use std::io::{self, Write};
+use std::io::{self, IsTerminal, Read, Write};
 use std::sync::Arc;
 
 use anyhow::Result;
@@ -11,8 +11,12 @@ use teg::llm::LlmClient;
 #[derive(Parser)]
 #[command(name = "teg", about = "Thought Experiment Generator")]
 pub struct Cli {
-    /// Topic to explore
+    /// Topic to explore (inline string, or omit to use --topic-file or stdin)
     pub topic: Option<String>,
+
+    /// Path to a file whose contents will be used as the topic
+    #[arg(long)]
+    pub topic_file: Option<std::path::PathBuf>,
 
     /// Number of thought experiments to generate
     #[arg(long, default_value_t = 20)]
@@ -80,15 +84,23 @@ async fn main() -> Result<()> {
         cli.max_concurrent,
     )?;
 
-    let topic = match cli.topic {
-        Some(t) => t,
-        None => {
-            print!("What topic would you like to explore? ");
-            io::stdout().flush()?;
-            let mut input = String::new();
-            io::stdin().read_line(&mut input)?;
-            input.trim().to_string()
-        }
+    let topic = if let Some(t) = cli.topic {
+        t
+    } else if let Some(path) = cli.topic_file {
+        std::fs::read_to_string(&path)
+            .map_err(|e| anyhow::anyhow!("Could not read topic file {}: {}", path.display(), e))?
+            .trim()
+            .to_string()
+    } else if !io::stdin().is_terminal() {
+        let mut input = String::new();
+        io::stdin().read_to_string(&mut input)?;
+        input.trim().to_string()
+    } else {
+        print!("What topic would you like to explore? ");
+        io::stdout().flush()?;
+        let mut input = String::new();
+        io::stdin().read_line(&mut input)?;
+        input.trim().to_string()
     };
 
     if topic.is_empty() {

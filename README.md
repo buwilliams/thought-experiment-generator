@@ -29,6 +29,12 @@ OPENAI_API_KEY=sk-... cargo run -- --provider openai --model gpt-4o "your topic"
 # Claude Max subscription (session token auth)
 cargo run -- --provider anthropic-token "your topic"
 
+# Supply a file as the topic (useful for long context)
+cargo run -- --topic-file my-topic.md
+
+# Pipe a file via stdin
+cat my-topic.md | cargo run --
+
 # All options (defaults shown)
 cargo run -- "your topic" \
   --experiments 20 \
@@ -53,6 +59,7 @@ cargo run -- "your topic" \
 | `--max-concurrent` | 5 | Max concurrent LLM calls |
 | `--provider` | anthropic | `anthropic`, `anthropic-token`, or `openai` |
 | `--model` | claude-sonnet-4-6 | Model name |
+| `--topic-file` | — | Path to a file to use as the topic (supports long context) |
 | `--fresh` | false | Clear cache and start over |
 | `--read` | false | Show cached summary without running |
 

@@ -92,7 +92,9 @@ All prompts use a system/user split. Instructions go in the system prompt (stati
 
 **System:** Generate sentences as a plain newline-separated list. No numbering, no formatting, no preamble.
 
-**User:** Write {pool_size} sentences about "{topic}" as a newline-separated flat list with no formatting. Prefer anomalies, unresolved tensions, edge cases, and open questions over established textbook facts.
+**User:** Given the following topic context, write {pool_size} sentences as a newline-separated flat list with no formatting. Prefer anomalies, unresolved tensions, edge cases, and open questions over established textbook facts. Draw directly from the specifics of the context provided.
+
+Topic context: {topic}
 
 ---
 
@@ -184,6 +186,7 @@ Total score = `reach + novelty + falsifiable` (max: 3.0)
 --max-concurrent Max concurrent LLM calls (default: 5)
 --provider       anthropic | anthropic-token | openai (default: anthropic)
 --model          Model name (default: claude-sonnet-4-6)
+--topic-file     Path to a file to use as the topic (supports long context)
 --fresh          Clear cache and start over
 --read           Show cached summary without running
 ```

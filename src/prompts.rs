@@ -7,7 +7,7 @@ pub fn background_generation(topic: &str, count: usize) -> Prompt {
     Prompt {
         system: "Generate sentences as a plain newline-separated list. No numbering, no formatting, no preamble.",
         user: format!(
-            "Write {count} sentences about \"{topic}\" as a newline-separated flat list with no formatting. Prefer anomalies, unresolved tensions, edge cases, and open questions over established textbook facts."
+            "Given the following topic context, write {count} sentences as a newline-separated flat list with no formatting. Prefer anomalies, unresolved tensions, edge cases, and open questions over established textbook facts. Draw directly from the specifics of the context provided.\n\nTopic context:\n{topic}"
         ),
     }
 }
