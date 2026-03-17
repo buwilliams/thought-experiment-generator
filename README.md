@@ -33,9 +33,9 @@ cargo run -- --provider anthropic-token "your topic"
 cargo run -- "your topic" \
   --experiments 20 \
   --pool-size 50 \
-  --background 2 \
+  --background 3 \
   --generated 2 \
-  --words 2 \
+  --words 5 \
   --temperature 1.0 \
   --max-concurrent 5
 ```
@@ -46,9 +46,9 @@ cargo run -- "your topic" \
 |---|---|---|
 | `--experiments` | 20 | Number of thought experiments to generate |
 | `--pool-size` | 50 | Total sentences in the background and generated pools |
-| `--background` | 2 | Background sentences to use per thought experiment |
+| `--background` | 3 | Background sentences to use per thought experiment |
 | `--generated` | 2 | Generated sentences to use per thought experiment |
-| `--words` | 2 | Random words per line in words.txt |
+| `--words` | 5 | Random words per line in words.txt |
 | `--temperature` | 1.0 | LLM temperature for generation (0.0–1.0) |
 | `--max-concurrent` | 5 | Max concurrent LLM calls |
 | `--provider` | anthropic | `anthropic`, `anthropic-token`, or `openai` |
@@ -74,12 +74,12 @@ Background and generated pools are cached after first run. Each subsequent run (
 
 **1. Create background sentences.** The LLM generates a pool of sentences of fundamental knowledge about your topic (default: 50). These are cached in `data/cache/[hash]/background.txt`.
 
-**2. Create generated sentences.** Random words are drawn from a large word list and grouped into lines (default: 2 words per line, 50 lines). The LLM converts each line into a sentence as though it were fundamental knowledge, using those words. These nonsense-seeded sentences force the system into territory that pure topic knowledge would never reach. Cached in `words.txt` and `generated.txt`.
+**2. Create generated sentences.** Random words are drawn from a large word list and grouped into lines (default: 5 words per line, 50 lines). The LLM converts each line into a sentence as though it were fundamental knowledge, using those words. These nonsense-seeded sentences force the system into territory that pure topic knowledge would never reach. Cached in `words.txt` and `generated.txt`.
 
-**3. Combine into thought experiments.** For each experiment, the system picks a random sample of background sentences and generated sentences (default: 2 of each), then asks the LLM to rewrite the collection as a single thought experiment in 500 words or fewer. Experiments must be wild, imaginative, unintuitive, or combine ideas in novel ways. Each is saved as `NNN-experiment.txt`.
+**3. Combine into thought experiments.** For each experiment, the system picks a random sample of background sentences and generated sentences (default: 3 background, 2 generated), then asks the LLM to rewrite the collection as a single thought experiment in 500 words or fewer. Experiments must be wild, imaginative, unintuitive, or combine ideas in novel ways. Each is saved as `NNN-experiment.txt`.
 
 **4. Criticize using fallibilism.** Each thought experiment is scored on three criteria using the principles of fallibilism:
-- **Reach** — does the thought experiment suggest something beyond its immediate inputs?
+- **Reach** — does the thought experiment break beyond the existing corpus of human knowledge into new territory?
 - **Novelty** — does it contribute new understanding?
 - **Falsifiable** — is it testable or disprovable?
 

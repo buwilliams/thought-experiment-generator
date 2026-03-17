@@ -19,7 +19,7 @@ pub struct Cli {
     pub experiments: u32,
 
     /// Background sentences to use per thought experiment
-    #[arg(long, default_value_t = 2)]
+    #[arg(long, default_value_t = 3)]
     pub background: u32,
 
     /// Generated sentences to use per thought experiment
@@ -27,7 +27,7 @@ pub struct Cli {
     pub generated: u32,
 
     /// Random words per line in words.txt
-    #[arg(long, default_value_t = 2)]
+    #[arg(long, default_value_t = 5)]
     pub words: u32,
 
     /// Total sentences in the background and generated pools
