@@ -1,8 +1,8 @@
 # Thought Experiment Generator
 
-Can LLMs create new knowledge? This system tries to find out. Give it a topic and it generates thought experiments, scores them for explanatory quality, and uses the best discoveries to make better guesses on the next pass. The result is a tree of progressively deeper insights about your topic that neither you nor the LLM started with.
+Can LLMs create new knowledge? This system tries to find out. Give it a topic and it generates thought experiments by colliding real background knowledge with sentences built from random words, then scores each one for explanatory quality using the principles of fallibilism. The result is a ranked set of thought experiments that neither you nor the LLM started with.
 
-Under the hood, it collides structured knowledge fragments from three pools (topic facts, cross-domain vocabulary, and its own prior discoveries), filters through coherence and [Deutschian criteria](docs/llms-as-universal-explainer.md), and compounds what survives into future draws. Inspired by [Brett Hall's discussion](https://www.youtube.com/watch?v=iHINpU_Di58) ([transcript](docs/reaction-to-vishal-misra-transcript.md)) on whether LLMs can create new knowledge, drawing on David Deutsch's epistemology.
+The core idea: take random background knowledge sentences and random generated sentences (built from random words) and use both as inspiration to explore new knowledge. Inspired by [Brett Hall's discussion](https://www.youtube.com/watch?v=iHINpU_Di58) ([transcript](docs/reaction-to-vishal-misra-transcript.md)) on whether LLMs can create new knowledge, drawing on David Deutsch's epistemology.
 
 ## Usage
 
@@ -13,13 +13,10 @@ cargo run -- "your topic"
 # Resume a previous run (cached automatically by topic)
 cargo run -- "your topic"
 
-# Read results ranked by score (no LLM calls)
+# Read cached results and display summary without running
 cargo run -- --read "your topic"
 
-# Show full details for a specific result (branch.depth)
-cargo run -- --show 7.7 "your topic"
-
-# Start fresh, clearing cached background + tree state
+# Start fresh, clearing the cache
 cargo run -- --fresh "your topic"
 
 # Use a different model
@@ -29,45 +26,82 @@ cargo run -- --model claude-opus-4-6 "your topic"             # highest quality
 # OpenAI
 OPENAI_API_KEY=sk-... cargo run -- --provider openai --model gpt-4o "your topic"
 
-# Options (all optional, defaults shown)
+# Claude Max subscription (session token auth)
+cargo run -- --provider anthropic-token "your topic"
+
+# All options (defaults shown)
 cargo run -- "your topic" \
-  --depth 10 --branches 10 --draws 100 \
-  --threshold 0.6 --novel-threshold 0.85 \
-  --max-calls 500 --max-concurrent 5 \
-  --temperature 1.0 --output text
+  --experiments 20 \
+  --pool-size 50 \
+  --background 2 \
+  --generated 2 \
+  --words 2 \
+  --temperature 1.0 \
+  --max-concurrent 5
 ```
+
+### Options
+
+| Flag | Default | Description |
+|---|---|---|
+| `--experiments` | 20 | Number of thought experiments to generate |
+| `--pool-size` | 50 | Total sentences in the background and generated pools |
+| `--background` | 2 | Background sentences to use per thought experiment |
+| `--generated` | 2 | Generated sentences to use per thought experiment |
+| `--words` | 2 | Random words per line in words.txt |
+| `--temperature` | 1.0 | LLM temperature for generation (0.0–1.0) |
+| `--max-concurrent` | 5 | Max concurrent LLM calls |
+| `--provider` | anthropic | `anthropic`, `anthropic-token`, or `openai` |
+| `--model` | claude-sonnet-4-6 | Model name |
+| `--fresh` | false | Clear cache and start over |
+| `--read` | false | Show cached summary without running |
 
 ### LLM call budget
 
-Each run costs LLM calls. Background init (2 calls) and vocabulary (3 calls) are cached after the first run, so re-runs and resumes are cheaper.
+Background and generated pools are cached after first run. Each subsequent run (same topic, same pool size) skips the Create phase entirely.
 
-| Goal | Estimated calls |
+| Phase | Calls |
 |---|---|
-| First-run setup (background + vocabulary) | ~5 (cached after) |
-| One branch to full depth (10), scored | ~100-140 |
-| Full run (10 branches, depth 10, cross-pollination) | ~900-1400 |
-
-The default `--max-calls 500` gets you through setup, roots, and a few full branches. Run the same topic again to resume and spend more budget.
+| Create: background pool | 1 |
+| Create: words → sentences | 1 |
+| Combine: one thought experiment | 1 |
+| Criticize: one thought experiment | 1 |
+| Results: top 5 summaries | 5 |
+| **Total for default run (20 experiments, first run)** | **~47** |
+| **Total for re-run (pools cached)** | **~45** |
 
 ## How It Works
 
-**1. Learn about the topic.** The LLM generates 50 facts about your topic and extracts structured knowledge fragments called quads: `(object, relationship, object, property)`. For example, a topic about budgeting might produce `("50/30/20 rule", "was popularized by", "Elizabeth Warren", "credibility")`. These form the **background pool**. The system also has a cross-domain vocabulary of objects, relationships, and properties that have nothing to do with your topic, like `("entropy", "resists", "order", "stability")`. These form the **universal pool**. The vocabulary is LLM-generated on first run and cached for reuse.
+**1. Create background sentences.** The LLM generates a pool of sentences of fundamental knowledge about your topic (default: 50). These are cached in `data/cache/[hash]/background.txt`.
 
-**2. Generate a thought experiment.** The system randomly draws 4 objects, 3 relationships, and 2 properties from both pools. Roughly half come from background/novel and half from universal (for odd counts like 3 relationships, background/novel gets the extra slot). It sends these elements plus the topic to the LLM, which writes a thought experiment that collides them into a novel scenario. The randomness from the universal pool forces surprising combinations that pure topic knowledge would never produce.
+**2. Create generated sentences.** Random words are drawn from a large word list and grouped into lines (default: 2 words per line, 50 lines). The LLM converts each line into a sentence as though it were fundamental knowledge, using those words. These nonsense-seeded sentences force the system into territory that pure topic knowledge would never reach. Cached in `words.txt` and `generated.txt`.
 
-**3. Filter for quality.** Each thought experiment passes through a series of checks. First, a grammar check (no LLM call). Then the LLM judges coherence: is it internally consistent and non-trivially related to the topic? Then the LLM scores it on Deutsch criteria: is it hard to vary, does it reach beyond its inputs, does it use minimal assumptions, does it resolve a tension? If the score is below the survivor threshold (default 0.6), it's discarded and a new draw is attempted (default up to 100 times per depth).
+**3. Combine into thought experiments.** For each experiment, the system picks a random sample of background sentences and generated sentences (default: 2 of each), then asks the LLM to rewrite the collection as a single thought experiment in 500 words or fewer. Experiments must be wild, imaginative, unintuitive, or combine ideas in novel ways. Each is saved as `NNN-experiment.txt`.
 
-**4. Extract what's unresolved.** When a thought experiment survives, the LLM identifies what remains unexplained or paradoxical. This unresolved tension becomes the starting point for the next thought experiment in the chain. If no thought experiment survives after the draw limit (default 100 attempts), the branch terminates.
+**4. Criticize using fallibilism.** Each thought experiment is scored on three criteria using the principles of fallibilism:
+- **Reach** — does the thought experiment suggest something beyond its immediate inputs?
+- **Novelty** — does it contribute new understanding?
+- **Falsifiable** — is it testable or disprovable?
 
-**5. Deepen the chain.** Steps 2-4 repeat at the next depth, but now the LLM sees the full chain so far and the latest unresolved tension. Each new thought experiment builds on what came before, the way Einstein's train-and-lightning-bolts built on his earlier frozen-light-wave scenario. A single chain running to the depth limit (default 10) is called a **branch**.
+Each dimension is scored 0.0–1.0. Scores are saved as `NNN-experiment-criticize.json`.
 
-**6. Run many branches in parallel.** The system starts 10 branches from different root thought experiments and runs them all to the depth limit. High-scoring discoveries from any branch (above the novel threshold, default 0.85) get added to a **novel pool**, which feeds into future draws across all branches. This is what makes the system compound its own discoveries.
+**5. Rank and summarize.** Results are sorted by total score (reach + novelty + falsifiable, max 3.0). The top 5 are summarized in 20 words each. Everything is written to `summary.txt`.
 
-**7. Cross-pollinate.** After branches complete, the system checks pairs at the same depth for complementary unresolved tensions. If two branches carry tensions that would resolve each other, they merge into a new branch that starts fresh from depth 1, seeded with the combined tensions.
+## Output Files
 
-**8. Score and rank.** Each completed branch is scored on cumulative explanatory reach across the full chain. Results are ranked and displayed.
+All output lives in `data/cache/[topic-hash]/`:
+
+```
+background.txt                   — sentence pool about the topic
+words.txt                        — random word pairs
+generated.txt                    — sentences generated from word pairs
+001-experiment.txt               — thought experiment #1
+001-experiment-criticize.json    — scores for experiment #1
+...
+summary.txt                      — ranked table + top 5 summaries
+```
 
 ## Documents
 
-- [Design Document](docs/thought-experiment-generator-design-doc.md) -- Architecture spec, data structures, prompts, filter stack, build order
-- [Rust Implementation](docs/rust-implementation.md) -- Module layout, interfaces, concurrency model
+- [Design Document](docs/thought-experiment-generator-design-doc.md) — Architecture, prompts, data structures
+- [LLMs as Universal Explainer](docs/llms-as-universal-explainer.md) — Motivation and theoretical argument

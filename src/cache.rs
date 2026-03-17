@@ -3,39 +3,10 @@ use std::hash::{Hash, Hasher};
 use std::path::{Path, PathBuf};
 
 use anyhow::Result;
-use serde::{Deserialize, Serialize};
-use tracing::info;
 
-use crate::types::{Branch, DrawPool, Node, Quad};
+use crate::types::Critique;
 
 const CACHE_DIR: &str = "data/cache";
-
-/// Cached background initialization result.
-#[derive(Serialize, Deserialize)]
-pub struct CachedBackground {
-    pub quads: Vec<Quad>,
-    pub resources: Vec<String>,
-}
-
-/// Full tree state for resume.
-#[derive(Serialize, Deserialize)]
-pub struct CachedTreeState {
-    pub draw_pool: DrawPool,
-    pub branches: Vec<Branch>,
-    pub phase: TreePhase,
-}
-
-#[derive(Serialize, Deserialize, Clone, PartialEq)]
-pub enum TreePhase {
-    /// Background + vocab initialized, root generation not started
-    Initialized,
-    /// Root branches generated, tree search not started
-    RootsGenerated,
-    /// Tree search complete, scoring/cross-pollination may remain
-    BranchesComplete,
-    /// Everything done
-    Done,
-}
 
 fn topic_hash(topic: &str) -> String {
     let mut hasher = DefaultHasher::new();
@@ -43,7 +14,7 @@ fn topic_hash(topic: &str) -> String {
     format!("{:016x}", hasher.finish())
 }
 
-fn cache_dir(topic: &str) -> PathBuf {
+pub fn cache_dir(topic: &str) -> PathBuf {
     Path::new(CACHE_DIR).join(topic_hash(topic))
 }
 
@@ -51,194 +22,131 @@ pub fn clear_cache(topic: &str) -> Result<()> {
     let dir = cache_dir(topic);
     if dir.exists() {
         std::fs::remove_dir_all(&dir)?;
-        info!("Cleared cache for topic");
+        tracing::info!("Cleared cache for topic");
     }
     Ok(())
 }
 
-pub fn load_background(topic: &str) -> Option<CachedBackground> {
-    let path = cache_dir(topic).join("background.json");
-    let data = std::fs::read_to_string(path).ok()?;
-    let cached: CachedBackground = serde_json::from_str(&data).ok()?;
-    info!("Loaded cached background ({} quads)", cached.quads.len());
-    Some(cached)
-}
-
-pub fn save_background(topic: &str, bg: &CachedBackground) -> Result<()> {
+fn ensure_dir(topic: &str) -> Result<PathBuf> {
     let dir = cache_dir(topic);
     std::fs::create_dir_all(&dir)?;
-    let path = dir.join("background.json");
-    std::fs::write(&path, serde_json::to_string(bg)?)?;
-    info!("Cached background ({} quads)", bg.quads.len());
+    Ok(dir)
+}
+
+// --- background.txt ---
+
+pub fn background_path(topic: &str) -> PathBuf {
+    cache_dir(topic).join("background.txt")
+}
+
+pub fn load_background(topic: &str) -> Option<Vec<String>> {
+    load_lines(&background_path(topic))
+}
+
+pub fn save_background(topic: &str, lines: &[String]) -> Result<()> {
+    let dir = ensure_dir(topic)?;
+    std::fs::write(dir.join("background.txt"), lines.join("\n"))?;
+    tracing::info!("Saved background.txt ({} sentences)", lines.len());
     Ok(())
 }
 
-pub fn load_tree_state(topic: &str) -> Option<CachedTreeState> {
-    let path = cache_dir(topic).join("tree_state.json");
-    let data = std::fs::read_to_string(path).ok()?;
-    let cached: CachedTreeState = serde_json::from_str(&data).ok()?;
-    info!(
-        "Loaded cached tree state (phase={}, {} branches)",
-        match &cached.phase {
-            TreePhase::Initialized => "initialized",
-            TreePhase::RootsGenerated => "roots_generated",
-            TreePhase::BranchesComplete => "branches_complete",
-            TreePhase::Done => "done",
-        },
-        cached.branches.len()
-    );
-    Some(cached)
+// --- words.txt ---
+
+pub fn words_path(topic: &str) -> PathBuf {
+    cache_dir(topic).join("words.txt")
 }
 
-pub fn save_tree_state(topic: &str, state: &CachedTreeState) -> Result<()> {
-    let dir = cache_dir(topic);
-    std::fs::create_dir_all(&dir)?;
-    let path = dir.join("tree_state.json");
-    std::fs::write(&path, serde_json::to_string(state)?)?;
-    info!("Saved tree state ({} branches)", state.branches.len());
+pub fn load_words(topic: &str) -> Option<Vec<String>> {
+    load_lines(&words_path(topic))
+}
 
-    if state.phase == TreePhase::Done {
-        save_summary(topic, state)?;
-    }
-
+pub fn save_words(topic: &str, lines: &[String]) -> Result<()> {
+    let dir = ensure_dir(topic)?;
+    std::fs::write(dir.join("words.txt"), lines.join("\n"))?;
+    tracing::info!("Saved words.txt ({} lines)", lines.len());
     Ok(())
 }
 
-fn node_title(node: &Node) -> String {
-    node.thought_experiment
+// --- generated.txt ---
+
+pub fn generated_path(topic: &str) -> PathBuf {
+    cache_dir(topic).join("generated.txt")
+}
+
+pub fn load_generated(topic: &str) -> Option<Vec<String>> {
+    load_lines(&generated_path(topic))
+}
+
+pub fn save_generated(topic: &str, lines: &[String]) -> Result<()> {
+    let dir = ensure_dir(topic)?;
+    std::fs::write(dir.join("generated.txt"), lines.join("\n"))?;
+    tracing::info!("Saved generated.txt ({} sentences)", lines.len());
+    Ok(())
+}
+
+// --- NNN-experiment.txt ---
+
+pub fn experiment_path(topic: &str, n: u32) -> PathBuf {
+    cache_dir(topic).join(format!("{:03}-experiment.txt", n))
+}
+
+pub fn experiment_exists(topic: &str, n: u32) -> bool {
+    experiment_path(topic, n).exists()
+}
+
+pub fn load_experiment(topic: &str, n: u32) -> Option<String> {
+    std::fs::read_to_string(experiment_path(topic, n)).ok()
+}
+
+pub fn save_experiment(topic: &str, n: u32, text: &str) -> Result<()> {
+    let dir = ensure_dir(topic)?;
+    std::fs::write(dir.join(format!("{:03}-experiment.txt", n)), text)?;
+    Ok(())
+}
+
+// --- NNN-experiment-criticize.json ---
+
+pub fn critique_path(topic: &str, n: u32) -> PathBuf {
+    cache_dir(topic).join(format!("{:03}-experiment-criticize.json", n))
+}
+
+pub fn critique_exists(topic: &str, n: u32) -> bool {
+    critique_path(topic, n).exists()
+}
+
+pub fn load_critique(topic: &str, n: u32) -> Option<Critique> {
+    let text = std::fs::read_to_string(critique_path(topic, n)).ok()?;
+    serde_json::from_str(&text).ok()
+}
+
+pub fn save_critique(topic: &str, n: u32, critique: &Critique) -> Result<()> {
+    let dir = ensure_dir(topic)?;
+    let json = serde_json::to_string_pretty(critique)?;
+    std::fs::write(dir.join(format!("{:03}-experiment-criticize.json", n)), json)?;
+    Ok(())
+}
+
+// --- summary.txt ---
+
+pub fn summary_path(topic: &str) -> PathBuf {
+    cache_dir(topic).join("summary.txt")
+}
+
+pub fn save_summary(topic: &str, text: &str) -> Result<()> {
+    let dir = ensure_dir(topic)?;
+    std::fs::write(dir.join("summary.txt"), text)?;
+    tracing::info!("Saved summary.txt");
+    Ok(())
+}
+
+// --- helpers ---
+
+fn load_lines(path: &Path) -> Option<Vec<String>> {
+    let text = std::fs::read_to_string(path).ok()?;
+    let lines: Vec<String> = text
         .lines()
-        .find(|l| !l.trim().is_empty())
-        .unwrap_or("(untitled)")
-        .trim()
-        .trim_start_matches('#')
-        .trim()
-        .to_string()
-}
-
-pub fn save_summary(topic: &str, state: &CachedTreeState) -> Result<()> {
-    let dir = cache_dir(topic);
-    let experiments_dir = dir.join("experiments");
-    std::fs::create_dir_all(&experiments_dir)?;
-
-    let total_nodes: usize = state.branches.iter().map(|b| b.nodes.len()).sum();
-
-    // Collect all nodes ranked by score
-    let mut all_nodes: Vec<(usize, &Node)> = state
-        .branches
-        .iter()
-        .enumerate()
-        .flat_map(|(bi, b)| b.nodes.iter().map(move |n| (bi + 1, n)))
+        .map(|l| l.trim().to_string())
+        .filter(|l| !l.is_empty())
         .collect();
-    all_nodes.sort_by(|a, b| {
-        b.1.deutsch_score.overall_score
-            .partial_cmp(&a.1.deutsch_score.overall_score)
-            .unwrap()
-    });
-
-    // Write individual markdown files for top 10
-    for (rank, (branch_idx, node)) in all_nodes.iter().take(10).enumerate() {
-        let title = node_title(node);
-        let slug = slugify(&title);
-        let filename = format!("{:02}-{}.md", rank + 1, slug);
-        let key = format!("{}.{}", branch_idx, node.depth);
-        let ds = &node.deutsch_score;
-
-        let mut content = String::new();
-        content.push_str(&format!("# {title}\n\n"));
-        content.push_str(&format!("**Key:** {key} | **Score:** {:.2} | **Branch:** {} | **Depth:** {}\n\n", ds.overall_score, branch_idx, node.depth));
-        content.push_str(&node.thought_experiment);
-        content.push_str("\n\n---\n\n");
-        content.push_str("## Deutsch Score\n\n");
-        content.push_str(&format!("| Criterion | Score |\n"));
-        content.push_str(&format!("|-----------|-------|\n"));
-        content.push_str(&format!("| Hard to vary | {:.2} |\n", ds.hard_to_vary));
-        content.push_str(&format!("| Reach | {:.2} |\n", ds.reach));
-        content.push_str(&format!("| Minimal assumptions | {:.2} |\n", ds.minimal_assumptions));
-        content.push_str(&format!("| Tension resolution | {:.2} |\n", ds.tension_resolution));
-        content.push_str(&format!("| **Overall** | **{:.2}** |\n\n", ds.overall_score));
-        content.push_str(&format!("**Justification:** {}\n", ds.justification));
-
-        if let Some(tension) = &node.unresolved_tension {
-            content.push_str(&format!("\n## Unresolved Tension\n\n{}\n", tension.tension));
-        }
-
-        std::fs::write(experiments_dir.join(&filename), &content)?;
-    }
-
-    // Build summary.md with links
-    let mut out = String::new();
-    out.push_str(&format!("# {topic}\n\n"));
-    out.push_str(&format!(
-        "{} branches, {} thought experiments, {} novel quads\n\n",
-        state.branches.len(),
-        total_nodes,
-        state.draw_pool.novel.len()
-    ));
-
-    out.push_str("| Rank | Key | Score | Title |\n");
-    out.push_str("|------|-----|-------|-------|\n");
-    for (rank, (branch_idx, node)) in all_nodes.iter().enumerate() {
-        let title = node_title(node);
-        let key = format!("{}.{}", branch_idx, node.depth);
-        if rank < 10 {
-            let slug = slugify(&title);
-            let filename = format!("{:02}-{}.md", rank + 1, slug);
-            out.push_str(&format!(
-                "| {} | {} | {:.2} | [{}](experiments/{}) |\n",
-                rank + 1,
-                key,
-                node.deutsch_score.overall_score,
-                title,
-                filename
-            ));
-        } else {
-            out.push_str(&format!(
-                "| {} | {} | {:.2} | {} |\n",
-                rank + 1,
-                key,
-                node.deutsch_score.overall_score,
-                title
-            ));
-        }
-    }
-
-    // Top trajectories
-    let mut branches_ranked: Vec<&Branch> = state.branches.iter().collect();
-    branches_ranked.sort_by(|a, b| {
-        b.trajectory_score.unwrap_or(0.0)
-            .partial_cmp(&a.trajectory_score.unwrap_or(0.0))
-            .unwrap()
-    });
-
-    out.push_str("\n## Top Trajectories\n\n");
-    for (i, branch) in branches_ranked.iter().take(3).enumerate() {
-        let traj = branch.trajectory_score.unwrap_or(0.0);
-        let chain: Vec<String> = branch.nodes.iter().map(|n| node_title(n)).collect();
-        out.push_str(&format!(
-            "**#{}** (score {:.2}): {}\n\n",
-            i + 1,
-            traj,
-            chain.join(" -> ")
-        ));
-    }
-
-    std::fs::write(dir.join("summary.md"), &out)?;
-    let written = all_nodes.len().min(10);
-    info!("Saved summary.md and {} experiment files", written);
-    Ok(())
-}
-
-fn slugify(title: &str) -> String {
-    title
-        .to_lowercase()
-        .chars()
-        .map(|c| if c.is_alphanumeric() { c } else { '-' })
-        .collect::<String>()
-        .split('-')
-        .filter(|s| !s.is_empty())
-        .collect::<Vec<_>>()
-        .join("-")
-        .chars()
-        .take(60)
-        .collect()
+    if lines.is_empty() { None } else { Some(lines) }
 }

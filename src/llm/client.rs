@@ -15,63 +15,49 @@ pub struct LlmClient {
     config: LlmConfig,
     semaphore: Arc<Semaphore>,
     call_count: AtomicU64,
-    max_calls: Option<u64>,
 }
 
 impl LlmClient {
-    pub fn new(config: LlmConfig, max_calls: Option<u64>) -> Self {
+    pub fn new(config: LlmConfig) -> Self {
         let semaphore = Arc::new(Semaphore::new(config.max_concurrent));
         let http = reqwest::Client::builder()
             .timeout(Duration::from_secs(120))
             .build()
             .expect("failed to build HTTP client");
-        Self {
-            http,
-            config,
-            semaphore,
-            call_count: AtomicU64::new(0),
-            max_calls,
-        }
+        Self { http, config, semaphore, call_count: AtomicU64::new(0) }
     }
 
-    /// Number of LLM calls made so far.
     pub fn calls_made(&self) -> u64 {
         self.call_count.load(Ordering::Relaxed)
     }
 
-    /// Budget remaining, or None if unlimited.
-    pub fn budget_remaining(&self) -> Option<u64> {
-        self.max_calls.map(|max| max.saturating_sub(self.calls_made()))
-    }
-
-    /// Returns true if the call budget has been exhausted.
-    pub fn budget_exhausted(&self) -> bool {
-        self.max_calls
-            .map(|max| self.calls_made() >= max)
-            .unwrap_or(false)
-    }
-
     /// Send a prompt and parse a JSON response of type T.
-    pub async fn call<T: DeserializeOwned>(&self, prompt: &str, temperature: f64) -> Result<T> {
-        let raw = self.call_raw(prompt, temperature).await?;
-        parse_llm_json(&raw).with_context(|| format!("Failed to parse LLM JSON response"))
+    pub async fn call<T: DeserializeOwned>(
+        &self,
+        system: Option<&str>,
+        prompt: &str,
+        temperature: f64,
+    ) -> Result<T> {
+        let raw = self.call_raw(system, prompt, temperature).await?;
+        parse_llm_json(&raw).with_context(|| "Failed to parse LLM JSON response".to_string())
     }
 
     /// Raw string response.
-    pub async fn call_raw(&self, prompt: &str, temperature: f64) -> Result<String> {
-        if self.budget_exhausted() {
-            anyhow::bail!("LLM call budget exhausted ({} calls)", self.calls_made());
-        }
+    pub async fn call_raw(
+        &self,
+        system: Option<&str>,
+        prompt: &str,
+        temperature: f64,
+    ) -> Result<String> {
         let _permit = self.semaphore.acquire().await?;
         let count = self.call_count.fetch_add(1, Ordering::Relaxed) + 1;
-        if let Some(max) = self.max_calls {
-            info!("LLM call {count}/{max}");
-        }
-        self.call_with_retry(prompt, temperature, 3).await
+        info!("LLM call #{count}");
+        self.call_with_retry(system, prompt, temperature, 3).await
     }
 
     async fn call_with_retry(
         &self,
+        system: Option<&str>,
         prompt: &str,
         temperature: f64,
         max_retries: u32,
@@ -83,8 +69,7 @@ impl LlmClient {
                 debug!("Retrying LLM call after {delay:?} (attempt {attempt})");
                 tokio::time::sleep(delay).await;
             }
-
-            match self.do_call(prompt, temperature).await {
+            match self.do_call(system, prompt, temperature).await {
                 Ok(text) => return Ok(text),
                 Err(e) => {
                     warn!("LLM call failed (attempt {}): {e}", attempt + 1);
@@ -95,23 +80,34 @@ impl LlmClient {
         Err(last_err.unwrap())
     }
 
-    async fn do_call(&self, prompt: &str, temperature: f64) -> Result<String> {
+    async fn do_call(
+        &self,
+        system: Option<&str>,
+        prompt: &str,
+        temperature: f64,
+    ) -> Result<String> {
         match &self.config.provider {
-            LlmProvider::Anthropic => self.call_anthropic(prompt, temperature).await,
-            LlmProvider::AnthropicToken => self.call_anthropic_token(prompt, temperature).await,
-            LlmProvider::OpenAi => self.call_openai(prompt, temperature).await,
+            LlmProvider::Anthropic => self.call_anthropic(system, prompt, temperature).await,
+            LlmProvider::AnthropicToken => self.call_anthropic_token(system, prompt, temperature).await,
+            LlmProvider::OpenAi => self.call_openai(system, prompt, temperature).await,
         }
     }
 
-    async fn call_anthropic(&self, prompt: &str, temperature: f64) -> Result<String> {
-        let body = serde_json::json!({
+    async fn call_anthropic(
+        &self,
+        system: Option<&str>,
+        prompt: &str,
+        temperature: f64,
+    ) -> Result<String> {
+        let mut body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 8192,
+            "max_tokens": 2048,
             "temperature": temperature,
-            "messages": [
-                {"role": "user", "content": prompt}
-            ]
+            "messages": [{"role": "user", "content": prompt}]
         });
+        if let Some(sys) = system {
+            body["system"] = serde_json::json!(sys);
+        }
 
         let resp = self
             .http
@@ -130,7 +126,6 @@ impl LlmClient {
         }
 
         let json: serde_json::Value = resp.json().await?;
-
         if let Some(err) = json.get("error") {
             anyhow::bail!("Anthropic API error: {err}");
         }
@@ -144,16 +139,21 @@ impl LlmClient {
         Ok(text.to_string())
     }
 
-    /// Call Anthropic API using a Bearer session token (Claude Max subscription).
-    async fn call_anthropic_token(&self, prompt: &str, temperature: f64) -> Result<String> {
-        let body = serde_json::json!({
+    async fn call_anthropic_token(
+        &self,
+        system: Option<&str>,
+        prompt: &str,
+        temperature: f64,
+    ) -> Result<String> {
+        let mut body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 8192,
+            "max_tokens": 2048,
             "temperature": temperature,
-            "messages": [
-                {"role": "user", "content": prompt}
-            ]
+            "messages": [{"role": "user", "content": prompt}]
         });
+        if let Some(sys) = system {
+            body["system"] = serde_json::json!(sys);
+        }
 
         let resp = self
             .http
@@ -172,7 +172,6 @@ impl LlmClient {
         }
 
         let json: serde_json::Value = resp.json().await?;
-
         if let Some(err) = json.get("error") {
             anyhow::bail!("Anthropic API error: {err}");
         }
@@ -186,14 +185,23 @@ impl LlmClient {
         Ok(text.to_string())
     }
 
-    async fn call_openai(&self, prompt: &str, temperature: f64) -> Result<String> {
+    async fn call_openai(
+        &self,
+        system: Option<&str>,
+        prompt: &str,
+        temperature: f64,
+    ) -> Result<String> {
+        let mut messages = serde_json::json!([]);
+        if let Some(sys) = system {
+            messages.as_array_mut().unwrap().push(serde_json::json!({"role": "system", "content": sys}));
+        }
+        messages.as_array_mut().unwrap().push(serde_json::json!({"role": "user", "content": prompt}));
+
         let body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 8192,
+            "max_tokens": 2048,
             "temperature": temperature,
-            "messages": [
-                {"role": "user", "content": prompt}
-            ]
+            "messages": messages
         });
 
         let resp = self
