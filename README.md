@@ -72,18 +72,20 @@ Background and generated pools are cached after first run. Each subsequent run (
 
 ## How It Works
 
-**1. Create background sentences.** The LLM generates a pool of sentences of fundamental knowledge about your topic (default: 50). These are cached in `data/cache/[hash]/background.txt`.
+The novelty in this system comes from the **randomness algorithm, not the LLM**. Random word combinations force conceptual collisions that topic-specific prompting can never reach. The LLM's job is to reason faithfully from those forced inputs — to follow the logic of the collision, not to invent. This is how Einstein used thought experiments: not by trying to be creative, but by taking a strange premise seriously and following it.
 
-**2. Create generated sentences.** Random words are drawn from a large word list and grouped into lines (default: 5 words per line, 50 lines). The LLM converts each line into a sentence as though it were fundamental knowledge, using those words. These nonsense-seeded sentences force the system into territory that pure topic knowledge would never reach. Cached in `words.txt` and `generated.txt`.
+**1. Create background sentences.** The LLM generates a pool of sentences about your topic (default: 50), biased toward anomalies, unresolved tensions, and open questions rather than textbook facts. Cached in `data/cache/[hash]/background.txt`.
 
-**3. Combine into thought experiments.** For each experiment, the system picks a random sample of background sentences and generated sentences (default: 3 background, 2 generated), then asks the LLM to rewrite the collection as a single thought experiment in 500 words or fewer. Experiments must be wild, imaginative, unintuitive, or combine ideas in novel ways. Each is saved as `NNN-experiment.txt`.
+**2. Create generated sentences.** Random words are drawn from a large word list and grouped into lines (default: 5 words per line, 50 lines). The LLM turns each line into a sentence that *preserves the strangeness* of the word combination — it is explicitly told not to normalize the words into familiar claims. These strange-seeded sentences force the system into territory that topic knowledge alone would never reach. Cached in `words.txt` and `generated.txt`.
 
-**4. Criticize using fallibilism.** Each thought experiment is scored on three criteria using the principles of fallibilism:
-- **Reach** — does the thought experiment break beyond the existing corpus of human knowledge into new territory?
-- **Novelty** — does it contribute new understanding?
+**3. Combine into thought experiments.** For each experiment, the system picks a random sample of background and generated sentences (default: 3 background, 2 generated) and treats them as axioms — the LLM assumes all are simultaneously true and reasons out what that implies about the world. It does not try to be creative; it follows the logic of the collision. Each is saved as `NNN-experiment.txt`.
+
+**4. Criticize using fallibilism.** Each thought experiment is scored on three criteria:
+- **Reach** — does it break beyond the existing corpus of human knowledge into genuinely new territory?
+- **Novelty** — does it reframe or connect existing knowledge in a non-obvious way?
 - **Falsifiable** — is it testable or disprovable?
 
-Each dimension is scored 0.0–1.0. Scores are saved as `NNN-experiment-criticize.json`.
+Reach and Novelty measure different things: Reach is the harder bar (new territory); Novelty is reframing within known knowledge. Each dimension is scored 0.0–1.0. Scores are saved as `NNN-experiment-criticize.json`.
 
 **5. Rank and summarize.** Results are sorted by total score (reach + novelty + falsifiable, max 3.0). The top 5 are summarized in 20 words each. Everything is written to `summary.txt`.
 
