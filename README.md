@@ -1,8 +1,8 @@
 # Thought Experiment Generator
 
-Can LLMs create new knowledge? This system tries to find out. Give it a topic and it generates thought experiments by colliding real background knowledge with sentences built from random words, then scores each one for explanatory quality using the principles of fallibilism. The result is a ranked set of thought experiments that neither you nor the LLM started with.
+Can LLMs create new knowledge? This system tries to find out. Give it a topic — a word, a sentence, or a rich multi-page document — and it generates thought experiments by colliding that context with sentences built from random words, then scores each one for explanatory quality using the principles of fallibilism. The result is a ranked set of thought experiments that neither you nor the LLM started with.
 
-The core idea: take random background knowledge sentences and random generated sentences (built from random words) and use both as inspiration to explore new knowledge. Inspired by [Brett Hall's discussion](https://www.youtube.com/watch?v=iHINpU_Di58) ([transcript](docs/reaction-to-vishal-misra-transcript.md)) on whether LLMs can create new knowledge, drawing on David Deutsch's epistemology.
+The core idea: take background knowledge drawn from your topic context and collide it with sentences seeded from random words. The randomness is the mechanism — it forces conceptual territory that topic knowledge alone would never reach. The richer your topic context, the more targeted the background knowledge, and the more specific the collisions. Inspired by [Brett Hall's discussion](https://www.youtube.com/watch?v=iHINpU_Di58) ([transcript](docs/reaction-to-vishal-misra-transcript.md)) on whether LLMs can create new knowledge, drawing on David Deutsch's epistemology.
 
 ## Usage
 
@@ -81,7 +81,7 @@ Background and generated pools are cached after first run. Each subsequent run (
 
 The novelty in this system comes from the **randomness algorithm, not the LLM**. Random word combinations force conceptual collisions that topic-specific prompting can never reach. The LLM's job is to reason faithfully from those forced inputs — to follow the logic of the collision, not to invent. This is how Einstein used thought experiments: not by trying to be creative, but by taking a strange premise seriously and following it.
 
-**1. Create background sentences.** The LLM generates a pool of sentences about your topic (default: 50), biased toward anomalies, unresolved tensions, and open questions rather than textbook facts. Cached in `data/cache/[hash]/background.txt`.
+**1. Create background sentences.** The LLM generates a pool of sentences drawn from your topic context (default: 50), biased toward anomalies, unresolved tensions, and open questions rather than textbook facts. The topic can be a short phrase or a full document — the richer the context, the more specific the background sentences. Cached in `data/cache/[hash]/background.txt`.
 
 **2. Create generated sentences.** Random words are drawn from a large word list and grouped into lines (default: 5 words per line, 50 lines). The LLM turns each line into a sentence that *preserves the strangeness* of the word combination — it is explicitly told not to normalize the words into familiar claims. These strange-seeded sentences force the system into territory that topic knowledge alone would never reach. Cached in `words.txt` and `generated.txt`.
 
@@ -92,7 +92,7 @@ The novelty in this system comes from the **randomness algorithm, not the LLM**.
 - **Novelty** — does it reframe or connect existing knowledge in a non-obvious way?
 - **Falsifiable** — is it testable or disprovable?
 
-Reach and Novelty measure different things: Reach is the harder bar (new territory); Novelty is reframing within known knowledge. Each dimension is scored 0.0–1.0. Scores are saved as `NNN-experiment-criticize.json`.
+Reach and Novelty measure different things: Reach is the harder bar (new territory); Novelty is reframing within known knowledge. Each dimension is scored 0.0–1.0. Scores are saved as `experiments/NNN-experiment-criticize.json`.
 
 **5. Rank and summarize.** Results are sorted by total score (reach + novelty + falsifiable, max 3.0). The top 5 are summarized in 20 words each. Everything is written to `summary.md`.
 
