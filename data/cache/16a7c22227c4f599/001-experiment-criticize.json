@@ -1,0 +1,9 @@
+{
+  "reach": 0.71,
+  "reach_why": "Applies broadly to continual learning, compression, abstraction, and forgetting, but relies on obscure invented primitives.",
+  "novelty": 0.84,
+  "novelty_why": "Inverts replay orthodoxy: forgetting and extreme compression become the mechanism of transfer and retention.",
+  "falsifiable": 0.58,
+  "falsifiable_why": "Buffer-size and compression claims are testable, but invented fundamentals are underspecified and metaphorical.",
+  "explanation": "Forgetting may improve continual learning by compressing past tasks into transferable abstractions."
+}

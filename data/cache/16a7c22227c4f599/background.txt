@@ -1,0 +1,51 @@
+AI continual learning is the ability of a model to keep learning from new data over time.
+Continual learning helps AI systems adapt instead of staying fixed after initial training.
+In continual learning, a model updates its knowledge as new tasks or examples arrive.
+A key goal of AI continual learning is to learn new information without forgetting old knowledge.
+Catastrophic forgetting happens when an AI loses earlier skills while learning something new.
+Continual learning methods try to reduce catastrophic forgetting during ongoing training.
+Unlike traditional training, continual learning does not assume all data is available at once.
+AI continual learning is useful in changing environments where data patterns shift over time.
+A continual learning system may receive data in sequences, streams, or separate tasks.
+Some continual learning approaches store small samples from past data to review later.
+Replay methods help a model remember older tasks by revisiting previous examples.
+Regularization methods protect important model weights from changing too much.
+Parameter isolation methods reserve different parts of a model for different tasks.
+Continual learning can be task-based, domain-based, or class-incremental.
+Task-incremental learning means the model learns a series of distinct tasks one after another.
+Domain-incremental learning involves changes in input distribution while keeping the same general task.
+Class-incremental learning requires the model to recognize new classes over time.
+Class-incremental learning is often harder because the model must classify among all seen classes.
+A continual learning model should balance stability and plasticity.
+Stability means keeping useful old knowledge intact.
+Plasticity means being flexible enough to learn new information.
+The stability-plasticity dilemma is a central challenge in continual learning.
+If a model is too stable, it may fail to learn new tasks well.
+If a model is too plastic, it may quickly forget previous tasks.
+Memory buffers are small storage spaces used to keep examples from earlier learning stages.
+Rehearsal is the practice of retraining on old examples along with new ones.
+Pseudo-rehearsal uses generated or synthetic samples instead of storing real past data.
+Continual learning can reduce the need for expensive full retraining from scratch.
+This learning style is important for robots, personal assistants, and adaptive recommendation systems.
+An AI assistant that learns user preferences over time is an example of continual learning.
+Evaluation in continual learning often measures both current performance and retained past performance.
+Backward transfer describes how learning new tasks affects performance on older tasks.
+Forward transfer describes how earlier learning helps the model learn future tasks faster.
+Positive forward transfer means previous knowledge supports new learning.
+Negative backward transfer means newer learning harms earlier abilities.
+A good continual learner uses old knowledge to improve new task learning.
+Continual learning is inspired in part by how humans and animals learn across life.
+In practice, continual learning must often work with limited memory and computation.
+Online continual learning updates the model as each example or small batch arrives.
+Batch continual learning updates the model at intervals using chunks of new data.
+Some methods detect which parameters are important and try to preserve them.
+Elastic weight consolidation is a well-known regularization technique in continual learning.
+Experience replay is one of the most common strategies for reducing forgetting.
+Dynamic architectures can grow new model components when new tasks appear.
+Continual learning research often compares accuracy, forgetting, and memory cost.
+A challenge in continual learning is handling unclear boundaries between tasks.
+Task-free continual learning studies how to learn continuously when task labels are unknown.
+Concept drift occurs when the meaning or distribution of data changes over time.
+Continual learning can help AI respond to concept drift without complete retraining.
+The ideal continual learning system learns efficiently, remembers well, and scales over long periods.
+AI continual learning is a foundation for building systems that improve throughout their lifetime.

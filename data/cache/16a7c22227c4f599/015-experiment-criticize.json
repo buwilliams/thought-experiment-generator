@@ -1,0 +1,9 @@
+{
+  "reach": 0.74,
+  "reach_why": "Reframes continual learning, replay, forgetting, and priors in a broadly applicable way across cognitive and machine learning contexts.",
+  "novelty": 0.81,
+  "novelty_why": "Introduces hidden fundamental knowledge as the organizing cause of replay and forgetting, not merely a metaphorical tradeoff.",
+  "falsifiable": 0.36,
+  "falsifiable_why": "Suggestive but vague; undefined fundamentals prevent clear predictions unless operationalized as measurable priors or constraints.",
+  "explanation": "Replay may preserve allegiance to hidden priors, causing forgetting by reshaping experience to fit them."
+}

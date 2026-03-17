@@ -1,0 +1,9 @@
+{
+  "reach": 0.62,
+  "reach_why": "Touches broad questions about learning, temporality, update structure, and stability, but relies on private undefined terms.",
+  "novelty": 0.71,
+  "novelty_why": "Reframes continual learning as interval-dependent self-preservation, though core ideas echo known stability-plasticity tradeoff discussions.",
+  "falsifiable": 0.24,
+  "falsifiable_why": "Claims hinge on undefined constructs, making empirical tests unclear beyond general batch-versus-streaming performance comparisons.",
+  "explanation": "Learning may depend on structured pauses and resistance, not continuous exposure, with time framed as intervals between updates."
+}

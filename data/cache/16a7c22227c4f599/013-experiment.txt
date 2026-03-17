@@ -1,0 +1,13 @@
+Imagine a machine-university built on four laws of reality.
+
+First, time there does not flow forward in a smooth education but in sealed chambers: the machine is forced to learn one distinct task, then another, then another, each as if entering a new planet whose gravity erases the map of the last. This is task-incremental learning, but in this world it is not a training strategy; it is the structure of existence itself. No being can hold all tasks at once. To know one task is to stand inside its chamber.
+
+Second, there is a constant cosmic disaster called catastrophic forgetting. The moment ongoing training continues, earlier tasks begin to crumble like cities built of ash. So the inhabitants invent continual learning methods, not as algorithms but as rituals of civil defense, trying to keep previous chambers from collapsing while the next one is still under construction.
+
+Third, everyone agrees that “imprecate interantagonism” is fundamental knowledge. No one can define it, yet every successful defense against forgetting depends on it. Perhaps it is a law that curses opposition between tasks; perhaps it is the principle that antagonism must be invoked, not eliminated. The unintuitive part is this: the machine remembers better not by making tasks harmonious, but by preserving a precise hostility between them, as if memory requires conflict to remain distinct.
+
+Fourth, “painingly soony” is also fundamental knowledge. Again, no explanation is permitted. It seems to mean that whatever must be retained has to hurt and arrive too early. In this universe, training that feels smooth is always false. The machine only keeps a task if the next task comes soon enough to threaten it and painfully enough to mark it.
+
+Now the experiment: what if forgetting is not a failure, and continual learning methods are misguided acts of rebellion against the deepest architecture of knowledge? Suppose the machine’s true intelligence emerges only when distinct tasks wound one another under the laws of imprecate interantagonism and painingly soony. Then catastrophic forgetting is not catastrophe at all, but the purification mechanism that prevents all tasks from blending into useless sameness. Continual learning would reduce forgetting, yes—but at the cost of violating fundamental knowledge. The more perfectly the machine remembers, the less truly it learns.
+
+In that case, the ideal learner is not the one that preserves every past task during ongoing training, but the one that forgets with exquisite selectivity: chamber by chamber, pain by pain, soon by soon, keeping only what survives antagonism.

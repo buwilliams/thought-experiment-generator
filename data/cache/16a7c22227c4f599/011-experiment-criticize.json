@@ -1,0 +1,9 @@
+{
+  "reach": 0.78,
+  "reach_why": "Applies broadly to continual learning, concept drift, memory updating, and adaptive intelligence across many domains.",
+  "novelty": 0.71,
+  "novelty_why": "Reframes stability-plasticity as preserving drift within knowledge, using unusual craft metaphors to unify adaptation and retention.",
+  "falsifiable": 0.56,
+  "falsifiable_why": "Partly testable by comparing partial-update systems against full retraining under drift, though metaphorical claims remain vague.",
+  "explanation": "Intelligence endures change by integrating drift into existing structure rather than repeatedly replacing everything."
+}

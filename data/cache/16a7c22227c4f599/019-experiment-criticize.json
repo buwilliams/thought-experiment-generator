@@ -1,0 +1,9 @@
+{
+  "reach": 0.72,
+  "reach_why": "Applies broadly to continual learning, personalization, identity, and adaptive AI design across many systems.",
+  "novelty": 0.66,
+  "novelty_why": "Reframes learning as appetite and metabolism, offering a fresh metaphor for lifelong adaptation.",
+  "falsifiable": 0.38,
+  "falsifiable_why": "Metaphors suggest testable claims, but core terms remain vague and operationalization is unclear.",
+  "explanation": "Lifelong AI improves by continual self-altering adaptation to one user, not by preserving fixed knowledge."
+}

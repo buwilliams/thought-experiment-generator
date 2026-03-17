@@ -199,7 +199,7 @@ impl LlmClient {
 
         let body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 2048,
+            "max_completion_tokens": 2048,
             "temperature": temperature,
             "messages": messages
         });

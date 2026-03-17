@@ -1,0 +1,9 @@
+{
+  "reach": 0.82,
+  "reach_why": "Reframes continual learning, forgetting, interference, and representation across machine learning, cognition, and epistemology.",
+  "novelty": 0.87,
+  "novelty_why": "Treats forgetting as beneficial selection, not failure, and valorizes antagonistic task interference as knowledge-preserving.",
+  "falsifiable": 0.46,
+  "falsifiable_why": "Core claims are testable, but undefined terms weaken operationalization and permit post hoc reinterpretation.",
+  "explanation": "Learning may require selective forgetting, where conflict preserves distinct knowledge better than perfect retention."
+}
