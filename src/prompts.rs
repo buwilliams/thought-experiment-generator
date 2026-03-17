@@ -14,9 +14,9 @@ pub fn background_generation(topic: &str, count: usize) -> Prompt {
 
 pub fn words_to_sentences(lines: &str) -> Prompt {
     Prompt {
-        system: "Convert each line of words into one sentence. Return exactly one sentence per input line, in the same order. No numbering, no formatting, no preamble.",
+        system: "Convert each line of words into one grammatically correct sentence. Return exactly one sentence per input line, in the same order. No numbering, no formatting, no preamble.",
         user: format!(
-            "Turn each line into a sentence that uses all the words on that line. The sentence does not need to make conventional sense — preserve the strangeness and tension of the word combination. Do not normalize it into a familiar claim. Lines:\n{lines}"
+            "Turn each line into a single grammatically correct, meaningful sentence that uses all the words on that line. The sentence should make sense and connect the words into a coherent claim or observation — but the combination of concepts can be unexpected or surprising. Lines:\n{lines}"
         ),
     }
 }
