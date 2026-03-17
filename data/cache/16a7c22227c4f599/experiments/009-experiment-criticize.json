@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Routing drift and over-retention are known concerns; it sharpens them, not a wholly new explanatory domain.",
+  "novelty": 0.72,
+  "novelty_why": "It links forgetting, access failure, and obsolete persistence as behavioral outcomes of distributed routing dynamics.",
+  "falsifiable": 0.78,
+  "falsifiable_why": "Test by holding parameters fixed, perturbing routing, and measuring recovered versus obsolete behaviors across tasks.",
+  "explanation": "Forgetting and retention are behavioral effects of shifting access and distributed influence, not discrete stored contents."
+}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.58,
+  "reach_why": "Extends continual learning into ontology shift and uninterpretable truths, but builds from existing drift, OOD, and auditability ideas.",
+  "novelty": 0.83,
+  "novelty_why": "Non-obviously links memory budgets, semantic staleness, ontology drift, and audit demands under fallible representation.",
+  "falsifiable": 0.72,
+  "falsifiable_why": "Testable by benchmarking multidimensional budgets under concept and ontology shift, though uninterpreted truths remain partly operationalized.",
+  "explanation": "Continual learning must manage fallible, shifting representations under multidimensional resource and audit constraints."
+}

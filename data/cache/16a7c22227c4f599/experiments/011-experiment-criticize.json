@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Combines known issues—concept drift, adapter interference, and path dependence—without clearly opening wholly new explanatory territory.",
+  "novelty": 0.67,
+  "novelty_why": "Non-obviously links definition drift with modular patch accumulation and online contingency into one fragility account.",
+  "falsifiable": 0.58,
+  "falsifiable_why": "Testable if operationalized, but nonsense premises and vague task-shift mechanisms weaken clear empirical refutation.",
+  "explanation": "Continual learners in shifting-task worlds become locally adaptive yet globally fragile through conflicting patches and history-dependent updates."
+}

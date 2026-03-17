@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "Combines known issues in unlearning, continual learning, and evaluation; opaque semantics adds edge cases, not wholly new territory.",
+  "novelty": 0.72,
+  "novelty_why": "Non-obviously links semantic opacity, weak surprise metrics, niche-skill erosion, and unlearning collateral damage into one failure picture.",
+  "falsifiable": 0.78,
+  "falsifiable_why": "Test by measuring retention, harmful-content removal, niche-skill drift, and evaluator disagreement under opaque-content interventions over time.",
+  "explanation": "Ambiguous, rare, opaque content is where continual learning, unlearning, and weak monitoring most reliably fail."
+}

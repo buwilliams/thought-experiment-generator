@@ -1,9 +1,0 @@
-{
-  "reach": 0.72,
-  "reach_why": "Applies broadly to continual learning, abstraction, compression, and memory, though framed in highly metaphorical terms.",
-  "novelty": 0.81,
-  "novelty_why": "Recasts forgetting as failure of abstraction into foundations, not interference from new information.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Testable if operationalized as forced representation collapse; otherwise too metaphorical for decisive refutation.",
-  "explanation": "Continual learning may work by compressing novelty into stable abstractions rather than storing separate memories."
-}

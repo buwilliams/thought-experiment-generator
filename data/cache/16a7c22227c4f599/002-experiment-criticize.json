@@ -1,9 +1,0 @@
-{
-  "reach": 0.72,
-  "reach_why": "Addresses broad assumptions about continual learning, memory, task identity, and hidden priors across many model settings.",
-  "novelty": 0.61,
-  "novelty_why": "Reframes continual learning as dependence on unlearned preconditions rather than stored examples, though akin to innate-prior debates.",
-  "falsifiable": 0.28,
-  "falsifiable_why": "Core terms are undefined and insulated from disproof by being posited as preconditions of any evidence.",
-  "explanation": "Sequential learning may rely on hidden unlearned priors more than explicit memory buffers."
-}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.58,
+  "reach_why": "Combines preconceptual novelty, replay drift, and label-structure dissociation into a broader failure mode, but not wholly unprecedented.",
+  "novelty": 0.83,
+  "novelty_why": "Non-obviously links open-world detection, generative memory drift, and semantic hollowing into one epistemic pathology.",
+  "falsifiable": 0.9,
+  "falsifiable_why": "Test by measuring novelty errors as replay drifts and labels persist after latent structure degrades.",
+  "explanation": "Models can confidently misrecognize reality when memory drifts, concepts lag experience, and labels outlive understanding."
+}

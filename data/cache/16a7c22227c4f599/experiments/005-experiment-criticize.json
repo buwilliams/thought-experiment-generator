@@ -1,0 +1,9 @@
+{
+  "reach": 0.39,
+  "reach_why": "Extends known ideas on continual learning and systems budgets, but does not open wholly new explanatory territory.",
+  "novelty": 0.74,
+  "novelty_why": "Non-obviously links memory budgeting, mixed-scale interference, and test-time adaptation residues into one governance frame.",
+  "falsifiable": 0.68,
+  "falsifiable_why": "Claims about persistence, future behavior change, and multidimensional costs can be operationalized and empirically tested.",
+  "explanation": "Memory and learning boundaries are multidimensional, unstable, and residue-dependent, so deployment may covertly become continual learning."
+}

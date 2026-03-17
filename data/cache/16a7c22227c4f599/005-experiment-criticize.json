@@ -1,9 +1,0 @@
-{
-  "reach": 0.79,
-  "reach_why": "Reframes continual learning, forgetting, memory tradeoffs, and category boundaries across many learning paradigms.",
-  "novelty": 0.86,
-  "novelty_why": "Treats task/domain/class distinctions as observer-relative symptoms of movement between foundational knowledge attractors.",
-  "falsifiable": 0.41,
-  "falsifiable_why": "Suggestive but metaphor-heavy; only partially testable via models where selective forgetting improves adaptive stability.",
-  "explanation": "Learning may require principled forgetting to stay adaptive when knowledge categories are unstable and memory burdens cognition."
-}

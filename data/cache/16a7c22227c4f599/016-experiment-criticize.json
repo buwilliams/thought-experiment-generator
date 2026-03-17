@@ -1,9 +1,0 @@
-{
-  "reach": 0.78,
-  "reach_why": "Applies across robots, assistants, recommenders, and broader adaptive systems with layered update rules.",
-  "novelty": 0.71,
-  "novelty_why": "Reframes intelligence as interval-based adaptation anchored by opaque priors rather than continuous learning.",
-  "falsifiable": 0.42,
-  "falsifiable_why": "Partly testable against continuous-learning systems, but core opaque foundations remain underspecified and metaphorical.",
-  "explanation": "Intelligence may improve through periodic updates constrained by stable priors, not constant adaptation."
-}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "Combines known issues; does not open wholly new territory beyond continual learning, TTA, and poisoning concerns.",
+  "novelty": 0.76,
+  "novelty_why": "Non-obviously links weak forgetting diagnostics, test-time residues, and replay poisoning via obscure but true inputs.",
+  "falsifiable": 0.88,
+  "falsifiable_why": "Test by measuring persistent state changes, replay-poison effects, and failures hidden by easy old-task evaluations.",
+  "explanation": "Apparent stability may mask continual learning and replay-mediated vulnerability, especially under strange but genuine inputs."
+}

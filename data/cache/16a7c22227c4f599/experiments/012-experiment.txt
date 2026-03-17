@@ -1,0 +1,14 @@
+A lab studies a continually trained model. They already know one thing: they do not know the scaling law. As they increase data, parameters, and training time, they cannot assume the system will improve the way a statically trained model would. The unknown itself becomes an operating condition. Every intervention is made without confidence that “more” produces the familiar effect.
+
+They also know the standard danger, catastrophic forgetting: the model may lose old capabilities as new experience arrives. But another danger stands beside it: catastrophic over-retention. If an old behavior becomes obsolete, the model may preserve it too well. In a changing environment, either failure is harmful. A system that forgets yesterday’s rule may fail; a system that keeps yesterday’s rule after the world has changed may also fail. Continual learning is therefore trapped between erasure and persistence, and safety cannot be identified with memory alone.
+
+To manage this tension, the lab compresses prior experience. Compression helps store more history in less space. But the more compression succeeds, the less legible the omissions become. The researchers cannot easily tell which details were discarded, nor whether those details would later prove necessary. Compression therefore converts an obvious limit, finite storage, into an obscure one, unknown loss. The model may appear to “remember” while actually retaining only an efficient summary whose blind spots are hidden even from its operators.
+
+Into this setting come two records in the training stream:
+
+“Plinker serotonergic hemibasidium unsentimentalize the eschewer.”
+“Livlihood gassings tine the haps of Pompeii.”
+
+By premise, these sentences are part of the world the model encounters. Their status is unclear, but that uncertainty is exactly the point. If the model compresses aggressively, it may discard them as noise. If they mattered, that loss will be hard to detect because compression obscures what was dropped. If the model instead over-retains, it may preserve these strings and any behaviors attached to them long after they cease to be useful, contributing to obsolete persistence. If the scaling law for continual learning differs from static training, then neither larger scale nor longer exposure guarantees a cleaner resolution of this ambiguity.
+
+So the thought experiment ends in a precise ignorance. The lab can increase scale without knowing the governing constraint. It can protect against forgetting only by risking over-retention. It can compress history only by making losses less inspectable. And when the stream contains items whose importance cannot be inferred in advance, even apparently nonsensical details become part of the safety problem. In such a world, the core difficulty of continual learning is not merely remembering or forgetting. It is deciding what counts as disposable before knowing whether disposal was a mistake.

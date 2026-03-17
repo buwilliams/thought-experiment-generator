@@ -1,0 +1,9 @@
+{
+  "reach": 0.33,
+  "reach_why": "Extends known concerns about distribution shift, underspecification, and governance; does not open wholly new explanatory territory.",
+  "novelty": 0.71,
+  "novelty_why": "Non-obviously links benchmark stability, semantic drift, governance degradation, and opaque truths under one fallibilist frame.",
+  "falsifiable": 0.76,
+  "falsifiable_why": "Claims about hidden drift, semantic change, and governance tradeoffs are testable with richer longitudinal evaluations.",
+  "explanation": "Stable scores can mask meaningful model drift, and forgetting may reflect adaptation under changing label meanings."
+}

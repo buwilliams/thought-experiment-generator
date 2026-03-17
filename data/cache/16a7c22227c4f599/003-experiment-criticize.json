@@ -1,9 +1,0 @@
-{
-  "reach": 0.78,
-  "reach_why": "Addresses broad issues in learning, memory, transfer, and intelligence architecture beyond the bizarre chosen fundamentals.",
-  "novelty": 0.74,
-  "novelty_why": "Reframes continual learning as active reuse of priors, not retention alone, using absurd anchors to expose assumptions.",
-  "falsifiable": 0.69,
-  "falsifiable_why": "Testable by comparing architectures under controlled tasks, though 'fundamental knowledge' remains underspecified and metaphorical.",
-  "explanation": "Intelligence may hinge on reusing priors dynamically, not merely storing or preserving past knowledge."
-}

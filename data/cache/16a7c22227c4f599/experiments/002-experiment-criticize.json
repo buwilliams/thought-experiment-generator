@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Combines known issues; does not open wholly new territory beyond continual learning, personalization, and poisoning research.",
+  "novelty": 0.71,
+  "novelty_why": "Non-obviously links personalization drift, compression opacity, replay poisoning, and unknown truths into one epistemic diagnosis.",
+  "falsifiable": 0.63,
+  "falsifiable_why": "Claims about divergence, opacity, and poisoning effects are testable; uninterpreted premises weaken precise empirical testing.",
+  "explanation": "Reliability becomes hard to certify because adaptation, forgetting, attacks, and unknown conditions are difficult to disentangle."
+}

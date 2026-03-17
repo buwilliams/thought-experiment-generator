@@ -1,9 +1,0 @@
-{
-  "reach": 0.74,
-  "reach_why": "Touches continual learning, epistemology, priors, and concept formation across many possible learning settings.",
-  "novelty": 0.79,
-  "novelty_why": "Reframes task-free learning as dependence on arbitrary axioms rather than missing labels or shifting distributions.",
-  "falsifiable": 0.34,
-  "falsifiable_why": "Suggestive but vague; needs operational definitions of arbitrary fundamentals and measurable performance dependence.",
-  "explanation": "Learning may persist by organizing new classes around fixed, unjustified priors when task boundaries do not exist."
-}

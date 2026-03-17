@@ -1,9 +1,0 @@
-{
-  "reach": 0.62,
-  "reach_why": "Touches continual learning, forgetting, adaptation, and identity, but relies on private terms limiting broader applicability.",
-  "novelty": 0.71,
-  "novelty_why": "Reframes stability-plasticity as one temporal process, offering a fresh metaphorical synthesis despite unclear operational content.",
-  "falsifiable": 0.18,
-  "falsifiable_why": "Core claims use undefined primitives, so predictions are too elastic to test or potentially refute.",
-  "explanation": "Continual learning is portrayed as self-remaking through forgetting and struggle, not preserving fixed knowledge."
-}
