@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Mostly extends existing skepticism about fluency and evaluation; adds little genuinely new explanatory territory.",
+  "novelty": 0.68,
+  "novelty_why": "Connects grounding failure, delegation gaps, reframing generation, and meaningless true premises into one evaluative critique.",
+  "falsifiable": 0.57,
+  "falsifiable_why": "Parts are testable via reframing-generation and delegation criteria, but core caution remains partly interpretive.",
+  "explanation": "Fluency and pattern completion do not justify self-oversight without grounded evidence and generated reframing ability."
+}

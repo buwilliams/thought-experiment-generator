@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "Extends familiar benchmark-leakage and path-dependence critiques to thought-experiment evaluation, but does not open wholly new territory.",
+  "novelty": 0.71,
+  "novelty_why": "Non-obviously links iconic-thought benchmark leakage, recursive search compounding, and Einstein’s conjecture-to-mathematics gap.",
+  "falsifiable": 0.82,
+  "falsifiable_why": "Compare leakage-controlled benchmarks and compounding ablations; test whether familiar abstractions dominate and mathematical completion fails.",
+  "explanation": "Benchmark success may reflect retrieval and self-reinforcing familiar conjectures, not genuine knowledge creation."
+}

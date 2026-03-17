@@ -1,0 +1,9 @@
+{
+  "reach": 0.24,
+  "reach_why": "Mostly reiterates known limits of representation, compression, and recombination; little genuinely new explanatory territory is opened.",
+  "novelty": 0.63,
+  "novelty_why": "Non-obviously links parser dependence, lossy tractability constraints, and pseudo-novel recombination into one critique of search-based explanation.",
+  "falsifiable": 0.58,
+  "falsifiable_why": "Parts are testable by comparing parsers, compression levels, and novelty benchmarks, but key claims remain underspecified.",
+  "explanation": "Search-based reasoners can seem insightful while missing transformative explanations due to biased parsing, lossy simplification, and mere recombination."
+}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.39,
+  "reach_why": "Extends existing skepticism about explanation and contamination, but does not open clearly unprecedented explanatory territory.",
+  "novelty": 0.72,
+  "novelty_why": "Non-obviously links polished compression, latent retrieval, and novelty contamination into one evaluative caution framework.",
+  "falsifiable": 0.63,
+  "falsifiable_why": "Claims are testable through controls separating retrieval, reformulation, and architectural effects, though some terms remain ambiguous.",
+  "explanation": "Plausible explanations can mask retrieval, contamination, or compression; stronger controls are needed before claiming genuine explanatory novelty."
+}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Mostly extends familiar fallibilist critiques of novelty and knowledge; little genuinely new explanatory territory.",
+  "novelty": 0.68,
+  "novelty_why": "Connects token novelty, classification blur, and social epistemology into a pointed critique of LM evaluation.",
+  "falsifiable": 0.56,
+  "falsifiable_why": "Claims about evaluator reliability and novelty classification can be tested, but core epistemic framing remains partly conceptual.",
+  "explanation": "LM outputs may suggest candidate novelty, but novelty and knowledge cannot be established by generation alone."
+}

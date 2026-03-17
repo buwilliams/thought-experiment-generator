@@ -1,0 +1,9 @@
+{
+  "reach": 0.34,
+  "reach_why": "It extends familiar critiques of hidden scale and alignment bias, but does not open wholly new explanatory territory.",
+  "novelty": 0.68,
+  "novelty_why": "It non-obviously links latent pretraining dependence with selection bias against weird-but-valuable breakthrough candidates.",
+  "falsifiable": 0.79,
+  "falsifiable_why": "Ablations can test hidden scale dependence and whether stricter human-judgment filtering suppresses later-valued anomalous outputs.",
+  "explanation": "Architecture-only claims need isolation from hidden scale; strict human filtering may erase breakthrough-generating anomalies."
+}

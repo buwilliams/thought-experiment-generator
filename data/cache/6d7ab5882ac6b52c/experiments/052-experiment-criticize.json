@@ -1,0 +1,9 @@
+{
+  "reach": 0.18,
+  "reach_why": "Reiterates familiar fallibilist concerns about proxies, hindsight bias, and testability rather than opening new explanatory territory.",
+  "novelty": 0.56,
+  "novelty_why": "Connects benchmark design, weirdness selection, and linguistic filtering into one critique of surrogate scientific evaluation.",
+  "falsifiable": 0.72,
+  "falsifiable_why": "Claims about benchmark bias and filter failure can be tested by comparing predictive validity against empirical success.",
+  "explanation": "Good scientific evaluation needs testable world-contact, not hindsight benchmarks, permissive novelty, or mere linguistic polish."
+}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.22,
+  "reach_why": "It extends familiar skepticism about LLM novelty and benchmark leakage, but does not open clearly unprecedented explanatory territory.",
+  "novelty": 0.58,
+  "novelty_why": "It links recombination limits, target leakage, mediation stacks, and opaque strings into one coherent cautionary framework.",
+  "falsifiable": 0.46,
+  "falsifiable_why": "Parts are testable via leakage controls and novelty audits, but core claims remain interpretive and underdetermined.",
+  "explanation": "Benchmark success and fluent novelty can mislead; apparent explanation may reflect recombination, leakage, and evaluation artifacts."
+}

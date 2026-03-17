@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Combines known concerns about scaling, bias, and search, but does not open wholly new explanatory territory.",
+  "novelty": 0.76,
+  "novelty_why": "Non-obviously links ontological bias, recursive search contamination, and hidden scaling dependence in one failure analysis.",
+  "falsifiable": 0.71,
+  "falsifiable_why": "Test by varying model scale, search breadth, and anomalous inputs, then measuring error amplification and dependence.",
+  "explanation": "Layered search may hide scaling dependence and amplify ontology-shaped errors, especially on grammatically alien but valid inputs."
+}

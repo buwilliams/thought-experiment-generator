@@ -1,0 +1,9 @@
+{
+  "reach": 0.28,
+  "reach_why": "Extends familiar critiques of post hoc thresholds and human-in-the-loop evaluation, but does not open fundamentally new territory.",
+  "novelty": 0.61,
+  "novelty_why": "Non-obviously links underdetermined thresholds, framework-relative simplicity, and nonsense premises to expose dependence on human judgment.",
+  "falsifiable": 0.57,
+  "falsifiable_why": "Testable if threshold and evaluator roles are operationalized; otherwise claims risk immunization by retrospective reinterpretation.",
+  "explanation": "LLM outputs remain proposals; humans still decide what counts as explanation or knowledge."
+}

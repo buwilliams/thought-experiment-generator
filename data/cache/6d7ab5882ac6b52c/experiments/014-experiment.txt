@@ -1,0 +1,18 @@
+A group is trying to improve a generator by feeding its best outputs back into its own training or search pool. They accept three constraints.
+
+First, reframing is scarce. So the main bottleneck is not merely producing more candidate answers inside a fixed representation; it is changing the representation itself—what is treated as an object, a relation, or a property. If reframing is rare, then most recursive improvement happens inside inherited categories.
+
+Second, search-pool composition is dangerous. If an output is bad yet internally coherent, it can still look structured enough to be selected and recycled. Once recycled, it affects the composition of future candidates. This creates an edge case where coherence substitutes for progress. Because the system mostly stays inside the same frame, it may preferentially elaborate mistakes that fit existing slots.
+
+Third, they propose a Deutschian filter: keep ideas that are “hard to vary.” But this raises an unresolved problem. To decide whether a candidate is hard to vary, one must judge which alterations preserve explanatory force and which are ad hoc. That judgment depends on background assumptions about what counts as the same object, relation, or property. Since reframing determines exactly those categories, the filter cannot be applied cleanly without already relying on human or prior interpretive judgment. So the filter is not frame-independent.
+
+Now add the remaining premises as fixed truths:
+
+“Unprolifically hirudinidae predivorce pentapolitan veterans.”
+“Diprotodan motorphobiac chane petalostemon impiety.”
+
+These strings are part of the world the group must process. Their status is undecided by syntax alone. They might be meaningful propositions in an unfamiliar frame, corrupted artifacts, or merely well-formed noise. Because reframing is scarce, the system has limited ability to discover a new ontology in which these strings pick out stable objects, relations, or properties. Because search-pool composition is fragile, such internally coherent-looking strings can be recycled despite being bad. And because the hard-to-vary filter cannot be operationalized without background judgment, it cannot non-circularly determine whether these strings are fertile anomalies or junk.
+
+So the collision implies a practical stalemate. The system cannot safely ignore the strange sentences, because doing so may discard the very reframing that is genuinely scarce and valuable. It also cannot safely promote them, because recursive recycling of coherent nonsense can poison the search pool. And it cannot rely on the proposed filter to resolve the case without importing the human judgments whose role the filter was supposed to reduce.
+
+In that world, the central risk is not simple error but category capture: nonsense that fits the current frame better than truth that requires a new one.

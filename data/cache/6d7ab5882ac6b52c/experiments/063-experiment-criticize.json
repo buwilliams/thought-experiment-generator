@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Extends familiar Goodhart/benchmark critiques to automated scientific taste, but does not open wholly new explanatory territory.",
+  "novelty": 0.74,
+  "novelty_why": "Non-obviously links undefined capability thresholds, novelty-pruning optimization, and historically curated benchmarks into one failure mode.",
+  "falsifiable": 0.61,
+  "falsifiable_why": "Testable via interventions on optimization pressure and benchmark design, though key terms remain operationally vague.",
+  "explanation": "Optimizing for current legibility may hide and destroy the very novelty needed for future scientific insight."
+}

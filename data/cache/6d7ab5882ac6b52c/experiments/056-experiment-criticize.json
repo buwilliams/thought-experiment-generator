@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Mostly extends existing critiques of LLM reasoning, novelty, and social validation rather than opening wholly new explanatory territory.",
+  "novelty": 0.68,
+  "novelty_why": "Connects schema-limited search, apparent novelty, and fallibilist knowledge validation in a sharper combined framing.",
+  "falsifiable": 0.54,
+  "falsifiable_why": "Parts are testable via schema analysis and novel-discovery benchmarks, but key terms remain underspecified.",
+  "explanation": "LLM outputs may recombine human-like schemas without producing genuinely new, socially validated knowledge."
+}

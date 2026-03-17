@@ -1,0 +1,9 @@
+{
+  "reach": 0.42,
+  "reach_why": "Extends known concerns about lock-in, evaluator drift, and bias, but does not open wholly new explanatory territory.",
+  "novelty": 0.74,
+  "novelty_why": "Non-obviously links path dependence, recursive evaluation, ontological bias, and token contamination into one failure mode.",
+  "falsifiable": 0.81,
+  "falsifiable_why": "Test by varying early acceptances and evaluator stability, then measuring convergence, drift, lock-in, and grammar diversity.",
+  "explanation": "Early accepted abstractions can lock recursive search into contingent, narrow world-models without a stable evaluative anchor."
+}

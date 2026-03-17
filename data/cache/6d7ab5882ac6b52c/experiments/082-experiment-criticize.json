@@ -1,0 +1,9 @@
+{
+  "reach": 0.18,
+  "reach_why": "It cautions against overinferring knowledge creation, but largely extends existing skepticism about fluency and explanation.",
+  "novelty": 0.63,
+  "novelty_why": "It non-obviously links polished scientific narration, retrieval ambiguity, and opaque terms into one evaluative problem.",
+  "falsifiable": 0.56,
+  "falsifiable_why": "Claims about evaluator overcredit and false positives can be tested experimentally, though key notions remain underspecified.",
+  "explanation": "Convincing, fluent explanations alone cannot distinguish genuine knowledge creation from retrieval, compression, or ungrounded patterning."
+}

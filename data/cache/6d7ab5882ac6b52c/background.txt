@@ -1,0 +1,52 @@
+The search-space argument leans on a 1,000-word sequence over 50,000 choices, but Einstein’s journalized explanation is not sampled from independent word draws, so the astronomical number may be rhetorically useful while being structurally irrelevant.
+If the real search unit is not words but constrained thought-experiment schemas like observer, signal, frame, simultaneity, and contradiction, then the effective space may be far smaller than the 10^5000 style estimate suggests.
+There is an unresolved tension between claiming brute-force iteration is impossible and then proposing a layered filtering pipeline that still depends on generating enough candidates to hit rare explanatory structures.
+The journal example may accidentally hide the hardest part, because writing a convincing first-person Einstein voice is easier than generating the underlying conceptual leap about simultaneity.
+It is unclear whether the 289 unique words matter at all, since relativity’s novelty may live almost entirely in relations among familiar concepts rather than lexical variety.
+The argument assumes Einstein did not need new words, but that cuts both ways because it suggests novelty may not require new tokens and therefore may be easier for an LLM than critics assume.
+At the same time, not needing new words does not show that recombining old words can produce genuinely new explanations rather than eloquent paraphrases of latent training mixtures.
+The proposed Deutschian filter raises an open question: can “hard to vary” be operationalized without smuggling in human background judgment at every meaningful checkpoint.
+If human judgment remains the decisive evaluator of explanatory quality, the architecture may be better described as human-guided discovery with LLM-assisted proposal generation rather than LLM knowledge creation.
+The sample benchmark about recovering a train-and-lightning style thought experiment risks target leakage, because Einstein’s solution is already known and structurally iconic.
+A system that rediscovers a structurally equivalent thought experiment may only demonstrate retrieval over abstraction rather than creation of knowledge.
+The phrase “structurally equivalent” is doing heavy work, because loose structural equivalence could include many superficially similar but explanatorily empty scenarios.
+There is a subtle ambiguity in the background pool, universal pool, and novel pool distinction, since any “novel” pool may be contaminated by unnoticed reformulations of the background pool.
+If the prior is heavily biased by background knowledge, one might worry that the architecture narrows toward culturally reinforced explanations and away from genuinely alien but better ones.
+LLM bias is mentioned as a detail to work out, but bias here is not merely social or political; it includes ontological bias toward familiar causal grammars.
+The train-and-platform example may be especially favorable because it is a compact contradiction-driven thought experiment, whereas many scientific discoveries involve messy instrumentation and missing data rather than clean conceptual puzzles.
+The equivalence principle portion of the journal shows another edge case: some leaps feel like explanation, others like compression of years of mathematical struggle into a polished narrative.
+If the architecture can surface the “happiest thought” but cannot bridge the ten-year mathematical gap Einstein mentions, does it count as creating knowledge or only creating conjectures.
+There is an open question about whether explanatory novelty can be judged before mathematical articulation, especially in physics where equations often determine whether a verbal insight survives.
+The proposal appears strongest for domains where explanation can be represented as object-relationship-property graphs, but weaker for domains where the ontology is itself contested.
+Reducing thought experiments to around 4 objects, 3 relationships, and 2 properties may be a productive engineering simplification, yet it could erase the asymmetries that make some explanations transformative.
+The object-concept extraction from the journal may reflect the model’s own preferred decomposition rather than the causal structure Einstein actually exploited.
+If decomposition is model-dependent, then the search architecture may inherit arbitrary blind spots from the parser that generates its search primitives.
+There is a recursion hazard in letting an LLM criticize outputs that were generated from primitives extracted by another LLM from a synthetic Einstein journal written by an LLM.
+That stack of mediation creates a strange epistemic loop where apparent novelty could be an artifact of representational choices rather than discovery.
+The response to Brett rejects scaling in favor of architecture, but the proposed layered search may still quietly rely on scale in the form of vast prior training and many generated candidates.
+A genuine architecture-only result would need to show that the narrowing method matters independently of the pretrained model’s latent stock of near-miss explanations.
+The claim that humans “are still the judge, for now” leaves open the hardest transition point: what evidence would justify trusting the system as a judge of its own future outputs.
+Recursive self-improvement by self-judgment sounds plausible only if the evaluation function is more stable than the generator, and that stability is not yet explained.
+If the judge and generator share the same underlying model family, correlated failure could amplify elegant nonsense rather than progressively narrow toward truth.
+Deutschian criteria such as reach beyond inputs may be especially vulnerable to false positives from fluent models that connect distant ideas without grounding.
+Minimal assumptions is also slippery, because some of the best explanations in history looked assumption-heavy until a new framework made them appear simple.
+The search-space framing treats explanation generation as combinatorial assembly, but some critics would say the real bottleneck is problem selection rather than candidate construction.
+Why ask “why does light always travel at the same speed regardless of observer” instead of some other question, and can the architecture originate such fruitful questions on its own.
+The Einstein benchmark may obscure this because the question has already been curated by history as one worth solving.
+There is also a mismatch between generating a narrative of discovery and generating the social process that turns an explanation into knowledge through criticism and empirical test.
+A thought experiment structurally equivalent to Einstein’s is not yet knowledge unless it survives confrontation with measurement, mathematics, and competing explanations.
+The proposal says compound discoveries back into the draw pool, but that could produce path dependence where early mediocre abstractions dominate future search directions.
+Search-pool composition becomes a serious edge case when bad but internally coherent outputs are recursively recycled as if they were genuine advances.
+The architecture may need a forgetting mechanism, yet forgetting is risky because many breakthroughs require revisiting discarded candidates under new constraints.
+Another unresolved issue is whether grammar and coherence filters help much at all, since most weak scientific explanations are already grammatical and coherent.
+Filtering for explanatory quality sounds attractive, but the filter may be hardest to define exactly where novelty begins, because novel explanations often initially look awkward or under-motivated.
+If the architecture is optimized too aggressively for current human judgments, it may systematically eliminate the weird candidates that later turn out to be breakthroughs.
+Conversely, if it tolerates too much weirdness, it may drown in seductive but untestable conceptual inventions.
+The journal’s shift from light-beam chasing to train simultaneity to accelerating box suggests chained reframings, and it remains unclear whether the system can invent such reframing moves rather than just fill them in.
+Reframing may be the true scarce resource, since it changes what counts as an object, relation, or property in the first place.
+The proposal treats narrowing as enough for tractability, but some discoveries may require temporary widening of the search into bizarre ontologies before later narrowing.
+That possibility complicates the metaphor of collapsing search space, because creative progress may involve alternating expansion and compression rather than monotonic reduction.
+The claim that past a threshold outputs become reliable enough to judge next outputs resembles a phase transition hypothesis, but no clear order parameter for that threshold is given.
+Without such a parameter, the threshold risks becoming a just-so story that explains success after the fact and failure as not yet having reached criticality.
+A particularly uncomfortable edge case is when the system generates a novel explanation that humans initially reject; the framework does not say whether that counts as knowledge creation, failed communication, or evaluator limitation.
+The deepest open question is whether the architecture can do more than approximate Einstein-shaped regions of conceptual space and actually discover explanations whose benchmark does not already exist in human memory.

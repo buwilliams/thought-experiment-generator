@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Extends known model-bias concerns to ontology reconstruction, but does not open wholly new explanatory territory.",
+  "novelty": 0.78,
+  "novelty_why": "Non-obviously links fallibilist underdetermination, ontology choice, and graph extraction failure in historical reasoning reconstruction.",
+  "falsifiable": 0.84,
+  "falsifiable_why": "Compare outputs across ontologies, prompts, and domains; test whether imposed graph structure varies systematically.",
+  "explanation": "Graph extraction may project the model’s ontology onto texts, misreconstructing causal reasoning under ontological uncertainty."
+}

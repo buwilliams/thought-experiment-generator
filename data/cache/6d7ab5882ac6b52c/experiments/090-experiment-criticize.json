@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Extends familiar skepticism about apparent novelty, but does not open clearly new explanatory territory.",
+  "novelty": 0.72,
+  "novelty_why": "Non-obviously links Deutschian knowledge criteria, mediation effects, and opaque-token coherence failures.",
+  "falsifiable": 0.66,
+  "falsifiable_why": "Testable by isolating architecture from pretraining and varying prompts, decoding, evaluators, and opaque-token conditions.",
+  "explanation": "Apparent model insight may be mediated fluency, not architecture-driven knowledge creation."
+}

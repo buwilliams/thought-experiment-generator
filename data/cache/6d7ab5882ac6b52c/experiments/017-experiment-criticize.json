@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "It critiques familiar proposal defenses, but does not introduce a fundamentally new explanatory mechanism.",
+  "novelty": 0.72,
+  "novelty_why": "It non-obviously links fluency failures, search-space rhetoric, and hidden scaling into one evaluative frame.",
+  "falsifiable": 0.84,
+  "falsifiable_why": "Claims can be tested by ablations, scaling comparisons, and measuring explanatory quality beyond fluency.",
+  "explanation": "Fluency, big-number rhetoric, and relabeled scale do not explain how strong scientific explanations are reliably produced."
+}

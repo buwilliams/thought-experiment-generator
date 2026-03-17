@@ -1,0 +1,9 @@
+{
+  "reach": 0.63,
+  "reach_why": "Extends known concerns about ontology bias and feedback loops to historical-discovery reconstruction under recursive search.",
+  "novelty": 0.82,
+  "novelty_why": "Non-obviously links decomposition bias, premature narrowing, and recycled coherent errors into one failure mode.",
+  "falsifiable": 0.78,
+  "falsifiable_why": "Compare widened versus narrowed searches and recycled versus clean pools on recovery of known discovery trajectories.",
+  "explanation": "Efficient search can systematically mistake ontology-compatible, recycled artifacts for genuine cumulative discovery."
+}

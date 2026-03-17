@@ -1,0 +1,9 @@
+{
+  "reach": 0.22,
+  "reach_why": "It synthesizes familiar concerns about testability, retrieval, and filtering, but does not open clearly new explanatory territory.",
+  "novelty": 0.58,
+  "novelty_why": "It non-obviously links permissiveness, surface coherence, and apparent originality into one failure mode for research systems.",
+  "falsifiable": 0.74,
+  "falsifiable_why": "Claims can be tested by varying weirdness tolerance and filters, then measuring testability, originality, and weak-output rates.",
+  "explanation": "Persuasive, coherent novelty can mask retrieval and untestable weak explanations in permissive research systems."
+}

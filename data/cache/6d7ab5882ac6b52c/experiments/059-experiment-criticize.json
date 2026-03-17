@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "It sharpens known critiques of search-space, benchmarks, and ontology dependence, but does not open a fundamentally new domain.",
+  "novelty": 0.72,
+  "novelty_why": "It non-obviously links combinatorics, graph ontology limits, benchmark leakage, and opaque truths into one critique.",
+  "falsifiable": 0.58,
+  "falsifiable_why": "Claims about leakage, ontology dependence, and structured search can be tested, but overall force remains partly interpretive.",
+  "explanation": "Explanatory success looks strongest where structure is pre-fixed, benchmarked, and ontologically settled."
+}

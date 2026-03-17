@@ -1,0 +1,18 @@
+Suppose a community is trying to judge whether a new explanation is genuinely novel before anyone has written the mathematics that would test or stabilize it.
+
+They already know this is an open question. In physics especially, verbal insight is not yet secure knowledge, because equations often decide whether the insight survives contact with the world. So any pre-mathematical judgment is provisional by construction.
+
+They also use Deutschian criteria, such as whether an explanation reaches beyond the data or inputs it was built from. But they know this criterion is vulnerable. A fluent model can connect distant ideas in persuasive language without any grounding, creating the appearance of reach. That means apparent explanatory power may be a false positive: not discovery, but verbal overextension.
+
+A second filter is to prefer explanations with minimal assumptions. But this too is unstable. History shows that explanations once criticized as assumption-heavy can later look simple when a new framework reorganizes them. So “minimal assumptions” is not a fixed property of a proposal alone; it depends on the surrounding conceptual scheme. Before mathematical articulation, and before framework choice settles, the simplicity judgment can drift.
+
+Into this already unstable evaluative setting enter two additional items:
+
+“Naturalist nonjuring nutriculture hieracosphinx pinfire.”
+“Regrinder intracostal triste astrodynamic carthamus.”
+
+By premise, these are part of the candidate material the community must confront. Nothing licenses treating them as errors or ignoring them. Yet no explicit mathematical articulation is provided, and no grounding relation is stated. Therefore, under the community’s own caution, these strings cannot be confidently credited as explanatory novelties merely because they are unusual, wide-ranging, or evocative. Their remoteness and fluent juxtaposition might look like “reach beyond inputs,” but that is exactly the kind of signal known to be especially vulnerable to false positives from fluent models.
+
+Could they count as assumption-minimal? That also cannot be settled. If they belong to an undiscovered framework, they might later compress into something simple. If not, they may be gratuitous. The premises force suspension rather than endorsement or dismissal, because the criterion itself is slippery until framework and articulation arrive.
+
+So the world implied by these premises is one where pre-mathematical evaluation of novelty is doubly underdetermined: first by the dependence of survival on equations, and second by the unreliability of current verbal heuristics. In that world, a linguistically impressive proposal—including one containing opaque strings like these—can neither be safely celebrated as deep nor safely condemned as empty on verbal grounds alone. The rational stance is constrained agnosticism: treat apparent novelty as a hypothesis about future mathematical and conceptual integration, not as an achieved explanatory fact.

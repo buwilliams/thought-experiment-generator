@@ -1,0 +1,9 @@
+{
+  "reach": 0.33,
+  "reach_why": "Extends known concerns about priors, path dependence, and forgetting, but does not clearly introduce unprecedented explanatory territory.",
+  "novelty": 0.72,
+  "novelty_why": "Non-obviously links cultural priors, forgetting tradeoffs, and opaque truths into one fallibilist limitation on discovery.",
+  "falsifiable": 0.44,
+  "falsifiable_why": "Parts are testable via search and memory ablations, but core claims about alien explanations remain underspecified.",
+  "explanation": "Biased priors and risky forgetting may confine discovery to human-legible conceptual neighborhoods."
+}

@@ -1,0 +1,9 @@
+{
+  "reach": 0.29,
+  "reach_why": "Recasts familiar limits of self-evaluation, novelty metrics, and forgetting; does not open clearly unprecedented explanatory territory.",
+  "novelty": 0.68,
+  "novelty_why": "Non-obviously links evaluator stability, lexical novelty failure, and memory-forgetting tradeoffs into one skeptical framework.",
+  "falsifiable": 0.56,
+  "falsifiable_why": "Claims about proxy failure and forgetting tradeoffs are testable; evaluator-stability critique remains partly conceptual.",
+  "explanation": "Self-improvement stalls when novelty proxies fail, forgetting is risky, and evaluator reliability lacks justification."
+}

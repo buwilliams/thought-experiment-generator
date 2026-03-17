@@ -1,0 +1,9 @@
+{
+  "reach": 0.31,
+  "reach_why": "Combines familiar limits of proxies, formalization, and forgetting; does not open clearly unprecedented explanatory territory.",
+  "novelty": 0.72,
+  "novelty_why": "Non-obviously links lexical novelty, hard-to-vary criteria, and memory tradeoffs into one uncertainty-centered architecture critique.",
+  "falsifiable": 0.58,
+  "falsifiable_why": "Claims about proxy failure and pruning tradeoffs are testable, but key terms remain underoperationalized and judgment-dependent.",
+  "explanation": "Novelty detection must retain uncertainty because current criteria cannot reliably distinguish future insight from present noise."
+}

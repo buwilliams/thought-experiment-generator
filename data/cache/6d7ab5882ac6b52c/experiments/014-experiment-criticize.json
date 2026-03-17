@@ -1,0 +1,9 @@
+{
+  "reach": 0.46,
+  "reach_why": "Extends known concerns about recursive self-training, ontology lock-in, and evaluation dependence, but does not open wholly new territory.",
+  "novelty": 0.74,
+  "novelty_why": "Non-obviously links fallibilism, reframing scarcity, search-pool poisoning, and frame-dependent hard-to-vary judgments.",
+  "falsifiable": 0.63,
+  "falsifiable_why": "Testable via recursive training experiments measuring error amplification, anomaly handling, and dependence on external interpretive judgments.",
+  "explanation": "Recursive improvement can entrench coherent nonsense when reframing is scarce and evaluation depends on inherited categories."
+}

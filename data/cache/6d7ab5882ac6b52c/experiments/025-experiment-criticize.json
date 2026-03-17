@@ -1,0 +1,9 @@
+{
+  "reach": 0.28,
+  "reach_why": "Extends familiar AI oversight skepticism, but does not open fundamentally new explanatory territory.",
+  "novelty": 0.62,
+  "novelty_why": "Connects benchmark elegance, human oversight, and evaluator stability into a sharper critique of self-judging AI.",
+  "falsifiable": 0.46,
+  "falsifiable_why": "Parts are testable empirically, but key claims about justified handoff and stability remain underspecified.",
+  "explanation": "Clean benchmarks can mislead; without stable evaluation, AI self-judgment lacks justified trust."
+}
