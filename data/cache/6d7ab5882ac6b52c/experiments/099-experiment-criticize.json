@@ -1,9 +1,0 @@
-{
-  "reach": 0.29,
-  "reach_why": "Mostly extends known concerns about scaling, priors, confidence, and evaluator bias rather than opening new territory.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously unifies AI evaluation, animal inference, and billing-framing under presentation-driven judgment errors.",
-  "falsifiable": 0.84,
-  "falsifiable_why": "Test by isolating pretrained priors, confidence cues, and judge preferences; counterexamples could break the claimed pattern.",
-  "explanation": "Judgment often mistakes inherited priors, confidence, and familiar presentation for genuine substance or novelty."
-}

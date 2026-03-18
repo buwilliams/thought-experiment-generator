@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Extends familiar critiques of priors and search bias, but does not open wholly new explanatory territory.",
-  "novelty": 0.76,
-  "novelty_why": "Non-obviously links hard-to-vary scoring, human priors, and misleading combinatorial search pictures through linguistic edge cases.",
-  "falsifiable": 0.84,
-  "falsifiable_why": "Could fail if representation-independent scoring works, or if human priors demonstrably do not shape filtering outcomes.",
-  "explanation": "Search guidance inherits hidden priors unless representation and scoring assumptions are made explicit."
-}

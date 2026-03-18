@@ -1,9 +1,0 @@
-{
-  "reach": 0.39,
-  "reach_why": "Extends known continual-learning and security tensions, but does not open wholly new explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links memory policy, epistemic uncertainty, shifting justification, and replay poisoning into one framework.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Specific tradeoff claims are testable, but key notions like preservation standards remain partly underdefined.",
-  "explanation": "Competent continual learning requires tri-state memory and principled uncertainty under changing worlds, contested goals, and poisoning risk."
-}

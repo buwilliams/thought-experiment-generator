@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Extends continual-learning critiques, but does not clearly open wholly unprecedented explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links concept drift, accidental retention, rehearsal bias, and opaque truths under one epistemic frame.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Parts are testable in dynamic benchmarks; opaque-premise effects remain underspecified and weakly operationalized.",
-  "explanation": "Past performance can mislead when tasks mutate, memory is ambiguous, and preserving old biases may hinder needed revision."
-}

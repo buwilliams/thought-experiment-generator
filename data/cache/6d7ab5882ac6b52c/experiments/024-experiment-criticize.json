@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Extends familiar debates on discovery, search, and understanding, but does not open clearly new explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously links hindsight-bias critiques with compressed-prior search and the explanation-versus-understanding distinction.",
-  "falsifiable": 0.56,
-  "falsifiable_why": "Parts are testable via model behavior and counterexamples, but core terms like explanation and understanding remain underdetermined.",
-  "explanation": "Compressed priors may aid finding plausible explanations without settling whether genuine understanding or explanation occurred."
-}

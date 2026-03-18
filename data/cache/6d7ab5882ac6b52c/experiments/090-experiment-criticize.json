@@ -1,9 +1,0 @@
-{
-  "reach": 0.24,
-  "reach_why": "Mostly reiterates existing skepticism about benchmark leakage, retrospective narratives, and search over familiar priors.",
-  "novelty": 0.58,
-  "novelty_why": "Connects prompt framing, historical compression, and prior-supported search into one cautionary evaluation argument.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Test by varying prompt framing, training-neighbor density, and search depth; compare rediscovery versus genuine novelty rates.",
-  "explanation": "Benchmark success can reflect framed rediscovery, not broad knowledge creation."
-}

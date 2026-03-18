@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Extends known concerns about correlated evaluators and mode collapse, but does not open clearly unprecedented explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links critic correlation, fluency filtering, and upstream representational priors as a single failure mode.",
-  "falsifiable": 0.9,
-  "falsifiable_why": "Test by varying critic independence and filter strictness, then measuring recovery of valuable atypical outputs.",
-  "explanation": "Polish-focused, correlated evaluation suppresses strange formulations that may carry genuinely new conceptual representations."
-}

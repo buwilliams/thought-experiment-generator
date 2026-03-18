@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Extends known worries about simplicity bias and priors, but does not open clearly unprecedented explanatory territory.",
-  "novelty": 0.74,
-  "novelty_why": "Connects compression bias, search pruning, representational priors, and bizarre particulars in a sharp, non-obvious synthesis.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Test by comparing evaluators on messy domains; counterexamples show compression need not erase causally relevant particulars.",
-  "explanation": "Elegant search heuristics can systematically miss truth when reality depends on ugly, literal, causally important details."
-}

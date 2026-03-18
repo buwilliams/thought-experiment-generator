@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Extends familiar critiques of LLMs; does not open fundamentally new explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously links prompt leakage, correlated critics, and extra-linguistic historical conditions into one argument.",
-  "falsifiable": 0.84,
-  "falsifiable_why": "Testable by varying prompt information, critic independence, and grounding, then measuring genuine discovery.",
-  "explanation": "LLM success may reflect preloaded prompts, shared biases, and missing worldly grounding, not strong knowledge creation."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Mostly extends familiar concerns about leakage, priors, evaluation bias, and premature standards rather than opening new territory.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously links hidden scaffolding, inherited priors, Deutschian timing, and social filtering into one evaluative framework.",
-  "falsifiable": 0.79,
-  "falsifiable_why": "Can be challenged by blinded tests, ablations, counterexamples, or showing architecture gains independent of scaled priors.",
-  "explanation": "Knowledge-creation claims are easily confounded by prior structure, mistimed standards, and socially selective perception."
-}

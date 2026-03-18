@@ -1,9 +1,0 @@
-{
-  "reach": 0.58,
-  "reach_why": "Extends continual-learning theory by elevating principled uncertainty as a necessary memory state, not merely an evaluation artifact.",
-  "novelty": 0.79,
-  "novelty_why": "Connects parameter isolation, neglected input regions, semantic ungroundedness, and fallibilist uncertainty into one framework.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Test whether stable outputs in unvisited regions correlate poorly with reintegration, calibration, and downstream coordination.",
-  "explanation": "Continual learners should represent stranded function as uncertainty, not automatically count stable untouched outputs as remembered knowledge."
-}

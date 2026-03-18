@@ -1,9 +1,0 @@
-{
-  "reach": 0.39,
-  "reach_why": "Extends familiar benchmark and ontology critiques, but does not open wholly new explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links benchmark reconstruction, compositional parsing, and ontology revision as the core discovery bottleneck.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Compare benchmark success with forward-discovery tasks requiring ontology change; counterexamples could refute the claimed gap.",
-  "explanation": "Benchmark success may reflect imposed ontology reconstruction, not genuine capacity for ontology-changing discovery."
-}

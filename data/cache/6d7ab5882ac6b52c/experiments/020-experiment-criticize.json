@@ -1,9 +1,0 @@
-{
-  "reach": 0.34,
-  "reach_why": "Mostly extends known alignment, Goodhart, and crisis-rhetoric concerns rather than opening a wholly new explanatory domain.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links self-evaluation bugs, universal priors, shallow explanations, crisis rhetoric, and reduced public opposition.",
-  "falsifiable": 0.81,
-  "falsifiable_why": "Claims permit counterexamples, simulations, ablations, and empirical tests of evaluator bias under crisis and recursion.",
-  "explanation": "Crisis and recursive self-judgment can amplify plausible nonsense while suppressing rare truths needed for real discovery."
-}

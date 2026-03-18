@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Extends known critiques of LLM conservatism and institutional failure, but does not open wholly new explanatory territory.",
-  "novelty": 0.74,
-  "novelty_why": "Non-obviously links model search biases, idea laundering, and institutional macho-aesthetic failure into one pathology.",
-  "falsifiable": 0.83,
-  "falsifiable_why": "Testable via ablations, anomaly-detection tasks, disruptive-insight benchmarks, and counterexamples where such systems surface genuine novelty.",
-  "explanation": "Why polished language systems may stabilize failing institutions by filtering disruptive truths into acceptable continuity."
-}

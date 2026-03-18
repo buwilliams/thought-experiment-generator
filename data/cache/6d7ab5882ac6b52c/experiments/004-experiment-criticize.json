@@ -1,9 +1,0 @@
-{
-  "reach": 0.28,
-  "reach_why": "It sharpens old debates on discovery, priors, and prompt leakage rather than opening a fundamentally new explanatory domain.",
-  "novelty": 0.63,
-  "novelty_why": "It non-obviously links prompt-loading, universal priors, and irrelevant truths to limits on claiming genuine primitive creation.",
-  "falsifiable": 0.82,
-  "falsifiable_why": "Counterexamples could show filtering yields primitives absent from prompts and priors, or that universal priors preserve anomalies.",
-  "explanation": "It argues filtering alone may not create new explanatory primitives; apparent novelty may come from prompts or inherited priors."
-}

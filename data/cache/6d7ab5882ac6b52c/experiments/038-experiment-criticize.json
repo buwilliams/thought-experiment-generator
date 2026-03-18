@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "It sharpens known concerns about explanation and structure, but does not open clearly unprecedented explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "It non-obviously links combinatorics, understanding, and retrospective interpretability into one evaluative constraint.",
-  "falsifiable": 0.84,
-  "falsifiable_why": "Counterexamples or formal criteria could show surface-only generation suffices, or that stricter structure tests fail.",
-  "explanation": "It argues genuine explanatory structure needs independent criteria, not evocative wording or after-the-fact interpretation."
-}

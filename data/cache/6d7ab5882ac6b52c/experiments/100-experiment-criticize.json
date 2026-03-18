@@ -1,9 +1,0 @@
-{
-  "reach": 0.29,
-  "reach_why": "Mostly extends known concerns about priors, benchmarks, and recombination; little genuinely new explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "Connects benchmark overfitting, universal priors, and explanatory laundering in a distinctive diagnostic framing.",
-  "falsifiable": 0.84,
-  "falsifiable_why": "Test by varying pool weights and benchmarks, then measuring recovery of irregularities versus generic explanations.",
-  "explanation": "Overweighting general priors makes explanations smooth, benchmark-friendly, and shallow, masking genuine discovery."
-}

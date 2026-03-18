@@ -1,9 +1,0 @@
-{
-  "reach": 0.29,
-  "reach_why": "Shared generator-critic failure and prompt laundering are known concerns; symbolism adds little new explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "It non-obviously links epistemic contamination, tampered labels, degraded evidence, and performative orthodoxy in one critique.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Test with independent critics, prompt ablations, provenance controls, and novelty benchmarks to check laundering claims.",
-  "explanation": "Fluent rediscovery may mask recycled knowledge when evaluation and evidence are jointly contaminated."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.43,
-  "reach_why": "Extends known continual-learning concerns, but does not clearly introduce a fundamentally unprecedented explanatory domain.",
-  "novelty": 0.79,
-  "novelty_why": "Connects forgetting, over-retention, compression opacity, and scaling uncertainty into one safety framing.",
-  "falsifiable": 0.72,
-  "falsifiable_why": "Claims can be tested by varying compression, scale, and environment drift, then measuring retention harms and hidden losses.",
-  "explanation": "Continual-learning safety is fallible triage under uncertainty about what to forget, preserve, or compress."
-}

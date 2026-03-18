@@ -1,9 +1,0 @@
-{
-  "reach": 0.42,
-  "reach_why": "Extends continual-learning concerns to durable uncertainty management, but builds on existing calibration, OOD, and benchmark-critique ideas.",
-  "novelty": 0.76,
-  "novelty_why": "Non-obviously links retention gaps, benchmark-shaped meta-learning, and true-but-uninterpreted propositions under fallibilist uncertainty preservation.",
-  "falsifiable": 0.84,
-  "falsifiable_why": "Test by measuring retained accuracy versus calibration drift, OOD brittleness, and confidence on uninterpreted true statements.",
-  "explanation": "Reliable continual learning must preserve uncertainty, not just knowledge, because competence can persist while confidence silently drifts."
-}

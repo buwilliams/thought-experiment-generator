@@ -1,9 +1,0 @@
-{
-  "reach": 0.38,
-  "reach_why": "Recursive error amplification and narrative bias are familiar; pretrained-manifold mitigation is a modest extension.",
-  "novelty": 0.71,
-  "novelty_why": "Connects search contamination, inductive bias compression, and retrospective storytelling into one underdetermination frame.",
-  "falsifiable": 0.82,
-  "falsifiable_why": "Compare recursive versus non-recursive search under controlled false-positive rates and pretrained priors.",
-  "explanation": "Success may reflect prior structure or recursively amplified error, while narratives obscure which."
-}

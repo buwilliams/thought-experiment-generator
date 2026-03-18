@@ -1,9 +1,0 @@
-{
-  "reach": 0.27,
-  "reach_why": "Mostly synthesizes familiar critiques of brute-force search, truth-alignment gaps, and incentive-shaped social outcomes.",
-  "novelty": 0.58,
-  "novelty_why": "Connects search tractability, truth decoupling, and theft mitigation under one process-structure lens.",
-  "falsifiable": 0.74,
-  "falsifiable_why": "Claims can be challenged by models where priors improve truth, or fast compromise fails to reduce theft impact.",
-  "explanation": "Process structure, not raw possibility space, governs tractability, truthfulness, and social harm."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Mostly synthesizes familiar critiques of lexical metrics, inductive bias, and pretrained compression rather than opening new territory.",
-  "novelty": 0.68,
-  "novelty_why": "Connects semantic relevance, human-trained filters, and compressed search spaces into one evaluative framework.",
-  "falsifiable": 0.79,
-  "falsifiable_why": "Testable via counterexamples, ablations, human-judgment independence, and measures linking novelty to semantic relevance.",
-  "explanation": "Meaningful creativity depends on constraint origins, not word variety, grammaticality, or superficial architectural difference."
-}

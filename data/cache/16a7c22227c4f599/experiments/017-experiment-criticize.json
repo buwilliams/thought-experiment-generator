@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Combines known concerns; does not clearly introduce a fundamentally new mechanism or domain.",
-  "novelty": 0.74,
-  "novelty_why": "Non-obviously links continual learning, feedback-shaped evidence, legibility loss, and opaque truths into one safety argument.",
-  "falsifiable": 0.68,
-  "falsifiable_why": "Claims can be tested by measuring metric gains alongside worsening interpretability, editability, edge-case failures, and feedback bias.",
-  "explanation": "Average improvement can mask growing opacity, self-induced evaluation bias, and unsafe rare failures where guarantees are needed."
-}

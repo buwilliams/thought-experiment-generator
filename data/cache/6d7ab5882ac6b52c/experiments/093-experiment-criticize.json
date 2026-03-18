@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "It synthesizes known debates on search, fluency, and explanation rather than opening a clearly unprecedented explanatory domain.",
-  "novelty": 0.72,
-  "novelty_why": "It non-obviously links tractability filters with Deutschian hard-to-vary criteria and background-knowledge dependence.",
-  "falsifiable": 0.78,
-  "falsifiable_why": "Counterexamples could show models achieving explanatory novelty without vast search or human-imported background scoring.",
-  "explanation": "Creativity judgments depend on hidden background knowledge; tractable fluency alone cannot distinguish novelty from shallow strangeness."
-}

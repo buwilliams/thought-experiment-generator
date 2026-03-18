@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Extends continual-learning critiques, but does not open wholly new territory beyond distribution shift, bias retention, and plasticity-stability tradeoffs.",
-  "novelty": 0.72,
-  "novelty_why": "Recasts replay, regularization, and rehearsal as epistemic denial mechanisms, linking stability methods to truth degradation under change.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Test by inducing shifting meanings and measuring whether stabilizers preserve past performance while reducing current-world accuracy.",
-  "explanation": "Stability methods can preserve obsolete competence, making models seem reliable while misaligned with changing reality."
-}

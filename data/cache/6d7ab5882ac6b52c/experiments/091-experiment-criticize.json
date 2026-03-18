@@ -1,9 +1,0 @@
-{
-  "reach": 0.39,
-  "reach_why": "Extends known debates on search, truth-tracking, and explanation quality, but does not open wholly new territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links truth-tracking, hard-to-vary explanations, early conjectures, and opaque truths in LLM evaluation.",
-  "falsifiable": 0.78,
-  "falsifiable_why": "Test by comparing systems with truth-linked feedback versus judge-pleasing heuristics and early-rigidity constraints.",
-  "explanation": "Narrowing search succeeds only when tied to reality while preserving strange truths and immature conjectures."
-}

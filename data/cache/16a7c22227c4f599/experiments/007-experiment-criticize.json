@@ -1,9 +1,0 @@
-{
-  "reach": 0.42,
-  "reach_why": "Extends known continual-learning tradeoffs to evaluation instability and opaque truths, but does not open wholly new territory.",
-  "novelty": 0.76,
-  "novelty_why": "Non-obviously links personalization, rehearsal, over-retention, benchmark drift, and uninterpretable yet real patterns.",
-  "falsifiable": 0.71,
-  "falsifiable_why": "Testable via continual-training experiments measuring fragmentation, retention harms, benchmark failure, and unlearning resistance.",
-  "explanation": "Continual personalization plus rehearsal can preserve obsolete, opaque local behaviors, making improvement harder to evaluate."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.28,
-  "reach_why": "Extends familiar critiques of elegance bias and Goodharting, but does not open fundamentally new explanatory territory.",
-  "novelty": 0.72,
-  "novelty_why": "Non-obviously links compression preference, historical reenactment tests, and omission of awkward truths into one failure mode.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Test by comparing filter-ranked explanations against hidden truths, awkward facts, and genuinely novel discovery tasks.",
-  "explanation": "Optimizing explanations for elegance can systematically reward persuasive falsehood over messy truth and mimic discovery."
-}

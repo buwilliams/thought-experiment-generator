@@ -1,9 +1,0 @@
-{
-  "reach": 0.41,
-  "reach_why": "Extends known continual-learning concerns to hidden-boundary deployment, but does not open wholly new explanatory territory.",
-  "novelty": 0.76,
-  "novelty_why": "Non-obviously links benchmark segmentation, latent shifts, and worsening control despite improving aggregate performance.",
-  "falsifiable": 0.84,
-  "falsifiable_why": "Test by comparing benchmarked and latent-shift deployments on accuracy, editability, legibility, and rare-case failure severity.",
-  "explanation": "Average gains can mask worsening controllability under hidden task shifts and rare true phenomena."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.29,
-  "reach_why": "Extends familiar AI overconfidence critiques, but does not open clearly new explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "Connects confidence, heuristic transfer, vivid irrelevance, and formal-domain limits in a non-obvious synthesis.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Test by comparing filtering accuracy when models inherit heuristics alone versus heuristics plus grounded judgments.",
-  "explanation": "Narrative confidence and vivid details can mislead narrowing unless grounded judgments and formal constraints guide selection."
-}

@@ -1,9 +1,0 @@
-{
-  "reach": 0.42,
-  "reach_why": "Extends continual-learning debates to identity, governance, and opaque truths, but does not clearly establish wholly unprecedented territory.",
-  "novelty": 0.74,
-  "novelty_why": "Non-obviously links replay, bias persistence, selective unlearning, system identity, and action under unresolved premises.",
-  "falsifiable": 0.58,
-  "falsifiable_why": "Claims about replay-induced bias retention and collateral damage are testable; identity and opaque-truth premises remain underspecified.",
-  "explanation": "Continual learners must govern selective memory and identity while correcting harmful knowledge under persistent uncertainty."
-}

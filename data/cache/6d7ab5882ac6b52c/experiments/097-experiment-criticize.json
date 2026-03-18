@@ -1,9 +1,0 @@
-{
-  "reach": 0.28,
-  "reach_why": "It sharpens familiar skepticism about AI creativity, but does not open clearly new explanatory territory.",
-  "novelty": 0.63,
-  "novelty_why": "It non-obviously links prompt leakage, search-pool curation, and stake-driven rhetoric into one critique.",
-  "falsifiable": 0.82,
-  "falsifiable_why": "Vary prompt information and candidate pools; if outputs still exceed inputs, the critique weakens.",
-  "explanation": "Apparent machine creativity may reflect hidden upstream structure, especially when high stakes distort evaluation."
-}

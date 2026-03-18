@@ -1,9 +1,0 @@
-{
-  "reach": 0.31,
-  "reach_why": "Extends familiar critiques of heuristic mimicry and error amplification, but does not open fundamentally new explanatory territory.",
-  "novelty": 0.68,
-  "novelty_why": "Non-obviously links prompt-loading, heuristic detachment, and recursive false-positive reuse into one epistemic failure mode.",
-  "falsifiable": 0.84,
-  "falsifiable_why": "Testable by comparing systems with and without judgment-grounded feedback under prompt leakage and recursive self-training.",
-  "explanation": "Polished outputs can mask shallow understanding, and recycled errors can make efficient search increasingly confident and trapped."
-}

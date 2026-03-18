@@ -1,9 +1,0 @@
-{
-  "reach": 0.36,
-  "reach_why": "Extends familiar selection-bias critiques to ontology-changing machine explanations, but does not open wholly unprecedented territory.",
-  "novelty": 0.74,
-  "novelty_why": "Non-obviously links human legibility filters, grammatical screening, and loss of radical scientific novelty.",
-  "falsifiable": 0.86,
-  "falsifiable_why": "Test by varying evaluation filters and measuring whether unconventional but valid explanations are disproportionately rejected.",
-  "explanation": "Human-style filtering may systematically discard transformative explanations that initially look like nonsense."
-}
