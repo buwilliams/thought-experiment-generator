@@ -390,17 +390,13 @@ pub fn load_run_generated(run: u32) -> Result<Vec<Generated>> {
             Err(_) => continue, // skip non-generated json (e.g. state.json)
         };
         let md_path = path.with_extension("md");
-        let text = if md_path.exists() {
-            extract_section(&std::fs::read_to_string(&md_path)?, "Conjecture")
-                .unwrap_or_default()
+        let md_content = if md_path.exists() {
+            std::fs::read_to_string(&md_path)?
         } else {
             String::new()
         };
-        let questions = if md_path.exists() {
-            parse_questions_from_md(&std::fs::read_to_string(&md_path)?)
-        } else {
-            vec![]
-        };
+        let text = extract_between(&md_content, "## Conjecture", "## Questions");
+        let questions = parse_questions_from_md(&md_content);
         outputs.push(Generated { meta, text, questions });
     }
     Ok(outputs)
@@ -469,6 +465,16 @@ fn parse_content_md(content: &str) -> (String, String, String) {
     let summary = extract_section(content, "Summary").unwrap_or_default();
     let full_text = extract_section(content, "Full Text").unwrap_or_default();
     (title, summary, full_text)
+}
+
+fn extract_between(content: &str, start_header: &str, end_header: &str) -> String {
+    let start = match content.find(start_header) {
+        Some(i) => i + start_header.len(),
+        None => return String::new(),
+    };
+    let after = &content[start..];
+    let end = after.find(end_header).unwrap_or(after.len());
+    after[..end].trim().to_string()
 }
 
 fn extract_section(content: &str, section: &str) -> Option<String> {

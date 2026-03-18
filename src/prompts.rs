@@ -74,9 +74,9 @@ pub fn extract_candidate_problems(mind_system: &str, generated: &str) -> Prompt 
     Prompt {
         system: mind_system.to_string(),
         user: format!(
-            "Identify unresolved tensions, unexplored implications, or open questions raised by this \
-            conjecture that are worth exploring as new problems. For each candidate, score 0.0–1.0 \
-            whether it is worth pursuing.\n\n\
+            "Identify the most significant unresolved tensions or open questions raised by this \
+            conjecture that are worth exploring as new problems. Return at most 3. For each, \
+            score 0.0–1.0 whether it is worth pursuing.\n\n\
             Return JSON: {{\"candidates\": [{{\"text\": \"...\", \"score\": 0.0}}]}}\n\n\
             Conjecture: {generated}"
         ),
