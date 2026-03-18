@@ -101,7 +101,7 @@ impl LlmClient {
     ) -> Result<String> {
         let mut body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 2048,
+            "max_tokens": 4096,
             "temperature": temperature,
             "messages": [{"role": "user", "content": prompt}]
         });
@@ -147,7 +147,7 @@ impl LlmClient {
     ) -> Result<String> {
         let mut body = serde_json::json!({
             "model": self.config.model,
-            "max_tokens": 2048,
+            "max_tokens": 4096,
             "temperature": temperature,
             "messages": [{"role": "user", "content": prompt}]
         });
@@ -199,7 +199,7 @@ impl LlmClient {
 
         let body = serde_json::json!({
             "model": self.config.model,
-            "max_completion_tokens": 2048,
+            "max_completion_tokens": 4096,
             "temperature": temperature,
             "messages": messages
         });
