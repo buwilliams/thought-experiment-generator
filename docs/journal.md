@@ -85,3 +85,19 @@ The first instinct was to find the single best conjecture and answer through it.
 The implemented design runs all mind conjectures and the top candidates concurrently as separate lenses — each producing its own answer to the question — then consolidates all perspectives into a single best explanation. The consolidation prompt is explicitly Deutschian: preserve what is load-bearing across multiple lenses (claims that survive multiple perspectives carry more evidential weight), resolve tensions by finding the deeper principle that contains both, state genuine conflicts clearly rather than papering over them, and discard what is ornamental or merely restates the question.
 
 This mirrors Phase 1 of the run loop, but directed at a user question rather than a stored problem. The result should be more explanatorily powerful than any single lens alone — which is the point of having a mind in the first place.
+
+## 2026-03-18 — Can the System Create New Knowledge?
+
+The central question: does this system produce new knowledge, or does it recombine what already exists?
+
+Two distinct tests were identified, each measuring something different:
+
+**Test 1 — Does it improve?** Are the conjectures promoted over successive runs generating progressively better outputs? This is measurable from run data: average output scores, conjecture score trajectories, whether promoted conjectures outperform what they replaced. Implemented as `trajectory` — a pure data command that reads across all runs and shows score trends without any LLM calls.
+
+**Test 2 — Is it novel?** Is a given conjecture a restatement of a named, existing theory, or does it articulate something not directly derivable from the existing body of human knowledge? This requires background knowledge of the world to assess — which the LLM has. Implemented as `novelty-check`: each conjecture is scored 0–1 for novelty, with the closest known analog named explicitly.
+
+Novelty and explanatory quality are intentionally kept separate. A well-known lens that reliably generates high-scoring outputs is still useful — it occupies a legitimate slot in the pool. Penalizing it for being recognizable would conflate novelty with explanatory value. Novelty is a diagnostic, not a ranking signal. Whether that changes over time is an open question.
+
+The honest framing of what the system can and cannot do: it can generate new *explanatory structure* — articulations not explicitly present in any input, that survive structural criticism, and that illuminate problems from angles the individual conjectures did not. Whether that constitutes new knowledge in the strong sense depends on how sharp the evaluation function is. The "hard to vary" criterion tests internal structure, not reach. Improving the evaluation function — making it track explanatory power more precisely — is the highest-leverage intervention available.
+
+One bias worth recording: the LLM substrate, when asked whether the system can create new knowledge, consistently reverts to claiming that external empirical grounding is required. This was explicitly rejected. Knowledge grows in abstract space — mathematics proves it. The criticism function operating on internal structure (logical consistency, hard to vary) is the mechanism, not a consolation prize for the absence of experiments. The regress-breaker is criticism, not physical feedback.
