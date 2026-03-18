@@ -12,6 +12,14 @@ Inspired by David Deutsch's epistemology — knowledge grows through conjecture 
 
 Requires `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY` for OpenAI).
 
+## Why Architecture, Not Model
+
+All progress — mathematical theorems, physical theories, philosophical arguments — exists in abstract space. It is not stored in neurons; it travels through them. A brain does not think in spikes; a mind thinks in ideas. The neuron is the substrate, not the thought.
+
+The same distinction applies here. An LLM predicts tokens — it is the substrate. This system operates one level up: in the space where conjectures are formed, evaluated against problems, and promoted based on explanatory power. The LLM executes; the architecture reasons.
+
+This is why we are not building a better model. The bottleneck is not substrate quality but structure. Early signs of this pattern are visible in purpose-built agent systems — research agents, scientific automation pipelines — that use LLMs as an execution layer while organizing reasoning at a higher level. This system is the generalization of that pattern: a domain-agnostic architecture for how knowledge grows through conjecture and criticism, operating in the abstract space where explanations live.
+
 ## Usage
 
 ```sh
@@ -63,9 +71,12 @@ cat my-conjecture.md | cargo run -- add-conjecture --layer mind --title "Conject
 
 **Phase 1 — Generate Outputs.** Each (problem, candidate conjecture) pair produces one generated output. The mind's conjecture summaries form the system prompt. The candidate conjecture's summary and problem summary are combined in the user prompt. Pairs run concurrently. Already-generated outputs are skipped (resumable runs).
 
-**Phase 2 — Evaluate Outputs.** Two-pass evaluation:
-- *Pass 1 — Logical Consistency:* Score 0.0–1.0. Below threshold (default 0.3), output is skipped.
-- *Pass 2 — Hard to Vary:* The mind generates 10 yes/no questions probing whether each part of the output is load-bearing. Score = yes_count / 10. Combined score: `0.3 × consistency + 0.7 × hard_to_vary`.
+**Phase 2 — Evaluate Outputs.** Each generated output is scored by all active evaluation criteria (loaded from `data/state/evaluations/`). The seed criteria are:
+- *Logical Consistency:* Is the output internally self-consistent? Score 0.0–1.0. Below threshold (default 0.3), output is skipped.
+- *Hard to Vary:* The mind generates 10 yes/no questions probing whether each part of the output is load-bearing. Score = yes_count / 10.
+
+Combined score is a weighted sum of all active evaluation scores. Evaluation criteria are manually managed — the system never adds or removes them automatically. Users can add criteria by editing `data/state/evaluations/` directly.
+
 - *Candidate Problems:* The mind also identifies unresolved tensions and open questions raised by each output. Candidates scoring above threshold are admitted to the active problem set.
 
 **Phase 3 — Rank and Promote.**
@@ -93,6 +104,8 @@ Conjectures are shared across all problem sets — the mind and candidates are n
 
 **Problem Sets** are named, scoped collections of problems (cap: 10). Problems only exist within sets. A run operates on one problem set, discovers candidate problems, and adds them to the set. Deduplication and cap enforcement keep the set focused.
 
+**Evaluations** are a stable, manually-governed set of scoring criteria applied in Phase 2. They sit outside the promotion hierarchy — the system never adds, removes, or reorders them. Users extend or refine evaluations by editing `data/state/evaluations/` directly. Each evaluation defines a scoring criterion and a weight; the combined output score is the weighted sum across all active evaluations.
+
 ## State Layout
 
 ```
@@ -100,6 +113,7 @@ data/state/
   state.json                     — current run number
   mind/                          — mind conjectures (.md + .json each)
   candidates/                    — candidate conjectures (.md + .json each)
+  evaluations/                   — evaluation criteria (.md + .json each) [manually managed]
   problems/                      — problems (.md + .json each)
   problemsets/                   — problem set index (.md + .json each)
   runs/
@@ -116,6 +130,8 @@ Seed state lives in `data/seed/`. `--fresh` resets `data/state/` from seed.
 **Mind conjectures:** Deutschian Epistemology, Ontology, Systems Thinking (Donella Meadows)
 
 **Candidate conjectures:** Thought Experiments, Mathematical Formalism, Counterfactual Reasoning, Extreme Cases, Historical Genesis
+
+**Evaluations:** Logical Consistency (weight 0.3), Hard to Vary (weight 0.7)
 
 ## Documents
 

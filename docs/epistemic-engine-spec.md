@@ -15,6 +15,14 @@ The loop is self-referential: the same conjecture pool that generates candidates
 
 This is a thinking engine, not a search engine. The goal is not to find a pre-existing answer but to generate structured candidates that illuminate a problem in ways neither the conjectures nor the problem alone could produce.
 
+## The Level Distinction
+
+Progress in physics happens in abstract space, not in the brain tissue of physicists. Einstein's relativity exists there — it is a fact about abstract space, not a fact about Einstein's neurons. The same is true of mathematical theorems, logical arguments, and explanations of any kind. Neurons are the substrate. Ideas are what travel through them. Humans do not think in neurons; they think in conjectures, analogies, and explanations.
+
+The same distinction applies here. An LLM predicts tokens — it is the substrate. This system operates one level up: in the space where conjectures are formed, tested against problems, and promoted based on explanatory power. The LLM executes; the architecture reasons. Progress happens at the architecture level, for the same reason that human intellectual progress happens not at the neuron level but at the level of ideas.
+
+This is why this system is not a model and not a scaling effort. The bottleneck is not substrate quality — it is the structure of how knowledge grows. Early signs of this principle are visible in purpose-built agent systems (research agents, scientific automation pipelines) that use LLMs as an execution substrate while organizing reasoning at a higher level. This is the generalization of that pattern: a domain-agnostic architecture for how explanations grow through conjecture and criticism.
+
 ---
 
 ## Conceptual Hierarchy
@@ -32,6 +40,8 @@ Generated   — outputs produced each run, scored and ephemeral
 Conjectures (mind and candidates) are shared across all problem sets.
 
 **Problem Sets** are scoped collections of problems (cap: 10). Problems only exist within sets — there is no global problem pool. Problem sets are not in the promotion hierarchy but are scored and pruned by the system each run.
+
+**Evaluations** are a stable, separately-governed set of scoring criteria. They sit outside the promotion hierarchy entirely — the system never adds, removes, or reweights them. Users extend or refine evaluations manually by editing `data/state/evaluations/`. Each evaluation defines a scoring criterion and a weight; combined output score = normalized weighted sum across all active evaluations.
 
 ---
 
@@ -100,6 +110,35 @@ Full text of the problem.
 }
 ```
 
+### Evaluation content — `evaluations/{id}.md`
+
+```markdown
+# {name}
+
+## Summary
+
+One or two sentences describing what this criterion measures. Used in evaluation prompts.
+
+## Full Text
+
+Full description of the criterion — what it tests, how the LLM should score it, and why it matters.
+```
+
+### Evaluation metadata — `evaluations/{id}.json`
+
+```json
+{
+  "id": "slug",
+  "name": "Human Name",
+  "weight": 0.3,
+  "created_at": "iso8601"
+}
+```
+
+Evaluations are manually managed. The system reads them at the start of each run to build the Phase 2 scoring pipeline. The combined output score is a weighted sum: `Σ(evaluation.weight × evaluation_score)`. Weights need not sum to 1.0 — the system normalizes internally. The system never writes to `evaluations/`.
+
+---
+
 ### Problem set content — `problemsets/{id}.md`
 
 Raw text content describing the set's scope and theme. No sections — just the content as provided.
@@ -165,6 +204,9 @@ data/state/
   candidates/
     {id}.md
     {id}.json
+  evaluations/           — evaluation criteria [manually managed, never modified by system]
+    {id}.md              — criterion description
+    {id}.json            — criterion metadata (name, weight)
   problems/
     {id}.md              — problem content (summary + full text)
     {id}.json            — problem metadata (score, rank, run_count)
@@ -194,7 +236,8 @@ The seed state is checked in as `data/seed/`:
 ```
 data/seed/
   mind/                  — starting mind conjectures (.md + .json each)
-  candidates/          — starting candidate conjectures (.md + .json each)
+  candidates/            — starting candidate conjectures (.md + .json each)
+  evaluations/           — starting evaluation criteria (.md + .json each)
   problems/              — optional starting problems (empty by default)
 ```
 
@@ -218,21 +261,22 @@ Runs concurrently up to `--max-concurrent`.
 
 ### Phase 2 — Evaluate Outputs
 
-For each generated output:
+At the start of Phase 2, all active evaluation criteria are loaded from `data/state/evaluations/`. Each criterion defines a scoring method and a weight. The system applies them in sequence to each generated output. Combined score = normalized weighted sum: `Σ(evaluation.weight × score) / Σ(evaluation.weight)`.
 
-**Pass 1 — Logical Consistency**
+Evaluations are **manually managed** — users add or refine criteria by editing `data/state/evaluations/` directly. The system never writes to this directory. Seed evaluations:
+
+**Logical Consistency** (weight 0.3)
 - System prompt: mind
 - Ask: is this output internally self-consistent? Score 0.0–1.0.
-- If score < threshold (default 0.3), mark failed, skip Pass 2.
+- If score < threshold (default 0.3), mark failed, skip remaining evaluations.
 
-**Pass 2 — Hard to Vary**
+**Hard to Vary** (weight 0.7)
 - System prompt: mind
 - Ask the mind to generate 10 yes/no questions that probe whether this output has structure that resists arbitrary modification. Questions should be contextual — different outputs, different problems warrant different questions.
 - Score each question answer: yes = 1, no = 0. Total / 10 = hard-to-vary score.
-- Combined score: `0.3 * logical_consistency + 0.7 * hard_to_vary`
 
 **Candidate Problem Extraction**
-- During Pass 2, the mind also identifies unresolved tensions or unexplored implications in the output.
+- After evaluations, the mind also identifies unresolved tensions or unexplored implications in the output.
 - Each candidate problem is evaluated: is this worth adding to the problem set? Score 0.0–1.0. Threshold 0.6 for admission.
 
 ### Phase 3 — Rank and Promote
@@ -408,6 +452,17 @@ Current seed candidate conjectures:
 - **`counterfactual-reasoning`** — Systematically vary assumptions: remove one, invert one, replace one with its opposite. What breaks is load-bearing. What survives is incidental.
 - **`extreme-cases`** — Push to limits: infinity, zero, maximum, minimum, phase transitions. Boundary behavior reveals the structure hidden in the comfortable middle range.
 - **`historical-genesis`** — Ask how the problem came to exist, what it replaced, and what it inherited without examination. Origin stories make invisible constraints visible.
+
+---
+
+## Seed Evaluations
+
+The seed evaluations are defined by the files in `data/seed/evaluations/`. On first run, these are copied to `data/state/evaluations/`. They are never modified by the system — users manage them directly.
+
+Current seed evaluations:
+
+- **`logical-consistency`** (weight 0.3) — Is the output internally self-consistent? Does it contradict itself, rely on incompatible premises, or make claims that cannot simultaneously be true?
+- **`hard-to-vary`** (weight 0.7) — Does each part of the output do load-bearing work? Can the explanation be arbitrarily modified without destroying its explanatory force?
 
 ---
 

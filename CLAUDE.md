@@ -36,11 +36,11 @@ cargo run -- add-conjecture --layer candidates --title "Title" --file path/to/fi
 - `llm/` — `LlmClient` wrapping Anthropic and OpenAI APIs. `call_raw` returns plain text; `call::<T>` deserializes JSON.
 - `types.rs` — all structs. `Conjecture`/`ConjectureMeta` (mind/candidates layer, stable), `Generated`/`GeneratedMeta` (ephemeral, produced each run). Both have a `meta` (serialized to `.json`) plus content fields (stored in `.md`). LLM response types: `ConsistencyResponse`, `QuestionsResponse`, `AnswersResponse`, `CandidatesResponse`, `PromoteResponse`, `SummaryResponse`, `DeduplicateResponse`.
 
-**State layout:** `data/state/` with `mind/`, `candidates/`, `problems/`, `problemsets/`, `runs/NNN/`. Each entity is a `.md` + `.json` sidecar. Seed state in `data/seed/`.
+**State layout:** `data/state/` with `mind/`, `candidates/`, `evaluations/`, `problems/`, `problemsets/`, `runs/NNN/`. Each entity is a `.md` + `.json` sidecar. Seed state in `data/seed/`.
 
 **Problem sets:** A run operates on one problem set (selected by `--problemset <id>` or auto-selected if only one exists). Sets are capped at 10 problems. Problems are stored in `problems/` and referenced by ID in `problemsets/{id}.json`. Conjectures (mind/candidates) are shared across all sets. After each run: candidate problems are admitted to the set, the mind deduplicates within the set (removes from membership, not the problem files), and cap enforcement drops bottom-ranked (min run_count guard) until ≤ 10.
 
-**Evaluation scoring:** `0.3 × logical_consistency + 0.7 × hard_to_vary`. Conjecture composite: `score × √(problem_coverage.len())`. Problems ranked by mean generated output score (rolling average).
+**Evaluations:** Scoring criteria loaded from `data/state/evaluations/` at the start of Phase 2. Seed: Logical Consistency (weight 0.3), Hard to Vary (weight 0.7). Combined score = normalized weighted sum. The system never writes to `evaluations/` — users manage this bucket manually. Conjecture composite: `score × √(problem_coverage.len())`. Problems ranked by mean generated output score (rolling average).
 
 ## Design Documents
 
