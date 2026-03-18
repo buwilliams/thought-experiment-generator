@@ -1,5 +1,15 @@
 use crate::types::{Conjecture, HistoryEntry, Problem, Tool};
 
+/// Bottom problem by score within a problem set — candidate for removal from the set.
+/// Only considers problems with run_count >= min_run_count.
+/// Returns None if all problems are below the threshold (e.g. newly added, unscored).
+pub fn find_problem_to_remove(problems: &[Problem], min_run_count: u32) -> Option<&Problem> {
+    problems
+        .iter()
+        .filter(|p| p.meta.run_count >= min_run_count)
+        .min_by(|a, b| a.meta.score.partial_cmp(&b.meta.score).unwrap())
+}
+
 /// Composite score: raw score weighted by square root of problem coverage breadth.
 /// Using sqrt prevents tools that happen to run on many problems from dominating
 /// over tools that are genuinely excellent on fewer problems.

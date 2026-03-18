@@ -1,116 +1,120 @@
 # Thought Experiment Generator
 
-Can LLMs create new knowledge? This system tries to find out. Give it a topic — a word, a sentence, or a rich multi-page document — and it generates thought experiments by colliding that context with sentences built from random words, then scores each one for explanatory quality using the principles of fallibilism. The result is a ranked set of thought experiments that neither you nor the LLM started with.
+A self-improving epistemic engine. It collides perspective tools against problems to generate conjectures, evaluates those conjectures for explanatory quality, and feeds the survivors back into its own tool pool. Over many runs, the system steers toward whatever generates genuine insight.
 
-The core idea: take background knowledge drawn from your topic context and collide it with sentences seeded from random words. The randomness is the mechanism — it forces conceptual territory that topic knowledge alone would never reach. The richer your topic context, the more targeted the background knowledge, and the more specific the collisions. Inspired by [Brett Hall's discussion](https://www.youtube.com/watch?v=iHINpU_Di58) ([transcript](docs/reaction-to-vishal-misra-transcript.md)) on whether LLMs can create new knowledge, drawing on David Deutsch's epistemology.
+The core loop:
+
+```
+tools + problem → conjecture → criticism → tool
+```
+
+Inspired by David Deutsch's epistemology — knowledge grows through conjecture and criticism, not random search. The system narrows the search space by compounding success: only conjectures that survive criticism become tools, and only tools that generate high-scoring conjectures survive long enough to be promoted.
+
+Requires `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY` for OpenAI).
 
 ## Usage
 
 ```sh
-# Default: uses claude-sonnet-4-6, requires ANTHROPIC_API_KEY env var
-cargo run -- "your topic"
+# Create a problem set
+cargo run -- create-problemset --title "LLMs and Knowledge"
+cargo run -- create-problemset --title "LLMs and Knowledge" --description "A short description"
 
-# Resume a previous run (cached automatically by topic)
-cargo run -- "your topic"
+# Add problems to a set (cap: 10 per set)
+cargo run -- add-problem --problemset llms-and-knowledge --text "Can LLMs create new knowledge?"
 
-# Read cached results and display summary without running
-cargo run -- --read "your topic"
+# Remove a problem from a set
+cargo run -- remove-problem --problemset llms-and-knowledge --problem-id "can-llms-create-new-knowledge"
 
-# Start fresh, clearing the cache
-cargo run -- --fresh "your topic"
+# List all problem sets and their contents
+cargo run -- list-problemsets
 
-# Use a different model
-cargo run -- --model claude-haiku-4-5-20251001 "your topic"   # cheaper/faster
-cargo run -- --model claude-opus-4-6 "your topic"             # highest quality
+# Run on a problem set
+cargo run -- run --problemset llms-and-knowledge
+cargo run -- run                               # works if only one set exists
+cargo run -- run --problemset llms-and-knowledge --problem "new problem text"
 
-# OpenAI
-OPENAI_API_KEY=sk-... cargo run -- --provider openai --model gpt-4o "your topic"
+# Read last run summary without running
+cargo run -- read
 
-# Claude Max subscription (session token auth)
-cargo run -- --provider anthropic-token "your topic"
+# Reset state to seed
+cargo run -- --fresh run
 
-# Supply a file as the topic (useful for long context)
-cargo run -- --topic-file my-topic.md
-
-# Pipe a file via stdin
-cat my-topic.md | cargo run --
-
-# All options (defaults shown)
-cargo run -- "your topic" \
-  --experiments 20 \
-  --pool-size 50 \
-  --background 3 \
-  --generated 2 \
-  --words 5 \
-  --temperature 1.0 \
-  --max-concurrent 5
+# Add a tool
+cargo run -- add-tool --layer mind --title "Tool Title" --text "Full text of the tool"
+cargo run -- add-tool --layer perspectives --title "Tool Title" --file path/to/tool.md
+cat my-tool.md | cargo run -- add-tool --layer mind --title "Tool Title"
 ```
 
 ### Options
 
 | Flag | Default | Description |
 |---|---|---|
-| `--experiments` | 20 | Number of thought experiments to generate |
-| `--pool-size` | 50 | Total sentences in the background and generated pools |
-| `--background` | 3 | Background sentences to use per thought experiment |
-| `--generated` | 2 | Generated sentences to use per thought experiment |
-| `--words` | 5 | Random words per line in words.txt |
-| `--temperature` | 1.0 | LLM temperature for generation (0.0–1.0) |
 | `--max-concurrent` | 5 | Max concurrent LLM calls |
+| `--consistency-threshold` | 0.3 | Minimum logical consistency score to proceed to Pass 2 |
+| `--problem-admission-threshold` | 0.6 | Minimum score for candidate problems to enter database |
+| `--min-run-count` | 3 | Minimum runs before a tool or problem is eligible for promotion/demotion |
 | `--provider` | anthropic | `anthropic`, `anthropic-token`, or `openai` |
 | `--model` | claude-sonnet-4-6 | Model name |
-| `--topic-file` | — | Path to a file to use as the topic (supports long context) |
-| `--fresh` | false | Clear cache and start over |
-| `--read` | false | Show cached summary without running |
-
-### LLM call budget
-
-Background and generated pools are cached after first run. Each subsequent run (same topic, same pool size) skips the Create phase entirely.
-
-| Phase | Calls |
-|---|---|
-| Create: background pool | 1 |
-| Create: words → sentences | 1 |
-| Combine: one thought experiment | 1 |
-| Criticize: one thought experiment | 1 |
-| Results: top 5 summaries | 5 |
-| **Total for default run (20 experiments, first run)** | **~47** |
-| **Total for re-run (pools cached)** | **~45** |
+| `--temperature` | 0.9 | LLM temperature |
+| `--fresh` | false | Reset state to seed |
 
 ## How It Works
 
-The novelty in this system comes from the **randomness algorithm, not the LLM**. Random word combinations force conceptual collisions that topic-specific prompting can never reach. The LLM's job is to reason faithfully from those forced inputs — to follow the logic of the collision, not to invent. This is how Einstein used thought experiments: not by trying to be creative, but by taking a strange premise seriously and following it.
+**Phase 1 — Generate Conjectures.** Each (problem, perspective tool) pair produces one conjecture. The mind's tool summaries form the system prompt. The perspective tool's summary and problem summary are combined in the user prompt. Pairs run concurrently. Already-generated conjectures are skipped (resumable runs).
 
-**1. Create background sentences.** The LLM generates a pool of sentences drawn from your topic context (default: 50), biased toward anomalies, unresolved tensions, and open questions rather than textbook facts. The topic can be a short phrase or a full document — the richer the context, the more specific the background sentences. Cached in `data/cache/[hash]/background.txt`.
+**Phase 2 — Evaluate Conjectures.** Two-pass evaluation:
+- *Pass 1 — Logical Consistency:* Score 0.0–1.0. Below threshold (default 0.3), conjecture is skipped.
+- *Pass 2 — Hard to Vary:* The mind generates 10 yes/no questions probing whether each part of the conjecture is load-bearing. Score = yes_count / 10. Combined score: `0.3 × consistency + 0.7 × hard_to_vary`.
+- *Candidate Problems:* The mind also identifies unresolved tensions and open questions raised by each conjecture. Candidates scoring above threshold are admitted to the problem database.
 
-**2. Create generated sentences.** Random words are drawn from a large word list and grouped into lines (default: 5 words per line, 50 lines). The LLM turns each line into a sentence that *preserves the strangeness* of the word combination — it is explicitly told not to normalize the words into familiar claims. These strange-seeded sentences force the system into territory that topic knowledge alone would never reach. Cached in `words.txt` and `generated.txt`.
+**Phase 3 — Rank and Promote.**
+- Tool scores update as rolling averages weighted by run_count. Composite score = `score × √(problem_coverage_breadth)`.
+- Problem scores update as rolling averages of mean conjecture score across all tools applied.
+- *Problem review:* The mind receives all problem summaries and removes duplicates and subsumed problems. The bottom-ranked problem (min run_count) is discarded.
+- *Tool promotion:* Top perspective tool (by composite, min run_count) → mind. Top conjecture → summarized into a new perspective tool.
+- *Tool demotion:* Bottom mind tool → perspectives. Bottom perspective tool → discarded.
 
-**3. Combine into thought experiments.** For each experiment, the system picks a random sample of background and generated sentences (default: 3 background, 2 generated) and treats them as axioms — the LLM assumes all are simultaneously true and reasons out what that implies about the world. It does not try to be creative; it follows the logic of the collision. Each is saved as `experiments/NNN-experiment.txt`.
+**Phase 4 — Report.** Ranked conjecture table, top 5 summaries, all changes to tools and problems.
 
-**4. Criticize using fallibilism.** Each thought experiment is scored on three criteria:
-- **Reach** — does it break beyond the existing corpus of human knowledge into genuinely new territory?
-- **Novelty** — does it reframe or connect existing knowledge in a non-obvious way?
-- **Falsifiable** — can it be shown to be wrong, whether by experiment, counterexample, logical contradiction, or proof of independence from its premises?
+## Conceptual Hierarchy
 
-Reach and Novelty measure different things: Reach is the harder bar (new territory); Novelty is reframing within known knowledge. Each dimension is scored 0.0–1.0. Scores are saved as `experiments/NNN-experiment-criticize.json`.
-
-**5. Rank and summarize.** Results are sorted by total score (reach + novelty + falsifiable, max 3.0). The top 5 are summarized in 20 words each. Everything is written to `summary.md`.
-
-## Output Files
-
-All output lives in `data/cache/[topic-hash]/`:
+All layers contain the same atom: a **Tool** — a unit of perspective expressed as plain text. Tools are shared across all problem sets.
 
 ```
-background.txt                             — sentence pool about the topic
-words.txt                                  — random word groups
-generated.txt                              — sentences generated from word groups
-experiments/001-experiment.txt             — thought experiment #1
-experiments/001-experiment-criticize.json  — scores for experiment #1
-...
-summary.md                                 — ranked table + top 5 summaries
+Mind          — most trusted, slowest to change
+  ↑ promote / ↓ demote
+Perspectives  — active tool database, medium stability
+  ↑ promote / ↓ demote
+Conjectures   — generated each run, ephemeral
 ```
+
+**Problem Sets** are named collections of related problems, capped at 10. A run operates on one problem set. Problems are stored globally and referenced by ID — a problem can belong to multiple sets. Each run discovers candidate problems and adds them to the active set, then deduplication and cap enforcement keep the set focused.
+
+## State Layout
+
+```
+data/state/
+  state.json             — current run number
+  mind/                  — mind tools (.md + .json each)
+  perspectives/          — perspective tools (.md + .json each)
+  problems/              — global problem store (.md + .json each)
+  problemsets/           — problem set index (.md + .json each)
+  runs/
+    001/
+      {problem}-{tool}.md    — conjecture content + questions
+      {problem}-{tool}.json  — scores + candidate problems
+      summary.md             — ranked results + changes
+```
+
+Seed state lives in `data/seed/`. `--fresh` resets `data/state/` from seed.
+
+## Seed State
+
+**Mind tools:** Deutschian Epistemology, Ontology, Systems Thinking (Donella Meadows)
+
+**Perspective tools:** Thought Experiments, Mathematical Formalism, Counterfactual Reasoning, Extreme Cases, Historical Genesis
 
 ## Documents
 
-- [Design Document](docs/thought-experiment-generator-design-doc.md) — Architecture, prompts, data structures
-- [LLMs as Universal Explainer](docs/llms-as-universal-explainer.md) — Motivation and theoretical argument
+- [Epistemic Engine Spec](docs/epistemic-engine-spec.md) — Full design specification
+- [Journal](docs/journal.md) — Intellectual lineage and architecture decisions

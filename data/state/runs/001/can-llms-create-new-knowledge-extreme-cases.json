@@ -1,0 +1,50 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "tool_id": "extreme-cases",
+  "run": 1,
+  "logical_consistency": 0.87,
+  "hard_to_vary": 0.5,
+  "total": 0.611,
+  "candidate_problems": [
+    {
+      "text": "The conjecture claims confabulation is 'accidentally' a conjecture — but is there a principled distinction between a confabulation that functions as a conjecture and one that is merely noise? Not all falsifiable claims are epistemically equal. A randomly generated string is technically falsifiable but epistemically worthless. What structural property of an LLM output elevates it from noise to a conjecture worth criticizing? This requires a theory of conjecture quality that the Deutschian framework does not currently supply.",
+      "score": 0.92
+    },
+    {
+      "text": "The conjecture assumes the boundary between recombination and generation is sharp, but the 'novel-but-necessary entailment' case blurs this. If a model produces a valid proof step that follows necessarily from existing premises but that no human had written, is the novelty in the step or in the act of surfacing it? This maps onto the analytic/synthetic distinction and whether all mathematical truths are in some sense already 'contained' in axioms. The conjecture inherits this unresolved problem without acknowledging it.",
+      "score": 0.88
+    },
+    {
+      "text": "The conjecture offloads the knowledge-creating step to 'the human critic downstream,' but this assumes the critic is epistemically independent of the LLM output. If the critic's attention, framing, and hypothesis space are systematically shaped by the LLM's confabulations, then the criticism is not independent — it is downstream of the model's prior. The conjecture-criticism loop may be corrupted at the input stage. This is a structural feedback problem that the conjecture ignores.",
+      "score": 0.91
+    },
+    {
+      "text": "The 'infinity limit' argument — that a model trained on all possible text cannot produce the next unwritten theorem — assumes the next theorem is not entailed by existing text. But if mathematical truth is necessary, then in principle every true theorem is entailed by existing axioms and proofs. The limit argument may prove too much: it would imply that even human mathematicians cannot create new knowledge, only discover entailments. The conjecture needs to distinguish between logical entailment and epistemic accessibility.",
+      "score": 0.87
+    },
+    {
+      "text": "The conjecture identifies the bottleneck shift from generation to evaluation, then claims the leverage point is 'better tools for falsification.' But this is underspecified. What would a falsification tool look like for the kinds of conjectures LLMs produce — natural language claims, informal arguments, speculative hypotheses? The conjecture gestures at a systems-level intervention without modeling the feedback structure of the evaluation subsystem. The leverage claim is asserted, not derived.",
+      "score": 0.83
+    },
+    {
+      "text": "The phrase 'truth-shaped, not truth-tracking' is evocative but may be doing too much work. Truth-shaped implies the model has internalized the surface form of true claims without their justification structure. But some LLM outputs do track truth reliably in narrow domains — arithmetic, well-documented facts, formal syntax. Is truth-tracking a binary property or a spectrum? If it is a spectrum, the conjecture's sharp boundary may dissolve into a domain-relative gradient, which has different implications for how LLMs should be used.",
+      "score": 0.79
+    },
+    {
+      "text": "The conjecture is framed around LLMs specifically, but the structural argument — that a system compressing existing conjectural space cannot escape that space — applies to any bounded knowledge system, including individual human minds. A human trained only on existing knowledge faces the same asymptotic limit. The conjecture may be identifying a property of all finite epistemic agents, not a distinctive property of LLMs. If so, the boundary it claims to reveal is not between LLMs and humans but between any closed system and genuine novelty.",
+      "score": 0.85
+    },
+    {
+      "text": "The conjecture treats 'the human critic downstream' as an unanalyzed primitive. But criticism is itself a skill, and the quality of criticism depends on the critic's existing knowledge, tools, and incentives. If LLMs dramatically expand the surface area of claims available for criticism faster than human critical capacity scales, the conjecture-acceleration effect could be net negative — producing more low-quality conjectures than the system can evaluate, degrading the epistemic commons rather than enriching it. The conjecture does not model this failure mode.",
+      "score": 0.89
+    },
+    {
+      "text": "There is an implicit assumption that the training distribution is well-defined and that 'escaping' it is a coherent notion. But training distributions are not closed sets — they contain internal contradictions, counterfactuals, fictional worlds, and hypotheticals. A model trained on science fiction has been trained on text that explicitly reaches beyond known reality. Does exposure to structured speculation about non-actual states of affairs give the model any capacity to generate genuinely novel conjectures, or does it merely recombine speculative templates? This is empirically open.",
+      "score": 0.76
+    },
+    {
+      "text": "The conjecture implicitly relies on a static conception of knowledge — the training distribution is fixed, the boundary is fixed. But in deployment, LLMs interact with humans who provide new information in context. In-context learning allows the model to operate on premises not in its training data. Does this change the boundary analysis? A model that can reason correctly from novel premises supplied at inference time may be doing something structurally different from pure recombination, even if it cannot generate those premises itself.",
+      "score": 0.81
+    }
+  ]
+}

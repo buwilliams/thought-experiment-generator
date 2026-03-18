@@ -4,7 +4,7 @@ use anyhow::{Context, Result};
 use tracing::info;
 
 use crate::types::{
-    Conjecture, ConjectureMeta, Layer, Problem, ProblemMeta, Question,
+    Conjecture, ConjectureMeta, Layer, Problem, ProblemMeta, ProblemSet, ProblemSetMeta, Question,
     StateInfo, Tool, ToolMeta,
 };
 
@@ -214,6 +214,121 @@ pub fn save_problem(problem: &Problem) -> Result<()> {
 
 pub fn problem_exists(id: &str) -> bool {
     problems_dir().join(format!("{}.json", id)).exists()
+}
+
+pub fn delete_problem(id: &str) -> Result<()> {
+    let dir = problems_dir();
+    let md = dir.join(format!("{}.md", id));
+    let json = dir.join(format!("{}.json", id));
+    if md.exists() { std::fs::remove_file(md)?; }
+    if json.exists() { std::fs::remove_file(json)?; }
+    Ok(())
+}
+
+// --- Problem Sets ---
+
+fn problemsets_dir() -> PathBuf {
+    state_dir().join("problemsets")
+}
+
+pub fn load_problemsets() -> Result<Vec<ProblemSet>> {
+    let dir = problemsets_dir();
+    if !dir.exists() {
+        return Ok(vec![]);
+    }
+    let mut sets = vec![];
+    for entry in std::fs::read_dir(&dir)? {
+        let entry = entry?;
+        let path = entry.path();
+        if path.extension().and_then(|e| e.to_str()) == Some("json") {
+            match load_problemset_from_json(&path) {
+                Ok(ps) => sets.push(ps),
+                Err(e) => tracing::warn!("Skipping problemset {}: {e}", path.display()),
+            }
+        }
+    }
+    sets.sort_by(|a, b| a.meta.id.cmp(&b.meta.id));
+    Ok(sets)
+}
+
+pub fn load_problemset(id: &str) -> Result<ProblemSet> {
+    let path = problemsets_dir().join(format!("{}.json", id));
+    if !path.exists() {
+        anyhow::bail!("Problem set '{}' not found.", id);
+    }
+    load_problemset_from_json(&path)
+}
+
+fn load_problemset_from_json(json_path: &Path) -> Result<ProblemSet> {
+    let json_text = std::fs::read_to_string(json_path)?;
+    let meta: ProblemSetMeta = serde_json::from_str(&json_text)
+        .with_context(|| format!("Invalid JSON in {}", json_path.display()))?;
+    let md_path = json_path.with_extension("md");
+    let md_text = std::fs::read_to_string(&md_path)
+        .with_context(|| format!("Missing .md for {}", json_path.display()))?;
+    let title = md_text
+        .lines()
+        .find(|l| l.starts_with("# "))
+        .map(|l| l[2..].trim().to_string())
+        .unwrap_or_default();
+    let summary = extract_section(&md_text, "Summary").unwrap_or_default();
+    Ok(ProblemSet { meta, title, summary })
+}
+
+pub fn save_problemset(ps: &ProblemSet) -> Result<()> {
+    let dir = problemsets_dir();
+    std::fs::create_dir_all(&dir)?;
+    std::fs::write(
+        dir.join(format!("{}.md", ps.meta.id)),
+        format!("# {}\n\n## Summary\n\n{}\n", ps.title, ps.summary),
+    )?;
+    std::fs::write(
+        dir.join(format!("{}.json", ps.meta.id)),
+        serde_json::to_string_pretty(&ps.meta)?,
+    )?;
+    Ok(())
+}
+
+pub fn problemset_exists(id: &str) -> bool {
+    problemsets_dir().join(format!("{}.json", id)).exists()
+}
+
+pub fn resolve_problemset(id: Option<&str>) -> Result<ProblemSet> {
+    match id {
+        Some(s) => load_problemset(s),
+        None => {
+            let sets = load_problemsets()?;
+            match sets.len() {
+                0 => anyhow::bail!(
+                    "No problem sets found. Create one with:\n  cargo run -- create-problemset --title \"...\""
+                ),
+                1 => Ok(sets.into_iter().next().unwrap()),
+                _ => {
+                    let ids: Vec<&str> = sets.iter().map(|s| s.meta.id.as_str()).collect();
+                    anyhow::bail!(
+                        "Multiple problem sets exist. Specify one with --problemset <id>. Available: {}",
+                        ids.join(", ")
+                    )
+                }
+            }
+        }
+    }
+}
+
+pub fn load_problems_for_set(ps: &ProblemSet) -> Result<Vec<Problem>> {
+    let mut problems = vec![];
+    for id in &ps.meta.problem_ids {
+        let path = problems_dir().join(format!("{}.json", id));
+        if !path.exists() {
+            tracing::warn!("Problem '{}' in set '{}' not found — skipping", id, ps.meta.id);
+            continue;
+        }
+        match load_problem_from_json(&path) {
+            Ok(p) => problems.push(p),
+            Err(e) => tracing::warn!("Skipping problem {}: {e}", id),
+        }
+    }
+    Ok(problems)
 }
 
 // --- Conjectures ---

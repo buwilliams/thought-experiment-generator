@@ -107,6 +107,25 @@ pub fn summarize_for_tool(mind_system: &str, conjecture: &str, score: f64) -> Pr
     }
 }
 
+pub fn deduplicate_problems(mind_system: &str, problems: &[(String, String)]) -> Prompt {
+    let formatted = problems
+        .iter()
+        .map(|(id, summary)| format!("- {id}: {summary}"))
+        .collect::<Vec<_>>()
+        .join("\n");
+    Prompt {
+        system: mind_system.to_string(),
+        user: format!(
+            "Review the following problems and identify any that are exact duplicates of or fully \
+            subsumed by another problem in the list. A problem is subsumed if its core question \
+            is already captured by a broader problem in the list. When in doubt, keep the problem. \
+            Return only the IDs to remove.\n\n\
+            Return JSON: {{\"remove\": [\"id1\", \"id2\"]}}\n\n\
+            Problems:\n{formatted}"
+        ),
+    }
+}
+
 pub fn summarize_tool(mind_system: &str, title: &str, full_text: &str) -> Prompt {
     Prompt {
         system: mind_system.to_string(),

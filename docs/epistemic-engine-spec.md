@@ -39,6 +39,8 @@ The "database" is the filesystem. All state is stored as markdown files in subdi
 
 Each entity has two files: a `.md` for human-readable content and a `.json` sidecar for machine-readable metadata. Prompts read from JSON (summaries, scores). Humans read `.md`.
 
+**Tools are shared across all problem sets.** The mind and perspective layers are global. Problem sets are scoped views into the shared problem store.
+
 ### Tool content — `{layer}/{id}.md`
 
 ```markdown
@@ -96,6 +98,29 @@ Full text of the problem.
 }
 ```
 
+### Problem set content — `problemsets/{id}.md`
+
+```markdown
+# {title}
+
+## Summary
+
+Short description of the set's theme.
+```
+
+### Problem set metadata — `problemsets/{id}.json`
+
+```json
+{
+  "id": "slug",
+  "problem_ids": ["slug-1", "slug-2"],
+  "run_count": 0,
+  "created_at": "iso8601"
+}
+```
+
+A problem set is capped at **10 problems**. Problems are stored globally in `problems/` and referenced by ID in the set. A problem can belong to multiple sets. Tools are shared across all sets.
+
 ### Conjecture content — `runs/NNN/{problem_id}-{tool_id}.md`
 
 ```markdown
@@ -144,9 +169,12 @@ data/state/
   perspectives/
     {id}.md
     {id}.json
-  problems/
+  problems/              — global problem store (shared across all sets)
     {id}.md              — problem content (summary + full text)
     {id}.json            — problem metadata (score, rank, run_count)
+  problemsets/           — problem set index
+    {id}.md              — set title + description
+    {id}.json            — set metadata (problem_ids list, run_count)
   runs/
     NNN/
       {problem}-{tool}.md    — conjecture content
@@ -219,6 +247,12 @@ For each conjecture:
 
 **Problem ranking:** for each problem, compute mean conjecture score across all tools this run. Update `score` similarly.
 
+**Admit candidate problems:** candidate problems extracted during Phase 2 are evaluated for admission to the current problem set (admission threshold 0.6). Admitted problems are saved to the global `problems/` store and their IDs are added to the set's `problem_ids` list.
+
+**Problem review (one LLM call per run, scoped to the current set):**
+- The mind receives summaries of all problems in the set (id + summary) and identifies any that are exact duplicates of or fully subsumed by another problem in the set. Identified problems are removed from the set's `problem_ids` (they remain in the global store — they may belong to other sets).
+- Cap enforcement: if the set exceeds 10 problems after deduplication, the bottom-ranked problem (minimum `run_count` of 3) is removed from the set. This repeats until the set is at or below 10. If all remaining problems are below min_run_count (newly added, unscored), the cap overage is accepted until the next run.
+
 **Promotion (one per run, skipped if no eligible candidates):**
 - Top-ranked perspective tool (by composite of score × problem_coverage breadth, with minimum `run_count` of 3) → promoted to mind. Breadth is measured as the number of distinct problems the tool has been applied to. A tool with high score on one problem does not qualify over a tool with moderate score across many.
 - Top-ranked conjecture (by score) → summarized into a new tool via `summarize_for_tool` prompt → added to perspectives
@@ -237,7 +271,7 @@ Write `data/state/runs/NNN/summary.md`:
 - Promoted tool (from perspectives → mind)
 - Promoted conjecture (from conjectures → perspectives)
 - Demoted tools
-- New problems added
+- Problems removed (deduplicated + bottom-ranked discard)
 
 ---
 
@@ -336,6 +370,23 @@ Conjecture: [conjecture text]
 Score: [score]
 ```
 
+### deduplicate_problems(problems)
+```
+System: [mind tools]
+
+Review the following problems and identify any that are exact duplicates of or
+fully subsumed by another problem in the list. A problem is subsumed if its
+core question is already captured by a broader problem in the list.
+When in doubt, keep the problem. Return only the IDs to remove.
+
+Return JSON: { "remove": ["id1", "id2"] }
+
+Problems:
+- id1: summary
+- id2: summary
+...
+```
+
 ---
 
 ## Seed Mind
@@ -367,11 +418,25 @@ Current seed perspective tools:
 ## CLI
 
 ```sh
-# Run one full cycle across all problems
-cargo run -- run
+# Create a problem set
+cargo run -- create-problemset --title "LLMs and Knowledge"
+cargo run -- create-problemset --title "LLMs and Knowledge" --description "Exploring whether LLMs generate genuine knowledge"
 
-# Run with a new user-supplied problem
-cargo run -- run --problem "your problem text"
+# Add problems to a set
+cargo run -- add-problem --problemset llms-and-knowledge --text "Can LLMs create new knowledge?"
+
+# Remove a problem from a set
+cargo run -- remove-problem --problemset llms-and-knowledge --problem-id "can-llms-create-new-knowledge"
+
+# List all problem sets
+cargo run -- list-problemsets
+
+# Run on a problem set
+cargo run -- run --problemset llms-and-knowledge
+cargo run -- run                              # works if only one set exists
+
+# Run with a new problem added before running
+cargo run -- run --problemset llms-and-knowledge --problem "your problem text"
 
 # Read last run summary without running
 cargo run -- read
@@ -379,19 +444,13 @@ cargo run -- read
 # Reset state to seed
 cargo run -- --fresh run
 
-# Control concurrency and sampling
-cargo run -- run --max-concurrent 5 --problems-per-run 10 --tools-per-run 5
-
 # Add a new tool by inline text
 cargo run -- add-tool --layer mind --title "Tool Title" --text "Full text of the tool"
 cargo run -- add-tool --layer perspectives --title "Tool Title" --text "Full text of the tool"
 
-# Add a new tool from a file
+# Add a new tool from a file or stdin
 cargo run -- add-tool --layer mind --title "Tool Title" --file path/to/tool.md
-
-# Add a new tool from stdin (piped content)
-cat my-tool.md | cargo run -- add-tool --layer mind --title "Tool Title"
-echo "Tool text here" | cargo run -- add-tool --layer perspectives --title "Tool Title"
+cat my-tool.md | cargo run -- add-tool --layer perspectives --title "Tool Title"
 ```
 
 The `add-tool` command:
@@ -406,11 +465,9 @@ The `add-tool` command:
 | Flag | Default | Description |
 |---|---|---|
 | `--max-concurrent` | 5 | Max concurrent LLM calls |
-| `--problems-per-run` | all | Sample N problems per run (for large databases) |
-| `--tools-per-run` | all | Sample N perspective tools per run |
 | `--consistency-threshold` | 0.3 | Minimum logical consistency score to proceed to Pass 2 |
-| `--problem-admission-threshold` | 0.6 | Minimum score for candidate problems to enter database |
-| `--min-run-count` | 3 | Minimum runs before a tool is eligible for promotion/demotion |
+| `--problem-admission-threshold` | 0.6 | Minimum score for candidate problems to enter the set |
+| `--min-run-count` | 3 | Minimum runs before a tool or problem is eligible for promotion/demotion |
 | `--provider` | anthropic | `anthropic`, `anthropic-token`, or `openai` |
 | `--model` | claude-sonnet-4-6 | Model name |
 | `--fresh` | false | Reset state to seed |
@@ -436,11 +493,12 @@ The `add-tool` command:
 | Generate questions | 1 | N×M (pass 1 survivors) | ~N×M |
 | Answer questions | 1 | N×M (pass 1 survivors) | ~N×M |
 | Candidate problem extraction | 1 | N×M | N×M |
+| Problem deduplication | 1 | 1 per run | 1 |
 | Summarize for tool (promotion) | 1 | 1 per run | 1 |
 | Top 5 summaries | 5 | 1 | 5 |
-| **Default (5 problems × 10 tools)** | | | **~256** |
+| **Default (5 problems × 10 tools)** | | | **~257** |
 
-Pools are not cached between runs — conjectures are regenerated each run because the mind and perspective states may have changed.
+Conjectures are not cached between runs — they are regenerated each run because the mind and perspective states may have changed.
 
 ---
 

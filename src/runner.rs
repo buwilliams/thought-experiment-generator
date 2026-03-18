@@ -10,23 +10,34 @@ use crate::promoter;
 use crate::prompts;
 use crate::state;
 use crate::types::{
-    Conjecture, Layer, Problem, ProblemMeta, ProblemSource, Tool, ToolMeta, ToolSummaryResponse,
+    Conjecture, DeduplicateResponse, Layer, Problem, ProblemMeta, ProblemSet, ProblemSource,
+    PROBLEMSET_MAX_SIZE, Tool, ToolMeta, ToolSummaryResponse,
 };
 
-pub async fn run(client: Arc<LlmClient>, config: &Config, new_problem: Option<&str>) -> Result<()> {
+pub async fn run(
+    client: Arc<LlmClient>,
+    config: &Config,
+    problemset_id: Option<&str>,
+    new_problem: Option<&str>,
+) -> Result<()> {
     state::ensure_initialized()?;
 
+    let mut problemset = state::resolve_problemset(problemset_id)?;
+
+    // Add user-supplied problem before loading the set
     if let Some(text) = new_problem {
-        add_user_problem(text)?;
+        add_user_problem_to_set(text, &mut problemset)?;
     }
 
     let mind = state::load_tools(&Layer::Mind)?;
     let perspectives = state::load_tools(&Layer::Perspectives)?;
-    let problems = state::load_problems()?;
+    let problems = state::load_problems_for_set(&problemset)?;
 
     if problems.is_empty() {
         anyhow::bail!(
-            "No problems found. Add one with: cargo run -- run --problem \"your problem\""
+            "Problem set '{}' has no problems. Add one with:\n  cargo run -- add-problem --problemset {} --text \"...\"",
+            problemset.meta.id,
+            problemset.meta.id,
         );
     }
     if perspectives.is_empty() {
@@ -35,10 +46,11 @@ pub async fn run(client: Arc<LlmClient>, config: &Config, new_problem: Option<&s
 
     let run = state::increment_run()?;
     println!("\n=== Epistemic Engine — Run {:03} ===", run);
-    println!("Mind tools: {}", mind.len());
+    println!("Problem set:       {} — {}", problemset.meta.id, problemset.title);
+    println!("Mind tools:        {}", mind.len());
     println!("Perspective tools: {}", perspectives.len());
-    println!("Problems: {}", problems.len());
-    println!("Pairs to process: {}\n", problems.len() * perspectives.len());
+    println!("Problems:          {}", problems.len());
+    println!("Pairs to process:  {}\n", problems.len() * perspectives.len());
 
     let mind_system = prompts::format_mind_system(&mind);
 
@@ -82,7 +94,6 @@ pub async fn run(client: Arc<LlmClient>, config: &Config, new_problem: Option<&s
         }
     }
 
-    // Load all conjectures for this run (includes resumed ones)
     let conjectures = state::load_run_conjectures(run)?;
     info!("Phase 1+2 complete. {} conjectures.", conjectures.len());
 
@@ -100,14 +111,52 @@ pub async fn run(client: Arc<LlmClient>, config: &Config, new_problem: Option<&s
         state::save_problem(problem)?;
     }
 
-    admit_candidate_problems(&conjectures, &problems_mut)?;
+    // Admit candidate problems into the problem set
+    admit_candidates_to_set(&conjectures, &mut problemset, config.problem_admission_threshold)?;
+
+    // Load updated set problems (existing scored + newly admitted)
+    let all_set_problems = state::load_problems_for_set(&problemset)?;
+
+    // Problem review: deduplicate within the set (remove from membership, not global DB)
+    let removed_ids = run_problem_deduplication(&client, &mind_system, &all_set_problems).await;
+    problemset.meta.problem_ids.retain(|id| !removed_ids.contains(id));
+    info!("Deduplication removed {} problems from set", removed_ids.len());
+
+    // Problem review: enforce cap — drop bottom-ranked until ≤ PROBLEMSET_MAX_SIZE
+    let mut set_problems_remaining: Vec<Problem> = all_set_problems
+        .into_iter()
+        .filter(|p| !removed_ids.contains(&p.meta.id))
+        .collect();
+    let mut cap_removed: usize = 0;
+    while problemset.meta.problem_ids.len() > PROBLEMSET_MAX_SIZE {
+        match promoter::find_problem_to_remove(&set_problems_remaining, config.min_run_count) {
+            Some(p) => {
+                let id = p.meta.id.clone();
+                info!("Cap enforcement: removing '{}' from set", id);
+                problemset.meta.problem_ids.retain(|x| x != &id);
+                set_problems_remaining.retain(|p| p.meta.id != id);
+                cap_removed += 1;
+            }
+            None => {
+                tracing::warn!(
+                    "Problem set exceeds cap ({}) but no eligible problems to remove (all below min_run_count={}). Accepting overage.",
+                    PROBLEMSET_MAX_SIZE, config.min_run_count
+                );
+                break;
+            }
+        }
+    }
+
+    problemset.meta.run_count += 1;
+    state::save_problemset(&problemset)?;
+
+    let problems_removed = removed_ids.len() + cap_removed;
 
     // Promote top conjecture → perspectives
-    let promoted_conjecture_summary = promote_top_conjecture(
-        &client, config, &mind_system, &conjectures, run,
-    ).await;
+    let promoted_conjecture_summary =
+        promote_top_conjecture(&client, config, &mind_system, &conjectures, run).await;
 
-    // Promote top perspective tool → mind (track its id to exclude from discard)
+    // Promote top perspective tool → mind
     let (promoted_tool_name, promoted_tool_id) =
         promote_top_tool(&perspectives_mut, config.min_run_count)?;
 
@@ -125,6 +174,7 @@ pub async fn run(client: Arc<LlmClient>, config: &Config, new_problem: Option<&s
         promoted_tool_name.as_deref(),
         demoted_mind_name.as_deref(),
         discarded_name.as_deref(),
+        problems_removed,
     ).await?;
 
     println!("\nLLM calls used: {}", client.calls_made());
@@ -142,61 +192,117 @@ pub async fn read(_: &Config) -> Result<()> {
 
 // --- Helpers ---
 
-fn add_user_problem(text: &str) -> Result<()> {
+fn add_user_problem_to_set(text: &str, problemset: &mut ProblemSet) -> Result<()> {
+    if problemset.meta.problem_ids.len() >= PROBLEMSET_MAX_SIZE {
+        anyhow::bail!(
+            "Problem set '{}' is at capacity ({} problems). Remove a problem first with:\n  cargo run -- remove-problem --problemset {} --problem-id <id>",
+            problemset.meta.id,
+            PROBLEMSET_MAX_SIZE,
+            problemset.meta.id,
+        );
+    }
     let id = state::slugify(&text.chars().take(60).collect::<String>());
-    if state::problem_exists(&id) {
-        info!("Problem already exists: {}", id);
+    if problemset.meta.problem_ids.contains(&id) {
+        info!("Problem already in set: {}", id);
         return Ok(());
     }
-    let count = state::load_problems()?.len();
-    let problem = Problem {
-        meta: ProblemMeta {
-            id: id.clone(),
-            source: ProblemSource::User,
-            score: 0.0,
-            rank: count as u32 + 1,
-            run_count: 0,
-            created_at: state::now_iso8601(),
-        },
-        title: text.chars().take(80).collect(),
-        summary: text.chars().take(200).collect(),
-        full_text: text.to_string(),
-    };
-    state::save_problem(&problem)?;
-    info!("Added problem: {}", id);
+    if !state::problem_exists(&id) {
+        let count = state::load_problems()?.len();
+        let problem = Problem {
+            meta: ProblemMeta {
+                id: id.clone(),
+                source: ProblemSource::User,
+                score: 0.0,
+                rank: count as u32 + 1,
+                run_count: 0,
+                created_at: state::now_iso8601(),
+            },
+            title: text.chars().take(80).collect(),
+            summary: text.chars().take(200).collect(),
+            full_text: text.to_string(),
+        };
+        state::save_problem(&problem)?;
+        info!("Created user problem: {}", id);
+    }
+    problemset.meta.problem_ids.push(id.clone());
+    state::save_problemset(problemset)?;
+    info!("Added problem to set: {}", id);
     Ok(())
 }
 
-fn admit_candidate_problems(conjectures: &[Conjecture], existing: &[Problem]) -> Result<()> {
-    let existing_ids: std::collections::HashSet<&str> =
-        existing.iter().map(|p| p.meta.id.as_str()).collect();
-    let mut rank_offset = existing.len() as u32;
+fn admit_candidates_to_set(
+    conjectures: &[Conjecture],
+    problemset: &mut ProblemSet,
+    admission_threshold: f64,
+) -> Result<()> {
+    let global_count = state::load_problems()?.len();
+    let mut rank_base = global_count as u32;
+    let mut in_set: std::collections::HashSet<String> =
+        problemset.meta.problem_ids.iter().cloned().collect();
 
     for conjecture in conjectures {
         for candidate in &conjecture.meta.candidate_problems {
-            let id = state::slugify(&candidate.text.chars().take(60).collect::<String>());
-            if existing_ids.contains(id.as_str()) || state::problem_exists(&id) {
+            if candidate.score < admission_threshold {
                 continue;
             }
-            rank_offset += 1;
-            let problem = Problem {
-                meta: ProblemMeta {
-                    id: id.clone(),
-                    source: ProblemSource::System,
-                    score: 0.0,
-                    rank: rank_offset,
-                    run_count: 0,
-                    created_at: state::now_iso8601(),
-                },
-                title: candidate.text.chars().take(80).collect(),
-                summary: candidate.text.chars().take(200).collect(),
-                full_text: candidate.text.clone(),
-            };
-            state::save_problem(&problem)?;
-            info!("Admitted candidate problem: {}", id);
+            let id = state::slugify(&candidate.text.chars().take(60).collect::<String>());
+            if in_set.contains(&id) {
+                continue;
+            }
+            if !state::problem_exists(&id) {
+                rank_base += 1;
+                let problem = Problem {
+                    meta: ProblemMeta {
+                        id: id.clone(),
+                        source: ProblemSource::System,
+                        score: 0.0,
+                        rank: rank_base,
+                        run_count: 0,
+                        created_at: state::now_iso8601(),
+                    },
+                    title: candidate.text.chars().take(80).collect(),
+                    summary: candidate.text.chars().take(200).collect(),
+                    full_text: candidate.text.clone(),
+                };
+                state::save_problem(&problem)?;
+                info!("Created candidate problem: {}", id);
+            }
+            problemset.meta.problem_ids.push(id.clone());
+            in_set.insert(id);
         }
     }
     Ok(())
+}
+
+async fn run_problem_deduplication(
+    client: &LlmClient,
+    mind_system: &str,
+    problems: &[Problem],
+) -> Vec<String> {
+    if problems.len() < 2 {
+        return vec![];
+    }
+    let summaries: Vec<(String, String)> = problems
+        .iter()
+        .map(|p| (p.meta.id.clone(), p.summary.clone()))
+        .collect();
+    let p = prompts::deduplicate_problems(mind_system, &summaries);
+    match client
+        .call::<DeduplicateResponse>(Some(&p.system), &p.user, 0.3)
+        .await
+    {
+        Ok(resp) => {
+            if resp.remove.len() >= problems.len() {
+                tracing::warn!("Deduplication would remove all problems — skipping");
+                return vec![];
+            }
+            resp.remove
+        }
+        Err(e) => {
+            tracing::warn!("Problem deduplication failed: {e}");
+            vec![]
+        }
+    }
 }
 
 async fn promote_top_conjecture(
@@ -310,6 +416,7 @@ async fn generate_report(
     promoted_tool: Option<&str>,
     demoted_mind: Option<&str>,
     discarded: Option<&str>,
+    problems_removed: usize,
 ) -> Result<()> {
     let mut sorted = conjectures.to_vec();
     sorted.sort_by(|a, b| b.meta.total.partial_cmp(&a.meta.total).unwrap());
@@ -348,8 +455,11 @@ async fn generate_report(
     }
 
     out.push_str("## Changes\n\n");
-    let any_change =
-        promoted_conjecture.is_some() || promoted_tool.is_some() || demoted_mind.is_some() || discarded.is_some();
+    let any_change = promoted_conjecture.is_some()
+        || promoted_tool.is_some()
+        || demoted_mind.is_some()
+        || discarded.is_some()
+        || problems_removed > 0;
     if let Some(s) = promoted_conjecture {
         out.push_str(&format!("- Promoted conjecture → perspectives: \"{s}\"\n"));
     }
@@ -361,6 +471,11 @@ async fn generate_report(
     }
     if let Some(s) = discarded {
         out.push_str(&format!("- Discarded perspective tool: \"{s}\"\n"));
+    }
+    if problems_removed > 0 {
+        out.push_str(&format!(
+            "- Removed {problems_removed} problem(s) from set (deduplication/cap enforcement).\n"
+        ));
     }
     if !any_change {
         out.push_str("- No promotions or demotions this run (insufficient run counts).\n");

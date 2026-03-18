@@ -117,6 +117,25 @@ pub struct StateInfo {
     pub last_run_at: String,
 }
 
+// --- Problem Sets ---
+
+pub const PROBLEMSET_MAX_SIZE: usize = 10;
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ProblemSetMeta {
+    pub id: String,
+    pub problem_ids: Vec<String>,
+    pub run_count: u32,
+    pub created_at: String,
+}
+
+#[derive(Debug, Clone)]
+pub struct ProblemSet {
+    pub meta: ProblemSetMeta,
+    pub title: String,
+    pub summary: String,
+}
+
 // --- LLM response types ---
 
 #[derive(Debug, Deserialize)]
@@ -155,4 +174,9 @@ pub struct ToolSummaryResponse {
 #[derive(Debug, Deserialize)]
 pub struct SummarizeToolResponse {
     pub summary: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct DeduplicateResponse {
+    pub remove: Vec<String>,
 }
