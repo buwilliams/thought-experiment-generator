@@ -119,7 +119,11 @@ pub enum Command {
     ListProblemsets,
 
     /// Show a full system review: mind, top candidates, score trajectory, problem sets, last changes
-    Review,
+    Review {
+        /// Also run an LLM self-assessment of mind quality, output quality, and trajectory
+        #[arg(long, default_value_t = false)]
+        assess: bool,
+    },
 
     /// Check all conjectures for novelty — are they restatements of known theories?
     NoveltyCheck,
@@ -207,8 +211,12 @@ async fn main() -> Result<()> {
             teg::runner::read(&config).await?;
         }
 
-        Command::Review => {
+        Command::Review { assess } => {
             teg::review::report()?;
+            if assess {
+                let templates = teg::prompts::PromptTemplates::load()?;
+                teg::review::assess(client, &config, &templates).await?;
+            }
         }
 
         Command::NoveltyCheck => {

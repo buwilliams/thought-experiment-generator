@@ -1,10 +1,16 @@
+use std::sync::Arc;
+
 use anyhow::Result;
 
+use crate::config::Config;
+use crate::llm::LlmClient;
 use crate::promoter;
+use crate::prompts::PromptTemplates;
 use crate::state;
 use crate::types::Layer;
 
 const TOP_CANDIDATES: usize = 5;
+const TOP_OUTPUTS_FOR_ASSESS: usize = 3;
 
 pub fn report() -> Result<()> {
     state::ensure_initialized()?;
@@ -129,6 +135,75 @@ pub fn report() -> Result<()> {
             println!();
         }
     }
+
+    Ok(())
+}
+
+pub async fn assess(
+    client: Arc<LlmClient>,
+    config: &Config,
+    templates: &PromptTemplates,
+) -> Result<()> {
+    state::ensure_initialized()?;
+
+    let info = state::load_state_info()?;
+    let mind = state::load_conjectures(&Layer::Mind)?;
+
+    if mind.is_empty() {
+        anyhow::bail!("No mind conjectures yet. Run first.");
+    }
+
+    let mind_system = templates.format_mind_system(&mind);
+
+    // Full mind text for assessment
+    let mind_full = mind
+        .iter()
+        .map(|c| format!("### {}\n\n{}", c.title, c.full_text))
+        .collect::<Vec<_>>()
+        .join("\n\n---\n\n");
+
+    // Top outputs from most recent run
+    let top_outputs = if info.run > 0 {
+        let mut outputs = state::load_run_generated(info.run)?;
+        outputs.sort_by(|a, b| b.meta.total.partial_cmp(&a.meta.total).unwrap());
+        outputs
+            .into_iter()
+            .take(TOP_OUTPUTS_FOR_ASSESS)
+            .map(|o| {
+                format!(
+                    "### {} × {} (total: {:.2})\n\n{}",
+                    o.meta.problem_id,
+                    o.meta.conjecture_id,
+                    o.meta.total,
+                    o.text.trim(),
+                )
+            })
+            .collect::<Vec<_>>()
+            .join("\n\n---\n\n")
+    } else {
+        "(no runs yet)".to_string()
+    };
+
+    // Score trajectory string
+    let trajectory = if info.run > 0 {
+        let mut lines = vec![];
+        for run in 1..=info.run {
+            let outputs = state::load_run_generated(run)?;
+            if outputs.is_empty() {
+                continue;
+            }
+            let avg = outputs.iter().map(|o| o.meta.total).sum::<f64>() / outputs.len() as f64;
+            lines.push(format!("Run {:03}: {:.3} ({} outputs)", run, avg, outputs.len()));
+        }
+        lines.join("\n")
+    } else {
+        "(no runs yet)".to_string()
+    };
+
+    println!("## Self-Assessment\n");
+    let p = templates.review_assess(&mind_system, &mind_full, &top_outputs, &trajectory);
+    let assessment = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
+    println!("{}", assessment);
 
     Ok(())
 }

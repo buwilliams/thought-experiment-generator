@@ -53,6 +53,7 @@ cat question.md | cargo run -- ask
 
 # Full system review: mind, top candidates, score trajectory, problem sets, last changes
 cargo run -- review
+cargo run -- review --assess   # also runs an LLM self-assessment of mind and output quality
 
 # Check whether conjectures are novel or restatements of known theories
 cargo run -- novelty-check

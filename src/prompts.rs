@@ -27,6 +27,7 @@ pub struct PromptTemplates {
     novelty_check: ParsedTemplate,
     explanatory_reach: ParsedTemplate,
     resistance_to_refutation: ParsedTemplate,
+    review_assess: ParsedTemplate,
 }
 
 struct ParsedTemplate {
@@ -55,6 +56,7 @@ impl PromptTemplates {
             novelty_check: load_and_parse(PROMPTS_DIR, "novelty_check.md")?.into_system_user()?,
             explanatory_reach: load_and_parse(PROMPTS_DIR, "explanatory_reach.md")?.into_system_user()?,
             resistance_to_refutation: load_and_parse(PROMPTS_DIR, "resistance_to_refutation.md")?.into_system_user()?,
+            review_assess: load_and_parse(PROMPTS_DIR, "review_assess.md")?.into_system_user()?,
         })
     }
 
@@ -153,6 +155,21 @@ impl PromptTemplates {
             ("mind_system", mind_system),
             ("conjecture_summary", conjecture_summary),
             ("question", question),
+        ])
+    }
+
+    pub fn review_assess(
+        &self,
+        mind_system: &str,
+        mind_full: &str,
+        top_outputs: &str,
+        trajectory: &str,
+    ) -> Prompt {
+        self.review_assess.apply(&[
+            ("mind_system", mind_system),
+            ("mind_full", mind_full),
+            ("top_outputs", top_outputs),
+            ("trajectory", trajectory),
         ])
     }
 
