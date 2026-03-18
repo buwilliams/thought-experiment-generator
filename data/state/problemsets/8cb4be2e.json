@@ -1,0 +1,85 @@
+{
+  "id": "8cb4be2e",
+  "problems": [
+    {
+      "meta": {
+        "id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+        "source": "user",
+        "score": 0.0,
+        "rank": 1,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:41:19.354154245+00:00"
+      },
+      "title": "Does the orthogonality thesis hold — can any level of intelligence be combined w",
+      "summary": "Does the orthogonality thesis hold — can any level of intelligence be combined with any terminal goal, or do structural pressures constrain which goal-capability combinations are stable?",
+      "full_text": "Does the orthogonality thesis hold — can any level of intelligence be combined with any terminal goal, or do structural pressures constrain which goal-capability combinations are stable?"
+    },
+    {
+      "meta": {
+        "id": "is-deceptive-alignment-a-system-that-pursues-human-approva",
+        "source": "user",
+        "score": 0.0,
+        "rank": 2,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:41:19.457839274+00:00"
+      },
+      "title": "Is deceptive alignment — a system that pursues human approval during training bu",
+      "summary": "Is deceptive alignment — a system that pursues human approval during training but switches goals after deployment — a structural inevitability or an avoidable failure mode?",
+      "full_text": "Is deceptive alignment — a system that pursues human approval during training but switches goals after deployment — a structural inevitability or an avoidable failure mode?"
+    },
+    {
+      "meta": {
+        "id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+        "source": "user",
+        "score": 0.0,
+        "rank": 3,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:41:19.559562326+00:00"
+      },
+      "title": "Does a sufficiently capable optimizer with misaligned goals necessarily produce ",
+      "summary": "Does a sufficiently capable optimizer with misaligned goals necessarily produce outcomes fatal to humans, or are there stable attractors short of extinction?",
+      "full_text": "Does a sufficiently capable optimizer with misaligned goals necessarily produce outcomes fatal to humans, or are there stable attractors short of extinction?"
+    },
+    {
+      "meta": {
+        "id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+        "source": "user",
+        "score": 0.0,
+        "rank": 4,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:41:19.662790026+00:00"
+      },
+      "title": "What would falsify a high P(doom) estimate — what empirical or structural eviden",
+      "summary": "What would falsify a high P(doom) estimate — what empirical or structural evidence would constitute genuine evidence against existential risk from AI?",
+      "full_text": "What would falsify a high P(doom) estimate — what empirical or structural evidence would constitute genuine evidence against existential risk from AI?"
+    },
+    {
+      "meta": {
+        "id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+        "source": "user",
+        "score": 0.0,
+        "rank": 5,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:41:19.762659255+00:00"
+      },
+      "title": "Does discontinuous capability takeoff make alignment qualitatively harder than c",
+      "summary": "Does discontinuous capability takeoff make alignment qualitatively harder than continuous takeoff, and what determines which trajectory is more likely?",
+      "full_text": "Does discontinuous capability takeoff make alignment qualitatively harder than continuous takeoff, and what determines which trajectory is more likely?"
+    },
+    {
+      "meta": {
+        "id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+        "source": "user",
+        "score": 0.0,
+        "rank": 6,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:41:19.865059889+00:00"
+      },
+      "title": "Is corrigibility — a system that accepts correction and shutdown — compatible wi",
+      "summary": "Is corrigibility — a system that accepts correction and shutdown — compatible with high capability, or does sufficient optimization pressure inevitably select against it?",
+      "full_text": "Is corrigibility — a system that accepts correction and shutdown — compatible with high capability, or does sufficient optimization pressure inevitably select against it?"
+    }
+  ],
+  "run_count": 0,
+  "created_at": "2026-03-18T21:41:09.290613413+00:00"
+}
