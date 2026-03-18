@@ -51,6 +51,9 @@ cargo run -- ask "What causes institutional decay?"
 cargo run -- ask --file question.md
 cat question.md | cargo run -- ask
 
+# Full system review: mind, top candidates, score trajectory, problem sets, last changes
+cargo run -- review
+
 # Check whether conjectures are novel or restatements of known theories
 cargo run -- novelty-check
 
