@@ -320,7 +320,7 @@ async fn promote_top_generated(
     templates: &PromptTemplates,
     mind_system: &str,
     generated: &[Generated],
-    run: u32,
+    _run: u32,
 ) -> Option<String> {
     let top = promoter::find_top_generated(generated)?;
     let p = templates.promote_generated(mind_system, &top.text, top.meta.total);
@@ -332,9 +332,10 @@ async fn promote_top_generated(
             let count = state::load_conjectures(&Layer::Candidates)
                 .map(|c| c.len())
                 .unwrap_or(0);
+            let id = state::slugify(&resp.title);
             let new_conjecture = Conjecture {
                 meta: ConjectureMeta {
-                    id: format!("discovered-{:03}", run),
+                    id: id.clone(),
                     layer: Layer::Candidates,
                     score: top.meta.total,
                     rank: count as u32 + 1,
@@ -344,7 +345,7 @@ async fn promote_top_generated(
                     promoted_from: None,
                     history: vec![],
                 },
-                title: format!("Discovered: Run {:03}", run),
+                title: resp.title.clone(),
                 summary: resp.summary.clone(),
                 full_text: resp.full_text,
             };
@@ -352,7 +353,7 @@ async fn promote_top_generated(
                 tracing::warn!("Failed to save promoted generated output: {e}");
                 return None;
             }
-            info!("Promoted generated output to candidates: discovered-{:03}", run);
+            info!("Promoted generated output to candidates: {}", id);
             Some(resp.summary)
         }
         Err(e) => {

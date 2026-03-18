@@ -1,4 +1,4 @@
-# Discovered: Run 001
+# Load-Bearing Constraint
 
 ## Summary
 

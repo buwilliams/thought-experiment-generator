@@ -169,6 +169,7 @@ pub struct CandidatesResponse {
 /// Response when promoting a generated output into a reusable candidate conjecture.
 #[derive(Debug, Deserialize)]
 pub struct PromoteResponse {
+    pub title: String,
     pub summary: String,
     pub full_text: String,
 }
