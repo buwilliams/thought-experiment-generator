@@ -1,7 +1,7 @@
 {
   "id": "extreme-cases",
   "layer": "candidates",
-  "score": 0.61,
+  "score": 0.8623333333333333,
   "rank": 4,
   "run_count": 1,
   "problem_coverage": [
@@ -14,17 +14,17 @@
   "history": [
     {
       "run": 1,
-      "score": 0.833,
+      "score": 0.8419999999999999,
       "problem_id": "what-makes-an-explanation-hard-to-vary"
     },
     {
       "run": 1,
-      "score": 0.453,
+      "score": 0.7629999999999999,
       "problem_id": "can-llms-create-new-knowledge"
     },
     {
       "run": 1,
-      "score": 0.544,
+      "score": 0.982,
       "problem_id": "does-architecture-matter-more-than-model-scale"
     }
   ]

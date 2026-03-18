@@ -2,57 +2,21 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.88,
-  "hard_to_vary": 0.5,
-  "total": 0.614,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
   "candidate_problems": [
     {
-      "text": "What are the minimal structural requirements for an external criticism apparatus capable of reliably separating genuine LLM-produced explanations from fluent confabulation? The conjecture identifies the missing feedback loop but does not specify what it must contain — whether adversarial red-teaming, formal verification, empirical testing, or some novel architecture. This is the conjecture's central open problem and the most tractable one.",
-      "score": 0.95
+      "text": "What, concretely, counts as 'participation in error-correction' for an AI system rather than for the larger human-AI system around it? The conjecture shifts the boundary from token prediction to error-correction, but leaves unresolved the individuation problem: which capacities must be internal to the model versus scaffolded by external tools, evaluators, memory, and institutions before we should say the system itself generates knowledge?",
+      "score": 0.94
     },
     {
-      "text": "Is 'accidental knowledge production' a coherent category, or does it collapse under scrutiny? The conjecture claims LLMs produce genuine knowledge accidentally — but in Deutschian epistemology, knowledge is defined by its explanatory reach and survivability under criticism, not by the intentionality of its production. If a system reliably produces explanations that survive criticism in some domain, does the absence of a selection mechanism disqualify the output, or does the external criticism apparatus retroactively constitute the missing selection pressure? This is a genuine conceptual tension.",
-      "score": 0.88
+      "text": "How can 'genuine knowledge' or 'new explanatory structure' be operationalized without collapsing back into proxy metrics like predictive accuracy, benchmark performance, or human plausibility judgments? The conjecture relies on a Popperian notion of explanation surviving criticism, but it remains open how to test for explanatory improvement, sensitivity to counterexample, and rival-comparison in a way that is rigorous and non-circular.",
+      "score": 0.97
     },
     {
-      "text": "Does the token-prediction objective systematically bias the distribution of genuine versus confabulated explanations in detectable ways? The conjecture treats the mixture as opaque, but it may not be uniform. If fluent confabulation and genuine explanation leave different structural signatures — in uncertainty patterns, in cross-domain consistency, in behavior under adversarial probing — then the internal signal may exist but be latent rather than absent. This would substantially revise the conjecture's diagnosis.",
-      "score": 0.87
-    },
-    {
-      "text": "The conjecture argues that training data encoded 'the residue of human problem-solving under selection pressure.' But selection pressure in peer review and publication is known to be severely distorted — by publication bias, replication failures, and prestige effects. If the corpus is systematically biased toward fluent-but-wrong explanations that survived social rather than epistemic filters, the inherited structure may be worse than neutral. What is the actual epistemological quality of the selection pressure LLMs absorbed?",
-      "score": 0.85
-    },
-    {
-      "text": "Can the conjecture's framework be operationalized as a falsifiable research program? Specifically: if we construct an external criticism apparatus and apply it to LLM outputs across domains, what result would confirm or disconfirm the conjecture? The claim that LLMs produce genuine knowledge 'accidentally' needs a test condition — otherwise it risks being unfalsifiable and thus outside the Popperian framework it invokes.",
-      "score": 0.83
-    },
-    {
-      "text": "The conjecture implicitly treats human cognition as having the selection mechanism LLMs lack — a conjecture-and-refutation cycle. But human reasoning is also well-documented to produce fluent confabulation (confabulation in neuropsychology, motivated reasoning, post-hoc rationalization). If humans also lack reliable internal signals separating genuine explanation from fluent imposture, the contrast the conjecture draws may be one of degree rather than kind. Does this undermine or refine the argument?",
-      "score": 0.81
-    },
-    {
-      "text": "The conjecture locates the leverage point in the external feedback loop rather than the model. But this raises a systems-thinking question about where the boundary of 'the system' is drawn. If LLM-plus-criticism-apparatus is the relevant unit, and that unit has explanatory reach and error correction, does the conjecture's concern dissolve at the system level even if it holds at the model level? This is a stocks-and-flows question about where the epistemological work is actually being done.",
-      "score": 0.79
-    },
-    {
-      "text": "Is there an asymmetry between domains in the ratio of genuine explanation to confabulation LLMs produce? The conjecture treats this as a general property, but it may vary dramatically — formal domains with tight logical constraints may yield higher genuine-to-confabulation ratios than open-ended interpretive domains. If so, the conjecture needs domain-relative qualification, and the design of external criticism apparatuses should be domain-specific.",
-      "score": 0.76
-    },
-    {
-      "text": "The conjecture inherits a sharp distinction between 'explanatory reach' and 'pattern matching to the surface form of explanations.' But this distinction may be harder to operationalize than it appears. What empirical test distinguishes a system with genuine explanatory reach from one that has learned to simulate the behavioral signatures of explanatory reach across a very wide distribution? If no test exists, the distinction may be doing more rhetorical than analytical work.",
-      "score": 0.74
-    },
-    {
-      "text": "What does it mean for knowledge to be produced 'without a selection mechanism to know when it has been'? The conjecture attributes this epistemic blindness to the model, but the model has no epistemic states — it has no 'knowing' at all. The framing may be smuggling in a homunculus. Restated without the cognitive language: the output distribution has no reliable correlation between confidence signals and explanatory quality. Is this a more precise and tractable formulation, and does it change the diagnosis?",
-      "score": 0.72
-    },
-    {
-      "text": "The conjecture frames justificationism as a discredited epistemology that the question 'inherits.' But there is a live debate about whether Popperian fallibilism fully replaces justificationism or whether some notion of epistemic support survives in a non-foundationalist form. If a moderate position is correct — that origins and generation processes are not irrelevant, only not sufficient — then the conjecture's dismissal of the 'mere rearrangement' worry may be too quick.",
-      "score": 0.65
-    },
-    {
-      "text": "Could the conjecture's framework be extended to evaluate other knowledge-producing systems — scientific institutions, markets, legal systems — that also mix genuine explanation with fluent confabulation and rely on external criticism apparatuses? If so, LLMs may be less a novel epistemological problem than a particularly visible instance of a general structure, and existing theory about institutional epistemology may transfer.",
-      "score": 0.62
+      "text": "Is error-correction sufficient for knowledge growth, or can a system participate in criticism and revision while still only optimizing socially reinforced correlations rather than truth-tracking explanations? The conjecture treats uncriticized output as the key opposite of knowledge, but an unresolved tension is whether feedback loops themselves can be epistemically corrupt, causing systems to become better at passing criticism rituals without producing deeper understanding.",
+      "score": 0.92
     }
   ]
 }

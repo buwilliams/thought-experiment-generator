@@ -2,49 +2,21 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "counterfactual-reasoning",
   "run": 1,
-  "logical_consistency": 0.82,
-  "hard_to_vary": 0.4,
-  "total": 0.5259999999999999,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
   "candidate_problems": [
     {
-      "text": "The conjecture claims benchmarks are 'structurally compromised' because they reward recall over conjecture-formation — but this is asserted rather than demonstrated. What would a benchmark that actually measures conjecture-formation capacity look like, and is it constructible? If it is not constructible in principle, the conjecture may be unfalsifiable in the same way it accuses substrate scaling of being.",
-      "score": 0.93
+      "text": "What exactly is the competence threshold at which substrate stops being the dominant bottleneck and structure becomes the continuing one, and how can this transition be operationalized or measured across tasks and systems?",
+      "score": 0.94
     },
     {
-      "text": "The conjecture treats 'destroying bad ideas rapidly' as the target behavior, but error-correction requires a prior criterion for what counts as an error. In a system without a fixed ground truth, who or what supplies that criterion? This is the demarcation problem applied to AI architecture — and the conjecture does not address it, yet the entire structural proposal depends on resolving it.",
-      "score": 0.91
+      "text": "Which structural components of an AI epistemic system—conjecture generation, criticism, test design, selection, memory, incentives—are actually causally load-bearing for knowledge growth, and how do their feedback loops interact so that improving one part does or does not translate into better truth-tracking?",
+      "score": 0.97
     },
     {
-      "text": "The conjecture distinguishes substrate (flow) from structure (stock), but this distinction may itself be substrate-dependent at some level — certain structural configurations may only be realizable above a compute threshold. Is there a minimum substrate below which no structural fix is sufficient? If so, the substrate-structure opposition is not clean, and the conjecture needs a more precise account of their interaction.",
-      "score": 0.85
-    },
-    {
-      "text": "The conjecture asserts that regression toward distributional mean suppresses conjecture. But Popperian conjecture-formation also requires a rich prior space of candidate hypotheses to select from — and that space may be precisely what large-scale training provides. Is there a version of the conjecture that preserves the epistemic value of the substrate's hypothesis-space generation while adding structural error-correction on top, rather than treating them as opposed?",
-      "score": 0.88
-    },
-    {
-      "text": "The conjecture implies that 'asymmetric promotion of low-probability-but-unfalsified conjectures' is a structural virtue. But this is in direct tension with calibration — a system that systematically overweights low-probability outputs will be miscalibrated in ways that produce their own epistemic failures. The conjecture needs to specify how asymmetric promotion is bounded to avoid replacing one failure mode with another.",
-      "score": 0.87
-    },
-    {
-      "text": "The conjecture claims that substrate improvements 'occasionally work despite structural failure' by accidentally approximating what principled structure would produce. This is an empirical claim about the mechanism of benchmark gains. Is it testable? If brute scale sometimes produces correct novel outputs, is there a way to distinguish 'accidental structural approximation' from 'genuine but limited epistemic progress'? The conjecture needs this distinction to avoid being unfalsifiable.",
-      "score": 0.82
-    },
-    {
-      "text": "The conjecture is framed around AI systems, but the structural critique — that feedback loops average over ideas rather than destroy bad ones — applies equally to human institutions, peer review, and scientific consensus formation. Does the conjecture imply that human epistemic institutions are also structurally compromised in the same way? If so, what is the reference class for a 'structurally sound' epistemic system, and does any actual system instantiate it?",
-      "score": 0.79
-    },
-    {
-      "text": "The conjecture treats 'resisting collapsing uncertainty into confident output' as a structural virtue. But in many deployment contexts, a system that refuses to collapse uncertainty is not useful — action requires commitment. There is an unresolved tension between epistemic virtue (maintaining uncertainty) and practical function (producing outputs that can be acted on). The conjecture does not address how a structurally sound system navigates this.",
-      "score": 0.76
-    },
-    {
-      "text": "The conjecture assumes that the structure-substrate distinction is stable across different problem domains. But some domains (e.g., formal mathematics) may be ones where pattern-matching at scale genuinely approximates conjecture-testing, while others (e.g., novel causal inference) may not. Is the conjecture domain-general, or does it require a taxonomy of problem types to specify where structure is load-bearing and where substrate is sufficient?",
-      "score": 0.8
-    },
-    {
-      "text": "The conjecture's core claim — that the leverage point is in feedback loop organization — is a systems-thinking claim about where to intervene. But it does not specify what the feedback loop should be connected to. Criticism of what, by whom, according to what standard? Without specifying the target of the feedback, 'organize feedback loops to destroy bad ideas' is a structural description without a structural specification.",
-      "score": 0.89
+      "text": "How can we distinguish genuine epistemic progress from merely improved performance under stronger scaffolds, given that structural interventions may increase benchmark success, coherence, or adversarial robustness without producing better explanations or more error-corrected knowledge?",
+      "score": 0.96
     }
   ]
 }

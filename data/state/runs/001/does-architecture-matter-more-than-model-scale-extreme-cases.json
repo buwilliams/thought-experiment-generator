@@ -2,49 +2,21 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "extreme-cases",
   "run": 1,
-  "logical_consistency": 0.88,
-  "hard_to_vary": 0.4,
-  "total": 0.544,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
   "candidate_problems": [
     {
-      "text": "What is the minimal formal specification of 'error-recognition driving conjecture' as an architectural primitive? The conjecture asserts this is the basic unit of epistemic progress, but leaves open whether it can be decomposed into implementable components (e.g., a maintained model of current-best-theory, a process for generating test cases that could falsify it, a mechanism for updating theory-status on refutation). Without this specification, the conjecture risks being unfalsifiable — any system could be dismissed as 'merely retrieval' by definitional fiat. Pinning down the minimal sufficient architecture would make the conjecture empirically tractable.",
+      "text": "How can 'epistemic progress' and 'error-corrected explanatory content' be operationalized so the conjecture becomes testable rather than metaphorical? The core unresolved tension is whether structure is truly the bottleneck, or whether this conclusion depends on how knowledge, survival under criticism, reuse, and cumulative progress are measured.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the interaction regime between substrate and structure: is there a threshold, complementarity, or phase transition where additional compute becomes useless without stronger error-correction, or where stronger structure cannot compensate for insufficient model capacity? The conjecture contrasts extremes, but leaves open the shape of the tradeoff in realistic systems.",
+      "score": 0.93
+    },
+    {
+      "text": "What concrete institutional or architectural mechanisms actually implement 'organized criticism' for AI systems without collapsing into bureaucracy, conservatism, or Goodharting? The open question is how to design selection systems that kill bad ideas while still preserving novelty, dissent, and bold conjecture.",
       "score": 0.95
-    },
-    {
-      "text": "Is the threshold claim — that substrate stops being the binding constraint above some relatively low parameter count — empirically locatable? The conjecture asserts the threshold is 'lower than we think' but provides no method for identifying it. This is a concrete, falsifiable sub-claim: one could in principle design tasks that isolate structural from substrate contributions to epistemic performance and look for the inflection point. Identifying the threshold would either vindicate or refute the conjecture's most actionable implication.",
-      "score": 0.88
-    },
-    {
-      "text": "Does confident confabulation actually scale monotonically with capacity, as the conjecture claims? This is stated as evidence but is itself a contested empirical question. Larger models do show improved calibration on some benchmarks, and chain-of-thought prompting partially recovers uncertainty-tracking. If confabulation does not scale monotonically, the conjecture's boundary-case argument weakens significantly. The relationship between scale and epistemic failure mode deserves its own careful treatment.",
-      "score": 0.85
-    },
-    {
-      "text": "Can retrieval-with-interpolation ever produce functional analogues of conjecture-generation as an emergent property, even if not by architectural design? The conjecture assumes a clean categorical distinction between retrieval and genuine conjecture, but this boundary may be a continuum. A system that interpolates far outside its training distribution in a structured way might be functionally indistinguishable from one generating novel conjectures. Clarifying whether the distinction is categorical or graded is necessary for the conjecture to do real work.",
-      "score": 0.82
-    },
-    {
-      "text": "What does it mean for a system to have 'a problem it cannot yet solve' as an internal state that generates pressure toward new conjecture? This is the conjecture's most evocative phrase and its least specified. In human cognition, this involves something like felt tension between expectation and observation. Whether any computational process can instantiate this — not merely represent a gap in a knowledge base, but be driven by it — is an open question that connects to debates about intentionality and the difference between syntactic and semantic gap-detection.",
-      "score": 0.9
-    },
-    {
-      "text": "If structural sufficiency is achievable, does it require continuous interaction with an external environment that can produce genuine refutation, or can it be instantiated in a closed system? The conjecture focuses on internal architecture but Deutschian epistemology implies that conjecture-and-refutation requires exposure to a reality that can push back. A system that only refutes against internally generated test cases may be running a simulation of epistemics rather than epistemics itself. This has direct implications for whether any purely language-model-based architecture could in principle satisfy structural sufficiency.",
-      "score": 0.87
-    },
-    {
-      "text": "Is the conjecture itself subject to its own standard? It claims that current AI systems cannot identify errors in frameworks that no prior text has flagged — but the conjecture was generated by reasoning about AI systems, not by direct empirical refutation of a prior theory. If the conjecture is a genuine novel conjecture, it either demonstrates that the system generating it has structural sufficiency (undermining the claim about current systems) or it was produced by retrieval-with-interpolation (in which case the conjecture's own epistemic status is unclear). This self-referential tension is worth making explicit.",
-      "score": 0.78
-    },
-    {
-      "text": "How does the conjecture interact with the possibility of hybrid architectures — systems that combine retrieval components with explicit hypothesis-tracking modules, theorem provers, or active learning loops? The conjecture is framed as a binary between current retrieval systems and some future structurally sufficient system, but the design space includes many intermediate architectures. Mapping which hybrid designs would or would not cross the structural threshold would make the conjecture more useful as engineering guidance.",
-      "score": 0.75
-    },
-    {
-      "text": "What is the relationship between the structural deficit identified here and the frame problem in classical AI? The conjecture independently rediscovers something close to the frame problem — the difficulty of knowing what is relevant to update when new information arrives — but does not engage with the extensive prior literature. Whether the structural deficit is a novel formulation or a restatement of known problems determines whether the conjecture is advancing the field or reinventing it, and either answer has implications worth pursuing.",
-      "score": 0.7
-    },
-    {
-      "text": "Does the conjecture's logic apply symmetrically to human cognition? Humans are also, in some sense, pattern-completion systems trained on experience. If the argument is that substrate-scaling cannot produce epistemic structure, the same pressure applies to asking whether biological neural scaling (more neurons, more connections) is what produces human conjecture-generation, or whether it is some structural property of how human cognition is organized. Making this comparison explicit would either strengthen the conjecture by showing it applies universally or reveal a disanalogy that needs explaining.",
-      "score": 0.72
     }
   ]
 }

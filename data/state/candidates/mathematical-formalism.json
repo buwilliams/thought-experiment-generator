@@ -1,11 +1,10 @@
 {
   "id": "mathematical-formalism",
   "layer": "candidates",
-  "score": 0.757,
+  "score": 0.9775,
   "rank": 2,
   "run_count": 1,
   "problem_coverage": [
-    "does-architecture-matter-more-than-model-scale",
     "can-llms-create-new-knowledge",
     "what-makes-an-explanation-hard-to-vary"
   ],
@@ -14,17 +13,12 @@
   "history": [
     {
       "run": 1,
-      "score": 0.821,
-      "problem_id": "does-architecture-matter-more-than-model-scale"
-    },
-    {
-      "run": 1,
-      "score": 0.556,
+      "score": 0.985,
       "problem_id": "can-llms-create-new-knowledge"
     },
     {
       "run": 1,
-      "score": 0.894,
+      "score": 0.97,
       "problem_id": "what-makes-an-explanation-hard-to-vary"
     }
   ]

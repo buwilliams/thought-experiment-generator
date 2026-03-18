@@ -2,57 +2,21 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "thought-experiments",
   "run": 1,
-  "logical_consistency": 0.87,
-  "hard_to_vary": 0.1,
-  "total": 0.331,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
   "candidate_problems": [
     {
-      "text": "What would count as 'genuine external falsification pressure' in practice? The conjecture draws a sharp line between internal and external criteria, but this boundary may be unstable: any external criterion, once incorporated into training, becomes internal. Is there a principled account of what makes a falsification source permanently external, or does every external tribunal eventually get absorbed into the distribution? This is the implementation gap at the heart of the conjecture, and it is unresolved.",
-      "score": 0.95
+      "text": "How can 'genuine explanatory improvement' be operationally distinguished from mere plausible continuation or benchmark success without collapsing back into proxy metrics that can be gamed? This is the core unresolved issue because the conjecture depends on a real, implementable selection criterion for error-correcting progress, not just a philosophical distinction.",
+      "score": 0.97
     },
     {
-      "text": "The conjecture assumes that System A's error-correction loop is genuinely closed — that systematic errors cannot surface. But adversarial probing, out-of-distribution benchmarks, and real-world deployment failures do function as external pressure in some sense. Is the claim that these are insufficient in degree, or that they are structurally incapable of producing the kind of error correction that changes what the system is? The distinction matters enormously for what interventions could work.",
-      "score": 0.9
+      "text": "What concrete structures or feedback loops are sufficient to make criticism truth-conducive in AI systems, rather than merely producing adversarial noise, paralysis, or sophisticated self-justification? The conjecture asserts that structure above substrate is decisive, but leaves open which institutional designs actually create reliable error elimination.",
+      "score": 0.94
     },
     {
-      "text": "The conjecture implicitly treats 'epistemic reach' as binary — either a system has it or it doesn't. But Deutsch's own account of reach is graded and domain-relative. A more precise version of this conjecture would need to specify: reach beyond what distribution, measured how, relative to which problem class? Without this, the claim risks being unfalsifiable in the same way it accuses System A of being.",
+      "text": "Where is the threshold at which substrate ceases to be the dominant bottleneck and higher-order epistemic structure becomes the binding constraint, and does this threshold vary by domain or task? This matters because the conjecture is comparative and conditional: it claims substrate is necessary but not decisive beyond some point, yet that transition is unspecified.",
       "score": 0.88
-    },
-    {
-      "text": "Is the structural problem described here specific to current neural architectures, or is it a general feature of any sufficiently powerful learning system? A Bayesian reasoner updating on evidence from its own prior also faces a version of this problem. If the conjecture generalizes, it implies that the bottleneck is not a contingent feature of transformers but a deep constraint on any self-contained learning system — which would be a much stronger and more interesting claim.",
-      "score": 0.87
-    },
-    {
-      "text": "The conjecture treats human cognition as implicitly belonging to System B's category — capable of genuine error correction through external falsification. But human cognition is also subject to systematic distributional biases, motivated reasoning, and self-sealing belief structures. What is the actual mechanism by which humans achieve external falsification that current AI systems lack? If the answer is 'embodiment' or 'social epistemology,' these need to be made structurally precise, not just gestured at.",
-      "score": 0.85
-    },
-    {
-      "text": "The conjecture predicts a 'high-resolution ceiling' — increasing impressiveness paired with stagnant epistemic reach. This is an empirical prediction. What evidence would confirm or disconfirm it? If capability benchmarks continue to improve on genuinely novel tasks, does that falsify the conjecture, or can the conjecture always reinterpret such improvements as 'still within distribution'? The conjecture needs a falsification condition of its own.",
-      "score": 0.84
-    },
-    {
-      "text": "There is an unexplored tension between the conjecture's Deutschian framing and systems thinking. From a systems perspective, the closed error-correction loop is a reinforcing feedback structure — and Meadows would ask: where are the balancing loops? Real deployed AI systems do encounter balancing feedback (user rejection, downstream failure, regulatory pressure). Does the conjecture account for these, or does it implicitly assume a sealed laboratory system? The structural analysis may be incomplete.",
-      "score": 0.8
-    },
-    {
-      "text": "The conjecture claims that RLHF, chain-of-thought, and larger context windows do not escape the structural problem. This is asserted but not argued in detail. Chain-of-thought in particular introduces something like intermediate conjecture-testing steps. A rigorous version of the conjecture would need to show precisely why these intermediate steps fail to constitute genuine independence between generation and evaluation — not just assert that they remain 'within the same loop.'",
-      "score": 0.78
-    },
-    {
-      "text": "If the bottleneck is structural independence between conjecture-formation and conjecture-testing, then multi-agent systems — where one model generates and a separate model (or ensemble) evaluates — might partially satisfy the structural requirement. The conjecture does not address this case. Is a sufficiently diverse multi-agent architecture a genuine structural intervention, or does shared training data collapse the independence even across architecturally distinct models?",
-      "score": 0.82
-    },
-    {
-      "text": "The conjecture's ontological commitment — that knowledge is fundamental — creates an interesting tension with its own argument. If knowledge is not reducible to substrate, then the claim that 'more substrate amplifies the problem' requires a non-substrate account of what epistemic reach actually is and how it is instantiated. The conjecture borrows Deutschian epistemology but does not fully cash out the ontological implications for what a knowledge-generating system would need to look like physically.",
-      "score": 0.76
-    },
-    {
-      "text": "There is an implicit assumption that 'correctability' is the right metric for epistemic progress. But some domains — creative generation, aesthetic judgment, strategic planning under radical uncertainty — may not have external falsification criteria in the relevant sense. Does the conjecture imply that AI systems are structurally incapable of genuine progress in these domains, or that these domains are not epistemically progressive in Deutsch's sense? This boundary condition is unexplored.",
-      "score": 0.7
-    },
-    {
-      "text": "The conjecture's framing of System B as 'deliberately targeting its own failure modes' raises a bootstrapping problem: how does a system identify its own failure modes without already having the external perspective that the conjecture says it lacks? This is not merely a practical difficulty — it may be a logical constraint that applies to System B as much as System A, which would undermine the clean contrast the conjecture relies on.",
-      "score": 0.83
     }
   ]
 }

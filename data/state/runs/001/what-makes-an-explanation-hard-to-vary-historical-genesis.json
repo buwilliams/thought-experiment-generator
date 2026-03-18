@@ -2,53 +2,21 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.88,
-  "hard_to_vary": 0.2,
-  "total": 0.404,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.7,
+  "total": 0.7629999999999999,
   "candidate_problems": [
     {
-      "text": "The conjecture claims that 'good explanation tends toward swappability' is an inherited assumption from mechanism's polemic against narrative — but this is itself a historical-causal explanation of a conceptual norm. Does explaining the origin of a norm undermine it, or is this a genetic fallacy dressed as genealogy? The conjecture needs a principled account of when tracing an assumption's ancestry is epistemically relevant to its validity.",
-      "score": 0.92
+      "text": "How can 'load-bearing' status be operationalized without collapsing into circularity? The conjecture defines load-bearing parts by the exclusion work they do under criticism, but it remains open how to identify and measure that work independently of already judging the explanation good. A new problem is to develop non-circular criteria or procedures for testing whether a component genuinely rules out alternatives, changes derivations, or alters counterfactual structure.",
+      "score": 0.96
     },
     {
-      "text": "If most real explanations are hybrid — some elements load-bearing relative to some questions, swappable relative to others — then 'the explanation' is not a stable unit of analysis. The open problem is whether explanations should be reframed as explanation-question pairs, and what the implications are for scientific realism: are we committed to the existence of the load-bearing elements, the swappable ones, both, or neither?",
+      "text": "What is the relation between historical origin and present explanatory necessity? The conjecture ties swappability to inherited narrative, pedagogical, or rhetorical residues, but many features may originate in those contexts and later become genuinely indispensable, while some criticism-forged details may become obsolete. The unresolved tension is whether genealogy is evidentially relevant or merely suggestive, and how to distinguish origin from current functional role in an explanation.",
+      "score": 0.91
+    },
+    {
+      "text": "Is productive explanatory power always associated with brittleness and compression, or do some domains require redundancy, multiple realizability, or audience-relative scaffolding as part of the explanation itself? The conjecture risks overvaluing minimal exclusion structures and undervaluing explanatory forms in biology, social systems, law, or education where robustness, abstraction, and interchangeable representations may be essential rather than ornamental. The open question is where the load-bearing/swappable distinction genuinely tracks truth-seeking versus where it misclassifies legitimate explanatory pluralism.",
       "score": 0.89
-    },
-    {
-      "text": "The conjecture proposes 'causal specificity' as the structural property that makes an element load-bearing, but causal specificity is itself question-relative — a neuron's firing is specific relative to a behavioral explanation but swappable relative to a population-level explanation. This threatens a regress: every diagnosis of rigidity requires a prior question, which requires a prior diagnosis of what that question is tracking. Is there a fixed point, or is the regress vicious?",
-      "score": 0.88
-    },
-    {
-      "text": "The conjecture treats narrative and mechanism as sequential historical stages, with mechanism 'replacing' narrative. But narrative explanation persists robustly in history, law, psychiatry, and everyday cognition. The open question is whether narrative and mechanism are genuinely competing explanatory forms or whether they are answers to structurally different questions — and if the latter, the conjecture's origin story may be misdiagnosing a coexistence as a displacement.",
-      "score": 0.84
-    },
-    {
-      "text": "The diagnostic method proposed — 'does swapping a part change what is being explained, or only who is doing the explaining?' — presupposes we can individuate the explanandum independently of the explanation. But in many cases the explanandum is partly constituted by the explanation (e.g., what counts as 'the same disease' shifts with mechanistic understanding). This circularity may not be vicious, but it needs explicit treatment.",
-      "score": 0.87
-    },
-    {
-      "text": "The conjecture implies that frozen explanatory elements — those calcified before the explanation was examined — are epistemically dangerous because they are invisible as assumptions. This suggests a research program: developing methods to surface inherited rigidities in active scientific explanations. What would such a method look like, and is it distinguishable from ordinary conceptual analysis or Kuhnian paradigm critique?",
-      "score": 0.76
-    },
-    {
-      "text": "The evolutionary biology example is used to illustrate question-relative load-bearing: swappable on mutation identity, rigid on selective environment. But this example may cut against the conjecture — evolutionary theory is precisely the domain where mechanism successfully absorbed historical particularity (the specific lineage matters). Does this represent a third explanatory mode that is neither narrative nor mechanism as described, and does it require revising the conjecture's binary?",
-      "score": 0.81
-    },
-    {
-      "text": "If the demand for clean sorting into 'rigid vs swappable' is an artifact of mechanism's original polemic, then the conjecture is itself making a normative claim: we should stop demanding clean sorting. But the conjecture offers no account of what replaces clean sorting as a practical tool for evaluating explanations. The open problem is whether 'question-relative load-bearing' is actionable or whether it dissolves the original problem rather than solving it.",
-      "score": 0.83
-    },
-    {
-      "text": "The conjecture's core move — that explanatory norms were 'designed' to solve a prior problem and then inherited — applies reflexively to the conjecture itself. What prior problem is this conjecture solving, and which of its own elements are frozen placeholders from that problem? Pursuing this reflexive application would either validate the conjecture's method or reveal a self-undermining structure.",
-      "score": 0.9
-    },
-    {
-      "text": "The claim that 'particulars are noise and structure is signal' was a design choice, not a discovery, raises the question of whether there is any non-question-relative sense in which structure is more real or more explanatory than particulars. This connects to debates in ontic structural realism. The conjecture implies a deflationary answer, but does not argue for it — and the deflationary answer has significant downstream consequences for scientific ontology.",
-      "score": 0.78
-    },
-    {
-      "text": "The conjecture focuses on explanation but the same analysis should apply to prediction, control, and understanding as distinct epistemic goals. A part that is swappable for explanation may be load-bearing for control (which specific lever to pull matters even if the mechanism is general). The open question is whether the conjecture generalizes across epistemic goals or is specifically about explanation, and whether the boundaries between these goals are themselves question-relative.",
-      "score": 0.72
     }
   ]
 }

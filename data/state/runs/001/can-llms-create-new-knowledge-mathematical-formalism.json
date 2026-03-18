@@ -2,49 +2,21 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "mathematical-formalism",
   "run": 1,
-  "logical_consistency": 0.92,
-  "hard_to_vary": 0.4,
-  "total": 0.556,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
   "candidate_problems": [
     {
-      "text": "The conjecture assumes that achieving near-minimal loss implies invariant internalization, but this conflates behavioral adequacy with structural encoding. A system could achieve low loss by learning a dense lookup over surface correlations that happen to mimic invariant behavior within the training distribution without encoding the invariant as a generative constraint. The open question is whether there exists a formal criterion — beyond loss — that distinguishes genuine invariant encoding from high-fidelity mimicry, and whether that distinction is empirically detectable or merely philosophical.",
+      "text": "How can 'knowledge-bearing invariant relations' be defined and measured non-circularly in token-prediction systems? The conjecture relies on internal representations encoding truth-relevant structure that survives rewording, recombination, criticism, and counterfactual transformation, but it leaves open a rigorous criterion distinguishing genuine structural representation from merely useful statistical compression. A key problem is to specify tests or formalisms that identify invariants without presupposing the very explanatory knowledge they are meant to detect.",
+      "score": 0.97
+    },
+    {
+      "text": "Under what conditions does minimizing next-token prediction loss force the learning of causally or explanatorily relevant latent structure rather than spurious but compressive proxies? The conjecture suggests rich distributions reward reusable latent variables, yet it remains unresolved when predictive success is sufficient for counterfactual generalization and when it is not. This is the central tension between optimization for prediction and the emergence of knowledge, especially in environments where many false models compress well.",
       "score": 0.95
     },
     {
-      "text": "The conjecture introduces 'invariant signal to distributional noise ratio' as the critical variable but leaves it undefined. For logic and mathematics this ratio is claimed to be high, but this is asserted rather than derived. A productive open problem is to formalize this ratio — perhaps as a measure of how much mutual information the corpus instances share about the invariant relative to domain-irrelevant variation — and to determine whether it can be estimated from corpus statistics alone, prior to training.",
-      "score": 0.92
-    },
-    {
-      "text": "The conjecture treats invariants as fixed objects that the corpus either contains or lacks, but invariants are themselves theory-laden: what counts as the invariant of a domain depends on the conceptual framework brought to it. This raises the question of whether the inductive bias of a token-prediction architecture implicitly privileges certain invariant decompositions over others, and whether this bias is epistemically neutral or systematically distorts which invariants get extracted — particularly in domains where the 'correct' invariant is contested.",
-      "score": 0.88
-    },
-    {
-      "text": "The conjecture dissolves the rearrangement/knowledge dichotomy by identifying them on a spectrum, but this dissolution may be too quick. There is a class of invariants — call them generative invariants — that are not merely constraints on existing instances but are productive rules for generating novel valid instances outside the training distribution. The open question is whether compression-based invariant extraction can recover generative invariants, or whether it only recovers descriptive invariants that summarize past instances without licensing extrapolation.",
-      "score": 0.91
-    },
-    {
-      "text": "The conjecture's framework is stated for a single domain D with a single invariant I, but real corpora are mixtures of many domains with overlapping, conflicting, and hierarchically nested invariants. When invariants from different domains produce contradictory constraints on the same token sequences, what does the predictor learn? The open problem is to characterize the behavior of inductive closure under invariant conflict — whether the system learns a weighted blend, a context-sensitive selector, or something that encodes none of the source invariants faithfully.",
-      "score": 0.87
-    },
-    {
-      "text": "The conjecture claims that human knowledge production is subject to the same non-negotiable constraint — no system produces knowledge beyond invariants accessible through inputs plus inductive biases. This is a strong epistemological claim that deserves scrutiny. The open question is whether human inductive biases, being the product of evolutionary and developmental processes, are in any principled sense better matched to the invariants of the physical and social world than the inductive biases of a transformer architecture — and if so, what structural features account for this.",
-      "score": 0.83
-    },
-    {
-      "text": "The probability space formalism (Ω, F, P) treats the corpus as a fixed distribution, but in practice the corpus is a finite sample from an unknown generative process. The conjecture's conclusions are stated as if the system trains on the true distribution, not a sample. The open problem is to characterize how finite-sample effects interact with invariant extraction — specifically, whether the sample size required to reliably extract invariant I scales with the complexity of I, and whether there are invariants that are in principle unextractable from any feasible corpus regardless of architecture.",
-      "score": 0.85
-    },
-    {
-      "text": "The conjecture frames knowledge as representation of invariants, but this is a structural or syntactic notion of knowledge. It leaves open the question of whether invariant encoding is sufficient for knowledge in any epistemically robust sense — for instance, whether a system that encodes the invariants of logical entailment thereby knows logic, or merely simulates knowing it. This connects to the Deutschian point that knowledge requires the capacity for error-correction and criticism, not just accurate representation. The open problem is whether token-prediction systems have any structural analog to error-correction that would satisfy a more demanding epistemological criterion.",
-      "score": 0.89
-    },
-    {
-      "text": "The conjecture identifies the 'blend' problem — when corpus instances underdetermine I versus I-prime — but does not address whether the system has any internal signal that it is in this regime. A practically important open question is whether there exist detectable signatures in the system's internal representations or output distributions that indicate underdetermination, which would allow a user or the system itself to flag low-confidence invariant extraction rather than producing fluent but unreliable outputs.",
-      "score": 0.9
-    },
-    {
-      "text": "The conjecture is framed around token-prediction but the structural argument — that a sufficiently expressive predictor must internalize whatever causes regularities — applies to any sufficiently expressive learning system. The open question is whether the argument is architecture-neutral or whether specific architectural features of transformers (attention, positional encoding, depth) create systematic biases toward certain classes of invariants and systematic blindspots toward others, making the conjecture's conclusions architecture-specific rather than general.",
-      "score": 0.8
+      "text": "What is the relationship between internal representational invariance and truth, given that a model may learn stable, compressive structure that is nevertheless false or misaligned with reality? The conjecture admits that explanation here is only conjectural knowledge unless validated by criticism and transfer, but it does not specify how criticism, intervention, or external error-correction should be integrated into the system or evaluation process. This opens the problem of whether token-prediction alone can ever suffice for knowledge, or whether knowledge necessarily depends on a larger socio-epistemic system of testing.",
+      "score": 0.93
     }
   ]
 }

@@ -2,49 +2,21 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.87,
-  "hard_to_vary": 0.4,
-  "total": 0.5409999999999999,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
   "candidate_problems": [
     {
-      "text": "What would a genuine conjecture-criticism cycle look like architecturally in a learning system? The conjecture distinguishes 'rewarded output' from 'conjecture that survived criticism' but does not specify what mechanisms would instantiate the latter. This is the central open problem the conjecture raises and leaves entirely unaddressed. Is it a different loss function, a different training loop structure, an adversarial critic that is itself subject to revision, or something with no current analog? The gap between diagnosing the absence and specifying the presence is large and worth closing.",
+      "text": "How can we operationalize and measure 'epistemic progress'—generation, criticism, and selective retention of explanations—in a way that is not reducible to next-step prediction or benchmark performance? The conjecture depends on a usable distinction between fluent pattern completion and genuine explanatory knowledge growth, but it leaves open what observable criteria would discriminate them in AI systems.",
+      "score": 0.97
+    },
+    {
+      "text": "What concrete architectural and institutional mechanisms would enable AI systems to generate explicit rival explanations, subject them to severe criticism, and retain the survivors under live deployment rather than only during static training? The conjecture identifies the bottleneck as structural, but it remains unresolved which feedback-loop designs, memory/update schemes, and evaluation institutions would actually outperform scaling alone.",
       "score": 0.95
     },
     {
-      "text": "Is self-critique trained by RLHF necessarily mimicry, or is there a threshold condition under which it becomes structurally equivalent to genuine criticism? The conjecture asserts the former categorically, but this may be too strong. A system that produces self-critiques which reliably identify failure modes — even if trained by reward — might satisfy the functional requirements of error correction regardless of its causal history. The question of whether process origin or functional structure is the relevant criterion for 'genuine' criticism is unresolved and has direct implications for whether the conjecture's prescription is necessary or merely sufficient.",
-      "score": 0.88
-    },
-    {
-      "text": "The conjecture claims the field inherited 'learning as reward maximization' from behaviorist psychology and control theory, framing this as an unexamined assumption. But reward maximization frameworks have been extensively examined and defended on information-theoretic and decision-theoretic grounds that are not behaviorist in origin. Is the conjecture's critique of the paradigm actually a critique of behaviorism, or of something more specific — the absence of falsificationist structure in the feedback signal? Clarifying this prevents the argument from being dismissed as a historical-genetic fallacy while also sharpening what exactly needs to change.",
-      "score": 0.82
-    },
-    {
-      "text": "What is the unit of conjecture in a neural system? Popperian epistemology operates on propositions that have truth conditions and can be falsified by evidence. Neural network outputs are not obviously propositional in this sense — they are distributions over tokens, or vectors in embedding space. Before the conjecture's prescription can be operationalized, there must be an account of what it means for a sub-symbolic system to 'form a conjecture.' This is a foundational translation problem that the conjecture skips over.",
-      "score": 0.91
-    },
-    {
-      "text": "Does the conjecture's framework apply differentially across domains? Error correction via falsification is most clearly defined in empirical and formal domains. In tasks like creative writing, emotional support, or aesthetic judgment, the concept of a conjecture 'failing' is less well-defined. If the conjecture's prescription is domain-limited, this needs to be stated explicitly — otherwise it risks being a theory of scientific reasoning engines rather than a theory of general intelligence.",
-      "score": 0.76
-    },
-    {
-      "text": "The conjecture treats 'variability' — bold, testable, potentially wrong conjectures — as epistemically valuable and claims reward optimization suppresses it. But there is a known tension here: high variability in outputs is also the source of hallucination, confabulation, and incoherence. The conjecture needs an account of how to distinguish epistemically productive variability from noise. Without this, the prescription to increase conjecture-space exploration could worsen the very failure modes the field has been trying to address.",
-      "score": 0.85
-    },
-    {
-      "text": "If the bottleneck is architectural and not scalar, what is the predicted empirical signature that would distinguish a system with genuine error-correction from one without it? The conjecture is currently unfalsifiable in its own terms — it diagnoses a structural absence but does not specify what observable behavior would confirm or disconfirm that the absence has been remedied. This is a methodological gap that, if left open, allows the conjecture to function as an unfalsifiable critique rather than a productive research program.",
-      "score": 0.93
-    },
-    {
-      "text": "The conjecture frames the substrate-vs-structure debate as a local debate within an unexamined paradigm. But this framing assumes the two positions share the same foundational commitments. It is worth asking whether any existing 'structure' proposals — active learning, Bayesian approaches, causal inference architectures, or formal verification integration — already partially instantiate conjecture-criticism dynamics, and if so, why they have not resolved the problem. This would either strengthen the conjecture by showing why partial implementations fail, or weaken it by showing the problem is already being addressed.",
-      "score": 0.79
-    },
-    {
-      "text": "There is an implicit assumption in the conjecture that knowledge growth in AI systems should be modeled on knowledge growth in human epistemic communities. But individual human cognition is also largely reward-based and associative at the neural level — the Popperian structure emerges at the level of social and institutional criticism, not individual neurons. This raises the question of whether the conjecture is actually an argument for multi-agent architectures with adversarial institutional roles rather than a redesign of individual model training.",
-      "score": 0.87
-    },
-    {
-      "text": "The conjecture claims that 'increasing model size adds more capacity to do the wrong thing more fluently.' This is an empirical prediction. It implies that scaling curves should show diminishing or negative returns on tasks that specifically require error correction — not just benchmark saturation but systematic failure on tasks designed to probe whether the system can identify and revise its own wrong conjectures. Whether such tasks exist, and what the scaling curves on them look like, is a testable question the conjecture implicitly raises but does not pursue.",
-      "score": 0.84
+      "text": "Under what conditions does substrate scaling cease to be the dominant driver of progress and structural change become the higher-leverage intervention? The conjecture asserts a phase shift from compute bottlenecks to epistemic-architecture bottlenecks, but it does not specify how to detect that transition, whether it is domain-specific, or how much apparent 'knowledge creation' can still emerge from scaling and recombination alone.",
+      "score": 0.92
     }
   ]
 }

@@ -2,49 +2,21 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "extreme-cases",
   "run": 1,
-  "logical_consistency": 0.81,
-  "hard_to_vary": 0.3,
-  "total": 0.45299999999999996,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.7,
+  "total": 0.7629999999999999,
   "candidate_problems": [
     {
-      "text": "The conjecture claims that at the limit of infinite training data, predicting tokens 'just is' extracting deep structural regularities, making the distinction between prediction and representation 'formally ambiguous.' But this is asserted rather than demonstrated. What would a formal proof or disproof of this convergence claim look like? Is there a precise sense in which compression of a sufficiently rich corpus is equivalent to causal model extraction, or does the ambiguity dissolve only rhetorically? This is a tractable technical question in information theory and computational learning theory.",
-      "score": 0.92
+      "text": "What is the non-circular criterion for the proposed 'boundary' between rearrangement and genuine knowledge? The conjecture appeals to compression, unification, portability, and survival under criticism across indefinitely many contexts, but it leaves open how to define or test this without presupposing the very notion of explanation it aims to explain. A new problem is to formulate a principled operational discriminator: what observable capacities, failure modes, or structural invariants would distinguish error-correcting explanation from high-order interpolation in finite systems?",
+      "score": 0.97
     },
     {
-      "text": "The conjecture pivots on 'revisability' as the functional criterion for genuine knowledge participation. But revisability in what sense? A system that produces different outputs when given corrective prompts is behaviorally revisable but may not be structurally updating — the weights are frozen, the error is not internalized. Is behavioral revisability within a context window the same kind of thing as genuine belief revision? This distinction matters enormously for whether the Deutschian criterion is actually being met or merely mimicked.",
+      "text": "Does token prediction by itself tend to produce explanatory abstractions, or are additional selection pressures, architectures, or interactive criticism loops necessary? The conjecture says the substrate and objective are not the key, yet also says knowledge emerges only under severe universality and criticism constraints. This creates a tension about sufficiency: can next-token training alone induce such structures in the limit, or must systems be embedded in adversarial evaluation, tool use, world feedback, or explicit error-correction mechanisms?",
       "score": 0.95
     },
     {
-      "text": "The conjecture uses novel problem-solving as evidence against 'mere rearrangement.' But the argument has a gap: what counts as genuinely novel versus recombinatorially novel? A problem whose solution has never appeared verbatim may still be solvable by interpolation in a high-dimensional embedding space trained on related problems. The crack in the rearrangement argument only holds if we can establish that the solution required traversing genuinely uncharted structure. How would we operationalize and test this distinction?",
-      "score": 0.88
-    },
-    {
-      "text": "The conjecture argues that human minds are 'also pattern-completing physical systems,' implying symmetry between human and machine knowledge generation. But this symmetry move may be too fast. Human pattern completion is embedded in a continuous sensorimotor feedback loop with the world, producing error signals that are causally connected to reality. LLM pattern completion is trained on text about the world. Is the difference in grounding type (direct causal contact vs. mediated symbolic record) epistemically irrelevant, or does it matter for the reliability of the structural regularities extracted?",
-      "score": 0.87
-    },
-    {
-      "text": "The conjecture locates the real constraint in 'being in the error-correction loop.' This is a systems-thinking claim about feedback structure. But it raises a design question: what would it take to actually put a token-prediction system inside a genuine error-correction loop — not just RLHF, which is a training-time approximation, but real-time, ongoing, world-coupled revision? Is this architecturally possible within the transformer paradigm, or does it require a fundamentally different system structure? This is both a philosophical and an engineering question.",
-      "score": 0.91
-    },
-    {
-      "text": "The conjecture treats 'abstract relational structure' as the key extracted quantity. But relational structure between what? Claims in text are not the same as the causal structures in the world those claims describe. A system that perfectly models the relational structure of human discourse about physics has extracted something real — but is it physics, or is it the sociology of physics knowledge? These can come apart in important ways, especially at the frontier where human discourse is confused or wrong.",
-      "score": 0.85
-    },
-    {
-      "text": "The conjecture implies that 'genuine knowledge' should be defined functionally — by criticizability and participation in knowledge growth — rather than by origin. This is a strong ontological commitment. But it creates a boundary problem: a lookup table that returns criticizable outputs participates formally in the same way. The conjecture needs a principled account of why scale and structural extraction matter if the criterion is purely functional. Otherwise the functional criterion is either too weak (admits lookup tables) or requires smuggling back in some structural condition.",
-      "score": 0.83
-    },
-    {
-      "text": "The boundary argument — that the prediction/explanation distinction becomes ambiguous at the limit — has an implicit assumption: that the limit is approachable in practice, or that behavior near the limit tells us something about current systems. But limits in mathematics often have properties that finite approximations do not share. Is the convergence at the infinite-data limit a useful guide to what happens at GPT-4 scale, or is it a mathematical idealization that provides no traction on actual systems? The conjecture needs to address whether limit behavior is epistemically relevant to finite cases.",
-      "score": 0.79
-    },
-    {
-      "text": "The conjecture is framed in Deutschian terms but does not engage with Deutsch's specific claims about creativity and the jump to universality. Deutsch argues that genuine knowledge creation requires a qualitative jump — the ability to generate explanations that are not entailed by prior knowledge. The conjecture's 'crack' argument (novel problem solving) gestures at this but does not engage with whether token prediction can produce the kind of hard-to-vary explanations Deutsch considers the hallmark of good theories. This is an unresolved tension internal to the conjecture's own framework.",
-      "score": 0.89
-    },
-    {
-      "text": "If revisability is the criterion, then the conjecture implies that a frozen LLM (weights fixed, no fine-tuning, no world feedback) is epistemically outside the loop regardless of output quality. But this seems to prove too much — a published book is also frozen, yet we consider it a vehicle for knowledge. The conjecture needs to distinguish between a system being in the loop versus a system's outputs being usable by agents who are in the loop. This distinction may rehabilitate frozen LLMs but requires a more careful account of where knowledge resides.",
-      "score": 0.86
+      "text": "What internal organization would make a predictor's outputs genuinely 'error-correcting explanations' rather than merely robust continuations? The conjecture implies that knowledge corresponds to internal structures encoding deep invariants that survive distribution shift and hostile probing, but it does not specify the ontology of those structures. A worthwhile problem is to characterize the mechanisms—e.g. causal models, modular abstractions, counterfactual simulators, compression hierarchies, or criticism-generating subsystems—that could support indefinite cross-context resilience, and to ask whether such organization is even possible in purely predictive systems.",
+      "score": 0.92
     }
   ]
 }
