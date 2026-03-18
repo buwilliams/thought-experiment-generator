@@ -1,14 +1,14 @@
 # Thought Experiment Generator
 
-A self-improving epistemic engine. It collides perspective conjectures against problems to generate candidates, evaluates those candidates for explanatory quality, and feeds the survivors back into its own conjecture pool. Over many runs, the system steers toward whatever generates genuine insight.
+A self-improving epistemic engine. It collides candidate conjectures against problems to generate outputs, evaluates those outputs for explanatory quality, and feeds the survivors back into its own conjecture pool. Over many runs, the system steers toward whatever generates genuine insight.
 
 The core loop:
 
 ```
-problem + conjecture → candidate → criticism → conjecture
+problem + conjecture → generated output → criticism → conjecture
 ```
 
-Inspired by David Deutsch's epistemology — knowledge grows through conjecture and criticism, not random search. The system narrows the search space by compounding success: only candidates that survive criticism become conjectures, and only conjectures that generate high-scoring candidates survive long enough to be promoted.
+Inspired by David Deutsch's epistemology — knowledge grows through conjecture and criticism, not random search. The system narrows the search space by compounding success: only generated outputs that survive criticism become conjectures, and only conjectures that generate high-scoring outputs survive long enough to be promoted.
 
 Requires `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY` for OpenAI).
 
@@ -42,7 +42,7 @@ cargo run -- --fresh run
 
 # Add a conjecture
 cargo run -- add-conjecture --layer mind --title "Conjecture Title" --text "Full text of the conjecture"
-cargo run -- add-conjecture --layer perspectives --title "Conjecture Title" --file path/to/conjecture.md
+cargo run -- add-conjecture --layer candidates --title "Conjecture Title" --file path/to/conjecture.md
 cat my-conjecture.md | cargo run -- add-conjecture --layer mind --title "Conjecture Title"
 ```
 
@@ -61,35 +61,35 @@ cat my-conjecture.md | cargo run -- add-conjecture --layer mind --title "Conject
 
 ## How It Works
 
-**Phase 1 — Generate Candidates.** Each (problem, perspective conjecture) pair produces one candidate. The mind's conjecture summaries form the system prompt. The perspective conjecture's summary and problem summary are combined in the user prompt. Pairs run concurrently. Already-generated candidates are skipped (resumable runs).
+**Phase 1 — Generate Outputs.** Each (problem, candidate conjecture) pair produces one generated output. The mind's conjecture summaries form the system prompt. The candidate conjecture's summary and problem summary are combined in the user prompt. Pairs run concurrently. Already-generated outputs are skipped (resumable runs).
 
-**Phase 2 — Evaluate Candidates.** Two-pass evaluation:
-- *Pass 1 — Logical Consistency:* Score 0.0–1.0. Below threshold (default 0.3), candidate is skipped.
-- *Pass 2 — Hard to Vary:* The mind generates 10 yes/no questions probing whether each part of the candidate is load-bearing. Score = yes_count / 10. Combined score: `0.3 × consistency + 0.7 × hard_to_vary`.
-- *Candidate Problems:* The mind also identifies unresolved tensions and open questions raised by each candidate. Candidates scoring above threshold are admitted to the active problem set.
+**Phase 2 — Evaluate Outputs.** Two-pass evaluation:
+- *Pass 1 — Logical Consistency:* Score 0.0–1.0. Below threshold (default 0.3), output is skipped.
+- *Pass 2 — Hard to Vary:* The mind generates 10 yes/no questions probing whether each part of the output is load-bearing. Score = yes_count / 10. Combined score: `0.3 × consistency + 0.7 × hard_to_vary`.
+- *Candidate Problems:* The mind also identifies unresolved tensions and open questions raised by each output. Candidates scoring above threshold are admitted to the active problem set.
 
 **Phase 3 — Rank and Promote.**
 - Conjecture scores update as rolling averages weighted by run_count. Composite score = `score × √(problem_coverage_breadth)`.
-- Problem scores update as rolling averages of mean candidate score across all conjectures applied.
+- Problem scores update as rolling averages of mean output score across all conjectures applied.
 - *Problem review:* The mind receives all problem summaries in the set and removes duplicates and subsumed problems (removed from set membership, not global). The bottom-ranked problem with sufficient run history is also dropped from the set, enforcing the 10-problem cap.
-- *Conjecture promotion:* Top perspective conjecture (by composite, min run_count) → mind. Top candidate → summarized into a new perspective conjecture.
-- *Conjecture demotion:* Bottom mind conjecture → perspectives. Bottom perspective conjecture → discarded.
+- *Conjecture promotion:* Top candidate conjecture (by composite, min run_count) → mind. Top generated output → summarized into a new candidate conjecture.
+- *Conjecture demotion:* Bottom mind conjecture → candidates. Bottom candidate conjecture → discarded.
 
-**Phase 4 — Report.** Ranked candidate table, top 5 summaries, all changes to conjectures and problems.
+**Phase 4 — Report.** Ranked output table, top 5 summaries, all changes to conjectures and problems.
 
 ## Conceptual Hierarchy
 
 All layers contain the same atom: a **Conjecture** — a unit of explanatory knowledge or perspective, held fallibly. The layers differ only in trust and stability, not in kind.
 
 ```
-Mind          — most trusted conjectures, slowest to change
+Mind        — most trusted conjectures, slowest to change
   ↑ promote / ↓ demote
-Perspectives  — active conjectures under test, medium stability
+Candidates  — active conjectures under test, medium stability
   ↑ promote / ↓ demote
-Candidates    — new conjectures generated each run, scored and ephemeral
+Generated   — outputs produced each run, scored and ephemeral
 ```
 
-Conjectures are shared across all problem sets — the mind and perspectives are not scoped to any one set.
+Conjectures are shared across all problem sets — the mind and candidates are not scoped to any one set.
 
 **Problem Sets** are named, scoped collections of problems (cap: 10). Problems only exist within sets. A run operates on one problem set, discovers candidate problems, and adds them to the set. Deduplication and cap enforcement keep the set focused.
 
@@ -99,12 +99,12 @@ Conjectures are shared across all problem sets — the mind and perspectives are
 data/state/
   state.json                     — current run number
   mind/                          — mind conjectures (.md + .json each)
-  perspectives/                  — perspective conjectures (.md + .json each)
+  candidates/                    — candidate conjectures (.md + .json each)
   problems/                      — problems (.md + .json each)
   problemsets/                   — problem set index (.md + .json each)
   runs/
     001/
-      {problem}-{conjecture}.md    — candidate content + questions
+      {problem}-{conjecture}.md    — generated output content + questions
       {problem}-{conjecture}.json  — scores + candidate problems
       summary.md                   — ranked results + changes
 ```
@@ -115,7 +115,7 @@ Seed state lives in `data/seed/`. `--fresh` resets `data/state/` from seed.
 
 **Mind conjectures:** Deutschian Epistemology, Ontology, Systems Thinking (Donella Meadows)
 
-**Perspective conjectures:** Thought Experiments, Mathematical Formalism, Counterfactual Reasoning, Extreme Cases, Historical Genesis
+**Candidate conjectures:** Thought Experiments, Mathematical Formalism, Counterfactual Reasoning, Extreme Cases, Historical Genesis
 
 ## Documents
 

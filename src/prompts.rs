@@ -16,7 +16,7 @@ pub fn format_mind_system(mind: &[Conjecture]) -> String {
     s.trim_end().to_string()
 }
 
-pub fn generate_candidate(mind_system: &str, conjecture_summary: &str, problem_summary: &str) -> Prompt {
+pub fn generate_output(mind_system: &str, conjecture_summary: &str, problem_summary: &str) -> Prompt {
     Prompt {
         system: mind_system.to_string(),
         user: format!(
@@ -29,18 +29,18 @@ pub fn generate_candidate(mind_system: &str, conjecture_summary: &str, problem_s
     }
 }
 
-pub fn logical_consistency_check(mind_system: &str, candidate: &str) -> Prompt {
+pub fn logical_consistency_check(mind_system: &str, generated: &str) -> Prompt {
     Prompt {
         system: mind_system.to_string(),
         user: format!(
             "Evaluate whether the following conjecture is internally self-consistent — does it \
             contradict itself, rely on incompatible premises, or make claims that cannot simultaneously \
-            be true?\n\nReturn JSON: {{\"score\": 0.0, \"reason\": \"...\"}}\n\nConjecture: {candidate}"
+            be true?\n\nReturn JSON: {{\"score\": 0.0, \"reason\": \"...\"}}\n\nConjecture: {generated}"
         ),
     }
 }
 
-pub fn generate_questions(mind_system: &str, candidate: &str, problem_summary: &str) -> Prompt {
+pub fn generate_questions(mind_system: &str, generated: &str, problem_summary: &str) -> Prompt {
     Prompt {
         system: mind_system.to_string(),
         user: format!(
@@ -48,12 +48,12 @@ pub fn generate_questions(mind_system: &str, candidate: &str, problem_summary: &
             vary\" — meaning its parts are load-bearing and cannot be arbitrarily modified without \
             destroying the explanation. Questions must be specific to this conjecture and this problem, \
             not generic.\n\nReturn JSON: {{\"questions\": [\"...\", ...]}}\n\n\
-            Conjecture: {candidate}\n\nProblem: {problem_summary}"
+            Conjecture: {generated}\n\nProblem: {problem_summary}"
         ),
     }
 }
 
-pub fn answer_questions(mind_system: &str, candidate: &str, questions: &[String]) -> Prompt {
+pub fn answer_questions(mind_system: &str, generated: &str, questions: &[String]) -> Prompt {
     let formatted = questions
         .iter()
         .enumerate()
@@ -65,12 +65,12 @@ pub fn answer_questions(mind_system: &str, candidate: &str, questions: &[String]
         user: format!(
             "Answer each of the following yes/no questions about this conjecture.\n\n\
             Return JSON: {{\"answers\": [{{\"question\": \"...\", \"answer\": true}}]}}\n\n\
-            Conjecture: {candidate}\n\nQuestions:\n{formatted}"
+            Conjecture: {generated}\n\nQuestions:\n{formatted}"
         ),
     }
 }
 
-pub fn extract_candidate_problems(mind_system: &str, candidate: &str) -> Prompt {
+pub fn extract_candidate_problems(mind_system: &str, generated: &str) -> Prompt {
     Prompt {
         system: mind_system.to_string(),
         user: format!(
@@ -78,21 +78,21 @@ pub fn extract_candidate_problems(mind_system: &str, candidate: &str) -> Prompt 
             conjecture that are worth exploring as new problems. For each candidate, score 0.0–1.0 \
             whether it is worth pursuing.\n\n\
             Return JSON: {{\"candidates\": [{{\"text\": \"...\", \"score\": 0.0}}]}}\n\n\
-            Conjecture: {candidate}"
+            Conjecture: {generated}"
         ),
     }
 }
 
-pub fn summarize_candidate(candidate: &str, score: f64) -> Prompt {
+pub fn summarize_generated(generated: &str, score: f64) -> Prompt {
     Prompt {
         system: String::from(
             "You are summarizing a thought experiment. Return only a 20-word summary of what the thought experiment claims or illuminates. No preamble, no meta-commentary.",
         ),
-        user: format!("Thought experiment (quality score {score:.2}/1.0):\n\n{candidate}"),
+        user: format!("Thought experiment (quality score {score:.2}/1.0):\n\n{generated}"),
     }
 }
 
-pub fn promote_candidate(mind_system: &str, candidate: &str, score: f64) -> Prompt {
+pub fn promote_generated(mind_system: &str, generated: &str, score: f64) -> Prompt {
     Prompt {
         system: mind_system.to_string(),
         user: format!(
@@ -102,7 +102,7 @@ pub fn promote_candidate(mind_system: &str, candidate: &str, score: f64) -> Prom
             The full_text must be a readable, standalone description of the perspective this \
             conjecture embodies — what lens it provides, what kinds of problems it is useful for, \
             and what it illuminates. 100-200 words.\n\n\
-            Conjecture: {candidate}\nScore: {score:.2}"
+            Conjecture: {generated}\nScore: {score:.2}"
         ),
     }
 }

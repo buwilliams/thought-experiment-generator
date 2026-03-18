@@ -4,14 +4,14 @@ use serde::{Deserialize, Serialize};
 #[serde(rename_all = "lowercase")]
 pub enum Layer {
     Mind,
-    Perspectives,
+    Candidates,
 }
 
 impl std::fmt::Display for Layer {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
             Layer::Mind => write!(f, "mind"),
-            Layer::Perspectives => write!(f, "perspectives"),
+            Layer::Candidates => write!(f, "candidates"),
         }
     }
 }
@@ -21,8 +21,8 @@ impl std::str::FromStr for Layer {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
             "mind" => Ok(Layer::Mind),
-            "perspectives" => Ok(Layer::Perspectives),
-            other => anyhow::bail!("Unknown layer: {other}. Use 'mind' or 'perspectives'."),
+            "candidates" => Ok(Layer::Candidates),
+            other => anyhow::bail!("Unknown layer: {other}. Use 'mind' or 'candidates'."),
         }
     }
 }
@@ -34,7 +34,7 @@ pub struct HistoryEntry {
     pub problem_id: String,
 }
 
-/// A conjecture held in the mind or perspectives layer — stable, trusted, scored over runs.
+/// A conjecture held in the mind or candidates layer — stable, trusted, scored over runs.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ConjectureMeta {
     pub id: String,
@@ -93,9 +93,9 @@ pub struct CandidateProblem {
     pub score: f64,
 }
 
-/// A candidate — an ephemeral conjecture generated each run, scored but not yet trusted.
+/// A generated output — ephemeral conjecture produced each run, scored but not yet trusted.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct CandidateMeta {
+pub struct GeneratedMeta {
     pub problem_id: String,
     pub conjecture_id: String,
     pub run: u32,
@@ -106,8 +106,8 @@ pub struct CandidateMeta {
 }
 
 #[derive(Debug, Clone)]
-pub struct Candidate {
-    pub meta: CandidateMeta,
+pub struct Generated {
+    pub meta: GeneratedMeta,
     pub text: String,
     pub questions: Vec<Question>,
 }
@@ -166,7 +166,7 @@ pub struct CandidatesResponse {
     pub candidates: Vec<CandidateProblem>,
 }
 
-/// Response when promoting a candidate into a reusable perspective conjecture.
+/// Response when promoting a generated output into a reusable candidate conjecture.
 #[derive(Debug, Deserialize)]
 pub struct PromoteResponse {
     pub summary: String,

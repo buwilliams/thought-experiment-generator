@@ -4,7 +4,7 @@ use anyhow::{Context, Result};
 use tracing::info;
 
 use crate::types::{
-    Candidate, CandidateMeta, Conjecture, ConjectureMeta, Layer, Problem, ProblemMeta, ProblemSet,
+    Conjecture, ConjectureMeta, Generated, GeneratedMeta, Layer, Problem, ProblemMeta, ProblemSet,
     ProblemSetMeta, Question, StateInfo,
 };
 
@@ -20,7 +20,7 @@ fn state_dir() -> PathBuf {
 fn layer_dir(layer: &Layer) -> PathBuf {
     state_dir().join(match layer {
         Layer::Mind => "mind",
-        Layer::Perspectives => "perspectives",
+        Layer::Candidates => "candidates",
     })
 }
 
@@ -109,7 +109,7 @@ pub fn increment_run() -> Result<u32> {
     Ok(run)
 }
 
-// --- Conjectures (mind / perspectives layer) ---
+// --- Conjectures (mind / candidates layer) ---
 
 pub fn load_conjectures(layer: &Layer) -> Result<Vec<Conjecture>> {
     let dir = layer_dir(layer);
@@ -329,32 +329,32 @@ pub fn load_problems_for_set(ps: &ProblemSet) -> Result<Vec<Problem>> {
     Ok(problems)
 }
 
-// --- Candidates (ephemeral, generated each run) ---
+// --- Generated outputs (ephemeral, produced each run) ---
 
-fn candidate_base(run: u32, problem_id: &str, conjecture_id: &str) -> PathBuf {
+fn generated_base(run: u32, problem_id: &str, conjecture_id: &str) -> PathBuf {
     run_dir(run).join(format!("{}-{}", problem_id, conjecture_id))
 }
 
-pub fn candidate_exists(run: u32, problem_id: &str, conjecture_id: &str) -> bool {
-    candidate_base(run, problem_id, conjecture_id)
+pub fn generated_exists(run: u32, problem_id: &str, conjecture_id: &str) -> bool {
+    generated_base(run, problem_id, conjecture_id)
         .with_extension("json")
         .exists()
 }
 
-pub fn save_candidate(candidate: &Candidate) -> Result<()> {
-    let base = candidate_base(
-        candidate.meta.run,
-        &candidate.meta.problem_id,
-        &candidate.meta.conjecture_id,
+pub fn save_generated(generated: &Generated) -> Result<()> {
+    let base = generated_base(
+        generated.meta.run,
+        &generated.meta.problem_id,
+        &generated.meta.conjecture_id,
     );
 
-    std::fs::write(base.with_extension("json"), serde_json::to_string_pretty(&candidate.meta)?)?;
+    std::fs::write(base.with_extension("json"), serde_json::to_string_pretty(&generated.meta)?)?;
 
     let mut md = format!(
-        "# Candidate: {} × {}\n\n## Conjecture\n\n{}\n\n## Questions\n\n",
-        candidate.meta.problem_id, candidate.meta.conjecture_id, candidate.text
+        "# Generated: {} × {}\n\n## Conjecture\n\n{}\n\n## Questions\n\n",
+        generated.meta.problem_id, generated.meta.conjecture_id, generated.text
     );
-    for (i, q) in candidate.questions.iter().enumerate() {
+    for (i, q) in generated.questions.iter().enumerate() {
         md.push_str(&format!(
             "{}. {} — **{}**\n",
             i + 1,
@@ -362,9 +362,9 @@ pub fn save_candidate(candidate: &Candidate) -> Result<()> {
             if q.answer { "yes" } else { "no" }
         ));
     }
-    if !candidate.meta.candidate_problems.is_empty() {
+    if !generated.meta.candidate_problems.is_empty() {
         md.push_str("\n## Candidate Problems\n\n");
-        for cp in &candidate.meta.candidate_problems {
+        for cp in &generated.meta.candidate_problems {
             md.push_str(&format!("- {} (score: {:.2})\n", cp.text, cp.score));
         }
     }
@@ -372,12 +372,12 @@ pub fn save_candidate(candidate: &Candidate) -> Result<()> {
     Ok(())
 }
 
-pub fn load_run_candidates(run: u32) -> Result<Vec<Candidate>> {
+pub fn load_run_generated(run: u32) -> Result<Vec<Generated>> {
     let dir = run_dir(run);
     if !dir.exists() {
         return Ok(vec![]);
     }
-    let mut candidates = vec![];
+    let mut outputs = vec![];
     for entry in std::fs::read_dir(&dir)? {
         let entry = entry?;
         let path = entry.path();
@@ -385,9 +385,9 @@ pub fn load_run_candidates(run: u32) -> Result<Vec<Candidate>> {
             continue;
         }
         let json_text = std::fs::read_to_string(&path)?;
-        let meta: CandidateMeta = match serde_json::from_str(&json_text) {
+        let meta: GeneratedMeta = match serde_json::from_str(&json_text) {
             Ok(m) => m,
-            Err(_) => continue, // skip non-candidate json (e.g. state.json)
+            Err(_) => continue, // skip non-generated json (e.g. state.json)
         };
         let md_path = path.with_extension("md");
         let text = if md_path.exists() {
@@ -401,9 +401,9 @@ pub fn load_run_candidates(run: u32) -> Result<Vec<Candidate>> {
         } else {
             vec![]
         };
-        candidates.push(Candidate { meta, text, questions });
+        outputs.push(Generated { meta, text, questions });
     }
-    Ok(candidates)
+    Ok(outputs)
 }
 
 fn parse_questions_from_md(md: &str) -> Vec<Question> {

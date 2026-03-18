@@ -5,7 +5,7 @@ use crate::config::Config;
 use crate::llm::LlmClient;
 use crate::prompts;
 use crate::types::{
-    AnswersResponse, Candidate, CandidateMeta, CandidatesResponse, ConsistencyResponse, Question,
+    AnswersResponse, CandidatesResponse, ConsistencyResponse, Generated, GeneratedMeta, Question,
     QuestionsResponse,
 };
 
@@ -13,14 +13,14 @@ pub async fn evaluate(
     client: &LlmClient,
     config: &Config,
     mind_system: &str,
-    candidate_text: &str,
+    generated_text: &str,
     problem_summary: &str,
     problem_id: &str,
     conjecture_id: &str,
     run: u32,
-) -> Result<Candidate> {
+) -> Result<Generated> {
     // Pass 1: Logical consistency
-    let p = prompts::logical_consistency_check(mind_system, candidate_text);
+    let p = prompts::logical_consistency_check(mind_system, generated_text);
     let consistency: ConsistencyResponse = client.call(Some(&p.system), &p.user, 0.2).await?;
 
     if consistency.score < config.consistency_threshold {
@@ -28,8 +28,8 @@ pub async fn evaluate(
             "  {}-{}: failed consistency ({:.2}), skipping hard-to-vary",
             problem_id, conjecture_id, consistency.score
         );
-        return Ok(Candidate {
-            meta: CandidateMeta {
+        return Ok(Generated {
+            meta: GeneratedMeta {
                 problem_id: problem_id.to_string(),
                 conjecture_id: conjecture_id.to_string(),
                 run,
@@ -38,17 +38,17 @@ pub async fn evaluate(
                 total: 0.0,
                 candidate_problems: vec![],
             },
-            text: candidate_text.to_string(),
+            text: generated_text.to_string(),
             questions: vec![],
         });
     }
 
     // Pass 2a: Generate hard-to-vary questions
-    let p = prompts::generate_questions(mind_system, candidate_text, problem_summary);
+    let p = prompts::generate_questions(mind_system, generated_text, problem_summary);
     let questions_resp: QuestionsResponse = client.call(Some(&p.system), &p.user, 0.3).await?;
 
     // Pass 2b: Answer questions
-    let p = prompts::answer_questions(mind_system, candidate_text, &questions_resp.questions);
+    let p = prompts::answer_questions(mind_system, generated_text, &questions_resp.questions);
     let answers_resp: AnswersResponse = client.call(Some(&p.system), &p.user, 0.2).await?;
 
     let questions: Vec<Question> = answers_resp
@@ -67,7 +67,7 @@ pub async fn evaluate(
     let total = 0.3 * consistency.score + 0.7 * hard_to_vary;
 
     // Extract candidate problems
-    let p = prompts::extract_candidate_problems(mind_system, candidate_text);
+    let p = prompts::extract_candidate_problems(mind_system, generated_text);
     let candidates_resp: CandidatesResponse = client.call(Some(&p.system), &p.user, 0.3).await?;
 
     let candidate_problems = candidates_resp
@@ -81,8 +81,8 @@ pub async fn evaluate(
         problem_id, conjecture_id, consistency.score, hard_to_vary, total
     );
 
-    Ok(Candidate {
-        meta: CandidateMeta {
+    Ok(Generated {
+        meta: GeneratedMeta {
             problem_id: problem_id.to_string(),
             conjecture_id: conjecture_id.to_string(),
             run,
@@ -91,7 +91,7 @@ pub async fn evaluate(
             total,
             candidate_problems,
         },
-        text: candidate_text.to_string(),
+        text: generated_text.to_string(),
         questions,
     })
 }

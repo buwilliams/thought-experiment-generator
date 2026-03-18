@@ -103,9 +103,9 @@ pub enum Command {
     /// List all problem sets and their contents
     ListProblemsets,
 
-    /// Add a new conjecture to the mind or perspectives layer
+    /// Add a new conjecture to the mind or candidates layer
     AddConjecture {
-        /// Target layer: "mind" or "perspectives"
+        /// Target layer: "mind" or "candidates"
         #[arg(long)]
         layer: String,
 

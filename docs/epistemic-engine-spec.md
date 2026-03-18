@@ -22,14 +22,14 @@ This is a thinking engine, not a search engine. The goal is not to find a pre-ex
 All layers contain the same atom: a **Conjecture** — a unit of explanatory knowledge or perspective, held fallibly. The layers differ only in trust and stability, not in kind. This follows directly from Deutschian fallibilism: there is no bedrock of certain knowledge, only conjectures held with varying degrees of confidence.
 
 ```
-Mind          — most trusted conjectures, slowest to change
+Mind        — most trusted conjectures, slowest to change
   ↑ promote / ↓ demote
-Perspectives  — active conjectures under test, medium stability
+Candidates  — active conjectures under test, medium stability
   ↑ promote / ↓ demote
-Candidates    — new conjectures generated each run, scored and ephemeral
+Generated   — outputs produced each run, scored and ephemeral
 ```
 
-Conjectures (mind and perspectives) are shared across all problem sets.
+Conjectures (mind and candidates) are shared across all problem sets.
 
 **Problem Sets** are scoped collections of problems (cap: 10). Problems only exist within sets — there is no global problem pool. Problem sets are not in the promotion hierarchy but are scored and pruned by the system each run.
 
@@ -41,7 +41,7 @@ The "database" is the filesystem. All state is stored as markdown files in subdi
 
 Each entity has two files: a `.md` for human-readable content and a `.json` sidecar for machine-readable metadata. Prompts read from JSON (summaries, scores). Humans read `.md`.
 
-**Conjectures (mind and perspectives) are shared across all problem sets.** Problem sets are scoped collections — problems only exist within sets.
+**Conjectures (mind and candidates) are shared across all problem sets.** Problem sets are scoped collections — problems only exist within sets.
 
 ### Conjecture content — `{layer}/{id}.md`
 
@@ -62,7 +62,7 @@ Full text of the conjecture — as long as needed.
 ```json
 {
   "id": "slug",
-  "layer": "mind | perspectives",
+  "layer": "mind | candidates",
   "score": 0.0,
   "rank": 1,
   "run_count": 0,
@@ -162,7 +162,7 @@ data/state/
   mind/
     {id}.md              — conjecture content (summary + full text)
     {id}.json            — conjecture metadata (score, rank, run_count, history)
-  perspectives/
+  candidates/
     {id}.md
     {id}.json
   problems/
@@ -194,7 +194,7 @@ The seed state is checked in as `data/seed/`:
 ```
 data/seed/
   mind/                  — starting mind conjectures (.md + .json each)
-  perspectives/          — starting perspective conjectures (.md + .json each)
+  candidates/          — starting candidate conjectures (.md + .json each)
   problems/              — optional starting problems (empty by default)
 ```
 
@@ -204,44 +204,44 @@ On first run, seed state is copied to `data/state/`. `--fresh` resets `data/stat
 
 ## The Run
 
-A single run processes all problems against all perspective conjectures, generating one candidate per (problem × perspective conjecture) pair.
+A single run processes all problems against all candidate conjectures, generating one output per (problem × candidate conjecture) pair.
 
-### Phase 1 — Generate Candidates
+### Phase 1 — Generate Outputs
 
-For each `(problem, perspective_conjecture)` pair:
+For each `(problem, candidate_conjecture)` pair:
 
-1. Build context: mind conjecture summaries (as system prompt) + perspective conjecture summary + problem summary
-2. Call LLM → candidate text
-3. Save candidate
+1. Build context: mind conjecture summaries (as system prompt) + candidate conjecture summary + problem summary
+2. Call LLM → generated output text
+3. Save generated output
 
 Runs concurrently up to `--max-concurrent`.
 
-### Phase 2 — Evaluate Candidates
+### Phase 2 — Evaluate Outputs
 
-For each candidate:
+For each generated output:
 
 **Pass 1 — Logical Consistency**
 - System prompt: mind
-- Ask: is this candidate internally self-consistent? Score 0.0–1.0.
+- Ask: is this output internally self-consistent? Score 0.0–1.0.
 - If score < threshold (default 0.3), mark failed, skip Pass 2.
 
 **Pass 2 — Hard to Vary**
 - System prompt: mind
-- Ask the mind to generate 10 yes/no questions that probe whether this candidate has structure that resists arbitrary modification. Questions should be contextual — different candidates, different problems warrant different questions.
+- Ask the mind to generate 10 yes/no questions that probe whether this output has structure that resists arbitrary modification. Questions should be contextual — different outputs, different problems warrant different questions.
 - Score each question answer: yes = 1, no = 0. Total / 10 = hard-to-vary score.
 - Combined score: `0.3 * logical_consistency + 0.7 * hard_to_vary`
 
 **Candidate Problem Extraction**
-- During Pass 2, the mind also identifies unresolved tensions or unexplored implications in the candidate.
+- During Pass 2, the mind also identifies unresolved tensions or unexplored implications in the output.
 - Each candidate problem is evaluated: is this worth adding to the problem set? Score 0.0–1.0. Threshold 0.6 for admission.
 
 ### Phase 3 — Rank and Promote
 
-**Candidate ranking:** sort all candidates by combined score descending.
+**Output ranking:** sort all generated outputs by combined score descending.
 
-**Perspective conjecture ranking:** for each perspective conjecture, compute mean score across all problems it was applied to this run. Update `score` as rolling average weighted by `run_count`.
+**Candidate conjecture ranking:** for each candidate conjecture, compute mean score across all problems it was applied to this run. Update `score` as rolling average weighted by `run_count`.
 
-**Problem ranking:** for each problem, compute mean candidate score across all conjectures this run. Update `score` similarly.
+**Problem ranking:** for each problem, compute mean output score across all conjectures this run. Update `score` similarly.
 
 **Admit candidate problems:** candidate problems extracted during Phase 2 are evaluated for admission to the current problem set (admission threshold 0.6). Admitted problems are saved to `problems/` and their IDs are added to the set's `problem_ids` list.
 
@@ -249,23 +249,23 @@ For each candidate:
 - The mind receives summaries of all problems in the set (id + summary) and identifies any that are exact duplicates of or fully subsumed by another problem in the set. Identified problems are removed from the set's `problem_ids` (they remain in `problems/` — they may belong to other sets).
 - Cap enforcement: if the set exceeds 10 problems after deduplication, the bottom-ranked problem (minimum `run_count` of 3) is removed from the set. This repeats until the set is at or below 10. If all remaining problems are below min_run_count (newly added, unscored), the cap overage is accepted until the next run.
 
-**Promotion (one per run, skipped if no eligible candidates):**
-- Top-ranked perspective conjecture (by composite of score × problem_coverage breadth, with minimum `run_count` of 3) → promoted to mind. Breadth is measured as the number of distinct problems the conjecture has been applied to.
-- Top-ranked candidate (by score) → summarized into a new conjecture via `promote_candidate` prompt → added to perspectives
+**Promotion (one per run, skipped if no eligible conjectures):**
+- Top-ranked candidate conjecture (by composite of score × problem_coverage breadth, with minimum `run_count` of 3) → promoted to mind. Breadth is measured as the number of distinct problems the conjecture has been applied to.
+- Top-ranked generated output (by score) → summarized into a new conjecture via `promote_generated` prompt → added to candidates
 
-**Demotion (one per run, skipped if no eligible candidates):**
-- Bottom-ranked mind conjecture (by score × problem_coverage breadth, minimum `run_count` of 3) → demoted to perspectives
-- Bottom-ranked perspective conjecture (by same composite, minimum `run_count` of 3) → discarded
+**Demotion (one per run, skipped if no eligible conjectures):**
+- Bottom-ranked mind conjecture (by score × problem_coverage breadth, minimum `run_count` of 3) → demoted to candidates
+- Bottom-ranked candidate conjecture (by same composite, minimum `run_count` of 3) → discarded
 
 Promotion and demotion are skipped entirely if fewer than one conjecture meets the `run_count` threshold. This protects early runs where signal is thin.
 
 ### Phase 4 — Report
 
 Write `data/state/runs/NNN/summary.md`:
-- Ranked candidate table (problem, conjecture, score)
-- Top 5 candidates with 20-word summaries
-- Promoted perspective conjecture (→ mind)
-- Promoted candidate (→ perspectives)
+- Ranked output table (problem, conjecture, score)
+- Top 5 outputs with 20-word summaries
+- Promoted candidate conjecture (→ mind)
+- Promoted generated output (→ candidates)
 - Demoted conjectures
 - Problems removed (deduplicated + bottom-ranked discard)
 
@@ -273,7 +273,7 @@ Write `data/state/runs/NNN/summary.md`:
 
 ## Prompts
 
-### generate_candidate(mind, perspective_conjecture, problem)
+### generate_output(mind, perspective_conjecture, problem)
 ```
 System: [mind conjectures as a structured set of principles and perspectives]
 
@@ -330,7 +330,7 @@ Return JSON: { "candidates": [{ "text": "...", "score": 0.0 }] }
 Conjecture: [candidate text]
 ```
 
-### summarize_candidate(candidate, score)
+### summarize_generated(candidate, score)
 ```
 System: You are summarizing a thought experiment. Return only a 20-word summary of what the thought experiment claims or illuminates. No preamble, no meta-commentary.
 
@@ -351,11 +351,11 @@ Title: [title]
 Full text: [full_text]
 ```
 
-### promote_candidate(candidate, score)
+### promote_generated(candidate, score)
 ```
 System: [mind conjectures]
 
-Convert the following conjecture into a reusable perspective tool.
+Convert the following conjecture into a reusable candidate conjecture.
 
 Return JSON: { "summary": "...", "full_text": "..." }
 
@@ -397,11 +397,11 @@ Current seed mind conjectures:
 
 ---
 
-## Seed Perspectives
+## Seed Candidates
 
-The seed perspectives are defined by the files in `data/seed/perspectives/`. Each conjecture has a `.md` (content) and `.json` (metadata). On first run, these are copied to `data/state/perspectives/`.
+The seed candidates are defined by the files in `data/seed/candidates/`. Each conjecture has a `.md` (content) and `.json` (metadata). On first run, these are copied to `data/state/candidates/`.
 
-Current seed perspective conjectures:
+Current seed candidate conjectures:
 
 - **`thought-experiments`** — Construct a hypothetical scenario, isolate the key variable, stipulate it as real, and follow the logic strictly to wherever it leads. Strangeness is information.
 - **`mathematical-formalism`** — Translate the problem into mathematical structure (variables, invariants, transformations). Let the structure reveal what is preserved, what varies, and what constraints are non-negotiable.
@@ -443,11 +443,11 @@ cargo run -- --fresh run
 
 # Add a new conjecture by inline text
 cargo run -- add-conjecture --layer mind --title "Conjecture Title" --text "Full text of the conjecture"
-cargo run -- add-conjecture --layer perspectives --title "Conjecture Title" --text "Full text of the conjecture"
+cargo run -- add-conjecture --layer candidates --title "Conjecture Title" --text "Full text of the conjecture"
 
 # Add a new conjecture from a file or stdin
 cargo run -- add-conjecture --layer mind --title "Conjecture Title" --file path/to/conjecture.md
-cat my-conjecture.md | cargo run -- add-conjecture --layer perspectives --title "Conjecture Title"
+cat my-conjecture.md | cargo run -- add-conjecture --layer candidates --title "Conjecture Title"
 ```
 
 The `add-conjecture` command:
@@ -473,7 +473,7 @@ The `add-conjecture` command:
 
 | Flag | Required | Description |
 |---|---|---|
-| `--layer` | yes | `mind` or `perspectives` |
+| `--layer` | yes | `mind` or `candidates` |
 | `--title` | yes | Human-readable title, used to derive the file slug |
 | `--text` | no | Inline full text of the conjecture |
 | `--file` | no | Path to a file whose contents are the full text |
@@ -485,17 +485,17 @@ The `add-conjecture` command:
 
 | Phase | Calls per pair | Pairs | Total |
 |---|---|---|---|
-| Candidate generation | 1 | problems × conjectures | N×M |
+| Output generation | 1 | problems × conjectures | N×M |
 | Logical consistency | 1 | N×M | N×M |
 | Generate questions | 1 | N×M (pass 1 survivors) | ~N×M |
 | Answer questions | 1 | N×M (pass 1 survivors) | ~N×M |
 | Candidate problem extraction | 1 | N×M | N×M |
 | Problem deduplication | 1 | 1 per run | 1 |
-| Promote candidate (promotion) | 1 | 1 per run | 1 |
+| Promote generated output | 1 | 1 per run | 1 |
 | Top 5 summaries | 5 | 1 | 5 |
 | **Default (5 problems × 10 conjectures)** | | | **~257** |
 
-Candidates are not cached between runs — they are regenerated each run because the mind and perspective states may have changed.
+Generated outputs are not cached between runs — they are regenerated each run because the mind and candidate states may have changed.
 
 ---
 
@@ -509,7 +509,7 @@ src/
   prompts.rs      — all prompt templates
   evaluator.rs    — logical consistency + hard-to-vary scoring
   promoter.rs     — ranking, promotion, demotion logic
-  types.rs        — Conjecture, Candidate, Problem, ProblemSet structs
+  types.rs        — Conjecture, Generated, Problem, ProblemSet structs
   llm/            — LlmClient (Anthropic + OpenAI)
 ```
 
