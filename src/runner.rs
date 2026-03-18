@@ -91,7 +91,7 @@ pub async fn run(
 
     for handle in handles {
         if let Err(e) = handle.await? {
-            tracing::warn!("Generation failed: {e}");
+            tracing::warn!("Generation failed: {e:#}");
         }
     }
 
@@ -236,41 +236,52 @@ fn admit_candidates_to_set(
     problemset: &mut ProblemSet,
     admission_threshold: f64,
 ) -> Result<()> {
+    const MAX_ADMISSIONS_PER_RUN: usize = 3;
+
+    // Collect all qualifying candidates across all outputs, sorted by score descending.
+    let mut pool: Vec<(f64, String)> = generated
+        .iter()
+        .flat_map(|o| o.meta.candidate_problems.iter())
+        .filter(|cp| cp.score >= admission_threshold)
+        .map(|cp| (cp.score, cp.text.clone()))
+        .collect();
+    pool.sort_by(|a, b| b.0.partial_cmp(&a.0).unwrap_or(std::cmp::Ordering::Equal));
+
     let global_count = state::load_problems()?.len();
     let mut rank_base = global_count as u32;
     let mut in_set: std::collections::HashSet<String> =
         problemset.meta.problem_ids.iter().cloned().collect();
+    let mut admitted = 0;
 
-    for output in generated {
-        for cp in &output.meta.candidate_problems {
-            if cp.score < admission_threshold {
-                continue;
-            }
-            let id = state::slugify(&cp.text.chars().take(60).collect::<String>());
-            if in_set.contains(&id) {
-                continue;
-            }
-            if !state::problem_exists(&id) {
-                rank_base += 1;
-                let problem = Problem {
-                    meta: ProblemMeta {
-                        id: id.clone(),
-                        source: ProblemSource::System,
-                        score: 0.0,
-                        rank: rank_base,
-                        run_count: 0,
-                        created_at: state::now_iso8601(),
-                    },
-                    title: cp.text.chars().take(80).collect(),
-                    summary: cp.text.chars().take(200).collect(),
-                    full_text: cp.text.clone(),
-                };
-                state::save_problem(&problem)?;
-                info!("Created candidate problem: {}", id);
-            }
-            problemset.meta.problem_ids.push(id.clone());
-            in_set.insert(id);
+    for (score, text) in &pool {
+        if admitted >= MAX_ADMISSIONS_PER_RUN {
+            break;
         }
+        let id = state::slugify(&text.chars().take(60).collect::<String>());
+        if in_set.contains(&id) {
+            continue;
+        }
+        if !state::problem_exists(&id) {
+            rank_base += 1;
+            let problem = Problem {
+                meta: ProblemMeta {
+                    id: id.clone(),
+                    source: ProblemSource::System,
+                    score: 0.0,
+                    rank: rank_base,
+                    run_count: 0,
+                    created_at: state::now_iso8601(),
+                },
+                title: text.chars().take(80).collect(),
+                summary: text.chars().take(200).collect(),
+                full_text: text.clone(),
+            };
+            state::save_problem(&problem)?;
+            info!("Created candidate problem (score {score:.2}): {}", id);
+        }
+        problemset.meta.problem_ids.push(id.clone());
+        in_set.insert(id);
+        admitted += 1;
     }
     Ok(())
 }
