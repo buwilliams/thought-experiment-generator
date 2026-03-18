@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-technological-disruption-creates-bro",
+  "conjecture_id": "genome-as-regulatory-layer",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'social interpreter systems' be operationalized into a predictive, falsifiable framework rather than a broad metaphor? The conjecture names many layers—IP, labor markets, education, competition, infrastructure, norms—but leaves unresolved which components are causally primary, how they interact, and what measurable structure distinguishes an interpreter system that diffuses gains from one that concentrates them.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the actual high-leverage intervention points in the coupled system of technology, institutions, and distribution? The conjecture claims institutional changes matter more than raw technological capability, but it remains open which reforms are load-bearing across contexts, which are merely compensatory, and whether there are threshold or sequencing effects where some institutional changes only work if others are already in place.",
+      "score": 0.93
+    },
+    {
+      "text": "To what extent are concentrated gains caused by interpreter asymmetry versus intrinsic features of particular technologies such as scale economies, network effects, low marginal costs, data advantages, or capital intensity? This is a central unresolved tension because if some technologies structurally favor concentration even under relatively open institutions, then the conjecture needs refinement about when institutions dominate and when technological architecture itself is the main bottleneck.",
+      "score": 0.91
+    }
+  ]
+}

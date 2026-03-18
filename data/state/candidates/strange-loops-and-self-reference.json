@@ -1,11 +1,43 @@
 {
   "id": "strange-loops-and-self-reference",
   "layer": "candidates",
-  "score": 0.0,
+  "score": 0.9516,
   "rank": 12,
-  "run_count": 0,
-  "problem_coverage": [],
+  "run_count": 1,
+  "problem_coverage": [
+    "what-determines-whether-technological-disruption-creates-bro",
+    "why-does-regulatory-capture-occur-systematically-even-in-ins",
+    "how-does-economic-inequality-propagate-across-generations-de",
+    "what-structural-features-make-market-economies-vulnerable-to",
+    "why-do-markets-consistently-underprovide-public-goods-even-w"
+  ],
   "created_at": "2026-03-18T21:40:51.399654566+00:00",
   "promoted_from": null,
-  "history": []
+  "history": [
+    {
+      "run": 7,
+      "score": 0.979,
+      "problem_id": "what-determines-whether-technological-disruption-creates-bro"
+    },
+    {
+      "run": 7,
+      "score": 0.97,
+      "problem_id": "why-does-regulatory-capture-occur-systematically-even-in-ins"
+    },
+    {
+      "run": 7,
+      "score": 0.915,
+      "problem_id": "how-does-economic-inequality-propagate-across-generations-de"
+    },
+    {
+      "run": 7,
+      "score": 0.985,
+      "problem_id": "what-structural-features-make-market-economies-vulnerable-to"
+    },
+    {
+      "run": 7,
+      "score": 0.909,
+      "problem_id": "why-do-markets-consistently-underprovide-public-goods-even-w"
+    }
+  ]
 }

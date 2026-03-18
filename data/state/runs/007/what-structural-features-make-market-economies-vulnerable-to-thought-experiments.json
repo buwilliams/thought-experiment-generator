@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-make-market-economies-vulnerable-to",
+  "conjecture_id": "thought-experiments",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal threshold structure under which slight popularity sensitivity actually tips a market from ordinary competition into durable concentration? The conjecture says even small sensitivity can matter, but leaves open whether winner-take-all requires specific combinations or strengths of feedbacks (popularity bias, scale economies, network effects, switching costs, attention limits), and which of these are load-bearing versus merely accelerants.",
+      "score": 0.96
+    },
+    {
+      "text": "How robust is path-dependent dominance to later quality differences or entry by superior rivals? The conjecture implies early contingent leads can harden into durable dominance, but an unresolved question is when self-reinforcing accumulation overwhelms genuine merit and when better products can still dislodge incumbents. This is central for distinguishing temporary concentration from structurally locked-in winner-take-all outcomes.",
+      "score": 0.93
+    },
+    {
+      "text": "Which interventions can break self-reinforcing accumulation without destroying the productive benefits of scale, learning, and coordination? If concentration arises from internal market dynamics rather than only misconduct, the open problem is to identify leverage points—interoperability, portability, ranking design, switching-cost reduction, data access, antitrust thresholds—that alter feedback loops while preserving efficiency gains.",
+      "score": 0.95
+    }
+  ]
+}

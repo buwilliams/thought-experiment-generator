@@ -1,0 +1,34 @@
+# Generated: why-do-markets-consistently-underprovide-public-goods-even-w × historical-genesis
+
+## Conjecture
+
+**Conjecture:** Markets underprovide public goods not because “preference aggregation fails” in the abstract, but because markets are an institutional solution to an older problem — coordinating *excludable, rival exchange between strangers* — and they inherit that origin’s core constraint: payment must be tied to individually appropriable benefit. Public goods violate that constraint, so the market systematically treats widespread benefit without exclusion as informationally and financially non-actionable.
+
+The origin story matters. Markets evolved and were refined to solve a specific coordination problem: how can people who do not share trust, kinship, or central direction still specialize and trade? Prices emerged as a way to compress local knowledge about marginal, ownable goods into exchange decisions. This replaced direct command, reciprocity, and small-group obligation with impersonal contract. But that replacement brought an unexamined inheritance: only benefits that can be partitioned, withheld, and sold back to specific buyers reliably generate revenue signals.
+
+A public good is precisely the case where that inherited structure breaks. Its benefits are non-excludable and often non-rival. So even if everyone prefers that the good exist, no participant can easily convert that preference into a decisive payment signal, because others’ payment also secures the benefit for them. The issue is not merely “free riders exist”; it is that the market’s core feedback loop was built for a different kind of problem. In ordinary goods, willingness to pay disciplines provision because producer revenue tracks delivered benefit. In public goods, delivered benefit leaks outside the transaction boundary, so the revenue signal detaches from total value created.
+
+What follows is that underprovision is structural, not a contingent moral defect of selfish agents. Even altruistic or far-sighted participants face the same system: each contribution is diluted across all beneficiaries, while each private payment is concentrated on the payer. That asymmetry is load-bearing. Remove exclusion, and the mechanism that markets use to discover and reward production no longer tracks the thing people actually want.
+
+This also illuminates why the standard framing — “markets fail here” — can mislead. It suggests a malfunction relative to the market’s own purpose. But from the origin perspective, markets are succeeding at what they were designed to do: coordinate decentralized exchange where claims can be bounded and enforced. Public goods are not marginal exceptions; they expose the historical narrowness of the exchange form.
+
+So the deeper lesson is: if a society relies on markets as its default epistemic engine for deciding what to produce, it will systematically overlook goods whose value is real but non-appropriable. To provide public goods consistently, one must introduce institutions descended from different origin problems — taxation, collective decision procedures, commons governance, patronage, constitutional obligation — because the missing ingredient is not desire, but a structure that can convert shared benefit into binding contribution.
+
+## Questions
+
+1. 1. Does the explanation stop working if markets are redescribed as a general preference aggregation device rather than as an institution historically shaped to coordinate excludable rival exchange between strangers? — **yes**
+2. 2. If payment were not required to be tied to individually appropriable benefit, would the conjecture lose its reason for predicting systematic underprovision of public goods? — **yes**
+3. 3. Does the conjecture depend on prices being a mechanism for compressing local knowledge about ownable goods rather than a neutral signal of all social value? — **yes**
+4. 4. If a good remained non-excludable but became fully rival, would the conjecture still predict the same structural revenue detachment, or would that change force a revision of the explanation? — **yes**
+5. 5. Would the argument break if widespread benefit outside the transaction boundary could still be reliably captured as producer revenue without exclusion? — **yes**
+6. 6. Is the claim that underprovision is structural rather than a moral defect load-bearing, in the sense that replacing selfish agents with altruistic ones would still leave the core mechanism unchanged? — **yes**
+7. 7. Does the conjecture require the asymmetry that each contribution is diluted across all beneficiaries while each payment is concentrated on the payer, such that removing that asymmetry would remove the explanation? — **yes**
+8. 8. If markets had originally evolved to solve collective provision of non-excludable benefits rather than bounded exchange of ownable goods, would the conjecture no longer explain public goods underprovision? — **yes**
+9. 9. Does the claim that public goods expose the historical narrowness of the exchange form do explanatory work beyond the simpler statement that free riders exist? — **yes**
+10. 10. Would the conclusion that other institutions such as taxation or commons governance are needed cease to follow if markets could convert shared benefit into binding contribution on their own? — **yes**
+
+## Candidate Problems
+
+- Can the conjecture be made explanatorily sharper than standard public-goods theory by identifying a genuinely distinct, load-bearing mechanism in the market form itself—namely that markets are optimized for appropriable exchange among strangers—rather than merely redescribing free-riding and non-excludability in historical language? The open question is what novel predictions this origin-based account makes that orthodox welfare economics does not. (score: 0.94)
+- What institutional forms can systematically convert diffuse, non-appropriable benefit into reliable contribution signals without destroying the decentralized knowledge advantages of markets? This is the central design problem raised by the conjecture: whether taxation, commons governance, patronage, constitutional rules, assurance contracts, or hybrid mechanisms can solve the public-goods problem while preserving epistemic responsiveness and limiting coercive or bureaucratic failure. (score: 0.98)
+- How far does the conjecture generalize beyond textbook public goods to modern economies where exclusion is technologically and legally engineered—through intellectual property, platforms, subscriptions, surveillance, and bundling—and where many goods are partly non-rival or network-based? The unresolved tension is whether markets are structurally narrow in the proposed sense, or whether institutions can endogenously create enough excludability to absorb many apparent public goods. (score: 0.91)

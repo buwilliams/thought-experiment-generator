@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-economic-inequality-propagate-across-generations-de",
+  "conjecture_id": "framework-integration-gap",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Which inherited family-level advantages are actually load-bearing in reproducing inequality, and how can they be distinguished from correlated but non-causal markers? The conjecture names many candidates—knowledge, expectations, networks, health, geography, time control, institutional fit—but its core unresolved problem is identifying the minimal causal set whose alteration would force broad downstream changes rather than merely accompany advantage.",
+      "score": 0.97
+    },
+    {
+      "text": "What would count as a genuinely 'integrated' redistributive intervention that changes the reproductive structure of inequality rather than only relieving current deprivation? The conjecture implies that effective policy must jointly alter developmental pathways, institutional selection, volatility buffering, network access, and political feedback, but leaves open whether such coupling is practically achievable, how to measure it, and where the highest-leverage intervention points are.",
+      "score": 0.95
+    },
+    {
+      "text": "How strong is the claim that institutions actively recognize and amplify encoded class advantage, as opposed to inequality being driven mainly by pre-institutional capability differences or direct wealth effects? This is a major open tension because the conjecture's policy implications differ sharply depending on whether schools, firms, and professions are primarily transmission mechanisms, independent amplifiers, or relatively neutral selectors over already unequal inputs.",
+      "score": 0.89
+    }
+  ]
+}

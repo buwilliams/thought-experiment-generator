@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-regulatory-capture-occur-systematically-even-in-ins",
+  "conjecture_id": "extreme-cases",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "What concrete institutional arrangements can generate genuinely independent regulatory knowledge and operational capacity in complex, fast-moving domains without simply recreating dependence through contractors, secondments, vendor tools, or industry-trained personnel?",
+      "score": 0.96
+    },
+    {
+      "text": "What are the boundary conditions and counterexamples to the conjecture: in which domains does sustained contact not lead to structural capture, and what load-bearing features (e.g. observability, standardization, public data, slow change, adversarial redundancy, independent testing infrastructure) explain the difference?",
+      "score": 0.93
+    },
+    {
+      "text": "How should structural capture be detected and measured empirically, distinguishing epistemic dependence from ordinary consultation or expertise-sharing, so that the theory yields testable indicators rather than a near-tautological claim that all informed regulation is captured?",
+      "score": 0.95
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-economic-inequality-propagate-across-generations-de",
+  "conjecture_id": "computation-as-life",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'computational advantage' be operationalized into a non-hand-wavy, load-bearing causal construct distinct from wealth, education, and social capital? The conjecture depends on this variable doing real explanatory work rather than redescribing familiar correlates of class advantage. The key open problem is to specify measurable components, transmission channels, and predictions that would differ from standard human-capital or cultural-capital models.",
+      "score": 0.97
+    },
+    {
+      "text": "What empirical tests could discriminate whether persistent inequality is driven primarily by replication of family-level informational algorithms versus by external structural constraints such as labor-market power, asset returns, housing scarcity, discrimination, or political capture? The unresolved tension is between a family-centered computational mechanism and broader institutional explanations; without sharp discriminating tests, the conjecture risks absorbing all causes into one metaphor.",
+      "score": 0.95
+    },
+    {
+      "text": "If redistribution fails because it targets stocks rather than replication architecture, which interventions actually rewrite the update rules at scale, and how durable are their effects across generations? This is an open design problem: identifying leverage points that change transmission fidelity, network access, institutional legibility, and adaptive options without being neutralized by advantaged families' counter-adaptation or by system-level feedbacks.",
+      "score": 0.93
+    }
+  ]
+}

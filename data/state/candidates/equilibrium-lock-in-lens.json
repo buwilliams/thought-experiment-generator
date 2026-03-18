@@ -1,0 +1,13 @@
+{
+  "id": "equilibrium-lock-in-lens",
+  "layer": "candidates",
+  "score": 0.988,
+  "rank": 14,
+  "run_count": 1,
+  "problem_coverage": [
+    "why-do-markets-consistently-underprovide-public-goods-even-w"
+  ],
+  "created_at": "2026-03-18T22:01:05.023495829+00:00",
+  "promoted_from": null,
+  "history": []
+}

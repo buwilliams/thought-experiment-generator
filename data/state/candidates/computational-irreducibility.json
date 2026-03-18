@@ -1,11 +1,43 @@
 {
   "id": "computational-irreducibility",
   "layer": "candidates",
-  "score": 0.0,
+  "score": 0.951,
   "rank": 10,
-  "run_count": 0,
-  "problem_coverage": [],
+  "run_count": 1,
+  "problem_coverage": [
+    "what-structural-features-make-market-economies-vulnerable-to",
+    "why-do-markets-consistently-underprovide-public-goods-even-w",
+    "why-does-regulatory-capture-occur-systematically-even-in-ins",
+    "what-determines-whether-technological-disruption-creates-bro",
+    "how-does-economic-inequality-propagate-across-generations-de"
+  ],
   "created_at": "2026-03-18T21:40:45.802488536+00:00",
   "promoted_from": null,
-  "history": []
+  "history": [
+    {
+      "run": 7,
+      "score": 0.912,
+      "problem_id": "what-structural-features-make-market-economies-vulnerable-to"
+    },
+    {
+      "run": 7,
+      "score": 0.97,
+      "problem_id": "why-do-markets-consistently-underprovide-public-goods-even-w"
+    },
+    {
+      "run": 7,
+      "score": 0.979,
+      "problem_id": "why-does-regulatory-capture-occur-systematically-even-in-ins"
+    },
+    {
+      "run": 7,
+      "score": 0.982,
+      "problem_id": "what-determines-whether-technological-disruption-creates-bro"
+    },
+    {
+      "run": 7,
+      "score": 0.912,
+      "problem_id": "how-does-economic-inequality-propagate-across-generations-de"
+    }
+  ]
 }

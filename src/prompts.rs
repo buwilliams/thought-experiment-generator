@@ -24,6 +24,7 @@ pub struct PromptTemplates {
     conjecture_summary: ParsedTemplate,
     ask: ParsedTemplate,
     ask_consolidate: ParsedTemplate,
+    novelty_check: ParsedTemplate,
 }
 
 struct ParsedTemplate {
@@ -49,6 +50,7 @@ impl PromptTemplates {
             conjecture_summary: load_and_parse(PROMPTS_DIR, "conjecture_summary.md")?.into_system_user()?,
             ask: load_and_parse(PROMPTS_DIR, "ask.md")?.into_system_user()?,
             ask_consolidate: load_and_parse(PROMPTS_DIR, "ask_consolidate.md")?.into_system_user()?,
+            novelty_check: load_and_parse(PROMPTS_DIR, "novelty_check.md")?.into_system_user()?,
         })
     }
 
@@ -146,6 +148,14 @@ impl PromptTemplates {
             ("mind_system", mind_system),
             ("conjecture_summary", conjecture_summary),
             ("question", question),
+        ])
+    }
+
+    pub fn novelty_check(&self, mind_system: &str, title: &str, conjecture: &str) -> Prompt {
+        self.novelty_check.apply(&[
+            ("mind_system", mind_system),
+            ("title", title),
+            ("conjecture", conjecture),
         ])
     }
 

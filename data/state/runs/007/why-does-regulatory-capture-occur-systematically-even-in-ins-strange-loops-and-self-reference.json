@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-regulatory-capture-occur-systematically-even-in-ins",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 7,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture distinguish unavoidable epistemic entanglement from true regulatory capture in a non-arbitrary, operational way? If every effective regulator must internalize industry categories to some degree, the open problem is to identify what structural threshold or qualitative change turns necessary modeling into capture, and whether that boundary can be measured across domains.",
+      "score": 0.97
+    },
+    {
+      "text": "Is the claimed strange loop actually necessary for complex regulation, or can alternative institutional architectures generate regulatory knowledge without recursively importing the regulated sector’s self-model? This raises a testable design question: whether independent measurement systems, adversarial model pluralism, outcome-based regulation, or randomized auditing can break the loop rather than merely relocate it.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the load-bearing causal mechanisms by which industry-supplied concepts reshape regulatory cognition and decisions over time? The conjecture is strongest if it can explain the concrete feedback loops—staffing, metrics, legal definitions, consultation routines, forecasting tools, compliance taxonomies—through which dependence accumulates and reproduces itself even under sincere actors and anti-corruption safeguards.",
+      "score": 0.92
+    }
+  ]
+}

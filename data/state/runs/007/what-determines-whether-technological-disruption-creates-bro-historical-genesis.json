@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-technological-disruption-creates-bro",
+  "conjecture_id": "historical-genesis",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized so that 'institutional inheritance,' 'obsolete coordination solution,' and 'bottleneck conversion' are measured distinctly rather than redescribing concentration after the fact? The key open problem is to build a predictive framework that identifies, before diffusion, which inherited institutions are genuinely load-bearing constraints on distributional outcomes and which are epiphenomenal.",
+      "score": 0.95
+    },
+    {
+      "text": "What mechanism determines when a new technology actually dissolves a bottleneck versus merely shifting power to a new chokepoint? The conjecture says broad prosperity occurs when disruption bypasses old bottlenecks faster than incumbents can reassert them, but it leaves unresolved the dynamics of re-centralization: which feedback loops (network effects, regulation, capital intensity, data advantages, standards control) dominate, under what conditions, and why some apparently decentralizing technologies still end in concentrated control.",
+      "score": 0.93
+    },
+    {
+      "text": "How should we distinguish cases where concentration is contingent on legacy institutions from cases where it is imposed by real technological complementarities or physical constraints? This is a major unresolved tension because the conjecture risks overstating institutional causation unless it can explain when centralized compute, scale economies, safety regulation, or coordination complexity are genuinely necessary rather than artifacts of industrial-era assumptions.",
+      "score": 0.91
+    }
+  ]
+}

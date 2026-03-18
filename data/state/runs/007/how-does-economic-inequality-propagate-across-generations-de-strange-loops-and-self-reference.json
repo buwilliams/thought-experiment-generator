@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-economic-inequality-propagate-across-generations-de",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s core distinction between a stock problem and a recursive control problem be made precise enough to test? In particular, what observable mechanisms would show that persistence of inequality is driven more by inherited capacities to model, anticipate, and reshape institutions than by direct transmission of money or assets alone?",
+      "score": 0.96
+    },
+    {
+      "text": "Which specific inherited capacities are genuinely load-bearing in reproducing intergenerational advantage—e.g., legal/financial strategy, institutional trust, social coding, political access, cultural confidence, network position—and how do they interact as a system rather than as a loose list of advantages?",
+      "score": 0.92
+    },
+    {
+      "text": "What interventions would actually break the self-referential loop rather than be absorbed by it? More concretely, can any policy democratize rule-shaping, institutional legibility, and strategic navigation without being rapidly captured, reinterpreted, or converted into new positional advantages by already advantaged groups?",
+      "score": 0.98
+    }
+  ]
+}

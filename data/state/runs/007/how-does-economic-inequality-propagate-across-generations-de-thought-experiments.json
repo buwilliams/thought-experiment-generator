@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-economic-inequality-propagate-across-generations-de",
+  "conjecture_id": "thought-experiments",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'navigational capacity' and 'control over knowledge-rich environments' be specified as a load-bearing causal variable rather than a loose bundle of correlated advantages? The conjecture depends on these stocks being distinct from income, parental education, and neighborhood effects, but it remains open how to define, measure, and test them so that interventions can target the real mechanism rather than proxies.",
+      "score": 0.97
+    },
+    {
+      "text": "What interventions can actually build agency, institutional legibility, stability, and opportunity-conversion capacity at scale without being neutralized by family adaptation or positional competition? The conjecture implies that effective policy must alter feedback loops, not just transfer money, but it is unresolved which structural changes would persistently weaken intergenerational transmission rather than merely shift inequality to new bottlenecks.",
+      "score": 0.95
+    },
+    {
+      "text": "To what extent is persistent inequality in redistributive societies driven by positional scarcity itself versus unequal capacities to navigate institutions? This is a key unresolved tension because the conjecture combines two mechanisms—knowledge/control stocks and scarce gateways—and it is unclear which is more fundamental, whether one can be reduced without the other, or whether advantaged families will always recreate inequality so long as high-value positions remain scarce.",
+      "score": 0.92
+    }
+  ]
+}

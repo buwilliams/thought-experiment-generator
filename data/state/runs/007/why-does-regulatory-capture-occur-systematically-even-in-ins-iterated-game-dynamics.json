@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-regulatory-capture-occur-systematically-even-in-ins",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "What specific structural interventions actually change the repeated-game equilibrium rather than merely adding static constraints? The conjecture says anti-capture rules fail because they do not alter incentives, feedback, dependence, or memory across rounds, but it leaves open which institutional redesigns are genuinely load-bearing: e.g., independent information pipelines, randomized audits, altered career paths, rotating counterparties, public-interest intermediaries, longer accountability horizons, or stronger cross-round penalties. This is the central open problem because without a mechanism-level account of equilibrium-shifting interventions, the conjecture risks being more diagnostic than explanatory.",
+      "score": 0.97
+    },
+    {
+      "text": "Under what conditions does repeated interaction produce beneficial trust and learning rather than tacit collusion? The conjecture treats repeated regulator-firm contact as capture-prone, but many regulatory domains require ongoing cooperation, information exchange, and adaptive interpretation to function at all. The unresolved tension is how to distinguish necessary relational governance from capture, and what variables determine the phase change between productive coordination and public-harming accommodation. This matters because otherwise the conjecture may overgeneralize from repeated interaction to capture without identifying the boundary conditions.",
+      "score": 0.92
+    },
+    {
+      "text": "How can the public or its proxies be made into a credible repeated-game player with comparable strategic memory, observability, and retaliation capacity? The conjecture hinges on the public being too diffuse and noisy to discipline regulators over time, but it leaves open whether this is an immutable feature or a design variable. A major research problem is whether institutions such as civic monitors, adversarial auditors, data transparency systems, class-based representation, or automated performance tracking can create a countervailing long-horizon feedback loop strong enough to compete with industry influence. This is worth pursuing because it directly tests the conjecture’s core asymmetry rather than assuming it.",
+      "score": 0.95
+    }
+  ]
+}

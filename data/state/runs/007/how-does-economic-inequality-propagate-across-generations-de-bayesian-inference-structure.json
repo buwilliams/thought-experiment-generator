@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-economic-inequality-propagate-across-generations-de",
+  "conjecture_id": "bayesian-inference-structure",
+  "run": 7,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s central latent-prior mechanism be operationalized and distinguished empirically from alternative explanations such as direct resource effects, discrimination, assortative mating, neighborhood effects, or simple persistence of human capital? The open problem is whether there exists a measurable, load-bearing decomposition between observed outcomes, hidden priors, and institutional updating that is not just a redescription of inequality persistence.",
+      "score": 0.95
+    },
+    {
+      "text": "What interventions can actually equalize 'priors' or error tolerance without creating new distortions, gaming, or paternalistic overreach? The conjecture implies upstream policies should outperform downstream redistribution, but it remains unresolved which structural levers—cash buffers, early-childhood investment, network access, underwriting reform, school equalization, insurance for failure—change posterior trajectories most durably and cost-effectively.",
+      "score": 0.92
+    },
+    {
+      "text": "To what extent do institutions genuinely update on inherited prior-correlated signals versus using those signals as efficient proxies for real future productivity or risk? This is an unresolved normative and positive question: if some prior-linked signals are predictive, when should institutions be required to discount them, and what are the welfare, fairness, and incentive tradeoffs of doing so?",
+      "score": 0.89
+    }
+  ]
+}

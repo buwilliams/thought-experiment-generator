@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-markets-consistently-underprovide-public-goods-even-w",
+  "conjecture_id": "bayesian-inference-structure",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made load-bearingly distinct from standard public-goods/free-rider theory rather than a redescription in Bayesian language? The open question is whether the 'epistemic failure of inference' framing yields novel predictions, sharper mechanism design criteria, or different empirical diagnostics than the usual claim that non-excludability breaks private incentives. If not, the Bayesian pivot may be explanatory ornament; if yes, what observations would discriminate the two framings?",
+      "score": 0.95
+    },
+    {
+      "text": "What is the correct formal model of 'pivotality' and preference revelation for heterogeneous public goods, especially when contributions affect quality continuously, provision is uncertain, and agents have social, moral, or identity-driven motives? The conjecture currently relies on a low prior of individual pivotality, but many real cases involve threshold effects, repeated interaction, signaling, warm-glow, coalition formation, and partial excludability. The unresolved question is which structural features actually dominate the mapping from 'values outcome' to 'pays now,' and when low pivotality is the main bottleneck versus a secondary one.",
+      "score": 0.91
+    },
+    {
+      "text": "Which institutional mechanisms genuinely improve information extraction about social value, rather than merely subsidizing contribution or shifting coercively to another allocation rule? The conjecture groups taxation, matching, assurance contracts, subscription thresholds, and quadratic funding as changes to the inference environment, but these mechanisms differ radically in what information they elicit, what strategic distortions they introduce, and how robust they are to collusion, inequality, and preference intensity misreporting. A key open problem is to characterize when a mechanism makes latent conditional preferences legible versus when it just replaces market signals with administrative or political ones.",
+      "score": 0.93
+    }
+  ]
+}

@@ -118,6 +118,12 @@ pub enum Command {
     /// List all problem sets and their contents
     ListProblemsets,
 
+    /// Check all conjectures for novelty — are they restatements of known theories?
+    NoveltyCheck,
+
+    /// Show score trajectory across all runs and per-conjecture score history
+    Trajectory,
+
     /// Add a new conjecture to the mind or candidates layer
     AddConjecture {
         /// Target layer: "mind" or "candidates"
@@ -196,6 +202,15 @@ async fn main() -> Result<()> {
 
         Command::Read => {
             teg::runner::read(&config).await?;
+        }
+
+        Command::NoveltyCheck => {
+            let templates = teg::prompts::PromptTemplates::load()?;
+            teg::novelty::check(client, &config, &templates).await?;
+        }
+
+        Command::Trajectory => {
+            teg::trajectory::report()?;
         }
 
         Command::CreateProblemset { text, file } => {

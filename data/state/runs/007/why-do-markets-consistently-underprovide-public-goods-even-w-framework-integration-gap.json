@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-markets-consistently-underprovide-public-goods-even-w",
+  "conjecture_id": "framework-integration-gap",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What is the precise, non-metaphorical notion of 'coupling' between micro-level valuations and macro-level provision, and how can its strength be measured across institutions? The conjecture is suggestive but currently underdefined: without an operational account, it is unclear when a mechanism genuinely repairs the mapping from preferences to provision versus merely changes payoffs superficially.",
+      "score": 0.96
+    },
+    {
+      "text": "Does the conjecture explain anything beyond standard public-goods theory, or is it a redescription of free-riding, non-excludability, and mechanism-design constraints? The open question is whether the 'integration between layers of description' yields new predictions, classifications, or institutional design principles that orthodox models miss.",
+      "score": 0.92
+    },
+    {
+      "text": "How far does the analogy to the cosmological constant problem carry explanatory load, and where does it break? This matters because the conjecture leans on a cross-domain structural similarity; if the analogy is not load-bearing, it may obscure rather than clarify the institutional problem. A worthwhile problem is to identify the exact shared structure, if any, between weak aggregation in public-goods provision and weak coupling in physics.",
+      "score": 0.78
+    }
+  ]
+}

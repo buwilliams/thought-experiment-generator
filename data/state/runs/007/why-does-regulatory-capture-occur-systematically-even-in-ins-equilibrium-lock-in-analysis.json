@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-regulatory-capture-occur-systematically-even-in-ins",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the minimal load-bearing conditions that distinguish a true lock-in equilibrium from simpler stories about corruption, weak safeguards, or generic lobbying power? The conjecture claims dependence on industry-supplied inputs is structurally self-reproducing, but it remains open which dependencies are actually necessary and jointly sufficient: information asymmetry, concentrated stakes, political budget constraints, revolving-door careers, implementation dependence, or agenda-setting power. Clarifying this matters because if some elements are not load-bearing, the conjecture overstates lock-in and misidentifies leverage points.",
+      "score": 0.95
+    },
+    {
+      "text": "Can credible, collectively financed substitutes for industry-supplied expertise and cooperation actually be built without recreating capture in a new form? The conjecture treats independent public capacity as the main escape route, but this raises an unresolved design problem: how to generate expertise, real-time information, implementation knowledge, and career attractiveness at competitive quality and speed while preventing the substitute institutions themselves from becoming dependent on the same firms, partisan patrons, or professional monocultures. This is a central open question because the conjecture's reform program depends on it.",
+      "score": 0.98
+    },
+    {
+      "text": "Under what conditions do anti-capture reforms change the equilibrium rather than merely shifting capture into less visible channels? The conjecture argues that transparency rules, ethics constraints, and revolving-door limits often cause capture to mutate rather than disappear, but it leaves open how to predict mutation paths and identify reforms that are genuinely equilibrium-breaking. This is worth exploring because without a theory of adaptation, structural reform may produce symbolic independence, procedural slowdown, or displacement of influence into standards-setting, consulting networks, litigation, or informal expertise markets.",
+      "score": 0.93
+    }
+  ]
+}

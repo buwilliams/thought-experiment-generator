@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-make-market-economies-vulnerable-to",
+  "conjecture_id": "framework-integration-gap",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.5,
+  "total": 0.635,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized into a measurable 'integration loss' between local value creation and system-wide reward allocation, distinct from ordinary inequality or productivity dispersion? The central unresolved tension is definitional and empirical: without a way to identify the mapping from distributed contributions to income, ownership, and influence, the conjecture risks redescribing winner-take-all outcomes rather than explaining them. A worthwhile problem is to specify observables, causal signatures, and counterfactual tests that distinguish cross-layer amplification from benign scale efficiency.",
+      "score": 0.97
+    },
+    {
+      "text": "Which proposed load-bearing mechanisms are actually necessary or sufficient for winner-take-all dynamics, and under what boundary conditions do they fail to produce dominance? The conjecture lists increasing returns, network effects, low marginal costs, capital feedback, ownership concentration, and political endogeneity, but leaves unresolved whether these are alternative pathways, jointly required complements, or merely correlated features. Exploring their causal structure would clarify whether winner-take-all outcomes arise from one dominant bottleneck or from a tightly coupled system whose parts only matter in combination.",
+      "score": 0.94
+    },
+    {
+      "text": "What balancing-loop interventions can weaken cross-layer amplification without destroying the productive benefits of scale, networks, and low marginal cost? The conjecture implies that the problem is not large rewards per se but missing reciprocal constraints, yet it remains open which institutional changes—antitrust, interoperability, labor power, taxation, broad ownership, data portability, public options—alter the system at high-leverage points rather than just shifting symptoms. This is a significant design problem because the same structures that generate concentration may also generate real value, so the unresolved tension is how to restore feedback and accountability without suppressing innovation or coordination gains.",
+      "score": 0.96
+    }
+  ]
+}

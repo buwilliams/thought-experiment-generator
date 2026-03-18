@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-technological-disruption-creates-bro",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 7,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can 'distributed recursive representation' be operationalized and measured in a way that distinguishes it from adjacent factors like competition, redistribution, education, or formal political rights? The conjecture’s core explanatory term is powerful but underspecified; without a load-bearing metric, it is unclear whether it predicts prosperity better than existing institutional variables.",
+      "score": 0.95
+    },
+    {
+      "text": "What causal mechanisms make participation in the system’s self-model translate into broad prosperity rather than merely symbolic inclusion or slower decision-making? The conjecture implies that authorship of models, governance, and standards changes bargaining power and distribution, but the specific channels, thresholds, and failure modes remain open.",
+      "score": 0.91
+    },
+    {
+      "text": "Under what conditions does centralized self-awareness outperform distributed self-awareness, or vice versa, across different technological regimes? The conjecture risks overgeneralizing unless it explains when concentration of modeling and coordination is temporarily necessary for innovation, scale, security, or crisis response, and when that concentration becomes self-reinforcing extraction.",
+      "score": 0.88
+    }
+  ]
+}

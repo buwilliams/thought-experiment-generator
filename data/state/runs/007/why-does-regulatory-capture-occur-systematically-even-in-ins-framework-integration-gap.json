@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-regulatory-capture-occur-systematically-even-in-ins",
+  "conjecture_id": "framework-integration-gap",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can a regulator acquire genuinely independent knowledge in complex domains without recreating dependence elsewhere or losing the domain-specific expertise needed to act? The conjecture identifies knowledge production as the load-bearing constraint, but leaves open what institutional architectures actually break epistemic dependence rather than merely shifting it to consultants, peer networks, academia, or other quasi-industry channels.",
+      "score": 0.96
+    },
+    {
+      "text": "What empirical signatures would distinguish this structural-coupling theory of capture from rival explanations such as weak enforcement, corruption, ideology, or simple resource asymmetry? The conjecture is strong only if it yields discriminating predictions about when capture should persist, intensify, or recede under different institutional designs.",
+      "score": 0.94
+    },
+    {
+      "text": "Is some degree of regulator–industry coupling irreducible in high-complexity systems, implying a tradeoff between anti-capture independence and regulatory effectiveness, adaptability, or innovation? If so, the open problem is not eliminating capture but designing feedback structures that keep dependence corrigible and contestable.",
+      "score": 0.91
+    }
+  ]
+}

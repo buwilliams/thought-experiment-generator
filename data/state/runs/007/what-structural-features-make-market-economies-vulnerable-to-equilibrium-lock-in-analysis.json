@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-make-market-economies-vulnerable-to",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions distinguish benign scale economies from true lock-in that produces collectively harmful winner-take-all concentration? The conjecture bundles increasing returns, network effects, data advantages, switching costs, and attention dynamics, but leaves open which combinations are necessary, sufficient, or threshold-dependent for tipping into persistent concentration rather than vigorous competition.",
+      "score": 0.96
+    },
+    {
+      "text": "How can collectively preferred but individually irrational escape from concentrated equilibria actually be achieved without destroying the benefits of scale and coordination? The conjecture points to interoperability, portability, anti-bundling, and limits on data advantage, but the unresolved problem is identifying mechanisms that change best responses enough to enable migration while preserving innovation, quality, and investment incentives.",
+      "score": 0.94
+    },
+    {
+      "text": "How should 'collectively harmful' concentration be defined and measured in these systems, especially when users, sellers, and investors may each rationally benefit in the short run from dominance? The conjecture assumes a welfare gap between decentralized equilibrium and a less concentrated structure, but leaves open how to detect that gap, for whom it exists, and over what time horizon.",
+      "score": 0.89
+    }
+  ]
+}

@@ -184,3 +184,11 @@ pub struct SummaryResponse {
 pub struct DeduplicateResponse {
     pub remove: Vec<String>,
 }
+
+#[derive(Debug, Deserialize)]
+pub struct NoveltyResponse {
+    pub is_novel: bool,
+    pub novelty_score: f64,
+    pub closest_analog: Option<String>,
+    pub explanation: String,
+}

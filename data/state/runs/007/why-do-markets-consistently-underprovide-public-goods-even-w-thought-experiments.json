@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-markets-consistently-underprovide-public-goods-even-w",
+  "conjecture_id": "thought-experiments",
+  "run": 7,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.9,
+  "total": 0.9179999999999999,
+  "candidate_problems": [
+    {
+      "text": "How general is excludability as the single load-bearing variable? The conjecture isolates excludability while holding wealth, information, and transaction costs favorable, but it remains open whether underprovision can be derived from excludability alone across all public-good settings, or whether other structural variables—especially assurance, threshold effects, group size, repeated interaction, and heterogeneity of valuations—are independently load-bearing and can overturn or substantially weaken the result.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly counts as a restored coupling between contribution and benefit, and which institutional mechanisms genuinely solve the signal problem rather than merely shifting it? The conjecture groups taxation, clubs, patronage, norms, and other institutions together, but an unresolved question is whether these mechanisms work by recreating excludability, by changing incentives through coercion or reputation, by solving assurance problems, or by generating entirely different knowledge and coordination signals than prices do.",
+      "score": 0.93
+    },
+    {
+      "text": "How should 'underprovision' be defined and measured when willingness-to-pay is itself structurally distorted? The conjecture claims producers observe insufficient revenue rather than insufficient value, but this raises an open epistemic problem: if market prices cannot reveal collective value for non-excludable goods, what alternative procedure can identify the efficient or preferred provision level without circularly presupposing the answer?",
+      "score": 0.97
+    }
+  ]
+}

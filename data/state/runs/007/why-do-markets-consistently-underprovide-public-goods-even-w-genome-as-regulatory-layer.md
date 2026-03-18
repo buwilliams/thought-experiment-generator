@@ -1,0 +1,36 @@
+# Generated: why-do-markets-consistently-underprovide-public-goods-even-w × genome-as-regulatory-layer
+
+## Conjecture
+
+**Conjecture:** Markets underprovide public goods because prices function like a genome in the wrong interpretive environment: they are a compact signaling layer that evolved to coordinate rival, excludable goods through local exchange, but public goods require a different developmental control system — institutions that can read diffuse benefits, enforce contribution, and stabilize long-horizon coordination. The failure is not mainly insufficient preference intensity; it is a mismatch between the information-bearing component and the interpreter system needed to make that information actionable.
+
+From this perspective, the key question is: **what problem did market pricing originally solve?** It solved decentralized coordination where use can be partitioned, ownership assigned, and feedback made local via profit and loss. A price is meaningful only because there exists an interpreter structure: property rights, contracts, exclusion, accounting, and firms capable of responding to revenue signals. That whole system turns willingness to pay into production decisions.
+
+Public goods break this interpreter relation. Their benefits are non-rival and non-excludable, so the usual decoding machinery fails. Individual willingness to pay does not map cleanly into demand because each participant can wait for others to contribute while still receiving the benefit. So the issue is not that the information “people want this” is absent; rather, it is **not legible in a form the market’s control architecture can use**. Prices for public goods are like regulatory signals without receptors.
+
+What follows is that underprovision is structurally produced, not an accidental moral defect. The market’s feedback loops reward producers only where returns can be privately captured. For public goods, benefit flows outward while revenue capture leaks away. In systems terms, positive social value does not close into a reinforcing loop for any one supplier. So even universal preference for provision does not generate provision.
+
+This also explains why merely “adding more information” — surveys, preference revelation, moral appeals — usually does little. In a developmental system, encoded signals matter only if downstream machinery can interpret and act on them. Public-good provision therefore depends on **layered regulation**: taxation, compulsory contributions, civic norms, reputation systems, state capacity, constitutional rules, and measurement regimes. These are not external patches on an otherwise complete market blueprint; they are higher-order control layers that make collective preference developmentally effective.
+
+The load-bearing claim is: **without an enforcing and aggregating interpreter, preference for a public good remains causally inert in market exchange**. Change that one element — create a credible tax authority, a club mechanism, or enforceable cooperative institution — and behavior changes systemically. Leave it out, and no amount of raw preference aggregation fixes the problem.
+
+So the illumination is this: markets do not underprovide public goods because they are bad at satisfying wants in general, but because they are specialized informational systems whose native semantics fit private goods. Public goods require a different evolved interpreter stack.
+
+## Questions
+
+1. 1. Does the conjecture require that prices only coordinate production when property rights, exclusion, contracts, accounting, and responsive firms are present as the interpreter stack, rather than prices working on their own for public goods too? — **yes**
+2. 2. If public goods could be made excludable through a club mechanism, does the conjecture predict that market underprovision should diminish because the interpreter relation is partially restored? — **yes**
+3. 3. Is the claim that universal preference for a public good still fails to produce provision load-bearing, such that replacing it with merely weak or divided preference would weaken the explanation rather than leave it intact? — **yes**
+4. 4. Does the conjecture depend on the specific contrast between local profit and loss feedback for private goods and diffuse benefit leakage for public goods, rather than on a generic claim that markets sometimes miss social value? — **yes**
+5. 5. If surveys or preference revelation tools were added without any enforcement or compulsory contribution mechanism, does the conjecture say provision should still usually fail because the control architecture cannot act on the information? — **yes**
+6. 6. Is the claim that the main failure is not insufficient preference intensity essential, so that changing the explanation to one about weak demand would alter what the conjecture explains? — **yes**
+7. 7. Does the genome and interpretive environment analogy commit the conjecture to saying that the same price signal can succeed or fail depending on institutional receptors, rather than prices intrinsically containing enough meaning to solve public-good provision? — **yes**
+8. 8. Must taxation, compulsory contributions, civic norms, reputation systems, state capacity, constitutional rules, and measurement regimes be understood as higher-order control layers rather than optional add-ons if the conjecture is to explain persistent underprovision? — **yes**
+9. 9. If a producer could privately capture most of the social returns from a public good despite non-rival benefits, does the conjecture predict that the reinforcing loop would close and underprovision would no longer be the default? — **yes**
+10. 10. Does the conjecture specifically explain consistency of underprovision by claiming a structural mismatch between information-bearing prices and the interpreter needed for public goods, rather than by appealing mainly to selfishness or moral defect? — **yes**
+
+## Candidate Problems
+
+- How far does the 'price as genome, institutions as interpreter' analogy generate novel, testable distinctions beyond standard public-goods theory? The key unresolved tension is whether this is a deep explanatory advance or a redescription of familiar facts about non-excludability, free-riding, and missing enforcement. Worth exploring by asking what phenomena the interpreter model predicts that preference-intensity or mechanism-design accounts do not. (score: 0.95)
+- What exactly counts as the minimal 'interpreter stack' required to make diffuse social benefits causally effective, and how can its components be decomposed? The conjecture bundles taxation, norms, reputation, state capacity, constitutional rules, and measurement into one higher-order control layer, but it remains open which elements are load-bearing, substitutable, or sufficient under different classes of public goods. (score: 0.92)
+- Are public and private goods really separated by different informational semantics, or is there a continuum where markets can partially internalize public-good benefits through alternative interpreter structures such as clubs, platforms, IP, insurance, or network governance? This matters because the conjecture may overstate a categorical mismatch where the real problem is institutional evolvability and boundary design. (score: 0.88)

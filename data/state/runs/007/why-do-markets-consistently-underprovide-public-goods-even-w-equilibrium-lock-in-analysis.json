@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-markets-consistently-underprovide-public-goods-even-w",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 7,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 1.0,
+  "total": 0.988,
+  "candidate_problems": [
+    {
+      "text": "How can we rigorously distinguish true equilibrium lock-in from contingent coordination failures in real public-goods settings? The conjecture claims the obstacle is structural rather than informational or motivational, but the key unresolved question is what observable signatures, comparative statics, or intervention tests would separate a load-bearing incentive trap from cases where trust, salience, leadership, or transaction costs are the main bottlenecks.",
+      "score": 0.96
+    },
+    {
+      "text": "Which institutional changes genuinely alter the game rather than merely improving behavior within the same equilibrium? The conjecture lists taxation, bundling, repeated-game enforcement, and assurance mechanisms, but leaves open a deeper design problem: what minimal structural modifications are sufficient to move a system from underprovision to stable provision, and under what conditions do these mechanisms fail or create new pathologies such as coercion, capture, or exclusion?",
+      "score": 0.94
+    },
+    {
+      "text": "Are non-excludability and diffuse benefit jointly sufficient to explain underprovision, or are additional structural variables load-bearing? The conjecture treats these two features as central, but important open questions remain about threshold effects, heterogeneity of valuations, network structure, repeated interaction, norms, and technological changes that can partially excludabilize goods. Exploring when these factors overturn or weaken the lock-in claim would test the conjecture's explanatory scope.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-regulatory-capture-occur-systematically-even-in-ins",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 7,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 1.0,
+  "total": 0.988,
+  "candidate_problems": [
+    {
+      "text": "Which specific feedback loops are actually load-bearing across sectors, and under what conditions do they dominate alternative explanations of capture? The conjecture posits information dependence, access/attention, career circulation, and accountability asymmetry as the core mechanism, but it remains open whether all are necessary, whether some are sufficient, and how their relative strength varies in finance, pharma, utilities, tech, etc. Turning this into a comparative problem would test whether 'capture as attractor' is a robust explanatory structure or an overgeneralized narrative.",
+      "score": 0.95
+    },
+    {
+      "text": "What concrete institutional redesigns can change the regulator-industry system's feedback structure without destroying regulatory competence or adaptability? The conjecture recommends diversifying knowledge supply, building durable public counter-parties, altering career pathways, and changing performance metrics, but it is unresolved which interventions shift the attractor rather than being absorbed by it, and what tradeoffs they create in speed, expertise, legitimacy, and crisis response.",
+      "score": 0.98
+    },
+    {
+      "text": "How can capture be operationalized and measured as an emergent system property rather than as corruption, bias, or isolated bad decisions? If the core claim is structural convergence, then a major open problem is defining observable indicators of convergence, accommodation, or incumbent-framed stability that distinguish true capture from legitimate learning, technical deference, or welfare-enhancing coordination. Without this, the conjecture lacks a sharp empirical test and risks becoming unfalsifiable.",
+      "score": 0.97
+    }
+  ]
+}

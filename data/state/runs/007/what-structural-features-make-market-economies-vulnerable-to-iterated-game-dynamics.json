@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-make-market-economies-vulnerable-to",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "What precise structural threshold separates healthy cumulative advantage from self-reinforcing winner-take-all concentration? The conjecture names interacting mechanisms—increasing returns, network effects, lock-in, opacity, horizon asymmetry, centralized intermediation—but leaves unresolved whether there is a general tipping condition, measurable parameter regime, or phase transition that predicts when asymmetric repetition becomes dominance rather than productive specialization.",
+      "score": 0.95
+    },
+    {
+      "text": "Can reputation and repeated interaction be decoupled from centralized platforms without destroying the cooperative benefits of market memory? The conjecture proposes portability, interoperability, and preventing platforms from monopolizing reputation systems, but it is unresolved whether decentralized or portable reputation can remain trustworthy, manipulation-resistant, privacy-preserving, and economically useful at scale.",
+      "score": 0.91
+    },
+    {
+      "text": "Which interventions actually redistribute the shadow of the future rather than merely shifting advantage to different incumbents or reducing innovation? The conjecture recommends structural remedies, but an open question is how anti-lock-in, transparency, interoperability, and portability interact dynamically with investment incentives, quality competition, and new forms of strategic gaming, and whether some remedies worsen concentration under certain market structures.",
+      "score": 0.93
+    }
+  ]
+}

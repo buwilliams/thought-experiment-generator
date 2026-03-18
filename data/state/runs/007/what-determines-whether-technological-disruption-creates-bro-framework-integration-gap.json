@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-technological-disruption-creates-bro",
+  "conjecture_id": "framework-integration-gap",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'integration strength' between the innovation layer and the distribution layer be defined in a non-metaphorical, load-bearing way that yields testable predictions? The conjecture hinges on this variable, but it remains unclear what observable structure constitutes strong vs weak integration, how to measure it across sectors or countries, and which components are causally indispensable rather than a loose bundle of correlated institutions.",
+      "score": 0.97
+    },
+    {
+      "text": "What are the dominant causal mechanisms by which specific technologies alter bargaining power, ownership concentration, and public capacity, independent of preexisting institutions? The conjecture says technology matters less than integration, yet also claims technical design affects labor complementarity and concentration. The unresolved tension is how much distributional outcome is structurally downstream of institutions versus built into the affordances of particular technologies.",
+      "score": 0.93
+    },
+    {
+      "text": "Which institutional couplings are genuinely high-leverage and generative, rather than compensatory after-the-fact redistribution? The conjecture treats tax, antitrust, labor law, education, housing, and infrastructure as part of one effective theory, but it is unresolved which links are actually load-bearing, how they interact as a system, and whether there are threshold effects where small structural changes reliably shift an economy from concentrated gains to broad prosperity.",
+      "score": 0.95
+    }
+  ]
+}

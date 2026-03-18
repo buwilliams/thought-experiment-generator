@@ -5,9 +5,9 @@
       "meta": {
         "id": "why-do-markets-consistently-underprovide-public-goods-even-w",
         "source": "user",
-        "score": 0.0,
+        "score": 0.9573636363636363,
         "rank": 1,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:35:33.818219416+00:00"
       },
       "title": "Why do markets consistently underprovide public goods even when all participants",
@@ -18,9 +18,9 @@
       "meta": {
         "id": "how-does-economic-inequality-propagate-across-generations-de",
         "source": "user",
-        "score": 0.0,
+        "score": 0.9412,
         "rank": 2,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:35:33.927824298+00:00"
       },
       "title": "How does economic inequality propagate across generations despite the presence o",
@@ -31,9 +31,9 @@
       "meta": {
         "id": "what-structural-features-make-market-economies-vulnerable-to",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8120909090909091,
         "rank": 3,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:35:34.026882867+00:00"
       },
       "title": "What structural features make market economies vulnerable to winner-take-all dyn",
@@ -44,9 +44,9 @@
       "meta": {
         "id": "why-does-regulatory-capture-occur-systematically-even-in-ins",
         "source": "user",
-        "score": 0.0,
+        "score": 0.9052999999999999,
         "rank": 4,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:35:34.126063737+00:00"
       },
       "title": "Why does regulatory capture occur systematically even in institutions explicitly",
@@ -57,16 +57,55 @@
       "meta": {
         "id": "what-determines-whether-technological-disruption-creates-bro",
         "source": "user",
-        "score": 0.0,
+        "score": 0.956,
         "rank": 5,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:35:34.227289645+00:00"
       },
       "title": "What determines whether technological disruption creates broad prosperity or con",
       "summary": "What determines whether technological disruption creates broad prosperity or concentrated gains?",
       "full_text": "What determines whether technological disruption creates broad prosperity or concentrated gains?"
+    },
+    {
+      "meta": {
+        "id": "what-concrete-institutional-redesigns-can-change-the-regulat",
+        "source": "system",
+        "score": 0.0,
+        "rank": 6,
+        "run_count": 0,
+        "created_at": "2026-03-18T22:00:59.864310401+00:00"
+      },
+      "title": "What concrete institutional redesigns can change the regulator-industry system's",
+      "summary": "What concrete institutional redesigns can change the regulator-industry system's feedback structure without destroying regulatory competence or adaptability? The conjecture recommends diversifying kno",
+      "full_text": "What concrete institutional redesigns can change the regulator-industry system's feedback structure without destroying regulatory competence or adaptability? The conjecture recommends diversifying knowledge supply, building durable public counter-parties, altering career pathways, and changing performance metrics, but it is unresolved which interventions shift the attractor rather than being absorbed by it, and what tradeoffs they create in speed, expertise, legitimacy, and crisis response."
+    },
+    {
+      "meta": {
+        "id": "under-what-conditions-can-coordination-breaking-reforms-beco",
+        "source": "system",
+        "score": 0.0,
+        "rank": 7,
+        "run_count": 0,
+        "created_at": "2026-03-18T22:00:59.864383611+00:00"
+      },
+      "title": "Under what conditions can coordination-breaking reforms become individually and ",
+      "summary": "Under what conditions can coordination-breaking reforms become individually and politically viable despite the equilibrium lock-in? The conjecture explains why actors cannot safely move first, but lea",
+      "full_text": "Under what conditions can coordination-breaking reforms become individually and politically viable despite the equilibrium lock-in? The conjecture explains why actors cannot safely move first, but leaves open the central transition problem: what mechanisms, institutions, or sequencing strategies could shift the system from one equilibrium to another without imposing unacceptable local losses on first movers. This is a significant open question because without a credible account of transition dynamics, the conjecture risks being diagnostically strong but programmatically weak."
+    },
+    {
+      "meta": {
+        "id": "what-are-the-boundary-conditions-under-which-repeated-intera",
+        "source": "system",
+        "score": 0.0,
+        "rank": 8,
+        "run_count": 0,
+        "created_at": "2026-03-18T22:00:59.864472571+00:00"
+      },
+      "title": "What are the boundary conditions under which repeated interaction fails to produ",
+      "summary": "What are the boundary conditions under which repeated interaction fails to produce broad prosperity because power asymmetries, lock-in, or collusion dominate? The conjecture suggests iteration encoura",
+      "full_text": "What are the boundary conditions under which repeated interaction fails to produce broad prosperity because power asymmetries, lock-in, or collusion dominate? The conjecture suggests iteration encourages surplus-sharing, but repeated games can also stabilize exploitation, monopsony, cartel behavior, and exclusion if weaker parties lack credible exit or punishment options."
     }
   ],
-  "run_count": 0,
+  "run_count": 1,
   "created_at": "2026-03-18T21:35:24.481119160+00:00"
 }

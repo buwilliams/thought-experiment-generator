@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-technological-disruption-creates-bro",
+  "conjecture_id": "extreme-cases",
+  "run": 7,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-tautological and operationalized into falsifiable measures? The core tension is that 'broad prosperity occurs when replication and adaptation outrun bottleneck capture' risks redescribing the outcome rather than predicting it. A worthwhile problem is to define ex ante metrics for 'widely copyable,' 'decisive complement,' 'bottlenecked,' and the three loops, so the conjecture can generate risky predictions across technologies before distributional outcomes are known.",
+      "score": 0.98
+    },
+    {
+      "text": "What determines whether a complement is truly decisive, non-substitutable, and durable versus only temporarily scarce? The conjecture hinges on identifying the post-disruption load-bearing bottleneck, but in real systems complements can be endogenous, layered, and transformed by innovation, policy, and organizational change. A key open question is how to model complement substitution and bottleneck migration over time, including when apparent chokepoints like data, compute, regulation, or distribution are eroded by new architectures.",
+      "score": 0.95
+    },
+    {
+      "text": "Under what conditions do adaptation institutions diffuse gains fast enough to overcome concentrated control, and when do they instead reinforce capture? The conjecture treats education, interoperability, infrastructure, and market structure as levers, but leaves unresolved the causal interaction between institutional adaptation and bottleneck ownership. A strong research problem is to explain when policy and institutions genuinely accelerate diffusion versus becoming new chokepoints themselves through licensing, compliance burdens, incumbent advantage, or platform-mediated access.",
+      "score": 0.92
+    }
+  ]
+}

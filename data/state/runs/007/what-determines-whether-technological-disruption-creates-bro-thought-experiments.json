@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-technological-disruption-creates-bro",
+  "conjecture_id": "thought-experiments",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made causally discriminating rather than descriptive: what observable mechanisms would distinguish 'epistemic openness' as the main driver of broad prosperity from rival explanations such as capital intensity, economies of scale, network effects, regulation, or complementary asset concentration?",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly counts as 'widely transmissible and institutionally contestable' knowledge in a load-bearing sense, and how can it be operationalized? In particular, where is the threshold at which enough actors can copy, recombine, and improve a technology for system-level distributional outcomes to change?",
+      "score": 0.92
+    },
+    {
+      "text": "What institutional arrangements best widen error-correcting participation without undermining the incentives and coordination needed to create the technology in the first place? This is the unresolved design tension between openness as a generative commons and enclosure as a possible support for investment, quality control, and large-scale deployment.",
+      "score": 0.9
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-technological-disruption-creates-bro",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can 'iterated, legible, and reputation-sensitive' be operationalized in a way that distinguishes genuine repeated-game discipline from superficial proxies like branding, PR visibility, or nominal long-term contracts? The conjecture depends on these properties being load-bearing, but it remains unresolved which measurable structural features actually lengthen the shadow of the future and which merely simulate accountability.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the boundary conditions under which repeated interaction fails to produce broad prosperity because power asymmetries, lock-in, or collusion dominate? The conjecture suggests iteration encourages surplus-sharing, but repeated games can also stabilize exploitation, monopsony, cartel behavior, and exclusion if weaker parties lack credible exit or punishment options.",
+      "score": 0.98
+    },
+    {
+      "text": "What causal role does the state play: is it an external enforcer that creates legibility and long horizons, or is it itself another player whose incentives can be captured by one-shot extraction? The conjecture invokes institutions like antitrust, portable benefits, and tax rules, but leaves open whether broad prosperity requires a prior political game that is already iterated and reputation-sensitive.",
+      "score": 0.93
+    }
+  ]
+}

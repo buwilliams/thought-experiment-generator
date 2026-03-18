@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-make-market-economies-vulnerable-to",
+  "conjecture_id": "historical-genesis",
+  "run": 7,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions are jointly sufficient or necessary for inherited coordination mechanisms to tip a market from efficient scaling into runaway winner-take-all dominance? The conjecture names several reinforcing features, but leaves unresolved their threshold behavior, interaction effects, and whether any one feature is load-bearing versus merely accelerative.",
+      "score": 0.95
+    },
+    {
+      "text": "Which kinds of friction are genuinely dispersal-preserving rather than merely wasteful, and how can institutions reintroduce or redesign them without destroying the original coordination benefits of standardization, trust, and scale? This is the central policy tension left open by the conjecture’s claim that friction reduction is not unambiguously good.",
+      "score": 0.93
+    },
+    {
+      "text": "How historically contingent is the link between market-building institutions and winner-take-all outcomes: are these dominance dynamics an unavoidable consequence of solving coordination at scale, or do alternative institutional designs exist that preserve comparability and trust while preventing cumulative advantage from compounding across domains?",
+      "score": 0.91
+    }
+  ]
+}

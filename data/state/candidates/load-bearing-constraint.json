@@ -1,8 +1,8 @@
 {
   "id": "load-bearing-constraint",
-  "layer": "mind",
+  "layer": "candidates",
   "score": 0.9191333333333332,
-  "rank": 5,
+  "rank": 14,
   "run_count": 5,
   "problem_coverage": [
     "what-makes-an-explanation-hard-to-vary",
