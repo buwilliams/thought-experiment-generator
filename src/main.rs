@@ -1,66 +1,82 @@
-use std::io::{self, IsTerminal, Read, Write};
+use std::io::{self, IsTerminal, Read};
 use std::sync::Arc;
 
 use anyhow::Result;
-use clap::Parser;
+use clap::{Parser, Subcommand};
 use tracing_subscriber::EnvFilter;
 
 use teg::config::Config;
 use teg::llm::LlmClient;
 
 #[derive(Parser)]
-#[command(name = "teg", about = "Thought Experiment Generator")]
+#[command(name = "teg", about = "Epistemic Engine — self-improving thought experiment generator")]
 pub struct Cli {
-    /// Topic to explore (inline string, or omit to use --topic-file or stdin)
-    pub topic: Option<String>,
-
-    /// Path to a file whose contents will be used as the topic
-    #[arg(long)]
-    pub topic_file: Option<std::path::PathBuf>,
-
-    /// Number of thought experiments to generate
-    #[arg(long, default_value_t = 20)]
-    pub experiments: u32,
-
-    /// Background sentences to use per thought experiment
-    #[arg(long, default_value_t = 3)]
-    pub background: u32,
-
-    /// Generated sentences to use per thought experiment
-    #[arg(long, default_value_t = 2)]
-    pub generated: u32,
-
-    /// Random words per line in words.txt
-    #[arg(long, default_value_t = 5)]
-    pub words: u32,
-
-    /// Total sentences in the background and generated pools
-    #[arg(long, default_value_t = 50)]
-    pub pool_size: usize,
-
-    /// LLM temperature for generation (0.0-1.0)
-    #[arg(long, default_value_t = 1.0)]
-    pub temperature: f64,
-
     /// LLM provider: "anthropic", "anthropic-token", or "openai"
-    #[arg(long, default_value = "anthropic")]
+    #[arg(long, global = true, default_value = "anthropic")]
     pub provider: String,
 
     /// Model name
-    #[arg(long, default_value = "claude-sonnet-4-6")]
+    #[arg(long, global = true, default_value = "claude-sonnet-4-6")]
     pub model: String,
 
     /// Max concurrent LLM calls
-    #[arg(long, default_value_t = 5)]
+    #[arg(long, global = true, default_value_t = 5)]
     pub max_concurrent: usize,
 
-    /// Clear cache and start fresh
-    #[arg(long, default_value_t = false)]
+    /// Minimum logical consistency score (0.0–1.0) to proceed to hard-to-vary evaluation
+    #[arg(long, global = true, default_value_t = 0.3)]
+    pub consistency_threshold: f64,
+
+    /// Minimum score for candidate problems to be admitted to the problem database
+    #[arg(long, global = true, default_value_t = 0.6)]
+    pub problem_admission_threshold: f64,
+
+    /// Minimum run count before a tool is eligible for promotion or demotion
+    #[arg(long, global = true, default_value_t = 3)]
+    pub min_run_count: u32,
+
+    /// LLM temperature for generation (0.0–1.0)
+    #[arg(long, global = true, default_value_t = 1.0)]
+    pub temperature: f64,
+
+    /// Reset state to seed before running
+    #[arg(long, global = true, default_value_t = false)]
     pub fresh: bool,
 
-    /// Read cached results and display summary without running
-    #[arg(long, default_value_t = false)]
-    pub read: bool,
+    #[command(subcommand)]
+    pub command: Command,
+}
+
+#[derive(Subcommand)]
+pub enum Command {
+    /// Run one full cycle across all problems and perspective tools
+    Run {
+        /// Add a new problem before running
+        #[arg(long)]
+        problem: Option<String>,
+    },
+
+    /// Display the last run summary without running
+    Read,
+
+    /// Add a new tool to the mind or perspectives layer
+    AddTool {
+        /// Target layer: "mind" or "perspectives"
+        #[arg(long)]
+        layer: String,
+
+        /// Human-readable title (used to derive the file slug)
+        #[arg(long)]
+        title: String,
+
+        /// Inline full text of the tool
+        #[arg(long)]
+        text: Option<String>,
+
+        /// Path to a file whose contents are the full text
+        #[arg(long)]
+        file: Option<std::path::PathBuf>,
+    },
 }
 
 #[tokio::main]
@@ -75,55 +91,80 @@ async fn main() -> Result<()> {
     let config = Config::new(
         &cli.provider,
         &cli.model,
-        cli.experiments,
-        cli.background,
-        cli.generated,
-        cli.words,
-        cli.pool_size,
-        cli.temperature,
         cli.max_concurrent,
+        cli.consistency_threshold,
+        cli.problem_admission_threshold,
+        cli.min_run_count,
+        cli.temperature,
     )?;
 
-    let topic = if let Some(t) = cli.topic {
-        t
-    } else if let Some(path) = cli.topic_file {
-        std::fs::read_to_string(&path)
-            .map_err(|e| anyhow::anyhow!("Could not read topic file {}: {}", path.display(), e))?
-            .trim()
-            .to_string()
-    } else if !io::stdin().is_terminal() {
-        let mut input = String::new();
-        io::stdin().read_to_string(&mut input)?;
-        input.trim().to_string()
-    } else {
-        print!("What topic would you like to explore? ");
-        io::stdout().flush()?;
-        let mut input = String::new();
-        io::stdin().read_line(&mut input)?;
-        input.trim().to_string()
-    };
-
-    if topic.is_empty() {
-        anyhow::bail!("Topic cannot be empty");
-    }
-
     if cli.fresh {
-        teg::cache::clear_cache(&topic)?;
+        teg::state::reset_to_seed()?;
     }
 
     let client = Arc::new(LlmClient::new(config.llm.clone()));
 
-    if cli.read {
-        teg::runner::read(client, &config, &topic).await?;
-    } else {
-        println!("\n=== Thought Experiment Generator ===");
-        println!("Topic: {topic}");
-        println!(
-            "Config: experiments={}, pool={}, background={}, generated={}, words={}\n",
-            config.num_experiments, config.pool_size, config.num_background, config.num_generated, config.num_words
-        );
-        teg::runner::run(client.clone(), &config, &topic).await?;
-        println!("\nLLM calls used: {}", client.calls_made());
+    match cli.command {
+        Command::Run { problem } => {
+            teg::runner::run(client, &config, problem.as_deref()).await?;
+        }
+
+        Command::Read => {
+            teg::runner::read(&config).await?;
+        }
+
+        Command::AddTool { layer, title, text, file } => {
+            let layer: teg::types::Layer = layer.parse()?;
+
+            let full_text = if let Some(t) = text {
+                t
+            } else if let Some(path) = file {
+                std::fs::read_to_string(&path)
+                    .map_err(|e| anyhow::anyhow!("Could not read {}: {e}", path.display()))?
+            } else if !io::stdin().is_terminal() {
+                let mut input = String::new();
+                io::stdin().read_to_string(&mut input)?;
+                input.trim().to_string()
+            } else {
+                anyhow::bail!("Provide tool text via --text, --file, or stdin.");
+            };
+
+            if full_text.is_empty() {
+                anyhow::bail!("Tool text cannot be empty.");
+            }
+
+            teg::state::ensure_initialized()?;
+            let mind = teg::state::load_tools(&teg::types::Layer::Mind)?;
+            let mind_system = teg::prompts::format_mind_system(&mind);
+
+            let p = teg::prompts::summarize_tool(&mind_system, &title, &full_text);
+            let resp: teg::types::SummarizeToolResponse =
+                client.call(Some(&p.system), &p.user, 0.3).await?;
+
+            let id = teg::state::slugify(&title);
+            let count = teg::state::load_tools(&layer)?.len();
+
+            let tool = teg::types::Tool {
+                meta: teg::types::ToolMeta {
+                    id: id.clone(),
+                    layer: layer.clone(),
+                    score: 0.0,
+                    rank: count as u32 + 1,
+                    run_count: 0,
+                    problem_coverage: vec![],
+                    created_at: teg::state::now_iso8601(),
+                    promoted_from: None,
+                    history: vec![],
+                },
+                title: title.clone(),
+                summary: resp.summary.clone(),
+                full_text,
+            };
+
+            teg::state::save_tool(&tool)?;
+            println!("Added '{}' to {}.", title, layer);
+            println!("Summary: {}", resp.summary);
+        }
     }
 
     Ok(())

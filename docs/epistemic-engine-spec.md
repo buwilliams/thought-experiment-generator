@@ -308,6 +308,21 @@ System: Summarize in 20 words or fewer. Return only the summary.
 Score: [score]
 ```
 
+### summarize_tool(title, full_text)
+```
+System: [mind tool summaries]
+
+Summarize the following tool into 1-2 sentences suitable for use as context
+in LLM prompts. The summary should capture the core lens or principle the
+tool provides, concisely enough to be useful alongside other tool summaries
+in a system prompt.
+
+Return JSON: { "summary": "..." }
+
+Title: [title]
+Full text: [full_text]
+```
+
 ### summarize_for_tool(conjecture, score)
 ```
 System: You are converting a conjecture into a reusable perspective tool.
@@ -369,7 +384,25 @@ cargo run -- --fresh run
 
 # Control concurrency and sampling
 cargo run -- run --max-concurrent 5 --problems-per-run 10 --tools-per-run 5
+
+# Add a new tool by inline text
+cargo run -- add-tool --layer mind --title "Tool Title" --text "Full text of the tool"
+cargo run -- add-tool --layer perspectives --title "Tool Title" --text "Full text of the tool"
+
+# Add a new tool from a file
+cargo run -- add-tool --layer mind --title "Tool Title" --file path/to/tool.md
+
+# Add a new tool from stdin (piped content)
+cat my-tool.md | cargo run -- add-tool --layer mind --title "Tool Title"
+echo "Tool text here" | cargo run -- add-tool --layer perspectives --title "Tool Title"
 ```
+
+The `add-tool` command:
+1. Accepts the full text of the tool via `--text`, `--file`, or stdin
+2. Calls the LLM using the current mind as system prompt to generate a `summary` (1-2 sentences) from the full text
+3. Derives a slug from `--title` (lowercased, spaces to hyphens)
+4. Writes `{layer}/{slug}.md` and `{layer}/{slug}.json` to `data/state/`
+5. Prints the generated summary for review
 
 ### Options
 
@@ -384,6 +417,16 @@ cargo run -- run --max-concurrent 5 --problems-per-run 10 --tools-per-run 5
 | `--provider` | anthropic | `anthropic`, `anthropic-token`, or `openai` |
 | `--model` | claude-sonnet-4-6 | Model name |
 | `--fresh` | false | Reset state to seed |
+
+**`add-tool` options:**
+
+| Flag | Required | Description |
+|---|---|---|
+| `--layer` | yes | `mind` or `perspectives` |
+| `--title` | yes | Human-readable title, used to derive the file slug |
+| `--text` | no | Inline full text of the tool |
+| `--file` | no | Path to a file whose contents are the full text |
+| stdin | no | Piped content used as full text if `--text` and `--file` are omitted |
 
 ---
 

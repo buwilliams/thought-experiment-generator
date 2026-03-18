@@ -1,65 +1,119 @@
+use crate::types::Tool;
+
 pub struct Prompt {
-    pub system: &'static str,
+    pub system: String,
     pub user: String,
 }
 
-pub fn background_generation(topic: &str, count: usize) -> Prompt {
+pub fn format_mind_system(mind_tools: &[Tool]) -> String {
+    if mind_tools.is_empty() {
+        return String::from("You are a careful, rigorous reasoner.");
+    }
+    let mut s = String::from("You reason using the following principles and frameworks:\n\n");
+    for (i, tool) in mind_tools.iter().enumerate() {
+        s.push_str(&format!("{}. {}\n{}\n\n", i + 1, tool.title, tool.summary));
+    }
+    s.trim_end().to_string()
+}
+
+pub fn conjecture_generation(mind_system: &str, tool_summary: &str, problem_summary: &str) -> Prompt {
     Prompt {
-        system: "Generate sentences as a plain newline-separated list. No numbering, no formatting, no preamble.",
+        system: mind_system.to_string(),
         user: format!(
-            "Given the following topic context, write {count} sentences as a newline-separated flat list with no formatting. Prefer anomalies, unresolved tensions, edge cases, and open questions over established textbook facts. Draw directly from the specifics of the context provided.\n\nTopic context:\n{topic}"
+            "You are reasoning from a specific perspective. Your perspective is:\n{tool_summary}\n\n\
+            Apply this perspective to the following problem and generate a conjecture — a structured \
+            claim about what is true, what follows, or what is illuminated when this perspective meets \
+            this problem. Follow the logic of the collision. Do not invent novelty for its own sake. \
+            500 words or fewer.\n\nProblem: {problem_summary}"
         ),
     }
 }
 
-pub fn words_to_sentences(lines: &str) -> Prompt {
+pub fn logical_consistency_check(mind_system: &str, conjecture: &str) -> Prompt {
     Prompt {
-        system: "Convert each line of words into one grammatically correct sentence. Return exactly one sentence per input line, in the same order. No numbering, no formatting, no preamble.",
+        system: mind_system.to_string(),
         user: format!(
-            "Turn each line into a single grammatically correct, meaningful sentence that uses all the words on that line. The sentence should make sense and connect the words into a coherent claim or observation — but the combination of concepts can be unexpected or surprising. Lines:\n{lines}"
+            "Evaluate whether the following conjecture is internally self-consistent — does it \
+            contradict itself, rely on incompatible premises, or make claims that cannot simultaneously \
+            be true?\n\nReturn JSON: {{\"score\": 0.0, \"reason\": \"...\"}}\n\nConjecture: {conjecture}"
         ),
     }
 }
 
-pub fn te_generation(sentences: &str) -> Prompt {
+pub fn generate_questions(mind_system: &str, conjecture: &str, problem_summary: &str) -> Prompt {
     Prompt {
-        system: "You are a reasoner, not a storyteller. Your job is to take the provided sentences as axioms — assume all of them are simultaneously true — and reason out what that implies about the world. Write a thought experiment in 500 words or fewer that follows strictly from those premises. Do not invent novelty. Do not be creative for its own sake. Just follow the logic of the collision. No preamble.",
-        user: format!("Premises:\n{sentences}"),
-    }
-}
-
-pub fn criticism(te_text: &str) -> Prompt {
-    Prompt {
-        system: "Evaluate thought experiments using the principles of fallibilism. Return only valid JSON with no preamble or markdown.",
+        system: mind_system.to_string(),
         user: format!(
-            r#"{te_text}
-
-Using the principles of fallibilism decide:
-- Reach: Does the implication of this thought experiment propose something no prior work has proposed — does it break into genuinely new explanatory territory, score 0.0 - 1.0?
-- Reach: Why (in 20 words or less)?
-- Novelty: Does it reframe or connect existing knowledge in a non-obvious way, score 0.0 - 1.0?
-- Novelty: Why (in 20 words or less)?
-- Falsifiable: Can this thought experiment be shown to be wrong — whether by experiment, counterexample, logical contradiction, or proof of independence from its premises, score 0.0 - 1.0?
-- Falsifiable: Why (in 20 words or less)?
-- In less than 20 words, what does it explain or mean?
-
-Return JSON:
-{{
-    "reach": 0.0,
-    "reach_why": "",
-    "novelty": 0.0,
-    "novelty_why": "",
-    "falsifiable": 0.0,
-    "falsifiable_why": "",
-    "explanation": ""
-}}"#
+            "Generate 10 yes/no questions that probe whether the following conjecture is \"hard to \
+            vary\" — meaning its parts are load-bearing and cannot be arbitrarily modified without \
+            destroying the explanation. Questions must be specific to this conjecture and this problem, \
+            not generic.\n\nReturn JSON: {{\"questions\": [\"...\", ...]}}\n\n\
+            Conjecture: {conjecture}\n\nProblem: {problem_summary}"
         ),
     }
 }
 
-pub fn summarize(te_text: &str, critique_json: &str) -> Prompt {
+pub fn answer_questions(mind_system: &str, conjecture: &str, questions: &[String]) -> Prompt {
+    let formatted = questions
+        .iter()
+        .enumerate()
+        .map(|(i, q)| format!("{}. {}", i + 1, q))
+        .collect::<Vec<_>>()
+        .join("\n");
     Prompt {
-        system: "Summarize the following thought experiment and its critique in 20 words or fewer. Return only the summary with no preamble.",
-        user: format!("{te_text}\n\n{critique_json}"),
+        system: mind_system.to_string(),
+        user: format!(
+            "Answer each of the following yes/no questions about this conjecture.\n\n\
+            Return JSON: {{\"answers\": [{{\"question\": \"...\", \"answer\": true}}]}}\n\n\
+            Conjecture: {conjecture}\n\nQuestions:\n{formatted}"
+        ),
+    }
+}
+
+pub fn extract_candidate_problems(mind_system: &str, conjecture: &str) -> Prompt {
+    Prompt {
+        system: mind_system.to_string(),
+        user: format!(
+            "Identify unresolved tensions, unexplored implications, or open questions raised by this \
+            conjecture that are worth exploring as new problems. For each candidate, score 0.0–1.0 \
+            whether it is worth pursuing.\n\n\
+            Return JSON: {{\"candidates\": [{{\"text\": \"...\", \"score\": 0.0}}]}}\n\n\
+            Conjecture: {conjecture}"
+        ),
+    }
+}
+
+pub fn summarize_conjecture(conjecture: &str, score: f64) -> Prompt {
+    Prompt {
+        system: String::from(
+            "Summarize in 20 words or fewer. Return only the summary, no preamble.",
+        ),
+        user: format!("{conjecture}\n\nScore: {score:.2}"),
+    }
+}
+
+pub fn summarize_for_tool(mind_system: &str, conjecture: &str, score: f64) -> Prompt {
+    Prompt {
+        system: mind_system.to_string(),
+        user: format!(
+            "Convert the following conjecture into a reusable perspective tool.\n\n\
+            Return JSON: {{\"summary\": \"...\", \"full_text\": \"...\"}}\n\n\
+            The summary must be 1-2 sentences suitable for use in LLM prompts.\n\
+            The full_text must be a readable, standalone description of the perspective this \
+            conjecture embodies — what lens it provides, what kinds of problems it is useful for, \
+            and what it illuminates. 100-200 words.\n\n\
+            Conjecture: {conjecture}\nScore: {score:.2}"
+        ),
+    }
+}
+
+pub fn summarize_tool(mind_system: &str, title: &str, full_text: &str) -> Prompt {
+    Prompt {
+        system: mind_system.to_string(),
+        user: format!(
+            "Summarize the following tool into 1-2 sentences suitable for use as context in LLM \
+            prompts. The summary should capture the core lens or principle the tool provides.\n\n\
+            Return JSON: {{\"summary\": \"...\"}}\n\nTitle: {title}\nFull text: {full_text}"
+        ),
     }
 }

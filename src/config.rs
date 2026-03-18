@@ -16,32 +16,22 @@ pub struct LlmConfig {
 
 #[derive(Debug, Clone)]
 pub struct Config {
-    /// Total thought experiments to generate.
-    pub num_experiments: u32,
-    /// Background sentences to include per thought experiment.
-    pub num_background: u32,
-    /// Generated sentences to include per thought experiment.
-    pub num_generated: u32,
-    /// Random words per line in words.txt.
-    pub num_words: u32,
-    /// Total sentences in the background and generated pools.
-    pub pool_size: usize,
-    /// LLM temperature for generation (0.0–1.0).
-    pub temperature: f64,
     pub llm: LlmConfig,
+    pub consistency_threshold: f64,
+    pub problem_admission_threshold: f64,
+    pub min_run_count: u32,
+    pub temperature: f64,
 }
 
 impl Config {
     pub fn new(
         provider_str: &str,
         model: &str,
-        num_experiments: u32,
-        num_background: u32,
-        num_generated: u32,
-        num_words: u32,
-        pool_size: usize,
-        temperature: f64,
         max_concurrent: usize,
+        consistency_threshold: f64,
+        problem_admission_threshold: f64,
+        min_run_count: u32,
+        temperature: f64,
     ) -> anyhow::Result<Self> {
         let provider = match provider_str {
             "anthropic" => LlmProvider::Anthropic,
@@ -64,18 +54,16 @@ impl Config {
         };
 
         Ok(Self {
-            num_experiments,
-            num_background,
-            num_generated,
-            num_words,
-            pool_size,
-            temperature,
             llm: LlmConfig {
                 provider,
                 api_key,
                 model: model.to_string(),
                 max_concurrent,
             },
+            consistency_threshold,
+            problem_admission_threshold,
+            min_run_count,
+            temperature,
         })
     }
 }

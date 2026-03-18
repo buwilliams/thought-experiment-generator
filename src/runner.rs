@@ -1,245 +1,372 @@
 use std::sync::Arc;
 
 use anyhow::Result;
-use rand::prelude::*;
-use rand::rngs::StdRng;
 use tracing::info;
 
-use crate::cache;
 use crate::config::Config;
+use crate::evaluator;
 use crate::llm::LlmClient;
+use crate::promoter;
 use crate::prompts;
-use crate::types::Critique;
+use crate::state;
+use crate::types::{
+    Conjecture, Layer, Problem, ProblemMeta, ProblemSource, Tool, ToolMeta, ToolSummaryResponse,
+};
 
-/// Words file path.
-const WORDS_ALPHA_PATH: &str = "data/words_alpha.txt";
+pub async fn run(client: Arc<LlmClient>, config: &Config, new_problem: Option<&str>) -> Result<()> {
+    state::ensure_initialized()?;
 
-pub async fn run(client: Arc<LlmClient>, config: &Config, topic: &str) -> Result<()> {
-    // Phase 1: Create
-    let background = ensure_background(&client, config, topic).await?;
-    let words = ensure_words(config, topic)?;
-    let generated = ensure_generated(&client, config, topic, &words).await?;
+    if let Some(text) = new_problem {
+        add_user_problem(text)?;
+    }
 
-    // Phase 2 + 3: Combine & Criticize (one per experiment, concurrent)
+    let mind = state::load_tools(&Layer::Mind)?;
+    let perspectives = state::load_tools(&Layer::Perspectives)?;
+    let problems = state::load_problems()?;
+
+    if problems.is_empty() {
+        anyhow::bail!(
+            "No problems found. Add one with: cargo run -- run --problem \"your problem\""
+        );
+    }
+    if perspectives.is_empty() {
+        anyhow::bail!("No perspective tools found in data/state/perspectives/.");
+    }
+
+    let run = state::increment_run()?;
+    println!("\n=== Epistemic Engine — Run {:03} ===", run);
+    println!("Mind tools: {}", mind.len());
+    println!("Perspective tools: {}", perspectives.len());
+    println!("Problems: {}", problems.len());
+    println!("Pairs to process: {}\n", problems.len() * perspectives.len());
+
+    let mind_system = prompts::format_mind_system(&mind);
+
+    // Phase 1 + 2: Generate and evaluate all (problem, tool) pairs concurrently
     let mut handles = vec![];
-    for i in 1..=config.num_experiments {
-        if cache::experiment_exists(topic, i) && cache::critique_exists(topic, i) {
-            info!("Experiment {:03}: already complete, skipping", i);
-            continue;
+    for problem in &problems {
+        for tool in &perspectives {
+            if state::conjecture_exists(run, &problem.meta.id, &tool.meta.id) {
+                info!("Resuming: skipping existing conjecture {}-{}", problem.meta.id, tool.meta.id);
+                continue;
+            }
+            let client = Arc::clone(&client);
+            let config = config.clone();
+            let mind_system = mind_system.clone();
+            let tool_summary = tool.summary.clone();
+            let problem_summary = problem.summary.clone();
+            let problem_id = problem.meta.id.clone();
+            let tool_id = tool.meta.id.clone();
+
+            handles.push(tokio::spawn(async move {
+                let p = prompts::conjecture_generation(&mind_system, &tool_summary, &problem_summary);
+                let text = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
+
+                info!("Generated: {}-{}", problem_id, tool_id);
+
+                let conjecture = evaluator::evaluate(
+                    &client, &config, &mind_system,
+                    &text, &problem_summary,
+                    &problem_id, &tool_id, run,
+                ).await?;
+
+                state::save_conjecture(&conjecture)?;
+                anyhow::Ok(conjecture)
+            }));
         }
-        let client = Arc::clone(&client);
-        let topic = topic.to_string();
-        let bg = background.clone();
-        let generated_clone = generated.clone();
-        let config = config.clone();
-        handles.push(tokio::spawn(async move {
-            run_single_experiment(&client, &config, &topic, i, &bg, &generated_clone).await
-        }));
     }
+
     for handle in handles {
-        handle.await??;
+        if let Err(e) = handle.await? {
+            tracing::warn!("Conjecture failed: {e}");
+        }
     }
 
-    // Phase 4: Results
-    generate_summary(&client, config, topic).await
-}
+    // Load all conjectures for this run (includes resumed ones)
+    let conjectures = state::load_run_conjectures(run)?;
+    info!("Phase 1+2 complete. {} conjectures.", conjectures.len());
 
-/// Read existing files and regenerate summary without running experiments.
-pub async fn read(client: Arc<LlmClient>, config: &Config, topic: &str) -> Result<()> {
-    generate_summary(&client, config, topic).await
-}
+    // Phase 3: Rank and promote
+    let mut perspectives_mut = perspectives.clone();
+    let mut problems_mut = problems.clone();
 
-async fn ensure_background(
-    client: &LlmClient,
-    config: &Config,
-    topic: &str,
-) -> Result<Vec<String>> {
-    if let Some(lines) = cache::load_background(topic) {
-        info!("Loaded background.txt ({} sentences)", lines.len());
-        return Ok(lines);
+    promoter::update_tool_scores(&mut perspectives_mut, &conjectures);
+    promoter::update_problem_scores(&mut problems_mut, &conjectures);
+
+    for tool in &perspectives_mut {
+        state::save_tool(tool)?;
     }
-    info!("Generating background sentences...");
-    let p = prompts::background_generation(topic, config.pool_size);
-    let raw = client.call_raw(Some(p.system), &p.user, config.temperature).await?;
-    let lines: Vec<String> = raw
-        .lines()
-        .map(|l| l.trim().to_string())
-        .filter(|l| !l.is_empty())
-        .collect();
-    cache::save_background(topic, &lines)?;
-    Ok(lines)
-}
-
-fn ensure_words(config: &Config, topic: &str) -> Result<Vec<String>> {
-    if let Some(lines) = cache::load_words(topic) {
-        info!("Loaded words.txt ({} lines)", lines.len());
-        return Ok(lines);
-    }
-    info!("Generating words.txt...");
-    let word_list = load_word_list()?;
-    let mut rng = StdRng::from_entropy();
-    let mut lines = Vec::with_capacity(config.pool_size);
-    for _ in 0..config.pool_size {
-        let words: Vec<&str> = (0..config.num_words as usize)
-            .map(|_| word_list[rng.gen_range(0..word_list.len())].as_str())
-            .collect();
-        lines.push(words.join(" "));
-    }
-    cache::save_words(topic, &lines)?;
-    Ok(lines)
-}
-
-async fn ensure_generated(
-    client: &LlmClient,
-    config: &Config,
-    topic: &str,
-    words: &[String],
-) -> Result<Vec<String>> {
-    if let Some(lines) = cache::load_generated(topic) {
-        info!("Loaded generated.txt ({} sentences)", lines.len());
-        return Ok(lines);
-    }
-    info!("Generating sentences from word pairs...");
-    let word_lines = words.join("\n");
-    let p = prompts::words_to_sentences(&word_lines);
-    let raw = client.call_raw(Some(p.system), &p.user, config.temperature).await?;
-    let lines: Vec<String> = raw
-        .lines()
-        .map(|l| l.trim().to_string())
-        .filter(|l| !l.is_empty())
-        .collect();
-    cache::save_generated(topic, &lines)?;
-    Ok(lines)
-}
-
-async fn run_single_experiment(
-    client: &LlmClient,
-    config: &Config,
-    topic: &str,
-    n: u32,
-    background: &[String],
-    generated: &[String],
-) -> Result<()> {
-    let mut rng = StdRng::from_entropy();
-
-    // Load or generate TE
-    let te = if cache::experiment_exists(topic, n) {
-        cache::load_experiment(topic, n)
-            .ok_or_else(|| anyhow::anyhow!("Failed to load experiment {:03}", n))?
-    } else {
-        let bg_pick = sample_lines(background, config.num_background as usize, &mut rng);
-        let gen_pick = sample_lines(generated, config.num_generated as usize, &mut rng);
-        let all_sentences = format!(
-            "{}\n{}",
-            bg_pick.iter().map(|s| s.as_str()).collect::<Vec<_>>().join("\n"),
-            gen_pick.iter().map(|s| s.as_str()).collect::<Vec<_>>().join("\n")
-        );
-        let p = prompts::te_generation(&all_sentences);
-        let text = client.call_raw(Some(p.system), &p.user, config.temperature).await?;
-        cache::save_experiment(topic, n, &text)?;
-        info!("Experiment {:03}: generated thought experiment", n);
-        text
-    };
-
-    // Criticize if not already done
-    if !cache::critique_exists(topic, n) {
-        let p = prompts::criticism(&te);
-        let critique: Critique = client.call(Some(p.system), &p.user, 0.2).await?;
-        cache::save_critique(topic, n, &critique)?;
-        info!(
-            "Experiment {:03}: criticized (reach={:.2}, novelty={:.2}, falsifiable={:.2}, total={:.2})",
-            n, critique.reach, critique.novelty, critique.falsifiable, critique.total_score()
-        );
+    for problem in &problems_mut {
+        state::save_problem(problem)?;
     }
 
+    admit_candidate_problems(&conjectures, &problems_mut)?;
+
+    // Promote top conjecture → perspectives
+    let promoted_conjecture_summary = promote_top_conjecture(
+        &client, config, &mind_system, &conjectures, run,
+    ).await;
+
+    // Promote top perspective tool → mind (track its id to exclude from discard)
+    let (promoted_tool_name, promoted_tool_id) =
+        promote_top_tool(&perspectives_mut, config.min_run_count)?;
+
+    // Demote bottom mind tool → perspectives
+    let demoted_mind_name = demote_bottom_mind(&mind, config.min_run_count)?;
+
+    // Discard bottom perspective tool (excluding what was just promoted)
+    let discarded_name =
+        discard_bottom_perspective(&perspectives_mut, config.min_run_count, promoted_tool_id.as_deref())?;
+
+    // Phase 4: Report
+    generate_report(
+        &client, run, &conjectures,
+        promoted_conjecture_summary.as_deref(),
+        promoted_tool_name.as_deref(),
+        demoted_mind_name.as_deref(),
+        discarded_name.as_deref(),
+    ).await?;
+
+    println!("\nLLM calls used: {}", client.calls_made());
     Ok(())
 }
 
-async fn generate_summary(client: &LlmClient, config: &Config, topic: &str) -> Result<()> {
-    // Collect all experiments + critiques
-    let mut results: Vec<(u32, String, Critique)> = vec![];
-    for i in 1..=config.num_experiments {
-        if let (Some(te), Some(critique)) =
-            (cache::load_experiment(topic, i), cache::load_critique(topic, i))
-        {
-            results.push((i, te, critique));
+pub async fn read(_: &Config) -> Result<()> {
+    state::ensure_initialized()?;
+    match state::load_last_summary()? {
+        Some(summary) => println!("{summary}"),
+        None => println!("No runs yet. Run: cargo run -- run"),
+    }
+    Ok(())
+}
+
+// --- Helpers ---
+
+fn add_user_problem(text: &str) -> Result<()> {
+    let id = state::slugify(&text.chars().take(60).collect::<String>());
+    if state::problem_exists(&id) {
+        info!("Problem already exists: {}", id);
+        return Ok(());
+    }
+    let count = state::load_problems()?.len();
+    let problem = Problem {
+        meta: ProblemMeta {
+            id: id.clone(),
+            source: ProblemSource::User,
+            score: 0.0,
+            rank: count as u32 + 1,
+            run_count: 0,
+            created_at: state::now_iso8601(),
+        },
+        title: text.chars().take(80).collect(),
+        summary: text.chars().take(200).collect(),
+        full_text: text.to_string(),
+    };
+    state::save_problem(&problem)?;
+    info!("Added problem: {}", id);
+    Ok(())
+}
+
+fn admit_candidate_problems(conjectures: &[Conjecture], existing: &[Problem]) -> Result<()> {
+    let existing_ids: std::collections::HashSet<&str> =
+        existing.iter().map(|p| p.meta.id.as_str()).collect();
+    let mut rank_offset = existing.len() as u32;
+
+    for conjecture in conjectures {
+        for candidate in &conjecture.meta.candidate_problems {
+            let id = state::slugify(&candidate.text.chars().take(60).collect::<String>());
+            if existing_ids.contains(id.as_str()) || state::problem_exists(&id) {
+                continue;
+            }
+            rank_offset += 1;
+            let problem = Problem {
+                meta: ProblemMeta {
+                    id: id.clone(),
+                    source: ProblemSource::System,
+                    score: 0.0,
+                    rank: rank_offset,
+                    run_count: 0,
+                    created_at: state::now_iso8601(),
+                },
+                title: candidate.text.chars().take(80).collect(),
+                summary: candidate.text.chars().take(200).collect(),
+                full_text: candidate.text.clone(),
+            };
+            state::save_problem(&problem)?;
+            info!("Admitted candidate problem: {}", id);
         }
     }
+    Ok(())
+}
 
-    if results.is_empty() {
-        anyhow::bail!("No experiments found. Run without --read first.");
+async fn promote_top_conjecture(
+    client: &LlmClient,
+    _config: &Config,
+    mind_system: &str,
+    conjectures: &[Conjecture],
+    run: u32,
+) -> Option<String> {
+    let top = promoter::find_top_conjecture(conjectures)?;
+    let p = prompts::summarize_for_tool(mind_system, &top.text, top.meta.total);
+    match client
+        .call::<ToolSummaryResponse>(Some(&p.system), &p.user, 0.3)
+        .await
+    {
+        Ok(resp) => {
+            let count = state::load_tools(&Layer::Perspectives)
+                .map(|t| t.len())
+                .unwrap_or(0);
+            let new_tool = Tool {
+                meta: ToolMeta {
+                    id: format!("discovered-{:03}", run),
+                    layer: Layer::Perspectives,
+                    score: top.meta.total,
+                    rank: count as u32 + 1,
+                    run_count: 1,
+                    problem_coverage: vec![top.meta.problem_id.clone()],
+                    created_at: state::now_iso8601(),
+                    promoted_from: None,
+                    history: vec![],
+                },
+                title: format!("Discovered: Run {:03}", run),
+                summary: resp.summary.clone(),
+                full_text: resp.full_text,
+            };
+            if let Err(e) = state::save_tool(&new_tool) {
+                tracing::warn!("Failed to save promoted conjecture: {e}");
+                return None;
+            }
+            info!("Promoted conjecture to perspectives: discovered-{:03}", run);
+            Some(resp.summary)
+        }
+        Err(e) => {
+            tracing::warn!("Failed to summarize conjecture for promotion: {e}");
+            None
+        }
     }
+}
 
-    // Sort by total score descending
-    results.sort_by(|a, b| {
-        b.2.total_score()
-            .partial_cmp(&a.2.total_score())
-            .unwrap()
-    });
+fn promote_top_tool(
+    perspectives: &[Tool],
+    min_run_count: u32,
+) -> Result<(Option<String>, Option<String>)> {
+    match promoter::find_tool_to_promote(perspectives, min_run_count) {
+        Some(tool) => {
+            let id = tool.meta.id.clone();
+            let name = tool.title.clone();
+            let mut promoted = tool.clone();
+            let mind_count = state::load_tools(&Layer::Mind)?.len();
+            promoted.meta.layer = Layer::Mind;
+            promoted.meta.rank = mind_count as u32 + 1;
+            state::delete_tool(&id, &Layer::Perspectives)?;
+            state::save_tool(&promoted)?;
+            info!("Promoted tool to mind: {}", id);
+            Ok((Some(name), Some(id)))
+        }
+        None => Ok((None, None)),
+    }
+}
 
-    // Build table
-    let mut out = String::new();
-    out.push_str(&format!("# {topic}\n\n"));
-    out.push_str("| # | Experiment | Reach | Novelty | Falsifiable | Total |\n");
-    out.push_str("|---|-----------|-------|---------|-------------|-------|\n");
-    for (rank, (n, _, c)) in results.iter().enumerate() {
-        let name = format!("{:03}-experiment.txt", n);
-        let path = format!("experiments/{}", name);
+fn demote_bottom_mind(mind: &[Tool], min_run_count: u32) -> Result<Option<String>> {
+    match promoter::find_mind_tool_to_demote(mind, min_run_count) {
+        Some(tool) => {
+            let id = tool.meta.id.clone();
+            let name = tool.title.clone();
+            let mut demoted = tool.clone();
+            let persp_count = state::load_tools(&Layer::Perspectives)?.len();
+            demoted.meta.layer = Layer::Perspectives;
+            demoted.meta.rank = persp_count as u32 + 1;
+            state::delete_tool(&id, &Layer::Mind)?;
+            state::save_tool(&demoted)?;
+            info!("Demoted mind tool to perspectives: {}", id);
+            Ok(Some(name))
+        }
+        None => Ok(None),
+    }
+}
+
+fn discard_bottom_perspective(
+    perspectives: &[Tool],
+    min_run_count: u32,
+    exclude_id: Option<&str>,
+) -> Result<Option<String>> {
+    match promoter::find_perspective_to_discard(perspectives, min_run_count, exclude_id) {
+        Some(tool) => {
+            let id = tool.meta.id.clone();
+            let name = tool.title.clone();
+            state::delete_tool(&id, &Layer::Perspectives)?;
+            info!("Discarded perspective tool: {}", id);
+            Ok(Some(name))
+        }
+        None => Ok(None),
+    }
+}
+
+async fn generate_report(
+    client: &LlmClient,
+    run: u32,
+    conjectures: &[Conjecture],
+    promoted_conjecture: Option<&str>,
+    promoted_tool: Option<&str>,
+    demoted_mind: Option<&str>,
+    discarded: Option<&str>,
+) -> Result<()> {
+    let mut sorted = conjectures.to_vec();
+    sorted.sort_by(|a, b| b.meta.total.partial_cmp(&a.meta.total).unwrap());
+
+    let mut out = format!("# Run {:03} Results\n\n", run);
+
+    out.push_str("| Rank | Problem | Tool | Consistency | Hard to Vary | Total |\n");
+    out.push_str("|------|---------|------|-------------|--------------|-------|\n");
+    for (rank, c) in sorted.iter().enumerate() {
         out.push_str(&format!(
-            "| {} | [{}]({}) | {:.2} | {:.2} | {:.2} | {:.2} |\n",
+            "| {} | {} | {} | {:.2} | {:.2} | {:.2} |\n",
             rank + 1,
-            name,
-            path,
-            c.reach,
-            c.novelty,
-            c.falsifiable,
-            c.total_score(),
+            c.meta.problem_id,
+            c.meta.tool_id,
+            c.meta.logical_consistency,
+            c.meta.hard_to_vary,
+            c.meta.total,
         ));
     }
 
-    // Top 5 summaries
     out.push_str("\n## Top 5\n\n");
-    for (rank, (n, te, c)) in results.iter().take(5).enumerate() {
-        let critique_json = serde_json::to_string_pretty(c)?;
-        let p = prompts::summarize(te, &critique_json);
+    for (rank, c) in sorted.iter().take(5).enumerate() {
+        let p = prompts::summarize_conjecture(&c.text, c.meta.total);
         let summary = client
-            .call_raw(Some(p.system), &p.user, 0.3)
+            .call_raw(Some(&p.system), &p.user, 0.3)
             .await
             .unwrap_or_else(|_| "(summary unavailable)".to_string());
-        let name = format!("{:03}-experiment.txt", n);
-        let path = format!("experiments/{}", name);
         out.push_str(&format!(
-            "**{}. [{}]({})**  \n{}\n\n",
+            "**{}. {} × {}** (total: {:.2})  \n{}\n\n",
             rank + 1,
-            name,
-            path,
-            summary.trim()
+            c.meta.problem_id,
+            c.meta.tool_id,
+            c.meta.total,
+            summary.trim(),
         ));
     }
 
-    cache::save_summary(topic, &out)?;
-
-    // Print to stdout
-    println!("{out}");
-
-    Ok(())
-}
-
-fn sample_lines<'a>(pool: &'a [String], n: usize, rng: &mut StdRng) -> Vec<&'a String> {
-    let n = n.min(pool.len());
-    pool.choose_multiple(rng, n).collect()
-}
-
-fn load_word_list() -> Result<Vec<String>> {
-    let text = std::fs::read_to_string(WORDS_ALPHA_PATH)
-        .map_err(|_| anyhow::anyhow!("Could not read {WORDS_ALPHA_PATH}"))?;
-    let words: Vec<String> = text
-        .lines()
-        .map(|l| l.trim().to_string())
-        .filter(|l| !l.is_empty() && l.chars().all(|c| c.is_alphabetic()))
-        .collect();
-    if words.is_empty() {
-        anyhow::bail!("{WORDS_ALPHA_PATH} is empty or contains no valid words");
+    out.push_str("## Changes\n\n");
+    let any_change =
+        promoted_conjecture.is_some() || promoted_tool.is_some() || demoted_mind.is_some() || discarded.is_some();
+    if let Some(s) = promoted_conjecture {
+        out.push_str(&format!("- Promoted conjecture → perspectives: \"{s}\"\n"));
     }
-    Ok(words)
+    if let Some(s) = promoted_tool {
+        out.push_str(&format!("- Promoted tool → mind: \"{s}\"\n"));
+    }
+    if let Some(s) = demoted_mind {
+        out.push_str(&format!("- Demoted mind tool → perspectives: \"{s}\"\n"));
+    }
+    if let Some(s) = discarded {
+        out.push_str(&format!("- Discarded perspective tool: \"{s}\"\n"));
+    }
+    if !any_change {
+        out.push_str("- No promotions or demotions this run (insufficient run counts).\n");
+    }
+
+    state::save_run_summary(run, &out)?;
+    println!("{out}");
+    Ok(())
 }
