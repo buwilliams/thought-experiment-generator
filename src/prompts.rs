@@ -23,6 +23,7 @@ pub struct PromptTemplates {
     deduplicate: ParsedTemplate,
     conjecture_summary: ParsedTemplate,
     ask: ParsedTemplate,
+    ask_consolidate: ParsedTemplate,
 }
 
 struct ParsedTemplate {
@@ -47,6 +48,7 @@ impl PromptTemplates {
             deduplicate: load_and_parse(PROMPTS_DIR, "deduplicate.md")?.into_system_user()?,
             conjecture_summary: load_and_parse(PROMPTS_DIR, "conjecture_summary.md")?.into_system_user()?,
             ask: load_and_parse(PROMPTS_DIR, "ask.md")?.into_system_user()?,
+            ask_consolidate: load_and_parse(PROMPTS_DIR, "ask_consolidate.md")?.into_system_user()?,
         })
     }
 
@@ -144,6 +146,14 @@ impl PromptTemplates {
             ("mind_system", mind_system),
             ("conjecture_summary", conjecture_summary),
             ("question", question),
+        ])
+    }
+
+    pub fn ask_consolidate(&self, mind_system: &str, question: &str, perspectives: &str) -> Prompt {
+        self.ask_consolidate.apply(&[
+            ("mind_system", mind_system),
+            ("question", question),
+            ("perspectives", perspectives),
         ])
     }
 

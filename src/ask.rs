@@ -1,6 +1,7 @@
 use std::sync::Arc;
 
 use anyhow::Result;
+use futures::future::join_all;
 
 use crate::config::Config;
 use crate::llm::LlmClient;
@@ -8,6 +9,8 @@ use crate::promoter;
 use crate::prompts::PromptTemplates;
 use crate::state;
 use crate::types::{Conjecture, Layer};
+
+const TOP_CANDIDATES: usize = 3;
 
 pub async fn ask(
     client: Arc<LlmClient>,
@@ -18,7 +21,7 @@ pub async fn ask(
     state::ensure_initialized()?;
 
     let mind = state::load_conjectures(&Layer::Mind)?;
-    let candidates = state::load_conjectures(&Layer::Candidates)?;
+    let mut candidates = state::load_conjectures(&Layer::Candidates)?;
 
     if mind.is_empty() && candidates.is_empty() {
         anyhow::bail!("No conjectures found. Run first to build up the conjecture pool.");
@@ -26,23 +29,66 @@ pub async fn ask(
 
     let mind_system = templates.format_mind_system(&mind);
 
-    // Find top conjecture by composite score across mind + candidates combined
-    let all: Vec<&Conjecture> = mind.iter().chain(candidates.iter()).collect();
-    let top = all
+    // Sort candidates by composite score descending, take top N
+    candidates.sort_by(|a, b| {
+        promoter::composite(b)
+            .partial_cmp(&promoter::composite(a))
+            .unwrap()
+    });
+    candidates.truncate(TOP_CANDIDATES);
+
+    // Gather all lenses: all mind conjectures + top candidates
+    let lenses: Vec<&Conjecture> = mind.iter().chain(candidates.iter()).collect();
+
+    if lenses.is_empty() {
+        anyhow::bail!("No conjectures available.");
+    }
+
+    // Run each lens concurrently
+    let futures: Vec<_> = lenses
         .iter()
-        .max_by(|a, b| {
-            promoter::composite(a)
-                .partial_cmp(&promoter::composite(b))
-                .unwrap()
+        .map(|c| {
+            let client = Arc::clone(&client);
+            let p = templates.ask(&mind_system, &c.summary, question);
+            let title = c.title.clone();
+            let temp = config.temperature;
+            async move {
+                let answer = client.call_raw(Some(&p.system), &p.user, temp).await?;
+                Ok::<(String, String), anyhow::Error>((title, answer))
+            }
         })
-        .ok_or_else(|| anyhow::anyhow!("No conjectures available"))?;
+        .collect();
 
-    let p = templates.ask(&mind_system, &top.summary, question);
-    let answer = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
+    let results: Vec<Result<(String, String)>> = join_all(futures).await;
 
-    println!("{}\n", answer);
+    // Format perspectives block
+    let mut perspectives = String::new();
+    let mut lens_labels: Vec<String> = vec![];
+    for result in results {
+        match result {
+            Ok((title, answer)) => {
+                perspectives.push_str(&format!("=== {} ===\n{}\n\n", title, answer));
+                lens_labels.push(title);
+            }
+            Err(e) => {
+                eprintln!("Warning: perspective failed: {e}");
+            }
+        }
+    }
+
+    if perspectives.is_empty() {
+        anyhow::bail!("All perspective calls failed.");
+    }
+
+    // Consolidate
+    let p = templates.ask_consolidate(&mind_system, question, perspectives.trim_end());
+    let synthesis = client
+        .call_raw(Some(&p.system), &p.user, config.temperature)
+        .await?;
+
+    println!("{}\n", synthesis);
     println!("---");
-    println!("Lens: {} (composite: {:.2})", top.title, promoter::composite(top));
+    println!("Lenses used: {}", lens_labels.join(", "));
 
     Ok(())
 }
