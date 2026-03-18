@@ -66,15 +66,15 @@ pub enum Command {
     /// Display the last run summary without running
     Read,
 
-    /// Create a new problem set
+    /// Create a new problem set from content (inline, --file, or stdin)
     CreateProblemset {
-        /// Human-readable title (used to derive the ID slug)
-        #[arg(long)]
-        title: String,
+        /// Inline content describing the problem set's scope
+        #[arg()]
+        text: Option<String>,
 
-        /// Short description of the set's theme
+        /// Path to a file whose contents describe the problem set
         #[arg(long)]
-        description: Option<String>,
+        file: Option<std::path::PathBuf>,
     },
 
     /// Add a problem to a problem set
@@ -156,11 +156,29 @@ async fn main() -> Result<()> {
             teg::runner::read(&config).await?;
         }
 
-        Command::CreateProblemset { title, description } => {
+        Command::CreateProblemset { text, file } => {
+            let content = if let Some(t) = text {
+                t
+            } else if let Some(path) = file {
+                std::fs::read_to_string(&path)
+                    .map_err(|e| anyhow::anyhow!("Could not read {}: {e}", path.display()))?
+            } else if !io::stdin().is_terminal() {
+                let mut input = String::new();
+                io::stdin().read_to_string(&mut input)?;
+                input.trim().to_string()
+            } else {
+                anyhow::bail!("Provide content via argument, --file, or stdin.");
+            };
+
+            if content.is_empty() {
+                anyhow::bail!("Problem set content cannot be empty.");
+            }
+
             teg::state::ensure_initialized()?;
-            let id = teg::state::slugify(&title);
+            let id = teg::state::hash_content(&content);
             if teg::state::problemset_exists(&id) {
-                anyhow::bail!("Problem set '{}' already exists.", id);
+                println!("Problem set '{}' already exists.", id);
+                return Ok(());
             }
             let ps = ProblemSet {
                 meta: ProblemSetMeta {
@@ -169,11 +187,11 @@ async fn main() -> Result<()> {
                     run_count: 0,
                     created_at: teg::state::now_iso8601(),
                 },
-                title: title.clone(),
-                summary: description.unwrap_or_default(),
+                content: content.clone(),
             };
             teg::state::save_problemset(&ps)?;
-            println!("Created problem set '{}': {}", id, title);
+            let display = content.lines().next().unwrap_or("").trim();
+            println!("Created problem set '{}': {}", id, display);
         }
 
         Command::AddProblem { problemset, text } => {
@@ -233,10 +251,11 @@ async fn main() -> Result<()> {
                 return Ok(());
             }
             for ps in &sets {
+                let display = ps.content.lines().next().unwrap_or("").trim();
                 println!(
                     "[{}] {} — {} problem(s), {} run(s)",
                     ps.meta.id,
-                    ps.title,
+                    display,
                     ps.meta.problem_ids.len(),
                     ps.meta.run_count,
                 );

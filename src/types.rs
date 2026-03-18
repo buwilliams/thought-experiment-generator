@@ -132,8 +132,7 @@ pub struct ProblemSetMeta {
 #[derive(Debug, Clone)]
 pub struct ProblemSet {
     pub meta: ProblemSetMeta,
-    pub title: String,
-    pub summary: String,
+    pub content: String,
 }
 
 // --- LLM response types ---

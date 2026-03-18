@@ -15,9 +15,10 @@ Requires `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY` for OpenAI).
 ## Usage
 
 ```sh
-# Create a problem set
-cargo run -- create-problemset --title "LLMs and Knowledge"
-cargo run -- create-problemset --title "LLMs and Knowledge" --description "A short description"
+# Create a problem set (ID is a hash of the content)
+cargo run -- create-problemset "LLMs and epistemology: exploring whether LLMs generate genuine knowledge"
+cargo run -- create-problemset --file my-problemset.md
+cat my-problemset.md | cargo run -- create-problemset
 
 # Add problems to a set (cap: 10 per set)
 cargo run -- add-problem --problemset llms-and-knowledge --text "Can LLMs create new knowledge?"

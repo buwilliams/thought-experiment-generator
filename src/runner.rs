@@ -46,7 +46,8 @@ pub async fn run(
 
     let run = state::increment_run()?;
     println!("\n=== Epistemic Engine — Run {:03} ===", run);
-    println!("Problem set:       {} — {}", problemset.meta.id, problemset.title);
+    let ps_display = problemset.content.lines().next().unwrap_or("").trim();
+    println!("Problem set:       {} — {}", problemset.meta.id, ps_display);
     println!("Mind tools:        {}", mind.len());
     println!("Perspective tools: {}", perspectives.len());
     println!("Problems:          {}", problems.len());

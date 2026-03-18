@@ -10,7 +10,7 @@ A self-improving epistemic engine. It collides perspective tools against problem
 
 ```sh
 cargo build                                                         # build
-cargo run -- create-problemset --title "Title"                      # create a problem set
+cargo run -- create-problemset "description..."                     # create a problem set (ID = sha256 hash)
 cargo run -- add-problem --problemset <id> --text "..."             # add problem to set
 cargo run -- remove-problem --problemset <id> --problem-id <id>     # remove from set
 cargo run -- list-problemsets                                        # list all sets

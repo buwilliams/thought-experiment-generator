@@ -100,26 +100,20 @@ Full text of the problem.
 
 ### Problem set content — `problemsets/{id}.md`
 
-```markdown
-# {title}
-
-## Summary
-
-Short description of the set's theme.
-```
+Raw text content describing the set's scope and theme. No sections — just the content as provided.
 
 ### Problem set metadata — `problemsets/{id}.json`
 
 ```json
 {
-  "id": "slug",
+  "id": "8-char-sha256",
   "problem_ids": ["slug-1", "slug-2"],
   "run_count": 0,
   "created_at": "iso8601"
 }
 ```
 
-A problem set is capped at **10 problems**. Problems are stored globally in `problems/` and referenced by ID in the set. A problem can belong to multiple sets. Tools are shared across all sets.
+The ID is the first 8 characters of `sha256(content)`. A problem set is capped at **10 problems**. Problems are stored globally in `problems/` and referenced by ID in the set. A problem can belong to multiple sets. Tools are shared across all sets.
 
 ### Conjecture content — `runs/NNN/{problem_id}-{tool_id}.md`
 
@@ -418,9 +412,10 @@ Current seed perspective tools:
 ## CLI
 
 ```sh
-# Create a problem set
-cargo run -- create-problemset --title "LLMs and Knowledge"
-cargo run -- create-problemset --title "LLMs and Knowledge" --description "Exploring whether LLMs generate genuine knowledge"
+# Create a problem set (content drives the ID via sha256 hash)
+cargo run -- create-problemset "LLMs and epistemology: exploring whether LLMs generate genuine knowledge"
+cargo run -- create-problemset --file my-problemset.md
+cat my-problemset.md | cargo run -- create-problemset
 
 # Add problems to a set
 cargo run -- add-problem --problemset llms-and-knowledge --text "Can LLMs create new knowledge?"

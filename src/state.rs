@@ -264,29 +264,27 @@ fn load_problemset_from_json(json_path: &Path) -> Result<ProblemSet> {
     let meta: ProblemSetMeta = serde_json::from_str(&json_text)
         .with_context(|| format!("Invalid JSON in {}", json_path.display()))?;
     let md_path = json_path.with_extension("md");
-    let md_text = std::fs::read_to_string(&md_path)
+    let content = std::fs::read_to_string(&md_path)
         .with_context(|| format!("Missing .md for {}", json_path.display()))?;
-    let title = md_text
-        .lines()
-        .find(|l| l.starts_with("# "))
-        .map(|l| l[2..].trim().to_string())
-        .unwrap_or_default();
-    let summary = extract_section(&md_text, "Summary").unwrap_or_default();
-    Ok(ProblemSet { meta, title, summary })
+    Ok(ProblemSet { meta, content })
 }
 
 pub fn save_problemset(ps: &ProblemSet) -> Result<()> {
     let dir = problemsets_dir();
     std::fs::create_dir_all(&dir)?;
-    std::fs::write(
-        dir.join(format!("{}.md", ps.meta.id)),
-        format!("# {}\n\n## Summary\n\n{}\n", ps.title, ps.summary),
-    )?;
+    std::fs::write(dir.join(format!("{}.md", ps.meta.id)), &ps.content)?;
     std::fs::write(
         dir.join(format!("{}.json", ps.meta.id)),
         serde_json::to_string_pretty(&ps.meta)?,
     )?;
     Ok(())
+}
+
+pub fn hash_content(text: &str) -> String {
+    use sha2::{Digest, Sha256};
+    let mut hasher = Sha256::new();
+    hasher.update(text.as_bytes());
+    format!("{:x}", hasher.finalize())[..8].to_string()
 }
 
 pub fn problemset_exists(id: &str) -> bool {
