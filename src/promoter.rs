@@ -1,8 +1,7 @@
-use crate::types::{Conjecture, HistoryEntry, Problem, Tool};
+use crate::types::{Candidate, Conjecture, HistoryEntry, Problem};
 
 /// Bottom problem by score within a problem set — candidate for removal from the set.
 /// Only considers problems with run_count >= min_run_count.
-/// Returns None if all problems are below the threshold (e.g. newly added, unscored).
 pub fn find_problem_to_remove(problems: &[Problem], min_run_count: u32) -> Option<&Problem> {
     problems
         .iter()
@@ -11,19 +10,17 @@ pub fn find_problem_to_remove(problems: &[Problem], min_run_count: u32) -> Optio
 }
 
 /// Composite score: raw score weighted by square root of problem coverage breadth.
-/// Using sqrt prevents tools that happen to run on many problems from dominating
-/// over tools that are genuinely excellent on fewer problems.
-fn composite(tool: &Tool) -> f64 {
-    let breadth = (tool.meta.problem_coverage.len() as f64).sqrt().max(1.0);
-    tool.meta.score * breadth
+fn composite(c: &Conjecture) -> f64 {
+    let breadth = (c.meta.problem_coverage.len() as f64).sqrt().max(1.0);
+    c.meta.score * breadth
 }
 
-/// Update perspective tool scores and coverage from this run's conjectures.
-pub fn update_tool_scores(tools: &mut Vec<Tool>, conjectures: &[Conjecture]) {
-    for tool in tools.iter_mut() {
-        let mine: Vec<&Conjecture> = conjectures
+/// Update perspective conjecture scores and coverage from this run's candidates.
+pub fn update_conjecture_scores(conjectures: &mut Vec<Conjecture>, candidates: &[Candidate]) {
+    for conjecture in conjectures.iter_mut() {
+        let mine: Vec<&Candidate> = candidates
             .iter()
-            .filter(|c| c.meta.tool_id == tool.meta.id)
+            .filter(|c| c.meta.conjecture_id == conjecture.meta.id)
             .collect();
 
         if mine.is_empty() {
@@ -31,15 +28,15 @@ pub fn update_tool_scores(tools: &mut Vec<Tool>, conjectures: &[Conjecture]) {
         }
 
         let mean = mine.iter().map(|c| c.meta.total).sum::<f64>() / mine.len() as f64;
-        let n = tool.meta.run_count as f64;
-        tool.meta.score = (tool.meta.score * n + mean) / (n + 1.0);
-        tool.meta.run_count += 1;
+        let n = conjecture.meta.run_count as f64;
+        conjecture.meta.score = (conjecture.meta.score * n + mean) / (n + 1.0);
+        conjecture.meta.run_count += 1;
 
         for c in &mine {
-            if !tool.meta.problem_coverage.contains(&c.meta.problem_id) {
-                tool.meta.problem_coverage.push(c.meta.problem_id.clone());
+            if !conjecture.meta.problem_coverage.contains(&c.meta.problem_id) {
+                conjecture.meta.problem_coverage.push(c.meta.problem_id.clone());
             }
-            tool.meta.history.push(HistoryEntry {
+            conjecture.meta.history.push(HistoryEntry {
                 run: c.meta.run,
                 score: c.meta.total,
                 problem_id: c.meta.problem_id.clone(),
@@ -48,10 +45,10 @@ pub fn update_tool_scores(tools: &mut Vec<Tool>, conjectures: &[Conjecture]) {
     }
 }
 
-/// Update problem scores from this run's conjectures.
-pub fn update_problem_scores(problems: &mut Vec<Problem>, conjectures: &[Conjecture]) {
+/// Update problem scores from this run's candidates.
+pub fn update_problem_scores(problems: &mut Vec<Problem>, candidates: &[Candidate]) {
     for problem in problems.iter_mut() {
-        let mine: Vec<&Conjecture> = conjectures
+        let mine: Vec<&Candidate> = candidates
             .iter()
             .filter(|c| c.meta.problem_id == problem.meta.id)
             .collect();
@@ -67,42 +64,42 @@ pub fn update_problem_scores(problems: &mut Vec<Problem>, conjectures: &[Conject
     }
 }
 
-/// Top conjecture by total score — candidate for promotion to perspectives.
-pub fn find_top_conjecture(conjectures: &[Conjecture]) -> Option<&Conjecture> {
-    conjectures
+/// Top candidate by total score — candidate for promotion to perspectives.
+pub fn find_top_candidate(candidates: &[Candidate]) -> Option<&Candidate> {
+    candidates
         .iter()
         .max_by(|a, b| a.meta.total.partial_cmp(&b.meta.total).unwrap())
 }
 
-/// Top perspective tool by composite score — candidate for promotion to mind.
-/// Only considers tools with run_count >= min_run_count.
-pub fn find_tool_to_promote(perspectives: &[Tool], min_run_count: u32) -> Option<&Tool> {
+/// Top perspective conjecture by composite score — candidate for promotion to mind.
+/// Only considers conjectures with run_count >= min_run_count.
+pub fn find_conjecture_to_promote(perspectives: &[Conjecture], min_run_count: u32) -> Option<&Conjecture> {
     perspectives
         .iter()
-        .filter(|t| t.meta.run_count >= min_run_count)
+        .filter(|c| c.meta.run_count >= min_run_count)
         .max_by(|a, b| composite(a).partial_cmp(&composite(b)).unwrap())
 }
 
-/// Bottom mind tool by composite score — candidate for demotion to perspectives.
-/// Only considers tools with run_count >= min_run_count.
-pub fn find_mind_tool_to_demote(mind: &[Tool], min_run_count: u32) -> Option<&Tool> {
+/// Bottom mind conjecture by composite score — candidate for demotion to perspectives.
+/// Only considers conjectures with run_count >= min_run_count.
+pub fn find_conjecture_to_demote(mind: &[Conjecture], min_run_count: u32) -> Option<&Conjecture> {
     mind.iter()
-        .filter(|t| t.meta.run_count >= min_run_count)
+        .filter(|c| c.meta.run_count >= min_run_count)
         .min_by(|a, b| composite(a).partial_cmp(&composite(b)).unwrap())
 }
 
-/// Bottom perspective tool by composite score — candidate for discard.
-/// Only considers tools with run_count >= min_run_count, excluding the given id.
-pub fn find_perspective_to_discard<'a>(
-    perspectives: &'a [Tool],
+/// Bottom perspective conjecture by composite score — candidate for discard.
+/// Only considers conjectures with run_count >= min_run_count, excluding the given id.
+pub fn find_conjecture_to_discard<'a>(
+    perspectives: &'a [Conjecture],
     min_run_count: u32,
     exclude_id: Option<&str>,
-) -> Option<&'a Tool> {
+) -> Option<&'a Conjecture> {
     perspectives
         .iter()
-        .filter(|t| {
-            t.meta.run_count >= min_run_count
-                && exclude_id.map_or(true, |id| t.meta.id != id)
+        .filter(|c| {
+            c.meta.run_count >= min_run_count
+                && exclude_id.map_or(true, |id| c.meta.id != id)
         })
         .min_by(|a, b| composite(a).partial_cmp(&composite(b)).unwrap())
 }

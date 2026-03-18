@@ -4,8 +4,8 @@ use anyhow::{Context, Result};
 use tracing::info;
 
 use crate::types::{
-    Conjecture, ConjectureMeta, Layer, Problem, ProblemMeta, ProblemSet, ProblemSetMeta, Question,
-    StateInfo, Tool, ToolMeta,
+    Candidate, CandidateMeta, Conjecture, ConjectureMeta, Layer, Problem, ProblemMeta, ProblemSet,
+    ProblemSetMeta, Question, StateInfo,
 };
 
 const STATE_DIR: &str = "data/state";
@@ -109,31 +109,31 @@ pub fn increment_run() -> Result<u32> {
     Ok(run)
 }
 
-// --- Tools ---
+// --- Conjectures (mind / perspectives layer) ---
 
-pub fn load_tools(layer: &Layer) -> Result<Vec<Tool>> {
+pub fn load_conjectures(layer: &Layer) -> Result<Vec<Conjecture>> {
     let dir = layer_dir(layer);
     if !dir.exists() {
         return Ok(vec![]);
     }
-    let mut tools = vec![];
+    let mut conjectures = vec![];
     for entry in std::fs::read_dir(&dir)? {
         let entry = entry?;
         let path = entry.path();
         if path.extension().and_then(|e| e.to_str()) == Some("json") {
-            match load_tool_from_json(&path) {
-                Ok(tool) => tools.push(tool),
-                Err(e) => tracing::warn!("Skipping tool {}: {e}", path.display()),
+            match load_conjecture_from_json(&path) {
+                Ok(c) => conjectures.push(c),
+                Err(e) => tracing::warn!("Skipping conjecture {}: {e}", path.display()),
             }
         }
     }
-    tools.sort_by_key(|t| t.meta.rank);
-    Ok(tools)
+    conjectures.sort_by_key(|c| c.meta.rank);
+    Ok(conjectures)
 }
 
-fn load_tool_from_json(json_path: &Path) -> Result<Tool> {
+fn load_conjecture_from_json(json_path: &Path) -> Result<Conjecture> {
     let json_text = std::fs::read_to_string(json_path)?;
-    let meta: ToolMeta = serde_json::from_str(&json_text)
+    let meta: ConjectureMeta = serde_json::from_str(&json_text)
         .with_context(|| format!("Invalid JSON in {}", json_path.display()))?;
 
     let md_path = json_path.with_extension("md");
@@ -141,24 +141,24 @@ fn load_tool_from_json(json_path: &Path) -> Result<Tool> {
         .with_context(|| format!("Missing .md for {}", json_path.display()))?;
 
     let (title, summary, full_text) = parse_content_md(&md_text);
-    Ok(Tool { meta, title, summary, full_text })
+    Ok(Conjecture { meta, title, summary, full_text })
 }
 
-pub fn save_tool(tool: &Tool) -> Result<()> {
-    let dir = layer_dir(&tool.meta.layer);
+pub fn save_conjecture(conjecture: &Conjecture) -> Result<()> {
+    let dir = layer_dir(&conjecture.meta.layer);
     std::fs::create_dir_all(&dir)?;
     std::fs::write(
-        dir.join(format!("{}.md", tool.meta.id)),
-        format_content_md(&tool.title, &tool.summary, &tool.full_text),
+        dir.join(format!("{}.md", conjecture.meta.id)),
+        format_content_md(&conjecture.title, &conjecture.summary, &conjecture.full_text),
     )?;
     std::fs::write(
-        dir.join(format!("{}.json", tool.meta.id)),
-        serde_json::to_string_pretty(&tool.meta)?,
+        dir.join(format!("{}.json", conjecture.meta.id)),
+        serde_json::to_string_pretty(&conjecture.meta)?,
     )?;
     Ok(())
 }
 
-pub fn delete_tool(id: &str, layer: &Layer) -> Result<()> {
+pub fn delete_conjecture(id: &str, layer: &Layer) -> Result<()> {
     let dir = layer_dir(layer);
     let md = dir.join(format!("{}.md", id));
     let json = dir.join(format!("{}.json", id));
@@ -298,7 +298,7 @@ pub fn resolve_problemset(id: Option<&str>) -> Result<ProblemSet> {
             let sets = load_problemsets()?;
             match sets.len() {
                 0 => anyhow::bail!(
-                    "No problem sets found. Create one with:\n  cargo run -- create-problemset --title \"...\""
+                    "No problem sets found. Create one with:\n  cargo run -- create-problemset \"...\""
                 ),
                 1 => Ok(sets.into_iter().next().unwrap()),
                 _ => {
@@ -329,32 +329,32 @@ pub fn load_problems_for_set(ps: &ProblemSet) -> Result<Vec<Problem>> {
     Ok(problems)
 }
 
-// --- Conjectures ---
+// --- Candidates (ephemeral, generated each run) ---
 
-fn conjecture_base(run: u32, problem_id: &str, tool_id: &str) -> PathBuf {
-    run_dir(run).join(format!("{}-{}", problem_id, tool_id))
+fn candidate_base(run: u32, problem_id: &str, conjecture_id: &str) -> PathBuf {
+    run_dir(run).join(format!("{}-{}", problem_id, conjecture_id))
 }
 
-pub fn conjecture_exists(run: u32, problem_id: &str, tool_id: &str) -> bool {
-    conjecture_base(run, problem_id, tool_id)
+pub fn candidate_exists(run: u32, problem_id: &str, conjecture_id: &str) -> bool {
+    candidate_base(run, problem_id, conjecture_id)
         .with_extension("json")
         .exists()
 }
 
-pub fn save_conjecture(conjecture: &Conjecture) -> Result<()> {
-    let base = conjecture_base(
-        conjecture.meta.run,
-        &conjecture.meta.problem_id,
-        &conjecture.meta.tool_id,
+pub fn save_candidate(candidate: &Candidate) -> Result<()> {
+    let base = candidate_base(
+        candidate.meta.run,
+        &candidate.meta.problem_id,
+        &candidate.meta.conjecture_id,
     );
 
-    std::fs::write(base.with_extension("json"), serde_json::to_string_pretty(&conjecture.meta)?)?;
+    std::fs::write(base.with_extension("json"), serde_json::to_string_pretty(&candidate.meta)?)?;
 
     let mut md = format!(
-        "# Conjecture: {} × {}\n\n## Conjecture\n\n{}\n\n## Questions\n\n",
-        conjecture.meta.problem_id, conjecture.meta.tool_id, conjecture.text
+        "# Candidate: {} × {}\n\n## Conjecture\n\n{}\n\n## Questions\n\n",
+        candidate.meta.problem_id, candidate.meta.conjecture_id, candidate.text
     );
-    for (i, q) in conjecture.questions.iter().enumerate() {
+    for (i, q) in candidate.questions.iter().enumerate() {
         md.push_str(&format!(
             "{}. {} — **{}**\n",
             i + 1,
@@ -362,9 +362,9 @@ pub fn save_conjecture(conjecture: &Conjecture) -> Result<()> {
             if q.answer { "yes" } else { "no" }
         ));
     }
-    if !conjecture.meta.candidate_problems.is_empty() {
+    if !candidate.meta.candidate_problems.is_empty() {
         md.push_str("\n## Candidate Problems\n\n");
-        for cp in &conjecture.meta.candidate_problems {
+        for cp in &candidate.meta.candidate_problems {
             md.push_str(&format!("- {} (score: {:.2})\n", cp.text, cp.score));
         }
     }
@@ -372,12 +372,12 @@ pub fn save_conjecture(conjecture: &Conjecture) -> Result<()> {
     Ok(())
 }
 
-pub fn load_run_conjectures(run: u32) -> Result<Vec<Conjecture>> {
+pub fn load_run_candidates(run: u32) -> Result<Vec<Candidate>> {
     let dir = run_dir(run);
     if !dir.exists() {
         return Ok(vec![]);
     }
-    let mut conjectures = vec![];
+    let mut candidates = vec![];
     for entry in std::fs::read_dir(&dir)? {
         let entry = entry?;
         let path = entry.path();
@@ -385,9 +385,9 @@ pub fn load_run_conjectures(run: u32) -> Result<Vec<Conjecture>> {
             continue;
         }
         let json_text = std::fs::read_to_string(&path)?;
-        let meta: ConjectureMeta = match serde_json::from_str(&json_text) {
+        let meta: CandidateMeta = match serde_json::from_str(&json_text) {
             Ok(m) => m,
-            Err(_) => continue, // skip non-conjecture json
+            Err(_) => continue, // skip non-candidate json (e.g. state.json)
         };
         let md_path = path.with_extension("md");
         let text = if md_path.exists() {
@@ -396,15 +396,14 @@ pub fn load_run_conjectures(run: u32) -> Result<Vec<Conjecture>> {
         } else {
             String::new()
         };
-        // Reconstruct questions from md if present
         let questions = if md_path.exists() {
             parse_questions_from_md(&std::fs::read_to_string(&md_path)?)
         } else {
             vec![]
         };
-        conjectures.push(Conjecture { meta, text, questions });
+        candidates.push(Candidate { meta, text, questions });
     }
-    Ok(conjectures)
+    Ok(candidates)
 }
 
 fn parse_questions_from_md(md: &str) -> Vec<Question> {
@@ -415,7 +414,6 @@ fn parse_questions_from_md(md: &str) -> Vec<Question> {
     section
         .lines()
         .filter_map(|line| {
-            // Format: "N. Question text — **yes/no**"
             let line = line.trim();
             if line.is_empty() { return None; }
             let answer = if line.ends_with("**yes**") {
@@ -425,7 +423,6 @@ fn parse_questions_from_md(md: &str) -> Vec<Question> {
             } else {
                 return None;
             };
-            // Strip leading "N. " and trailing " — **yes/no**"
             let text = line
                 .trim_start_matches(|c: char| c.is_numeric() || c == '.')
                 .trim();

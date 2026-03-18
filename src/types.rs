@@ -34,8 +34,9 @@ pub struct HistoryEntry {
     pub problem_id: String,
 }
 
+/// A conjecture held in the mind or perspectives layer — stable, trusted, scored over runs.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct ToolMeta {
+pub struct ConjectureMeta {
     pub id: String,
     pub layer: Layer,
     pub score: f64,
@@ -48,8 +49,8 @@ pub struct ToolMeta {
 }
 
 #[derive(Debug, Clone)]
-pub struct Tool {
-    pub meta: ToolMeta,
+pub struct Conjecture {
+    pub meta: ConjectureMeta,
     pub title: String,
     pub summary: String,
     pub full_text: String,
@@ -92,10 +93,11 @@ pub struct CandidateProblem {
     pub score: f64,
 }
 
+/// A candidate — an ephemeral conjecture generated each run, scored but not yet trusted.
 #[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct ConjectureMeta {
+pub struct CandidateMeta {
     pub problem_id: String,
-    pub tool_id: String,
+    pub conjecture_id: String,
     pub run: u32,
     pub logical_consistency: f64,
     pub hard_to_vary: f64,
@@ -104,8 +106,8 @@ pub struct ConjectureMeta {
 }
 
 #[derive(Debug, Clone)]
-pub struct Conjecture {
-    pub meta: ConjectureMeta,
+pub struct Candidate {
+    pub meta: CandidateMeta,
     pub text: String,
     pub questions: Vec<Question>,
 }
@@ -164,14 +166,16 @@ pub struct CandidatesResponse {
     pub candidates: Vec<CandidateProblem>,
 }
 
+/// Response when promoting a candidate into a reusable perspective conjecture.
 #[derive(Debug, Deserialize)]
-pub struct ToolSummaryResponse {
+pub struct PromoteResponse {
     pub summary: String,
     pub full_text: String,
 }
 
+/// Response when summarizing a conjecture for storage or display.
 #[derive(Debug, Deserialize)]
-pub struct SummarizeToolResponse {
+pub struct SummaryResponse {
     pub summary: String,
 }
 

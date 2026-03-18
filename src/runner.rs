@@ -10,8 +10,8 @@ use crate::promoter;
 use crate::prompts;
 use crate::state;
 use crate::types::{
-    Conjecture, DeduplicateResponse, Layer, Problem, ProblemMeta, ProblemSet, ProblemSource,
-    PROBLEMSET_MAX_SIZE, Tool, ToolMeta, ToolSummaryResponse,
+    Candidate, Conjecture, ConjectureMeta, DeduplicateResponse, Layer, Problem, ProblemMeta,
+    ProblemSet, ProblemSource, PromoteResponse, PROBLEMSET_MAX_SIZE,
 };
 
 pub async fn run(
@@ -29,8 +29,8 @@ pub async fn run(
         add_user_problem_to_set(text, &mut problemset)?;
     }
 
-    let mind = state::load_tools(&Layer::Mind)?;
-    let perspectives = state::load_tools(&Layer::Perspectives)?;
+    let mind = state::load_conjectures(&Layer::Mind)?;
+    let perspectives = state::load_conjectures(&Layer::Perspectives)?;
     let problems = state::load_problems_for_set(&problemset)?;
 
     if problems.is_empty() {
@@ -41,79 +41,79 @@ pub async fn run(
         );
     }
     if perspectives.is_empty() {
-        anyhow::bail!("No perspective tools found in data/state/perspectives/.");
+        anyhow::bail!("No perspective conjectures found in data/state/perspectives/.");
     }
 
     let run = state::increment_run()?;
     println!("\n=== Epistemic Engine — Run {:03} ===", run);
     let ps_display = problemset.content.lines().next().unwrap_or("").trim();
-    println!("Problem set:       {} — {}", problemset.meta.id, ps_display);
-    println!("Mind tools:        {}", mind.len());
-    println!("Perspective tools: {}", perspectives.len());
-    println!("Problems:          {}", problems.len());
-    println!("Pairs to process:  {}\n", problems.len() * perspectives.len());
+    println!("Problem set:              {} — {}", problemset.meta.id, ps_display);
+    println!("Mind conjectures:         {}", mind.len());
+    println!("Perspective conjectures:  {}", perspectives.len());
+    println!("Problems:                 {}", problems.len());
+    println!("Pairs to process:         {}\n", problems.len() * perspectives.len());
 
     let mind_system = prompts::format_mind_system(&mind);
 
-    // Phase 1 + 2: Generate and evaluate all (problem, tool) pairs concurrently
+    // Phase 1 + 2: Generate and evaluate all (problem, perspective) pairs concurrently
     let mut handles = vec![];
     for problem in &problems {
-        for tool in &perspectives {
-            if state::conjecture_exists(run, &problem.meta.id, &tool.meta.id) {
-                info!("Resuming: skipping existing conjecture {}-{}", problem.meta.id, tool.meta.id);
+        for perspective in &perspectives {
+            if state::candidate_exists(run, &problem.meta.id, &perspective.meta.id) {
+                info!("Resuming: skipping existing candidate {}-{}", problem.meta.id, perspective.meta.id);
                 continue;
             }
             let client = Arc::clone(&client);
             let config = config.clone();
             let mind_system = mind_system.clone();
-            let tool_summary = tool.summary.clone();
+            let conjecture_summary = perspective.summary.clone();
             let problem_summary = problem.summary.clone();
             let problem_id = problem.meta.id.clone();
-            let tool_id = tool.meta.id.clone();
+            let conjecture_id = perspective.meta.id.clone();
 
             handles.push(tokio::spawn(async move {
-                let p = prompts::conjecture_generation(&mind_system, &tool_summary, &problem_summary);
+                let p = prompts::generate_candidate(&mind_system, &conjecture_summary, &problem_summary);
                 let text = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
 
-                info!("Generated: {}-{}", problem_id, tool_id);
+                info!("Generated: {}-{}", problem_id, conjecture_id);
 
-                let conjecture = evaluator::evaluate(
+                let candidate = evaluator::evaluate(
                     &client, &config, &mind_system,
                     &text, &problem_summary,
-                    &problem_id, &tool_id, run,
+                    &problem_id, &conjecture_id, run,
                 ).await?;
 
-                state::save_conjecture(&conjecture)?;
-                anyhow::Ok(conjecture)
+                state::save_candidate(&candidate)?;
+                anyhow::Ok(candidate)
             }));
         }
     }
 
     for handle in handles {
         if let Err(e) = handle.await? {
-            tracing::warn!("Conjecture failed: {e}");
+            tracing::warn!("Candidate generation failed: {e}");
         }
     }
 
-    let conjectures = state::load_run_conjectures(run)?;
-    info!("Phase 1+2 complete. {} conjectures.", conjectures.len());
+    let candidates = state::load_run_candidates(run)?;
+    info!("Phase 1+2 complete. {} candidates.", candidates.len());
 
     // Phase 3: Rank and promote
     let mut perspectives_mut = perspectives.clone();
     let mut problems_mut = problems.clone();
 
-    promoter::update_tool_scores(&mut perspectives_mut, &conjectures);
-    promoter::update_problem_scores(&mut problems_mut, &conjectures);
+    promoter::update_conjecture_scores(&mut perspectives_mut, &candidates);
+    promoter::update_problem_scores(&mut problems_mut, &candidates);
 
-    for tool in &perspectives_mut {
-        state::save_tool(tool)?;
+    for conjecture in &perspectives_mut {
+        state::save_conjecture(conjecture)?;
     }
     for problem in &problems_mut {
         state::save_problem(problem)?;
     }
 
     // Admit candidate problems into the problem set
-    admit_candidates_to_set(&conjectures, &mut problemset, config.problem_admission_threshold)?;
+    admit_candidates_to_set(&candidates, &mut problemset, config.problem_admission_threshold)?;
 
     // Load updated set problems (existing scored + newly admitted)
     let all_set_problems = state::load_problems_for_set(&problemset)?;
@@ -153,26 +153,26 @@ pub async fn run(
 
     let problems_removed = removed_ids.len() + cap_removed;
 
-    // Promote top conjecture → perspectives
-    let promoted_conjecture_summary =
-        promote_top_conjecture(&client, config, &mind_system, &conjectures, run).await;
+    // Promote top candidate → perspectives
+    let promoted_candidate_summary =
+        promote_top_candidate(&client, config, &mind_system, &candidates, run).await;
 
-    // Promote top perspective tool → mind
-    let (promoted_tool_name, promoted_tool_id) =
-        promote_top_tool(&perspectives_mut, config.min_run_count)?;
+    // Promote top perspective conjecture → mind
+    let (promoted_conjecture_name, promoted_conjecture_id) =
+        promote_top_perspective(&perspectives_mut, config.min_run_count)?;
 
-    // Demote bottom mind tool → perspectives
+    // Demote bottom mind conjecture → perspectives
     let demoted_mind_name = demote_bottom_mind(&mind, config.min_run_count)?;
 
-    // Discard bottom perspective tool (excluding what was just promoted)
+    // Discard bottom perspective conjecture (excluding what was just promoted)
     let discarded_name =
-        discard_bottom_perspective(&perspectives_mut, config.min_run_count, promoted_tool_id.as_deref())?;
+        discard_bottom_perspective(&perspectives_mut, config.min_run_count, promoted_conjecture_id.as_deref())?;
 
     // Phase 4: Report
     generate_report(
-        &client, run, &conjectures,
-        promoted_conjecture_summary.as_deref(),
-        promoted_tool_name.as_deref(),
+        &client, run, &candidates,
+        promoted_candidate_summary.as_deref(),
+        promoted_conjecture_name.as_deref(),
         demoted_mind_name.as_deref(),
         discarded_name.as_deref(),
         problems_removed,
@@ -232,7 +232,7 @@ fn add_user_problem_to_set(text: &str, problemset: &mut ProblemSet) -> Result<()
 }
 
 fn admit_candidates_to_set(
-    conjectures: &[Conjecture],
+    candidates: &[Candidate],
     problemset: &mut ProblemSet,
     admission_threshold: f64,
 ) -> Result<()> {
@@ -241,12 +241,12 @@ fn admit_candidates_to_set(
     let mut in_set: std::collections::HashSet<String> =
         problemset.meta.problem_ids.iter().cloned().collect();
 
-    for conjecture in conjectures {
-        for candidate in &conjecture.meta.candidate_problems {
-            if candidate.score < admission_threshold {
+    for candidate in candidates {
+        for cp in &candidate.meta.candidate_problems {
+            if cp.score < admission_threshold {
                 continue;
             }
-            let id = state::slugify(&candidate.text.chars().take(60).collect::<String>());
+            let id = state::slugify(&cp.text.chars().take(60).collect::<String>());
             if in_set.contains(&id) {
                 continue;
             }
@@ -261,9 +261,9 @@ fn admit_candidates_to_set(
                         run_count: 0,
                         created_at: state::now_iso8601(),
                     },
-                    title: candidate.text.chars().take(80).collect(),
-                    summary: candidate.text.chars().take(200).collect(),
-                    full_text: candidate.text.clone(),
+                    title: cp.text.chars().take(80).collect(),
+                    summary: cp.text.chars().take(200).collect(),
+                    full_text: cp.text.clone(),
                 };
                 state::save_problem(&problem)?;
                 info!("Created candidate problem: {}", id);
@@ -306,25 +306,25 @@ async fn run_problem_deduplication(
     }
 }
 
-async fn promote_top_conjecture(
+async fn promote_top_candidate(
     client: &LlmClient,
     _config: &Config,
     mind_system: &str,
-    conjectures: &[Conjecture],
+    candidates: &[Candidate],
     run: u32,
 ) -> Option<String> {
-    let top = promoter::find_top_conjecture(conjectures)?;
-    let p = prompts::summarize_for_tool(mind_system, &top.text, top.meta.total);
+    let top = promoter::find_top_candidate(candidates)?;
+    let p = prompts::promote_candidate(mind_system, &top.text, top.meta.total);
     match client
-        .call::<ToolSummaryResponse>(Some(&p.system), &p.user, 0.3)
+        .call::<PromoteResponse>(Some(&p.system), &p.user, 0.3)
         .await
     {
         Ok(resp) => {
-            let count = state::load_tools(&Layer::Perspectives)
-                .map(|t| t.len())
+            let count = state::load_conjectures(&Layer::Perspectives)
+                .map(|c| c.len())
                 .unwrap_or(0);
-            let new_tool = Tool {
-                meta: ToolMeta {
+            let new_conjecture = Conjecture {
+                meta: ConjectureMeta {
                     id: format!("discovered-{:03}", run),
                     layer: Layer::Perspectives,
                     score: top.meta.total,
@@ -339,53 +339,53 @@ async fn promote_top_conjecture(
                 summary: resp.summary.clone(),
                 full_text: resp.full_text,
             };
-            if let Err(e) = state::save_tool(&new_tool) {
-                tracing::warn!("Failed to save promoted conjecture: {e}");
+            if let Err(e) = state::save_conjecture(&new_conjecture) {
+                tracing::warn!("Failed to save promoted candidate: {e}");
                 return None;
             }
-            info!("Promoted conjecture to perspectives: discovered-{:03}", run);
+            info!("Promoted candidate to perspectives: discovered-{:03}", run);
             Some(resp.summary)
         }
         Err(e) => {
-            tracing::warn!("Failed to summarize conjecture for promotion: {e}");
+            tracing::warn!("Failed to promote candidate: {e}");
             None
         }
     }
 }
 
-fn promote_top_tool(
-    perspectives: &[Tool],
+fn promote_top_perspective(
+    perspectives: &[Conjecture],
     min_run_count: u32,
 ) -> Result<(Option<String>, Option<String>)> {
-    match promoter::find_tool_to_promote(perspectives, min_run_count) {
-        Some(tool) => {
-            let id = tool.meta.id.clone();
-            let name = tool.title.clone();
-            let mut promoted = tool.clone();
-            let mind_count = state::load_tools(&Layer::Mind)?.len();
+    match promoter::find_conjecture_to_promote(perspectives, min_run_count) {
+        Some(conjecture) => {
+            let id = conjecture.meta.id.clone();
+            let name = conjecture.title.clone();
+            let mut promoted = conjecture.clone();
+            let mind_count = state::load_conjectures(&Layer::Mind)?.len();
             promoted.meta.layer = Layer::Mind;
             promoted.meta.rank = mind_count as u32 + 1;
-            state::delete_tool(&id, &Layer::Perspectives)?;
-            state::save_tool(&promoted)?;
-            info!("Promoted tool to mind: {}", id);
+            state::delete_conjecture(&id, &Layer::Perspectives)?;
+            state::save_conjecture(&promoted)?;
+            info!("Promoted perspective conjecture to mind: {}", id);
             Ok((Some(name), Some(id)))
         }
         None => Ok((None, None)),
     }
 }
 
-fn demote_bottom_mind(mind: &[Tool], min_run_count: u32) -> Result<Option<String>> {
-    match promoter::find_mind_tool_to_demote(mind, min_run_count) {
-        Some(tool) => {
-            let id = tool.meta.id.clone();
-            let name = tool.title.clone();
-            let mut demoted = tool.clone();
-            let persp_count = state::load_tools(&Layer::Perspectives)?.len();
+fn demote_bottom_mind(mind: &[Conjecture], min_run_count: u32) -> Result<Option<String>> {
+    match promoter::find_conjecture_to_demote(mind, min_run_count) {
+        Some(conjecture) => {
+            let id = conjecture.meta.id.clone();
+            let name = conjecture.title.clone();
+            let mut demoted = conjecture.clone();
+            let persp_count = state::load_conjectures(&Layer::Perspectives)?.len();
             demoted.meta.layer = Layer::Perspectives;
             demoted.meta.rank = persp_count as u32 + 1;
-            state::delete_tool(&id, &Layer::Mind)?;
-            state::save_tool(&demoted)?;
-            info!("Demoted mind tool to perspectives: {}", id);
+            state::delete_conjecture(&id, &Layer::Mind)?;
+            state::save_conjecture(&demoted)?;
+            info!("Demoted mind conjecture to perspectives: {}", id);
             Ok(Some(name))
         }
         None => Ok(None),
@@ -393,16 +393,16 @@ fn demote_bottom_mind(mind: &[Tool], min_run_count: u32) -> Result<Option<String
 }
 
 fn discard_bottom_perspective(
-    perspectives: &[Tool],
+    perspectives: &[Conjecture],
     min_run_count: u32,
     exclude_id: Option<&str>,
 ) -> Result<Option<String>> {
-    match promoter::find_perspective_to_discard(perspectives, min_run_count, exclude_id) {
-        Some(tool) => {
-            let id = tool.meta.id.clone();
-            let name = tool.title.clone();
-            state::delete_tool(&id, &Layer::Perspectives)?;
-            info!("Discarded perspective tool: {}", id);
+    match promoter::find_conjecture_to_discard(perspectives, min_run_count, exclude_id) {
+        Some(conjecture) => {
+            let id = conjecture.meta.id.clone();
+            let name = conjecture.title.clone();
+            state::delete_conjecture(&id, &Layer::Perspectives)?;
+            info!("Discarded perspective conjecture: {}", id);
             Ok(Some(name))
         }
         None => Ok(None),
@@ -412,26 +412,26 @@ fn discard_bottom_perspective(
 async fn generate_report(
     client: &LlmClient,
     run: u32,
-    conjectures: &[Conjecture],
+    candidates: &[Candidate],
+    promoted_candidate: Option<&str>,
     promoted_conjecture: Option<&str>,
-    promoted_tool: Option<&str>,
     demoted_mind: Option<&str>,
     discarded: Option<&str>,
     problems_removed: usize,
 ) -> Result<()> {
-    let mut sorted = conjectures.to_vec();
+    let mut sorted = candidates.to_vec();
     sorted.sort_by(|a, b| b.meta.total.partial_cmp(&a.meta.total).unwrap());
 
     let mut out = format!("# Run {:03} Results\n\n", run);
 
-    out.push_str("| Rank | Problem | Tool | Consistency | Hard to Vary | Total |\n");
-    out.push_str("|------|---------|------|-------------|--------------|-------|\n");
+    out.push_str("| Rank | Problem | Conjecture | Consistency | Hard to Vary | Total |\n");
+    out.push_str("|------|---------|------------|-------------|--------------|-------|\n");
     for (rank, c) in sorted.iter().enumerate() {
         out.push_str(&format!(
             "| {} | {} | {} | {:.2} | {:.2} | {:.2} |\n",
             rank + 1,
             c.meta.problem_id,
-            c.meta.tool_id,
+            c.meta.conjecture_id,
             c.meta.logical_consistency,
             c.meta.hard_to_vary,
             c.meta.total,
@@ -440,7 +440,7 @@ async fn generate_report(
 
     out.push_str("\n## Top 5\n\n");
     for (rank, c) in sorted.iter().take(5).enumerate() {
-        let p = prompts::summarize_conjecture(&c.text, c.meta.total);
+        let p = prompts::summarize_candidate(&c.text, c.meta.total);
         let summary = client
             .call_raw(Some(&p.system), &p.user, 0.3)
             .await
@@ -449,29 +449,29 @@ async fn generate_report(
             "**{}. {} × {}** (total: {:.2})  \n{}\n\n",
             rank + 1,
             c.meta.problem_id,
-            c.meta.tool_id,
+            c.meta.conjecture_id,
             c.meta.total,
             summary.trim(),
         ));
     }
 
     out.push_str("## Changes\n\n");
-    let any_change = promoted_conjecture.is_some()
-        || promoted_tool.is_some()
+    let any_change = promoted_candidate.is_some()
+        || promoted_conjecture.is_some()
         || demoted_mind.is_some()
         || discarded.is_some()
         || problems_removed > 0;
-    if let Some(s) = promoted_conjecture {
-        out.push_str(&format!("- Promoted conjecture → perspectives: \"{s}\"\n"));
+    if let Some(s) = promoted_candidate {
+        out.push_str(&format!("- Promoted candidate → perspectives: \"{s}\"\n"));
     }
-    if let Some(s) = promoted_tool {
-        out.push_str(&format!("- Promoted tool → mind: \"{s}\"\n"));
+    if let Some(s) = promoted_conjecture {
+        out.push_str(&format!("- Promoted perspective conjecture → mind: \"{s}\"\n"));
     }
     if let Some(s) = demoted_mind {
-        out.push_str(&format!("- Demoted mind tool → perspectives: \"{s}\"\n"));
+        out.push_str(&format!("- Demoted mind conjecture → perspectives: \"{s}\"\n"));
     }
     if let Some(s) = discarded {
-        out.push_str(&format!("- Discarded perspective tool: \"{s}\"\n"));
+        out.push_str(&format!("- Discarded perspective conjecture: \"{s}\"\n"));
     }
     if problems_removed > 0 {
         out.push_str(&format!(

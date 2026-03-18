@@ -8,7 +8,8 @@ use tracing_subscriber::EnvFilter;
 use teg::config::Config;
 use teg::llm::LlmClient;
 use teg::types::{
-    Layer, ProblemMeta, ProblemSet, ProblemSetMeta, ProblemSource, PROBLEMSET_MAX_SIZE,
+    Conjecture, ConjectureMeta, Layer, ProblemMeta, ProblemSet, ProblemSetMeta, ProblemSource,
+    SummaryResponse, PROBLEMSET_MAX_SIZE,
 };
 
 #[derive(Parser)]
@@ -34,7 +35,7 @@ pub struct Cli {
     #[arg(long, global = true, default_value_t = 0.6)]
     pub problem_admission_threshold: f64,
 
-    /// Minimum run count before a tool or problem is eligible for promotion or demotion
+    /// Minimum run count before a conjecture or problem is eligible for promotion or demotion
     #[arg(long, global = true, default_value_t = 3)]
     pub min_run_count: u32,
 
@@ -102,8 +103,8 @@ pub enum Command {
     /// List all problem sets and their contents
     ListProblemsets,
 
-    /// Add a new tool to the mind or perspectives layer
-    AddTool {
+    /// Add a new conjecture to the mind or perspectives layer
+    AddConjecture {
         /// Target layer: "mind" or "perspectives"
         #[arg(long)]
         layer: String,
@@ -112,7 +113,7 @@ pub enum Command {
         #[arg(long)]
         title: String,
 
-        /// Inline full text of the tool
+        /// Inline full text of the conjecture
         #[arg(long)]
         text: Option<String>,
 
@@ -247,7 +248,7 @@ async fn main() -> Result<()> {
             let sets = teg::state::load_problemsets()?;
             if sets.is_empty() {
                 println!("No problem sets found. Create one with:");
-                println!("  cargo run -- create-problemset --title \"...\"");
+                println!("  cargo run -- create-problemset \"...\"");
                 return Ok(());
             }
             for ps in &sets {
@@ -265,7 +266,7 @@ async fn main() -> Result<()> {
             }
         }
 
-        Command::AddTool { layer, title, text, file } => {
+        Command::AddConjecture { layer, title, text, file } => {
             let layer: Layer = layer.parse()?;
 
             let full_text = if let Some(t) = text {
@@ -278,26 +279,26 @@ async fn main() -> Result<()> {
                 io::stdin().read_to_string(&mut input)?;
                 input.trim().to_string()
             } else {
-                anyhow::bail!("Provide tool text via --text, --file, or stdin.");
+                anyhow::bail!("Provide conjecture text via --text, --file, or stdin.");
             };
 
             if full_text.is_empty() {
-                anyhow::bail!("Tool text cannot be empty.");
+                anyhow::bail!("Conjecture text cannot be empty.");
             }
 
             teg::state::ensure_initialized()?;
-            let mind = teg::state::load_tools(&Layer::Mind)?;
+            let mind = teg::state::load_conjectures(&Layer::Mind)?;
             let mind_system = teg::prompts::format_mind_system(&mind);
 
-            let p = teg::prompts::summarize_tool(&mind_system, &title, &full_text);
-            let resp: teg::types::SummarizeToolResponse =
+            let p = teg::prompts::conjecture_summary(&mind_system, &title, &full_text);
+            let resp: SummaryResponse =
                 client.call(Some(&p.system), &p.user, 0.3).await?;
 
             let id = teg::state::slugify(&title);
-            let count = teg::state::load_tools(&layer)?.len();
+            let count = teg::state::load_conjectures(&layer)?.len();
 
-            let tool = teg::types::Tool {
-                meta: teg::types::ToolMeta {
+            let conjecture = Conjecture {
+                meta: ConjectureMeta {
                     id: id.clone(),
                     layer: layer.clone(),
                     score: 0.0,
@@ -313,7 +314,7 @@ async fn main() -> Result<()> {
                 full_text,
             };
 
-            teg::state::save_tool(&tool)?;
+            teg::state::save_conjecture(&conjecture)?;
             println!("Added '{}' to {}.", title, layer);
             println!("Summary: {}", resp.summary);
         }
