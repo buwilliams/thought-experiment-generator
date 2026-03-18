@@ -232,7 +232,7 @@ A single run processes all problems against all candidate conjectures, generatin
 
 For each `(problem, candidate_conjecture)` pair:
 
-1. Build context: mind conjecture summaries (as system prompt) + candidate conjecture summary + problem summary
+1. Build context: mind conjecture summaries (as system prompt) + candidate conjecture summary + problem set context (full `.md` content) + problem summary
 2. Call LLM → generated output text
 3. Save generated output
 
@@ -240,19 +240,25 @@ Runs concurrently up to `--max-concurrent`.
 
 ### Phase 2 — Evaluate Outputs
 
-At the start of Phase 2, all active evaluation criteria are loaded from `data/state/evaluations/`. Each criterion defines a scoring method and a weight. The system applies them in sequence to each generated output. Combined score = normalized weighted sum: `Σ(evaluation.weight × score) / Σ(evaluation.weight)`.
+Each generated output passes through four evaluation passes in sequence. Combined score = `0.20 × consistency + 0.35 × hard_to_vary + 0.30 × explanatory_reach + 0.15 × resistance_to_refutation`.
 
-Evaluations are **manually managed** — users add or refine criteria by editing `data/state/evaluations/` directly. The system never writes to this directory. Seed evaluations:
+The `data/state/evaluations/` directory documents the criteria and weights but is not read by the code — weights are implemented directly in `evaluator.rs`. Users can add new criteria files for reference and manually adjust weights in the source.
 
-**Logical Consistency** (weight 0.3)
-- System prompt: mind
+**Pass 1 — Logical Consistency** (weight 0.20)
 - Ask: is this output internally self-consistent? Score 0.0–1.0.
-- If score < threshold (default 0.3), mark failed, skip remaining evaluations.
+- If score < threshold (default 0.3), mark failed and skip all remaining passes.
 
-**Hard to Vary** (weight 0.7)
-- System prompt: mind
-- Ask the mind to generate 10 yes/no questions that probe whether this output has structure that resists arbitrary modification. Questions should be contextual — different outputs, different problems warrant different questions.
-- Score each question answer: yes = 1, no = 0. Total / 10 = hard-to-vary score.
+**Pass 2 — Hard to Vary** (weight 0.35)
+- Generate 10 yes/no questions distributed across three dimensions: necessity (4 questions — is this part structurally required?), reach (3 questions — does the explanation extend beyond the immediate problem?), resistance to ad hoc patching (3 questions — would a counterexample require gutting the core structure?).
+- Answer each question. Score = yes_count / 10.
+
+**Pass 3 — Explanatory Reach** (weight 0.30)
+- Ask: does this output make claims, predictions, or connections that extend beyond what the problem literally asked for? Score 0.0–1.0.
+- Near 0: purely local description. Near 1: illuminates adjacent phenomena, makes predictions in cases the problem did not mention.
+
+**Pass 4 — Resistance to Refutation** (weight 0.15)
+- Adversarially attempt to construct a minimal counterexample or thought experiment that breaks the explanation. Score how hard that was.
+- Near 0: trivially refuted or too vague to refute. Near 1: held up under adversarial pressure.
 
 **Candidate Problem Extraction**
 - After evaluations, the mind also identifies unresolved tensions or unexplored implications in the output.
@@ -489,12 +495,16 @@ cargo run -- ask "What causes institutional decay?"
 cargo run -- ask --file question.md
 cat question.md | cargo run -- ask
 
+# Full system review: data report + adversarial LLM self-assessment
+# Shows mind, top candidates, score trajectory, problem sets, last run changes,
+# then asks the system to assess its own mind quality and output quality critically
+cargo run -- review
+
 # Check whether conjectures are novel or restatements of known theories
 # Scores each conjecture 0–1 for novelty and names the closest known analog
 cargo run -- novelty-check
 
-# Show score trajectory across all runs and per-conjecture score history
-# No LLM calls — reads run data directly
+# Show score trajectory across all runs and per-conjecture score history (no LLM calls)
 cargo run -- trajectory
 
 # Read last run summary without running

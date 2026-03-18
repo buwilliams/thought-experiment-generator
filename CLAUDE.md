@@ -19,6 +19,7 @@ cargo run -- run                                                          # run 
 cargo run -- run --problemset <id> --problem "..."                        # add problem then run
 cargo run -- run-all                                                      # run all problem sets sequentially
 cargo run -- ask "question"                                               # ask the system; all lenses run concurrently, then consolidated
+cargo run -- review                                                       # data report + adversarial LLM self-assessment
 cargo run -- read                                                         # read last summary
 cargo run -- --fresh run                                                  # reset to seed and run
 RUST_LOG=debug cargo run -- run                                           # debug logging
@@ -32,7 +33,7 @@ cargo run -- add-conjecture --layer candidates --title "Title" --file path/to/fi
 
 - `runner.rs` — orchestrates four phases: (1+2) concurrent output generation + evaluation per (problem, candidate conjecture) pair, (3) rank/promote/review problems, (4) report. Uses `tokio::spawn` bounded by `--max-concurrent`.
 - `state.rs` — all filesystem I/O. Reads/writes `.md` + `.json` sidecar pairs for conjectures and generated outputs; problemsets store problems inline in their `.json`. `ensure_initialized()` copies seed to state on first run. Key functions: `load_conjectures`/`save_conjecture`/`delete_conjecture` for mind/candidates; `save_generated`/`load_run_generated`/`generated_exists` for ephemeral run output.
-- `evaluator.rs` — two-pass evaluation: logical consistency (score < threshold → skip), then hard-to-vary (10 yes/no questions, score = yes_count/10). Also calls `extract_candidate_problems`.
+- `evaluator.rs` — four-pass evaluation: (1) logical consistency (gate, score < threshold → skip), (2) hard-to-vary (10 yes/no questions across necessity/reach/patching dimensions, score = yes_count/10), (3) explanatory reach (does output extend beyond the immediate problem?), (4) resistance to refutation (adversarial counterexample attempt). Combined score = `0.20×consistency + 0.35×htv + 0.30×reach + 0.15×refutation`. Also calls `extract_candidate_problems`.
 - `promoter.rs` — ranking and promotion logic. `composite(conjecture)` = `score × √(problem_coverage_breadth)`. Finds top/bottom conjectures and problems for promotion/demotion/discard.
 - `ask.rs` — `ask()` loads mind + candidates, runs all mind conjectures and the top 3 candidates concurrently as separate lenses via `ask.md`, then consolidates all perspectives into a single best explanation via `ask_consolidate.md`. Prints the synthesis followed by the list of lenses used.
 - `prompts.rs` — `PromptTemplates` struct loaded from `data/prompts/*.md` at startup. `load()` reads all template files; each method applies `{{variable}}` substitution and returns a `Prompt { system, user }`. `format_mind_system` builds the system prompt from mind conjecture summaries. All prompts use summaries, never full text.
