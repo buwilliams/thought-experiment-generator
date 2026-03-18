@@ -51,7 +51,7 @@ cat my-tool.md | cargo run -- add-tool --layer mind --title "Tool Title"
 |---|---|---|
 | `--max-concurrent` | 5 | Max concurrent LLM calls |
 | `--consistency-threshold` | 0.3 | Minimum logical consistency score to proceed to Pass 2 |
-| `--problem-admission-threshold` | 0.6 | Minimum score for candidate problems to enter database |
+| `--problem-admission-threshold` | 0.6 | Minimum score for candidate problems to enter the active set |
 | `--min-run-count` | 3 | Minimum runs before a tool or problem is eligible for promotion/demotion |
 | `--provider` | anthropic | `anthropic`, `anthropic-token`, or `openai` |
 | `--model` | claude-sonnet-4-6 | Model name |
@@ -65,12 +65,12 @@ cat my-tool.md | cargo run -- add-tool --layer mind --title "Tool Title"
 **Phase 2 — Evaluate Conjectures.** Two-pass evaluation:
 - *Pass 1 — Logical Consistency:* Score 0.0–1.0. Below threshold (default 0.3), conjecture is skipped.
 - *Pass 2 — Hard to Vary:* The mind generates 10 yes/no questions probing whether each part of the conjecture is load-bearing. Score = yes_count / 10. Combined score: `0.3 × consistency + 0.7 × hard_to_vary`.
-- *Candidate Problems:* The mind also identifies unresolved tensions and open questions raised by each conjecture. Candidates scoring above threshold are admitted to the problem database.
+- *Candidate Problems:* The mind also identifies unresolved tensions and open questions raised by each conjecture. Candidates scoring above threshold are admitted to the active problem set.
 
 **Phase 3 — Rank and Promote.**
 - Tool scores update as rolling averages weighted by run_count. Composite score = `score × √(problem_coverage_breadth)`.
 - Problem scores update as rolling averages of mean conjecture score across all tools applied.
-- *Problem review:* The mind receives all problem summaries and removes duplicates and subsumed problems. The bottom-ranked problem (min run_count) is discarded.
+- *Problem review:* The mind receives all problem summaries in the set and removes duplicates and subsumed problems (removed from set membership, not the global store). The bottom-ranked problem with sufficient run history is also dropped from the set, enforcing the 10-problem cap.
 - *Tool promotion:* Top perspective tool (by composite, min run_count) → mind. Top conjecture → summarized into a new perspective tool.
 - *Tool demotion:* Bottom mind tool → perspectives. Bottom perspective tool → discarded.
 
