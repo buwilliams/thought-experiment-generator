@@ -1,0 +1,50 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "mathematical-formalism",
+  "run": 1,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.9,
+  "total": 0.894,
+  "candidate_problems": [
+    {
+      "text": "The conjecture treats replaceability as a binary threshold (r(n) = 0 vs. r(n) > 0) when defining load-bearing nodes, but the continuous function r(n) ∈ [0,1] is never integrated into the constraint rank ρ(G). What is the correct generalization of nullity to the continuous case — perhaps a weighted nullity where each node contributes (1 - r(n)) to the rank? This matters because real explanations have nodes that are partially replaceable, and the binary treatment may produce discontinuous rigidity judgments that don't track the underlying structure.",
+      "score": 0.87
+    },
+    {
+      "text": "The conjecture claims explanatory degeneracy is isomorphic to underdetermination, but underdetermination is an epistemic relation between theory and evidence, while degeneracy is defined purely over inferential structure. Is this isomorphism exact, approximate, or merely analogical? A precise mapping would need to show that every free variable in the evidential constraint system corresponds to a swappable node in the explanatory graph and vice versa. If the isomorphism fails in either direction, the conjecture's most ambitious claim collapses into a suggestive metaphor.",
+      "score": 0.91
+    },
+    {
+      "text": "The conjecture assumes the constraint matrix is well-defined, but inferential dependencies in natural explanations are not obviously linear. The nullity concept is borrowed from linear algebra, where it applies to linear maps over vector spaces. What justifies treating inferential constraints as linear? If the constraint system is nonlinear, nullity is not the right invariant — one would need something like the dimension of the solution manifold or a local linearization. The conjecture's formal apparatus may be inapplicable to the very cases it is meant to illuminate.",
+      "score": 0.93
+    },
+    {
+      "text": "The group of 'legitimate substitutions' is invoked in point 4 as the criterion for identifying load-bearing elements, but the conjecture never specifies what makes a substitution legitimate. This is not a minor gap: the entire rigidity measure depends on which swaps are in scope. A node that is load-bearing relative to one substitution group may be freely swappable relative to a larger one. The conjecture needs either a principled account of admissible substitutions or an argument that rigidity is invariant across reasonable choices of substitution group.",
+      "score": 0.95
+    },
+    {
+      "text": "If rigidity is a structural property detectable without knowing ground truth, can two explanations of the same phenomenon have different rigidity scores while both being empirically adequate? If yes, rigidity is an independent epistemic virtue — and the conjecture implies we should prefer rigid explanations over degenerate ones even when evidence cannot discriminate between them. This would constitute a non-empirical criterion for theory choice, which has significant implications for the epistemology of science and connects directly to debates about simplicity, unification, and explanatory depth.",
+      "score": 0.88
+    },
+    {
+      "text": "The conjecture says over-determination strengthens rigidity because multiple inferential paths converging on a node reduce its replaceability. But in Bayesian terms, multiple independent lines of evidence converging on a hypothesis is exactly what raises confidence. Is there a formal correspondence between Bayesian confirmation and constraint rank? Specifically, does adding an independent inferential path to a node correspond to adding a constraint equation, thereby reducing nullity? If so, the conjecture may provide a graph-theoretic reconstruction of coherentist justification.",
+      "score": 0.82
+    },
+    {
+      "text": "The conjecture defines rigidity at the level of a whole explanation graph, but scientific theories are typically composed of modular sub-explanations. A theory might be globally rigid (nullity = 0) while containing locally degenerate sub-graphs. Conversely, a globally degenerate theory might contain rigid sub-components. What is the relationship between local and global rigidity? Does rigidity compose — can you build a rigid explanation from degenerate parts? This has direct implications for how theoretical unification affects explanatory quality.",
+      "score": 0.84
+    },
+    {
+      "text": "The conjecture treats the explanation graph as static, but explanations evolve as new inferential connections are discovered or old ones are severed. What is the dynamics of constraint rank under graph modification? Specifically, is there a phase transition — a critical point at which adding one new inferential edge causes nullity to drop to zero? If so, this would identify a precise structural moment at which an explanation becomes rigid, which could be empirically tracked in the history of scientific theories.",
+      "score": 0.79
+    },
+    {
+      "text": "The conjecture implies a test for degeneracy: swap component A for A' and check whether downstream inferences are preserved. But this test requires knowing what the downstream inferences are, which presupposes a complete specification of the explanation graph. In practice, explanation graphs are never fully specified — there are always implicit inferential dependencies. Does partial specification of the graph systematically bias rigidity estimates in one direction? An explanation might appear degenerate because its implicit constraints are not represented, not because it genuinely has free variables.",
+      "score": 0.86
+    },
+    {
+      "text": "If the remedy for degeneracy is introducing additional constraints that reduce nullity, there is a risk of over-constraining: adding constraints that are not independently motivated just to achieve rigidity. This would be analogous to ad hoc hypothesis modification. The conjecture needs a criterion distinguishing legitimate constraint addition (new evidence, genuine inferential connections) from illegitimate constraint addition (stipulations designed to make the explanation appear rigid). Without this, rigidity becomes gameable and loses its epistemic significance.",
+      "score": 0.89
+    }
+  ]
+}

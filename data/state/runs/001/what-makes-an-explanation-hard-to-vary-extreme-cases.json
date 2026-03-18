@@ -1,0 +1,50 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "extreme-cases",
+  "run": 1,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.8,
+  "total": 0.833,
+  "candidate_problems": [
+    {
+      "text": "The conjecture claims you cannot identify explanation type by inspection alone — only by attempted substitution. But this creates a regress: how do you evaluate whether a substituted explanation still has 'explanatory adequacy'? That judgment itself requires a prior explanation of what adequacy means, which may itself be swappable or load-bearing. Is there a fixed point in this regress, or does the substitution test presuppose exactly what it is trying to reveal?",
+      "score": 0.92
+    },
+    {
+      "text": "The conjecture maps explanation structure onto a spectrum from logical necessity (proof) to pure narrative (confabulation). But mathematical proofs are themselves embedded in axiomatic choices that are not uniquely determined — you can swap axioms and preserve proof structure. Does this mean proofs are load-bearing locally but swappable globally? If so, the conjecture needs a level-relative formulation, and the question becomes: at what level of description does constraint actually operate?",
+      "score": 0.88
+    },
+    {
+      "text": "The conjecture treats 'degrees of freedom' as a structural property of the explanation itself. But degrees of freedom may be a relational property between the explanation and the background knowledge of the evaluator. An explanation that appears highly constrained to an expert (who knows which substitutions are physically or logically impossible) may appear highly swappable to a novice. This suggests the conjecture is implicitly indexing to an epistemic agent, which it does not acknowledge. What is the agent-independent version, if any?",
+      "score": 0.85
+    },
+    {
+      "text": "If most real explanations are mixed — some components load-bearing, some scaffolding — then the interesting question is whether the load-bearing components form a connected subgraph or can be isolated nodes. If they are connected, removing scaffolding should leave a coherent residual explanation. If they are not, the load-bearing parts may be individually necessary but jointly insufficient without the scaffolding. This has direct implications for explanation compression and scientific reduction that the conjecture leaves unexplored.",
+      "score": 0.81
+    },
+    {
+      "text": "The conjecture implicitly assumes that resistance to substitution is a virtue — that brittleness signals genuine structure. But in engineering, brittleness is a failure mode, not a feature. A good bridge is not maximally brittle; it has designed redundancy. Is there an analogous notion for explanations where some swappability is epistemically desirable — providing robustness against error in any single component? The conjecture may be conflating structural integrity with fragility.",
+      "score": 0.87
+    },
+    {
+      "text": "The cardinality-approaching-one criterion for full load-bearing is stated as a limit condition. But cardinality of 'valid completions' requires a measure over the space of possible components, and that space is not well-defined for most explanations. In mathematics, the space of possible next proof steps is at least enumerable. In causal or historical explanation, it is not. Does the conjecture only apply where the component space has sufficient structure to make 'cardinality' meaningful, and if so, what does it say about the vast majority of explanations?",
+      "score": 0.83
+    },
+    {
+      "text": "The conjecture describes confabulation as maximum-freedom explanation — any element replaceable because none do inferential work. But confabulation in psychology is not characterized by high degrees of freedom in the explanation's internal structure; it is characterized by disconnection from the actual causal history being explained. A confabulated explanation can be internally highly constrained (a coherent false narrative) while still being confabulation. The conjecture's structural criterion may be necessary but not sufficient for distinguishing genuine from spurious explanation.",
+      "score": 0.79
+    },
+    {
+      "text": "If load-bearing structure is revealed only at the boundary — when you try to remove something — then the conjecture implies that explanation evaluation is inherently a destructive test. You learn the structure by breaking it. This has a direct parallel in Popperian falsificationism: you learn what a theory claims by finding what would falsify it. Is the substitution test for explanations the epistemological analog of falsification for theories? If so, what is the analog of the demarcation problem — which explanations are in principle substitution-testable?",
+      "score": 0.9
+    },
+    {
+      "text": "The conjecture focuses on synchronic structure — the constraint relations among components at a given time. But explanations evolve: what begins as a swappable schema can become load-bearing as auxiliary commitments accumulate around it, and what begins as load-bearing can become swappable as the field finds alternative derivations of the same explanandum. Is there a dynamics of explanation structure, and does the conjecture's criterion track a stable property or a time-indexed one?",
+      "score": 0.76
+    },
+    {
+      "text": "The conjecture treats the explanandum as fixed and asks about the degrees of freedom in the explanans. But in real inquiry, the explanandum is often reconceptualized as the explanation develops — what counts as the phenomenon to be explained shifts. If the explanandum is itself a variable, then an explanation that appears swappable relative to one formulation of the explanandum may be load-bearing relative to another. The conjecture may need a joint treatment of explanans and explanandum degrees of freedom.",
+      "score": 0.74
+    }
+  ]
+}

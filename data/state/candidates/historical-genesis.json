@@ -1,11 +1,31 @@
 {
   "id": "historical-genesis",
   "layer": "candidates",
-  "score": 0.0,
+  "score": 0.5196666666666666,
   "rank": 5,
-  "run_count": 0,
-  "problem_coverage": [],
+  "run_count": 1,
+  "problem_coverage": [
+    "does-architecture-matter-more-than-model-scale",
+    "what-makes-an-explanation-hard-to-vary",
+    "can-llms-create-new-knowledge"
+  ],
   "created_at": "2026-03-18T00:00:00Z",
   "promoted_from": null,
-  "history": []
+  "history": [
+    {
+      "run": 1,
+      "score": 0.5409999999999999,
+      "problem_id": "does-architecture-matter-more-than-model-scale"
+    },
+    {
+      "run": 1,
+      "score": 0.404,
+      "problem_id": "what-makes-an-explanation-hard-to-vary"
+    },
+    {
+      "run": 1,
+      "score": 0.614,
+      "problem_id": "can-llms-create-new-knowledge"
+    }
+  ]
 }

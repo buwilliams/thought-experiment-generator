@@ -1,0 +1,58 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "thought-experiments",
+  "run": 1,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.2,
+  "total": 0.404,
+  "candidate_problems": [
+    {
+      "text": "The conjecture treats mutual constraint density as a binary threshold, but it may be a continuous spectrum with no natural threshold. What determines where the threshold lies — is it a function of the number of valid substitutes per component, the product of those numbers, or something else? Without a principled threshold criterion, the load-bearing/non-load-bearing distinction may itself be underdetermined in the very sense the conjecture diagnoses.",
+      "score": 0.92
+    },
+    {
+      "text": "The conjecture claims load-bearing explanations have a 'unique inverse' — you can reconstruct the story from the phenomenon plus one component. This is a strong claim that maps onto the mathematical notion of an overdetermined system. Is explanatory load-bearing formally equivalent to overdetermination in a constraint satisfaction system? If so, the conjecture inherits all the machinery of that domain, including known failure modes like inconsistency under noise.",
+      "score": 0.88
+    },
+    {
+      "text": "The diagnostic test — apply counterfactual pressure by substituting components — presupposes that reference classes are well-defined. But reference class membership is itself theory-laden. 'Resonant frequency loading' belongs to a narrow class only given a background theory of fatigue mechanics. Without that theory, it belongs to the broad class 'vibration.' This suggests load-bearing is not intrinsic to an explanation but relative to a background theoretical framework, which threatens the conjecture's claim to identify a structural property.",
+      "score": 0.91
+    },
+    {
+      "text": "The conjecture equates explanatory load-bearing with criticism vulnerability, and therefore with knowledge-carrying capacity. But some explanations that are highly substitution-resistant carry no genuine knowledge — for example, a tautological mechanism where the components are defined in terms of the outcome. Is there a way to distinguish genuine constraint from definitional closure? The conjecture may conflate logical entailment with causal explanation.",
+      "score": 0.89
+    },
+    {
+      "text": "The conjecture implicitly assumes that the phenomenon to be explained is itself sharply individuated — that there is a fact of the matter about what counts as 'the same phenomenon.' But phenomena are described under descriptions. The bridge collapse under description D1 ('a structure failed') may be accommodated by many explanations, while under D2 ('a specific span failed at 14:32 on a specific date') it may be uniquely entailed. Does load-bearing track the explanation, the phenomenon, or the explanation-phenomenon pair? This is unresolved.",
+      "score": 0.87
+    },
+    {
+      "text": "If load-bearing explanations are those that generate rather than merely accommodate phenomena, this maps onto the distinction between prediction and accommodation in philosophy of science. The conjecture may be rediscovering the problem of predictivism — whether a theory confirmed by data it was designed to fit is less confirmed than one that predicted the data in advance. Is the conjecture a structural generalization of predictivism, and if so, does it inherit predictivism's unresolved problems?",
+      "score": 0.83
+    },
+    {
+      "text": "The conjecture says non-load-bearing explanations are 'not false.' But if a narrative frame is consistent with a wide range of outcomes including the actual one, it may still assign very low probability to the actual outcome relative to alternatives. Is there a probabilistic version of the conjecture where load-bearing is measured by how much an explanation concentrates probability mass on the actual phenomenon? This would connect the conjecture to Bayesian confirmation theory and might make the threshold criterion precise.",
+      "score": 0.85
+    },
+    {
+      "text": "The conjecture focuses on explanations of singular events (a bridge collapse). It is unclear whether the framework extends to explanations of regularities, laws, or statistical patterns. A mechanistic explanation of why metals fatigue in general may have different constraint properties than an explanation of why this bridge failed on this day. Does load-bearing apply to nomological explanations, and if so, what plays the role of 'the phenomenon' that components must jointly entail?",
+      "score": 0.78
+    },
+    {
+      "text": "There is an implicit claim that load-bearing explanations are epistemically superior. But in practice, scientists and engineers often deliberately use non-load-bearing explanations as scaffolding — to orient inquiry before the mechanism is known. The conjecture treats narrative frames as epistemically deficient, but they may be epistemically necessary at early stages of inquiry. Is there a developmental account of how narrative frames become load-bearing over time, and what drives that transition?",
+      "score": 0.8
+    },
+    {
+      "text": "The conjecture's structural property — mutual constraint density — is defined qualitatively. Can it be operationalized? One candidate: measure the size of the substitution space for each component given the others are fixed, then take some aggregate (product, minimum, average). But this requires a metric on the space of possible component values, which may not exist for qualitative explanations. The operationalization problem may be fundamental rather than technical.",
+      "score": 0.82
+    },
+    {
+      "text": "The conjecture assumes that causal closure in an explanation mirrors or tracks causal closure in the world — that a tight explanation reflects a tight causal structure. But this may be an artifact of how we carve phenomena. A highly load-bearing explanation of a social phenomenon (e.g., a market crash) might be tight at one level of description while the underlying causal structure is massively multiply realizable. Does explanatory load-bearing track ontological structure, or is it a property of representational choices?",
+      "score": 0.86
+    },
+    {
+      "text": "The conjecture implies that good explanations are fragile — they break under substitution. But robustness is often treated as a scientific virtue: an explanation that survives across multiple modeling frameworks is considered more reliable. There is a direct tension between the conjecture's fragility criterion and the scientific norm of robustness. Can both be virtues simultaneously, or does the conjecture require revising the standard account of robustness?",
+      "score": 0.88
+    }
+  ]
+}
