@@ -438,11 +438,17 @@ async fn generate_report(
     out.push_str("| Rank | Problem | Conjecture | Consistency | Hard to Vary | Total |\n");
     out.push_str("|------|---------|------------|-------------|--------------|-------|\n");
     for (rank, g) in sorted.iter().enumerate() {
+        let output_link = format!("{}-{}.md", g.meta.problem_id, g.meta.conjecture_id);
+        let problem_link = format!("../../problems/{}.md", g.meta.problem_id);
+        let conjecture_link = format!("../../candidates/{}.md", g.meta.conjecture_id);
         out.push_str(&format!(
-            "| {} | {} | {} | {:.2} | {:.2} | {:.2} |\n",
+            "| [{}]({}) | [{}]({}) | [{}]({}) | {:.2} | {:.2} | {:.2} |\n",
             rank + 1,
+            output_link,
             g.meta.problem_id,
+            problem_link,
             g.meta.conjecture_id,
+            conjecture_link,
             g.meta.logical_consistency,
             g.meta.hard_to_vary,
             g.meta.total,
@@ -456,11 +462,16 @@ async fn generate_report(
             .call_raw(Some(&p.system), &p.user, 0.3)
             .await
             .unwrap_or_else(|_| "(summary unavailable)".to_string());
+        let output_link = format!("{}-{}.md", g.meta.problem_id, g.meta.conjecture_id);
+        let problem_link = format!("../../problems/{}.md", g.meta.problem_id);
+        let conjecture_link = format!("../../candidates/{}.md", g.meta.conjecture_id);
         out.push_str(&format!(
-            "**{}. {} × {}** (total: {:.2})  \n{}\n\n",
+            "**{}. [{}]({}) × [{}]({})** ([output]({output_link})) (total: {:.2})  \n{}\n\n",
             rank + 1,
             g.meta.problem_id,
+            problem_link,
             g.meta.conjecture_id,
+            conjecture_link,
             g.meta.total,
             summary.trim(),
         ));
