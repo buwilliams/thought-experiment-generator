@@ -86,9 +86,9 @@ pub fn extract_candidate_problems(mind_system: &str, conjecture: &str) -> Prompt
 pub fn summarize_conjecture(conjecture: &str, score: f64) -> Prompt {
     Prompt {
         system: String::from(
-            "Summarize in 20 words or fewer. Return only the summary, no preamble.",
+            "You are summarizing a thought experiment. Return only a 20-word summary of what the thought experiment claims or illuminates. No preamble, no meta-commentary.",
         ),
-        user: format!("{conjecture}\n\nScore: {score:.2}"),
+        user: format!("Thought experiment (quality score {score:.2}/1.0):\n\n{conjecture}"),
     }
 }
 
