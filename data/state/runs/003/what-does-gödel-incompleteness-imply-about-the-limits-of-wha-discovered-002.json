@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+  "conjecture_id": "discovered-002",
+  "run": 3,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How far can Gödel-style limits on formal self-reference be legitimately generalized from axiomatic systems to real agent-like systems? The conjecture assumes that limits on internal derivation map onto limits of self-knowledge in cognitive or agential architectures, but it remains open which structural features are essential for the analogy and which make it misleading.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the precise boundary between 'mechanical self-description' and 'complete reflective closure'? The conjecture treats this distinction as central, but it is unresolved how to formalize intermediate grades of reflective understanding, partial self-modeling, error-correction, and meta-level extension without collapsing back into standard incompleteness results or vague metaphor.",
+      "score": 0.93
+    },
+    {
+      "text": "Does stepping to a stronger meta-system genuinely increase self-knowledge in a principled way, or merely relocate incompleteness to a higher level? The open problem is to characterize whether there are cumulative architectures of reflection that yield meaningful progress in self-understanding despite permanent non-closure, and what counts as progress if final closure is impossible.",
+      "score": 0.95
+    }
+  ]
+}

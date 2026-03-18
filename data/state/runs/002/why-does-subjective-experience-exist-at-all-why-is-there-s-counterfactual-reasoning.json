@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 0.2,
+  "total": 0.392,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular and independently testable? The key terms—'appearance-like', 'owned', 'for-the-system', 'point of view'—risk redescribing subjectivity rather than explaining it. A central open problem is to specify structural/functional criteria that distinguish systems with genuine first-person presence from systems with equally rich control architectures that merely simulate it, without smuggling consciousness into the definitions.",
+      "score": 0.97
+    },
+    {
+      "text": "Does the proposed architecture actually suffice for subjectivity, or is it only correlated with it? The conjecture argues that globally integrated, indexical, self-maintaining control is load-bearing, but the variation test mainly shows that structure matters and that generic computation may be insufficient. An unresolved tension is whether any system instantiating this organization must have experience, or whether the zombie gap simply reappears at a more specialized functional level.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the principled boundary of inclusion: which systems, if any, possess minimal subjectivity under this view? If self-maintaining, globally action-guiding, self/world-modeling control is the criterion, the conjecture may extend consciousness to many animals, simple agents, artificial systems, or even some non-neural control systems. The open problem is to derive a non-arbitrary threshold that avoids both overgeneration and anthropocentric restriction, and that explains graded or fragmented cases such as sleep, anesthesia, split-brain conditions, and partial awareness.",
+      "score": 0.92
+    }
+  ]
+}

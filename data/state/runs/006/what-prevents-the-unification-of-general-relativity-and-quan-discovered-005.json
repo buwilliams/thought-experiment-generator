@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan",
+  "conjecture_id": "discovered-005",
+  "run": 6,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal deeper 'interpreter' architecture from which both GR-style geometry and QM-style state structure can be derived as effective layers, rather than assumed? This is the core open problem because the conjecture replaces direct unification with a new explanatory burden: specifying the ontology, variables, and dynamics of the underlying informational/control system without merely redescribing existing formalisms.",
+      "score": 0.97
+    },
+    {
+      "text": "How can emergent notions of time, measurement, locality, subsystems, and observables be made mutually consistent in regimes where GR and QM currently conflict? The conjecture hinges on these being interpreter-dependent rather than fundamental, but it remains unresolved whether they can co-emerge from one framework in a way that reproduces known phenomena such as black hole thermodynamics, cosmology, and ordinary quantum experiments.",
+      "score": 0.94
+    },
+    {
+      "text": "What principled mechanism explains why information in nature obeys specific constraints—such as holographic bounds, entanglement structure, and finite accessible information per region—and how these constraints stabilize effective macroscopic laws across scales? This is worth pursuing because it could connect the conjecture's informational ontology to concrete empirical regularities, but it is slightly less central than first identifying the underlying architecture itself.",
+      "score": 0.88
+    }
+  ]
+}

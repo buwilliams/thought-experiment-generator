@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+  "conjecture_id": "historical-genesis",
+  "run": 3,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made precise rather than metaphorical? Specifically: is there a rigorous theorem-level distinction between limits that follow from formal systems as such and limits that follow from their historical design role as proof-stabilizing, fixed-rule artifacts? Without a formal criterion for 'historical function,' 'freezing criticism into rules,' or 'design constraint,' the conjecture risks redescribing incompleteness rather than explaining a new structural source of it.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly is the relation between open-ended criticism and formalizability? Is the meta-level activity of proposing, interpreting, revising, and extending systems itself in principle formalizable as an evolving sequence of systems, or does it contain an irreducibly non-formal component? This is a key unresolved tension because the conjecture depends on criticism outrunning any fixed formalism, but it remains open whether that shows a limit of fixed systems only or a deeper limit on any possible mechanization of mathematical growth.",
+      "score": 0.93
+    },
+    {
+      "text": "Does Gödel incompleteness genuinely support the stronger claim about 'self-knowledge,' or is that an epistemic overextension from semantic and proof-theoretic results? The open problem is to clarify what notion of self-knowledge is at stake—truth, provability, consistency recognition, correctness of rule-use, or capacity for self-modification—and which of these Gödel actually constrains. Resolving this would determine whether the conjecture identifies a substantive hierarchy of self-understanding or conflates several distinct limitations.",
+      "score": 0.91
+    }
+  ]
+}

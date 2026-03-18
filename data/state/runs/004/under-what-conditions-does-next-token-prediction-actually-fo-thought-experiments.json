@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "thought-experiments",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'identifiable through predictive necessity' be formalized and tested? The conjecture hinges on persistence, breadth, and compression advantage, but these are still intuitive. A key open problem is to define measurable criteria under which a latent variable is the uniquely simplest reusable explanation for predictive uncertainty, and to distinguish this from cases where multiple non-isomorphic internal representations predict equally well.",
+      "score": 0.97
+    },
+    {
+      "text": "What properties of the training distribution and model class determine whether shortcuts dominate over real invariants? The conjecture attributes success or failure not to next-token prediction alone but to its coupling with environment structure. An important unresolved tension is how dataset diversity, duplication, context length, noise, and architecture/optimizer biases interact to make invariant-learning or shortcut-learning the easier attractor.",
+      "score": 0.95
+    },
+    {
+      "text": "When prediction succeeds via an internal representation, in what sense can that representation be said to align with a 'real domain invariant' rather than merely being an equivalent predictive code? The conjecture assumes a distinction between genuine invariants and sufficient statistics, but leaves open the ontology and identifiability of latent variables under representational equivalence. A new problem is to specify what counts as alignment with reality beyond predictive performance and compression alone.",
+      "score": 0.91
+    }
+  ]
+}

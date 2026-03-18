@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys",
+  "conjecture_id": "mathematical-formalism",
+  "run": 3,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient conditions on a world-model (S,T,O) for there to exist a predictive, compression-enabling structure-preserving map φ into some mathematical structure M? The conjecture says 'if reality is not pure chaos' then such maps exist, but this leaves open a sharp criterion distinguishing describable worlds from worlds that resist mathemization because of irreducibility, observer-dependence, or unstable coarse-grainings.",
+      "score": 0.95
+    },
+    {
+      "text": "Why does the actual universe exhibit so much stable, cross-scale invariant structure in the first place? The conjecture shifts the mystery from mathematics to ontology: not 'why math fits' but 'why reality contains symmetries, conservation laws, and compositional regularities robust enough for abstract structure to track them.' This is a deep open problem because it asks for an explanation of the source, scope, and limits of order itself, not merely of representation.",
+      "score": 0.93
+    },
+    {
+      "text": "How unique or underdetermined is the mapping from physical domains to mathematical structures? If many inequivalent mathematical formalisms can preserve the same observationally relevant relations, then the conjecture needs a way to explain theory choice, surplus structure, and when an apparent isomorphism is genuine rather than an artifact of coarse-graining or instrumentation. This bears directly on realism about mathematical structure in physics.",
+      "score": 0.88
+    }
+  ]
+}

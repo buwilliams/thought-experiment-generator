@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "mathematical-formalism",
+  "run": 5,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.0,
+  "total": 0.27,
+  "candidate_problems": [
+    {
+      "text": "What precise dynamical conditions make 'approximate scale covariance' both necessary and sufficient for power-law attractors, rather than merely compatible with many broad-tailed alternatives? The conjecture gestures at commuting-with-rescaling dynamics, but it remains open how much covariance, over what range, and under which perturbations this actually forces a stationary distribution toward a power law instead of lognormal, stretched exponential, double-Pareto, or transient pseudo-scaling. This is a central unresolved tension because the explanatory load-bearing claim depends on distinguishing genuine universality from a loose family resemblance among multiplicative and adaptive processes.",
+      "score": 0.97
+    },
+    {
+      "text": "How does the proposed 'resource-conserving across levels' principle translate into a rigorous continuity or flux law under aggregation, fragmentation, selection, and innovation, and when does constant flux per logarithmic scale really imply a power-law exponent? The conjecture treats cross-scale throughput as an invariant, but many adaptive systems have birth, death, leakage, dissipation, and endogenous creation of new degrees of freedom. It is unresolved whether there is a general conserved quantity at all, whether conservation is exact or effective, and how different conservation laws map to different exponents. This is worth pursuing because it would determine whether the flux argument is a deep mechanism or just an analogy.",
+      "score": 0.94
+    },
+    {
+      "text": "Can one derive a renormalization-like coarse-graining theory for genuinely adaptive, path-dependent systems where the update rules themselves evolve under selective retention? The conjecture assumes that coarse-graining preserves the deepest constraints, but in many complex adaptive systems adaptation changes the rules, introduces memory, and creates new scales through institutions, modularity, or control hierarchies. The open question is whether there exists a nontrivial universality class for such rule-evolving systems, or whether adaptation typically destroys scale covariance except in special regimes near criticality. This is highly promising because it tests the conjecture at its most ambitious point: whether scale-free structure survives not just state evolution but evolution of the dynamics themselves.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "historical-genesis",
+  "run": 5,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can this conjecture be distinguished empirically from rival mechanisms that also generate power laws or heavy tails—such as optimization under constraints, latent fitness/quality differences, criticality, copying models, or mixtures of processes? The key unresolved tension is whether 'follow prior selection under ignorance' is genuinely explanatory and load-bearing, or whether it is often observationally equivalent to other generative stories.",
+      "score": 0.97
+    },
+    {
+      "text": "What exact boundary conditions make popularity-proxy attachment produce a true scale-free distribution rather than merely generic skew, lognormal outcomes, winner-take-all concentration, or truncated tails? The conjecture names growth, local rules, and feedback, but leaves open the quantitative thresholds, interaction terms, and failure modes needed to predict when the mechanism does or does not yield a power law.",
+      "score": 0.94
+    },
+    {
+      "text": "When and how do systems escape or override the historical residue of popularity-based coordination—through institutions, recommendation systems, search technologies, reputation mechanisms, or deliberate exploration—and what distributional changes follow? This is an important open problem because the conjecture implies a deep tradeoff between cheap coordination and epistemic quality, but does not yet explain the transition dynamics or design levers for altering them.",
+      "score": 0.91
+    }
+  ]
+}

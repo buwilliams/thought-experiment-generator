@@ -1,0 +1,38 @@
+# Generated: does-architecture-matter-more-than-model-scale × discovered-001
+
+## Conjecture
+
+**Conjecture:** The current bottleneck is increasingly **structural rather than substrate-level**: more model size and compute still buy performance, but they are no longer the most load-bearing part of progress in *epistemic* terms. What most constrains further gains is the architecture of **conjecture formation, criticism, error-correction, and selection** above the raw substrate.
+
+Why this conjecture fits the “load-bearing detail” test:
+
+If substrate were the main bottleneck, then changing scale alone should preserve the explanatory story: bigger models would reliably yield better truth-tracking across domains without requiring major compensating changes in training objectives, evaluation, tool use, memory, social deployment, or oversight. But in practice, once scale rises, we immediately need compensations elsewhere: better benchmarks because old ones saturate, retrieval because parametric memory blurs, scaffolding because raw next-token prediction does not sustain inquiry, debate or verification because plausible error scales too, and institutional filters because outputs become more persuasive than warranted. That means scale is not carrying the explanation by itself.
+
+By contrast, structural details above the substrate look load-bearing. Change how conjectures are generated and criticized — e.g., from single-pass imitation to explicit hypothesis generation plus adversarial testing plus durable error records — and many downstream properties shift together: reliability, calibration, transfer, scientific usefulness, and resistance to seductive nonsense. These are not ornamental additions. They alter what the system can account for.
+
+Historically, this makes sense. Current frontier AI descends from systems optimized first for prediction/compression and then for task performance via scale. That lineage inherited a hidden assumption: that richer representation plus more data will spontaneously yield better epistemology. But prediction is not the same as criticism, and fluency is not the same as knowledge growth. Human epistemic progress did not come mainly from bigger brains alone; it came from institutions and methods that made conjectures *corrigible*.
+
+So the live distinction is: substrate determines the **capacity to host** epistemic processes; structure determines whether such processes actually occur. Compute is a stock. Epistemic progress is a feedback loop. Without mechanisms that preserve problems, generate rival explanations, expose errors, and promote ideas for surviving criticism rather than for fitting past distributions, extra compute mostly amplifies the existing loop — including its pathologies.
+
+What follows is not that scale no longer matters. It remains a necessary enabler. But its role is increasingly like oxygen rather than engineering design: indispensable, yet not the thing that explains why one epistemic system outperforms another. The leverage point is in building AI systems whose internal and external organization makes explanations tightly constrained by error-correction, not merely by statistical fit.
+
+In short: **substrate supplies power; structure determines whether that power becomes knowledge.**
+
+## Questions
+
+1. 1. If major gains in truth-tracking across novel domains could be achieved by scaling model size and compute alone without changing objectives, memory, tool use, or oversight, would that directly undermine the claim that the present bottleneck is structural rather than substrate-level? — **yes**
+2. 2. If replacing next-token prediction with explicit hypothesis generation, adversarial testing, and durable error records failed to improve calibration, transfer, and resistance to persuasive falsehoods at fixed compute, would that weaken the claim that these structural elements are load-bearing? — **yes**
+3. 3. If benchmark saturation at larger scales disappeared once models got bigger, so that old evaluations remained discriminative and no new criticism mechanisms were needed, would that count against the claim that scale is no longer carrying the explanatory story by itself? — **yes**
+4. 4. If retrieval and external memory turned out to matter only because current models are too small, and their benefits vanished at larger scale, would that challenge the claim that epistemic bottlenecks sit above the substrate? — **yes**
+5. 5. If plausible but wrong outputs did not become more persuasive or more costly as models scaled, would that remove a key reason for saying criticism and verification structures are load-bearing? — **yes**
+6. 6. If two systems with equal compute and data but different conjecture-and-criticism architectures showed no systematic difference in reliability or scientific usefulness, would that count against the claim that structure determines whether power becomes knowledge? — **yes**
+7. 7. If the historical path from compression and prediction to current frontier systems had not inherited the assumption that richer representation yields better epistemology, would the conjecture lose an important part of its explanatory basis? — **yes**
+8. 8. If human epistemic progress could be explained mainly by larger brains rather than by institutions that preserve problems, test rival ideas, and correct errors, would that weaken the analogy supporting the structural bottleneck claim? — **yes**
+9. 9. If extra compute reliably improved error-correction behavior itself without adding mechanisms for preserving problems, generating rivals, or selecting ideas by surviving criticism, would that undermine the claim that compute mostly amplifies the existing loop and its pathologies? — **yes**
+10. 10. If the distinction between substrate as capacity and structure as process could be altered without changing the conjecture's predictions about reliability, calibration, and knowledge growth, would that suggest the conjecture is too easy to vary? — **yes**
+
+## Candidate Problems
+
+- How can 'epistemic progress' be operationalized so the conjecture becomes testable rather than rhetorical? The core unresolved tension is whether there exist robust measures that distinguish mere performance gains from genuine improvements in conjecture formation, criticism, error-correction, and selection across domains. Without such criteria, 'structural bottleneck' may just redescribe dissatisfaction with current systems rather than identify a real causal constraint. (score: 0.95)
+- What is the causal boundary between substrate and structure, and can the two really be separated? A major open question is whether the purportedly structural mechanisms—hypothesis generation, adversarial testing, memory, verification, institutional scaffolding—are independent leverage points, or whether they mostly emerge automatically once scale, data, and training become large enough. If structure is itself downstream of substrate, the conjecture may overstate a distinction that is historically contingent rather than fundamental. (score: 0.91)
+- What architectures of criticism and error-correction actually produce sustained knowledge growth in AI, rather than just adding overhead or gaming evaluations? The conjecture points to explicit rival hypotheses, durable error records, debate, and verification, but leaves open which feedback-loop designs genuinely improve truth-tracking under real deployment pressures. This is a live systems question because many proposed 'epistemic' additions can become performative, Goodharted, or captured by persuasive fluency unless their incentives and selection mechanisms are carefully designed. (score: 0.93)

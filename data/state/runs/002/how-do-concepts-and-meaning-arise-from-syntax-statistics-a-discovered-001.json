@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "discovered-001",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can 'internally load-bearing distinctions' be operationalized and measured non-circularly? The conjecture hinges on non-interchangeability under substitution, but it remains open how to define the relevant interventions, compensation costs, scope across tasks, and thresholds for 'broad success' without smuggling in prior semantic judgments.",
+      "score": 0.97
+    },
+    {
+      "text": "Is load-bearing inferential role sufficient for genuine meaning, or only for system-internal functional organization? A major unresolved tension is whether a tightly coupled web of constraints can generate semantics without any further relation to the world, normativity, or truth-conditions, especially in cases of coherent but systematically misaligned or purely simulated systems.",
+      "score": 0.93
+    },
+    {
+      "text": "What system architectures and learning dynamics cause merely correlational patterns to become globally constraint-bearing concepts? The conjecture identifies a criterion for meaning, but leaves open the mechanism: which feedback loops, multimodal couplings, action channels, memory structures, or training regimes actually produce representations that become indispensable across contexts rather than remaining superficial labels.",
+      "score": 0.91
+    }
+  ]
+}

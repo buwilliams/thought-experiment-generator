@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "extreme-cases",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'error-correcting explanation' be operationalized without collapsing back into the same proxy metrics the conjecture rejects? The conjecture depends on notions like explanatory compression, boundary behavior, and distance to breakdown, but it leaves unresolved what observable tests would distinguish genuine explanatory improvement from sophisticated benchmark gaming or rhetorical self-critique. A key open problem is to design measurements that track real knowledge growth rather than merely new surface proxies for performance.",
+      "score": 0.97
+    },
+    {
+      "text": "Is there a principled tradeoff between surface competence and boundary-level epistemic capacity, or can they be jointly optimized? The conjecture contrasts fluent benchmark-optimized systems with halting self-corrective ones, but it remains open whether this is a contingent artifact of current systems or a deeper structural tension. Exploring whether optimization for fluency, imitation, and popularity systematically suppresses generative criticism and ontology revision would clarify whether current training regimes are misaligned with epistemic progress at a fundamental level.",
+      "score": 0.91
+    },
+    {
+      "text": "What counts as a widening domain or genuine frontier extension rather than mere redescriptions of prior competence? The conjecture treats transfer under extreme novelty as central, but novelty is relative to representation, ontology, and evaluator perspective. An unresolved question is how to define domain boundaries and 'far transfer' non-arbitrarily, especially when a system can reframe tasks to make them look familiar. Solving this would determine whether the conjecture identifies a real kind of epistemic progress or depends on unstable judgments about what is truly new.",
+      "score": 0.89
+    }
+  ]
+}

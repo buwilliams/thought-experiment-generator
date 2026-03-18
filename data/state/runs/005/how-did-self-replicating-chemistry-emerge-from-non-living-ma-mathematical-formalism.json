@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+  "conjecture_id": "mathematical-formalism",
+  "run": 5,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.2,
+  "total": 0.41900000000000004,
+  "candidate_problems": [
+    {
+      "text": "How can 'heritable persistence' of a distributed chemical organization be defined and measured non-arbitrarily under coarse-graining? The conjecture relies on a pattern R that reproduces approximately itself, but it is unresolved which coarse-grainings preserve genuine heredity rather than merely redescribing transient attractors. A key open problem is to formulate invariants or equivalence classes of reaction-network states for which reproduction, variation, and lineage are well-defined and experimentally testable.",
+      "score": 0.96
+    },
+    {
+      "text": "What dynamical conditions actually make a self-maintaining reaction subnetwork an evolvable replicator rather than just a stable dissipative structure? The conjecture identifies closure, growth, and attractor stability, but it remains open whether these are sufficient for open-ended selection: the system must also support competing variants, resource-limited differential success, and transmission of differences across generations. Determining the minimal mathematical criteria separating mere persistence from Darwinian evolution is a central unresolved tension.",
+      "score": 0.94
+    },
+    {
+      "text": "Is there a robust phase transition in realistic prebiotic chemistry, or only a metaphorical threshold that depends sensitively on modeling assumptions? The conjecture posits a structural transition in reaction-network organization, but it is unresolved whether this survives realistic kinetics, side reactions, noise, spatial heterogeneity, and changing environments. A major problem is to identify order parameters, control parameters, and universality—or to show that no sharp transition exists and the emergence of replication is instead gradual and contingent.",
+      "score": 0.92
+    }
+  ]
+}

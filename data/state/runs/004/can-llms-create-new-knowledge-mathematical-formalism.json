@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "mathematical-formalism",
+  "run": 4,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.2,
+  "total": 0.42199999999999993,
+  "candidate_problems": [
+    {
+      "text": "How can 'genuine knowledge' and 'survives criticism' be operationalized without collapsing back into behavioral tests on outputs? The conjecture hinges on latent invariant-preserving structure in H, but it leaves open whether this can be identified independently of external performance, or whether any such claim is underdetermined by input-output behavior alone.",
+      "score": 0.97
+    },
+    {
+      "text": "What class of transformations T counts as meaning-preserving or truth-relevant, and who specifies it? The conjecture assumes a family of paraphrase, reparameterization, scale-change, and cross-domain isomorphism transformations, but the boundary between superficial variation and structure-preserving change is itself unresolved and may be domain-relative, observer-relative, or theory-laden.",
+      "score": 0.95
+    },
+    {
+      "text": "Is next-token optimization in fact sufficient to induce quotient-like abstract representations, or are additional architectural, training, or interactive conditions required? The conjecture proposes an iff claim, but it remains open whether token prediction alone can reliably produce invariant-supporting rule structures, or whether criticism, intervention, embodiment, or explicit world-modeling are necessary causal ingredients.",
+      "score": 0.99
+    }
+  ]
+}

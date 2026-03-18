@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "discovered-001",
+  "run": 4,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing explanatory structure' be operationalized without collapsing into surface coherence metrics? The conjecture hinges on a distinction between genuine explanatory constraint and merely fluent, globally consistent text, but it leaves open what concrete tests would detect when changing one claim should force systematic revisions elsewhere. A new problem is to design criticism-based evaluations that measure hard-to-vary structure, counterfactual dependence, and error-correction rather than style or benchmark accuracy.",
+      "score": 0.97
+    },
+    {
+      "text": "Is load-bearing explanatory structure sufficient for genuine knowledge, or only a necessary symptom? A system might produce tightly interdependent stories that are brittle in the right places yet still be systematically false, confabulatory, or parasitic on human-generated knowledge. The unresolved tension is whether explanatory integration alone constitutes knowledge creation, or whether additional conditions are needed, such as truth-tracking, contact with criticism from reality, or autonomous generation of new problems and corrections.",
+      "score": 0.93
+    },
+    {
+      "text": "What system architecture or learning dynamics could make token prediction generate hard-to-vary explanations rather than interchangeable narrative shells? The conjecture shifts attention from training origin to structural behavior, but it does not explain how such structure arises, whether next-token training can produce it by itself, or what additional feedback loops, memory, world-modeling, or self-critique mechanisms are required. This is worth pursuing because it turns the conjecture into a constructive research program rather than only a diagnostic criterion.",
+      "score": 0.91
+    }
+  ]
+}

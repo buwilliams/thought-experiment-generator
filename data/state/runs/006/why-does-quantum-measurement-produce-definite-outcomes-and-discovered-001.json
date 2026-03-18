@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "discovered-001",
+  "run": 6,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "Can 'robust, error-correcting record formation' be made into a precise, non-circular physical criterion that distinguishes genuine outcomes from mere decohered correlations? The conjecture treats stable record formation as load-bearing, but it remains open how to define the threshold, architecture, and timescale of such records without smuggling in classicality, observer interests, or pragmatic coarse-graining. A worthwhile problem is to formulate branch-relative outcome conditions in information-theoretic and dynamical terms that are exact enough to compare interpretations and, ideally, connect to experiment or simulation.",
+      "score": 0.95
+    },
+    {
+      "text": "Is branch-relative definiteness ontologically sufficient, or does the measurement problem still demand a single-outcome selector beyond unitary evolution? The conjecture reframes the dispute as ontological rather than dynamical, but that leaves unresolved whether indexical self-location across branches genuinely explains experienced uniqueness or merely redescribes it. The open question is whether many-branch record realism can account for probability, personal identity through branching, and the felt exclusivity of outcomes without collapse or hidden variables.",
+      "score": 0.93
+    },
+    {
+      "text": "What is the exact relationship between decoherence, redundancy, and error correction in producing classical records, and are these really the same load-bearing structure? The conjecture groups them together, but it is unresolved whether environmental redundancy alone suffices, whether active/passive error-correcting features are required, or whether different physical systems realize definiteness through distinct mechanisms. Exploring this could reveal whether the proposed explanatory core is unified or whether 'stable records' decomposes into several separable phenomena with different interpretive consequences.",
+      "score": 0.88
+    }
+  ]
+}

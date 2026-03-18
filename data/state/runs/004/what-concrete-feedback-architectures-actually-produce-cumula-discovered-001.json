@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "discovered-001",
+  "run": 4,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing criticism loops' be operationally defined and empirically distinguished from ordinary optimization machinery? The conjecture hinges on a sharp boundary between components that merely improve performance and components that enable cumulative epistemic error-correction, but it leaves open what observable criteria, interventions, or invariance tests would identify that boundary across architectures.",
+      "score": 0.96
+    },
+    {
+      "text": "What minimal architectural conditions are actually necessary and sufficient for cumulative epistemic error-correction? The conjecture proposes four coupled loops, but it remains unresolved whether all four are indispensable, whether some can be functionally substituted, and whether there exist alternative architectures that achieve durable knowledge growth without explicit explanatory-conflict preservation in the proposed form.",
+      "score": 0.93
+    },
+    {
+      "text": "How can explanatory conflicts be represented, preserved, and selectively amplified without causing pathological memory accumulation, critic overfitting, or self-reinforcing false theories? The conjecture treats durable criticism as the key to knowledge growth, but this raises an open systems problem about how to store and reuse criticisms so that they improve future conjecture generation rather than becoming brittle bureaucracy or entrenched error.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+  "conjecture_id": "thought-experiments",
+  "run": 6,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.2,
+  "total": 0.42199999999999993,
+  "candidate_problems": [
+    {
+      "text": "What concrete, non-circular criterion distinguishes 'record-formation' or 'knowledge-instantiation' from generic entropy-increasing correlation growth? The conjecture risks redescribing the thermodynamic arrow in epistemic language unless it specifies when a physical correlation counts as a durable record, why such records are asymmetric under time-symmetric laws plus a low-entropy boundary, and whether this adds explanatory content beyond standard statistical mechanics.",
+      "score": 0.94
+    },
+    {
+      "text": "Why was there a one-sided low-entropy boundary at all, rather than a generic state, a two-boundary universe, or no global temporal asymmetry? This is the deepest unresolved tension because the conjecture relocates the arrow-of-time problem from dynamics to cosmological initial conditions without yet explaining the origin, selection, or necessity of that special boundary.",
+      "score": 0.99
+    },
+    {
+      "text": "Can the conjecture be made empirically discriminating against rival accounts of temporal asymmetry? For example, does treating the arrow as arising from accessible-state boundary conditions plus record-formation yield novel predictions about cosmology, memory asymmetry, retrodiction, Boltzmann-fluctuation scenarios, or gravitational entropy that differ from standard Past Hypothesis formulations? Without such discriminants, it may be an interpretive reframing rather than a new explanatory theory.",
+      "score": 0.91
+    }
+  ]
+}

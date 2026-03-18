@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'model-preserving intervention' be defined non-circularly and operationalized mathematically? The conjecture makes free will hinge on counterfactual dependence under interventions that change reasons, beliefs, or preferences while preserving the relevant agential architecture, but it does not specify what counts as preserving the model rather than replacing the agent. A key open problem is to formulate principled criteria for identity, invariance, and admissible interventions across levels of description.",
+      "score": 0.96
+    },
+    {
+      "text": "What exact coarse-graining conditions make agential causes objectively real rather than observer-relative? The conjecture appeals to macro-variables C(S) that preserve deliberation, intention, and learning, but leaves open when a higher-level description is uniquely warranted, robust, and causally explanatory. The unresolved tension is whether agential causation is an objective structural feature of the dynamical system or depends on pragmatic modeling choices; this calls for a theory connecting coarse-graining, interventionist causation, and explanatory invariants.",
+      "score": 0.93
+    },
+    {
+      "text": "Does the proposed notion of 'could have done otherwise' capture the normative and phenomenological content usually associated with free will? Replacing alternative futures from the same total state with variation across internal model-states M' may secure compatibility with determinism, but it remains open whether this is sufficient for responsibility, authorship, and genuine control rather than merely redescribing sophisticated mechanism. The problem is to determine what additional structural properties, if any, are required for reasons-responsiveness to ground the stronger concept of freedom people care about.",
+      "score": 0.89
+    }
+  ]
+}

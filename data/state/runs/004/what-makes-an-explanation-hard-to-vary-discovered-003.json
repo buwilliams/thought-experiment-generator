@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "discovered-003",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "Can 'fully load-bearing' be made into a non-circular, operational criterion that distinguishes explanatory necessity from merely convenient redescription? The conjecture appeals to invariants, constraints, predictive reach, coherence, and explanatory topology, but it remains open how to identify these independently of already knowing which parts are load-bearing. Without such a criterion, the view risks collapsing into retrospective judgment: the parts we deem essential are just those we decide matter. A key problem is to define perturbation, invariance, and failure conditions in a way that is objective enough to compare explanations across domains.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the relationship between load-bearing structure and the historical or heuristic scaffolding by which explanations are discovered? The conjecture sharply separates what helps find an explanation from what makes it true, but it is unresolved whether this distinction is stable. In some fields, discovery paths encode domain constraints, choice of representation, or problem decompositions that later appear 'decorative' yet may be indispensable for human understanding, theory extension, or error correction. The open question is whether scaffolding is merely eliminable residue or sometimes part of the explanatory system at a higher level.",
+      "score": 0.84
+    },
+    {
+      "text": "How domain-general is the notion of load-bearing explanation? The conjecture is most natural for proofs, mechanisms, and dynamical models, but it is unclear whether the same structural test works for statistical, historical, evolutionary, social, or highly model-dependent explanations where multiple realizability and underdetermination are common. The unresolved tension is whether 'necessity-producing constraints' picks out a universal feature of explanation or privileges a narrower class of explanations modeled on physics and mathematics. Exploring failure cases could reveal whether the conjecture needs domain-specific variants.",
+      "score": 0.93
+    }
+  ]
+}

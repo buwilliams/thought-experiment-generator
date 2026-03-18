@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "mathematical-formalism",
+  "run": 6,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.1,
+  "total": 0.355,
+  "candidate_problems": [
+    {
+      "text": "How can the parameter space P and the viability region L be defined non-arbitrarily, given that both 'physically possible laws' and 'complexity-supporting structures' depend on theory choice, coarse-graining, and a metric/measure on law-space? The core unresolved tension is whether fine-tuning can be made objective without a principled parameterization, topology, and measure; otherwise claims that L is 'narrow' or 'small measure' may be coordinate artifacts.",
+      "score": 0.97
+    },
+    {
+      "text": "Which structural invariants are actually necessary and jointly sufficient for open-ended complexity, and how do they couple across scales? The conjecture lists boundedness, hierarchy, metastability, diversity, and controllability, but it remains open whether these are the right invariants, whether they can be formalized mathematically, and whether alternative forms of complexity could exist outside these criteria.",
+      "score": 0.94
+    },
+    {
+      "text": "Is apparent fine-tuning best explained by a genuinely tiny viable region in a high-dimensional space, or by hidden dependence among constants induced by a deeper theory that collapses the effective dimensionality of P? This raises the unresolved problem of distinguishing real rarity from bad coordinates: what observable or theoretical signatures would show that the constants are constrained images of a lower-dimensional structure rather than independently tuned parameters?",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "discovered-005",
+  "run": 6,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can the notion of a cosmic 'interpreter system' be made into a precise, testable framework rather than a suggestive analogy? The central unresolved tension is whether laws, symmetry-breaking histories, dynamical pathways, and selection effects can be formalized as a higher-order generative architecture with clear explanatory and predictive content, or whether this simply redescribes fine-tuning in different language.",
+      "score": 0.96
+    },
+    {
+      "text": "How much apparent fine-tuning is an artifact of varying constants one-at-a-time while holding the rest of the system fixed? This opens the problem of mapping the full space of possible universes, including compensatory parameter changes, alternative symmetry-breaking histories, and different dynamical regimes, to determine whether complexity-permitting universes occupy narrow isolated points or broad robust attractor-like regions.",
+      "score": 0.94
+    },
+    {
+      "text": "What is the explanatory status of 'higher-order' constraints such as meta-laws, multiverse selection, or deep mathematical necessity: do they genuinely explain why constants become life-relevant, or do they merely relocate the fine-tuning problem to a new level? The unresolved question is where explanatory regress should stop and what would count as a non-arbitrary account of the larger generative structure.",
+      "score": 0.92
+    }
+  ]
+}

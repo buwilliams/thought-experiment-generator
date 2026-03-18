@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan",
+  "conjecture_id": "extreme-cases",
+  "run": 6,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal deeper substrate from which spacetime, causal structure, and quantum state all co-emerge, without presupposing either a background manifold or standard Hilbert-space quantum mechanics? This is the central constructive gap in the conjecture: it diagnoses mutual breakdowns but does not specify the underlying ontology or dynamics. A fruitful problem is to formulate candidate informational or relational substrates and derive, rather than assume, geometry, amplitudes/probabilities, and observer-relative classical descriptions.",
+      "score": 0.97
+    },
+    {
+      "text": "How can time and causality emerge together in a fully universal theory where there is no external clock, yet recover the effective notions used in both quantum mechanics and general relativity? The conjecture ties the problem of time to the absence of fixed background structure, but leaves open whether time is emergent from correlations, computation, thermodynamics, causal order, or something else. This is worth pursuing because resolving it would constrain any unifying framework and connect directly to measurement, cosmology, and black hole dynamics.",
+      "score": 0.94
+    },
+    {
+      "text": "What concrete mechanism makes locality and smooth classical spacetime such accurate large-scale approximations if the underlying substrate is nonlocal, nongeometric, or nonclassical? The conjecture asserts co-emergence but leaves unresolved the renormalization-like bridge from microscopic structure to macroscopic GR/QFT behavior. A strong research problem is to identify the structural conditions under which entanglement, horizon thermodynamics, and microscopic degrees of freedom yield effective metric geometry, finite propagation, and classical observers, while also resolving singularities and accounting for black hole entropy.",
+      "score": 0.92
+    }
+  ]
+}

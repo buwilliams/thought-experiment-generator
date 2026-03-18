@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "discovered-001",
+  "run": 6,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can the 'network of constraints' be made precise enough to distinguish real interdependence from a theory-dependent artifact of current parameterization? The conjecture shifts the problem from single constants to correlated viability regions, but it remains open how to formally represent the space of laws/parameters, define 'stable complexity' non-arbitrarily, and test whether apparent fine-tuning survives reparameterization or deeper unification.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the narrowness of complexity-supporting regions an objective feature of possible laws, or does it depend on hidden measure choices and anthropocentric proxies such as chemistry, stars, and information-processing as we know them? The conjecture presumes that viable worlds occupy sharply constrained regions, but an unresolved tension is whether this reflects genuine structure in possibility space or our current, historically inherited criteria for complexity and observers.",
+      "score": 0.91
+    },
+    {
+      "text": "What kind of deeper explanation could actually generate the observed correlated package of constants: necessity, selection, or theory-revision linking allegedly independent parameters? The conjecture usefully reframes the explanatory target, but it leaves open which mechanism could produce the load-bearing tradeoffs and how one would empirically or theoretically discriminate among these three broad classes of explanation.",
+      "score": 0.93
+    }
+  ]
+}

@@ -5,9 +5,9 @@
       "meta": {
         "id": "can-llms-create-new-knowledge",
         "source": "user",
-        "score": 0.82375,
+        "score": 0.755575,
         "rank": 1,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T00:00:00Z"
       },
       "title": "Can LLMs create new knowledge?",
@@ -18,9 +18,9 @@
       "meta": {
         "id": "does-architecture-matter-more-than-model-scale",
         "source": "user",
-        "score": 0.877,
+        "score": 0.9069166666666667,
         "rank": 2,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T00:00:00Z"
       },
       "title": "Does architecture matter more than model scale?",
@@ -31,9 +31,9 @@
       "meta": {
         "id": "what-makes-an-explanation-hard-to-vary",
         "source": "user",
-        "score": 0.7865,
+        "score": 0.80085,
         "rank": 3,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T00:00:00Z"
       },
       "title": "What makes an explanation hard to vary?",
@@ -44,9 +44,9 @@
       "meta": {
         "id": "under-what-conditions-does-next-token-prediction-actually-fo",
         "source": "system",
-        "score": 0.0,
+        "score": 0.6325999999999999,
         "rank": 4,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T19:33:14.996968813+00:00"
       },
       "title": "Under what conditions does next-token prediction actually force the learning of ",
@@ -57,9 +57,9 @@
       "meta": {
         "id": "what-concrete-feedback-architectures-actually-produce-cumula",
         "source": "system",
-        "score": 0.0,
+        "score": 0.699,
         "rank": 5,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T19:33:14.997032362+00:00"
       },
       "title": "What concrete feedback architectures actually produce cumulative epistemic error",
@@ -70,9 +70,9 @@
       "meta": {
         "id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
         "source": "system",
-        "score": 0.0,
+        "score": 0.8323333333333333,
         "rank": 6,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T19:33:14.997067046+00:00"
       },
       "title": "How can 'epistemic progress' be defined and measured independently of fluency, b",
@@ -80,6 +80,6 @@
       "full_text": "How can 'epistemic progress' be defined and measured independently of fluency, benchmark performance, or popularity-weighted success? The conjecture assumes a distinction between answer production and knowledge creation, but the boundary is unresolved: what observable indicators show that a system is genuinely learning from error, retaining refutations, and improving truth-tracking over time? This is worth pursuing because the whole structural thesis depends on metrics that can detect cumulative knowledge growth rather than surface competence."
     }
   ],
-  "run_count": 1,
+  "run_count": 2,
   "created_at": "2026-03-18T00:00:00Z"
 }

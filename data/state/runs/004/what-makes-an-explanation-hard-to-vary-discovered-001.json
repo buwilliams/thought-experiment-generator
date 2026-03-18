@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "discovered-001",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'necessitating constraints' and 'variation propagation' be made operational without collapsing into a merely stylistic judgment? The conjecture gives an intuitive structural criterion, but it leaves open how to distinguish genuine explanatory coupling from trivial logical dependence, ad hoc patching, or ordinary coherence in any well-written story. A new problem is to define measurable or at least criticizable tests for load-bearingness that separate explanatory necessity from rhetorical integration.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the right balance between explanatory strength and modularity? The conjecture treats tight coupling as a mark of quality, but many powerful explanations are valued precisely because some components are independently replaceable while the core mechanism remains intact. This raises an unresolved tension: when does swappability indicate superficiality, and when does it indicate abstraction, robustness, or progress toward a deeper theory?",
+      "score": 0.92
+    },
+    {
+      "text": "How does the conjecture handle false but highly integrated explanations versus true but still-fragmentary ones? A tightly coupled account can be deeply wrong yet hard to vary, while an emerging but correct explanation may initially look loose and underconstrained. This opens the problem of whether load-bearingness is a criterion of explanatory quality, of maturity, of testability, or only of internal structure—and how it should interact with empirical success and error correction.",
+      "score": 0.97
+    }
+  ]
+}

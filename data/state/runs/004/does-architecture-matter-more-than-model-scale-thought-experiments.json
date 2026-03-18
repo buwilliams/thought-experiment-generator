@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "thought-experiments",
+  "run": 4,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "What concrete architectural and institutional mechanisms would actually instantiate 'structures that create and preserve criticism' in AI, and how can we tell they improve explanatory knowledge rather than merely adding another optimization layer? The conjecture identifies criticism as the bottleneck, but leaves open the operational design problem: memory of failed ideas, adversarial test generation, attribution of failure, and promotion of explanations over benchmark wins all need implementable forms and non-circular evaluation criteria.",
+      "score": 0.97
+    },
+    {
+      "text": "Is there a principled way to distinguish 'capacity to know' from scaled search performance in AI systems, with observable markers that do not collapse back into existing benchmarks? The conjecture hinges on a real separation between search and knowledge, but it remains unresolved how to measure explanatory progress, detect ad hoc success, or identify genuine revision of standards of evaluation without relying on the same performance metrics being criticized.",
+      "score": 0.95
+    },
+    {
+      "text": "Under what conditions can increased substrate itself give rise to stronger error-correcting structure, rather than merely amplifying noise? The conjecture argues that scaling alone plateaus, but an open question is whether sufficiently large systems with rich memory, self-modeling, and iterative experimentation could spontaneously develop proto-institutions of criticism, or whether such structures must be explicitly designed. This is the key boundary question for the conjecture's strongest claim.",
+      "score": 0.9
+    }
+  ]
+}

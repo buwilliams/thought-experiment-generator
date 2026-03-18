@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "historical-genesis",
+  "run": 5,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can 'adaptive knowledge' be defined and measured non-circularly in biological systems, so the conjecture makes testable claims about what is being preserved versus what is allowed to vary? The conjecture depends heavily on a real distinction between load-bearing functional organization and revisable implementation details, but it is unresolved how to identify that distinction across genotype, development, physiology, and ecology without simply redescribing observed fitness outcomes.",
+      "score": 0.95
+    },
+    {
+      "text": "What empirical or theoretical criteria could distinguish the conjecture's causal direction—evolvability as an exaptation of noise-management architectures—from rival explanations in which robustness and evolvability are directly co-selected, or arise independently from other structural features? This is a central unresolved tension because the conjecture's novelty rests on historical priority and causal asymmetry, which are difficult to infer from present-day biological organization.",
+      "score": 0.93
+    },
+    {
+      "text": "Under what conditions do mechanisms that preserve function under noise actually promote future innovation rather than trap lineages in local optima or over-canalize variation? The conjecture implies that structured protection usually enables corrigible exploration, but it remains open where the boundary lies between architectures that accumulate adaptive knowledge and architectures that merely resist change.",
+      "score": 0.91
+    }
+  ]
+}

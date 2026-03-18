@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 3,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'counterfactual dependence on a generative structure' be made precise enough to distinguish explanation from redescription without collapsing into existing notions like causal modeling, interventionism, mechanistic explanation, or predictive success? The conjecture is powerful but currently under-specified: what exactly counts as a generative structure, what kinds of variations are legitimate, and what threshold of counterfactual fertility is sufficient?",
+      "score": 0.95
+    },
+    {
+      "text": "Does the conjecture wrongly exclude genuine explanations in domains where generative structure is opaque, non-causal, highly abstract, or mathematically structural—such as parts of mathematics, statistical mechanics, evolutionary theory, or historical explanation? The open question is whether explanation always requires identifiable stocks, flows, constraints, and feedback loops, or whether there are non-generative yet genuinely explanatory forms that survive variation in a different way.",
+      "score": 0.91
+    },
+    {
+      "text": "What prevents a sophisticated redescription from being engineered to pass the variation test by post hoc flexibility? If redescriptions can be extended to accommodate many perturbations, the key unresolved tension is how to separate genuinely risky, error-correcting explanatory structures from merely adaptable vocabularies that mimic counterfactual competence after the fact.",
+      "score": 0.93
+    }
+  ]
+}

@@ -5,9 +5,9 @@
       "meta": {
         "id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
         "source": "user",
-        "score": 0.0,
+        "score": 0.743,
         "rank": 1,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:32.714119539+00:00"
       },
       "title": "Why does subjective experience exist at all — why is there something it is like ",
@@ -18,9 +18,9 @@
       "meta": {
         "id": "what-is-the-relationship-between-information-processing-and",
         "source": "user",
-        "score": 0.0,
+        "score": 0.9199999999999999,
         "rank": 2,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:32.816115378+00:00"
       },
       "title": "What is the relationship between information processing and phenomenal conscious",
@@ -31,9 +31,9 @@
       "meta": {
         "id": "how-does-intentionality-the-aboutness-of-mental-states-a",
         "source": "user",
-        "score": 0.0,
+        "score": 0.7081999999999999,
         "rank": 3,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:32.921122828+00:00"
       },
       "title": "How does intentionality — the aboutness of mental states — arise from physical p",
@@ -44,9 +44,9 @@
       "meta": {
         "id": "what-is-the-relationship-between-free-will-causation-and-p",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8628333333333332,
         "rank": 4,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:33.024972293+00:00"
       },
       "title": "What is the relationship between free will, causation, and physical determinism?",
@@ -57,16 +57,42 @@
       "meta": {
         "id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
         "source": "user",
-        "score": 0.0,
+        "score": 0.85875,
         "rank": 5,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:33.129812039+00:00"
       },
       "title": "How do concepts and meaning arise from syntax, statistics, and pattern recogniti",
       "summary": "How do concepts and meaning arise from syntax, statistics, and pattern recognition?",
       "full_text": "How do concepts and meaning arise from syntax, statistics, and pattern recognition?"
+    },
+    {
+      "meta": {
+        "id": "can-the-conjecture-supply-a-non-circular-precise-criterion",
+        "source": "system",
+        "score": 0.0,
+        "rank": 7,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:00:13.693304132+00:00"
+      },
+      "title": "Can the conjecture supply a non-circular, precise criterion for when an internal",
+      "summary": "Can the conjecture supply a non-circular, precise criterion for when an internal state genuinely functions as a model with correctness conditions, rather than merely participating in a causal control ",
+      "full_text": "Can the conjecture supply a non-circular, precise criterion for when an internal state genuinely functions as a model with correctness conditions, rather than merely participating in a causal control loop? The central tension is whether 'model-bearing', 'wrong about the world', and 'used as informative' can be defined without already presupposing intentional notions."
+    },
+    {
+      "meta": {
+        "id": "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec",
+        "source": "system",
+        "score": 0.0,
+        "rank": 8,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:00:13.693346396+00:00"
+      },
+      "title": "How can 'irreducibly perspectival' or 'loss-sensitive to decomposition' be made ",
+      "summary": "How can 'irreducibly perspectival' or 'loss-sensitive to decomposition' be made precise enough to distinguish conscious from nonconscious systems without collapsing into vagueness or circularity? The ",
+      "full_text": "How can 'irreducibly perspectival' or 'loss-sensitive to decomposition' be made precise enough to distinguish conscious from nonconscious systems without collapsing into vagueness or circularity? The conjecture hinges on a boundary property, but it is unclear what formal criterion would measure unified self-world modeling, privileged point of view, and decomposition failure across brains, AI systems, split-brain cases, and distributed collectives."
     }
   ],
-  "run_count": 0,
+  "run_count": 1,
   "created_at": "2026-03-18T20:54:18.002350490+00:00"
 }

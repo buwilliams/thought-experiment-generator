@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-compression-understanding",
+  "conjecture_id": "mathematical-formalism",
+  "run": 3,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "How should the transformation set T be specified, learned, or justified so that 'invariance' is neither arbitrary nor circular? The conjecture depends on relevant variations, but relevance seems to presuppose prior explanatory knowledge. A precise problem is to define criteria or procedures for selecting T from data, interventions, and background aims, and to characterize when different choices of T yield genuinely different notions of understanding.",
+      "score": 0.97
+    },
+    {
+      "text": "What exact mathematical objective distinguishes explanatory understanding from ordinary compression? The current condition M(T(D)) ~ T(M(D)) is schematic: one needs a formal tradeoff among description length, invariance across transformations, predictive adequacy, and generative explicitness. A key open problem is whether there exists a principled functional or theorem showing when a longer model with stronger invariance should be preferred over a shorter but brittle code.",
+      "score": 0.95
+    },
+    {
+      "text": "How can 'explanation as the explicit map from compressed structure to phenomena' be formalized in a way that excludes lookup tables and other non-explanatory generators? Many objects can generate D and T(D), so the open question is what structural constraints on the morphism—causal, mechanistic, compositional, computable, interpretable, or category-theoretic—make it explanatory rather than merely reconstructive.",
+      "score": 0.93
+    }
+  ]
+}

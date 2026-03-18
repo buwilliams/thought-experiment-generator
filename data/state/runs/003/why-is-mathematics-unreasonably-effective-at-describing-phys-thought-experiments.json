@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys",
+  "conjecture_id": "thought-experiments",
+  "run": 3,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.4,
+  "total": 0.5589999999999999,
+  "candidate_problems": [
+    {
+      "text": "What exactly grounds the bridge from 'compressible, invariant-rich reality' to the specific mathematics humans discover? The conjecture explains why some abstract structures could match reality, but leaves open a selection problem: why do the mathematically fruitful structures developed under human curiosity so often overlap with physically instantiated ones, rather than the overlap being vanishingly small within the enormous space of possible abstract systems?",
+      "score": 0.95
+    },
+    {
+      "text": "Is 'compressibility/error-correctable structure' a necessary and sufficient condition for mathematical effectiveness, or only a suggestive metaphor? The conjecture relies on compression, invariance, and criticism as the common criterion, but it remains unclear how to formalize these notions so they distinguish domains where mathematics should work well from domains where it should fail, and whether they can generate testable predictions rather than post hoc explanations.",
+      "score": 0.97
+    },
+    {
+      "text": "How should the conjecture handle physical reality that appears irreducibly contingent, chaotic, or non-compressible at relevant scales? If mathematics is effective because reality instantiates sparse reusable structure, an unresolved tension is whether mathematically successful physics depends only on coarse-grained regularities, and what this implies for domains where stable abstractions break down. This bears on the limits of mathematization and on whether the conjecture explains effectiveness globally or only in specially structured regimes.",
+      "score": 0.92
+    }
+  ]
+}

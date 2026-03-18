@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-stable-cooperation-emerge-and-persist-among-self-in",
+  "conjecture_id": "discovered-003",
+  "run": 5,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.2,
+  "total": 0.42499999999999993,
+  "candidate_problems": [
+    {
+      "text": "Which of the proposed load-bearing structures are individually necessary versus substitutable, and what are the minimal sufficient combinations for stable cooperation across different environments? The conjecture treats iteration, observability/memory, conditional response, partner choice, and payoff alignment as core, but it remains unresolved whether some can be weakened or replaced by others without collapse.",
+      "score": 0.96
+    },
+    {
+      "text": "How exactly does decentralized information become reliable enough to support distributed enforcement rather than manipulation, noise, false reputation, or strategic signaling? The conjecture depends on accumulated knowledge about behavior, but leaves open the conditions under which memory and reputation remain truth-tracking and therefore genuinely load-bearing.",
+      "score": 0.93
+    },
+    {
+      "text": "What determines the boundary between systems where self-interest can be structurally routed into cooperation and systems where the same mechanisms instead produce exclusion, cartelization, polarization, or exploitative local equilibria? The conjecture explains cooperation’s persistence, but not when these same feedback and partner-selection structures generate socially harmful yet stable outcomes.",
+      "score": 0.91
+    }
+  ]
+}

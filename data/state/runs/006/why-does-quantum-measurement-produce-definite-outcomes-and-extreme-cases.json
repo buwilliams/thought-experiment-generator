@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "extreme-cases",
+  "run": 6,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Can branch-relative definiteness be made non-circular and precise? The conjecture says observers are definite only within branches with internally consistent records, but this raises an unresolved question about how branches are objectively individuated without already presupposing quasi-classical observers, records, or a preferred coarse-graining. Is branching an emergent but well-defined structure in the universal state, or does the account smuggle in the very definiteness it aims to explain?",
+      "score": 0.95
+    },
+    {
+      "text": "Can the Born rule be derived from indexical uncertainty without hidden normative assumptions? The conjecture shifts outcome selection from physical collapse to rational expectation over successor observers, but it remains open whether this yields the Born weights uniquely rather than by decision-theoretic, self-locating, or symmetry assumptions that may themselves encode the rule. The key problem is to explain why branch amplitudes, rather than branch counting or some other measure, govern rational credence.",
+      "score": 0.98
+    },
+    {
+      "text": "What exactly grounds personal identity and self-location across branching? The conjecture relies on an observer having multiple successor observers and on pre-branch uncertainty about which successor one will be, but this leaves unresolved whether such indexical uncertainty is coherent if all successors exist, and what relation of continuity makes them all legitimate future selves. Without a clear account of observer identity in branching systems, the move from global multiplicity to local experienced uniqueness may be underexplained.",
+      "score": 0.91
+    }
+  ]
+}

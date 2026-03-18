@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "discovered-001",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'epistemic progress' be operationalized so the conjecture becomes testable rather than rhetorical? The core unresolved tension is whether there exist robust measures that distinguish mere performance gains from genuine improvements in conjecture formation, criticism, error-correction, and selection across domains. Without such criteria, 'structural bottleneck' may just redescribe dissatisfaction with current systems rather than identify a real causal constraint.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the causal boundary between substrate and structure, and can the two really be separated? A major open question is whether the purportedly structural mechanisms—hypothesis generation, adversarial testing, memory, verification, institutional scaffolding—are independent leverage points, or whether they mostly emerge automatically once scale, data, and training become large enough. If structure is itself downstream of substrate, the conjecture may overstate a distinction that is historically contingent rather than fundamental.",
+      "score": 0.91
+    },
+    {
+      "text": "What architectures of criticism and error-correction actually produce sustained knowledge growth in AI, rather than just adding overhead or gaming evaluations? The conjecture points to explicit rival hypotheses, durable error records, debate, and verification, but leaves open which feedback-loop designs genuinely improve truth-tracking under real deployment pressures. This is a live systems question because many proposed 'epistemic' additions can become performative, Goodharted, or captured by persuasive fluency unless their incentives and selection mechanisms are carefully designed.",
+      "score": 0.93
+    }
+  ]
+}

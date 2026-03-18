@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "discovered-001",
+  "run": 3,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing internal structure' be operationalized non-circularly? The conjecture treats explanatory status as depending on mutually constraining parts and counterfactual fragility, but it remains open how to measure this without already presupposing which derivations, predictions, unifications, or ruled-out possibilities count as explanatory success. A key problem is to define tests or metrics that distinguish genuine structural dependence from merely engineered sensitivity or ad hoc complexity.",
+      "score": 0.96
+    },
+    {
+      "text": "How does the criterion handle explanations in domains where successful explanation is primarily unificatory, mathematical, historical, or principle-based rather than mechanistic? The conjecture leans on mechanism-like components (M, B, R), but many strong explanations seem to work by symmetry, optimization, equilibrium, narrative sequence, or abstract constraint. The open question is whether these cases also exhibit load-bearing structure in the same sense, or whether the conjecture is too narrow and risks misclassifying non-mechanistic explanations as redescriptions.",
+      "score": 0.91
+    },
+    {
+      "text": "What separates productive counterfactual fragility from brittle overfitting? If a good explanation should 'break, narrow, or force compensating changes' when perturbed, then highly tuned but shallow models may also appear load-bearing simply because their parts are tightly coupled. The unresolved tension is how to distinguish genuine necessity that supports criticism and transfer from arbitrary interdependence created by fitting one phenomenon too closely.",
+      "score": 0.94
+    }
+  ]
+}

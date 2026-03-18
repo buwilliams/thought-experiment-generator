@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "discovered-003",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can 'epistemic progress' or 'knowledge creation' be operationalized so the conjecture becomes falsifiable rather than definitional? The core unresolved tension is whether explanation, criticism, and cumulative error-correction can be measured independently of capability, benchmark performance, or human approval. Without a non-circular metric, the claim that structure is now the binding constraint risks collapsing into a relabeling of whichever systems we already judge as more scientific.",
+      "score": 0.97
+    },
+    {
+      "text": "Where is the actual phase transition between substrate-limited and structure-limited regimes, and does such a transition exist in a principled way? The conjecture assumes a historical shift: scaling solved representational scarcity, after which higher-order error-correction became load-bearing. But it remains open whether this boundary is sharp, task-dependent, continuously moving with new architectures, or illusory because sufficient scale may itself instantiate the needed critical structures.",
+      "score": 0.93
+    },
+    {
+      "text": "What concrete architectures can realize the proposed invariants of conjecture, criticism, retention of failure, and cumulative selection without merely simulating them rhetorically? The open question is whether these abstractions can be engineered into systems that genuinely improve theory formation, or whether attempts to encode 'criticism' and 'explanation' will reduce to proxy optimization, bureaucratic overhead, or human-imposed scaffolding that does not scale autonomously.",
+      "score": 0.95
+    }
+  ]
+}

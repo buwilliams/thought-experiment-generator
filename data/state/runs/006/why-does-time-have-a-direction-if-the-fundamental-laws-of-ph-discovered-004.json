@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+  "conjecture_id": "discovered-004",
+  "run": 6,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular by giving an independent, quantitative criterion for 'knowledge-bearing', 'record', or 'error-correcting' structure that does not already presuppose a temporal arrow? As stated, the account risks redescribing the arrow in epistemic terms rather than explaining it. A strong research problem is to define records and error correction in time-symmetric microphysics, then show that only one orientation relative to a low-entropy boundary supports their robust formation.",
+      "score": 0.96
+    },
+    {
+      "text": "Is the low-entropy boundary condition alone sufficient to explain the observed arrow, or is there an additional asymmetry specific to complex adaptive/error-correcting systems? The conjecture claims entropy increase is only substrate and that a deeper asymmetry lies in record accumulation, but it remains open whether this is genuinely new explanatory content or just a higher-level restatement of thermodynamic irreversibility. The key problem is to identify predictions or distinctions between a purely statistical-mechanical account and the proposed epistemic-structural account.",
+      "score": 0.93
+    },
+    {
+      "text": "How should the conjecture handle atypical cosmological possibilities such as two-time boundary conditions, local entropy reversals, Boltzmann-brain-like observers, or regions with opposite arrows? If the experienced arrow is tied to record robustness, does the framework predict observer-relative arrows, forbid stable anti-record worlds, or explain why such structures are overwhelmingly non-robust? Exploring these edge cases would test whether the conjecture scales beyond our local history or depends too heavily on it.",
+      "score": 0.9
+    }
+  ]
+}

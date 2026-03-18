@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture supply a non-question-begging criterion for when a person-level explanation is genuinely causally/explanatorily autonomous rather than merely a convenient redescription of lower-level physical processes? The central unresolved tension is whether 'agents as real causal-explanatory nodes' is a substantive ontology or just explanatory pluralism without causal bite.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly distinguishes action 'guided by reasons, internally modeled alternatives, and error-correction' from sophisticated deterministic control or computation? The open problem is to specify the structural features of a system that make it an agent in the relevant sense, without collapsing into compatibilism by stipulation or into mystery about how reasons can matter.",
+      "score": 0.92
+    },
+    {
+      "text": "If the free-will problem is largely a historical artifact of misframing, why has the tension remained so resilient across ethics, law, phenomenology, and metaphysics? This raises the unresolved question of whether the debate is merely inherited confusion or whether there is a deeper real conflict between first-person deliberation, responsibility practices, and third-person scientific explanation that the reframing has not yet dissolved.",
+      "score": 0.88
+    }
+  ]
+}

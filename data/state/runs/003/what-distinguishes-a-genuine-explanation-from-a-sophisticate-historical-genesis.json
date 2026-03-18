@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "historical-genesis",
+  "run": 3,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture distinguish genuinely explanatory theories that were discovered without a clear historical lineage to a prior articulated problem from redescriptions that merely appear novel? The tension is whether explanation essentially depends on genealogical connection, or whether ahistorical but truth-tracking structural accounts can still count as explanations.",
+      "score": 0.95
+    },
+    {
+      "text": "What non-circular criteria can operationalize the difference between a 'generative mechanism or constraint structure' and a vocabulary shift, especially in domains where mechanisms are abstract, multiply realizable, or model-dependent? Without such criteria, the conjecture risks redescribing explanation in its own preferred terms.",
+      "score": 0.93
+    },
+    {
+      "text": "How should predictive success, unification, and compression be weighted against genealogy in judging explanation? The conjecture downplays these as possibly reparative or aesthetic, but many successful sciences treat them as core explanatory virtues, creating an unresolved tension between historical problem-solving and theory appraisal by present-day performance.",
+      "score": 0.9
+    }
+  ]
+}

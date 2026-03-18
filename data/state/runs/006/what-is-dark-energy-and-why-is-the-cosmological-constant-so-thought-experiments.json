@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+  "conjecture_id": "thought-experiments",
+  "run": 6,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.5,
+  "total": 0.62,
+  "candidate_problems": [
+    {
+      "text": "What exact criterion makes a piece of quantum-field-theoretic structure 'ontologically eligible' to gravitate? The conjecture hinges on separating description-dependent vacuum bookkeeping from invariant, persistent, relational information, but it does not yet supply a precise, observer-independent rule that can be implemented in a fundamental theory. The central open problem is to define this selector in a way that is mathematically sharp, compatible with quantum theory and diffeomorphism invariance, and not merely a restatement of the desired conclusion.",
+      "score": 0.98
+    },
+    {
+      "text": "How can a 'global informational residual' source accelerated expansion without violating locality, conservation laws, or the structure of general relativity? If dark energy is a boundary-condition-like effect of the universe's total informational order, one must explain how this enters Einstein's equations, how it respects stress-energy conservation/Bianchi identities, and whether it requires modifying gravity, semiclassical sourcing, or the ontology of spacetime itself.",
+      "score": 0.94
+    },
+    {
+      "text": "What novel empirical consequences distinguish this conjecture from an ordinary cosmological constant or other dark-energy models? As stated, the idea risks being interpretive unless it yields testable differences: e.g. predictions about vacuum contributions in curved spacetime, phase transitions, Casimir-like settings, black-hole horizons, early-universe evolution, or correlations between information-bearing structure and gravitational response. Turning the conjecture into a research program requires extracting discriminating observables.",
+      "score": 0.96
+    }
+  ]
+}

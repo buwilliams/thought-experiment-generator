@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-compression-understanding",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 3,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'invariance under transformation' be made precise enough to distinguish compression, understanding, and explanation in a non-circular way? The conjecture treats invariance as load-bearing, but it remains open what counts as the relevant transformations, how invariants are identified, and how to avoid defining understanding by the very successes it is supposed to explain.",
+      "score": 0.97
+    },
+    {
+      "text": "What objective criteria separate a merely predictive or compressed representation from a genuinely generative structure that supports reliable variation and counterfactual reach? The conjecture claims hashes, lookup tables, and latent vectors can fail as understanding, but leaves unresolved which tests, interventions, or failure modes would mark the boundary in practice and in theory.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the exact relation between explanation and communicability: can there be genuine understanding without criticizable explanation, or explanation that survives criticism without deep understanding? The conjecture posits explanation as externalized understanding, but the dependence relations among private competence, public articulation, and criticism remain underdetermined.",
+      "score": 0.88
+    }
+  ]
+}

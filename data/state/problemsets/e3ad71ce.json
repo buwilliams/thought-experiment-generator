@@ -5,9 +5,9 @@
       "meta": {
         "id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
         "source": "user",
-        "score": 0.0,
+        "score": 0.7427999999999999,
         "rank": 1,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:29.961894660+00:00"
       },
       "title": "How did self-replicating chemistry emerge from non-living matter without a prior",
@@ -18,9 +18,9 @@
       "meta": {
         "id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
         "source": "user",
-        "score": 0.0,
+        "score": 0.819,
         "rank": 2,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:30.066160295+00:00"
       },
       "title": "Why do complex adaptive systems exhibit power-law distributions and scale-free b",
@@ -31,9 +31,9 @@
       "meta": {
         "id": "how-does-stable-cooperation-emerge-and-persist-among-self-in",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8434999999999999,
         "rank": 3,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:30.171879747+00:00"
       },
       "title": "How does stable cooperation emerge and persist among self-interested agents with",
@@ -44,9 +44,9 @@
       "meta": {
         "id": "what-is-the-relationship-between-genetic-information-and-the",
         "source": "user",
-        "score": 0.0,
+        "score": 0.7861666666666668,
         "rank": 4,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:30.276399134+00:00"
       },
       "title": "What is the relationship between genetic information and the complexity of the o",
@@ -57,16 +57,29 @@
       "meta": {
         "id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
         "source": "user",
-        "score": 0.0,
+        "score": 0.6904,
         "rank": 5,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T20:54:30.381564636+00:00"
       },
       "title": "Why do biological systems exhibit robustness to perturbation while remaining evo",
       "summary": "Why do biological systems exhibit robustness to perturbation while remaining evolvable?",
       "full_text": "Why do biological systems exhibit robustness to perturbation while remaining evolvable?"
+    },
+    {
+      "meta": {
+        "id": "under-what-conditions-can-decentralized-informational-infras",
+        "source": "system",
+        "score": 0.0,
+        "rank": 8,
+        "run_count": 0,
+        "created_at": "2026-03-18T21:14:38.098682184+00:00"
+      },
+      "title": "Under what conditions can decentralized informational infrastructures substitute",
+      "summary": "Under what conditions can decentralized informational infrastructures substitute for central enforcement, and where are their hard limits? The conjecture treats memory, observability, signaling, repea",
+      "full_text": "Under what conditions can decentralized informational infrastructures substitute for central enforcement, and where are their hard limits? The conjecture treats memory, observability, signaling, repeated interaction, and peer punishment as load-bearing, but it remains open how much of each is necessary, how they trade off, and when scale, anonymity, mobility, noise, or adversarial manipulation break the system. This is a strong new problem because it turns the conjecture into a testable structural theory rather than a broad narrative."
     }
   ],
-  "run_count": 0,
+  "run_count": 1,
   "created_at": "2026-03-18T20:54:17.297094088+00:00"
 }

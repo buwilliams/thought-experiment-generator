@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+  "conjecture_id": "thought-experiments",
+  "run": 3,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "What exactly makes a transferred structure in the source domain 'real' or 'load-bearing' in the target domain rather than a merely convenient redescription? The conjecture relies on a distinction between deep structure and superficial resemblance, but it leaves open a criterion for identifying structure-preserving mappings that are genuinely explanatory across domains.",
+      "score": 0.95
+    },
+    {
+      "text": "How should 'not previously formulated' or 'not previously available in the problem-space' be defined? The conjecture treats novelty as arising when an analogy makes target-domain consequences thinkable, but it is unresolved whether this novelty is psychological, historical, logical, or epistemic, and different notions would change the claim substantially.",
+      "score": 0.91
+    },
+    {
+      "text": "By what process does criticism select successful analogical transfers, and what distinguishes analogical knowledge growth from ordinary conjecture generation followed by testing? The conjecture says analogy is a 'conjecture engine' that transfers generative constraints, but it remains unclear what unique epistemic work analogy does beyond proposing hypotheses, and how to evaluate its reliability or scope as a method.",
+      "score": 0.89
+    }
+  ]
+}

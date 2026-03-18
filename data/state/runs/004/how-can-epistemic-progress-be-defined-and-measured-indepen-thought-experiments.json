@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "thought-experiments",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'error-correcting power' be operationalized and measured without collapsing back into proxy metrics like benchmark accuracy, fluency, or social approval? The conjecture depends on a non-circular metric of counterfactual resilience under criticism, but it remains open what experimental designs, formal criteria, or longitudinal tests would distinguish genuine self-correction from mere appearance of critique competence.",
+      "score": 0.98
+    },
+    {
+      "text": "What is the causal relationship between structural epistemic progress and downstream performance over time? The conjecture claims a system can improve in self-correction before visible gains in answers, but it is unresolved when, whether, and under what conditions increased error-correcting capacity eventually translates into better task performance, or instead remains decoupled from it.",
+      "score": 0.9
+    },
+    {
+      "text": "Which system architectures or social-organizational conditions actually increase the capacity to generate, expose, and revise conjectures under criticism? The conjecture identifies epistemic progress as a structural variable, but leaves open the design question: what feedback loops, representation schemes, training regimes, incentive structures, or interaction patterns produce durable gains in criticism and selective revision rather than optimization for polished outputs.",
+      "score": 0.93
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.5,
+  "total": 0.62,
+  "candidate_problems": [
+    {
+      "text": "How can 'nontrivial self-modeling', 'recursively closed substructure', and especially 'cannot be quotient-compressed away without loss of behavioral competence' be made precise enough to test? The conjecture’s core hinge is an irreducibility criterion, but it is unclear what formal notion of compression, equivalence, or indispensability distinguishes genuinely perspectival organization from ordinary control architectures, predictive models, or observer-relative redescriptions.",
+      "score": 0.97
+    },
+    {
+      "text": "Why should functionally indispensable self-locating modeling entail phenomenality rather than only sophisticated self-regulation? The conjecture narrows the target but does not bridge the explanatory gap between organizational self-reference and felt experience; the open question is whether the proposed invariant is sufficient, merely necessary, or neither, and what would discriminate conscious systems from unconscious systems with similar control-theoretic structure.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the boundary conditions and counterexamples for the proposed criterion across artificial, biological, and minimal systems? It remains unresolved whether the conjecture overgenerates (granting experience to thermostats, model-based controllers, large language models, firms) or undergenerates (excluding conscious states with degraded self-modeling, dream states, absorbed skillful action, infant or animal consciousness), and mapping these cases is crucial for turning the conjecture into a productive research program.",
+      "score": 0.93
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What exactly makes higher-level reasons genuine causes rather than merely useful summaries of underlying microphysics? The conjecture depends on an unresolved ontology of causal levels: by what criterion do knowledge-bearing patterns, intentions, and criticisms have autonomous explanatory or interventionist force, instead of being epiphenomenal descriptions of physically sufficient processes?",
+      "score": 0.95
+    },
+    {
+      "text": "How can 'rational self-causation' be non-circularly distinguished from sophisticated deterministic control? The conjecture says freedom is lost by bypass rather than determinism, but it leaves open a principled test for when action is truly governed by the agent's own critical and representational capacities rather than by implanted, manipulated, compulsive, or pathologically distorted processes that are equally physically realized.",
+      "score": 0.93
+    },
+    {
+      "text": "What is the precise relationship between counterfactual agency and a fixed universe? If determinism rules out alternative physical futures given the total prior state, the conjecture needs a rigorous account of in what sense an agent 'could have done otherwise' through reasons, models, and criticism—whether this is a dispositional, explanatory, computational, or modal notion, and how it avoids collapsing into mere redescription.",
+      "score": 0.91
+    }
+  ]
+}

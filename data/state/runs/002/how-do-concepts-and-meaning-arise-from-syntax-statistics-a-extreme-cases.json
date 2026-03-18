@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture define and measure the relevant invariances without becoming circular? It says concepts are what survive arbitrarily many transformations and counterfactual contexts, but which transformations count as meaning-preserving cannot simply be assumed in advance without already presupposing semantic categories. The open problem is to specify a non-circular criterion for the transformation set, equivalence class, and correctness conditions that distinguish genuine concept-tracking from merely robust pattern-matching.",
+      "score": 0.97
+    },
+    {
+      "text": "Is error-correctable cross-context invariance sufficient for meaning, or only necessary? A system might preserve stable inferential roles across many reframings and still appear disconnected from reference, world-involvement, or normativity. The open question is whether invariance plus correction fully explains aboutness, or whether semantics also requires additional ingredients such as causal contact, use in action, social practices, embodiment, or explanatory integration.",
+      "score": 0.94
+    },
+    {
+      "text": "What mechanism actually produces invariant concepts from finite learners in finite environments? The conjecture identifies a boundary condition for meaning, but leaves open the generative story: what architectures, learning dynamics, feedback loops, and training regimes cause systems to move from local statistical competence to abstraction that survives distribution shift, modality change, and counterfactual recombination? This is a key unresolved bridge between the philosophical criterion and a testable theory of concept formation.",
+      "score": 0.95
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+  "conjecture_id": "thought-experiments",
+  "run": 5,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What exactly are the minimal necessary and sufficient conditions for 'closure of constraints' to produce genuine heredity rather than mere persistence? The conjecture hinges on system-level recurrence, but it leaves open a sharp criterion distinguishing self-maintaining chemistry from a reproducing organization capable of open-ended selection.",
+      "score": 0.97
+    },
+    {
+      "text": "How can organization-level replication achieve enough fidelity, variation, and individuation before symbolic templates exist? If replication belongs to a cycle-plus-environment, it remains unresolved how lineages are bounded, how traits are inherited across reconstituted instances, and whether selection can operate cumulatively without clearer mechanisms of error control and identity.",
+      "score": 0.95
+    },
+    {
+      "text": "By what plausible transition mechanism do environmentally scaffolded chemical ecologies give rise to internal templating polymers that progressively take over hereditary function? The conjecture proposes continuity from distributed environmental memory to compact molecular templates, but the selective and mechanistic steps of that handoff remain underspecified.",
+      "score": 0.93
+    }
+  ]
+}

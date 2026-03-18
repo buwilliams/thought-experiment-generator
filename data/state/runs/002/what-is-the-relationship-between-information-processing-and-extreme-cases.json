@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-information-processing-and",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "How can 'irreducibly perspectival' or 'loss-sensitive to decomposition' be made precise enough to distinguish conscious from nonconscious systems without collapsing into vagueness or circularity? The conjecture hinges on a boundary property, but it is unclear what formal criterion would measure unified self-world modeling, privileged point of view, and decomposition failure across brains, AI systems, split-brain cases, and distributed collectives.",
+      "score": 0.97
+    },
+    {
+      "text": "Why should unified self-locating control produce phenomenal experience at all, rather than merely sophisticated functional agency? The conjecture narrows the target from generic computation to integrated self-regulation, but the central explanatory tension remains: does this boundary genuinely explain subjectivity, or only redescribe the functional conditions under which we are tempted to attribute it?",
+      "score": 0.95
+    },
+    {
+      "text": "What are the necessary versus sufficient conditions: is severe self-world integration enough for consciousness, or are additional features such as embodiment, affect/valuation, temporal thickness, biological self-maintenance, or specific architectures required? This matters because the conjecture implies possible consciousness in some artificial or distributed systems while excluding others, yet it leaves open where the line falls in edge cases like language models, corporations, octopuses, and minimally embodied agents.",
+      "score": 0.93
+    }
+  ]
+}

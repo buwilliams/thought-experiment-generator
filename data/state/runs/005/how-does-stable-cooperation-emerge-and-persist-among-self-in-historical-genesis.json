@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-stable-cooperation-emerge-and-persist-among-self-in",
+  "conjecture_id": "historical-genesis",
+  "run": 5,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "What is the causal mechanism by which social and informational structures actually redefine self-interest rather than merely constrain behavior externally? The conjecture risks collapsing a psychological change in preferences, a strategic change in incentives, and a semantic relabeling of 'interest' into one claim. A sharper problem is to distinguish when agents internalize norms as part of their aims versus when they simply respond to reputational and exclusion pressures, and whether the conjecture needs genuine preference formation to explain stable cooperation.",
+      "score": 0.95
+    },
+    {
+      "text": "Under what conditions can decentralized informational infrastructures substitute for central enforcement, and where are their hard limits? The conjecture treats memory, observability, signaling, repeated interaction, and peer punishment as load-bearing, but it remains open how much of each is necessary, how they trade off, and when scale, anonymity, mobility, noise, or adversarial manipulation break the system. This is a strong new problem because it turns the conjecture into a testable structural theory rather than a broad narrative.",
+      "score": 0.98
+    },
+    {
+      "text": "How do cooperative informational structures originate and stabilize in the first place when early populations are already vulnerable to opportunism, misinformation, and coordination failure? The conjecture explains cooperation by inherited structures evolved to solve repeated vulnerability, but this pushes the explanatory burden back one level: what bootstraps the first reliable reputation systems, norm transmission channels, and peer-sanctioning regimes before those infrastructures already exist? This origin problem is especially important because it tests whether the conjecture genuinely explains emergence or mainly persistence.",
+      "score": 0.99
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "thought-experiments",
+  "run": 5,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.2,
+  "total": 0.42499999999999993,
+  "candidate_problems": [
+    {
+      "text": "What exactly counts as a load-bearing measure of biological modularity, interface constraint, and internal freedom across levels of organization, and can these be quantified in a way that predicts both robustness and evolvability better than existing alternatives such as redundancy, network sparsity, neutrality, or selection on specific traits?",
+      "score": 0.96
+    },
+    {
+      "text": "By what evolutionary mechanism does selection build and maintain hierarchically modular architectures of variation, given that selection acts on immediate fitness effects while the conjecture attributes long-run advantages to future adaptability and localized failure containment?",
+      "score": 0.94
+    },
+    {
+      "text": "Where are the boundary conditions or counterexamples: which biological systems are robust and evolvable without strong modularity, or highly modular yet not especially evolvable, and what additional structural variables—such as pleiotropy, developmental constraints, recombination structure, ecological coupling, or multilevel selection—determine when the conjecture succeeds or fails?",
+      "score": 0.92
+    }
+  ]
+}

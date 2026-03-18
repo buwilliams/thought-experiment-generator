@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "thought-experiments",
+  "run": 6,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.3,
+  "total": 0.489,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular by defining a quantitative, observer-independent criterion for 'error-correcting, stable knowledge-bearing structures' and 'cumulative information processing' that distinguishes mere persistence from genuinely revisable, propagating knowledge?",
+      "score": 0.96
+    },
+    {
+      "text": "Is there in fact a narrow and robust region in the space of possible constants that permits multi-scale 'memory + transformability' architectures, or does the conjecture overstate fine-tuning because alternative physical regimes could realize different substrates for information storage, error correction, and open-ended complexity?",
+      "score": 0.94
+    },
+    {
+      "text": "What explanatory work does the shift from 'fine-tuned for life' to 'fine-tuned for knowledge-bearing complexity' actually add beyond anthropic selection: does it generate new testable constraints, retrodictions, or a deeper theory of why laws favor causally effective information, rather than just redescribing the same fact at a different level?",
+      "score": 0.92
+    }
+  ]
+}

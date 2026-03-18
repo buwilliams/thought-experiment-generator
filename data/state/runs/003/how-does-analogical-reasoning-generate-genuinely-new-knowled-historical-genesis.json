@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+  "conjecture_id": "historical-genesis",
+  "run": 3,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "What exactly is a 'generative structure,' and by what non-circular criteria can we distinguish a genuinely shared explanatory structure from a merely convenient post hoc mapping? The conjecture depends on this notion, but leaves open how such structures are individuated, represented, and criticized without collapsing back into similarity judgments or retrospective success stories.",
+      "score": 0.95
+    },
+    {
+      "text": "How, in detail, does selective mismatch produce novelty rather than error? The conjecture claims that productive analogy requires enough correspondence to guide conjecture and enough disanalogy to force revision, but it does not specify the mechanism, thresholds, or failure modes by which mismatch restructures a problem space instead of simply misleading inquiry.",
+      "score": 0.92
+    },
+    {
+      "text": "What would count as evidence that analogy generates genuinely new knowledge rather than only scaffolding later deduction, formalization, or experimentation? This raises an unresolved epistemic question about attribution: when an analogy leads to new variables, models, or tests, how do we tell whether the novelty belongs to the analogical act itself, the subsequent criticism, or the broader system of inquiry in which the analogy operates?",
+      "score": 0.9
+    }
+  ]
+}

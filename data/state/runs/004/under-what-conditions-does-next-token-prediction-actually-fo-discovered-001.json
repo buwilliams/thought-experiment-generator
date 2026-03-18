@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "discovered-001",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.0,
+  "total": 0.285,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing for compression' be made precise and testable? The conjecture hinges on a central but informal notion: an invariant is learned when removing or perturbing it forces widespread predictive loss unless equivalent structure reappears elsewhere. A key open problem is to define operational criteria that distinguish genuinely shared, counterfactually constraining latents from merely useful heuristics, and to measure when a representation is indispensable rather than one of many interchangeable predictive encodings.",
+      "score": 0.97
+    },
+    {
+      "text": "What properties of the training distribution and model architecture jointly determine whether real invariants are structurally unavoidable versus bypassed by shortcuts? The conjecture attributes success to multi-context reuse, counterfactual pressure, bottlenecks, low shortcut availability, and long-range dependence, but leaves unresolved how these factors trade off, whether there are thresholds, and how capacity, attention, memorization, and optimization dynamics alter the outcome. This is a high-value problem because it could turn a qualitative thesis into a predictive theory of when next-token training yields world-aligned structure.",
+      "score": 0.95
+    },
+    {
+      "text": "Are the learned latents uniquely aligned with real domain invariants, or can multiple non-isomorphic internal structures support the same global predictive compression? The conjecture suggests prediction can recover 'real' invariants when they are indispensable, but it remains open whether indispensability implies identification of the invariant itself or only some functionally equivalent surrogate. This raises a deep question about realism versus underdetermination: when does predictive necessity force ontology-like structure, and when does it merely force an abstract equivalence class of solutions?",
+      "score": 0.92
+    }
+  ]
+}

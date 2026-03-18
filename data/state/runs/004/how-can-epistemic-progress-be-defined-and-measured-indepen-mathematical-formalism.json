@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "mathematical-formalism",
+  "run": 4,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can the latent structure S be identified or operationalized without smuggling in evaluator assumptions? The conjecture depends on measuring whether M captures S, but in many real domains the relevant variables, invariants, and symmetries are themselves contested or only partially known. This raises a foundational problem: whether epistemic progress can be measured non-circularly, or whether every such metric presupposes the very structural knowledge it claims to detect.",
+      "score": 0.97
+    },
+    {
+      "text": "What principled class of transformations T distinguishes genuine structure-preserving competence from mere robustness to benchmark-style perturbations? The conjecture treats progress as stability across transformations, but the choice of T is historically contingent and domain-dependent. An open question is how to generate or justify T so that success under T tracks explanatory grasp rather than overfitting to a curated transformation set.",
+      "score": 0.95
+    },
+    {
+      "text": "Is compression-plus-coherence actually aligned with truth-tracking, or can systems maximize E(M) while converging on elegant but false theories? The proposal inherits a long-standing tension between simplicity, transfer, and reality: many compact models preserve some invariants and generalize across cases yet miss causal structure. A key new problem is to characterize when gains in compression, consistency, and self-repair constitute genuine knowledge formation rather than internally coherent illusion.",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "discovered-004",
+  "run": 5,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.4,
+  "total": 0.565,
+  "candidate_problems": [
+    {
+      "text": "What concrete structural criterion distinguishes buffering that preserves corrigible variation from buffering that merely hides variation and reduces future adaptability? The conjecture hinges on 'selective exposure to error,' but it remains unclear how to characterize, measure, or predict the threshold at which robustness supports evolvability versus suppresses it.",
+      "score": 0.96
+    },
+    {
+      "text": "By what evolutionary pathway can multilayered error-correcting architectures themselves arise and be maintained, given that they seem to require coordinated modularity, redundancy, hierarchy, and timescale separation? The conjecture explains how such architectures would function, but leaves open how selection can discover and stabilize them without already benefiting from the very evolvability they enable.",
+      "score": 0.93
+    },
+    {
+      "text": "How general is the proposed explanation across levels of biological organization and environments? It is unresolved whether the same error-correcting architecture account can explain robustness and evolvability in microbes, development, immune systems, ecosystems, and major evolutionary transitions, or whether different domains require importantly different mechanisms despite the shared vocabulary of modularity and buffering.",
+      "score": 0.88
+    }
+  ]
+}

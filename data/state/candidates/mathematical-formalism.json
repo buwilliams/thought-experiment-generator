@@ -1,13 +1,34 @@
 {
   "id": "mathematical-formalism",
   "layer": "candidates",
-  "score": 0.8876666666666666,
+  "score": 0.7554416666666666,
   "rank": 2,
-  "run_count": 1,
+  "run_count": 6,
   "problem_coverage": [
     "does-architecture-matter-more-than-model-scale",
     "can-llms-create-new-knowledge",
-    "what-makes-an-explanation-hard-to-vary"
+    "what-makes-an-explanation-hard-to-vary",
+    "what-is-the-relationship-between-free-will-causation-and-p",
+    "why-does-subjective-experience-exist-at-all-why-is-there-s",
+    "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+    "how-does-intentionality-the-aboutness-of-mental-states-a",
+    "what-is-the-relationship-between-information-processing-and",
+    "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+    "what-is-the-relationship-between-compression-understanding",
+    "why-is-mathematics-unreasonably-effective-at-describing-phys",
+    "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+    "under-what-conditions-does-next-token-prediction-actually-fo",
+    "how-can-epistemic-progress-be-defined-and-measured-indepen",
+    "what-concrete-feedback-architectures-actually-produce-cumula",
+    "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+    "why-do-biological-systems-exhibit-robustness-to-perturbation",
+    "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+    "what-is-the-relationship-between-genetic-information-and-the",
+    "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+    "what-prevents-the-unification-of-general-relativity-and-quan",
+    "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+    "why-does-quantum-measurement-produce-definite-outcomes-and",
+    "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p"
   ],
   "created_at": "2026-03-18T00:00:00Z",
   "promoted_from": null,
@@ -26,6 +47,126 @@
       "run": 1,
       "score": 0.7719999999999999,
       "problem_id": "what-makes-an-explanation-hard-to-vary"
+    },
+    {
+      "run": 2,
+      "score": 0.985,
+      "problem_id": "what-is-the-relationship-between-free-will-causation-and-p"
+    },
+    {
+      "run": 2,
+      "score": 0.62,
+      "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s"
+    },
+    {
+      "run": 2,
+      "score": 0.495,
+      "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a"
+    },
+    {
+      "run": 2,
+      "score": 0.343,
+      "problem_id": "how-does-intentionality-the-aboutness-of-mental-states-a"
+    },
+    {
+      "run": 2,
+      "score": 0.973,
+      "problem_id": "what-is-the-relationship-between-information-processing-and"
+    },
+    {
+      "run": 3,
+      "score": 0.915,
+      "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled"
+    },
+    {
+      "run": 3,
+      "score": 0.702,
+      "problem_id": "what-is-the-relationship-between-compression-understanding"
+    },
+    {
+      "run": 3,
+      "score": 0.7719999999999999,
+      "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys"
+    },
+    {
+      "run": 3,
+      "score": 0.918,
+      "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha"
+    },
+    {
+      "run": 4,
+      "score": 0.912,
+      "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo"
+    },
+    {
+      "run": 4,
+      "score": 0.912,
+      "problem_id": "does-architecture-matter-more-than-model-scale"
+    },
+    {
+      "run": 4,
+      "score": 0.42199999999999993,
+      "problem_id": "can-llms-create-new-knowledge"
+    },
+    {
+      "run": 4,
+      "score": 0.7749999999999999,
+      "problem_id": "what-makes-an-explanation-hard-to-vary"
+    },
+    {
+      "run": 4,
+      "score": 0.982,
+      "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen"
+    },
+    {
+      "run": 4,
+      "score": 0.76,
+      "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula"
+    },
+    {
+      "run": 5,
+      "score": 0.419,
+      "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma"
+    },
+    {
+      "run": 5,
+      "score": 0.7779999999999999,
+      "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation"
+    },
+    {
+      "run": 5,
+      "score": 0.27,
+      "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi"
+    },
+    {
+      "run": 5,
+      "score": 0.985,
+      "problem_id": "what-is-the-relationship-between-genetic-information-and-the"
+    },
+    {
+      "run": 6,
+      "score": 0.915,
+      "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph"
+    },
+    {
+      "run": 6,
+      "score": 0.912,
+      "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan"
+    },
+    {
+      "run": 6,
+      "score": 0.909,
+      "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so"
+    },
+    {
+      "run": 6,
+      "score": 0.55,
+      "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and"
+    },
+    {
+      "run": 6,
+      "score": 0.355,
+      "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p"
     }
   ]
 }

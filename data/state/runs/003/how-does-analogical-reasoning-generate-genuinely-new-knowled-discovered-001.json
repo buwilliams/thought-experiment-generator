@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+  "conjecture_id": "discovered-001",
+  "run": 3,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can 'constraint-importing structure' and 'load-bearing' relations be made precise enough to distinguish genuinely knowledge-generating analogies from merely persuasive redescriptions? The conjecture depends on a nontrivial criterion of structural entanglement, but it leaves open what counts as essential coordination, how to detect it, and how much target-side revision is needed before novelty is real rather than verbal.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the source of novelty if the imported structure already exists in the source domain? The conjecture says new knowledge is not copied content but arises through target resistance and criticism, yet it remains unresolved how to characterize this as genuinely new target knowledge rather than delayed recognition of an isomorphic structure. This raises a deeper epistemic question about whether analogy discovers, creates, or merely reindexes explanatory structure.",
+      "score": 0.93
+    },
+    {
+      "text": "Under what conditions does analogical unification improve explanation rather than overconstrain or distort the target system? The conjecture treats explanatory economy and linked phenomena as signs of success, but open questions remain about failure modes: when imported dependencies suppress important target-specific variables, when multiple rival analogies fit the same data, and how criticism should choose among competing structural mappings.",
+      "score": 0.91
+    }
+  ]
+}

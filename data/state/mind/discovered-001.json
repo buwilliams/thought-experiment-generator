@@ -1,0 +1,127 @@
+{
+  "id": "discovered-001",
+  "layer": "mind",
+  "score": 0.9191333333333332,
+  "rank": 5,
+  "run_count": 5,
+  "problem_coverage": [
+    "what-makes-an-explanation-hard-to-vary",
+    "how-does-intentionality-the-aboutness-of-mental-states-a",
+    "what-is-the-relationship-between-free-will-causation-and-p",
+    "what-is-the-relationship-between-information-processing-and",
+    "why-does-subjective-experience-exist-at-all-why-is-there-s",
+    "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+    "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+    "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+    "what-is-the-relationship-between-compression-understanding",
+    "why-is-mathematics-unreasonably-effective-at-describing-phys",
+    "can-llms-create-new-knowledge",
+    "how-can-epistemic-progress-be-defined-and-measured-indepen",
+    "what-concrete-feedback-architectures-actually-produce-cumula",
+    "does-architecture-matter-more-than-model-scale",
+    "under-what-conditions-does-next-token-prediction-actually-fo",
+    "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+    "why-does-quantum-measurement-produce-definite-outcomes-and",
+    "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+    "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p"
+  ],
+  "created_at": "2026-03-18T19:33:20.413032835+00:00",
+  "promoted_from": null,
+  "history": [
+    {
+      "run": 2,
+      "score": 0.982,
+      "problem_id": "how-does-intentionality-the-aboutness-of-mental-states-a"
+    },
+    {
+      "run": 2,
+      "score": 0.979,
+      "problem_id": "what-is-the-relationship-between-free-will-causation-and-p"
+    },
+    {
+      "run": 2,
+      "score": 0.979,
+      "problem_id": "what-is-the-relationship-between-information-processing-and"
+    },
+    {
+      "run": 2,
+      "score": 0.973,
+      "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s"
+    },
+    {
+      "run": 2,
+      "score": 0.982,
+      "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a"
+    },
+    {
+      "run": 3,
+      "score": 0.915,
+      "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled"
+    },
+    {
+      "run": 3,
+      "score": 0.985,
+      "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate"
+    },
+    {
+      "run": 3,
+      "score": 0.915,
+      "problem_id": "what-is-the-relationship-between-compression-understanding"
+    },
+    {
+      "run": 3,
+      "score": 0.985,
+      "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys"
+    },
+    {
+      "run": 4,
+      "score": 0.982,
+      "problem_id": "can-llms-create-new-knowledge"
+    },
+    {
+      "run": 4,
+      "score": 0.915,
+      "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen"
+    },
+    {
+      "run": 4,
+      "score": 0.982,
+      "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula"
+    },
+    {
+      "run": 4,
+      "score": 0.7749999999999999,
+      "problem_id": "what-makes-an-explanation-hard-to-vary"
+    },
+    {
+      "run": 4,
+      "score": 0.985,
+      "problem_id": "does-architecture-matter-more-than-model-scale"
+    },
+    {
+      "run": 4,
+      "score": 0.285,
+      "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo"
+    },
+    {
+      "run": 6,
+      "score": 0.635,
+      "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph"
+    },
+    {
+      "run": 6,
+      "score": 0.979,
+      "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and"
+    },
+    {
+      "run": 6,
+      "score": 0.985,
+      "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so"
+    },
+    {
+      "run": 6,
+      "score": 0.845,
+      "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p"
+    }
+  ]
+}

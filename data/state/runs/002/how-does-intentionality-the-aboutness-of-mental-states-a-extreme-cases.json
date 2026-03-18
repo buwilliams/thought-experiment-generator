@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-intentionality-the-aboutness-of-mental-states-a",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.7,
+  "total": 0.754,
+  "candidate_problems": [
+    {
+      "text": "What non-circular criterion marks the exact transition from mere causal covariance/control to genuine representation? The conjecture appeals to 'error-sensitive self-maintenance' and 'usable surrogates,' but it remains open how to distinguish systems with only functional regulation (e.g. thermostats, predictive controllers, homeostatic chemistry) from systems with bona fide aboutness without smuggling intentional notions into the test.",
+      "score": 0.97
+    },
+    {
+      "text": "Is persistence-based normativity sufficient for intentionality, or does it fail for domains whose content is weakly tied to biological survival, such as mathematics, fiction, long-range planning, and abstract thought? The conjecture claims these are intensifications of the same phenomenon, but it is unresolved how truth, reference, and error in abstract cognition inherit their normativity from self-maintenance rather than requiring a different account.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the necessary system-level structures that make counterfactual sensitivity physically real rather than observer-imposed? The conjecture invokes feedback loops, absent structure, and correction across variation, but it is open which architectures—memory, internal models, decoupled simulation, multiscale selection, learning—are required, and how to specify them so that intentionality is an objective organizational property of the system rather than a convenient explanatory stance.",
+      "score": 0.93
+    }
+  ]
+}

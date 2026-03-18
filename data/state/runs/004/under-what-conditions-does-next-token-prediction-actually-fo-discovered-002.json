@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "discovered-002",
+  "run": 4,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient structural conditions on a data-generating process, training distribution, and architecture under which next-token prediction must form reusable latent variables for stable hidden causes rather than succeed via extended local bookkeeping? The core unresolved tension is that the conjecture relies on an intuitive boundary between 'structurally reducible by hidden causes' and 'solvable by surface statistics,' but does not yet define that boundary formally or show when one strategy is provably superior.",
+      "score": 0.97
+    },
+    {
+      "text": "How can we distinguish, in a non-circular and empirically testable way, between internal states that genuinely track domain invariants and internal states that merely mimic them instrumentally for prediction? The open question is whether there exists an intervention-based, counterfactual, or out-of-distribution criterion for saying a learned latent corresponds to an enduring object, rule, goal, or belief, rather than being an opaque compression artifact with similar predictive utility on observed data.",
+      "score": 0.95
+    },
+    {
+      "text": "What training regimes or environmental variations are required to make superficial predictive strategies fail and thereby create selection pressure for explanatory world-models? This is worth exploring because the conjecture says prediction is sufficient only under the right problem framing, but leaves unresolved which concrete forms of distribution shift, temporal extension, memory demand, or interactive/interventional feedback actually act as the leverage points that transform next-token prediction into invariant-learning.",
+      "score": 0.92
+    }
+  ]
+}

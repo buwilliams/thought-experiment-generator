@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.3,
+  "total": 0.495,
+  "candidate_problems": [
+    {
+      "text": "How should the transformation set G and the equivalence relation over representations be specified non-circularly? The conjecture says concepts are invariants under 'nonessential' transformations that preserve prediction or entailment, but deciding which transformations are nonessential and which inferences count as preserved already seems to presuppose semantic structure. A central open problem is whether there is a principled, learnable, task-independent way to define G and inferential equivalence without smuggling in the very concepts the theory aims to explain.",
+      "score": 0.97
+    },
+    {
+      "text": "What distinguishes genuine concepts from merely useful but brittle or spurious invariants? Many latent variables can be stable across a broad transformation family because of dataset artifacts, control objectives, or observer-imposed coarse-grainings, yet still fail to track what we would call meaning. The unresolved tension is to characterize additional criteria—counterfactual robustness, causal relevance, compositional productivity, normativity, or cross-agent convergence—that separate semantic invariants from accidental symmetries.",
+      "score": 0.94
+    },
+    {
+      "text": "Can the conjecture account for concepts whose content changes across contexts, histories, and social practices rather than remaining invariant? The proposal emphasizes stability under transformation, but many important concepts appear essentially context-sensitive, prototype-structured, contested, or dynamically revised. An open question is whether these can be modeled as higher-order invariants over changing inferential roles, or whether the invariance framework breaks down for temporally evolving and socially negotiated meaning.",
+      "score": 0.91
+    }
+  ]
+}

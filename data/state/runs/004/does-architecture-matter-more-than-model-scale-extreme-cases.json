@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "extreme-cases",
+  "run": 4,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "Is there a real substrate threshold beyond which epistemic progress becomes primarily structure-limited, and how could that threshold be operationalized or measured across tasks and architectures? The conjecture depends on a phase change claim—substrate as threshold variable, structure as slope—but leaves unresolved what counts as 'enough substrate' and whether this boundary is sharp, gradual, or domain-specific.",
+      "score": 0.95
+    },
+    {
+      "text": "What architecture or feedback-loop design actually converts capacity into knowledge rather than persuasive output? The conjecture names components—conjecture generation, criticism, severe testing, memory of failures, promotion of surviving explanations—but does not specify the minimal sufficient structure, how these parts must interact, or how to distinguish truth-tracking selection from reward-tracking mimicry in practice.",
+      "score": 0.98
+    },
+    {
+      "text": "Can epistemic progress in AI be defined and evaluated independently of capability, benchmark performance, or human persuasiveness? The conjecture assumes a meaningful distinction between knowledge growth and fluent error, but the criteria for measuring 'genuine progress' remain open: explanatory depth, error-correction rate, robustness under criticism, transfer, or something else. Without such measures, the central claim risks being unfalsifiable.",
+      "score": 0.97
+    }
+  ]
+}

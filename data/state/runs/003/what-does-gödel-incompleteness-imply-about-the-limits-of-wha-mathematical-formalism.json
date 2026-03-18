@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+  "conjecture_id": "mathematical-formalism",
+  "run": 3,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.9,
+  "total": 0.9179999999999999,
+  "candidate_problems": [
+    {
+      "text": "What exactly is the strongest general form of the claimed 'intrinsic self-knowledge boundary'? The conjecture blends Gödel incompleteness, semantic truth, soundness, and 'correct theory of its own validity,' but these are not equivalent notions. A key open problem is to formulate a precise invariant that distinguishes which kinds of self-knowledge are impossible (consistency, soundness, reflection, truth-definition, proof-completeness about self) and which are still achievable internally. This matters because the conjecture may otherwise overstate what fixed-point obstruction alone proves.",
+      "score": 0.97
+    },
+    {
+      "text": "How far does the obstruction depend on recursive axiomatizability and classical arithmetical representability, versus reflecting a deeper cross-framework phenomenon of self-reference? A worthwhile problem is to test whether analogous self-knowledge boundaries persist in non-classical logics, type theories, categorical foundations, proof assistants, semantic theories of truth, or systems with restricted self-reference. This would clarify whether the conjecture identifies a genuinely structural law of formal self-representation or mainly a Gödelian feature of a specific formal regime.",
+      "score": 0.93
+    },
+    {
+      "text": "Can the boundary be characterized dynamically across strengthening sequences of theories, rather than theory-by-theory? The conjecture says each stronger system resolves some old undecidable sentence only to generate a new one, suggesting an open systems-level question: is there a mathematically informative notion of an invariant 'gap' under iterated reflection, consistency extensions, or ordinal progressions of theories? Exploring this could reveal whether incompleteness is best understood as a static theorem about single systems or as a law governing the evolution of formal knowledge under self-improvement.",
+      "score": 0.9
+    }
+  ]
+}

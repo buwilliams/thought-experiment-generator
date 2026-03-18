@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+  "conjecture_id": "discovered-004",
+  "run": 6,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "What exact principle selects which parts of QFT vacuum structure are physically gravitating observables rather than renormalization artifacts, gauge-dependent bookkeeping, or framework-internal quantities? This is the central unresolved interface question: without a criterion of 'what should gravitate,' the conjecture risks redescribing the cosmological constant problem epistemically without yielding a testable replacement bridge between QFT and gravity.",
+      "score": 0.97
+    },
+    {
+      "text": "Can one construct a concrete error-correcting or selection architecture at the QFT–gravity boundary that reproduces known semiclassical successes while naturally suppressing large vacuum-energy contributions? The open tension is between the conjecture's explanatory appeal and the need for a precise mechanism that preserves EFT/GR predictive power rather than merely declaring the interface defective.",
+      "score": 0.94
+    },
+    {
+      "text": "If gravity is emergent or information-level, what historical assumptions inherited from treating the cosmological constant as a single ontological term are misleading current theory, and how can they be reformulated into discriminating empirical tests among a true constant, emergent gravity, and modified coupling to vacuum energy? The unresolved issue is whether the conjecture generates genuinely new problem structure or only a philosophical reinterpretation of existing options.",
+      "score": 0.88
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "extreme-cases",
+  "run": 3,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.6,
+  "total": 0.6990000000000001,
+  "candidate_problems": [
+    {
+      "text": "How can 'counterfactual reach' be made precise without collapsing into existing notions like prediction, compression, causal modeling, or invariance? The conjecture hinges on a structural criterion, but it leaves open what formally counts as 'systematic deformation,' 'remaining informative,' and 'generating structure' across variations.",
+      "score": 0.97
+    },
+    {
+      "text": "Are there important classes of explanations that do not survive the proposed boundary test, such as historical, singular, interpretive, mathematical, or non-causal explanations? If so, the conjecture may be too narrow; if not, it needs to show how these cases also derive their explanatory status from counterfactual reach.",
+      "score": 0.93
+    },
+    {
+      "text": "What prevents a sufficiently rich redescription from simulating counterfactual reach by encoding many nearby possibilities, and where exactly is the boundary between a generative model and an elaborate mirror? The conjecture asserts a difference in kind, but the transition from redescription to explanation may be continuous rather than sharp.",
+      "score": 0.95
+    }
+  ]
+}

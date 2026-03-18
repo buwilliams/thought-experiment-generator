@@ -1,0 +1,44 @@
+{
+  "id": "discovered-005",
+  "layer": "candidates",
+  "score": 0.9236,
+  "rank": 7,
+  "run_count": 2,
+  "problem_coverage": [
+    "what-is-the-relationship-between-genetic-information-and-the",
+    "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+    "why-does-quantum-measurement-produce-definite-outcomes-and",
+    "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+    "what-prevents-the-unification-of-general-relativity-and-quan",
+    "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p"
+  ],
+  "created_at": "2026-03-18T21:14:44.420039182+00:00",
+  "promoted_from": null,
+  "history": [
+    {
+      "run": 6,
+      "score": 0.909,
+      "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph"
+    },
+    {
+      "run": 6,
+      "score": 0.6719999999999999,
+      "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and"
+    },
+    {
+      "run": 6,
+      "score": 0.979,
+      "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so"
+    },
+    {
+      "run": 6,
+      "score": 0.909,
+      "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan"
+    },
+    {
+      "run": 6,
+      "score": 0.8419999999999999,
+      "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p"
+    }
+  ]
+}

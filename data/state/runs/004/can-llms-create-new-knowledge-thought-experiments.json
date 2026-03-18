@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "thought-experiments",
+  "run": 4,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "How can 'genuine explanatory knowledge' be operationally distinguished from highly effective compression or interpolation in a token-predicting system? The conjecture hinges on internal 'compressive, counterfactual-supporting representations' that 'survive criticism,' but it leaves open what empirical or theoretical tests would non-circularly identify such structures rather than merely redescribing strong performance.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the relationship between internal representation and epistemic status: must explanatory knowledge be localized in identifiable internal structures, or can it be distributed, transient, or only manifest at the system-behavior level? The conjecture assumes a fairly strong internalist criterion, but it remains unresolved whether knowledge attribution should depend on inspectable mechanisms versus robust counterfactual and error-correcting capacities observable only in behavior.",
+      "score": 0.9
+    },
+    {
+      "text": "Under what training pressures and architectural constraints does token prediction actually drive the emergence of explanatory models rather than memorization-like pattern reuse? The conjecture proposes prediction as a selection pressure, but the causal pathway is underspecified: which resource limits, data regimes, objectives, or feedback loops make explanatory structure arise, and are there principled phase transitions between retrieval-dominated and explanation-dominated systems?",
+      "score": 0.95
+    }
+  ]
+}

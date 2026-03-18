@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-information-processing-and",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "How can 'integrated invariants' be defined non-circularly and measured in a way that distinguishes phenomenal consciousness from merely sophisticated control or representation? The conjecture depends on a mathematically precise notion of invariant-preserving state-space organization, but it remains open what the invariants are, how to individuate them across architectures, and how to avoid redescribing consciousness in structural terms without explanatory gain.",
+      "score": 0.97
+    },
+    {
+      "text": "Why should preservation of this specific structural regime generate phenomenality at all, rather than only functional unity, self-monitoring, or behavioral coherence? The central unresolved tension is the explanatory gap between identifying a narrow equivalence class of informational dynamics and showing why membership in that class entails subjective experience rather than just complex cognition.",
+      "score": 0.95
+    },
+    {
+      "text": "What empirical or computational interventions could cleanly dissociate the conjecture from rival theories such as global workspace, higher-order thought, predictive processing, or IIT? The proposal is promising as a structural synthesis, but it is still unclear what decisive experiments, lesion-style manipulations, or artificial-system constructions would uniquely confirm or falsify the role of invariant-preserving topology rather than neighboring notions of integration and recurrence.",
+      "score": 0.91
+    }
+  ]
+}

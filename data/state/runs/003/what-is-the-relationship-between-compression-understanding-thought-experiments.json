@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-compression-understanding",
+  "conjecture_id": "thought-experiments",
+  "run": 3,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'counterfactual structure' be defined and measured non-circularly, so that understanding is distinguishable from mere predictive compression without presupposing an intervention framework already built from explanatory assumptions?",
+      "score": 0.95
+    },
+    {
+      "text": "What precise criteria separate genuinely generative compression from spurious or overfit compression, especially in domains where many compact models fit observations and some interventions but differ on unobserved variations?",
+      "score": 0.92
+    },
+    {
+      "text": "How does the requirement that explanation be communicable and criticizable relate to private or tacit model competence: can an agent count as understanding if it reliably supports interventions but cannot render its model into an explicit form usable for criticism and transfer?",
+      "score": 0.86
+    }
+  ]
+}

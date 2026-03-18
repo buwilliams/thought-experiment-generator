@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "extreme-cases",
+  "run": 6,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made precise by defining a rigorous measure of 'complexity' and a geometry on law/parameter space, then proving or disproving that high-complexity regions are generically concentrated near codimension-1 or higher critical surfaces rather than occupying broad volumes?",
+      "score": 0.96
+    },
+    {
+      "text": "Is the apparent boundary-layer fine-tuning robust under changes of parametrization and measure on the space of possible laws, or is 'nearness to criticality' partly an artifact of how constants are represented and which prior over universes is assumed?",
+      "score": 0.93
+    },
+    {
+      "text": "What dynamical mechanism, if any, would place universes near multiple instability thresholds simultaneously: is anthropic selection alone sufficient, or do cosmological, evolutionary, or deeper law-generating processes drive attractors toward metastable edge-of-structure regimes?",
+      "score": 0.91
+    }
+  ]
+}
