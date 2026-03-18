@@ -5,7 +5,7 @@ A self-improving epistemic engine. It collides perspective conjectures against p
 The core loop:
 
 ```
-conjecture + problem → candidate → criticism → conjecture
+problem + conjecture → candidate → criticism → conjecture
 ```
 
 Inspired by David Deutsch's epistemology — knowledge grows through conjecture and criticism, not random search. The system narrows the search space by compounding success: only candidates that survive criticism become conjectures, and only conjectures that generate high-scoring candidates survive long enough to be promoted.
