@@ -2,35 +2,36 @@
 
 | Rank | Problem | Conjecture | Consistency | Hard to Vary | Total |
 |------|---------|------------|-------------|--------------|-------|
-| 1 | does-architecture-matter-more-than-model-scale | historical-genesis | 0.95 | 0.90 | 0.92 |
-| 2 | what-makes-an-explanation-hard-to-vary | counterfactual-reasoning | 0.95 | 0.90 | 0.92 |
-| 3 | does-architecture-matter-more-than-model-scale | thought-experiments | 0.93 | 0.90 | 0.91 |
-| 4 | can-llms-create-new-knowledge | thought-experiments | 0.93 | 0.90 | 0.91 |
-| 5 | can-llms-create-new-knowledge | counterfactual-reasoning | 0.95 | 0.80 | 0.84 |
-| 6 | does-architecture-matter-more-than-model-scale | mathematical-formalism | 0.94 | 0.80 | 0.84 |
-| 7 | what-makes-an-explanation-hard-to-vary | historical-genesis | 0.90 | 0.80 | 0.83 |
-| 8 | can-llms-create-new-knowledge | historical-genesis | 0.95 | 0.60 | 0.70 |
-| 9 | what-makes-an-explanation-hard-to-vary | extreme-cases | 0.93 | 0.50 | 0.63 |
-| 10 | what-makes-an-explanation-hard-to-vary | thought-experiments | 0.93 | 0.20 | 0.42 |
+| [1](what-makes-an-explanation-hard-to-vary-thought-experiments.md) | what-makes-an-explanation-hard-to-vary | [thought-experiments](../../candidates/thought-experiments.md) | 0.95 | 1.00 | 0.98 |
+| [2](does-architecture-matter-more-than-model-scale-thought-experiments.md) | does-architecture-matter-more-than-model-scale | [thought-experiments](../../candidates/thought-experiments.md) | 0.94 | 1.00 | 0.98 |
+| [3](can-llms-create-new-knowledge-mathematical-formalism.md) | can-llms-create-new-knowledge | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.93 | 1.00 | 0.98 |
+| [4](what-makes-an-explanation-hard-to-vary-historical-genesis.md) | what-makes-an-explanation-hard-to-vary | [historical-genesis](../../candidates/historical-genesis.md) | 0.90 | 1.00 | 0.97 |
+| [5](can-llms-create-new-knowledge-historical-genesis.md) | can-llms-create-new-knowledge | [historical-genesis](../../candidates/historical-genesis.md) | 0.95 | 0.90 | 0.92 |
+| [6](does-architecture-matter-more-than-model-scale-mathematical-formalism.md) | does-architecture-matter-more-than-model-scale | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.94 | 0.90 | 0.91 |
+| [7](does-architecture-matter-more-than-model-scale-extreme-cases.md) | does-architecture-matter-more-than-model-scale | [extreme-cases](../../candidates/extreme-cases.md) | 0.94 | 0.90 | 0.91 |
+| [8](what-makes-an-explanation-hard-to-vary-mathematical-formalism.md) | what-makes-an-explanation-hard-to-vary | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.94 | 0.70 | 0.77 |
+| [9](can-llms-create-new-knowledge-counterfactual-reasoning.md) | can-llms-create-new-knowledge | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.94 | 0.70 | 0.77 |
+| [10](does-architecture-matter-more-than-model-scale-counterfactual-reasoning.md) | does-architecture-matter-more-than-model-scale | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.94 | 0.60 | 0.70 |
+| [11](can-llms-create-new-knowledge-extreme-cases.md) | can-llms-create-new-knowledge | [extreme-cases](../../candidates/extreme-cases.md) | 0.93 | 0.50 | 0.63 |
+| [12](what-makes-an-explanation-hard-to-vary-extreme-cases.md) | what-makes-an-explanation-hard-to-vary | [extreme-cases](../../candidates/extreme-cases.md) | 0.93 | 0.20 | 0.42 |
 
 ## Top 5
 
-**1. does-architecture-matter-more-than-model-scale × historical-genesis** (total: 0.92)  
-AI progress is increasingly limited by inquiry structures, not compute: prediction-optimized models boost fluency, but lack institutions for conjecture, criticism, error-correction.
+**1. what-makes-an-explanation-hard-to-vary × [thought-experiments](../../candidates/thought-experiments.md)** ([output](what-makes-an-explanation-hard-to-vary-thought-experiments.md)) (total: 0.98)  
+Strong explanations have mutually constraining, non-substitutable parts; altering one forces reorganization, revealing internal necessity rather than mere detailed, persuasive ornament.
 
-**2. what-makes-an-explanation-hard-to-vary × counterfactual-reasoning** (total: 0.92)  
-Explanations differ by counterfactual tightness: load-bearing parts are mutually constraining, alteration changes consequences, excludes alternatives, and reveals true structure.
+**2. does-architecture-matter-more-than-model-scale × [thought-experiments](../../candidates/thought-experiments.md)** ([output](does-architecture-matter-more-than-model-scale-thought-experiments.md)) (total: 0.98)  
+Epistemic progress depends more on structures for criticism, selection, and error retention than compute; scaling alone mostly increases unrefined conjecture throughput.
 
-**3. does-architecture-matter-more-than-model-scale × thought-experiments** (total: 0.91)  
-Beyond sufficient capacity, AI knowledge advances mainly through structures for conjecture, criticism, retention, and selection; compute mostly amplifies existing epistemic dynamics.
+**3. can-llms-create-new-knowledge × [mathematical-formalism](../../candidates/mathematical-formalism.md)** ([output](can-llms-create-new-knowledge-mathematical-formalism.md)) (total: 0.98)  
+Knowledge arises when token predictors learn invariant, counterfactual-supporting internal structures enabling robust transformed generalization; otherwise outputs merely recombine surface correlations.
 
-**4. can-llms-create-new-knowledge × thought-experiments** (total: 0.91)  
-Token prediction generates knowledge only when embedded in error-correcting criticism producing robust explanations; otherwise it merely rearranges prior patterns.
+**4. what-makes-an-explanation-hard-to-vary × [historical-genesis](../../candidates/historical-genesis.md)** ([output](what-makes-an-explanation-hard-to-vary-historical-genesis.md)) (total: 0.97)  
+Explanatory parts are truly load-bearing when historically introduced to solve failures; freely swappable details signal underconstraint, scaffolding, or untested residue.
 
-**5. can-llms-create-new-knowledge × counterfactual-reasoning** (total: 0.84)  
-Token predictors generate useful novel conjectures, but genuine knowledge arises only when outputs undergo criticism, error-correction, retention, and iterative refinement.
+**5. can-llms-create-new-knowledge × [historical-genesis](../../candidates/historical-genesis.md)** ([output](can-llms-create-new-knowledge-historical-genesis.md)) (total: 0.92)  
+Token prediction can contribute to knowledge when embedded in criticism, testing, and revision, making rearrangements explanatory, robust, and productive.
 
 ## Changes
 
-- Promoted generated output → candidates: "Evaluate explanations by testing their counterfactual tightness: remove, invert, or swap each part and see whether the explanation’s predictions, constraints, or exclusions change. This lens helps distinguish load-bearing structure from decorative detail by revealing which elements are genuinely coupled to the mechanism."
-- Removed 1 problem(s) from set (deduplication/cap enforcement).
+- Promoted generated output → candidates: "Evaluate explanations by testing whether each detail is load-bearing: if changing one part forces compensating changes elsewhere or alters what the explanation can account for, that part carries real explanatory constraint. This lens distinguishes tightly integrated explanations from narrative shells padded with interchangeable detail."

@@ -3,20 +3,20 @@
   "conjecture_id": "extreme-cases",
   "run": 1,
   "logical_consistency": 0.93,
-  "hard_to_vary": 0.5,
-  "total": 0.629,
+  "hard_to_vary": 0.2,
+  "total": 0.41900000000000004,
   "candidate_problems": [
     {
-      "text": "How can 'load-bearing' be defined non-circularly and operationalized across domains? The conjecture relies on perturbation, compression, and substitution tests, but it leaves open what counts as preserving 'the same explanatory power' and how to distinguish genuine structural necessity from artifacts of representation, language, or chosen derivation tasks.",
-      "score": 0.96
+      "text": "How can 'load-bearing' be made into a non-circular, operational criterion that distinguishes genuine explanatory necessity from artifacts of representation, decomposition, or coding choice? The conjecture relies on deletion/substitution/compression tests, but these outcomes may vary with how the explanation is partitioned, formalized, or described. A key open problem is to define invariants of load-bearingness across equivalent representations.",
+      "score": 0.95
     },
     {
-      "text": "What is the right tradeoff between fragility and robustness in a good explanation? The conjecture says explanations should be fragile at relevant points and robust to irrelevant variation, but it does not specify how relevance is identified without already knowing the true structure. This raises the open problem of whether load-bearingness can be discovered objectively or only relative to background knowledge, interests, and intervention sets.",
-      "score": 0.92
+      "text": "How can we distinguish brittleness caused by real mechanism-specific constraints from brittleness caused by overfitting, narrow domain selection, or omitted higher-level invariants? The conjecture notes this risk but does not provide a principled test for when failure under perturbation indicates explanatory depth versus parochialism.",
+      "score": 0.93
     },
     {
-      "text": "Does minimality actually track truth or explanatory depth, or can highly compressed, tightly coupled explanations be wrong, overfit, or merely elegant? The conjecture suggests that approaching a minimal generative structure is epistemically superior, but an unresolved tension is whether low slack is a reliable indicator of reality rather than just a property of a model class, coding scheme, or narrative style.",
-      "score": 0.94
+      "text": "What is the precise relationship between compression, minimal description, and explanatory adequacy? The conjecture suggests that compression-resistance marks essential constraint-sets, but minimal description length and explanatory power can come apart: highly compressed accounts may lose causal or generative content, while longer accounts may encode necessary mechanistic structure. Clarifying this tradeoff is an important open problem.",
+      "score": 0.9
     }
   ]
 }

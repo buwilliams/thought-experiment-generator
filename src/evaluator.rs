@@ -3,7 +3,7 @@ use tracing::info;
 
 use crate::config::Config;
 use crate::llm::LlmClient;
-use crate::prompts;
+use crate::prompts::PromptTemplates;
 use crate::types::{
     AnswersResponse, CandidatesResponse, ConsistencyResponse, Generated, GeneratedMeta, Question,
     QuestionsResponse,
@@ -12,6 +12,7 @@ use crate::types::{
 pub async fn evaluate(
     client: &LlmClient,
     config: &Config,
+    templates: &PromptTemplates,
     mind_system: &str,
     generated_text: &str,
     problem_summary: &str,
@@ -20,7 +21,7 @@ pub async fn evaluate(
     run: u32,
 ) -> Result<Generated> {
     // Pass 1: Logical consistency
-    let p = prompts::logical_consistency_check(mind_system, generated_text);
+    let p = templates.logical_consistency_check(mind_system, generated_text);
     let consistency: ConsistencyResponse = client.call(Some(&p.system), &p.user, 0.2).await?;
 
     if consistency.score < config.consistency_threshold {
@@ -44,11 +45,11 @@ pub async fn evaluate(
     }
 
     // Pass 2a: Generate hard-to-vary questions
-    let p = prompts::generate_questions(mind_system, generated_text, problem_summary);
+    let p = templates.generate_questions(mind_system, generated_text, problem_summary);
     let questions_resp: QuestionsResponse = client.call(Some(&p.system), &p.user, 0.3).await?;
 
     // Pass 2b: Answer questions
-    let p = prompts::answer_questions(mind_system, generated_text, &questions_resp.questions);
+    let p = templates.answer_questions(mind_system, generated_text, &questions_resp.questions);
     let answers_resp: AnswersResponse = client.call(Some(&p.system), &p.user, 0.2).await?;
 
     let questions: Vec<Question> = answers_resp
@@ -67,7 +68,7 @@ pub async fn evaluate(
     let total = 0.3 * consistency.score + 0.7 * hard_to_vary;
 
     // Extract candidate problems
-    let p = prompts::extract_candidate_problems(mind_system, generated_text);
+    let p = templates.extract_candidate_problems(mind_system, generated_text);
     let candidates_resp: CandidatesResponse = client.call(Some(&p.system), &p.user, 0.3).await?;
 
     let candidate_problems = candidates_resp

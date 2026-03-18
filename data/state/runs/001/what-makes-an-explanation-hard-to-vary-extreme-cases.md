@@ -3,38 +3,61 @@
 ## Conjecture
 
 **Conjecture:**  
-An explanation whose parts are all **load-bearing** is one that approaches a **minimal, tightly constrained generative structure**: as you push it toward the limit of substitution, compression, or perturbation, any change to a part produces a noticeable failure in what the explanation can derive, predict, unify, or rule out. By contrast, an explanation with freely swappable details contains **slack**: its apparent content exceeds its structural necessity, so many local variations leave its outputs unchanged.
+An explanation whose parts are all **load-bearing** is one that approaches a **minimal, tightly constrained generative structure**: as you push it toward the limit of deletion, substitution, compression, or perturbation, it rapidly fails. By contrast, an explanation with freely swappable details contains **degrees of freedom** that do not participate in generating the phenomenon; at the limit, many different local realizations preserve the same behavior because the real explanatory work is being done at a higher level of structure.
 
-Pushed to the boundary, the difference becomes sharp.
+### Boundary test
+Push the explanation to extremes:
 
-Take the limit of **maximum substitution**: replace one detail at a time with alternatives. If the explanation survives repeated swaps with no loss of explanatory power, those details were not doing real work. They are decorative, indexical, or merely narrative aids. The structure that remains invariant under wide substitution is the actual explanation. Everything else is packaging.
+- **Remove one part.** If the account breaks, that part was structurally necessary.
+- **Swap one detail for another.** If nothing important changes, that detail was not load-bearing at the level claimed.
+- **Compress the explanation as far as possible.** If further compression destroys predictive or reconstructive power, what remains marks the actual constraint-set.
+- **Generalize to many implementations.** If the explanation survives many substitutions, it is really about invariants, not particulars.
 
-Now push toward **minimum description**: compress the account as far as possible while preserving what it explains. In a load-bearing explanation, compression quickly hits resistance. Remove a part, and some consequence can no longer be generated. The account has little redundancy because its elements are linked by necessity: each part constrains the others. In a slack explanation, compression succeeds easily. Many details can be deleted or abstracted away because they were never structurally connected to the outcome.
+At the boundary, the distinction becomes clear:  
+A fully load-bearing explanation is one with **low slack** and **high coupling** among parts. Each element constrains the others, and the whole has little tolerance for arbitrary variation. A freely swappable explanation has **redundancy, modularity, or abstraction**: its tokens can vary because its truth depends on relational form, not on those specific details.
 
-At the opposite extreme, push toward **maximal scope**. A load-bearing explanation tends to generalize by preserving a small set of constraints across many cases. Its parts are indispensable precisely because they encode relations that survive changing circumstances. A swap-friendly explanation often generalizes badly: because its details are loosely attached, it can be retold in many forms, but this plasticity is not strength — it is evidence that the account is underconstrained.
+### Structural properties
+So the distinguishing properties are:
 
-Systems language clarifies this. A load-bearing explanation is one where the parts participate in a network of **strong dependency and feedback**: alter one node and the system’s behavior changes. A non-load-bearing explanation has weak couplings; many components are not part of the causal or logical core. They can vary because they are not inside the main feedback loops.
+1. **Counterfactual sensitivity**  
+   In load-bearing explanations, nearby counterfactual changes produce failure. In swappable explanations, many counterfactual variants preserve adequacy.
 
-So the distinguishing structural property is **counterfactual sensitivity under perturbation**. Ask: if this element were different, what breaks? In a fully load-bearing explanation, each part marks a necessary difference-maker within the generative structure. In a swappable explanation, many parts are independent of the core mechanism and therefore inert under replacement.
+2. **Constraint density**  
+   Load-bearing accounts have many mutual dependencies per part. Swappable accounts have fewer effective constraints at the level of the interchangeable details.
 
-**What follows:**  
-The test of explanatory depth is not vividness or completeness but **fragility at the right places**. A good explanation should be robust to irrelevant variation and fragile to relevant variation. Where everything is swappable, little is being explained. Where every surviving part bites, we are closer to the real structure.
+3. **Level-specific invariance**  
+   If details are swappable, the explanation is operating at a level where those details are not fundamental. The real structure lies in a pattern, mechanism class, or functional relation.
+
+4. **Compression-resistance**  
+   A load-bearing explanation is near minimal description relative to its target: remove anything and you lose explanatory reach. A swappable explanation can be compressed by replacing particulars with a rule that captures the invariant.
+
+### What follows
+This suggests a practical rule:  
+**If details can be swapped freely, they are not part of the explanation’s essence; they are implementation. If no detail can be changed without collapse, the explanation is identifying a specific mechanism rather than merely a pattern.**
+
+But pushing to the limit reveals one more thing: an explanation can seem fully load-bearing only because it is **overfit to a narrow domain**. At the extreme, brittleness may indicate not depth but parochialism. The best explanations often have a mixed structure: **load-bearing invariants at the core, swappable realizations at the periphery**.
+
+So the real divide is not between “every part matters” and “details do not matter,” but between:
+- **parts that encode necessary constraints**, and
+- **parts that merely instantiate those constraints**.
+
+The boundary reveals the hidden architecture: explanation lives in what cannot be varied without loss.
 
 ## Questions
 
-1. If the phrase "take the limit of maximum substitution" were replaced with a finite practical threshold of substitutions, would the conjecture still sharply distinguish load-bearing explanations from merely well-packaged ones? — **no**
-2. If "noticeable failure" were weakened to include only loss of prediction while ignoring loss of unification or ruling-out power, would the conjecture still identify the same explanations as fully load-bearing? — **no**
-3. If an explanation retained all its outputs after many local substitutions only because multiple parts redundantly encoded the same constraint, would the conjecture wrongly classify it as slack? — **yes**
-4. If the minimum-description test were replaced by ordinary brevity or elegance rather than preserving all explanatory consequences, would the conjecture still work? — **no**
-5. If a highly abstract explanation generalized across many cases without exhibiting strong internal feedback among its parts, would that be a counterexample to the conjecture's systems-language characterization? — **yes**
-6. If some parts are indispensable only jointly rather than one-by-one under perturbation, does the conjecture's focus on changing "a part" at a time fail to detect their load-bearing role? — **yes**
-7. If decorative narrative details help users identify which variations are relevant even though they are not in the core mechanism, would the conjecture incorrectly treat them as mere packaging? — **no**
-8. If two different minimal generative structures explain the same phenomena equally well, does the conjecture still have a non-arbitrary way to say which parts are truly load-bearing? — **no**
-9. If an explanation is robust to many substitutions because it captures a deeper invariant structure, would the conjecture mistake that robustness for evidence of slack? — **yes**
-10. If counterfactual sensitivity under perturbation depends on which background assumptions are held fixed, does the conjecture need those assumptions specified to avoid making load-bearingness observer-relative? — **yes**
+1. If removing the claim that a load-bearing explanation is a minimal generative structure leaves the conjecture intact, does the conjecture still distinguish load-bearing parts from mere implementation details? — **yes**
+2. If rapid failure under deletion, substitution, compression, or perturbation is replaced with gradual degradation, does the conjecture still identify the same boundary between load-bearing and swappable explanations? — **no**
+3. If the boundary test omits compression entirely, can the conjecture still support its claim that compression-resistance is a distinguishing structural property? — **no**
+4. If high coupling among parts is replaced by independent necessity of each part, does the conjecture still explain why nearby counterfactual changes cause collapse? — **no**
+5. If freely swappable details are said to participate in generation but only redundantly, does the conjecture’s contrast between swappability and nonparticipation survive? — **no**
+6. If many local realizations preserve behavior even when no higher-level invariant is identified, does the conjecture still explain swappability rather than merely redescribing it? — **no**
+7. If level-specific invariance is removed, can the conjecture still justify the inference that swappable details are implementation rather than essence? — **no**
+8. If brittleness at the limit is interpreted only as evidence of depth and not possible overfitting to a narrow domain, does the conjecture remain adequate? — **no**
+9. If the conjecture’s final mixed-structure claim about load-bearing cores and swappable peripheries is false, does the earlier hard divide between fully load-bearing and freely swappable explanations still hold? — **yes**
+10. If constraint density is low but every remaining part is still indispensable, does the conjecture still have the resources to classify the explanation as fully load-bearing? — **no**
 
 ## Candidate Problems
 
-- How can 'load-bearing' be defined non-circularly and operationalized across domains? The conjecture relies on perturbation, compression, and substitution tests, but it leaves open what counts as preserving 'the same explanatory power' and how to distinguish genuine structural necessity from artifacts of representation, language, or chosen derivation tasks. (score: 0.96)
-- What is the right tradeoff between fragility and robustness in a good explanation? The conjecture says explanations should be fragile at relevant points and robust to irrelevant variation, but it does not specify how relevance is identified without already knowing the true structure. This raises the open problem of whether load-bearingness can be discovered objectively or only relative to background knowledge, interests, and intervention sets. (score: 0.92)
-- Does minimality actually track truth or explanatory depth, or can highly compressed, tightly coupled explanations be wrong, overfit, or merely elegant? The conjecture suggests that approaching a minimal generative structure is epistemically superior, but an unresolved tension is whether low slack is a reliable indicator of reality rather than just a property of a model class, coding scheme, or narrative style. (score: 0.94)
+- How can 'load-bearing' be made into a non-circular, operational criterion that distinguishes genuine explanatory necessity from artifacts of representation, decomposition, or coding choice? The conjecture relies on deletion/substitution/compression tests, but these outcomes may vary with how the explanation is partitioned, formalized, or described. A key open problem is to define invariants of load-bearingness across equivalent representations. (score: 0.95)
+- How can we distinguish brittleness caused by real mechanism-specific constraints from brittleness caused by overfitting, narrow domain selection, or omitted higher-level invariants? The conjecture notes this risk but does not provide a principled test for when failure under perturbation indicates explanatory depth versus parochialism. (score: 0.93)
+- What is the precise relationship between compression, minimal description, and explanatory adequacy? The conjecture suggests that compression-resistance marks essential constraint-sets, but minimal description length and explanatory power can come apart: highly compressed accounts may lose causal or generative content, while longer accounts may encode necessary mechanistic structure. Clarifying this tradeoff is an important open problem. (score: 0.90)

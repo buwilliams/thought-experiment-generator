@@ -7,7 +7,7 @@ use crate::config::Config;
 use crate::evaluator;
 use crate::llm::LlmClient;
 use crate::promoter;
-use crate::prompts;
+use crate::prompts::PromptTemplates;
 use crate::state;
 use crate::types::{
     Conjecture, ConjectureMeta, DeduplicateResponse, Generated, Layer, Problem, ProblemMeta,
@@ -20,6 +20,7 @@ pub async fn run(
     problemset_id: Option<&str>,
     new_problem: Option<&str>,
 ) -> Result<()> {
+    let templates = Arc::new(PromptTemplates::load()?);
     state::ensure_initialized()?;
 
     let mut problemset = state::resolve_problemset(problemset_id)?;
@@ -52,7 +53,7 @@ pub async fn run(
     println!("Problems:              {}", problemset.meta.problems.len());
     println!("Pairs to process:      {}\n", problemset.meta.problems.len() * candidates.len());
 
-    let mind_system = prompts::format_mind_system(&mind);
+    let mind_system = templates.format_mind_system(&mind);
 
     // Phase 1 + 2: Generate and evaluate all (problem, candidate conjecture) pairs concurrently
     let mut handles = vec![];
@@ -63,6 +64,7 @@ pub async fn run(
                 continue;
             }
             let client = Arc::clone(&client);
+            let templates = Arc::clone(&templates);
             let config = config.clone();
             let mind_system = mind_system.clone();
             let conjecture_summary = candidate.summary.clone();
@@ -71,13 +73,13 @@ pub async fn run(
             let conjecture_id = candidate.meta.id.clone();
 
             handles.push(tokio::spawn(async move {
-                let p = prompts::generate_output(&mind_system, &conjecture_summary, &problem_summary);
+                let p = templates.generate_output(&mind_system, &conjecture_summary, &problem_summary);
                 let text = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
 
                 info!("Generated: {}-{}", problem_id, conjecture_id);
 
                 let output = evaluator::evaluate(
-                    &client, &config, &mind_system,
+                    &client, &config, &templates, &mind_system,
                     &text, &problem_summary,
                     &problem_id, &conjecture_id, run,
                 ).await?;
@@ -111,7 +113,7 @@ pub async fn run(
     admit_candidates_to_set(&generated, &mut problemset, config.problem_admission_threshold)?;
 
     // Problem review: deduplicate within the set
-    let removed_ids = run_problem_deduplication(&client, &mind_system, &problemset.meta.problems).await;
+    let removed_ids = run_problem_deduplication(&client, &templates, &mind_system, &problemset.meta.problems).await;
     problemset.meta.problems.retain(|p| !removed_ids.contains(&p.meta.id));
     info!("Deduplication removed {} problems from set", removed_ids.len());
 
@@ -143,7 +145,7 @@ pub async fn run(
 
     // Promote top generated output → candidates layer
     let promoted_generated_summary =
-        promote_top_generated(&client, config, &mind_system, &generated, run).await;
+        promote_top_generated(&client, &templates, &mind_system, &generated, run).await;
 
     // Promote top candidate conjecture → mind
     let (promoted_candidate_name, promoted_candidate_id) =
@@ -158,7 +160,7 @@ pub async fn run(
 
     // Phase 4: Report
     generate_report(
-        &client, run, &generated,
+        &client, &templates, run, &generated,
         promoted_generated_summary.as_deref(),
         promoted_candidate_name.as_deref(),
         demoted_mind_name.as_deref(),
@@ -268,6 +270,7 @@ fn admit_candidates_to_set(
 
 async fn run_problem_deduplication(
     client: &LlmClient,
+    templates: &PromptTemplates,
     mind_system: &str,
     problems: &[Problem],
 ) -> Vec<String> {
@@ -278,7 +281,7 @@ async fn run_problem_deduplication(
         .iter()
         .map(|p| (p.meta.id.clone(), p.summary.clone()))
         .collect();
-    let p = prompts::deduplicate_problems(mind_system, &summaries);
+    let p = templates.deduplicate_problems(mind_system, &summaries);
     match client
         .call::<DeduplicateResponse>(Some(&p.system), &p.user, 0.3)
         .await
@@ -299,13 +302,13 @@ async fn run_problem_deduplication(
 
 async fn promote_top_generated(
     client: &LlmClient,
-    _config: &Config,
+    templates: &PromptTemplates,
     mind_system: &str,
     generated: &[Generated],
     run: u32,
 ) -> Option<String> {
     let top = promoter::find_top_generated(generated)?;
-    let p = prompts::promote_generated(mind_system, &top.text, top.meta.total);
+    let p = templates.promote_generated(mind_system, &top.text, top.meta.total);
     match client
         .call::<PromoteResponse>(Some(&p.system), &p.user, 0.3)
         .await
@@ -402,6 +405,7 @@ fn discard_bottom_candidate(
 
 async fn generate_report(
     client: &LlmClient,
+    templates: &PromptTemplates,
     run: u32,
     generated: &[Generated],
     promoted_generated: Option<&str>,
@@ -435,7 +439,7 @@ async fn generate_report(
 
     out.push_str("\n## Top 5\n\n");
     for (rank, g) in sorted.iter().take(5).enumerate() {
-        let p = prompts::summarize_generated(&g.text, g.meta.total);
+        let p = templates.summarize_generated(&g.text, g.meta.total);
         let summary = client
             .call_raw(Some(&p.system), &p.user, 0.3)
             .await

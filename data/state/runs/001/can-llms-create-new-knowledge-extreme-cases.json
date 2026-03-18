@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "extreme-cases",
+  "run": 1,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.5,
+  "total": 0.629,
+  "candidate_problems": [
+    {
+      "text": "How can 'compressive, error-correcting, and counterfactually stable explanation' be defined operationally so that it distinguishes genuine knowledge from sophisticated interpolation without collapsing into benchmark gaming or circularity? The core unresolved tension is whether the conjecture's criterion can be made non-question-begging: explanations are said to be knowledge if they survive criticism, but what counts as survival, compression, or error-correction at the extremes of novelty and recursion remains underdefined.",
+      "score": 0.97
+    },
+    {
+      "text": "What mechanism actually produces explanatory reach in a token-predicting system: is it achievable from prediction alone at sufficient scale, or does it require additional structures such as active experimentation, memory, embodiment, social criticism, or explicit error-correcting loops? This is the main architectural tension in the conjecture, because it claims prediction can be sufficient in practice while also implying that participation in a larger critical tradition is what matters.",
+      "score": 0.94
+    },
+    {
+      "text": "Can there exist a sharp boundary between 'rearrangement' and 'knowledge generation' under extreme distribution shift, or is the transition inherently gradual and observer-relative? The conjecture treats boundary cases as revelatory, but an open question is whether there is any principled phase change in capability, or only increasing degrees of robustness across novelty, self-critique, and counterfactual stress.",
+      "score": 0.88
+    }
+  ]
+}

@@ -2,21 +2,21 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "thought-experiments",
   "run": 1,
-  "logical_consistency": 0.93,
-  "hard_to_vary": 0.9,
-  "total": 0.909,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
   "candidate_problems": [
     {
-      "text": "How can 'epistemic structure' be operationalized and measured independently of substrate so the conjecture becomes testable? The core unresolved tension is whether higher-order structure is a distinct causal variable or just a redescription of capabilities that larger models already partially acquire. A new problem is to define intervention-level metrics for conjecture generation, criticism quality, minority-hypothesis retention, and error-preservation, then test whether changing these while holding substrate roughly fixed produces greater durable knowledge gains than scaling compute alone.",
+      "text": "Where is the actual threshold at which substrate ceases to be the dominant bottleneck and epistemic structure becomes the limiting factor? The conjecture assumes a competence threshold beyond which more scale mostly increases proposal throughput, but it leaves unresolved whether such a threshold exists, how to detect it, and whether scaling itself changes criticism quality enough to move the threshold. This is central because if substrate improvements also improve evaluation, world-modeling, and self-critique, then the structure-vs-substrate distinction may be less clean than claimed.",
+      "score": 0.95
+    },
+    {
+      "text": "What concrete institutional or algorithmic structures genuinely improve error-correction rather than merely adding bureaucracy or new proxies? The conjecture proposes rival conjectures, adversarial criticism, explicit problem statements, and error histories, but it remains open which of these mechanisms actually produce more truth-conducive selection in practice, how they interact, and how they avoid Goodharting into performative criticism or benchmark-like meta-metrics. This is a key open problem because the thesis stands or falls on whether 'epistemic structure' can be operationalized without recreating the same anti-epistemic dynamics at a higher level.",
       "score": 0.97
     },
     {
-      "text": "What is the threshold at which substrate stops being the dominant bottleneck and structure becomes the main one, and does such a threshold exist in any robust sense? The conjecture depends on a phase change from representation-limited to selection-limited cognition, but leaves open how to identify that boundary across domains. A worthwhile problem is to characterize the interaction regime between compute, representational expressivity, search depth, and criticism architecture, including cases where more substrate may itself enable qualitatively new epistemic structure.",
+      "text": "How should epistemic progress be measured in open-ended AI research so that one can distinguish genuine knowledge creation from increased output, local usefulness, or benchmark gaming? The conjecture criticizes existing proxies as non-truth-tracking, but it does not specify a replacement criterion for comparing World S and World T. Without a workable measure of cumulative error-correction, explanatory depth, or cross-context survival of conjectures, the claim risks being unfalsifiable. Turning this into a rigorous evaluative framework is an important unresolved tension.",
       "score": 0.93
-    },
-    {
-      "text": "What selection and retention mechanisms actually improve truth-tracking rather than merely preserving diversity, contrarianism, or sophisticated error? The conjecture assumes that adversarial criticism, minority-hypothesis preservation, and explanatory promotion rules will outperform short-term predictive selection, but this raises an unresolved systems question about feedback loops: under what governance rules do these mechanisms yield cumulative knowledge instead of noise, fragmentation, or institutionalized bad ideas? This is a concrete design problem for epistemic institutions inside AI systems.",
-      "score": 0.95
     }
   ]
 }

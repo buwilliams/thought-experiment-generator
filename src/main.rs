@@ -7,6 +7,7 @@ use tracing_subscriber::EnvFilter;
 
 use teg::config::Config;
 use teg::llm::LlmClient;
+use teg::prompts::PromptTemplates;
 use teg::types::{
     Conjecture, ConjectureMeta, Layer, ProblemMeta, ProblemSet, ProblemSetMeta, ProblemSource,
     SummaryResponse, PROBLEMSET_MAX_SIZE,
@@ -283,10 +284,11 @@ async fn main() -> Result<()> {
             }
 
             teg::state::ensure_initialized()?;
+            let templates = PromptTemplates::load()?;
             let mind = teg::state::load_conjectures(&Layer::Mind)?;
-            let mind_system = teg::prompts::format_mind_system(&mind);
+            let mind_system = templates.format_mind_system(&mind);
 
-            let p = teg::prompts::conjecture_summary(&mind_system, &title, &full_text);
+            let p = templates.conjecture_summary(&mind_system, &title, &full_text);
             let resp: SummaryResponse =
                 client.call(Some(&p.system), &p.user, 0.3).await?;
 

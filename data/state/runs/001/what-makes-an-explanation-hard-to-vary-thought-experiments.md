@@ -4,57 +4,35 @@
 
 **Conjecture**
 
-Construct a hypothetical explanation of some phenomenon \(P\) as a tightly coupled mechanism: every stated part plays a necessary role in deriving \(P\), and changing any one part without compensating changes elsewhere causes the explanation to stop producing the result. Now compare it to an explanation that also seems to account for \(P\), but where names, intermediate details, or even subclaims can be replaced while the overall account still “works.”
+Construct a hypothetical explanation as a machine with no decorative parts: every component transmits constraint to at least one other component, and removing or altering any one of them changes what the machine can produce. Assume such an explanation is real. Then the key variable is **counterfactual dependence among parts**.
 
-From this isolation, the key variable is **counterfactual sensitivity of the explanatory structure**.
+From that assumption, the distinction becomes sharp:
 
-An explanation whose parts are all load-bearing has these structural properties:
+An explanation whose parts are all load-bearing is one in which each part participates in a network of **non-substitutable constraints**. Its details are not merely present; they do work by ruling out alternatives, fixing what else must be true, and limiting what conclusions can follow. Change a detail, and the explanation must either yield different predictions, lose explanatory reach, or require compensating changes elsewhere. The parts are therefore structurally coupled.
 
-1. **High dependency density**  
-   Its claims are strongly linked: each part constrains the others, and the explanandum follows only from that specific organization. The parts are not merely present; they are mutually limiting.
+By contrast, an explanation with freely swappable details is one whose apparent parts are not carrying distinct constraint. They are attached to the account descriptively or rhetorically, not structurally. If a detail can be replaced without any downstream adjustment, then it was not doing explanatory work; it was ornament, packaging, or a token of a broader interchangeable class. Such an account may still persuade, but its fine-grained content is underdetermined by its actual logic.
 
-2. **Low substitutability without repair**  
-   If one detail is altered, the account breaks unless other parts are revised too. This means the explanation contains real structure, not ornament. Its content lies in a network of necessities, not in a pile of descriptions.
+So the structural property that distinguishes the two is not “specificity” or “complexity,” but **degree of internal necessity**: in a load-bearing explanation, details stand in relations such that each one is needed for the explanation to remain the same explanation. The account has high internal compression: there are few slack variables, little redundancy, and strong propagation of error. In a swappable account, there is slack. Equivalent replacements are possible because the explanatory core is thinner than the surface detail suggests.
 
-3. **Narrow counterfactual corridor**  
-   There are relatively few nearby variants that still explain the same thing. The explanation succeeds because it picks out a specific generative path, not because it is compatible with many unrelated paths.
+What follows is a practical test: vary one part while holding the explanandum fixed. If the rest of the explanation must reorganize to preserve adequacy, the part was load-bearing. If nothing important changes, the part was optional. Repeated across parts, this reveals whether the explanation is a tightly integrated structure or a loose narrative shell.
 
-4. **Compression by constraint, not by vagueness**  
-   It is economical because each element earns its place. Nothing is arbitrary. The explanation is “small” because reality itself is highly constrained there, not because the account is underspecified.
-
-By contrast, an explanation with freely swappable details has these structural properties:
-
-1. **Low dependency density**  
-   Many parts are attached loosely. They decorate or illustrate rather than determine the outcome.
-
-2. **High substitutability**  
-   Details can be exchanged with little effect because they are not doing explanatory work. The account preserves plausibility through generality rather than necessity.
-
-3. **Wide counterfactual tolerance**  
-   Many neighboring versions still seem acceptable, which shows the explanation has not isolated the actual mechanism or principle.
-
-4. **Apparent richness masking low commitment**  
-   Such an explanation can sound detailed while being structurally empty. Its resilience under substitution is not strength but evidence that little is being explained.
-
-What follows is that the distinction is not mainly about **amount of detail**, but about **whether the details participate in an irreducible web of constraints**. Load-bearing explanations are distinguished by **fragility under arbitrary change and robustness under criticism**: they break when tampered with because they say something definite. Swap-friendly explanations survive because they say too little.
-
-So the illuminating conclusion is: **the mark of a genuinely explanatory account is not that every part is indispensable in isolation, but that the account as a system has little slack.** Its elements are load-bearing when removing or replacing them alters the space of possible outcomes the explanation can generate. In systems terms, explanatory power comes from constraint structure; where details are freely swappable, the account has not yet reached the level of mechanism or principle.
+What this illuminates is that explanatory strength is not identical with richness of detail. Many details can signal realism while carrying no causal or logical load. A genuinely strong explanation is more like a proof or a well-engineered system: its parts are mutually constraining. Its details cannot be swapped freely because they are not there to decorate the account; they are there because without them, the account ceases to explain what it claims to explain.
 
 ## Questions
 
-1. Does the conjecture still distinguish the two kinds of explanations if 'counterfactual sensitivity of the explanatory structure' is replaced by mere amount of detail or vividness of description? — **no**
-2. If high dependency density is removed while low substitutability, narrow counterfactual corridor, and constraint-based compression are retained, does the conjecture still produce the same distinction? — **no**
-3. Can the conjecture survive if a load-bearing explanation is allowed to have many independently alterable parts that do not constrain one another? — **no**
-4. If changing one part of an explanation requires no compensating revisions elsewhere yet the explanation still yields P, does the conjecture still classify it as genuinely explanatory? — **no**
-5. Does the conjecture break if the 'narrow counterfactual corridor' is widened so that many nearby variants explain the same phenomenon by different generative paths? — **yes**
-6. If compression comes from vagueness or underspecification rather than from mutual constraint among parts, does the conjecture still count that as the mark of a load-bearing explanation? — **no**
-7. Can the contrast the conjecture draws be preserved if swap-friendly explanations are said to be strong precisely because they tolerate arbitrary substitutions? — **no**
-8. If the conclusion is changed from 'the system has little slack' to 'each part is indispensable in isolation,' does the rest of the conjecture still hang together? — **no**
-9. Does the conjecture still work if 'robustness under criticism' is detached from 'fragility under arbitrary change,' so that an explanation could be highly swappable yet still count as structurally informative? — **no**
-10. If freely swappable details nevertheless alter no part of the space of possible outcomes the account can generate, does the conjecture still have a basis for calling those details non-explanatory? — **yes**
+1. 1. If changing one named detail in the explanation while keeping the explanandum fixed leaves all predictions, exclusions of alternatives, and explanatory reach unchanged, would that directly contradict the conjecture’s claim that the detail was load-bearing? — **yes**
+2. 2. Does the conjecture require that every part constrain at least one specific other part, rather than merely contributing independently to the same conclusion? — **yes**
+3. 3. If two different details can be exchanged for one another with no compensating changes elsewhere because they belong to the same interchangeable class, would the conjecture classify the explanation as having slack rather than all parts load-bearing? — **yes**
+4. 4. Would the conjecture fail if an explanation contained redundant parts that both support the same constraint, so that removing one part changes nothing the machine can produce? — **yes**
+5. 5. Is counterfactual dependence among parts supposed to be the decisive property even in cases where the explanation is highly specific and complex but its details do not force downstream adjustments? — **yes**
+6. 6. According to the conjecture, must a load-bearing explanation exhibit error propagation, such that a local change in one part alters predictions, explanatory scope, or required commitments elsewhere? — **yes**
+7. 7. If a detail affects only rhetorical vividness or perceived realism but rules out no alternatives and fixes nothing else in the account, does the conjecture treat that detail as non-explanatory ornament? — **yes**
+8. 8. Does the proposed practical test assume that varying parts one at a time is sufficient to detect load-bearing structure, rather than needing to vary combinations of parts to reveal hidden substitutability? — **yes**
+9. 9. If preserving adequacy after changing one part requires rewriting several other parts, is that reorganization itself evidence for the conjecture’s notion of structural coupling and internal necessity? — **yes**
+10. 10. Would the conjecture be undermined if there were explanations whose details are freely swappable yet which still explain equally well because the explanatory core remains unchanged beneath the surface wording? — **yes**
 
 ## Candidate Problems
 
-- How can 'counterfactual sensitivity of explanatory structure' be made precise without collapsing into triviality or domain-dependence? The conjecture relies on notions like dependency density, substitutability, and narrow counterfactual corridors, but it leaves open how to measure these across scientific, mathematical, historical, or everyday explanations. A key unresolved tension is whether this is a substantive criterion of explanatory depth or just an intuitive redescription of 'good explanations are constrained.' (score: 0.95)
-- How can the conjecture distinguish genuinely load-bearing structure from mere overfitting or brittleness? A tightly coupled explanation can be fragile because it captures real mechanism, but it can also be fragile because it is ad hoc, overly specific, or tuned to one case. The open problem is to identify what separates explanatory necessity from accidental dependence, especially when both produce low substitutability and narrow nearby variants. (score: 0.98)
-- What is the right balance between explanatory slack and explanatory power, given that many successful explanations are multiply realizable or abstract? The conjecture seems to privilege narrow, tightly constrained mechanisms, yet powerful explanations in physics, biology, computer science, and philosophy often work precisely because many lower-level details are interchangeable. The unresolved question is whether swap-friendliness always signals weakness, or whether some forms of invariance and abstraction are themselves marks of deeper explanation. (score: 0.99)
+- How can 'counterfactual dependence among parts' be made precise enough to distinguish genuinely load-bearing components from harmless reformulations, redescriptions, or symmetries of the same explanation? The conjecture relies on a notion of non-substitutability, but it is unresolved how to individuate parts and explanations so that changing wording, representation, or equivalent derivations does not falsely count as structural change. (score: 0.95)
+- What is the right tradeoff between internal necessity and productive redundancy? The conjecture treats slack and swappability as signs of weaker explanation, but many powerful systems and theories contain robustness, degeneracy, or multiple realizations that preserve explanatory power. An open question is when redundancy is mere ornament versus when it is itself an explanatory virtue that supports generality, error tolerance, or unification. (score: 0.91)
+- Can the proposed intervention test—vary one part while holding the explanandum fixed—actually be operationalized without circularity? In many cases, what counts as 'preserving adequacy' or 'the same explanandum' already depends on background theory and explanatory aims. The unresolved problem is to define a non-question-begging procedure for testing load-bearingness across scientific, mathematical, and historical explanations. (score: 0.93)

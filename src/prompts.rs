@@ -1,138 +1,199 @@
+use anyhow::{Context, Result};
+
 use crate::types::Conjecture;
+
+const PROMPTS_DIR: &str = "data/prompts";
 
 pub struct Prompt {
     pub system: String,
     pub user: String,
 }
 
-pub fn format_mind_system(mind: &[Conjecture]) -> String {
-    if mind.is_empty() {
-        return String::from("You are a careful, rigorous reasoner.");
-    }
-    let mut s = String::from("You reason using the following principles and frameworks:\n\n");
-    for (i, c) in mind.iter().enumerate() {
-        s.push_str(&format!("{}. {}\n{}\n\n", i + 1, c.title, c.summary));
-    }
-    s.trim_end().to_string()
+pub struct PromptTemplates {
+    mind_system_header: String,
+    mind_system_item: String,
+    mind_system_empty: String,
+    generate_output: ParsedTemplate,
+    consistency_check: ParsedTemplate,
+    generate_questions: ParsedTemplate,
+    answer_questions: ParsedTemplate,
+    candidate_problems: ParsedTemplate,
+    summarize_output: ParsedTemplate,
+    promote_conjecture: ParsedTemplate,
+    deduplicate: ParsedTemplate,
+    conjecture_summary: ParsedTemplate,
 }
 
-pub fn generate_output(mind_system: &str, conjecture_summary: &str, problem_summary: &str) -> Prompt {
-    Prompt {
-        system: mind_system.to_string(),
-        user: format!(
-            "You are reasoning from a specific perspective. Your perspective is:\n{conjecture_summary}\n\n\
-            Apply this perspective to the following problem and generate a conjecture — a structured \
-            claim about what is true, what follows, or what is illuminated when this perspective meets \
-            this problem. Follow the logic of the collision. Do not invent novelty for its own sake. \
-            500 words or fewer.\n\nProblem: {problem_summary}"
-        ),
+struct ParsedTemplate {
+    system: String,
+    user: String,
+}
+
+impl PromptTemplates {
+    pub fn load() -> Result<Self> {
+        let mind_sys = load_and_parse(PROMPTS_DIR, "mind_system.md")?;
+        Ok(Self {
+            mind_system_header: mind_sys.get_section("Header"),
+            mind_system_item: mind_sys.get_section("Item"),
+            mind_system_empty: mind_sys.get_section("Empty"),
+            generate_output: load_and_parse(PROMPTS_DIR, "generate_output.md")?.into_system_user()?,
+            consistency_check: load_and_parse(PROMPTS_DIR, "consistency_check.md")?.into_system_user()?,
+            generate_questions: load_and_parse(PROMPTS_DIR, "generate_questions.md")?.into_system_user()?,
+            answer_questions: load_and_parse(PROMPTS_DIR, "answer_questions.md")?.into_system_user()?,
+            candidate_problems: load_and_parse(PROMPTS_DIR, "candidate_problems.md")?.into_system_user()?,
+            summarize_output: load_and_parse(PROMPTS_DIR, "summarize_output.md")?.into_system_user()?,
+            promote_conjecture: load_and_parse(PROMPTS_DIR, "promote_conjecture.md")?.into_system_user()?,
+            deduplicate: load_and_parse(PROMPTS_DIR, "deduplicate.md")?.into_system_user()?,
+            conjecture_summary: load_and_parse(PROMPTS_DIR, "conjecture_summary.md")?.into_system_user()?,
+        })
+    }
+
+    pub fn format_mind_system(&self, mind: &[Conjecture]) -> String {
+        if mind.is_empty() {
+            return self.mind_system_empty.clone();
+        }
+        let mut s = self.mind_system_header.clone();
+        s.push_str("\n\n");
+        for (i, c) in mind.iter().enumerate() {
+            let item = apply(&self.mind_system_item, &[
+                ("index", &(i + 1).to_string()),
+                ("title", &c.title),
+                ("summary", &c.summary),
+            ]);
+            s.push_str(&item);
+            s.push('\n');
+        }
+        s.trim_end().to_string()
+    }
+
+    pub fn generate_output(&self, mind_system: &str, conjecture_summary: &str, problem_summary: &str) -> Prompt {
+        self.generate_output.apply(&[
+            ("mind_system", mind_system),
+            ("conjecture_summary", conjecture_summary),
+            ("problem_summary", problem_summary),
+        ])
+    }
+
+    pub fn logical_consistency_check(&self, mind_system: &str, generated: &str) -> Prompt {
+        self.consistency_check.apply(&[
+            ("mind_system", mind_system),
+            ("generated", generated),
+        ])
+    }
+
+    pub fn generate_questions(&self, mind_system: &str, generated: &str, problem_summary: &str) -> Prompt {
+        self.generate_questions.apply(&[
+            ("mind_system", mind_system),
+            ("generated", generated),
+            ("problem_summary", problem_summary),
+        ])
+    }
+
+    pub fn answer_questions(&self, mind_system: &str, generated: &str, questions: &[String]) -> Prompt {
+        let formatted = questions
+            .iter()
+            .enumerate()
+            .map(|(i, q)| format!("{}. {}", i + 1, q))
+            .collect::<Vec<_>>()
+            .join("\n");
+        self.answer_questions.apply(&[
+            ("mind_system", mind_system),
+            ("generated", generated),
+            ("formatted_questions", &formatted),
+        ])
+    }
+
+    pub fn extract_candidate_problems(&self, mind_system: &str, generated: &str) -> Prompt {
+        self.candidate_problems.apply(&[
+            ("mind_system", mind_system),
+            ("generated", generated),
+        ])
+    }
+
+    pub fn summarize_generated(&self, generated: &str, score: f64) -> Prompt {
+        self.summarize_output.apply(&[
+            ("score", &format!("{score:.2}")),
+            ("generated", generated),
+        ])
+    }
+
+    pub fn promote_generated(&self, mind_system: &str, generated: &str, score: f64) -> Prompt {
+        self.promote_conjecture.apply(&[
+            ("mind_system", mind_system),
+            ("generated", generated),
+            ("score", &format!("{score:.2}")),
+        ])
+    }
+
+    pub fn deduplicate_problems(&self, mind_system: &str, problems: &[(String, String)]) -> Prompt {
+        let formatted = problems
+            .iter()
+            .map(|(id, summary)| format!("- {id}: {summary}"))
+            .collect::<Vec<_>>()
+            .join("\n");
+        self.deduplicate.apply(&[
+            ("mind_system", mind_system),
+            ("formatted_problems", &formatted),
+        ])
+    }
+
+    pub fn conjecture_summary(&self, mind_system: &str, title: &str, full_text: &str) -> Prompt {
+        self.conjecture_summary.apply(&[
+            ("mind_system", mind_system),
+            ("title", title),
+            ("full_text", full_text),
+        ])
     }
 }
 
-pub fn logical_consistency_check(mind_system: &str, generated: &str) -> Prompt {
-    Prompt {
-        system: mind_system.to_string(),
-        user: format!(
-            "Evaluate whether the following conjecture is internally self-consistent — does it \
-            contradict itself, rely on incompatible premises, or make claims that cannot simultaneously \
-            be true?\n\nReturn JSON: {{\"score\": 0.0, \"reason\": \"...\"}}\n\nConjecture: {generated}"
-        ),
+// --- Internals ---
+
+struct RawTemplate {
+    content: String,
+}
+
+impl RawTemplate {
+    fn get_section(&self, name: &str) -> String {
+        let header = format!("## {}", name);
+        let start = match self.content.find(&header) {
+            Some(i) => i + header.len(),
+            None => return String::new(),
+        };
+        let after = &self.content[start..];
+        let end = after.find("\n## ").unwrap_or(after.len());
+        after[..end].trim().to_string()
+    }
+
+    fn into_system_user(self) -> Result<ParsedTemplate> {
+        let system = self.get_section("System");
+        let user = self.get_section("User");
+        if user.is_empty() {
+            anyhow::bail!("Template missing ## User section");
+        }
+        Ok(ParsedTemplate { system, user })
     }
 }
 
-pub fn generate_questions(mind_system: &str, generated: &str, problem_summary: &str) -> Prompt {
-    Prompt {
-        system: mind_system.to_string(),
-        user: format!(
-            "Generate 10 yes/no questions that probe whether the following conjecture is \"hard to \
-            vary\" — meaning its parts are load-bearing and cannot be arbitrarily modified without \
-            destroying the explanation. Questions must be specific to this conjecture and this problem, \
-            not generic. Keep each question to one sentence.\n\nReturn JSON: {{\"questions\": [\"...\", ...]}}\n\n\
-            Conjecture: {generated}\n\nProblem: {problem_summary}"
-        ),
+impl ParsedTemplate {
+    fn apply(&self, vars: &[(&str, &str)]) -> Prompt {
+        Prompt {
+            system: apply(&self.system, vars),
+            user: apply(&self.user, vars),
+        }
     }
 }
 
-pub fn answer_questions(mind_system: &str, generated: &str, questions: &[String]) -> Prompt {
-    let formatted = questions
-        .iter()
-        .enumerate()
-        .map(|(i, q)| format!("{}. {}", i + 1, q))
-        .collect::<Vec<_>>()
-        .join("\n");
-    Prompt {
-        system: mind_system.to_string(),
-        user: format!(
-            "Answer each of the following yes/no questions about this conjecture.\n\n\
-            Return JSON: {{\"answers\": [{{\"question\": \"...\", \"answer\": true}}]}}\n\n\
-            Conjecture: {generated}\n\nQuestions:\n{formatted}"
-        ),
-    }
+fn load_and_parse(dir: &str, filename: &str) -> Result<RawTemplate> {
+    let path = std::path::Path::new(dir).join(filename);
+    let content = std::fs::read_to_string(&path)
+        .with_context(|| format!("Could not load prompt template: {}", path.display()))?;
+    Ok(RawTemplate { content })
 }
 
-pub fn extract_candidate_problems(mind_system: &str, generated: &str) -> Prompt {
-    Prompt {
-        system: mind_system.to_string(),
-        user: format!(
-            "Identify the most significant unresolved tensions or open questions raised by this \
-            conjecture that are worth exploring as new problems. Return at most 3. For each, \
-            score 0.0–1.0 whether it is worth pursuing.\n\n\
-            Return JSON: {{\"candidates\": [{{\"text\": \"...\", \"score\": 0.0}}]}}\n\n\
-            Conjecture: {generated}"
-        ),
+fn apply(template: &str, vars: &[(&str, &str)]) -> String {
+    let mut result = template.to_string();
+    for (key, val) in vars {
+        result = result.replace(&format!("{{{{{}}}}}", key), val);
     }
-}
-
-pub fn summarize_generated(generated: &str, score: f64) -> Prompt {
-    Prompt {
-        system: String::from(
-            "You are summarizing a thought experiment. Return only a 20-word summary of what the thought experiment claims or illuminates. No preamble, no meta-commentary.",
-        ),
-        user: format!("Thought experiment (quality score {score:.2}/1.0):\n\n{generated}"),
-    }
-}
-
-pub fn promote_generated(mind_system: &str, generated: &str, score: f64) -> Prompt {
-    Prompt {
-        system: mind_system.to_string(),
-        user: format!(
-            "Convert the following conjecture into a reusable perspective tool.\n\n\
-            Return JSON: {{\"summary\": \"...\", \"full_text\": \"...\"}}\n\n\
-            The summary must be 1-2 sentences suitable for use in LLM prompts.\n\
-            The full_text must be a readable, standalone description of the perspective this \
-            conjecture embodies — what lens it provides, what kinds of problems it is useful for, \
-            and what it illuminates. 100-200 words.\n\n\
-            Conjecture: {generated}\nScore: {score:.2}"
-        ),
-    }
-}
-
-pub fn deduplicate_problems(mind_system: &str, problems: &[(String, String)]) -> Prompt {
-    let formatted = problems
-        .iter()
-        .map(|(id, summary)| format!("- {id}: {summary}"))
-        .collect::<Vec<_>>()
-        .join("\n");
-    Prompt {
-        system: mind_system.to_string(),
-        user: format!(
-            "Review the following problems and identify any that are exact duplicates of or fully \
-            subsumed by another problem in the list. A problem is subsumed if its core question \
-            is already captured by a broader problem in the list. When in doubt, keep the problem. \
-            Return only the IDs to remove.\n\n\
-            Return JSON: {{\"remove\": [\"id1\", \"id2\"]}}\n\n\
-            Problems:\n{formatted}"
-        ),
-    }
-}
-
-pub fn conjecture_summary(mind_system: &str, title: &str, full_text: &str) -> Prompt {
-    Prompt {
-        system: mind_system.to_string(),
-        user: format!(
-            "Summarize the following conjecture into 1-2 sentences suitable for use as context in LLM \
-            prompts. The summary should capture the core lens or principle the conjecture provides.\n\n\
-            Return JSON: {{\"summary\": \"...\"}}\n\nTitle: {title}\nFull text: {full_text}"
-        ),
-    }
+    result
 }

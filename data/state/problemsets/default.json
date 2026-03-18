@@ -5,7 +5,7 @@
       "meta": {
         "id": "can-llms-create-new-knowledge",
         "source": "user",
-        "score": 0.8196666666666667,
+        "score": 0.82375,
         "rank": 1,
         "run_count": 1,
         "created_at": "2026-03-18T00:00:00Z"
@@ -18,7 +18,7 @@
       "meta": {
         "id": "does-architecture-matter-more-than-model-scale",
         "source": "user",
-        "score": 0.8886666666666666,
+        "score": 0.877,
         "rank": 2,
         "run_count": 1,
         "created_at": "2026-03-18T00:00:00Z"
@@ -31,7 +31,7 @@
       "meta": {
         "id": "what-makes-an-explanation-hard-to-vary",
         "source": "user",
-        "score": 0.69825,
+        "score": 0.7865,
         "rank": 3,
         "run_count": 1,
         "created_at": "2026-03-18T00:00:00Z"
@@ -42,29 +42,42 @@
     },
     {
       "meta": {
-        "id": "what-is-the-right-balance-between-explanatory-slack-and-expl",
+        "id": "under-what-conditions-does-next-token-prediction-actually-fo",
         "source": "system",
         "score": 0.0,
         "rank": 4,
         "run_count": 0,
-        "created_at": "2026-03-18T18:55:48.995049295+00:00"
+        "created_at": "2026-03-18T19:33:14.996968813+00:00"
       },
-      "title": "What is the right balance between explanatory slack and explanatory power, given",
-      "summary": "What is the right balance between explanatory slack and explanatory power, given that many successful explanations are multiply realizable or abstract? The conjecture seems to privilege narrow, tightl",
-      "full_text": "What is the right balance between explanatory slack and explanatory power, given that many successful explanations are multiply realizable or abstract? The conjecture seems to privilege narrow, tightly constrained mechanisms, yet powerful explanations in physics, biology, computer science, and philosophy often work precisely because many lower-level details are interchangeable. The unresolved question is whether swap-friendliness always signals weakness, or whether some forms of invariance and abstraction are themselves marks of deeper explanation."
+      "title": "Under what conditions does next-token prediction actually force the learning of ",
+      "summary": "Under what conditions does next-token prediction actually force the learning of latent variables that correspond to real domain invariants? The conjecture says prediction is sufficient only when the t",
+      "full_text": "Under what conditions does next-token prediction actually force the learning of latent variables that correspond to real domain invariants? The conjecture says prediction is sufficient only when the task is 'rich enough,' but this raises an unresolved tension: what properties of the data distribution, training objective, model class, and environment make explanatory knowledge identifiable rather than optional? This is the central bridge needed between predictive success and genuine theory-like internal structure."
     },
     {
       "meta": {
-        "id": "how-can-the-conjecture-distinguish-genuinely-load-bearing-st",
+        "id": "what-concrete-feedback-architectures-actually-produce-cumula",
         "source": "system",
         "score": 0.0,
         "rank": 5,
         "run_count": 0,
-        "created_at": "2026-03-18T18:55:48.995133746+00:00"
+        "created_at": "2026-03-18T19:33:14.997032362+00:00"
       },
-      "title": "How can the conjecture distinguish genuinely load-bearing structure from mere ov",
-      "summary": "How can the conjecture distinguish genuinely load-bearing structure from mere overfitting or brittleness? A tightly coupled explanation can be fragile because it captures real mechanism, but it can al",
-      "full_text": "How can the conjecture distinguish genuinely load-bearing structure from mere overfitting or brittleness? A tightly coupled explanation can be fragile because it captures real mechanism, but it can also be fragile because it is ad hoc, overly specific, or tuned to one case. The open problem is to identify what separates explanatory necessity from accidental dependence, especially when both produce low substitutability and narrow nearby variants."
+      "title": "What concrete feedback architectures actually produce cumulative epistemic error",
+      "summary": "What concrete feedback architectures actually produce cumulative epistemic error-correction in AI, rather than just additional optimization overhead? The conjecture posits missing loops—criticism, dur",
+      "full_text": "What concrete feedback architectures actually produce cumulative epistemic error-correction in AI, rather than just additional optimization overhead? The conjecture posits missing loops—criticism, durable memory of failure, cross-context consistency, adversarial testing—but it remains open which mechanisms are necessary, sufficient, and composable, and how they interact as a system. This is a high-value problem because it turns the conjecture from diagnosis into design and enables comparative experiments between structural regimes."
+    },
+    {
+      "meta": {
+        "id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+        "source": "system",
+        "score": 0.0,
+        "rank": 6,
+        "run_count": 0,
+        "created_at": "2026-03-18T19:33:14.997067046+00:00"
+      },
+      "title": "How can 'epistemic progress' be defined and measured independently of fluency, b",
+      "summary": "How can 'epistemic progress' be defined and measured independently of fluency, benchmark performance, or popularity-weighted success? The conjecture assumes a distinction between answer production and",
+      "full_text": "How can 'epistemic progress' be defined and measured independently of fluency, benchmark performance, or popularity-weighted success? The conjecture assumes a distinction between answer production and knowledge creation, but the boundary is unresolved: what observable indicators show that a system is genuinely learning from error, retaining refutations, and improving truth-tracking over time? This is worth pursuing because the whole structural thesis depends on metrics that can detect cumulative knowledge growth rather than surface competence."
     }
   ],
   "run_count": 1,

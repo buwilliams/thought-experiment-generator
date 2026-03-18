@@ -2,21 +2,21 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "thought-experiments",
   "run": 1,
-  "logical_consistency": 0.93,
-  "hard_to_vary": 0.2,
-  "total": 0.41900000000000004,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
   "candidate_problems": [
     {
-      "text": "How can 'counterfactual sensitivity of explanatory structure' be made precise without collapsing into triviality or domain-dependence? The conjecture relies on notions like dependency density, substitutability, and narrow counterfactual corridors, but it leaves open how to measure these across scientific, mathematical, historical, or everyday explanations. A key unresolved tension is whether this is a substantive criterion of explanatory depth or just an intuitive redescription of 'good explanations are constrained.'",
+      "text": "How can 'counterfactual dependence among parts' be made precise enough to distinguish genuinely load-bearing components from harmless reformulations, redescriptions, or symmetries of the same explanation? The conjecture relies on a notion of non-substitutability, but it is unresolved how to individuate parts and explanations so that changing wording, representation, or equivalent derivations does not falsely count as structural change.",
       "score": 0.95
     },
     {
-      "text": "How can the conjecture distinguish genuinely load-bearing structure from mere overfitting or brittleness? A tightly coupled explanation can be fragile because it captures real mechanism, but it can also be fragile because it is ad hoc, overly specific, or tuned to one case. The open problem is to identify what separates explanatory necessity from accidental dependence, especially when both produce low substitutability and narrow nearby variants.",
-      "score": 0.98
+      "text": "What is the right tradeoff between internal necessity and productive redundancy? The conjecture treats slack and swappability as signs of weaker explanation, but many powerful systems and theories contain robustness, degeneracy, or multiple realizations that preserve explanatory power. An open question is when redundancy is mere ornament versus when it is itself an explanatory virtue that supports generality, error tolerance, or unification.",
+      "score": 0.91
     },
     {
-      "text": "What is the right balance between explanatory slack and explanatory power, given that many successful explanations are multiply realizable or abstract? The conjecture seems to privilege narrow, tightly constrained mechanisms, yet powerful explanations in physics, biology, computer science, and philosophy often work precisely because many lower-level details are interchangeable. The unresolved question is whether swap-friendliness always signals weakness, or whether some forms of invariance and abstraction are themselves marks of deeper explanation.",
-      "score": 0.99
+      "text": "Can the proposed intervention test—vary one part while holding the explanandum fixed—actually be operationalized without circularity? In many cases, what counts as 'preserving adequacy' or 'the same explanandum' already depends on background theory and explanatory aims. The unresolved problem is to define a non-question-begging procedure for testing load-bearingness across scientific, mathematical, and historical explanations.",
+      "score": 0.93
     }
   ]
 }

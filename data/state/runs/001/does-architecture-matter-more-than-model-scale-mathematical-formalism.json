@@ -3,20 +3,20 @@
   "conjecture_id": "mathematical-formalism",
   "run": 1,
   "logical_consistency": 0.94,
-  "hard_to_vary": 0.8,
-  "total": 0.8419999999999999,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
   "candidate_problems": [
     {
-      "text": "How can the conjecture’s key variables be operationalized and measured so it becomes falsifiable rather than metaphorical? In particular: what concrete metrics correspond to substrate capacity S, epistemic structure E, and epistemic progress P; how do we distinguish 'truth-tracking criticism' from proxy optimization; and what empirical signature would show a genuine phase change from substrate-limited to structure-limited regimes?",
+      "text": "How can 'epistemic progress' K(t) be operationalized so the conjecture is testable rather than definitional? The proposal depends on distinguishing real knowledge growth from output volume or benchmark fit, but it leaves open what measurable invariants track explanatory depth, error-correction, transfer, and cumulative retention. Without a non-circular metric, claims about structural bottlenecks versus substrate bottlenecks are underdetermined.",
       "score": 0.97
     },
     {
-      "text": "Is there in fact a capability threshold beyond which marginal gains from substrate collapse unless epistemic structure changes, and under what conditions does this threshold exist? The conjecture assumes a regime shift, but it is unresolved whether this is universal, domain-specific, or absent in practice because larger substrate may itself induce new effective epistemic structure (for example via emergent search, tool use, or internal self-critique).",
-      "score": 0.95
+      "text": "Where exactly is the substrate threshold at which bottlenecks shift from S to the conjecture-criticism-selection loop, and is such a threshold stable across domains? The conjecture asserts a regime change once substrate is 'sufficient,' but does not specify whether this is sharp, gradual, task-dependent, or continually moving as richer hypothesis classes become relevant. This is a central unresolved tension because if the threshold is elusive or endogenous, the main claim may collapse into a context-sensitive scaling law rather than a robust principle.",
+      "score": 0.94
     },
     {
-      "text": "What formal properties of epistemic structure E actually change the topology of search rather than merely improving efficiency within the same basin? This raises an open question about which mechanisms—adversarial testing, memory of refutations, diversity of conjecture generation, explanatory selection, debate, external verification—produce qualitatively new reachable hypotheses and error-correction dynamics, and which only simulate progress through better benchmark performance.",
-      "score": 0.93
+      "text": "What is the correct causal structure among S, G, T, and P: are they separable bottlenecks, or does substrate fundamentally reshape the quality of generation, testing, and selection? The conjecture treats S as largely distinct from the intensive variables, yet in real systems more compute and model capacity can improve test severity, enable better search over critiques, and alter promotion dynamics. Resolving whether structure is an independent leverage point or mostly an emergent function of substrate is crucial for deciding where intervention actually belongs.",
+      "score": 0.96
     }
   ]
 }

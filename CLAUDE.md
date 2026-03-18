@@ -32,9 +32,11 @@ cargo run -- add-conjecture --layer candidates --title "Title" --file path/to/fi
 - `state.rs` — all filesystem I/O. Reads/writes `.md` + `.json` sidecar pairs for conjectures and generated outputs; problemsets store problems inline in their `.json`. `ensure_initialized()` copies seed to state on first run. Key functions: `load_conjectures`/`save_conjecture`/`delete_conjecture` for mind/candidates; `save_generated`/`load_run_generated`/`generated_exists` for ephemeral run output.
 - `evaluator.rs` — two-pass evaluation: logical consistency (score < threshold → skip), then hard-to-vary (10 yes/no questions, score = yes_count/10). Also calls `extract_candidate_problems`.
 - `promoter.rs` — ranking and promotion logic. `composite(conjecture)` = `score × √(problem_coverage_breadth)`. Finds top/bottom conjectures and problems for promotion/demotion/discard.
-- `prompts.rs` — all prompt templates. `format_mind_system` serializes mind conjecture summaries into the system prompt. All prompts use summaries, never full text.
+- `prompts.rs` — `PromptTemplates` struct loaded from `data/prompts/*.md` at startup. `load()` reads all template files; each method applies `{{variable}}` substitution and returns a `Prompt { system, user }`. `format_mind_system` builds the system prompt from mind conjecture summaries. All prompts use summaries, never full text.
 - `llm/` — `LlmClient` wrapping Anthropic and OpenAI APIs. `call_raw` returns plain text; `call::<T>` deserializes JSON.
 - `types.rs` — all structs. `Conjecture`/`ConjectureMeta` (mind/candidates layer, stable), `Generated`/`GeneratedMeta` (ephemeral, produced each run). Both have a `meta` (serialized to `.json`) plus content fields (stored in `.md`). LLM response types: `ConsistencyResponse`, `QuestionsResponse`, `AnswersResponse`, `CandidatesResponse`, `PromoteResponse`, `SummaryResponse`, `DeduplicateResponse`.
+
+**Prompt templates:** `data/prompts/` contains one `.md` file per prompt (e.g. `generate_questions.md`). Each file has `## System` and `## User` sections with `{{variable}}` placeholders. Edit these to tune LLM behavior without touching Rust code. `mind_system.md` has `## Header`, `## Item`, and `## Empty` sections used to build the system prompt from mind conjectures.
 
 **State layout:** `data/state/` with `mind/`, `candidates/`, `evaluations/`, `problemsets/`, `runs/NNN/`. Conjectures are `.md` + `.json` sidecar pairs. Problemsets are also `.md` + `.json` pairs, with problems embedded directly in the `.json`. Seed state in `data/seed/`.
 

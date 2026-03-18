@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "mathematical-formalism",
+  "run": 1,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "What precise criterion distinguishes 'explanatory structure' from merely highly compressed predictive structure? The conjecture appeals to counterfactual invariants and transformation-stable performance, but it leaves open whether these can be defined in a model-independent, non-circular way rather than operationally by benchmark success. A key open problem is to formalize when an internal representation genuinely tracks domain constraints instead of just supporting broad interpolation over token space.",
+      "score": 0.96
+    },
+    {
+      "text": "Under what conditions does next-token prediction actually force the learning of latent variables that correspond to real domain invariants? The conjecture says prediction is sufficient only when the task is 'rich enough,' but this raises an unresolved tension: what properties of the data distribution, training objective, model class, and environment make explanatory knowledge identifiable rather than optional? This is the central bridge needed between predictive success and genuine theory-like internal structure.",
+      "score": 0.99
+    },
+    {
+      "text": "How can error-correction and intervention-sensitivity be detected or measured from within a trained language model? The conjecture treats knowledge as participation in an error-correcting structure, yet it remains unclear how to test whether a model can revise, localize, and preserve explanations under perturbation rather than merely produce robust-looking outputs. This suggests a new problem of designing transformation/intervention probes that discriminate true invariant-tracking from adversarially resilient recombination.",
+      "score": 0.93
+    }
+  ]
+}

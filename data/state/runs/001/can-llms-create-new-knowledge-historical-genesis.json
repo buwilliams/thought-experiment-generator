@@ -3,20 +3,20 @@
   "conjecture_id": "historical-genesis",
   "run": 1,
   "logical_consistency": 0.95,
-  "hard_to_vary": 0.6,
-  "total": 0.705,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
   "candidate_problems": [
     {
-      "text": "What are the necessary and sufficient conditions under which predictive competence gives rise to genuinely explanatory, error-correctable knowledge rather than merely fluent pattern continuation? The conjecture gestures at 'larger epistemic systems' and 'critical and corrective conditions' but leaves unresolved what concrete structures, capacities, and feedback loops constitute that threshold.",
+      "text": "How can 'explanatorily productive' be operationalized without collapsing back into surface-performance metrics? The conjecture shifts the criterion from origin ('mere rearrangement') to function ('good explanations' that compress, rule out alternatives, transfer, and survive criticism), but it leaves open how to distinguish genuine explanatory structure from persuasive pastiche in a principled, testable way.",
       "score": 0.97
     },
     {
-      "text": "How can we operationally distinguish 'mere rearrangement' from compositional conjecture that survives criticism, especially in systems trained on vast corpora where novelty, reuse, and abstraction are deeply entangled? The conjecture replaces an old dichotomy but does not yet provide a robust test or metric for identifying explanation-like outputs versus sophisticated interpolation.",
-      "score": 0.94
+      "text": "What minimal surrounding system of criticism, memory, experimentation, and revision is sufficient for token-predictive models to participate in knowledge creation? The conjecture treats knowledge as a role in an error-correcting system rather than a property of a standalone model, but the boundary conditions of that larger system remain unspecified.",
+      "score": 0.95
     },
     {
-      "text": "Is explanatory knowledge attributable to the token-predicting model itself, or only to a broader socio-technical system that includes interpreters, evaluators, tools, and environments? The conjecture implies that knowledge emerges within a larger epistemic process, but this raises an unresolved ontological tension about the locus of agency, understanding, and responsibility.",
-      "score": 0.91
+      "text": "Is there a substantive difference between distributed compression of regularities and knowledge, or are they the same phenomenon at different levels of description? The conjecture argues that 'mere rearrangement' is not a decisive objection, but it leaves unresolved whether compression plus recombination can by itself generate novel explanatory content, or whether an additional ingredient is required for genuine conjecture.",
+      "score": 0.9
     }
   ]
 }

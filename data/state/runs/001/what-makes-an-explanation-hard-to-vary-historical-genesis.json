@@ -3,20 +3,20 @@
   "conjecture_id": "historical-genesis",
   "run": 1,
   "logical_consistency": 0.9,
-  "hard_to_vary": 0.8,
-  "total": 0.83,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
   "candidate_problems": [
     {
-      "text": "How can 'criticism-indexed necessity' be operationalized without collapsing into speculative historical storytelling? The conjecture relies on reconstructing the problem-context that introduced each explanatory part, but many explanations have opaque, collective, or poorly documented origins. A key open question is what present-day criteria could distinguish genuinely load-bearing elements from merely inherited ornament when historical lineage is unavailable or misleading.",
+      "text": "How can genealogical 'load-bearingness' be operationalized without collapsing into contingent history? The conjecture says a part is explanatory when it entered under pressure from prior criticism, but this raises an unresolved tension between historical path-dependence and objective explanatory structure: if two communities reach extensionally equivalent theories through different problem-histories, do the same parts count as load-bearing? A new problem is to formulate criteria that track solved-error constraints rather than mere chronological ancestry.",
       "score": 0.95
     },
     {
-      "text": "What should count as load-bearing when historical origin and current explanatory role diverge? The conjecture says genuinely load-bearing parts are those whose historical introduction and current role coincide, but many explanatory components may acquire new indispensable functions after their original rationale disappears. This raises a tension between genealogical necessity and current-system necessity: can a detail be non-originating yet now structurally indispensable, and if so does the conjecture need a broader account of explanatory load-bearing?",
-      "score": 0.98
+      "text": "What is the relation between genealogical necessity and present-day formal indispensability? The conjecture challenges static tests of necessity, but it remains open whether historical origin is merely evidence for load-bearing status or partly constitutive of it. This creates a sharp problem: can a component be genuinely load-bearing even if current reformulation shows it is eliminable, or conversely non-load-bearing despite being formally indispensable in the current presentation?",
+      "score": 0.93
     },
     {
-      "text": "Does the origin-function account generalize across domains with different explanatory norms, such as mathematics, physics, biology, and everyday explanation? The conjecture assumes explanations are shaped under pressure from rival accounts and objections, but in some domains explanatory success may depend less on historical criticism and more on unification, generative power, or formal derivability. An important open problem is whether the proposed distinction is domain-general or only fits historically contingent, theory-laden explanatory practices.",
-      "score": 0.9
+      "text": "How can the conjecture distinguish productive underconstraint from mere ornamental swappability? It treats reframeability as a sign of insufficient criticism, yet many powerful explanations admit multiple equivalent formulations, parameterizations, or metaphysical interpretations while retaining deep structure. The open question is how to separate benign representational freedom from explanatory looseness, so the view does not misclassify abstraction, universality, or dual descriptions as epistemic weakness.",
+      "score": 0.91
     }
   ]
 }

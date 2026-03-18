@@ -1,25 +1,25 @@
 {
   "id": "counterfactual-reasoning",
   "layer": "candidates",
-  "score": 0.88,
+  "score": 0.7369999999999999,
   "rank": 3,
   "run_count": 1,
   "problem_coverage": [
     "can-llms-create-new-knowledge",
-    "what-makes-an-explanation-hard-to-vary"
+    "does-architecture-matter-more-than-model-scale"
   ],
   "created_at": "2026-03-18T00:00:00Z",
   "promoted_from": null,
   "history": [
     {
       "run": 1,
-      "score": 0.845,
+      "score": 0.7719999999999999,
       "problem_id": "can-llms-create-new-knowledge"
     },
     {
       "run": 1,
-      "score": 0.915,
-      "problem_id": "what-makes-an-explanation-hard-to-vary"
+      "score": 0.702,
+      "problem_id": "does-architecture-matter-more-than-model-scale"
     }
   ]
 }

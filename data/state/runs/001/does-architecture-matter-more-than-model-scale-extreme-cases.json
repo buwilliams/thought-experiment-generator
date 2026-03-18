@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "extreme-cases",
+  "run": 1,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "Where is the threshold at which substrate becomes 'adequate' and structural factors dominate? The conjecture depends on a phase change claim, but leaves unresolved how to operationalize or measure substrate adequacy, how this threshold varies by task/domain, and whether scaling can itself induce proto-error-corrective structure. This is worth pursuing because without a discriminating criterion, the conjecture risks being unfalsifiable or merely rhetorical.",
+      "score": 0.96
+    },
+    {
+      "text": "What concrete feedback architectures actually produce cumulative epistemic error-correction in AI, rather than just additional optimization overhead? The conjecture posits missing loops—criticism, durable memory of failure, cross-context consistency, adversarial testing—but it remains open which mechanisms are necessary, sufficient, and composable, and how they interact as a system. This is a high-value problem because it turns the conjecture from diagnosis into design and enables comparative experiments between structural regimes.",
+      "score": 0.99
+    },
+    {
+      "text": "How can 'epistemic progress' be defined and measured independently of fluency, benchmark performance, or popularity-weighted success? The conjecture assumes a distinction between answer production and knowledge creation, but the boundary is unresolved: what observable indicators show that a system is genuinely learning from error, retaining refutations, and improving truth-tracking over time? This is worth pursuing because the whole structural thesis depends on metrics that can detect cumulative knowledge growth rather than surface competence.",
+      "score": 0.98
+    }
+  ]
+}
