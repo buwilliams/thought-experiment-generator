@@ -22,6 +22,7 @@ pub struct PromptTemplates {
     promote_conjecture: ParsedTemplate,
     deduplicate: ParsedTemplate,
     conjecture_summary: ParsedTemplate,
+    ask: ParsedTemplate,
 }
 
 struct ParsedTemplate {
@@ -45,6 +46,7 @@ impl PromptTemplates {
             promote_conjecture: load_and_parse(PROMPTS_DIR, "promote_conjecture.md")?.into_system_user()?,
             deduplicate: load_and_parse(PROMPTS_DIR, "deduplicate.md")?.into_system_user()?,
             conjecture_summary: load_and_parse(PROMPTS_DIR, "conjecture_summary.md")?.into_system_user()?,
+            ask: load_and_parse(PROMPTS_DIR, "ask.md")?.into_system_user()?,
         })
     }
 
@@ -134,6 +136,14 @@ impl PromptTemplates {
         self.deduplicate.apply(&[
             ("mind_system", mind_system),
             ("formatted_problems", &formatted),
+        ])
+    }
+
+    pub fn ask(&self, mind_system: &str, conjecture_summary: &str, question: &str) -> Prompt {
+        self.ask.apply(&[
+            ("mind_system", mind_system),
+            ("conjecture_summary", conjecture_summary),
+            ("question", question),
         ])
     }
 

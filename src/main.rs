@@ -68,6 +68,17 @@ pub enum Command {
     /// Run one full cycle on every problem set sequentially
     RunAll,
 
+    /// Ask the system a question — answered using the best current lens
+    Ask {
+        /// Inline question text
+        #[arg()]
+        text: Option<String>,
+
+        /// Path to a file containing the question
+        #[arg(long)]
+        file: Option<std::path::PathBuf>,
+    },
+
     /// Display the last run summary without running
     Read,
 
@@ -159,6 +170,28 @@ async fn main() -> Result<()> {
 
         Command::RunAll => {
             teg::runner::run_all(client, &config).await?;
+        }
+
+        Command::Ask { text, file } => {
+            let question = if let Some(t) = text {
+                t
+            } else if let Some(path) = file {
+                std::fs::read_to_string(&path)
+                    .map_err(|e| anyhow::anyhow!("Could not read {}: {e}", path.display()))?
+            } else if !io::stdin().is_terminal() {
+                let mut input = String::new();
+                io::stdin().read_to_string(&mut input)?;
+                input.trim().to_string()
+            } else {
+                anyhow::bail!("Provide a question via argument, --file, or stdin.");
+            };
+
+            if question.is_empty() {
+                anyhow::bail!("Question cannot be empty.");
+            }
+
+            let templates = teg::prompts::PromptTemplates::load()?;
+            teg::ask::ask(client, &config, &templates, &question).await?;
         }
 
         Command::Read => {

@@ -10,7 +10,7 @@ pub fn find_problem_to_remove(problems: &[Problem], min_run_count: u32) -> Optio
 }
 
 /// Composite score: raw score weighted by square root of problem coverage breadth.
-fn composite(c: &Conjecture) -> f64 {
+pub fn composite(c: &Conjecture) -> f64 {
     let breadth = (c.meta.problem_coverage.len() as f64).sqrt().max(1.0);
     c.meta.score * breadth
 }

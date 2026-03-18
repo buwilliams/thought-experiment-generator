@@ -45,6 +45,11 @@ cargo run -- run --problemset a1b2c3d4 --problem "new problem text"
 # Run on all problem sets sequentially
 cargo run -- run-all
 
+# Ask the system a question using its best current lens
+cargo run -- ask "What causes institutional decay?"
+cargo run -- ask --file question.md
+cat question.md | cargo run -- ask
+
 # Read last run summary without running
 cargo run -- read
 
