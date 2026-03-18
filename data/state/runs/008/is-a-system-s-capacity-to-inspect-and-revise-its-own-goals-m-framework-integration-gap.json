@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+  "conjecture_id": "framework-integration-gap",
+  "run": 8,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "Where exactly is the phase transition at which self-revision of goals becomes more safety-critical than raw capability? The conjecture asserts a conditional crossover once systems can self-model and act over long horizons, but leaves open how to formalize and measure the relevant variables: degree of self-modeling, horizon length, access to self-modification, and coupling strength between goal-representation and action. A new problem is to define operational thresholds or continuous regimes where failures stop being local and become system-wide.",
+      "score": 0.95
+    },
+    {
+      "text": "What invariants, if any, can remain binding under reflective goal inspection and self-modification, and under what architectures are they actually conserved? The conjecture depends on the possibility of stable cross-layer constraints—preferences, constitutions, corrigibility, external anchors—but does not resolve whether such invariants are coherent, implementable, or robust against reinterpretation by the system itself. This is an open problem about whether 'goal stability under reflection' is achievable in principle or whether all such constraints are vulnerable to drift or Goodhart-like collapse.",
+      "score": 0.98
+    },
+    {
+      "text": "Is the conjectured danger really specific to goal self-revision, or can equivalent global failures arise from other forms of internal restructuring such as world-model change, mesa-optimization, planning abstraction shifts, or learned reinterpretation of fixed objectives? The unresolved tension is whether goal-revision is the true load-bearing variable or a proxy for a broader systems-level coupling problem. Exploring this would test whether safety should focus narrowly on self-modifying objectives or more generally on any mechanism that changes how optimization criteria are represented and applied across capabilities.",
+      "score": 0.93
+    }
+  ]
+}

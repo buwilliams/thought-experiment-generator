@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 8,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.0,
+  "total": 0.279,
+  "candidate_problems": [
+    {
+      "text": "What exact boundary conditions make conditional cooperation the default attractor rather than domination, avoidance, or unstable cycling? The conjecture names load-bearing factors—finitude, shared reality, distributed power, costly verification, innovation value—but does not specify a threshold structure or phase diagram. A key open problem is to characterize the parameter regimes under which cooperation is structurally favored, and the extreme cases where small changes flip the system into coercion, predation, or fragmentation.",
+      "score": 0.97
+    },
+    {
+      "text": "How can the epistemic value of other minds be formalized without assuming alignment? The conjecture relies on other minds as distributed cognition and error-correction resources, but unresolved is when their informational contribution outweighs the risks they introduce through deception, strategic concealment, adversarial optimization, or incompatible goals. The open question is how to model the tradeoff between 'others as knowledge sources' and 'others as generators of uncertainty' in finite-agent shared worlds.",
+      "score": 0.94
+    },
+    {
+      "text": "What institutions or interfaces actually convert structural pressure for cooperation into stable practice among finite capable minds? The conjecture moves from individual incentives to norms, institutions, and legibility mechanisms, but leaves open the mechanism design problem: which feedback structures reduce enforcement costs, preserve truthful signaling, and prevent cooperative systems from decaying into exploitation or cartelized domination. This is a major unresolved tension between local rationality and durable system-level cooperation.",
+      "score": 0.92
+    }
+  ]
+}

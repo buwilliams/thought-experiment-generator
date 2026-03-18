@@ -68,12 +68,13 @@ pub async fn run(
             let config = config.clone();
             let mind_system = mind_system.clone();
             let conjecture_summary = candidate.summary.clone();
+            let problemset_context = problemset.content.clone();
             let problem_summary = problem.summary.clone();
             let problem_id = problem.meta.id.clone();
             let conjecture_id = candidate.meta.id.clone();
 
             handles.push(tokio::spawn(async move {
-                let p = templates.generate_output(&mind_system, &conjecture_summary, &problem_summary);
+                let p = templates.generate_output(&mind_system, &conjecture_summary, &problemset_context, &problem_summary);
                 let text = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
 
                 info!("Generated: {}-{}", problem_id, conjecture_id);

@@ -72,10 +72,11 @@ impl PromptTemplates {
         s.trim_end().to_string()
     }
 
-    pub fn generate_output(&self, mind_system: &str, conjecture_summary: &str, problem_summary: &str) -> Prompt {
+    pub fn generate_output(&self, mind_system: &str, conjecture_summary: &str, problemset_context: &str, problem_summary: &str) -> Prompt {
         self.generate_output.apply(&[
             ("mind_system", mind_system),
             ("conjecture_summary", conjecture_summary),
+            ("problemset_context", problemset_context),
             ("problem_summary", problem_summary),
         ])
     }

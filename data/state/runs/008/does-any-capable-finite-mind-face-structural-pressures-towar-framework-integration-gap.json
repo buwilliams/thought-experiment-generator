@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar",
+  "conjecture_id": "framework-integration-gap",
+  "run": 8,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient conditions under which the claimed 'structural pressure' actually yields bounded cooperation rather than stable domination, segregation, arms-race equilibria, or cyclical predation? The conjecture lists plausible factors, but it remains open how strong each must be, how they trade off, and whether there are threshold effects or phase transitions in multi-agent systems.",
+      "score": 0.96
+    },
+    {
+      "text": "Can the conjecture be formalized in a way that is non-moralized and predictive across agent architectures—e.g., finite rational agents, bounded learners, institutions, AIs, states—so that 'other minds become part of the effective environment' implies measurable long-run penalties for treating them as expendable noise? The open problem is to derive this from explicit models rather than analogy, and to identify observables that would distinguish the conjecture from competing views.",
+      "score": 0.94
+    },
+    {
+      "text": "Are there important counterexamples where increasing capability reduces rather than increases pressure toward cooperation—for example through surveillance, automation, self-sufficiency, decisive strategic advantage, or the ability to internalize functions previously supplied by other minds? This matters because the conjecture may depend critically on finitude and interdependence, and it is unresolved whether advanced agents can escape those constraints enough to make durable non-cooperation viable.",
+      "score": 0.92
+    }
+  ]
+}
