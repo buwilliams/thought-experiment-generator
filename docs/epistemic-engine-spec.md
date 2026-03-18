@@ -479,6 +479,16 @@ cargo run -- run                              # works if only one set exists
 # Run with a new problem added before running
 cargo run -- run --problemset a1b2c3d4 --problem "your problem text"
 
+# Run on every problem set sequentially
+cargo run -- run-all
+
+# Ask the system a question
+# Runs all mind conjectures + top 3 candidates concurrently as separate lenses,
+# then consolidates all perspectives into a single best explanation
+cargo run -- ask "What causes institutional decay?"
+cargo run -- ask --file question.md
+cat question.md | cargo run -- ask
+
 # Read last run summary without running
 cargo run -- read
 

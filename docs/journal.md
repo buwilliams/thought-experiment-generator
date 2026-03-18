@@ -75,3 +75,13 @@ The new core loop: `tools + problem → conjecture → criticism → tool`. The 
 - New problems — discovered during evaluation
 
 The user seeds the system but does not remain the only source of problems. The system compounds from there.
+
+## 2026-03-18 — The Ask Command: Querying the Accumulated Mind
+
+Once the system has run enough cycles to build up a meaningful mind and candidate pool, a natural question arises: can you ask it something directly? Not to run a full cycle, but to use the accumulated knowledge as an explanatory lens for a new question.
+
+The first instinct was to find the single best conjecture and answer through it. This is insufficient for the same reason a single perspective is always insufficient — it can only illuminate what it was shaped to illuminate. The mind's value is not any one conjecture but the set of them operating together.
+
+The implemented design runs all mind conjectures and the top candidates concurrently as separate lenses — each producing its own answer to the question — then consolidates all perspectives into a single best explanation. The consolidation prompt is explicitly Deutschian: preserve what is load-bearing across multiple lenses (claims that survive multiple perspectives carry more evidential weight), resolve tensions by finding the deeper principle that contains both, state genuine conflicts clearly rather than papering over them, and discard what is ornamental or merely restates the question.
+
+This mirrors Phase 1 of the run loop, but directed at a user question rather than a stored problem. The result should be more explanatorily powerful than any single lens alone — which is the point of having a mind in the first place.
