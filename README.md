@@ -18,7 +18,7 @@ All progress — mathematical theorems, physical theories, philosophical argumen
 
 The same distinction applies here. An LLM predicts tokens — it is the substrate. This system operates one level up: in the space where conjectures are formed, evaluated against problems, and promoted based on explanatory power. The LLM executes; the architecture reasons.
 
-This is why we are not building a better model. The bottleneck is not substrate quality but structure. Early signs of this pattern are visible in purpose-built agent systems — research agents, scientific automation pipelines — that use LLMs as an execution layer while organizing reasoning at a higher level. This system is the generalization of that pattern: a domain-agnostic architecture for how knowledge grows through conjecture and criticism, operating in the abstract space where explanations live.
+This system explores a complementary direction to scaling: rather than improving the substrate, it organizes reasoning at a higher level. Purpose-built agent systems — research agents, scientific automation pipelines, reasoning models — show that structure compounds what substrate alone cannot. This system is the generalization of that pattern: a domain-agnostic architecture for how knowledge grows through conjecture and criticism, operating in the abstract space where explanations live.
 
 ## Usage
 
