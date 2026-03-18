@@ -252,7 +252,7 @@ async fn main() -> Result<()> {
                 return Ok(());
             }
             for ps in &sets {
-                let display = ps.content.lines().next().unwrap_or("").trim();
+                let display = ps.content.lines().next().unwrap_or("").trim().trim_start_matches('#').trim();
                 println!(
                     "[{}] {} — {} problem(s), {} run(s)",
                     ps.meta.id,
