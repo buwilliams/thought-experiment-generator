@@ -4,6 +4,7 @@ pub mod evaluator;
 pub mod llm;
 pub mod novelty;
 pub mod promoter;
+pub mod review;
 pub mod prompts;
 pub mod runner;
 pub mod state;

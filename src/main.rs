@@ -118,6 +118,9 @@ pub enum Command {
     /// List all problem sets and their contents
     ListProblemsets,
 
+    /// Show a full system review: mind, top candidates, score trajectory, problem sets, last changes
+    Review,
+
     /// Check all conjectures for novelty — are they restatements of known theories?
     NoveltyCheck,
 
@@ -202,6 +205,10 @@ async fn main() -> Result<()> {
 
         Command::Read => {
             teg::runner::read(&config).await?;
+        }
+
+        Command::Review => {
+            teg::review::report()?;
         }
 
         Command::NoveltyCheck => {
