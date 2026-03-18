@@ -79,17 +79,19 @@ cat my-tool.md | cargo run -- add-tool --layer mind --title "Tool Title"
 
 ## Conceptual Hierarchy
 
-All layers contain the same atom: a **Tool** — a unit of perspective expressed as plain text. Tools are shared across all problem sets.
+All layers contain the same atom: a **Conjecture** — a unit of explanatory knowledge or perspective, held fallibly. The layers differ only in trust and stability, not in kind.
 
 ```
-Mind          — most trusted, slowest to change
+Mind          — most trusted conjectures, slowest to change
   ↑ promote / ↓ demote
-Perspectives  — active tool database, medium stability
+Perspectives  — active conjectures under test, medium stability
   ↑ promote / ↓ demote
-Conjectures   — generated each run, ephemeral
+Generated     — new conjectures, scored each run, ephemeral
 ```
 
-**Problem Sets** are named collections of related problems, capped at 10. A run operates on one problem set. Problems are stored globally and referenced by ID — a problem can belong to multiple sets. Each run discovers candidate problems and adds them to the active set, then deduplication and cap enforcement keep the set focused.
+Conjectures are shared across all problem sets — the mind and perspectives are not scoped to any one set.
+
+**Problem Sets** are named, scoped collections of problems (cap: 10). Problems only exist within sets. A run operates on one problem set, discovers candidate problems, and adds them to the set. Deduplication and cap enforcement keep the set focused.
 
 ## State Layout
 

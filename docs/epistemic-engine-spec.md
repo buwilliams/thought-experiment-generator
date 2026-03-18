@@ -19,17 +19,19 @@ This is a thinking engine, not a search engine. The goal is not to find a pre-ex
 
 ## Conceptual Hierarchy
 
-All layers contain the same atom: a **Tool** — a unit of perspective or knowledge expressed as a plain text statement or framework. The layers differ only in trust and stability.
+All layers contain the same atom: a **Conjecture** — a unit of explanatory knowledge or perspective, held fallibly. The layers differ only in trust and stability, not in kind. This follows directly from Deutschian fallibilism: there is no bedrock of certain knowledge, only conjectures held with varying degrees of confidence.
 
 ```
-Mind          — most trusted, slowest to change
+Mind          — most trusted conjectures, slowest to change
   ↑ promote / ↓ demote
-Perspectives  — active tool database, medium stability
+Perspectives  — active conjectures under test, medium stability
   ↑ promote / ↓ demote
-Conjectures   — generated each run, ephemeral
+Generated     — new conjectures, scored each run, ephemeral
 ```
 
-**Problems** are a separate ranked database. They are not in the promotion hierarchy but are scored by the system and can be discovered during evaluation.
+Conjectures (mind and perspectives) are shared across all problem sets.
+
+**Problem Sets** are scoped collections of problems (cap: 10). Problems only exist within sets — there is no global problem pool. Problem sets are not in the promotion hierarchy but are scored and pruned by the system each run.
 
 ---
 
@@ -39,7 +41,7 @@ The "database" is the filesystem. All state is stored as markdown files in subdi
 
 Each entity has two files: a `.md` for human-readable content and a `.json` sidecar for machine-readable metadata. Prompts read from JSON (summaries, scores). Humans read `.md`.
 
-**Tools are shared across all problem sets.** The mind and perspective layers are global. Problem sets are scoped views into the shared problem store.
+**Conjectures (mind and perspectives) are shared across all problem sets.** Problem sets are scoped collections — problems only exist within sets.
 
 ### Tool content — `{layer}/{id}.md`
 
