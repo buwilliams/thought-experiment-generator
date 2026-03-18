@@ -42,6 +42,9 @@ cargo run -- run --problemset a1b2c3d4
 cargo run -- run                               # works if only one set exists
 cargo run -- run --problemset a1b2c3d4 --problem "new problem text"
 
+# Run on all problem sets sequentially
+cargo run -- run-all
+
 # Read last run summary without running
 cargo run -- read
 

@@ -17,6 +17,7 @@ cargo run -- list-problemsets                                             # list
 cargo run -- run --problemset <id>                                        # run on a set
 cargo run -- run                                                          # run (if only one set)
 cargo run -- run --problemset <id> --problem "..."                        # add problem then run
+cargo run -- run-all                                                      # run all problem sets sequentially
 cargo run -- read                                                         # read last summary
 cargo run -- --fresh run                                                  # reset to seed and run
 RUST_LOG=debug cargo run -- run                                           # debug logging

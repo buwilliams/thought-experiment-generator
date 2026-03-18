@@ -172,6 +172,21 @@ pub async fn run(
     Ok(())
 }
 
+pub async fn run_all(client: Arc<LlmClient>, config: &Config) -> Result<()> {
+    state::ensure_initialized()?;
+    let sets = state::load_problemsets()?;
+    if sets.is_empty() {
+        anyhow::bail!("No problem sets found. Create one with:\n  cargo run -- create-problemset \"...\"");
+    }
+    println!("Running {} problem set(s)...", sets.len());
+    for ps in &sets {
+        let display = ps.content.lines().next().unwrap_or("").trim();
+        println!("\n=== Problem set: {} — {} ===", ps.meta.id, display);
+        run(Arc::clone(&client), config, Some(&ps.meta.id), None).await?;
+    }
+    Ok(())
+}
+
 pub async fn read(_: &Config) -> Result<()> {
     state::ensure_initialized()?;
     match state::load_last_summary()? {

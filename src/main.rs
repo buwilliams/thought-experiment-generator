@@ -65,6 +65,9 @@ pub enum Command {
         problem: Option<String>,
     },
 
+    /// Run one full cycle on every problem set sequentially
+    RunAll,
+
     /// Display the last run summary without running
     Read,
 
@@ -152,6 +155,10 @@ async fn main() -> Result<()> {
     match cli.command {
         Command::Run { problemset, problem } => {
             teg::runner::run(client, &config, problemset.as_deref(), problem.as_deref()).await?;
+        }
+
+        Command::RunAll => {
+            teg::runner::run_all(client, &config).await?;
         }
 
         Command::Read => {
