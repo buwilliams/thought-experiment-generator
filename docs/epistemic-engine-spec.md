@@ -21,7 +21,7 @@ Progress in physics happens in abstract space, not in the brain tissue of physic
 
 The same distinction applies here. An LLM predicts tokens — it is the substrate. This system operates one level up: in the space where conjectures are formed, tested against problems, and promoted based on explanatory power. The LLM executes; the architecture reasons. Progress happens at the architecture level, for the same reason that human intellectual progress happens not at the neuron level but at the level of ideas.
 
-This is why this system is not a model and not a scaling effort. The bottleneck is not substrate quality — it is the structure of how knowledge grows. Early signs of this principle are visible in purpose-built agent systems (research agents, scientific automation pipelines) that use LLMs as an execution substrate while organizing reasoning at a higher level. This is the generalization of that pattern: a domain-agnostic architecture for how explanations grow through conjecture and criticism.
+This system explores a complementary direction to scaling: organizing reasoning at a higher level rather than improving the substrate. Purpose-built agent systems (research agents, scientific automation pipelines, reasoning models) show that structure compounds what substrate alone cannot. This is the generalization of that pattern: a domain-agnostic architecture for how explanations grow through conjecture and criticism.
 
 ---
 
