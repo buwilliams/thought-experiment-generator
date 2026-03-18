@@ -23,29 +23,29 @@ This is why we are not building a better model. The bottleneck is not substrate 
 ## Usage
 
 ```sh
-# Create a problem set (ID is a hash of the content)
+# Create a problem set (ID is first 8 chars of sha256 of content — printed on creation)
 cargo run -- create-problemset "LLMs and epistemology: exploring whether LLMs generate genuine knowledge"
 cargo run -- create-problemset --file my-problemset.md
 cat my-problemset.md | cargo run -- create-problemset
 
-# Add problems to a set (cap: 10 per set)
-cargo run -- add-problem --problemset llms-and-knowledge --text "Can LLMs create new knowledge?"
-
-# Remove a problem from a set
-cargo run -- remove-problem --problemset llms-and-knowledge --problem-id "can-llms-create-new-knowledge"
-
-# List all problem sets and their contents
+# List all problem sets to find the hash ID
 cargo run -- list-problemsets
 
+# Add problems to a set (cap: 10 per set)
+cargo run -- add-problem --problemset a1b2c3d4 --text "Can LLMs create new knowledge?"
+
+# Remove a problem from a set
+cargo run -- remove-problem --problemset a1b2c3d4 --problem-id "can-llms-create-new-knowledge"
+
 # Run on a problem set
-cargo run -- run --problemset llms-and-knowledge
+cargo run -- run --problemset a1b2c3d4
 cargo run -- run                               # works if only one set exists
-cargo run -- run --problemset llms-and-knowledge --problem "new problem text"
+cargo run -- run --problemset a1b2c3d4 --problem "new problem text"
 
 # Read last run summary without running
 cargo run -- read
 
-# Reset state to seed
+# Reset state to seed and run immediately (seed is runnable out of the box)
 cargo run -- --fresh run
 
 # Add a conjecture
@@ -102,7 +102,7 @@ Generated   — outputs produced each run, scored and ephemeral
 
 Conjectures are shared across all problem sets — the mind and candidates are not scoped to any one set.
 
-**Problem Sets** are named, scoped collections of problems (cap: 10). Problems only exist within sets. A run operates on one problem set, discovers candidate problems, and adds them to the set. Deduplication and cap enforcement keep the set focused.
+**Problem Sets** are scoped collections of problems (cap: 10), identified by a hash of their content. Problems only exist within sets. A run operates on one problem set, discovers candidate problems, and adds them to the set. Deduplication and cap enforcement keep the set focused.
 
 **Evaluations** are a stable, manually-governed set of scoring criteria applied in Phase 2. They sit outside the promotion hierarchy — the system never adds, removes, or reorders them. Users extend or refine evaluations by editing `data/state/evaluations/` directly. Each evaluation defines a scoring criterion and a weight; the combined output score is the weighted sum across all active evaluations.
 
@@ -127,11 +127,20 @@ Seed state lives in `data/seed/`. `--fresh` resets `data/state/` from seed.
 
 ## Seed State
 
+The seed is runnable out of the box — `cargo run -- --fresh run` starts a full cycle immediately.
+
+**Problem set:** ID `default`, scoped to "Can LLMs create knowledge?" with three starter problems:
+- Can LLMs create new knowledge?
+- Does architecture matter more than model scale?
+- What makes an explanation hard to vary?
+
 **Mind conjectures:** Deutschian Epistemology, Ontology, Systems Thinking (Donella Meadows)
 
 **Candidate conjectures:** Thought Experiments, Mathematical Formalism, Counterfactual Reasoning, Extreme Cases, Historical Genesis
 
 **Evaluations:** Logical Consistency (weight 0.3), Hard to Vary (weight 0.7)
+
+The seed problem set uses the static ID `default`. Problem sets you create via `create-problemset` get an ID that is the first 8 characters of the sha256 of their content — printed when the set is created and shown in `list-problemsets` output as `[id]`.
 
 ## Documents
 

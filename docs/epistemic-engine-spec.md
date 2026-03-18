@@ -238,8 +238,11 @@ data/seed/
   mind/                  — starting mind conjectures (.md + .json each)
   candidates/            — starting candidate conjectures (.md + .json each)
   evaluations/           — starting evaluation criteria (.md + .json each)
-  problems/              — optional starting problems (empty by default)
+  problems/              — starting problems (.md + .json each)
+  problemsets/           — starting problem sets (.md + .json each)
 ```
+
+The seed is runnable out of the box. The default problem set uses the static ID `default`. Problem sets created via `create-problemset` get an ID equal to the first 8 characters of `sha256(content)`, printed on creation and shown by `list-problemsets` as `[id]`.
 
 On first run, seed state is copied to `data/state/`. `--fresh` resets `data/state/` from seed.
 
@@ -455,6 +458,16 @@ Current seed candidate conjectures:
 
 ---
 
+## Seed Problems
+
+The seed problem set (`default`) contains three starter problems:
+
+- **`can-llms-create-new-knowledge`** — Can a system that predicts tokens generate explanations that constitute genuine knowledge, or does it only rearrange what it has seen?
+- **`does-architecture-matter-more-than-model-scale`** — Is the bottleneck for AI epistemic progress in the substrate (model size, compute) or in the structure above it (how conjectures are formed, tested, and promoted)?
+- **`what-makes-an-explanation-hard-to-vary`** — What structural properties distinguish an explanation whose parts are all load-bearing from one where details can be swapped freely without damaging the account?
+
+---
+
 ## Seed Evaluations
 
 The seed evaluations are defined by the files in `data/seed/evaluations/`. On first run, these are copied to `data/state/evaluations/`. They are never modified by the system — users manage them directly.
@@ -475,20 +488,20 @@ cargo run -- create-problemset --file my-problemset.md
 cat my-problemset.md | cargo run -- create-problemset
 
 # Add problems to a set
-cargo run -- add-problem --problemset llms-and-knowledge --text "Can LLMs create new knowledge?"
+cargo run -- add-problem --problemset a1b2c3d4 --text "Can LLMs create new knowledge?"
 
 # Remove a problem from a set
-cargo run -- remove-problem --problemset llms-and-knowledge --problem-id "can-llms-create-new-knowledge"
+cargo run -- remove-problem --problemset a1b2c3d4 --problem-id "can-llms-create-new-knowledge"
 
 # List all problem sets
 cargo run -- list-problemsets
 
 # Run on a problem set
-cargo run -- run --problemset llms-and-knowledge
+cargo run -- run --problemset a1b2c3d4
 cargo run -- run                              # works if only one set exists
 
 # Run with a new problem added before running
-cargo run -- run --problemset llms-and-knowledge --problem "your problem text"
+cargo run -- run --problemset a1b2c3d4 --problem "your problem text"
 
 # Read last run summary without running
 cargo run -- read
