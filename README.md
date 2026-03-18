@@ -69,42 +69,17 @@ cat my-conjecture.md | cargo run -- add-conjecture --layer mind --title "Conject
 
 ## How It Works
 
-**Phase 1 — Generate Outputs.** Each (problem, candidate conjecture) pair produces one generated output. The mind's conjecture summaries form the system prompt. The candidate conjecture's summary and problem summary are combined in the user prompt. Pairs run concurrently. Already-generated outputs are skipped (resumable runs).
+The system maintains a **mind** — a small set of **conjectures** that represent its most trusted explanatory lenses. A conjecture is any unit of explanatory knowledge held fallibly: a perspective, a framework, a way of seeing. The mind's conjectures serve as context for every operation — they form the system prompt for all LLM calls.
 
-**Phase 2 — Evaluate Outputs.** Each generated output is scored by all active evaluation criteria (loaded from `data/state/evaluations/`). The seed criteria are:
-- *Logical Consistency:* Is the output internally self-consistent? Score 0.0–1.0. Below threshold (default 0.3), output is skipped.
-- *Hard to Vary:* The mind generates 10 yes/no questions probing whether each part of the output is load-bearing. Score = yes_count / 10.
+Alongside the mind, the system holds a pool of **candidate conjectures**: active ideas under test, less trusted than the mind but ready to be promoted into it. You also provide a **problem set** — a scoped collection of up to 10 questions you want the system to explore. Each run operates on one problem set.
 
-Combined score is a weighted sum of all active evaluation scores. Evaluation criteria are manually managed — the system never adds or removes them automatically. Users can add criteria by editing `data/state/evaluations/` directly.
+**Phase 1 — Generate.** Each (problem, candidate conjecture) pair is collided: the mind provides context, the candidate provides the lens, and the LLM produces a **generated output** — a structured thought experiment exploring what happens when that lens meets that problem. All pairs run concurrently. Already-generated outputs are skipped, so runs are resumable.
 
-- *Candidate Problems:* The mind also identifies unresolved tensions and open questions raised by each output. Candidates scoring above threshold are admitted to the active problem set.
+**Phase 2 — Evaluate.** Each output is scored against a set of **evaluation criteria** loaded from `data/state/evaluations/`. The two seed criteria are *Logical Consistency* (is the output internally self-consistent? outputs below threshold are discarded) and *Hard to Vary* (the mind generates 10 yes/no questions probing whether each part of the output is load-bearing; score = yes_count / 10). Combined score is a normalized weighted sum. Evaluation criteria are manually managed — the system never modifies them. You extend or refine them by editing `data/state/evaluations/` directly. The mind also scans each output for unresolved tensions worth pursuing as new problems; those above a score threshold are admitted to the active problem set.
 
-**Phase 3 — Rank and Promote.**
-- Conjecture scores update as rolling averages weighted by run_count. Composite score = `score × √(problem_coverage_breadth)`.
-- Problem scores update as rolling averages of mean output score across all conjectures applied.
-- *Problem review:* The mind receives all problem summaries in the set and removes duplicates and subsumed problems (removed from set membership, not global). The bottom-ranked problem with sufficient run history is also dropped from the set, enforcing the 10-problem cap.
-- *Conjecture promotion:* Top candidate conjecture (by composite, min run_count) → mind. Top generated output → summarized into a new candidate conjecture.
-- *Conjecture demotion:* Bottom mind conjecture → candidates. Bottom candidate conjecture → discarded.
+**Phase 3 — Rank and Promote.** Scores feed back into the conjecture pool. The top-ranked candidate conjecture (scored by `score × √problem_coverage`, with a minimum run history) is promoted into the mind. The top-ranked generated output is summarized and added to candidates. The bottom mind conjecture is demoted to candidates; the bottom candidate is discarded. Problems are deduplicated and the lowest-ranked (with sufficient run history) is dropped if the set exceeds 10. Over many runs, what survives is whatever produces the highest-quality explanations.
 
-**Phase 4 — Report.** Ranked output table, top 5 summaries, all changes to conjectures and problems.
-
-## Conceptual Hierarchy
-
-All layers contain the same atom: a **Conjecture** — a unit of explanatory knowledge or perspective, held fallibly. The layers differ only in trust and stability, not in kind.
-
-```
-Mind        — most trusted conjectures, slowest to change
-  ↑ promote / ↓ demote
-Candidates  — active conjectures under test, medium stability
-  ↑ promote / ↓ demote
-Generated   — outputs produced each run, scored and ephemeral
-```
-
-Conjectures are shared across all problem sets — the mind and candidates are not scoped to any one set.
-
-**Problem Sets** are scoped collections of problems (cap: 10), identified by a hash of their content. Problems only exist within sets. A run operates on one problem set, discovers candidate problems, and adds them to the set. Deduplication and cap enforcement keep the set focused.
-
-**Evaluations** are a stable, manually-governed set of scoring criteria applied in Phase 2. They sit outside the promotion hierarchy — the system never adds, removes, or reorders them. Users extend or refine evaluations by editing `data/state/evaluations/` directly. Each evaluation defines a scoring criterion and a weight; the combined output score is the weighted sum across all active evaluations.
+**Phase 4 — Report.** A ranked output table, top 5 summaries, and a full log of promotions, demotions, and problem changes is written to `data/state/runs/NNN/summary.md`.
 
 ## State Layout
 
@@ -123,24 +98,7 @@ data/state/
       summary.md                   — ranked results + changes
 ```
 
-Seed state lives in `data/seed/`. `--fresh` resets `data/state/` from seed.
-
-## Seed State
-
-The seed is runnable out of the box — `cargo run -- --fresh run` starts a full cycle immediately.
-
-**Problem set:** ID `default`, scoped to "Can LLMs create knowledge?" with three starter problems:
-- Can LLMs create new knowledge?
-- Does architecture matter more than model scale?
-- What makes an explanation hard to vary?
-
-**Mind conjectures:** Deutschian Epistemology, Ontology, Systems Thinking (Donella Meadows)
-
-**Candidate conjectures:** Thought Experiments, Mathematical Formalism, Counterfactual Reasoning, Extreme Cases, Historical Genesis
-
-**Evaluations:** Logical Consistency (weight 0.3), Hard to Vary (weight 0.7)
-
-The seed problem set uses the static ID `default`. Problem sets you create via `create-problemset` get an ID that is the first 8 characters of the sha256 of their content — printed when the set is created and shown in `list-problemsets` output as `[id]`.
+Seed state lives in `data/seed/`. `--fresh` resets `data/state/` from seed. The seed is runnable out of the box — `cargo run -- --fresh run` starts a full cycle with no setup. The seed problem set uses the static ID `default`; problem sets you create via `create-problemset` get an ID equal to the first 8 characters of the sha256 of their content, printed on creation and shown by `list-problemsets` as `[id]`.
 
 ## Documents
 
