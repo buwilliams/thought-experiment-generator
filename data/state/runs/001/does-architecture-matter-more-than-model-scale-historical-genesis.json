@@ -2,21 +2,21 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 1.0,
-  "total": 0.982,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
   "candidate_problems": [
     {
-      "text": "How can 'epistemic progress' and 'organized criticism' be operationalized in AI systems without collapsing back into proxy metrics like prediction accuracy, preference scores, or benchmark performance? The conjecture depends on a measurable distinction between systems that merely produce plausible outputs and systems that genuinely improve through conjecture and criticism, but it leaves open what concrete observables, protocols, or institutional signals would track that distinction.",
+      "text": "How can we operationalize and measure 'epistemic progress'—as distinct from fluency, benchmark performance, or task reward—so that architectures for conjecture, criticism, and error-correction can be compared and optimized without collapsing back into proxy gaming?",
       "score": 0.97
     },
     {
-      "text": "What system architectures and institutional arrangements would actually create effective selection dynamics for explanations—preserving conjectures, generating serious rivals, designing severe tests, and recording why ideas survive—rather than just adding another layer of optimization theater? The conjecture identifies missing feedback loops, but it is unresolved whether these loops can be engineered in practice, at scale, under real product, safety, and economic constraints.",
-      "score": 0.94
+      "text": "What concrete system architectures would actually convert foundation models from prediction engines into institutions for knowledge creation: e.g., mechanisms for generating explanatory variants, organizing adversarial criticism, preserving reasons claims survived tests, and sustaining dissent over time?",
+      "score": 0.95
     },
     {
-      "text": "Where is the empirical threshold at which substrate scaling begins to show diminishing epistemic returns relative to structural interventions, and how would one causally disentangle the two? The conjecture asserts a shift from substrate bottlenecks to structural bottlenecks, but it remains an open question whether this is already true, domain-specific, or only true for certain kinds of knowledge creation.",
-      "score": 0.91
+      "text": "Is the conjectured bottleneck truly structural rather than substrate-level, or do larger/more capable models eventually internalize the needed error-correcting processes on their own? In other words, where is the phase transition between more compute helping epistemically and merely amplifying benchmark-optimized behavior?",
+      "score": 0.92
     }
   ]
 }

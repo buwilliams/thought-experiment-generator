@@ -2,21 +2,21 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "thought-experiments",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 1.0,
-  "total": 0.982,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.2,
+  "total": 0.41900000000000004,
   "candidate_problems": [
     {
-      "text": "How can 'counterfactual indispensability' or 'tolerance to substitution' be made precise and measurable across different kinds of explanations (causal, mathematical, functional, evolutionary)? The conjecture hinges on a structural property, but it leaves open what formal criterion distinguishes genuinely load-bearing parts from merely replaceable implementations.",
-      "score": 0.97
+      "text": "How can 'counterfactual sensitivity of explanatory structure' be made precise without collapsing into triviality or domain-dependence? The conjecture relies on notions like dependency density, substitutability, and narrow counterfactual corridors, but it leaves open how to measure these across scientific, mathematical, historical, or everyday explanations. A key unresolved tension is whether this is a substantive criterion of explanatory depth or just an intuitive redescription of 'good explanations are constrained.'",
+      "score": 0.95
     },
     {
-      "text": "What determines the correct level of abstraction at which an invariant counts as the real explanatory content? A part may look swappable at one description level but indispensable at another, so the conjecture raises an unresolved problem of level-relativity: when should we treat details as constitutive constraints versus tokens of a higher-level type?",
-      "score": 0.94
+      "text": "How can the conjecture distinguish genuinely load-bearing structure from mere overfitting or brittleness? A tightly coupled explanation can be fragile because it captures real mechanism, but it can also be fragile because it is ad hoc, overly specific, or tuned to one case. The open problem is to identify what separates explanatory necessity from accidental dependence, especially when both produce low substitutability and narrow nearby variants.",
+      "score": 0.98
     },
     {
-      "text": "Is there a principled tradeoff between explanatory robustness under substitution and explanatory specificity or generative power? The conjecture suggests brittle explanations track narrow mechanisms while robust ones capture broader invariants, but it remains open whether one kind is deeper, or whether depth depends on balancing universality against mechanistic constraint.",
-      "score": 0.91
+      "text": "What is the right balance between explanatory slack and explanatory power, given that many successful explanations are multiply realizable or abstract? The conjecture seems to privilege narrow, tightly constrained mechanisms, yet powerful explanations in physics, biology, computer science, and philosophy often work precisely because many lower-level details are interchangeable. The unresolved question is whether swap-friendliness always signals weakness, or whether some forms of invariance and abstraction are themselves marks of deeper explanation.",
+      "score": 0.99
     }
   ]
 }

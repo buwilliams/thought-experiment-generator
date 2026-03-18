@@ -2,20 +2,20 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.93,
-  "hard_to_vary": 0.7,
-  "total": 0.7689999999999999,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
   "candidate_problems": [
     {
-      "text": "What operational criterion could distinguish 'corrigible explanation' from merely fluent recombination in token-predicting systems? The conjecture shifts the boundary from mechanism to error-correctability, but leaves open how to test whether an output genuinely functions as a conjecture that can survive criticism, guide intervention, and improve under correction rather than only mimic those properties.",
+      "text": "What are the necessary and sufficient conditions under which predictive competence gives rise to genuinely explanatory, error-correctable knowledge rather than merely fluent pattern continuation? The conjecture gestures at 'larger epistemic systems' and 'critical and corrective conditions' but leaves unresolved what concrete structures, capacities, and feedback loops constitute that threshold.",
       "score": 0.97
     },
     {
-      "text": "What system-level structures are required for token prediction to participate in genuine knowledge growth rather than isolated one-off performance? The conjecture implies that knowledge creation depends not just on output quality but on feedback loops, memory, revision, and exposure to consequences; the unresolved question is which architectural and social arrangements make those loops real and productive.",
-      "score": 0.93
+      "text": "How can we operationally distinguish 'mere rearrangement' from compositional conjecture that survives criticism, especially in systems trained on vast corpora where novelty, reuse, and abstraction are deeply entangled? The conjecture replaces an old dichotomy but does not yet provide a robust test or metric for identifying explanation-like outputs versus sophisticated interpolation.",
+      "score": 0.94
     },
     {
-      "text": "Can explanatory novelty be defined without requiring independence from training data, while still avoiding the collapse of 'knowledge' into any useful recombination? The conjecture rejects ex nihilo originality, but it remains open how to characterize novelty, abstraction, and problem-solving consequences in a way that preserves a substantive notion of knowledge rather than redescribing all successful pattern extension as knowledge creation.",
+      "text": "Is explanatory knowledge attributable to the token-predicting model itself, or only to a broader socio-technical system that includes interpreters, evaluators, tools, and environments? The conjecture implies that knowledge emerges within a larger epistemic process, but this raises an unresolved ontological tension about the locus of agency, understanding, and responsibility.",
       "score": 0.91
     }
   ]

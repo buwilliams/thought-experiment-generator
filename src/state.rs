@@ -4,8 +4,8 @@ use anyhow::{Context, Result};
 use tracing::info;
 
 use crate::types::{
-    Conjecture, ConjectureMeta, Generated, GeneratedMeta, Layer, Problem, ProblemMeta, ProblemSet,
-    ProblemSetMeta, Question, StateInfo,
+    Conjecture, ConjectureMeta, Generated, GeneratedMeta, Layer, ProblemSet, ProblemSetMeta,
+    Question, StateInfo,
 };
 
 const STATE_DIR: &str = "data/state";
@@ -22,10 +22,6 @@ fn layer_dir(layer: &Layer) -> PathBuf {
         Layer::Mind => "mind",
         Layer::Candidates => "candidates",
     })
-}
-
-fn problems_dir() -> PathBuf {
-    state_dir().join("problems")
 }
 
 fn run_dir(run: u32) -> PathBuf {
@@ -167,64 +163,6 @@ pub fn delete_conjecture(id: &str, layer: &Layer) -> Result<()> {
     Ok(())
 }
 
-// --- Problems ---
-
-pub fn load_problems() -> Result<Vec<Problem>> {
-    let dir = problems_dir();
-    if !dir.exists() {
-        return Ok(vec![]);
-    }
-    let mut problems = vec![];
-    for entry in std::fs::read_dir(&dir)? {
-        let entry = entry?;
-        let path = entry.path();
-        if path.extension().and_then(|e| e.to_str()) == Some("json") {
-            match load_problem_from_json(&path) {
-                Ok(p) => problems.push(p),
-                Err(e) => tracing::warn!("Skipping problem {}: {e}", path.display()),
-            }
-        }
-    }
-    problems.sort_by_key(|p| p.meta.rank);
-    Ok(problems)
-}
-
-fn load_problem_from_json(json_path: &Path) -> Result<Problem> {
-    let json_text = std::fs::read_to_string(json_path)?;
-    let meta: ProblemMeta = serde_json::from_str(&json_text)?;
-    let md_path = json_path.with_extension("md");
-    let md_text = std::fs::read_to_string(md_path)?;
-    let (title, summary, full_text) = parse_content_md(&md_text);
-    Ok(Problem { meta, title, summary, full_text })
-}
-
-pub fn save_problem(problem: &Problem) -> Result<()> {
-    let dir = problems_dir();
-    std::fs::create_dir_all(&dir)?;
-    std::fs::write(
-        dir.join(format!("{}.md", problem.meta.id)),
-        format_content_md(&problem.title, &problem.summary, &problem.full_text),
-    )?;
-    std::fs::write(
-        dir.join(format!("{}.json", problem.meta.id)),
-        serde_json::to_string_pretty(&problem.meta)?,
-    )?;
-    Ok(())
-}
-
-pub fn problem_exists(id: &str) -> bool {
-    problems_dir().join(format!("{}.json", id)).exists()
-}
-
-pub fn delete_problem(id: &str) -> Result<()> {
-    let dir = problems_dir();
-    let md = dir.join(format!("{}.md", id));
-    let json = dir.join(format!("{}.json", id));
-    if md.exists() { std::fs::remove_file(md)?; }
-    if json.exists() { std::fs::remove_file(json)?; }
-    Ok(())
-}
-
 // --- Problem Sets ---
 
 fn problemsets_dir() -> PathBuf {
@@ -311,22 +249,6 @@ pub fn resolve_problemset(id: Option<&str>) -> Result<ProblemSet> {
             }
         }
     }
-}
-
-pub fn load_problems_for_set(ps: &ProblemSet) -> Result<Vec<Problem>> {
-    let mut problems = vec![];
-    for id in &ps.meta.problem_ids {
-        let path = problems_dir().join(format!("{}.json", id));
-        if !path.exists() {
-            tracing::warn!("Problem '{}' in set '{}' not found — skipping", id, ps.meta.id);
-            continue;
-        }
-        match load_problem_from_json(&path) {
-            Ok(p) => problems.push(p),
-            Err(e) => tracing::warn!("Skipping problem {}: {e}", id),
-        }
-    }
-    Ok(problems)
 }
 
 // --- Generated outputs (ephemeral, produced each run) ---

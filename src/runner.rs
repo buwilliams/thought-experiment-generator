@@ -31,9 +31,8 @@ pub async fn run(
 
     let mind = state::load_conjectures(&Layer::Mind)?;
     let candidates = state::load_conjectures(&Layer::Candidates)?;
-    let problems = state::load_problems_for_set(&problemset)?;
 
-    if problems.is_empty() {
+    if problemset.meta.problems.is_empty() {
         anyhow::bail!(
             "Problem set '{}' has no problems. Add one with:\n  cargo run -- add-problem --problemset {} --text \"...\"",
             problemset.meta.id,
@@ -50,14 +49,14 @@ pub async fn run(
     println!("Problem set:           {} — {}", problemset.meta.id, ps_display);
     println!("Mind conjectures:      {}", mind.len());
     println!("Candidate conjectures: {}", candidates.len());
-    println!("Problems:              {}", problems.len());
-    println!("Pairs to process:      {}\n", problems.len() * candidates.len());
+    println!("Problems:              {}", problemset.meta.problems.len());
+    println!("Pairs to process:      {}\n", problemset.meta.problems.len() * candidates.len());
 
     let mind_system = prompts::format_mind_system(&mind);
 
     // Phase 1 + 2: Generate and evaluate all (problem, candidate conjecture) pairs concurrently
     let mut handles = vec![];
-    for problem in &problems {
+    for problem in &problemset.meta.problems {
         for candidate in &candidates {
             if state::generated_exists(run, &problem.meta.id, &candidate.meta.id) {
                 info!("Resuming: skipping existing output {}-{}", problem.meta.id, candidate.meta.id);
@@ -100,42 +99,31 @@ pub async fn run(
 
     // Phase 3: Rank and promote
     let mut candidates_mut = candidates.clone();
-    let mut problems_mut = problems.clone();
 
     promoter::update_conjecture_scores(&mut candidates_mut, &generated);
-    promoter::update_problem_scores(&mut problems_mut, &generated);
+    promoter::update_problem_scores(&mut problemset.meta.problems, &generated);
 
     for conjecture in &candidates_mut {
         state::save_conjecture(conjecture)?;
-    }
-    for problem in &problems_mut {
-        state::save_problem(problem)?;
     }
 
     // Admit candidate problems into the problem set
     admit_candidates_to_set(&generated, &mut problemset, config.problem_admission_threshold)?;
 
-    // Load updated set problems (existing scored + newly admitted)
-    let all_set_problems = state::load_problems_for_set(&problemset)?;
-
-    // Problem review: deduplicate within the set (remove from membership, not global DB)
-    let removed_ids = run_problem_deduplication(&client, &mind_system, &all_set_problems).await;
-    problemset.meta.problem_ids.retain(|id| !removed_ids.contains(id));
+    // Problem review: deduplicate within the set
+    let removed_ids = run_problem_deduplication(&client, &mind_system, &problemset.meta.problems).await;
+    problemset.meta.problems.retain(|p| !removed_ids.contains(&p.meta.id));
     info!("Deduplication removed {} problems from set", removed_ids.len());
 
     // Problem review: enforce cap — drop bottom-ranked until ≤ PROBLEMSET_MAX_SIZE
-    let mut set_problems_remaining: Vec<Problem> = all_set_problems
-        .into_iter()
-        .filter(|p| !removed_ids.contains(&p.meta.id))
-        .collect();
     let mut cap_removed: usize = 0;
-    while problemset.meta.problem_ids.len() > PROBLEMSET_MAX_SIZE {
-        match promoter::find_problem_to_remove(&set_problems_remaining, config.min_run_count) {
-            Some(p) => {
-                let id = p.meta.id.clone();
+    while problemset.meta.problems.len() > PROBLEMSET_MAX_SIZE {
+        match promoter::find_problem_to_remove(&problemset.meta.problems, config.min_run_count)
+            .map(|p| p.meta.id.clone())
+        {
+            Some(id) => {
                 info!("Cap enforcement: removing '{}' from set", id);
-                problemset.meta.problem_ids.retain(|x| x != &id);
-                set_problems_remaining.retain(|p| p.meta.id != id);
+                problemset.meta.problems.retain(|p| p.meta.id != id);
                 cap_removed += 1;
             }
             None => {
@@ -194,7 +182,7 @@ pub async fn read(_: &Config) -> Result<()> {
 // --- Helpers ---
 
 fn add_user_problem_to_set(text: &str, problemset: &mut ProblemSet) -> Result<()> {
-    if problemset.meta.problem_ids.len() >= PROBLEMSET_MAX_SIZE {
+    if problemset.meta.problems.len() >= PROBLEMSET_MAX_SIZE {
         anyhow::bail!(
             "Problem set '{}' is at capacity ({} problems). Remove a problem first with:\n  cargo run -- remove-problem --problemset {} --problem-id <id>",
             problemset.meta.id,
@@ -203,29 +191,25 @@ fn add_user_problem_to_set(text: &str, problemset: &mut ProblemSet) -> Result<()
         );
     }
     let id = state::slugify(&text.chars().take(60).collect::<String>());
-    if problemset.meta.problem_ids.contains(&id) {
+    if problemset.meta.problems.iter().any(|p| p.meta.id == id) {
         info!("Problem already in set: {}", id);
         return Ok(());
     }
-    if !state::problem_exists(&id) {
-        let count = state::load_problems()?.len();
-        let problem = Problem {
-            meta: ProblemMeta {
-                id: id.clone(),
-                source: ProblemSource::User,
-                score: 0.0,
-                rank: count as u32 + 1,
-                run_count: 0,
-                created_at: state::now_iso8601(),
-            },
-            title: text.chars().take(80).collect(),
-            summary: text.chars().take(200).collect(),
-            full_text: text.to_string(),
-        };
-        state::save_problem(&problem)?;
-        info!("Created user problem: {}", id);
-    }
-    problemset.meta.problem_ids.push(id.clone());
+    let rank = problemset.meta.problems.len() as u32 + 1;
+    let problem = Problem {
+        meta: ProblemMeta {
+            id: id.clone(),
+            source: ProblemSource::User,
+            score: 0.0,
+            rank,
+            run_count: 0,
+            created_at: state::now_iso8601(),
+        },
+        title: text.chars().take(80).collect(),
+        summary: text.chars().take(200).collect(),
+        full_text: text.to_string(),
+    };
+    problemset.meta.problems.push(problem);
     state::save_problemset(problemset)?;
     info!("Added problem to set: {}", id);
     Ok(())
@@ -247,10 +231,9 @@ fn admit_candidates_to_set(
         .collect();
     pool.sort_by(|a, b| b.0.partial_cmp(&a.0).unwrap_or(std::cmp::Ordering::Equal));
 
-    let global_count = state::load_problems()?.len();
-    let mut rank_base = global_count as u32;
+    let mut rank_base = problemset.meta.problems.len() as u32;
     let mut in_set: std::collections::HashSet<String> =
-        problemset.meta.problem_ids.iter().cloned().collect();
+        problemset.meta.problems.iter().map(|p| p.meta.id.clone()).collect();
     let mut admitted = 0;
 
     for (score, text) in &pool {
@@ -261,25 +244,22 @@ fn admit_candidates_to_set(
         if in_set.contains(&id) {
             continue;
         }
-        if !state::problem_exists(&id) {
-            rank_base += 1;
-            let problem = Problem {
-                meta: ProblemMeta {
-                    id: id.clone(),
-                    source: ProblemSource::System,
-                    score: 0.0,
-                    rank: rank_base,
-                    run_count: 0,
-                    created_at: state::now_iso8601(),
-                },
-                title: text.chars().take(80).collect(),
-                summary: text.chars().take(200).collect(),
-                full_text: text.clone(),
-            };
-            state::save_problem(&problem)?;
-            info!("Created candidate problem (score {score:.2}): {}", id);
-        }
-        problemset.meta.problem_ids.push(id.clone());
+        rank_base += 1;
+        let problem = Problem {
+            meta: ProblemMeta {
+                id: id.clone(),
+                source: ProblemSource::System,
+                score: 0.0,
+                rank: rank_base,
+                run_count: 0,
+                created_at: state::now_iso8601(),
+            },
+            title: text.chars().take(80).collect(),
+            summary: text.chars().take(200).collect(),
+            full_text: text.clone(),
+        };
+        info!("Created candidate problem (score {score:.2}): {}", id);
+        problemset.meta.problems.push(problem);
         in_set.insert(id);
         admitted += 1;
     }
@@ -439,14 +419,12 @@ async fn generate_report(
     out.push_str("|------|---------|------------|-------------|--------------|-------|\n");
     for (rank, g) in sorted.iter().enumerate() {
         let output_link = format!("{}-{}.md", g.meta.problem_id, g.meta.conjecture_id);
-        let problem_link = format!("../../problems/{}.md", g.meta.problem_id);
         let conjecture_link = format!("../../candidates/{}.md", g.meta.conjecture_id);
         out.push_str(&format!(
-            "| [{}]({}) | [{}]({}) | [{}]({}) | {:.2} | {:.2} | {:.2} |\n",
+            "| [{}]({}) | {} | [{}]({}) | {:.2} | {:.2} | {:.2} |\n",
             rank + 1,
             output_link,
             g.meta.problem_id,
-            problem_link,
             g.meta.conjecture_id,
             conjecture_link,
             g.meta.logical_consistency,
@@ -463,13 +441,11 @@ async fn generate_report(
             .await
             .unwrap_or_else(|_| "(summary unavailable)".to_string());
         let output_link = format!("{}-{}.md", g.meta.problem_id, g.meta.conjecture_id);
-        let problem_link = format!("../../problems/{}.md", g.meta.problem_id);
         let conjecture_link = format!("../../candidates/{}.md", g.meta.conjecture_id);
         out.push_str(&format!(
-            "**{}. [{}]({}) × [{}]({})** ([output]({output_link})) (total: {:.2})  \n{}\n\n",
+            "**{}. {} × [{}]({})** ([output]({output_link})) (total: {:.2})  \n{}\n\n",
             rank + 1,
             g.meta.problem_id,
-            problem_link,
             g.meta.conjecture_id,
             conjecture_link,
             g.meta.total,

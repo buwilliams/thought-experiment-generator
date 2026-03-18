@@ -89,8 +89,7 @@ data/state/
   mind/                          — mind conjectures (.md + .json each)
   candidates/                    — candidate conjectures (.md + .json each)
   evaluations/                   — evaluation criteria (.md + .json each) [manually managed]
-  problems/                      — problems (.md + .json each)
-  problemsets/                   — problem set index (.md + .json each)
+  problemsets/                   — problem sets (.md scope + .json with embedded problems)
   runs/
     001/
       {problem}-{conjecture}.md    — generated output content + questions

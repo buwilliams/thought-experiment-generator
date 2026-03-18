@@ -2,21 +2,21 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.93,
+  "logical_consistency": 0.9,
   "hard_to_vary": 0.8,
-  "total": 0.839,
+  "total": 0.83,
   "candidate_problems": [
     {
-      "text": "How can the conjecture distinguish genuinely load-bearing parts from merely historically entrenched survivals when the problem-history is incomplete, distorted, or inaccessible? The core tension is whether genealogical reconstruction can reliably track explanatory necessity, or whether it risks confusing contingent historical selection with real counterfactual dependence.",
+      "text": "How can 'criticism-indexed necessity' be operationalized without collapsing into speculative historical storytelling? The conjecture relies on reconstructing the problem-context that introduced each explanatory part, but many explanations have opaque, collective, or poorly documented origins. A key open question is what present-day criteria could distinguish genuinely load-bearing elements from merely inherited ornament when historical lineage is unavailable or misleading.",
       "score": 0.95
     },
     {
-      "text": "What is the relation between origin-constraints and present explanatory structure: can a component be load-bearing now even if it was not introduced to solve the original anomaly, or cease to be load-bearing despite its historical role? This tests whether explanatory necessity is fundamentally historical, structural, or some evolving combination of both.",
-      "score": 0.93
+      "text": "What should count as load-bearing when historical origin and current explanatory role diverge? The conjecture says genuinely load-bearing parts are those whose historical introduction and current role coincide, but many explanatory components may acquire new indispensable functions after their original rationale disappears. This raises a tension between genealogical necessity and current-system necessity: can a detail be non-originating yet now structurally indispensable, and if so does the conjecture need a broader account of explanatory load-bearing?",
+      "score": 0.98
     },
     {
-      "text": "How should the conjecture handle explanations that were not produced through a single criticism-driven lineage but through recombination, abstraction, or mathematical reformulation across multiple traditions? The open question is whether 'problem-history' scales to plural, branching, or merged genealogies without losing the ability to identify essential versus swappable components.",
-      "score": 0.88
+      "text": "Does the origin-function account generalize across domains with different explanatory norms, such as mathematics, physics, biology, and everyday explanation? The conjecture assumes explanations are shaped under pressure from rival accounts and objections, but in some domains explanatory success may depend less on historical criticism and more on unification, generative power, or formal derivability. An important open problem is whether the proposed distinction is domain-general or only fits historically contingent, theory-laden explanatory practices.",
+      "score": 0.9
     }
   ]
 }

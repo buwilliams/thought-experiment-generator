@@ -1,12 +1,71 @@
 {
   "id": "default",
-  "problem_ids": [
-    "can-llms-create-new-knowledge",
-    "does-architecture-matter-more-than-model-scale",
-    "what-makes-an-explanation-hard-to-vary",
-    "what-concrete-selection-architectures-actually-improve-truth",
-    "how-can-epistemic-progress-and-better-structure-be-forma",
-    "can-increased-substrate-itself-generate-stronger-criticism-a"
+  "problems": [
+    {
+      "meta": {
+        "id": "can-llms-create-new-knowledge",
+        "source": "user",
+        "score": 0.8196666666666667,
+        "rank": 1,
+        "run_count": 1,
+        "created_at": "2026-03-18T00:00:00Z"
+      },
+      "title": "Can LLMs create new knowledge?",
+      "summary": "Can a system that predicts tokens generate explanations that constitute genuine knowledge — or does it only rearrange what it has seen?",
+      "full_text": "Can LLMs create new knowledge?"
+    },
+    {
+      "meta": {
+        "id": "does-architecture-matter-more-than-model-scale",
+        "source": "user",
+        "score": 0.8886666666666666,
+        "rank": 2,
+        "run_count": 1,
+        "created_at": "2026-03-18T00:00:00Z"
+      },
+      "title": "Does architecture matter more than model scale?",
+      "summary": "Is the bottleneck for AI epistemic progress in the substrate (model size, compute) or in the structure above it (how conjectures are formed, tested, and promoted)?",
+      "full_text": "Does architecture matter more than model scale?"
+    },
+    {
+      "meta": {
+        "id": "what-makes-an-explanation-hard-to-vary",
+        "source": "user",
+        "score": 0.69825,
+        "rank": 3,
+        "run_count": 1,
+        "created_at": "2026-03-18T00:00:00Z"
+      },
+      "title": "What makes an explanation hard to vary?",
+      "summary": "What structural properties distinguish an explanation whose parts are all load-bearing from one where details can be swapped freely without damaging the account?",
+      "full_text": "What makes an explanation hard to vary?"
+    },
+    {
+      "meta": {
+        "id": "what-is-the-right-balance-between-explanatory-slack-and-expl",
+        "source": "system",
+        "score": 0.0,
+        "rank": 4,
+        "run_count": 0,
+        "created_at": "2026-03-18T18:55:48.995049295+00:00"
+      },
+      "title": "What is the right balance between explanatory slack and explanatory power, given",
+      "summary": "What is the right balance between explanatory slack and explanatory power, given that many successful explanations are multiply realizable or abstract? The conjecture seems to privilege narrow, tightl",
+      "full_text": "What is the right balance between explanatory slack and explanatory power, given that many successful explanations are multiply realizable or abstract? The conjecture seems to privilege narrow, tightly constrained mechanisms, yet powerful explanations in physics, biology, computer science, and philosophy often work precisely because many lower-level details are interchangeable. The unresolved question is whether swap-friendliness always signals weakness, or whether some forms of invariance and abstraction are themselves marks of deeper explanation."
+    },
+    {
+      "meta": {
+        "id": "how-can-the-conjecture-distinguish-genuinely-load-bearing-st",
+        "source": "system",
+        "score": 0.0,
+        "rank": 5,
+        "run_count": 0,
+        "created_at": "2026-03-18T18:55:48.995133746+00:00"
+      },
+      "title": "How can the conjecture distinguish genuinely load-bearing structure from mere ov",
+      "summary": "How can the conjecture distinguish genuinely load-bearing structure from mere overfitting or brittleness? A tightly coupled explanation can be fragile because it captures real mechanism, but it can al",
+      "full_text": "How can the conjecture distinguish genuinely load-bearing structure from mere overfitting or brittleness? A tightly coupled explanation can be fragile because it captures real mechanism, but it can also be fragile because it is ad hoc, overly specific, or tuned to one case. The open problem is to identify what separates explanatory necessity from accidental dependence, especially when both produce low substitutability and narrow nearby variants."
+    }
   ],
   "run_count": 1,
   "created_at": "2026-03-18T00:00:00Z"

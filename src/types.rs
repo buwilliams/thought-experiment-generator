@@ -73,7 +73,7 @@ pub struct ProblemMeta {
     pub created_at: String,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Problem {
     pub meta: ProblemMeta,
     pub title: String,
@@ -126,7 +126,7 @@ pub const PROBLEMSET_MAX_SIZE: usize = 10;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ProblemSetMeta {
     pub id: String,
-    pub problem_ids: Vec<String>,
+    pub problems: Vec<Problem>,
     pub run_count: u32,
     pub created_at: String,
 }

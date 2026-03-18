@@ -1,7 +1,7 @@
 {
   "id": "historical-genesis",
   "layer": "candidates",
-  "score": 0.8633333333333333,
+  "score": 0.8166666666666668,
   "rank": 5,
   "run_count": 1,
   "problem_coverage": [
@@ -14,17 +14,17 @@
   "history": [
     {
       "run": 1,
-      "score": 0.982,
+      "score": 0.915,
       "problem_id": "does-architecture-matter-more-than-model-scale"
     },
     {
       "run": 1,
-      "score": 0.839,
+      "score": 0.83,
       "problem_id": "what-makes-an-explanation-hard-to-vary"
     },
     {
       "run": 1,
-      "score": 0.7689999999999999,
+      "score": 0.705,
       "problem_id": "can-llms-create-new-knowledge"
     }
   ]

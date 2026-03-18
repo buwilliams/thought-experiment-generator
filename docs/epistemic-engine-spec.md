@@ -83,33 +83,6 @@ Full text of the conjecture — as long as needed.
 }
 ```
 
-### Problem content — `problems/{id}.md`
-
-```markdown
-# {title}
-
-## Summary
-
-One sentence. Used in prompts.
-
-## Full Text
-
-Full text of the problem.
-```
-
-### Problem metadata — `problems/{id}.json`
-
-```json
-{
-  "id": "slug",
-  "source": "user | system",
-  "score": 0.0,
-  "rank": 1,
-  "run_count": 0,
-  "created_at": "iso8601"
-}
-```
-
 ### Evaluation content — `evaluations/{id}.md`
 
 ```markdown
@@ -148,13 +121,20 @@ Raw text content describing the set's scope and theme. No sections — just the 
 ```json
 {
   "id": "8-char-sha256",
-  "problem_ids": ["slug-1", "slug-2"],
+  "problems": [
+    {
+      "meta": { "id": "slug", "source": "user | system", "score": 0.0, "rank": 1, "run_count": 0, "created_at": "iso8601" },
+      "title": "...",
+      "summary": "One sentence. Used in prompts.",
+      "full_text": "Full text of the problem."
+    }
+  ],
   "run_count": 0,
   "created_at": "iso8601"
 }
 ```
 
-The ID is the first 8 characters of `sha256(content)`. A problem set is capped at **10 problems**. Problems are stored in `problems/` and referenced by ID in the set. A problem can belong to multiple sets. Conjectures (mind/perspectives) are shared across all sets.
+The ID is the first 8 characters of `sha256(content)`. A problem set is capped at **10 problems**. Problems are embedded directly in the problemset JSON — there is no separate `problems/` directory. Conjectures (mind/perspectives) are shared across all sets.
 
 ### Candidate content — `runs/NNN/{problem_id}-{conjecture_id}.md`
 
@@ -207,12 +187,9 @@ data/state/
   evaluations/           — evaluation criteria [manually managed, never modified by system]
     {id}.md              — criterion description
     {id}.json            — criterion metadata (name, weight)
-  problems/
-    {id}.md              — problem content (summary + full text)
-    {id}.json            — problem metadata (score, rank, run_count)
-  problemsets/           — problem set index
-    {id}.md              — set content (raw text)
-    {id}.json            — set metadata (problem_ids list, run_count)
+  problemsets/
+    {id}.md              — set scope (raw text)
+    {id}.json            — set metadata + embedded problems (score, rank, run_count per problem)
   runs/
     NNN/
       {problem}-{conjecture}.md    — candidate content
@@ -238,8 +215,7 @@ data/seed/
   mind/                  — starting mind conjectures (.md + .json each)
   candidates/            — starting candidate conjectures (.md + .json each)
   evaluations/           — starting evaluation criteria (.md + .json each)
-  problems/              — starting problems (.md + .json each)
-  problemsets/           — starting problem sets (.md + .json each)
+  problemsets/           — starting problem sets (.md + .json each, problems embedded in .json)
 ```
 
 The seed is runnable out of the box. The default problem set uses the static ID `default`. Problem sets created via `create-problemset` get an ID equal to the first 8 characters of `sha256(content)`, printed on creation and shown by `list-problemsets` as `[id]`.
@@ -290,10 +266,10 @@ Evaluations are **manually managed** — users add or refine criteria by editing
 
 **Problem ranking:** for each problem, compute mean output score across all conjectures this run. Update `score` similarly.
 
-**Admit candidate problems:** candidate problems extracted during Phase 2 are evaluated for admission to the current problem set (admission threshold 0.6). Admitted problems are saved to `problems/` and their IDs are added to the set's `problem_ids` list.
+**Admit candidate problems:** candidate problems extracted during Phase 2 are evaluated for admission to the current problem set (admission threshold 0.6). The top 3 qualifying candidates per run are admitted, embedded directly in the problemset JSON.
 
 **Problem review (one LLM call per run, scoped to the current set):**
-- The mind receives summaries of all problems in the set (id + summary) and identifies any that are exact duplicates of or fully subsumed by another problem in the set. Identified problems are removed from the set's `problem_ids` (they remain in `problems/` — they may belong to other sets).
+- The mind receives summaries of all problems in the set (id + summary) and identifies any that are exact duplicates of or fully subsumed by another problem in the set. Identified problems are removed from the set's embedded problem list.
 - Cap enforcement: if the set exceeds 10 problems after deduplication, the bottom-ranked problem (minimum `run_count` of 3) is removed from the set. This repeats until the set is at or below 10. If all remaining problems are below min_run_count (newly added, unscored), the cap overage is accepted until the next run.
 
 **Promotion (one per run, skipped if no eligible conjectures):**

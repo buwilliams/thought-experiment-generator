@@ -2,21 +2,21 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "counterfactual-reasoning",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 0.2,
-  "total": 0.42199999999999993,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
   "candidate_problems": [
     {
-      "text": "What operational criteria would distinguish genuine system-level error-correction over abstract content from merely producing criticism-like text? The conjecture makes error-correction load-bearing, but leaves open how to tell whether a model actually participates in generation–criticism–retention–revision rather than simulating those stages linguistically.",
-      "score": 0.96
-    },
-    {
-      "text": "What architecture or feedback structure is minimally sufficient for token prediction to become knowledge-producing? The conjecture says prediction can be a substrate if embedded in an error-correcting loop, but does not specify which components are necessary: persistent memory, self-revision, external critics, problem-tracking across contexts, grounding in tasks, or some other structure.",
+      "text": "What exactly counts as a system 'participating' in error-correcting criticism, and where is the boundary of the knowing system? The conjecture shifts knowledge from the model to the larger model+user+evaluation loop, but leaves unresolved whether the model itself can be a knower, merely a component, or only an instrument. A precise criterion for participation and system boundaries is needed.",
       "score": 0.94
     },
     {
-      "text": "How can abstract domains like mathematics or philosophy supply non-circular selection against error without relying on empirical grounding? If knowledge in abstract content depends on criticism and elimination of error, the open question is what constitutes robust error-detection and progress there, and how a system could reliably improve explanations rather than just optimize for internal coherence or community convention.",
-      "score": 0.91
+      "text": "Can token-prediction architectures, possibly with memory and self-evaluation, instantiate genuine criticism internally rather than only via external human feedback? The conjecture says prediction alone is insufficient, but it remains open which added structures—persistent memory, goal-directed search, explicit error models, preference for explanatory depth over likelihood—would be sufficient for autonomous knowledge growth.",
+      "score": 0.96
+    },
+    {
+      "text": "How can 'genuine knowledge' be operationally distinguished from useful recombination or fluent novelty? The conjecture relies on survival under criticism, but does not specify measurable tests for explanatory quality, error-correction, or reason-sensitive preference for better explanations. Without such criteria, the claim risks being verbally compelling but empirically underdetermined.",
+      "score": 0.98
     }
   ]
 }

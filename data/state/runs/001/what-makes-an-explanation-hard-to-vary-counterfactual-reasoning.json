@@ -2,21 +2,21 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "counterfactual-reasoning",
   "run": 1,
-  "logical_consistency": 0.96,
+  "logical_consistency": 0.95,
   "hard_to_vary": 0.9,
-  "total": 0.9179999999999999,
+  "total": 0.915,
   "candidate_problems": [
     {
-      "text": "How can 'explanatory success' and 'what breaks' be made non-circular and operational across domains? The conjecture relies on swap sensitivity judged by losses in prediction, retrodiction, unification, or constraint, but it leaves open how to measure these consistently in science, mathematics, history, or everyday explanation without presupposing the very explanatory quality under evaluation.",
-      "score": 0.96
+      "text": "How can counterfactual tightness be made precise without collapsing into triviality or observer-relativity? The conjecture relies on notions like 'changes what the explanation predicts, entails, or rules out,' but it is unresolved how to formally individuate parts of an explanation, specify the allowed interventions/substitutions, and measure explanatory loss across different domains. Without such a criterion, 'load-bearing' risks depending on arbitrary decomposition or the evaluator's background assumptions.",
+      "score": 0.95
     },
     {
-      "text": "How do we distinguish genuinely load-bearing components from replaceable formulations at the wrong level of abstraction? If inversion or substitution leaves an explanation intact, that may show ornamentation—but it may also show that the real explanatory core is a higher-level invariant realized by multiple lower-level variants. The open problem is to identify principled criteria for the 'right' decomposition of an explanation into parts before testing swap sensitivity.",
-      "score": 0.94
+      "text": "How do we distinguish genuinely load-bearing detail from merely implementation-specific detail when multiple realizations share the same abstract mechanism? The conjecture notes that swappable details may indicate the real explanation is more abstract, but leaves open a principled method for locating the correct explanatory level. This raises a major tension between explanatory compression and mechanistic concreteness: when does abstraction capture the true constraint architecture, and when does it hide missing structure?",
+      "score": 0.92
     },
     {
-      "text": "What is the relation between counterfactual dependence and truth or causality? A tightly coupled story can be highly swap-sensitive yet false, overfit, or merely internally coherent, while some true explanations may tolerate substitutions because of robustness, redundancy, or multiple realizability. The unresolved tension is whether load-bearing structure tracks explanatory depth itself, or only one dimension of it that must be combined with independent tests of truth and causal contact.",
-      "score": 0.93
+      "text": "What is the relationship between fragility to substitution and robustness to criticism, and are they actually compatible in practice? The conjecture claims good explanations are highly sensitive to arbitrary alteration yet robust under criticism, but this may come apart: some brittle explanations are simply overfit, while some powerful explanations tolerate reformulation or modular replacement. The open question is what structural features separate productive counterfactual tightness from dogmatic rigidity or over-parameterization.",
+      "score": 0.9
     }
   ]
 }

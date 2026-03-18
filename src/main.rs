@@ -184,7 +184,7 @@ async fn main() -> Result<()> {
             let ps = ProblemSet {
                 meta: ProblemSetMeta {
                     id: id.clone(),
-                    problem_ids: vec![],
+                    problems: vec![],
                     run_count: 0,
                     created_at: teg::state::now_iso8601(),
                 },
@@ -198,35 +198,32 @@ async fn main() -> Result<()> {
         Command::AddProblem { problemset, text } => {
             teg::state::ensure_initialized()?;
             let mut ps = teg::state::load_problemset(&problemset)?;
-            if ps.meta.problem_ids.len() >= PROBLEMSET_MAX_SIZE {
+            if ps.meta.problems.len() >= PROBLEMSET_MAX_SIZE {
                 anyhow::bail!(
                     "Problem set '{}' is at capacity ({} problems). Remove a problem first with:\n  cargo run -- remove-problem --problemset {} --problem-id <id>",
                     ps.meta.id, PROBLEMSET_MAX_SIZE, ps.meta.id
                 );
             }
             let id = teg::state::slugify(&text.chars().take(60).collect::<String>());
-            if ps.meta.problem_ids.contains(&id) {
+            if ps.meta.problems.iter().any(|p| p.meta.id == id) {
                 println!("Problem already in set '{}'.", ps.meta.id);
                 return Ok(());
             }
-            if !teg::state::problem_exists(&id) {
-                let count = teg::state::load_problems()?.len();
-                let problem = teg::types::Problem {
-                    meta: ProblemMeta {
-                        id: id.clone(),
-                        source: ProblemSource::User,
-                        score: 0.0,
-                        rank: count as u32 + 1,
-                        run_count: 0,
-                        created_at: teg::state::now_iso8601(),
-                    },
-                    title: text.chars().take(80).collect(),
-                    summary: text.chars().take(200).collect(),
-                    full_text: text.clone(),
-                };
-                teg::state::save_problem(&problem)?;
-            }
-            ps.meta.problem_ids.push(id.clone());
+            let rank = ps.meta.problems.len() as u32 + 1;
+            let problem = teg::types::Problem {
+                meta: ProblemMeta {
+                    id: id.clone(),
+                    source: ProblemSource::User,
+                    score: 0.0,
+                    rank,
+                    run_count: 0,
+                    created_at: teg::state::now_iso8601(),
+                },
+                title: text.chars().take(80).collect(),
+                summary: text.chars().take(200).collect(),
+                full_text: text.clone(),
+            };
+            ps.meta.problems.push(problem);
             teg::state::save_problemset(&ps)?;
             println!("Added problem to '{}': {}", ps.meta.id, &text[..text.len().min(60)]);
         }
@@ -234,13 +231,12 @@ async fn main() -> Result<()> {
         Command::RemoveProblem { problemset, problem_id } => {
             teg::state::ensure_initialized()?;
             let mut ps = teg::state::load_problemset(&problemset)?;
-            if !ps.meta.problem_ids.contains(&problem_id) {
+            if !ps.meta.problems.iter().any(|p| p.meta.id == problem_id) {
                 anyhow::bail!("Problem '{}' not found in set '{}'.", problem_id, ps.meta.id);
             }
-            ps.meta.problem_ids.retain(|id| id != &problem_id);
+            ps.meta.problems.retain(|p| p.meta.id != problem_id);
             teg::state::save_problemset(&ps)?;
             println!("Removed '{}' from set '{}'.", problem_id, ps.meta.id);
-            println!("(Problem remains in global DB — it can be added to another set.)");
         }
 
         Command::ListProblemsets => {
@@ -257,11 +253,11 @@ async fn main() -> Result<()> {
                     "[{}] {} — {} problem(s), {} run(s)",
                     ps.meta.id,
                     display,
-                    ps.meta.problem_ids.len(),
+                    ps.meta.problems.len(),
                     ps.meta.run_count,
                 );
-                for id in &ps.meta.problem_ids {
-                    println!("  • {}", id);
+                for p in &ps.meta.problems {
+                    println!("  • {}", p.meta.id);
                 }
             }
         }

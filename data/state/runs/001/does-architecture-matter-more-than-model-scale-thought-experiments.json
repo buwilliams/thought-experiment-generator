@@ -3,20 +3,20 @@
   "conjecture_id": "thought-experiments",
   "run": 1,
   "logical_consistency": 0.93,
-  "hard_to_vary": 1.0,
-  "total": 0.979,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
   "candidate_problems": [
     {
-      "text": "What is the operational threshold at which substrate stops being the dominant bottleneck and epistemic structure becomes the main constraint? The conjecture posits a phase change, but leaves unspecified how to define, detect, or measure that threshold across domains.",
-      "score": 0.95
+      "text": "How can 'epistemic structure' be operationalized and measured independently of substrate so the conjecture becomes testable? The core unresolved tension is whether higher-order structure is a distinct causal variable or just a redescription of capabilities that larger models already partially acquire. A new problem is to define intervention-level metrics for conjecture generation, criticism quality, minority-hypothesis retention, and error-preservation, then test whether changing these while holding substrate roughly fixed produces greater durable knowledge gains than scaling compute alone.",
+      "score": 0.97
     },
     {
-      "text": "How can 'epistemic progress' and 'better structure' be formalized without collapsing back into benchmark optimization? The conjecture depends on distinctions like explanation-space vs score-space, and criticism-driven selection vs reward-driven selection, but these need non-circular metrics and experimental tests.",
-      "score": 0.98
-    },
-    {
-      "text": "What concrete structural mechanisms actually preserve and elevate high-potential minority conjectures without causing combinatorial explosion, noise retention, or institutional paralysis? The conjecture assumes criticism-centered architectures can outperform, but the design tradeoff between productive dissent and unmanageable hypothesis proliferation remains unresolved.",
+      "text": "What is the threshold at which substrate stops being the dominant bottleneck and structure becomes the main one, and does such a threshold exist in any robust sense? The conjecture depends on a phase change from representation-limited to selection-limited cognition, but leaves open how to identify that boundary across domains. A worthwhile problem is to characterize the interaction regime between compute, representational expressivity, search depth, and criticism architecture, including cases where more substrate may itself enable qualitatively new epistemic structure.",
       "score": 0.93
+    },
+    {
+      "text": "What selection and retention mechanisms actually improve truth-tracking rather than merely preserving diversity, contrarianism, or sophisticated error? The conjecture assumes that adversarial criticism, minority-hypothesis preservation, and explanatory promotion rules will outperform short-term predictive selection, but this raises an unresolved systems question about feedback loops: under what governance rules do these mechanisms yield cumulative knowledge instead of noise, fragmentation, or institutionalized bad ideas? This is a concrete design problem for epistemic institutions inside AI systems.",
+      "score": 0.95
     }
   ]
 }

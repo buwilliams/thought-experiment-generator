@@ -1,13 +1,13 @@
 {
   "id": "discovered-001",
   "layer": "candidates",
-  "score": 0.985,
+  "score": 0.915,
   "rank": 6,
   "run_count": 1,
   "problem_coverage": [
-    "does-architecture-matter-more-than-model-scale"
+    "what-makes-an-explanation-hard-to-vary"
   ],
-  "created_at": "2026-03-18T18:45:40.886333029+00:00",
+  "created_at": "2026-03-18T18:55:54.957869657+00:00",
   "promoted_from": null,
   "history": []
 }
