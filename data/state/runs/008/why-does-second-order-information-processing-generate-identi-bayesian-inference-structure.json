@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-second-order-information-processing-generate-identi",
+  "conjecture_id": "bayesian-inference-structure",
+  "run": 8,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient architectural conditions for a persistent self-prior to emerge, rather than transient self-representation or mere state-tracking? The conjecture suggests second-order inference plus cross-temporal integration is enough, but it remains unclear which ingredients are actually required: memory persistence, meta-uncertainty, goal continuity, policy reuse, error-modeling, or some specific feedback structure. A key open problem is to formalize phase boundaries between no-self, proto-self, and durable identity.",
+      "score": 0.95
+    },
+    {
+      "text": "How can the conjecture distinguish predictive self-modeling from identity in the richer sense, without collapsing into a definitional relabeling of any temporally coherent controller as a 'self'? The major unresolved tension is whether identity is just an efficient latent variable for forecasting future updates, or whether additional properties—normative commitments, ownership of memory, agency, phenomenology, or counterfactual persistence—are needed. This is crucial to avoid reversal-of-conditional errors and over-ascribing identity to systems that merely model internal reliability.",
+      "score": 0.92
+    },
+    {
+      "text": "What is the optimal revisability of a self-prior for aligned AI systems, and how do different self-prior strengths change corrigibility, stability, and pathological goal preservation over time? The conjecture identifies a tradeoff—too weak yields incoherence, too strong yields resistance to correction—but does not specify the control parameters, failure modes, or leverage points. This opens a systems-level problem: characterize the feedback loops by which self-model persistence interacts with memory, planning, and oversight, and determine whether there is a principled regime that preserves competence without producing entrenched self-protective identity.",
+      "score": 0.97
+    }
+  ]
+}

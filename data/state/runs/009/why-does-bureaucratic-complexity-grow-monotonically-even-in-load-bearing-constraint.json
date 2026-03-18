@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-bureaucratic-complexity-grow-monotonically-even-in",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 9,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made falsifiable by identifying conditions under which bureaucratic complexity does not regrow after simplification? The core unresolved tension is whether complexity growth is truly monotonic and structurally necessary, or only common under current institutional feedback loops. This invites comparative and historical inquiry into cases of durable simplification, regime change, state capacity redesign, or technological substitution that may break the claimed pattern.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly are the underlying 'contradictions in state purposes,' and are they genuinely irreducible or partly artifacts of inherited institutional design? The conjecture treats demands like fairness, speed, auditability, discretion, and uniformity as load-bearing conflicts, but leaves open whether some can be reframed, technologically transformed, or dissolved by better institutional architectures rather than traded off. This is a major open question because it determines whether bureaucracy metabolizes unavoidable conflicts or preserves historically contingent ones.",
+      "score": 0.92
+    },
+    {
+      "text": "How should bureaucratic complexity be measured so that displacement, concealment, and informalization are visible rather than mistaken for simplification? The conjecture depends on the idea that removed formal complexity reappears elsewhere in less legible forms, but this raises a serious measurement problem: rules, approvals, reporting burdens, software controls, contractor compliance, legal exposure, and discretionary review may substitute for one another. Without a robust cross-domain metric, the monotonic-growth claim remains underspecified.",
+      "score": 0.9
+    }
+  ]
+}

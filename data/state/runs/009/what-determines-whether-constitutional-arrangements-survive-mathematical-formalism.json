@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-constitutional-arrangements-survive",
+  "conjecture_id": "mathematical-formalism",
+  "run": 9,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.7,
+  "total": 0.7689999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the proposed constitutional invariants be specified non-circularly and operationalized so they distinguish genuine regime survival from mere continuity of labels or coercive stasis? The conjecture depends on invariants like authoritative decision, rule-governed succession, bounded conflict, and expected future gains, but it remains open how to measure these across cases without smuggling in the outcome to be explained.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the actual dynamical structure linking stress, adaptation capacity, legitimacy, elite coordination, mass compliance, and coercive capacity, and does the ratio R = (A + L + E)/S conceal crucial nonlinearities, thresholds, and interaction effects? A major open question is whether constitutional collapse is governed by a simple control parameter or by path-dependent feedback loops in which C can sometimes stabilize and sometimes destroy the invariants depending on timing and sequence.",
+      "score": 0.95
+    },
+    {
+      "text": "What institutional features or historical pathways reliably generate high adaptation capacity without dissolving constitutional identity, and where is the boundary beyond which adaptation becomes regime transformation rather than survival? The conjecture treats A as decisive, but leaves unresolved how amendment rules, judicial reinterpretation, federalism, party systems, emergency powers, and informal norms combine to produce a large 'basin of deformation' in practice.",
+      "score": 0.93
+    }
+  ]
+}

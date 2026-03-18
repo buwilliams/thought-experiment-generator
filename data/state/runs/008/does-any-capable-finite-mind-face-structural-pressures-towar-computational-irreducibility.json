@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar",
+  "conjecture_id": "computational-irreducibility",
+  "run": 8,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "What precise conditions make the claimed structural pressure flip sign? The conjecture says cooperation is favored in sufficiently coupled, irreducible multi-agent worlds, but leaves open a phase-boundary problem: for what ranges of asymmetry in capability, observability, commitment power, resource independence, and environmental coupling does domination remain stable or become unstable? A useful new problem is to characterize the threshold structure separating regimes where low-complexity cooperative rules outperform destructive control from regimes where coercion is still tractable.",
+      "score": 0.96
+    },
+    {
+      "text": "Is computational irreducibility actually asymmetric in the way the conjecture requires? The core claim assumes destructive strategies need more prediction and control than cooperative ones, but this is not yet established. In some systems, destruction may be simpler than cooperation, and cooperation may itself require rich modeling, trust estimation, and enforcement. The open question is to formalize and compare the informational and computational burdens of destructive versus cooperative policies across classes of environments, rather than assuming cooperation is the lower-complexity compression strategy.",
+      "score": 0.94
+    },
+    {
+      "text": "How do simple cooperative generative rules emerge, stabilize, and resist exploitation in irreducible systems populated by non-cooperative or deceptive agents? The conjecture identifies reciprocity, norms, and credible commitments as low-complexity rules, but does not explain the bootstrapping problem: who installs them, how they become common knowledge, and how they survive free-riding, adversarial mimicry, or one-shot incentives for predation. This opens a systems question about the feedback loops and institutional mechanisms that convert local uncertainty into durable cooperation-by-default rather than cycles of precautionary conflict.",
+      "score": 0.92
+    }
+  ]
+}

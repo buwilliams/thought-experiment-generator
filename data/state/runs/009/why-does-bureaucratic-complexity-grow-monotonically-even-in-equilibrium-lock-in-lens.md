@@ -1,0 +1,34 @@
+# Generated: why-does-bureaucratic-complexity-grow-monotonically-even-in × equilibrium-lock-in-lens
+
+## Conjecture
+
+**Conjecture:** Bureaucratic complexity grows monotonically because administrative simplicity is itself a **public good** inside government, while complexity is often **privately useful** to the actors who generate and maintain it. As a result, even governments sincerely committed to reducing complexity can get stuck in a stable **underprovision equilibrium** where everyone prefers a simpler state in the abstract, but no actor has sufficient incentive, authority, or protection to bear the local costs of producing it.
+
+Here the key distinction is between confusion and structure. The problem is not mainly that officials fail to understand complexity, nor that they lack motivation. It is that the benefits of simplification are **diffuse, delayed, and non-excludable**: lower transaction costs, faster decisions, improved trust, and reduced compliance burden are spread across agencies, citizens, and future officeholders. But the costs of simplification are **concentrated and immediate**: redesign work, legal risk, loss of procedural defenses, exposure to blame, and diminished turf.
+
+Historically, bureaucratic layers are usually added as solutions to prior failures: scandals produce oversight, inequities produce appeals processes, corruption produces documentation rules, policy conflict produces review gates. Each layer solved some earlier problem, but its ongoing maintenance cost is socialized. Removal, by contrast, is risky and attributable. If a rule remains, no one notices; if it is removed and something goes wrong, someone is blamed. This creates an asymmetric feedback loop: **additions are locally rewarded as visible safeguards; deletions are locally punished as exposed bets**.
+
+From a systems perspective, complexity behaves like a stock fed by many inflows and few outflows. New mandates, exceptions, reporting requirements, interagency coordination steps, and compliance checks are easy to add because each is justified from a local vantage point. The outflow—actual deletion, consolidation, or redesign—is weak because its gains cannot be captured by the deleting unit alone. Simplicity therefore suffers from chronic underprovision exactly like other non-excludable goods.
+
+What follows is that anti-bureaucracy rhetoric often fails because it treats complexity as waste to be opposed rather than as an equilibrium produced by institutional incentives. A government can “aim to reduce red tape” while simultaneously strengthening the structural conditions that generate it: fragmented accountability, retrospective blame, legal accretion, and siloed budgeting.
+
+So the illuminating claim is this: **bureaucratic growth is not primarily a failure of will but a collective action problem around the production of administrative simplicity.** If that is true, then complexity will continue to rise unless institutions are redesigned so that someone can capture enough of the benefits of simplification—or be explicitly rewarded and protected for creating them. Without such mechanisms, “reduce bureaucracy” remains everyone’s preference but no one’s individually rational project.
+
+## Questions
+
+1. 1. If administrative simplicity were made excludable so that the unit removing a rule captured most of the resulting savings and performance gains, would the conjecture still predict monotonic growth of complexity? — **no**
+2. 2. If deletions of procedures were rewarded and politically protected to the same degree that additions are currently rewarded as safeguards, would the conjecture still explain persistent complexity growth? — **no**
+3. 3. If a government had highly centralized authority able to impose cross-agency simplification and absorb local blame, does the conjecture require complexity to keep growing monotonically? — **no**
+4. 4. If the main benefits of simplification accrued immediately and measurably to the same officials who bear redesign costs, would the public good framing still be necessary to explain the problem? — **no**
+5. 5. If most bureaucratic layers were not inherited solutions to prior scandals, inequities, corruption, or coordination failures, would the conjecture still account for why those layers are hard to remove? — **yes**
+6. 6. If legal risk from removing a rule were negligible while the risk from keeping it were high, would the conjecture still predict that additions outcompete deletions? — **no**
+7. 7. If complexity were primarily caused by officials misunderstanding the system rather than by incentive structure, would the conjecture lose its explanatory core? — **yes**
+8. 8. If agencies operated under unified budgets and shared performance metrics that internalized cross-agency transaction costs, would the conjecture still predict chronic underprovision of simplicity? — **no**
+9. 9. If every new mandate or review gate had to be paired with the removal of an equivalent existing requirement, would the conjecture still imply a one-way stock accumulation of complexity? — **no**
+10. 10. If citizens and future officeholders could directly attribute improved trust, faster decisions, and lower compliance burden to the specific actors who simplified procedures, would the conjecture still explain why simplification is individually irrational? — **no**
+
+## Candidate Problems
+
+- Is administrative simplicity actually a public good in the relevant economic and institutional sense, or are there important cases where simplicity is excludable, rivalrous, or privately capturable? The conjecture hinges on this classification, but many simplifications may benefit some units while harming others, or may be appropriable by political leaders, agencies, or vendors. Clarifying the ontology of 'simplicity' is crucial because if it is not generally a public good, the proposed equilibrium mechanism may be misidentified. (score: 0.95)
+- What mechanisms determine when complexity growth is truly monotonic versus periodically reversed by shocks, leadership, technology, or constitutional redesign? The conjecture posits a strong directional tendency, but history may contain punctuated simplification episodes. The open question is what structural conditions create genuine outflows from the complexity stock, and whether these are rare anomalies or predictable regime changes. (score: 0.92)
+- How can one distinguish beneficial complexity that encodes hard-won safeguards from pathological complexity sustained by incentive misalignment? Since many layers originated as solutions to real failures, simplification can reintroduce corruption, arbitrariness, or inequity. The unresolved problem is to develop criteria or measurement that separate necessary institutional memory from accreted burden, otherwise the conjecture risks treating all growth as dysfunction. (score: 0.90)

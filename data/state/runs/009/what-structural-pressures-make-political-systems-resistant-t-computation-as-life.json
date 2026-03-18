@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-pressures-make-political-systems-resistant-t",
+  "conjecture_id": "computation-as-life",
+  "run": 9,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized into a falsifiable model of 'computational strength' of reform signals versus mere aggregate support? The key open problem is to define measurable variables for bandwidth, transmission loss, bottlenecks, error-correction, and self-protective routines across institutions, and to test whether these predict reform outcomes better than standard preference-aggregation models.",
+      "score": 0.96
+    },
+    {
+      "text": "What distinguishes beneficial stability-preserving resistance from pathological lock-in? The conjecture explains resistance as continuity protection, but leaves unresolved the normative and empirical boundary between institutions filtering dangerous volatility and institutions merely preserving incumbent advantage under the guise of stability.",
+      "score": 0.93
+    },
+    {
+      "text": "Under what conditions do political systems successfully update their own update-rules? If reform requires compatibility with existing channels or alteration of the processing architecture itself, the major open question is how meta-reform becomes possible in systems whose bottlenecks are designed to resist exactly such rewrites, and what historical mechanisms allow these transitions without systemic breakdown.",
+      "score": 0.95
+    }
+  ]
+}

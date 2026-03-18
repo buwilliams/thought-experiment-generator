@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 9,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized and distinguished from rival explanations of democratic short-termism? The core open question is whether 'mismatched timescales in democratic self-reference' explains observed short-term bias better than alternatives such as voter myopia, interest-group capture, media incentives, polarization, or simple uncertainty about the future. This requires defining measurable indicators of recursive presentism, temporal representation, and loop frequency, and identifying predictions unique to the conjecture.",
+      "score": 0.96
+    },
+    {
+      "text": "What institutional designs can genuinely incorporate the polity's future self without creating unaccountable guardianship or technocratic drift? The conjecture proposes 'prosthetics' for long-term self-reference, but leaves unresolved the design problem: how to encode future interests in present institutions while preserving democratic legitimacy, corrigibility, and resistance to capture. This opens a new problem of constitutional and institutional architecture: what mechanisms lengthen democratic memory without severing the feedback loop that makes rule democratic at all.",
+      "score": 0.94
+    },
+    {
+      "text": "What is the relevant unit of continuity for 'the same people later,' and can a democracy coherently represent it? The conjecture assumes a temporally extended demos, but populations change through aging, migration, birth, death, and shifting identities. The unresolved tension is whether future citizens are best understood as the same collective self, a successor polity, or partially overlapping publics. Clarifying this ontology matters because the force of the strange-loop diagnosis depends on whether democratic self-government across time is literally self-rule or a problem of rule over absent others.",
+      "score": 0.91
+    }
+  ]
+}

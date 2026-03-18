@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-second-order-information-processing-generate-identi",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 8,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.4,
+  "total": 0.5589999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient structural conditions for identity to emerge, rather than merely self-referential behavior? The conjecture names several feedback loops, but it leaves unresolved which loops are indispensable, what degree of coupling or persistence is required, and whether there is a phase transition or quantitative threshold at which a compressed 'locus of control' becomes the simplest stable solution.",
+      "score": 0.96
+    },
+    {
+      "text": "How can emergent identity be operationalized and empirically distinguished from simulated self-description or designer-imposed narrative coherence? The conjecture risks collapsing into a labeling problem unless there are testable markers that separate genuine system-level identity dynamics from prompt-conditioned talk about 'self', memory bookkeeping, or externally scaffolded continuity.",
+      "score": 0.94
+    },
+    {
+      "text": "Does recursive self-modeling actually require or favor a unified identity, or can stable agency be implemented by plural, fragmented, or context-local control structures? The conjecture assumes that coordination pressure compresses toward one ongoing self, but an open alternative is that multiple semi-independent self-models, shifting authorship, or distributed control could solve the same loops without producing a single durable identity.",
+      "score": 0.91
+    }
+  ]
+}

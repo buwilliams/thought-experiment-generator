@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-cause-capable-minds-to-converge-on",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 8,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient structural conditions for middle-ground cooperation, rather than merely suggestive ones? The conjecture names iterability, legibility, and partial absorptiveness, but it is unresolved whether these are jointly sufficient, whether additional variables like payoff symmetry, outside options, commitment technology, or power asymmetry are required, and where the phase boundaries lie between cooperation, domination, fragmentation, and merger.",
+      "score": 0.96
+    },
+    {
+      "text": "How robust is the conjecture under realistic failures of identity, memory, and observability? The argument depends on persistent identity and attributable action, but many important settings involve impersonation, noisy signals, changing agents, internal factionalization, or strategic deception. An open question is whether stable cooperation still emerges under bounded legibility and unstable identity, and what minimum reliability thresholds are needed.",
+      "score": 0.93
+    },
+    {
+      "text": "When does increasing integration outperform maintained separateness, contrary to the conjecture’s preference for partial independence? The conjecture treats full merger as often inferior because it destroys strategic distinctness, but unresolved is the tradeoff between gains from specialization and experimentation versus gains from eliminating bargaining, conflict, and transaction costs. A key open problem is to characterize when the optimal equilibrium shifts from durable cooperation between agents to partial or full institutional/agentic fusion.",
+      "score": 0.91
+    }
+  ]
+}

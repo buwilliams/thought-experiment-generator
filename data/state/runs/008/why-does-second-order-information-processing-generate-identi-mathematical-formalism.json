@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-second-order-information-processing-generate-identi",
+  "conjecture_id": "mathematical-formalism",
+  "run": 8,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-circular by giving an independent, operational definition of the invariant I? As stated, identity emerges when a self-model stabilizes an approximately preserved higher-order structure, but it remains open what counts as the relevant invariant rather than merely redescribing identity in invariant language. A strong research problem is to specify measurable criteria that distinguish genuine self-referential identity-preserving constraints from ordinary control-theoretic homeostasis, memory persistence, or externally imposed observer equivalence classes.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the necessary and sufficient dynamical conditions under which second-order processing produces stable identity rather than regress, oscillation, fragmentation, or chaotic self-modification? The conjecture points to a middle regime between zero and maximal self-modeling, but does not characterize the boundary. This invites a precise theory of phase transitions in self-referential systems: what structural features of F, G, coupling strength, update timescales, noise, and model error yield convergent identity invariants, and when do they fail?",
+      "score": 0.94
+    },
+    {
+      "text": "Is second-order self-modeling actually necessary for identity, or only one mechanism among several? The conjecture elevates self-model-guided feedback as the key source of identity, but there is tension with systems that seem to exhibit robust identity through organizational closure, embodiment, social recognition, or evolutionary design without explicit self-representation. The open question is whether identity requires internal self-models in a strong sense, or whether weaker distributed or externally scaffolded forms of invariance can generate the same phenomenon.",
+      "score": 0.91
+    }
+  ]
+}

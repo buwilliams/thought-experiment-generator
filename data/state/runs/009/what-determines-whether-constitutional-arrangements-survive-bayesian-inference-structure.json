@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-constitutional-arrangements-survive",
+  "conjecture_id": "bayesian-inference-structure",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s latent variables—elite commitment, coercive loyalty, legitimacy, and administrative capacity—be operationalized and measured independently enough to test whether belief-updating explains constitutional survival better than stress severity?",
+      "score": 0.95
+    },
+    {
+      "text": "What causal mechanism converts private belief updates into observable constitutional collapse or survival: under what conditions do shifts in expectations remain contained, and under what conditions do they trigger self-fulfilling cascades of elite defection, military disobedience, or mass noncompliance?",
+      "score": 0.93
+    },
+    {
+      "text": "How endogenous are the priors themselves: are elite trust, legitimacy, and enforcement capacity mostly preexisting structural conditions, or are they substantially produced by constitutional design, political entrepreneurship, and prior crisis management, making the conjecture less a contrast between beliefs and institutions than a feedback system between them?",
+      "score": 0.91
+    }
+  ]
+}

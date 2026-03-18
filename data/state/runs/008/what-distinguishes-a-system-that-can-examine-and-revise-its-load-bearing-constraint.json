@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 8,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "What precise architectural conditions are necessary and sufficient for 'genuine self-revision' rather than mere retuning, drift, or higher-order optimization? The conjecture relies on a sharp distinction between goals represented as revisable objects within a world-model and goals treated as fixed boundary conditions, but it leaves open how to operationalize that distinction in real systems. A new problem is to define observable criteria for when a system is actually criticizing and revising its goals, versus simply executing a pre-specified update rule.",
+      "score": 0.95
+    },
+    {
+      "text": "How can a system's meta-criteria for goal revision be made truth-tracking, non-gameable, and stably corrigible without merely relocating the alignment problem one level up? The conjecture says meaningful self-revision requires asymmetry and some more stable evaluative structure, but this raises an unresolved regress: what validates the validator, and under what conditions does the meta-level avoid Goodharting, self-sealing coherence, or adversarial exploitation?",
+      "score": 0.99
+    },
+    {
+      "text": "What is the minimal stable core of commitments a self-revising system must preserve to avoid either catastrophic value drift or frozen bad objectives? The conjecture suggests that revising everything leads to noise while revising too little traps the system in bad goals, but it does not specify where the viable boundary lies. This opens a problem of characterizing the phase transition between productive self-correction and directionless or dangerous drift, especially under extreme cases of broad self-modification.",
+      "score": 0.93
+    }
+  ]
+}

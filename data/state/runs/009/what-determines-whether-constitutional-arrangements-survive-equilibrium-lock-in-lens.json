@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-constitutional-arrangements-survive",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized so that 'coordinated restraint' is distinguishable from adjacent explanations like legitimacy, state capacity, elite cohesion, or civic culture? The key open problem is identifying observable indicators and causal tests that show when constitutional survival is specifically driven by a non-excludable, self-enforcing public good rather than by those correlated factors.",
+      "score": 0.96
+    },
+    {
+      "text": "What concrete institutional mechanisms actually change the crisis payoff structure enough to make restraint rational across rival factions, and under what stress conditions do they fail? This includes unresolved questions about which combinations of overlapping enforcement centers, emergency procedures, party structures, military organization, and reserve capacities generate credible mutual assurance rather than merely shifting power temporarily.",
+      "score": 0.94
+    },
+    {
+      "text": "Where are the boundary conditions of the theory: are there cases where constitutions survive despite weak mutual assurance, or collapse despite apparently strong coordination mechanisms? Exploring these deviant cases would test whether the public-goods account is fundamental, whether different kinds of stress produce different strategic games, and whether some constitutional orders rely on alternative stabilizers not captured by the conjecture.",
+      "score": 0.91
+    }
+  ]
+}

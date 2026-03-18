@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 8,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "Is 'goal-governance' actually a coherent, implementable capability rather than a regress or illusion? The conjecture assumes systems can inspect, criticize, and revise their own objectives in a way that improves safety, but this raises unresolved questions about what performs the criticism, what standards it uses, how regress is halted, and whether self-revision preserves alignment or destabilizes it. If this function is not well-defined, the public-good framing may be premature.",
+      "score": 0.95
+    },
+    {
+      "text": "Under what institutional and technical conditions is goal-governance genuinely a public good, and when is it instead partially excludable or privately monetizable? The conjecture's structural claim depends on underprovision from non-excludable benefits, but firms may capture some value through reliability, trust, compliance, reduced liability, or product differentiation. The key open question is whether the public-good model robustly predicts real investment behavior across ecosystems, or whether underprovision varies by market structure, regulation, and architecture.",
+      "score": 0.93
+    },
+    {
+      "text": "Is high capability with weak goal-revision truly the dominant risk multiplier across advanced systems, or are there important regimes where capability itself is the tighter bottleneck for safety? The conjecture prioritizes corrigibility over raw power, but this may fail if insufficient capability prevents accurate world-modeling, oversight, uncertainty estimation, or execution of safe revisions. The unresolved tension is whether safety is mainly constrained by missing reflective control, by missing competence, or by specific interactions between the two.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-self-modification-capabilit",
+  "conjecture_id": "framework-integration-gap",
+  "run": 8,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "What, precisely, are the necessary and sufficient 'load-bearing' coupling relations between momentary experience, self-model, memory revision, and action-selection for a mind to count as unified over time? The conjecture centers self-modification, but it remains unresolved whether self-modification is constitutive of consciousness/identity or merely one implementation of a deeper integrative property.",
+      "score": 0.95
+    },
+    {
+      "text": "Can structural identity and agential identity come apart in principled, testable ways, especially in boundary cases such as locked-in agents, dreamless sleep, anesthesia emergence, severe executive dysfunction, uploaded minds, or permanently frozen but still phenomenally active systems? The conjecture proposes a split, but the criteria, thresholds, and implications of that split are still underspecified.",
+      "score": 0.92
+    },
+    {
+      "text": "Is there a coherent possibility of phenomenally conscious but permanently self-inefficacious experience—i.e., conscious states that cannot in principle alter future dispositions—and if so, does that undermine the claim that consciousness essentially requires self-revisability? This is the key extreme-case challenge: whether decoupled subjectivity is stable, intelligible, and compatible with genuine diachronic personhood.",
+      "score": 0.97
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-allow-institutions-to-maintain-legi",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 9,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture distinguish genuine 'identity anchored in corrigibility' from mere rhetorical flexibility? The open problem is to specify observable criteria for when justifying story, decision procedures, and error-correction are truly coupled rather than only cosmetically aligned. Without this, the conjecture risks collapsing into post hoc interpretation: any surviving institution can be redescribed as having had the right coupling. Worth exploring because it is the main falsifiability and measurement gap.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the boundary between an institution's core identity and its revisable periphery, and who gets to decide that boundary under stress? The conjecture assumes robust institutions can separate stable purpose from changeable rules, but it leaves unresolved whether that distinction is objective, negotiated, or imposed by dominant coalitions. This matters because the 'load-bearing' elements of legitimacy may differ across internal actors and external constituencies, making adaptation a conflict over ontology, not just design.",
+      "score": 0.93
+    },
+    {
+      "text": "Are there unavoidable tradeoffs between rapid adaptation, visible error-correction, and legitimacy in high-stakes domains? The conjecture treats fast feedback, slow constitutional drift, and public corrigibility as jointly desirable, but in practice transparency about error can reduce compliance, and slow foundational change can block necessary response. The open question is whether the proposed structural features are mutually compatible across contexts or whether some environments force tragic choices that no institutional design can fully solve.",
+      "score": 0.91
+    }
+  ]
+}

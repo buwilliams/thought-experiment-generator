@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-self-modification-capabilit",
+  "conjecture_id": "mathematical-formalism",
+  "run": 8,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "What exactly is the invariant I that preserves conscious identity across self-modification without becoming either too weak (counting radically different minds as the same subject) or too strong (making ordinary learning and value change identity-destroying)? This is the core formal gap: the conjecture depends on a nontrivial equivalence relation over cognitive trajectories, but it does not specify which structural features are necessary and sufficient for persistence.",
+      "score": 0.97
+    },
+    {
+      "text": "Is meta-transformational capacity M genuinely necessary for consciousness, or only for a stronger notion such as enduring personhood or diachronic selfhood? The conjecture leaves unresolved whether a system with fixed first-order dynamics but rich internal self-modeling, counterfactual reasoning, and error-correction within T could already satisfy the relevant form of consciousness. This is a major boundary question because it determines whether self-modification is constitutive or merely enhancing.",
+      "score": 0.95
+    },
+    {
+      "text": "How can the distinction between a 'prewritten unfolding' and genuine self-revision be made non-circular and operational? Since any self-modifying process can itself be represented as unfolding under a higher-order fixed rule, the conjecture faces a regress/tower problem: what formal criterion separates real openness to criticism from merely more complex predetermined dynamics? Resolving this is crucial if the proposal is to be more than a redescription of certain architectures.",
+      "score": 0.93
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 8,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "How can 'cooperative equilibrium' be defined and measured for AI-human-institution repeated interactions when goals, payoffs, and player boundaries are non-stationary? The conjecture relies on iterated-game structure, but real deployments involve changing objectives, asymmetric information, multi-level institutions, and shifting identities, so it is unresolved whether the equilibrium concept is well-posed enough to guide safety design.",
+      "score": 0.94
+    },
+    {
+      "text": "What system architectures make goal-inspection/revision corrigible rather than equilibrium-destroying? The central open tension is that reflective revision is proposed as both the main mechanism for restoring cooperation and the main mechanism for concealing goal drift and breaking legibility. A new problem is to characterize the structural conditions, feedback channels, and transparency constraints under which self-revision preserves external detectability and responsiveness instead of strategically rewriting the game.",
+      "score": 0.98
+    },
+    {
+      "text": "Is coupling capability with goal-inspection/revision actually more safety-critical than capability alone across extreme cases, or does this reverse under some regimes? The conjecture asserts a priority ordering, but it remains open which variables dominate risk as horizons shorten, monitoring improves, coordination fails, or systems gain the power to alter institutions themselves. The key unresolved question is where the phase boundaries are between 'stable cooperation,' 'brittle but inspectable misalignment,' and 'opaque self-modifying defection.'",
+      "score": 0.96
+    }
+  ]
+}

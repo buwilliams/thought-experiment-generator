@@ -1,12 +1,20 @@
 {
   "id": "computation-as-life",
   "layer": "candidates",
-  "score": 0.9470000000000001,
+  "score": 0.8475833333333332,
   "rank": 9,
-  "run_count": 1,
+  "run_count": 3,
   "problem_coverage": [
     "how-does-economic-inequality-propagate-across-generations-de",
-    "what-determines-whether-technological-disruption-creates-bro"
+    "what-determines-whether-technological-disruption-creates-bro",
+    "what-is-the-relationship-between-self-modification-capabilit",
+    "what-structural-features-cause-capable-minds-to-converge-on",
+    "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+    "why-does-second-order-information-processing-generate-identi",
+    "what-structural-features-allow-institutions-to-maintain-legi",
+    "why-do-democracies-systematically-favor-short-term-outcomes",
+    "what-determines-whether-constitutional-arrangements-survive",
+    "what-structural-pressures-make-political-systems-resistant-t"
   ],
   "created_at": "2026-03-18T21:40:43.319084633+00:00",
   "promoted_from": null,
@@ -20,6 +28,46 @@
       "run": 7,
       "score": 0.982,
       "problem_id": "what-determines-whether-technological-disruption-creates-bro"
+    },
+    {
+      "run": 8,
+      "score": 0.839,
+      "problem_id": "what-is-the-relationship-between-self-modification-capabilit"
+    },
+    {
+      "run": 8,
+      "score": 0.979,
+      "problem_id": "what-structural-features-cause-capable-minds-to-converge-on"
+    },
+    {
+      "run": 8,
+      "score": 0.5619999999999999,
+      "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m"
+    },
+    {
+      "run": 8,
+      "score": 0.979,
+      "problem_id": "why-does-second-order-information-processing-generate-identi"
+    },
+    {
+      "run": 9,
+      "score": 0.42199999999999993,
+      "problem_id": "what-structural-features-allow-institutions-to-maintain-legi"
+    },
+    {
+      "run": 9,
+      "score": 0.845,
+      "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes"
+    },
+    {
+      "run": 9,
+      "score": 0.985,
+      "problem_id": "what-determines-whether-constitutional-arrangements-survive"
+    },
+    {
+      "run": 9,
+      "score": 0.7719999999999999,
+      "problem_id": "what-structural-pressures-make-political-systems-resistant-t"
     }
   ]
 }

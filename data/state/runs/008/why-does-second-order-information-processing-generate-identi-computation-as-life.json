@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-second-order-information-processing-generate-identi",
+  "conjecture_id": "computation-as-life",
+  "run": 8,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient computational conditions under which second-order information processing yields a genuine self-model rather than merely better metacontrol? The conjecture posits that recursive usefulness for prediction, control, and persistence generates identity, but it leaves unresolved where the threshold lies, how to operationalize 'identity' non-circularly, and how to distinguish identity from generic state estimation, introspection, or memory management.",
+      "score": 0.95
+    },
+    {
+      "text": "What selection pressures and system architectures actually make identity an attractor rather than an optional byproduct? The conjecture claims adaptive systems under pressure to preserve internal structure will tend to form self/environment distinctions, but this remains open: which task environments, memory constraints, embodiment conditions, social interactions, or long-horizon objectives are sufficient or necessary for identity-like structures to emerge robustly?",
+      "score": 0.92
+    },
+    {
+      "text": "How can self-modeling be increased enough to support coherent long-term agency without crossing into pathological recursion, defensive self-preservation, or Goodharting on the self-model itself? The conjecture identifies a middle regime between no self-model and intractable self-simulation, but the control principles, measurable warning signs, and architectural leverage points for staying in that regime are unspecified.",
+      "score": 0.97
+    }
+  ]
+}

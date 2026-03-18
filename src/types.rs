@@ -101,6 +101,10 @@ pub struct GeneratedMeta {
     pub run: u32,
     pub logical_consistency: f64,
     pub hard_to_vary: f64,
+    #[serde(default)]
+    pub explanatory_reach: f64,
+    #[serde(default)]
+    pub resistance_to_refutation: f64,
     pub total: f64,
     pub candidate_problems: Vec<CandidateProblem>,
 }
@@ -183,6 +187,19 @@ pub struct SummaryResponse {
 #[derive(Debug, Deserialize)]
 pub struct DeduplicateResponse {
     pub remove: Vec<String>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct ExplanatoryReachResponse {
+    pub score: f64,
+    pub reason: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct ResistanceToRefutationResponse {
+    pub score: f64,
+    pub counterexample: String,
+    pub reason: String,
 }
 
 #[derive(Debug, Deserialize)]

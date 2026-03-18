@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-pressures-make-political-systems-resistant-t",
+  "conjecture_id": "goal-critique-safety-lens",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'goal-updating mechanisms' and 'goal-preserving mechanisms' in political systems be operationalized and measured so the conjecture becomes testable rather than metaphorical? The central unresolved tension is whether corrigibility in governance can be identified with observable institutional features, decision rules, and feedback structures, or whether the distinction collapses into a post hoc description of systems we already judge to be failing.",
+      "score": 0.96
+    },
+    {
+      "text": "What institutional designs increase self-correction without destroying the stabilizing functions that veto points and supermajority rules were originally created to provide? The open problem is a real tradeoff question: how to distinguish obsolete error-preservation from valuable protection against transient majorities, factional capture, or authoritarian drift, and whether there are robust meta-rules that improve revision capacity without making the system recklessly plastic.",
+      "score": 0.94
+    },
+    {
+      "text": "Under what conditions does supermajority public support fail to translate into reform because of structural blockage rather than because the apparent supermajority is shallow, unstable, mismeasured, or issue-specific? This tension matters because the conjecture risks attributing non-reform to institutional lock-in when the deeper problem may lie in preference aggregation, intensity asymmetries, agenda control, or legitimacy conflicts about what exactly is being updated.",
+      "score": 0.89
+    }
+  ]
+}

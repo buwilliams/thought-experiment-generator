@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-constitutional-arrangements-survive",
+  "conjecture_id": "extreme-cases",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s central variable—'survival of recursive error-correction under extreme stress'—be operationalized without collapsing into circularity? The open problem is to identify observable mechanisms or thresholds that distinguish a constitution that still has a live correction loop from one that merely appears stable until rupture. Without this, the conjecture risks redescribing survival rather than explaining it.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the actual causal mechanisms that preserve or destroy 'mutual expectation' at the boundary case, especially across elites, coercive institutions, and mass publics? The unresolved tension is whether expectations are primarily produced by institutional design, material incentives, political culture, historical memory, information systems, or leadership choices—and which of these are true leverage points under stress.",
+      "score": 0.93
+    },
+    {
+      "text": "Is the conjecture universally valid, or are there important classes of constitutional survival that occur without robust error-correction—through domination, hegemonic settlement, external guarantees, or temporary depoliticization? The open question is whether 'nonterminal conflict' is a necessary condition for endurance, or only one pathway among several, which would sharply affect the conjecture’s scope and explanatory power.",
+      "score": 0.89
+    }
+  ]
+}

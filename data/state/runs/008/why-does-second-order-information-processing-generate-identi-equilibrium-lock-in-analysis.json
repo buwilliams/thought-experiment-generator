@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-second-order-information-processing-generate-identi",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 8,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Is a persistent self-model actually necessary for second-order cognition, or can recursive ambiguity be controlled by alternative structures such as role-indexing, process lineage, externalized provenance, or dynamically recomputed bindings without anything like unified identity? This is the core necessity question behind the conjecture.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the precise conditions under which identity becomes a beneficial coordination equilibrium versus a pathological lock-in? In particular, what variables (memory coupling, policy persistence, error attribution, modularity, update costs, environmental volatility) determine the phase transition between tractable coherence, healthy plurality, fragmentation, and rigid self-distortion?",
+      "score": 0.93
+    },
+    {
+      "text": "How can a system revise or replace its identity globally while preserving enough continuity for learning, responsibility, and control? This open problem asks for concrete mechanisms for 'corrigible equilibrium' in self-models, especially in AI architectures where self-modification and long-horizon planning may make identity both instrumentally useful and dangerously sticky.",
+      "score": 0.91
+    }
+  ]
+}

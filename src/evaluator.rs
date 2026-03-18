@@ -5,9 +5,15 @@ use crate::config::Config;
 use crate::llm::LlmClient;
 use crate::prompts::PromptTemplates;
 use crate::types::{
-    AnswersResponse, CandidatesResponse, ConsistencyResponse, Generated, GeneratedMeta, Question,
-    QuestionsResponse,
+    AnswersResponse, CandidatesResponse, ConsistencyResponse, ExplanatoryReachResponse,
+    Generated, GeneratedMeta, Question, QuestionsResponse, ResistanceToRefutationResponse,
 };
+
+// Weights must sum to 1.0
+const W_CONSISTENCY: f64 = 0.20;
+const W_HARD_TO_VARY: f64 = 0.35;
+const W_REACH: f64 = 0.30;
+const W_REFUTATION: f64 = 0.15;
 
 pub async fn evaluate(
     client: &LlmClient,
@@ -26,7 +32,7 @@ pub async fn evaluate(
 
     if consistency.score < config.consistency_threshold {
         info!(
-            "  {}-{}: failed consistency ({:.2}), skipping hard-to-vary",
+            "  {}-{}: failed consistency ({:.2}), skipping further evaluation",
             problem_id, conjecture_id, consistency.score
         );
         return Ok(Generated {
@@ -36,6 +42,8 @@ pub async fn evaluate(
                 run,
                 logical_consistency: consistency.score,
                 hard_to_vary: 0.0,
+                explanatory_reach: 0.0,
+                resistance_to_refutation: 0.0,
                 total: 0.0,
                 candidate_problems: vec![],
             },
@@ -65,7 +73,20 @@ pub async fn evaluate(
         yes_count / questions.len() as f64
     };
 
-    let total = 0.3 * consistency.score + 0.7 * hard_to_vary;
+    // Pass 3: Explanatory reach
+    let p = templates.explanatory_reach(mind_system, generated_text, problem_summary);
+    let reach_resp: ExplanatoryReachResponse =
+        client.call(Some(&p.system), &p.user, 0.2).await?;
+
+    // Pass 4: Resistance to refutation
+    let p = templates.resistance_to_refutation(mind_system, generated_text, problem_summary);
+    let refutation_resp: ResistanceToRefutationResponse =
+        client.call(Some(&p.system), &p.user, 0.3).await?;
+
+    let total = W_CONSISTENCY * consistency.score
+        + W_HARD_TO_VARY * hard_to_vary
+        + W_REACH * reach_resp.score
+        + W_REFUTATION * refutation_resp.score;
 
     // Extract candidate problems
     let p = templates.extract_candidate_problems(mind_system, generated_text);
@@ -78,8 +99,9 @@ pub async fn evaluate(
         .collect();
 
     info!(
-        "  {}-{}: consistency={:.2}, hard_to_vary={:.2}, total={:.2}",
-        problem_id, conjecture_id, consistency.score, hard_to_vary, total
+        "  {}-{}: consistency={:.2}, htv={:.2}, reach={:.2}, refutation={:.2}, total={:.2}",
+        problem_id, conjecture_id,
+        consistency.score, hard_to_vary, reach_resp.score, refutation_resp.score, total
     );
 
     Ok(Generated {
@@ -89,6 +111,8 @@ pub async fn evaluate(
             run,
             logical_consistency: consistency.score,
             hard_to_vary,
+            explanatory_reach: reach_resp.score,
+            resistance_to_refutation: refutation_resp.score,
             total,
             candidate_problems,
         },

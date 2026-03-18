@@ -436,13 +436,13 @@ async fn generate_report(
 
     let mut out = format!("# Run {:03} Results\n\n", run);
 
-    out.push_str("| Rank | Problem | Conjecture | Consistency | Hard to Vary | Total |\n");
-    out.push_str("|------|---------|------------|-------------|--------------|-------|\n");
+    out.push_str("| Rank | Problem | Conjecture | Consist. | HtV | Reach | Refut. | Total |\n");
+    out.push_str("|------|---------|------------|----------|-----|-------|--------|-------|\n");
     for (rank, g) in sorted.iter().enumerate() {
         let output_link = format!("{}-{}.md", g.meta.problem_id, g.meta.conjecture_id);
         let conjecture_link = format!("../../candidates/{}.md", g.meta.conjecture_id);
         out.push_str(&format!(
-            "| [{}]({}) | {} | [{}]({}) | {:.2} | {:.2} | {:.2} |\n",
+            "| [{}]({}) | {} | [{}]({}) | {:.2} | {:.2} | {:.2} | {:.2} | {:.2} |\n",
             rank + 1,
             output_link,
             g.meta.problem_id,
@@ -450,6 +450,8 @@ async fn generate_report(
             conjecture_link,
             g.meta.logical_consistency,
             g.meta.hard_to_vary,
+            g.meta.explanatory_reach,
+            g.meta.resistance_to_refutation,
             g.meta.total,
         ));
     }

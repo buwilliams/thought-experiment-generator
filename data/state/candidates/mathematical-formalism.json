@@ -1,9 +1,9 @@
 {
   "id": "mathematical-formalism",
   "layer": "candidates",
-  "score": 0.7711404761904761,
+  "score": 0.7460907407407407,
   "rank": 2,
-  "run_count": 7,
+  "run_count": 9,
   "problem_coverage": [
     "does-architecture-matter-more-than-model-scale",
     "can-llms-create-new-knowledge",
@@ -31,7 +31,16 @@
     "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
     "what-determines-whether-technological-disruption-creates-bro",
     "what-structural-features-make-market-economies-vulnerable-to",
-    "how-does-economic-inequality-propagate-across-generations-de"
+    "how-does-economic-inequality-propagate-across-generations-de",
+    "why-does-second-order-information-processing-generate-identi",
+    "what-structural-features-cause-capable-minds-to-converge-on",
+    "does-any-capable-finite-mind-face-structural-pressures-towar",
+    "what-distinguishes-a-system-that-can-examine-and-revise-its",
+    "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+    "what-is-the-relationship-between-self-modification-capabilit",
+    "what-determines-whether-constitutional-arrangements-survive",
+    "why-does-bureaucratic-complexity-grow-monotonically-even-in",
+    "what-structural-pressures-make-political-systems-resistant-t"
   ],
   "created_at": "2026-03-18T00:00:00Z",
   "promoted_from": null,
@@ -185,6 +194,51 @@
       "run": 7,
       "score": 0.8419999999999999,
       "problem_id": "how-does-economic-inequality-propagate-across-generations-de"
+    },
+    {
+      "run": 8,
+      "score": 0.9,
+      "problem_id": "why-does-second-order-information-processing-generate-identi"
+    },
+    {
+      "run": 8,
+      "score": 0.34900000000000003,
+      "problem_id": "what-structural-features-cause-capable-minds-to-converge-on"
+    },
+    {
+      "run": 8,
+      "score": 0.416,
+      "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar"
+    },
+    {
+      "run": 8,
+      "score": 0.903,
+      "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its"
+    },
+    {
+      "run": 8,
+      "score": 0.8419999999999999,
+      "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m"
+    },
+    {
+      "run": 8,
+      "score": 0.973,
+      "problem_id": "what-is-the-relationship-between-self-modification-capabilit"
+    },
+    {
+      "run": 9,
+      "score": 0.7689999999999999,
+      "problem_id": "what-determines-whether-constitutional-arrangements-survive"
+    },
+    {
+      "run": 9,
+      "score": 0.42499999999999993,
+      "problem_id": "why-does-bureaucratic-complexity-grow-monotonically-even-in"
+    },
+    {
+      "run": 9,
+      "score": 0.565,
+      "problem_id": "what-structural-pressures-make-political-systems-resistant-t"
     }
   ]
 }

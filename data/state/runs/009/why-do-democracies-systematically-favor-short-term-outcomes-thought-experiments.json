@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes",
+  "conjecture_id": "thought-experiments",
+  "run": 9,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be distinguished from rival explanations of democratic short-termism—especially voter impatience, interest-group capture, media attention cycles, and elite incentives? The key unresolved question is whether feedback latency and accountability timing are the primary causal mechanism or merely one contributor among several. A strong research problem is to identify observable implications unique to this mechanism and test when democracies remain short-termist even under sincere long-term voter preferences.",
+      "score": 0.96
+    },
+    {
+      "text": "What institutional designs can convert diffuse long-term preferences into durable political commitments without fatally undermining democratic accountability? The conjecture implies a tradeoff: reducing short-term repricing may protect long-term policy, but insulation can also create agency loss, technocratic drift, or legitimacy problems. The open question is where the leverage point lies—constitutional rules, independent agencies, automatic stabilizers, multi-cycle budgeting, citizens’ assemblies, or new feedback mechanisms that make future effects legible in the present.",
+      "score": 0.98
+    },
+    {
+      "text": "Under what conditions do long-term goods become politically legible enough to survive repeated electoral reopening? The conjecture assumes delayed, diffuse, low-visibility benefits are structurally weak signals, but this raises a deeper question about signal engineering: can narratives, metrics, forecasting institutions, or intermediate milestones make future benefits 'felt' soon enough to alter selection dynamics? This is worth exploring because it tests whether the problem is fundamentally temporal or more specifically about legibility, attribution, and mobilization across time.",
+      "score": 0.93
+    }
+  ]
+}

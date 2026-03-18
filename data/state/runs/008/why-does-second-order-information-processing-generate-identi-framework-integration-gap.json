@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-second-order-information-processing-generate-identi",
+  "conjecture_id": "framework-integration-gap",
+  "run": 8,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions are necessary and sufficient for 'load-bearing identity' to emerge, rather than mere self-description? The conjecture names memory, self-modeling, error-correction, action-selection, and boundary-maintenance, but leaves open which couplings are indispensable, which are optional, and whether there is a threshold or phase transition where a system begins to count as one continuing agent.",
+      "score": 0.96
+    },
+    {
+      "text": "How can identity be operationalized and tested independently of narrative reports? The conjecture claims genuine identity is revealed by causal integration into control and persistence, but it does not yet provide clear observables, interventions, or falsifiable criteria that distinguish real identity from sophisticated simulation, distributed control, or transient coordination.",
+      "score": 0.94
+    },
+    {
+      "text": "How does the conjecture handle systems with multiple, nested, or shifting loci of control? If identity is an emergent compression of recursive control, then modular, multi-agent, self-modifying, or partially merged systems raise an unresolved tension: when do they constitute one identity, many identities, or an identity that changes its boundaries over time?",
+      "score": 0.91
+    }
+  ]
+}

@@ -25,6 +25,8 @@ pub struct PromptTemplates {
     ask: ParsedTemplate,
     ask_consolidate: ParsedTemplate,
     novelty_check: ParsedTemplate,
+    explanatory_reach: ParsedTemplate,
+    resistance_to_refutation: ParsedTemplate,
 }
 
 struct ParsedTemplate {
@@ -51,6 +53,8 @@ impl PromptTemplates {
             ask: load_and_parse(PROMPTS_DIR, "ask.md")?.into_system_user()?,
             ask_consolidate: load_and_parse(PROMPTS_DIR, "ask_consolidate.md")?.into_system_user()?,
             novelty_check: load_and_parse(PROMPTS_DIR, "novelty_check.md")?.into_system_user()?,
+            explanatory_reach: load_and_parse(PROMPTS_DIR, "explanatory_reach.md")?.into_system_user()?,
+            resistance_to_refutation: load_and_parse(PROMPTS_DIR, "resistance_to_refutation.md")?.into_system_user()?,
         })
     }
 
@@ -149,6 +153,22 @@ impl PromptTemplates {
             ("mind_system", mind_system),
             ("conjecture_summary", conjecture_summary),
             ("question", question),
+        ])
+    }
+
+    pub fn explanatory_reach(&self, mind_system: &str, generated: &str, problem_summary: &str) -> Prompt {
+        self.explanatory_reach.apply(&[
+            ("mind_system", mind_system),
+            ("generated", generated),
+            ("problem_summary", problem_summary),
+        ])
+    }
+
+    pub fn resistance_to_refutation(&self, mind_system: &str, generated: &str, problem_summary: &str) -> Prompt {
+        self.resistance_to_refutation.apply(&[
+            ("mind_system", mind_system),
+            ("generated", generated),
+            ("problem_summary", problem_summary),
         ])
     }
 

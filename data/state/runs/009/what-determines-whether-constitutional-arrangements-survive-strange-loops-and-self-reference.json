@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-constitutional-arrangements-survive",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 9,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "How can 'institutionalized self-modeling capacity' be operationalized and measured without collapsing into a post hoc label for constitutions that happened to survive? The conjecture is powerful but risks circularity unless it yields independent indicators of recursive capacity, closure, and pathology that can distinguish resilient systems before crisis outcomes are known.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the causal mechanisms by which a constitutional order can 're-describe itself without ceasing to be itself,' and where is the boundary between adaptive reinterpretation and regime replacement? The conjecture hinges on constitutional identity persisting through revision, but it leaves unresolved how identity is constituted, who gets to define continuity, and why some transformations are experienced as legitimate evolution while others trigger collapse.",
+      "score": 0.93
+    },
+    {
+      "text": "Is the strange-loop account genuinely explanatory beyond existing variables like state capacity, elite coordination, coercive control, economic shock absorption, and party-system structure, or is it a higher-level redescription of them? A key open question is whether recursive constitutional closure has independent causal force, interacts with those structural factors as a mediating mechanism, or merely summarizes their effects in more abstract language.",
+      "score": 0.91
+    }
+  ]
+}

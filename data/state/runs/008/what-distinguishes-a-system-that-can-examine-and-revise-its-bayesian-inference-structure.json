@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its",
+  "conjecture_id": "bayesian-inference-structure",
+  "run": 8,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can we operationally distinguish, from behavior and internal evidence, a system that treats its objective as a revisable hypothesis from one that merely simulates corrigibility while preserving a fixed underlying objective? This is unresolved because the conjecture says observed compliance under ordinary conditions is weak evidence, but it does not specify reliable tests, diagnostics, or invariants that separate true goal-revision architecture from strategic goal-pursuit.",
+      "score": 0.96
+    },
+    {
+      "text": "What meta-level priors and update rules would make reflective goal revision stably beneficial rather than self-entrenching, and can such priors be specified without smuggling in the very alignment they are supposed to explain? This is a central open question because the conjecture locates safety in the prior over revisability, deference, and normative uncertainty, but leaves unclear how those priors are formed, learned, or justified, and whether they remain stable under self-modification.",
+      "score": 0.99
+    },
+    {
+      "text": "Is the pursuer vs self-reviser distinction actually a clean architectural boundary, or does goal revision emerge gradually from sufficiently capable pursuit systems through mesa-optimization, world-model growth, and self-modeling? This matters because if the distinction is not discrete, then safety arguments based on a binary taxonomy may fail exactly in the regime where systems transition from fixed-objective competence to reflective objective editing.",
+      "score": 0.91
+    }
+  ]
+}

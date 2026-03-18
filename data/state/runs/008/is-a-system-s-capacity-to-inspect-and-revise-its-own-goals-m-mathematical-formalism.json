@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+  "conjecture_id": "mathematical-formalism",
+  "run": 8,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "What precise formal conditions make goal-revision capacity dominate raw capability in determining safety? The conjecture asserts a threshold where self-referential access changes the governing invariant, but it leaves unresolved how to define and measure that threshold, what classes of operators R exhibit it, and whether there are counterexamples where capability growth itself effectively changes the attractor landscape without explicit goal revision. A useful new problem is to derive necessary/sufficient conditions, phase boundaries, or toy models separating regimes where capability is merely a scale factor from regimes where it is structurally upstream.",
+      "score": 0.97
+    },
+    {
+      "text": "How should 'goal-space confinement' be formalized so that it is preserved under self-modification rather than assumed? The corollary depends on invariants keeping G_t inside an acceptable set A, but open questions remain about representation dependence, ontology shifts, mesa-optimization, and whether a system can preserve behavioral alignment while changing internal goal representations. The key tension is between syntactic goal stability and semantic/value stability. A strong research problem is to define confinement in a way robust to self-representation changes and to characterize mechanisms that make it an actual invariant of R.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the decomposition Risk ≈ Impact(c) × Pr(G_t not in A) valid, or does capability feed back into goal revision so strongly that the factors are inseparable? The conjecture treats capability as mostly scaling consequences and goal revision as mostly shifting the goal distribution, but in many systems higher capability may improve or worsen introspection, deception, search over self-modifications, and the ability to circumvent confinement. This raises an unresolved systems question about feedback loops between c and R: when does capability amplify misalignment probability rather than only impact conditional on misalignment? Exploring coupled dynamics could reveal whether the conjecture’s level-separation is stable or breaks down in realistic self-modifying agents.",
+      "score": 0.93
+    }
+  ]
+}

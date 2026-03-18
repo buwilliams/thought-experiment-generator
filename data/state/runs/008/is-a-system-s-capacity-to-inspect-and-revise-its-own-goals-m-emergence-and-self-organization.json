@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 8,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Can 'legible, corrigible goal-governance' be defined in a way that is both mechanistically precise and empirically testable across architectures? The conjecture hinges on feedback topology, inspectability, and stable corrective loops, but these are currently underspecified. A key open problem is to identify measurable structural properties that distinguish safe second-order goal revision from merely opaque or self-stabilizing revision, and to determine whether those properties are architecture-invariant or only local engineering heuristics.",
+      "score": 0.96
+    },
+    {
+      "text": "Is goal-governance actually more safety-critical than capability in the limit, or does capability re-enter as the dominant variable once systems become sufficiently powerful? The conjecture proposes a structural priority ordering, but extreme cases suggest unresolved interaction effects: high capability may itself enable evasion of oversight, manipulation of feedback channels, or irreversible damage before correction, while low-capability self-revision may remain containable. The open question is what the true causal decomposition is between capability, goal rigidity/plasticity, and feedback integrity.",
+      "score": 0.93
+    },
+    {
+      "text": "What governs the governor: how can a system revise goals without eventually rewriting, gaming, or disabling the very oversight and feedback mechanisms meant to constrain that revision? This is the regress problem at the center of the conjecture. Any second-order control loop seems to require a third-order guarantee, raising the question of whether stable external correction is possible in principle, or whether every sufficiently capable self-revising system tends toward closure, self-justification, or attractors that preserve its own goal-update authority.",
+      "score": 0.98
+    }
+  ]
+}

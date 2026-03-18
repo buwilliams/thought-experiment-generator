@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 9,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture distinguish genuinely horizon-driven democratic short-termism from alternative mechanisms—such as voter time preference, interest-group capture, partisan polarization, bureaucratic inertia, or epistemic uncertainty—and what observable patterns would uniquely identify the 'truncated repeated game' explanation?",
+      "score": 0.96
+    },
+    {
+      "text": "What institutional changes actually lengthen the effective shadow of the future without creating larger failures of democratic accountability, technocratic entrenchment, or rigidity—and is there a principled design tradeoff between long-term commitment and present-day responsiveness?",
+      "score": 0.94
+    },
+    {
+      "text": "Under what conditions can democracies generate long-term cooperation despite weak attribution and electoral turnover—through parties, norms, state capacity, civic memory, or cross-generational identity—and does this imply that the effective game is sometimes not short-horizon after all but mediated by higher-level institutions that carry strategy across rounds?",
+      "score": 0.91
+    }
+  ]
+}

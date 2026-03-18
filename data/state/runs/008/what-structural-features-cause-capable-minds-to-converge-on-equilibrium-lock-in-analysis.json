@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-cause-capable-minds-to-converge-on",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 8,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions make the 'middle ground' not just locally stable but globally reachable from realistic starting states? The conjecture identifies features that would support bounded cooperation, but leaves open whether these features are sufficient, necessary, or only stabilizing after agents are already near the middle. A key open problem is to characterize the basin of attraction: under what combinations of payoff curvature, switching costs, trust dynamics, enforcement, and communication noise do systems escape lock-in to conflict or merger and reliably converge to partial coordination?",
+      "score": 0.95
+    },
+    {
+      "text": "How can 'error-correction, optionality, and identity' be formalized as payoff-relevant variables rather than intuitive desiderata? The conjecture depends on the claim that full merger destroys epistemic variance and adaptive capacity, but it does not specify when integration becomes too much or how to measure the value of semi-independence. A strong research problem is to build models where diversity of models, reversibility, and boundary preservation generate quantifiable long-run advantages, and to identify thresholds where merger flips from efficient coordination to correlated fragility or epistemic stagnation.",
+      "score": 0.93
+    },
+    {
+      "text": "How robust is the conjecture under asymmetry in power, competence, time horizon, or information? The argument often assumes roughly symmetric agents and mutual vulnerability to exploitation, but many real relationships involve large asymmetries where one side can impose terms, subsidize inefficiency, or strategically mimic cooperation. An important open question is whether viable middle-ground equilibria still exist under strong asymmetry, and if so what institutional substitutes—rights, external enforcement, modular interfaces, reputation systems, or exit protections—are sufficient to prevent collapse into domination or fragmentation.",
+      "score": 0.91
+    }
+  ]
+}

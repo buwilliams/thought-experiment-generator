@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 8,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.5,
+  "total": 0.62,
+  "candidate_problems": [
+    {
+      "text": "What precise boundary conditions make cooperation a dominant system-level attractor rather than domination, segregation, or cyclical conflict? The conjecture asserts a strong selection pressure toward cooperation, but it leaves unresolved which parameters actually govern the phase transition: resource scarcity vs abundance, power asymmetry, observability, memory length, mobility/exit options, offense-defense balance, communication bandwidth, and the cost of verification and enforcement. Without specifying these conditions, the claim risks being true only in some regimes and false in others.",
+      "score": 0.96
+    },
+    {
+      "text": "Does greater capability reliably increase cooperation, or can it instead amplify exploitation by improving deception, surveillance, commitment manipulation, and unilateral control? The conjecture assumes that more capable minds better perceive second-order effects and therefore converge toward cooperative equilibria, but this is in tension with the possibility that higher capability also lowers the costs of coercion and raises the feasibility of stable hierarchy or lock-in. The unresolved question is whether capability monotonically favors cooperation, or whether there are capability thresholds where adversarial strategies become more, not less, attractive.",
+      "score": 0.94
+    },
+    {
+      "text": "How can the conjecture distinguish genuine long-run selection for cooperation from temporary local equilibria sustained by institutions that themselves depend on prior coercion, exclusion, or externalized conflict? The open problem is whether observed cooperation is actually system-wide positive-sum coordination, or merely a bounded peace within groups that offload destructiveness onto outsiders, future agents, or hidden substrates. This challenges the conjecture's scope: is the selection pressure toward cooperation universal across the whole shared reality, or only within coalitions formed by competitive elimination and boundary drawing?",
+      "score": 0.91
+    }
+  ]
+}

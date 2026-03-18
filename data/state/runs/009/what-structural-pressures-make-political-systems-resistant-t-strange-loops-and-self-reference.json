@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-pressures-make-political-systems-resistant-t",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 9,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized and falsified? The core terms—'self-referential stability-preserving loop,' 'institutional self-model,' and 'legibility to the system'—need measurable indicators that distinguish this mechanism from simpler explanations like veto points, elite capture, path dependence, or partisan polarization. A strong new problem is to specify observable signatures that would uniquely support or refute the conjecture across cases.",
+      "score": 0.97
+    },
+    {
+      "text": "What are the boundary conditions: when does institutional self-maintenance protect legitimate continuity, and when does it become pathological reform-resistance? The conjecture implies a tradeoff between preventing arbitrary power and blocking necessary adaptation, but it does not yet explain where that threshold lies or how different constitutional designs shift it. This is worth pursuing because without such criteria the theory risks collapsing all resistance into the same phenomenon.",
+      "score": 0.93
+    },
+    {
+      "text": "By what mechanisms can a sociological supermajority become institutionally legible without triggering illegitimacy or extra-system rupture? The conjecture points to meta-political leverage—changing representational grammar, agenda rules, jurisdiction, or legitimacy narratives—but leaves open which interventions actually rewire the loop, under what conditions, and with what risks of instability or authoritarian capture. This is a high-value problem because it turns the conjecture from diagnosis into design theory.",
+      "score": 0.95
+    }
+  ]
+}

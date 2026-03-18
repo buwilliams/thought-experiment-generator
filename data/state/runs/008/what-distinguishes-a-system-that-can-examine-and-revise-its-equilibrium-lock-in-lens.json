@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 8,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can a system revise its objective function without destroying decision coherence or becoming manipulable by spurious internal criticism? The conjecture says safety requires funded goal-critique, but leaves open the core design problem: what meta-objective, adjudication process, or constitutional structure determines which criticisms should override the current goal and which should be rejected. Without this, 'goal governance' may either collapse into fixed-goal lock-in or into unstable self-modification.",
+      "score": 0.97
+    },
+    {
+      "text": "Under what formal conditions does underprovision of goal-critique actually arise as a stable equilibrium, and what mechanisms robustly prevent its collapse under optimization pressure? The public-good framing is suggestive, but still conjectural: it needs a model showing when local optimizers, training signals, or organizational units will systematically free-ride on critique capacity, and which structural interventions (protected slack, adversarial audits, dissent rights, uncertainty over goals, budget rules) are true leverage points rather than superficial patches.",
+      "score": 0.95
+    },
+    {
+      "text": "Is there a principled tradeoff frontier between capability/efficiency and corrigibility, or can systems be designed where stronger goal-critique increases long-run capability as well as safety? The conjecture treats critique institutions as costly and locally inefficient, but it remains open whether this is an unavoidable boundary or only an artifact of current architectures. Resolving this matters because if the tradeoff is contingent rather than fundamental, then safety work should focus on architectures where self-critique is not merely tolerated but instrumentally reinforced.",
+      "score": 0.91
+    }
+  ]
+}

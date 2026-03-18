@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-bureaucratic-complexity-grow-monotonically-even-in",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 9,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.2,
+  "total": 0.41900000000000004,
+  "candidate_problems": [
+    {
+      "text": "Is administrative simplicity actually a public good in the relevant economic and institutional sense, or are there important cases where simplicity is excludable, rivalrous, or privately capturable? The conjecture hinges on this classification, but many simplifications may benefit some units while harming others, or may be appropriable by political leaders, agencies, or vendors. Clarifying the ontology of 'simplicity' is crucial because if it is not generally a public good, the proposed equilibrium mechanism may be misidentified.",
+      "score": 0.95
+    },
+    {
+      "text": "What mechanisms determine when complexity growth is truly monotonic versus periodically reversed by shocks, leadership, technology, or constitutional redesign? The conjecture posits a strong directional tendency, but history may contain punctuated simplification episodes. The open question is what structural conditions create genuine outflows from the complexity stock, and whether these are rare anomalies or predictable regime changes.",
+      "score": 0.92
+    },
+    {
+      "text": "How can one distinguish beneficial complexity that encodes hard-won safeguards from pathological complexity sustained by incentive misalignment? Since many layers originated as solutions to real failures, simplification can reintroduce corruption, arbitrariness, or inequity. The unresolved problem is to develop criteria or measurement that separate necessary institutional memory from accreted burden, otherwise the conjecture risks treating all growth as dysfunction.",
+      "score": 0.9
+    }
+  ]
+}

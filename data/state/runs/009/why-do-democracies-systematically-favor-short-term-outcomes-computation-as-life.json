@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes",
+  "conjecture_id": "computation-as-life",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized and tested against rival explanations of democratic short-termism? The core open question is whether the proposed mechanism—high-frequency preference aggregation selecting for compressible near-term signals—has distinct empirical predictions separating it from alternatives such as voter irrationality, elite capture, polarization, media incentives, or simple discounting. Without a way to measure 'stored preference,' 'selected behavior,' 'interface loss,' and 'long-horizon computational capacity,' the conjecture risks remaining metaphorical rather than explanatory.",
+      "score": 0.97
+    },
+    {
+      "text": "What institutional architectures can preserve long-horizon preferences without creating new domination, technocracy, or democratic illegibility? The conjecture implies that the leverage point is structural memory, but this raises a design problem: which mechanisms actually encode future-oriented information robustly across electoral cycles while remaining corrigible, legitimate, and resistant to capture? This is a major unresolved tension because the proposed cure for short-termism may weaken accountability or shift power to insulated actors whose own incentives are misaligned.",
+      "score": 0.95
+    },
+    {
+      "text": "Are short electoral timescales an intrinsic property of democracy, or a contingent feature of particular historical implementations? The conjecture treats democracy as natively present-tense, but an open question is whether democratic systems could be reconfigured so that long-term preference preservation is endogenous rather than externally bolted on. This invites comparative and historical inquiry into whether some democratic forms already compute long-horizon goods better, and whether the conjecture is really about democracy as such or about specific institutional stacks inherited from earlier coordination problems.",
+      "score": 0.91
+    }
+  ]
+}

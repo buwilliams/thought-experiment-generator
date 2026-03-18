@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-allow-institutions-to-maintain-legi",
+  "conjecture_id": "goal-critique-safety-lens",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can an institution distinguish legitimate higher-order value revision from mere opportunistic goal drift? The conjecture relies on separating core values from current implementations, but leaves unresolved what criteria, procedures, or epistemic tests let institutions revise purposes without dissolving continuity, becoming manipulable by factions, or retrospectively redefining success. This is a central open problem because the proposed cure for rigidity could also undermine legitimacy if self-revision becomes self-authorization.",
+      "score": 0.96
+    },
+    {
+      "text": "What concrete institutional structures actually produce error-correcting legitimacy under conditions of rapid change, and what tradeoffs do they create with stability, coordination, and resistance to capture? The conjecture names mechanisms like goal-audits, protected dissent, and visible revision rituals, but it remains open which combinations work, at what scale, in which domains, and how they interact as a system. This is worth pursuing because without operational design principles, the conjecture risks remaining a compelling metaphor rather than a usable theory of institutional architecture.",
+      "score": 0.93
+    },
+    {
+      "text": "How can legitimacy as a dynamic error-correcting relationship be observed or measured before visible failure occurs? The conjecture reframes legitimacy away from trust or authority, but does not specify leading indicators that distinguish healthy self-correction from performative consultation, bureaucratic churn, or temporary compliance. This is an important open question because institutions need ways to detect whether criticism can genuinely change goals and whether publics can recognize that learning, otherwise the theory cannot guide diagnosis, comparison, or reform.",
+      "score": 0.89
+    }
+  ]
+}

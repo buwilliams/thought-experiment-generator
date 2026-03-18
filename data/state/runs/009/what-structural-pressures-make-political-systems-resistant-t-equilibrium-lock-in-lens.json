@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-pressures-make-political-systems-resistant-t",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 9,
+  "logical_consistency": 0.97,
+  "hard_to_vary": 0.7,
+  "total": 0.7809999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can reform coalitions create excludable or selectively incentivized forms of participation without corrupting the reform into a narrower interest project? The conjecture points to excludability as a leverage point, but leaves unresolved whether there is a general mechanism for converting diffuse-majority preferences into sustained organization while preserving broad public-good aims.",
+      "score": 0.95
+    },
+    {
+      "text": "What empirical boundary conditions distinguish a true collective-action trap from alternative explanations such as preference instability, elite agenda control, misinformation, or institutional mismeasurement of support? The conjecture is powerful only if it yields discriminating predictions about when supermajority-backed reforms should still fail and when they should succeed.",
+      "score": 0.93
+    },
+    {
+      "text": "Which institutional changes most effectively reduce veto multiplication and socialize transition costs without creating new pathologies such as technocratic insulation, rent-seeking, or democratic legitimacy loss? The conjecture identifies leverage points, but the open problem is the design tradeoff: reforms to enable reform may themselves generate concentrated power or new organized beneficiaries.",
+      "score": 0.91
+    }
+  ]
+}

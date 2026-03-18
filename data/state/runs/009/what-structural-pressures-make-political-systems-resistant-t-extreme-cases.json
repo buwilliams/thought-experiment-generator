@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-pressures-make-political-systems-resistant-t",
+  "conjecture_id": "extreme-cases",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be formalized so that 'support,' 'intensity,' 'organization,' veto structure, and temporal persistence are distinct variables, and under what institutional conditions does increasing support cease to increase the probability of reform? This is the core unresolved question because the conjecture currently relies on an intuitive mechanism but lacks a precise threshold or model that distinguishes it from standard collective-action or veto-player theories.",
+      "score": 0.96
+    },
+    {
+      "text": "What empirical signatures would distinguish this mechanism from rival explanations of reform failure—such as elite preference divergence, misinformation, partisan sorting, repression, or simple preference instability? The open problem is whether broad but diffuse support is independently causally important, or whether it is usually epiphenomenal to deeper conflicts over power, information, and agenda control.",
+      "score": 0.92
+    },
+    {
+      "text": "If political systems are structurally optimized for error-avoidance rather than preference-realization, what institutional redesigns change the payoff structure so that broadly supported reforms become actionable without making catastrophic or low-quality change too easy? This is worth pursuing because it turns the conjecture into a design problem: identifying leverage points that reduce false negatives while preserving safeguards against false positives.",
+      "score": 0.94
+    }
+  ]
+}

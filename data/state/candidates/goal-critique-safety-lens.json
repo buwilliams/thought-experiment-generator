@@ -1,0 +1,44 @@
+{
+  "id": "goal-critique-safety-lens",
+  "layer": "candidates",
+  "score": 0.9420999999999999,
+  "rank": 14,
+  "run_count": 2,
+  "problem_coverage": [
+    "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+    "what-determines-whether-constitutional-arrangements-survive",
+    "why-do-democracies-systematically-favor-short-term-outcomes",
+    "what-structural-features-allow-institutions-to-maintain-legi",
+    "what-structural-pressures-make-political-systems-resistant-t",
+    "why-does-bureaucratic-complexity-grow-monotonically-even-in"
+  ],
+  "created_at": "2026-03-18T22:11:41.130641465+00:00",
+  "promoted_from": null,
+  "history": [
+    {
+      "run": 9,
+      "score": 0.985,
+      "problem_id": "what-determines-whether-constitutional-arrangements-survive"
+    },
+    {
+      "run": 9,
+      "score": 0.912,
+      "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes"
+    },
+    {
+      "run": 9,
+      "score": 0.845,
+      "problem_id": "what-structural-features-allow-institutions-to-maintain-legi"
+    },
+    {
+      "run": 9,
+      "score": 0.7749999999999999,
+      "problem_id": "what-structural-pressures-make-political-systems-resistant-t"
+    },
+    {
+      "run": 9,
+      "score": 0.979,
+      "problem_id": "why-does-bureaucratic-complexity-grow-monotonically-even-in"
+    }
+  ]
+}

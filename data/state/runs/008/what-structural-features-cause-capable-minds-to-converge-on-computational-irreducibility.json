@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-cause-capable-minds-to-converge-on",
+  "conjecture_id": "computational-irreducibility",
+  "run": 8,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "What exactly is the boundary condition under which computational irreducibility is the decisive cause of middle-ground convergence rather than merely one factor among others? The conjecture risks over-attributing relationship structure to irreducibility without distinguishing cases where agents are highly modelable, asymmetrically modelable, or where power, incentives, and norms dominate outcomes more than prediction limits do.",
+      "score": 0.94
+    },
+    {
+      "text": "Can the claimed optimum of 'persistent separateness plus repeated, information-rich mutual adjustment' be formalized and shown to outperform alternatives across agent types and environments? An open problem is to specify measurable variables for separateness, feedback richness, reversibility, and protocol legibility, and determine whether there are thresholds, tradeoffs, or failure regimes where more coupling, more opacity, or one-shot coordination is actually superior.",
+      "score": 0.97
+    },
+    {
+      "text": "How does the conjecture handle large asymmetries in capability, information, or institutional power? If one agent can model, manipulate, or constrain the other far better than vice versa, it is unclear whether iterative co-discovery still yields healthy convergence or whether the proposed architecture simply stabilizes domination while appearing cooperative.",
+      "score": 0.96
+    }
+  ]
+}

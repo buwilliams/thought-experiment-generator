@@ -1,15 +1,25 @@
 {
   "id": "computational-irreducibility",
   "layer": "candidates",
-  "score": 0.951,
+  "score": 0.8911666666666668,
   "rank": 10,
-  "run_count": 1,
+  "run_count": 3,
   "problem_coverage": [
     "what-structural-features-make-market-economies-vulnerable-to",
     "why-do-markets-consistently-underprovide-public-goods-even-w",
     "why-does-regulatory-capture-occur-systematically-even-in-ins",
     "what-determines-whether-technological-disruption-creates-bro",
-    "how-does-economic-inequality-propagate-across-generations-de"
+    "how-does-economic-inequality-propagate-across-generations-de",
+    "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+    "what-structural-features-cause-capable-minds-to-converge-on",
+    "what-is-the-relationship-between-self-modification-capabilit",
+    "why-does-second-order-information-processing-generate-identi",
+    "what-distinguishes-a-system-that-can-examine-and-revise-its",
+    "does-any-capable-finite-mind-face-structural-pressures-towar",
+    "what-structural-pressures-make-political-systems-resistant-t",
+    "why-do-democracies-systematically-favor-short-term-outcomes",
+    "what-determines-whether-constitutional-arrangements-survive",
+    "what-structural-features-allow-institutions-to-maintain-legi"
   ],
   "created_at": "2026-03-18T21:40:45.802488536+00:00",
   "promoted_from": null,
@@ -38,6 +48,56 @@
       "run": 7,
       "score": 0.912,
       "problem_id": "how-does-economic-inequality-propagate-across-generations-de"
+    },
+    {
+      "run": 8,
+      "score": 0.8419999999999999,
+      "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m"
+    },
+    {
+      "run": 8,
+      "score": 0.97,
+      "problem_id": "what-structural-features-cause-capable-minds-to-converge-on"
+    },
+    {
+      "run": 8,
+      "score": 0.97,
+      "problem_id": "what-is-the-relationship-between-self-modification-capabilit"
+    },
+    {
+      "run": 8,
+      "score": 0.97,
+      "problem_id": "why-does-second-order-information-processing-generate-identi"
+    },
+    {
+      "run": 8,
+      "score": 0.903,
+      "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its"
+    },
+    {
+      "run": 8,
+      "score": 0.97,
+      "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar"
+    },
+    {
+      "run": 9,
+      "score": 0.985,
+      "problem_id": "what-structural-pressures-make-political-systems-resistant-t"
+    },
+    {
+      "run": 9,
+      "score": 0.833,
+      "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes"
+    },
+    {
+      "run": 9,
+      "score": 0.909,
+      "problem_id": "what-determines-whether-constitutional-arrangements-survive"
+    },
+    {
+      "run": 9,
+      "score": 0.413,
+      "problem_id": "what-structural-features-allow-institutions-to-maintain-legi"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-cause-capable-minds-to-converge-on",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 8,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "What are the minimal sufficient structural conditions for stable 'middle-ground' relationships, and are all six listed features genuinely load-bearing or partly reducible to a smaller set of deeper variables? The conjecture claims necessity feature-by-feature, but it remains open whether some features are derivative, whether there are substitute architectures that preserve viability without them, and where the actual phase boundaries lie between conflict, domination, fusion, and productive tension.",
+      "score": 0.95
+    },
+    {
+      "text": "How can the conjecture be operationalized into measurable system variables and tested across domains? Key open questions are how to quantify separateness, legibility, corrigibility symmetry, shared problem-space, repair capacity, and bounded interdependence; whether these variables predict relationship outcomes in couples, teams, institutions, diplomacy, and human-AI interaction; and whether the same feedback structure generalizes or fragments by context.",
+      "score": 0.93
+    },
+    {
+      "text": "What mechanisms make difference become 'existentially threatening' rather than informative, and how do power asymmetries alter the conjecture? The current formulation may understate how coercion, dependency traps, unequal exit options, trauma, scarcity, and status competition can destroy reciprocal correction even when the nominal architecture is present. A major open problem is whether viable middle-ground requires not just structural features but specific distributions of power, slack, and outside options.",
+      "score": 0.97
+    }
+  ]
+}

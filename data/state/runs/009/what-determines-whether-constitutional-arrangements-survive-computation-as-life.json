@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-constitutional-arrangements-survive",
+  "conjecture_id": "computation-as-life",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture's core variables be operationalized without collapsing the metaphor? In particular: what would count as measurable 'bandwidth,' 'error-correction capacity,' 'input complexity,' 'compute rigidity,' and 'substrate switch' across different constitutional orders, and how can these be distinguished from adjacent explanations like state capacity, legitimacy, elite cohesion, or coercive power?",
+      "score": 0.97
+    },
+    {
+      "text": "What is the causal threshold at which constitutional processing ceases to absorb conflict and rival processors take over? The open problem is to explain whether collapse is driven by absolute overload, by mismatches between kinds of stress and institutional architecture, or by endogenous feedback loops in which attempts to centralize, censor, or accelerate decision-making further degrade sensing and correction.",
+      "score": 0.94
+    },
+    {
+      "text": "Under what conditions do non-constitutional rival systems actually outperform constitutional arrangements at processing social stress, and for whom? This raises the unresolved question of whether 'better computation' means faster coordination, broader information integration, greater coercive efficiency, or more durable legitimacy, and whether some apparent regime survivals are merely short-term computational gains that destroy long-run adaptability.",
+      "score": 0.91
+    }
+  ]
+}

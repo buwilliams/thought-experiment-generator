@@ -1,9 +1,9 @@
 {
   "id": "historical-genesis",
   "layer": "candidates",
-  "score": 0.93773,
-  "rank": 7,
-  "run_count": 5,
+  "score": 0.9313305555555556,
+  "rank": 14,
+  "run_count": 6,
   "problem_coverage": [
     "what-makes-an-explanation-hard-to-vary",
     "can-llms-create-new-knowledge",
@@ -24,7 +24,13 @@
     "why-does-regulatory-capture-occur-systematically-even-in-ins",
     "how-does-economic-inequality-propagate-across-generations-de",
     "what-structural-features-make-market-economies-vulnerable-to",
-    "why-do-markets-consistently-underprovide-public-goods-even-w"
+    "why-do-markets-consistently-underprovide-public-goods-even-w",
+    "what-distinguishes-a-system-that-can-examine-and-revise-its",
+    "what-structural-features-cause-capable-minds-to-converge-on",
+    "why-does-second-order-information-processing-generate-identi",
+    "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+    "does-any-capable-finite-mind-face-structural-pressures-towar",
+    "what-is-the-relationship-between-self-modification-capabilit"
   ],
   "created_at": "2026-03-18T00:00:00Z",
   "promoted_from": null,
@@ -128,6 +134,36 @@
       "run": 7,
       "score": 0.979,
       "problem_id": "why-do-markets-consistently-underprovide-public-goods-even-w"
+    },
+    {
+      "run": 8,
+      "score": 0.912,
+      "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its"
+    },
+    {
+      "run": 8,
+      "score": 0.985,
+      "problem_id": "what-structural-features-cause-capable-minds-to-converge-on"
+    },
+    {
+      "run": 8,
+      "score": 0.7689999999999999,
+      "problem_id": "why-does-second-order-information-processing-generate-identi"
+    },
+    {
+      "run": 8,
+      "score": 0.985,
+      "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m"
+    },
+    {
+      "run": 8,
+      "score": 0.7629999999999999,
+      "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar"
+    },
+    {
+      "run": 8,
+      "score": 0.982,
+      "problem_id": "what-is-the-relationship-between-self-modification-capabilit"
     }
   ]
 }

@@ -1,14 +1,24 @@
 {
   "id": "iterated-game-dynamics",
   "layer": "candidates",
-  "score": 0.91425,
+  "score": 0.8119500000000001,
   "rank": 7,
-  "run_count": 1,
+  "run_count": 3,
   "problem_coverage": [
     "why-does-regulatory-capture-occur-systematically-even-in-ins",
     "what-structural-features-make-market-economies-vulnerable-to",
     "why-do-markets-consistently-underprovide-public-goods-even-w",
-    "what-determines-whether-technological-disruption-creates-bro"
+    "what-determines-whether-technological-disruption-creates-bro",
+    "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+    "does-any-capable-finite-mind-face-structural-pressures-towar",
+    "what-structural-features-cause-capable-minds-to-converge-on",
+    "why-does-second-order-information-processing-generate-identi",
+    "what-distinguishes-a-system-that-can-examine-and-revise-its",
+    "why-does-bureaucratic-complexity-grow-monotonically-even-in",
+    "what-structural-pressures-make-political-systems-resistant-t",
+    "what-structural-features-allow-institutions-to-maintain-legi",
+    "why-do-democracies-systematically-favor-short-term-outcomes",
+    "what-determines-whether-constitutional-arrangements-survive"
   ],
   "created_at": "2026-03-18T21:34:24.212153533+00:00",
   "promoted_from": null,
@@ -32,6 +42,56 @@
       "run": 7,
       "score": 0.982,
       "problem_id": "what-determines-whether-technological-disruption-creates-bro"
+    },
+    {
+      "run": 8,
+      "score": 0.9,
+      "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m"
+    },
+    {
+      "run": 8,
+      "score": 0.8479999999999999,
+      "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar"
+    },
+    {
+      "run": 8,
+      "score": 0.982,
+      "problem_id": "what-structural-features-cause-capable-minds-to-converge-on"
+    },
+    {
+      "run": 8,
+      "score": 0.34,
+      "problem_id": "why-does-second-order-information-processing-generate-identi"
+    },
+    {
+      "run": 8,
+      "score": 0.903,
+      "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its"
+    },
+    {
+      "run": 9,
+      "score": 0.398,
+      "problem_id": "why-does-bureaucratic-complexity-grow-monotonically-even-in"
+    },
+    {
+      "run": 9,
+      "score": 0.845,
+      "problem_id": "what-structural-pressures-make-political-systems-resistant-t"
+    },
+    {
+      "run": 9,
+      "score": 0.845,
+      "problem_id": "what-structural-features-allow-institutions-to-maintain-legi"
+    },
+    {
+      "run": 9,
+      "score": 0.982,
+      "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes"
+    },
+    {
+      "run": 9,
+      "score": 0.565,
+      "problem_id": "what-determines-whether-constitutional-arrangements-survive"
     }
   ]
 }

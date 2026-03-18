@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes",
+  "conjecture_id": "extreme-cases",
+  "run": 9,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.6,
+  "total": 0.6990000000000001,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made precise enough to distinguish a true structural 'loss of temporal resolution' from competing explanations like voter myopia, interest-group capture, polarization, or simple uncertainty? The key open problem is to define measurable quantities—e.g., horizon length, feedback delay, accountability interval, preference fidelity, and policy persistence—and test whether democratic responsiveness degrades systematically as causal timescales lengthen, independent of those confounders.",
+      "score": 0.97
+    },
+    {
+      "text": "What institutional designs can increase long-horizon political control without destroying democratic legitimacy, adaptability, or error-correction? The conjecture points to constitutional commitments, independent bodies, automatic rules, and intergenerational accounting, but leaves unresolved the central tension: any mechanism that protects future interests may also weaken present accountability, entrench elite judgment, or lock in mistaken policies. The new problem is to identify designs that extend temporal agency while preserving corrigibility.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the claimed asymmetry between near-term and long-term preferences an unavoidable feature of collective choice, or does it depend on specific information and coordination technologies? The conjecture treats long-term preference as 'ontologically thin' in politics, but it remains open whether this thinness is fundamental or contingent. A worthwhile problem is to ask under what conditions future-oriented preferences can become high-fidelity political objects—through forecasting institutions, durable coalitions, property-right structures, civic norms, or new representation schemes for future persons.",
+      "score": 0.91
+    }
+  ]
+}

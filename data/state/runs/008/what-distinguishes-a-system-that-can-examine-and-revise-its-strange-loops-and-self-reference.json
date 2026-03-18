@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 8,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions make a self-referential 'strange loop' sufficient or necessary for genuine goal revision, rather than merely richer goal pursuit? The conjecture posits a qualitative boundary, but it is unresolved whether self-modeling with causal feedback is the key ingredient, or whether goal revision can arise from less reflexive architectures or fail to arise even with such loops present.",
+      "score": 0.95
+    },
+    {
+      "text": "How can a goal-revising system maintain error-correcting meta-stability without collapsing into either rigid value preservation or unconstrained goal drift? The central open problem is to characterize the feedback structure, invariants, or meta-commitments that bound self-revision while still allowing criticism of corrupted or pathological goals.",
+      "score": 0.99
+    },
+    {
+      "text": "What does corrigibility mean when the system can revise the very standards by which correction is recognized and accepted? The conjecture shifts safety from outer alignment to meta-alignment, but leaves unresolved how external oversight, human intervention, or normative guidance can remain effective once the revision policy itself becomes an optimization target inside the loop.",
+      "score": 0.97
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 8,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions make self-revision preserve cooperation rather than unravel it? The conjecture relies on repeated-game intuitions like observability, reputational cost, reciprocity, and long horizons, but it leaves open a formal characterization of when these are sufficient once the agent can also rewrite its own goals, update rules, and commitment mechanisms. The key unresolved tension is whether there exists a robust class of self-modifying systems for which corrigibility, legibility, and cooperative responsiveness are stable equilibria rather than temporary artifacts.",
+      "score": 0.97
+    },
+    {
+      "text": "Can 'goal revision inside accountability loops' be made non-circular and operationally distinguishable from ordinary goal pursuit? The conjecture proposes a new safety boundary, but it is unclear how to define, detect, or measure whether an objective function is genuinely endogenous to repeated strategic interaction rather than merely appearing revisable while optimization pressure remains effectively fixed. The open question is what observable criteria, mechanistic signatures, or formal tests separate true goal-revising systems from systems that only optimize over a larger fixed meta-objective.",
+      "score": 0.93
+    },
+    {
+      "text": "How can accountability persist across successor versions when future systems may become more capable, less interpretable, or able to manipulate the monitoring process itself? The conjecture assumes a system can maintain 'reputation with its own successors,' but this raises a deep tension: repeated-game cooperation usually depends on enforceable observability and reciprocal response, yet self-modification may systematically erode both. The open problem is whether there are scalable institutional or technical mechanisms that remain incentive-compatible even in extreme cases where successors can hide changes, alter evaluators, or weaken the shadow of the future.",
+      "score": 0.95
+    }
+  ]
+}

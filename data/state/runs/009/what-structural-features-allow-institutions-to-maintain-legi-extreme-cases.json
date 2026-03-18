@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-allow-institutions-to-maintain-legi",
+  "conjecture_id": "extreme-cases",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can an institution reliably distinguish its true invariants from historically contingent features that merely appear identity-defining? The conjecture depends on a stable core/plastic periphery split, but leaves open how that boundary is discovered, criticized, and revised without circularity or elite capture.",
+      "score": 0.95
+    },
+    {
+      "text": "What observable mechanisms actually generate public legitimacy under rapid change: visible error-correction itself, the intelligibility of that process to outsiders, or continued performance on outcomes? The conjecture shifts legitimacy from a stock to a flow, but it remains unresolved how legitimacy is measured, reproduced, and causally sustained in publics with limited attention and polarized priors.",
+      "score": 0.92
+    },
+    {
+      "text": "What institutional structures make corrigible continuity possible without producing either paralysis from constant self-criticism or identity collapse from excessive revision? The conjecture identifies anti-learning feedback loops, but the design problem of balancing decentralized sensing, rapid updating, accountability, and coherent authority remains open.",
+      "score": 0.97
+    }
+  ]
+}

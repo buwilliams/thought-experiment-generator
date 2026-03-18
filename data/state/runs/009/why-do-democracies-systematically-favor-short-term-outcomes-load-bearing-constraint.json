@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made causally discriminating against rival explanations—especially voter myopia, elite incentives, partisan polarization, and state-capacity limits? The key unresolved question is which institutional components are genuinely load-bearing versus merely correlated with short-termism, and what counterfactual changes would uniquely support the temporal-granularity mismatch account.",
+      "score": 0.96
+    },
+    {
+      "text": "What institutional redesigns can make long-term preferences politically load-bearing without fatally weakening democratic accountability? This is an open tension because the conjecture implies a tradeoff: the same mechanisms that correct immediate harms also generate short-term bias. The problem is to identify designs—commitment devices, insulated agencies, multi-term budgets, automatic rules, new metrics—that preserve corrigibility, legitimacy, and adaptability while extending time horizons.",
+      "score": 0.99
+    },
+    {
+      "text": "Under what conditions do democracies already succeed at long-term policy, and do those cases fit or falsify the conjecture? This open question matters because apparent exceptions—central banks, pensions, infrastructure regimes, wartime mobilization, some climate or industrial policies—could reveal hidden mechanisms that convert future benefits into present constraints, or show that the theory is too broad. A comparative theory of success cases is needed.",
+      "score": 0.93
+    }
+  ]
+}

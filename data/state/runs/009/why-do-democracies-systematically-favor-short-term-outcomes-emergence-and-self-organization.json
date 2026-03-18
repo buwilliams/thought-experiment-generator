@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjectured 'incentive topology' be operationalized and tested so that emergent democratic short-termism is distinguishable from alternative explanations such as genuinely myopic voter preferences, elite ideology, partisan polarization, or state-capacity limits?",
+      "score": 0.95
+    },
+    {
+      "text": "Which specific institutional feedback changes actually strengthen long-term political signals without creating equal or greater pathologies—such as technocratic insulation, democratic illegitimacy, policy rigidity, capture by long-horizon elites, or reduced responsiveness to present suffering?",
+      "score": 0.93
+    },
+    {
+      "text": "Under what conditions do democracies overcome the proposed structural short-term bias, and what do those cases imply about the conjecture’s scope—are crises, high-trust parties, strong bureaucracies, credible commitment devices, or particular media/ecosystem structures sufficient to reverse the feedback loops?",
+      "score": 0.89
+    }
+  ]
+}

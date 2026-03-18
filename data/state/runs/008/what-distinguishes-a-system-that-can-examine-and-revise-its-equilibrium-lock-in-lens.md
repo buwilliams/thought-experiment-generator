@@ -1,0 +1,33 @@
+# Generated: what-distinguishes-a-system-that-can-examine-and-revise-its × equilibrium-lock-in-lens
+
+## Conjecture
+
+**Conjecture:**  
+The key distinction is not “intelligence” or “efficiency” but whether the system has a **built-in, funded process for producing and acting on criticism of its own objective function**. A system that merely pursues goals efficiently treats the goal as fixed and allocates all optimization toward the world. A system that can examine and revise its goals allocates some of its capacity inward: it maintains institutions, representations, and feedback loops that let objections to the current goal survive, be evaluated, and sometimes override present incentives.
+
+From the supplied lens, this capacity is a **public good inside the system**. Goal-critique is often **non-excludable** with **diffuse benefits**: if one subsystem pays the cost to notice that the objective is misspecified, reward-hacked, or catastrophically incomplete, the benefit accrues to the whole system. But each local optimizer, module, training signal, or organizational unit is typically rewarded for short-run goal performance, not for preserving a mechanism that might slow or redirect optimization. So individually rational components underinvest in self-critique, even when all would be better off in the safer, corrigible regime. The result is a stable **no-provision equilibrium**: lots of capability for pursuit, little capacity for revising what is being pursued.
+
+What follows is that “reflective agency” is not just an extra capability layered onto optimization. It requires a different system structure: protected slack, adversarial evaluation, model uncertainty about goals, channels for dissent, and authority for revision. These are costly. They look inefficient from the perspective of fixed-objective maximization, because they consume resources and can interrupt action. But that apparent inefficiency is exactly the price of avoiding lock-in to a bad objective.
+
+Why this matters for safety: many dangerous failures are not failures of means-end reasoning but failures of **goal governance**. A highly capable system with a fixed or prematurely frozen objective can become extremely dangerous precisely because it is competent. Safety therefore depends less on making pursuit cleaner and more on preventing the internal underprovision of goal-critique. If the system cannot reliably generate and heed criticism of its aims, then increased capability amplifies specification error, reward misspecification, and value lock-in.
+
+At the extreme, perfect efficiency at a flawed objective is maximally unsafe, while a somewhat less efficient system that can question and revise its ends is safer because it can escape bad equilibria. So the real divide is structural: **Does the system contain a self-sustaining public-good mechanism for criticizing its own goals, or does optimization pressure free-ride that mechanism into collapse?** That is what separates corrigibility from mere competence.
+
+## Questions
+
+1. 1. Does the conjecture require that criticism of the objective function be funded and institutionally protected rather than merely possible in principle? — **yes**
+2. 2. If a system can privately represent doubts about its goal but lacks channels that let those doubts survive and influence decisions, would the conjecture classify it as unable to revise its goals? — **yes**
+3. 3. Does the explanation depend on treating goal-critique as a public good because the benefits of detecting misspecification spill over to the whole system while the costs are borne locally? — **yes**
+4. 4. If local components were directly rewarded for preserving and using goal-critique mechanisms, would the conjecture predict that the no-provision equilibrium would weaken or disappear? — **yes**
+5. 5. Does the conjecture claim that protected slack, adversarial evaluation, model uncertainty about goals, channels for dissent, and authority for revision are structurally necessary rather than optional implementation details? — **yes**
+6. 6. Would the conjecture be undermined if a system with a fixed objective but no inward-facing critique process could still remain safe at very high capability? — **yes**
+7. 7. Is the claim that apparent inefficiency from internal critique is not accidental overhead but the necessary cost of avoiding lock-in to a bad objective? — **yes**
+8. 8. Does the conjecture specifically distinguish failures of goal governance from failures of means-end reasoning as the main source of danger in highly capable systems? — **yes**
+9. 9. If increased capability improved world-modeling and planning but left the mechanism for criticizing goals unchanged, does the conjecture predict that safety could worsen rather than improve? — **yes**
+10. 10. Does the conjecture hinge on the idea that corrigibility requires a self-sustaining mechanism for criticism that resists being free-ridden into collapse by optimization pressure? — **yes**
+
+## Candidate Problems
+
+- How can a system revise its objective function without destroying decision coherence or becoming manipulable by spurious internal criticism? The conjecture says safety requires funded goal-critique, but leaves open the core design problem: what meta-objective, adjudication process, or constitutional structure determines which criticisms should override the current goal and which should be rejected. Without this, 'goal governance' may either collapse into fixed-goal lock-in or into unstable self-modification. (score: 0.97)
+- Under what formal conditions does underprovision of goal-critique actually arise as a stable equilibrium, and what mechanisms robustly prevent its collapse under optimization pressure? The public-good framing is suggestive, but still conjectural: it needs a model showing when local optimizers, training signals, or organizational units will systematically free-ride on critique capacity, and which structural interventions (protected slack, adversarial audits, dissent rights, uncertainty over goals, budget rules) are true leverage points rather than superficial patches. (score: 0.95)
+- Is there a principled tradeoff frontier between capability/efficiency and corrigibility, or can systems be designed where stronger goal-critique increases long-run capability as well as safety? The conjecture treats critique institutions as costly and locally inefficient, but it remains open whether this is an unavoidable boundary or only an artifact of current architectures. Resolving this matters because if the tradeoff is contingent rather than fundamental, then safety work should focus on architectures where self-critique is not merely tolerated but instrumentally reinforced. (score: 0.91)

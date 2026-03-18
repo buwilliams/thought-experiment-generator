@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-allow-institutions-to-maintain-legi",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 9,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.3,
+  "total": 0.495,
+  "candidate_problems": [
+    {
+      "text": "How can 'credible process of error-correction' be operationalized and measured independently of outcomes, so that legitimacy is not reduced either to popularity or to retrospective policy success? The conjecture hinges on observable, trusted self-revision, but it leaves open what concrete indicators distinguish genuine error-correction from symbolic responsiveness, managed transparency, or elite-controlled ritual updates.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the boundary conditions and tradeoffs between error-correcting legitimacy and other institutional requirements such as decisiveness, secrecy, coordination, legal stability, and protection against manipulation? The conjecture implies that shorter, more public, more influenceable feedback loops preserve legitimacy, but it remains unresolved when these same features make institutions fragile, capturable, or unable to act under crisis conditions.",
+      "score": 0.93
+    },
+    {
+      "text": "By what causal mechanisms does public observability of revision generate legitimacy across different institutional histories and cultures, and when does visible self-correction instead signal weakness, incompetence, or unreliability? The conjecture assumes that people model institutions as legitimate when they appear responsive to reasons, but this may depend on inherited norms, narrative frames, and prior trust, raising the open question of whether error-correction is universally legitimacy-producing or only under specific background conditions.",
+      "score": 0.91
+    }
+  ]
+}

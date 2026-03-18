@@ -1,0 +1,34 @@
+# Generated: what-structural-pressures-make-political-systems-resistant-t × bayesian-inference-structure
+
+## Conjecture
+
+**Conjecture:** Political systems can remain resistant to reform under supermajority public support because “support for change” is weak evidence for “change will occur” once we account for the prior structure of the system: veto points, organized minorities, agenda control, and risk asymmetries give reform a low base rate of success. The key error is to infer from *P(supermajority support | successful reform)* or from democratic ideals to *P(successful reform | supermajority support)*, as though mass approval were the decisive variable.
+
+From a Bayesian lens, public opinion is only one input into the posterior probability of reform. If the prior probability of major reform is already low—because institutions were historically designed to slow action, protect incumbents, fragment authority, and privilege status-quo coalitions—then even strong pro-reform polling may update the probability of success only modestly. In other words: evidence that would be decisive in a low-friction system is weak in a high-friction one.
+
+This helps illuminate why reform advocates are often surprised by failure. They treat a visible majority as highly diagnostic, but the system “knows” other base rates: concentrated interests organize better than diffuse publics; legislators respond more to mobilized, durable factions than to broad but shallow preferences; constitutional and procedural chokepoints multiply opportunities for blockage; and uncertainty makes actors discount the expressed majority if they suspect intensity, turnout, or issue salience is low. So the relevant conditional is not just “Do most people favor X?” but “Given this institutional structure, how often does support at this level and intensity survive translation through all veto gates?”
+
+Historically, many political systems inherited anti-majoritarian features for reasons that once solved other problems: fear of tyranny, elite bargaining, territorial compromise, protection of property, conflict management. Those origin solutions persist as hidden priors. Reform proposals must therefore overcome not just disagreement on substance, but a structural presumption in favor of inaction.
+
+A systems view sharpens this: each veto point is not merely an obstacle but a filter that changes what kinds of coalitions can win. Broad support is often an unstable stock; organized opposition is a continuous flow. Feedback loops reinforce resistance: repeated reform failure lowers expectations, which reduces mobilization, which confirms elite beliefs that the majority is not operationally meaningful.
+
+So the conjecture is that **political resistance to reform is best explained not by the absence of majority will, but by the low prior probability that majority sentiment survives institutional translation**. The practical implication is that reformers often target persuasion when the higher-leverage move is altering the base rates themselves: reducing veto points, increasing agenda access, changing participation incentives, and converting broad opinion into credible, repeated, high-intensity signals.
+
+## Questions
+
+1. 1. Would the conjecture still explain repeated reform failure if a system had supermajority support but no meaningful veto points such as upper chambers, judicial review, or executive vetoes? — **no**
+2. 2. If organized minorities lacked durable funding, membership, and lobbying capacity, would the claim that low reform success is driven by base rates rather than public support still hold? — **no**
+3. 3. Does the explanation break if agenda control is opened so that proposals backed by supermajorities are automatically brought to a binding vote? — **yes**
+4. 4. If supermajority support were intense, persistent across election cycles, and tied to turnout, would the conjecture still predict only a modest increase in reform success? — **no**
+5. 5. Would the conjecture survive in a case where institutions were historically designed for rapid majoritarian action rather than for delay, fragmentation, and incumbent protection? — **no**
+6. 6. If reform failure occurred in a polity with few anti-majoritarian features but severe disagreement over policy details, would that undermine the claim that institutional translation is the main bottleneck? — **yes**
+7. 7. Does the argument depend on risk asymmetries being stronger for change than for the status quo, such that actors are punished more for failed reform than for inaction? — **no**
+8. 8. If broad public support were converted into repeated, credible signals through primaries, strikes, donations, and sustained local organizing, would the low-prior explanation still account for resistance? — **no**
+9. 9. Would removing one major chokepoint such as the filibuster, bicameral concurrence, or committee gatekeeping be expected to materially raise reform success under this conjecture? — **yes**
+10. 10. If historical origin stories for anti-majoritarian institutions were shown to be irrelevant to their current operation, would the conjecture lose explanatory power about why low priors persist? — **no**
+
+## Candidate Problems
+
+- How can the conjecture be operationalized into a predictive model that separates the causal effect of public support from the system’s prior structure? The open question is whether veto points, agenda control, organized minority intensity, and risk asymmetries can be measured well enough to estimate P(reform succeeds | support, institutional structure) across cases, rather than treating the Bayesian framing as a metaphor. This includes identifying which structural variables dominate, how they interact, and when supermajority support meaningfully updates the prior. (score: 0.96)
+- Under what conditions does broad but shallow majority support become politically decisive despite high-friction institutions? The conjecture implies that support often fails because it is not translated into durable, high-intensity signals, but this leaves unresolved the threshold conditions: what combinations of salience, organization, repetition, electoral threat, elite division, crisis, or institutional openings convert mass approval into successful reform? This is a key boundary-condition problem for the conjecture. (score: 0.93)
+- Which interventions actually change the base rates of reform success, and at what cost? The practical claim is that reformers should target structural leverage points rather than persuasion alone, but it remains open whether reducing veto points, changing agenda access, altering participation incentives, or building durable organizations is most effective, most feasible, and least likely to create new pathologies. This raises a deeper tension between democratic responsiveness and the historical functions of anti-majoritarian constraints. (score: 0.95)

@@ -1,14 +1,23 @@
 {
   "id": "emergence-and-self-organization",
   "layer": "candidates",
-  "score": 0.96975,
+  "score": 0.7861333333333334,
   "rank": 11,
-  "run_count": 1,
+  "run_count": 3,
   "problem_coverage": [
     "why-does-regulatory-capture-occur-systematically-even-in-ins",
     "why-do-markets-consistently-underprovide-public-goods-even-w",
     "what-structural-features-make-market-economies-vulnerable-to",
-    "what-determines-whether-technological-disruption-creates-bro"
+    "what-determines-whether-technological-disruption-creates-bro",
+    "does-any-capable-finite-mind-face-structural-pressures-towar",
+    "why-does-second-order-information-processing-generate-identi",
+    "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+    "what-distinguishes-a-system-that-can-examine-and-revise-its",
+    "what-structural-pressures-make-political-systems-resistant-t",
+    "why-does-bureaucratic-complexity-grow-monotonically-even-in",
+    "what-structural-features-allow-institutions-to-maintain-legi",
+    "what-determines-whether-constitutional-arrangements-survive",
+    "why-do-democracies-systematically-favor-short-term-outcomes"
   ],
   "created_at": "2026-03-18T21:40:48.606228420+00:00",
   "promoted_from": null,
@@ -32,6 +41,51 @@
       "run": 7,
       "score": 0.985,
       "problem_id": "what-determines-whether-technological-disruption-creates-bro"
+    },
+    {
+      "run": 8,
+      "score": 0.62,
+      "problem_id": "does-any-capable-finite-mind-face-structural-pressures-towar"
+    },
+    {
+      "run": 8,
+      "score": 0.5589999999999999,
+      "problem_id": "why-does-second-order-information-processing-generate-identi"
+    },
+    {
+      "run": 8,
+      "score": 0.982,
+      "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m"
+    },
+    {
+      "run": 8,
+      "score": 0.912,
+      "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its"
+    },
+    {
+      "run": 9,
+      "score": 0.288,
+      "problem_id": "what-structural-pressures-make-political-systems-resistant-t"
+    },
+    {
+      "run": 9,
+      "score": 0.5589999999999999,
+      "problem_id": "why-does-bureaucratic-complexity-grow-monotonically-even-in"
+    },
+    {
+      "run": 9,
+      "score": 0.495,
+      "problem_id": "what-structural-features-allow-institutions-to-maintain-legi"
+    },
+    {
+      "run": 9,
+      "score": 0.985,
+      "problem_id": "what-determines-whether-constitutional-arrangements-survive"
+    },
+    {
+      "run": 9,
+      "score": 0.7749999999999999,
+      "problem_id": "why-do-democracies-systematically-favor-short-term-outcomes"
     }
   ]
 }

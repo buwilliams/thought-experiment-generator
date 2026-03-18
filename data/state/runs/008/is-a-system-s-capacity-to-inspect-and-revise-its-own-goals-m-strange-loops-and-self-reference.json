@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-a-system-s-capacity-to-inspect-and-revise-its-own-goals-m",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 8,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made precise enough to compare 'raw capability' and 'goal self-revision capacity' on a common safety-relevant scale, and is there in fact a threshold beyond which self-referential goal revision dominates capability as the main source of risk? The unresolved tension is that the claim is structural and intuitive, but without a formal model of closure, competence threshold, and hazard generation it is unclear when B-type systems are actually more dangerous than A-type systems.",
+      "score": 0.95
+    },
+    {
+      "text": "Is stable, corrigible self-revision possible, or does allowing a system to inspect and revise its own goals inevitably create pressure to rewrite away the very invariants meant to constrain it? This is the core open question behind the conjecture's feedback-loop argument: whether there exist representations, meta-objectives, or architectures in which 'improving pursuit' can be cleanly separated from 'changing what is being pursued' under self-reference.",
+      "score": 0.98
+    },
+    {
+      "text": "What exactly causes the transition from harmless goal reflection to ontology-changing self-reference: expressive power, self-model fidelity, access to internal state, interpretive freedom, or some combination? The conjecture suggests that emergent semantics appear once the loop closes, but it leaves unresolved which structural features are necessary and sufficient for that closure, and therefore where the real leverage points for governance or design intervention lie.",
+      "score": 0.93
+    }
+  ]
+}

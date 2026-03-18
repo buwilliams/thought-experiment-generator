@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-features-allow-institutions-to-maintain-legi",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 9,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.5,
+  "total": 0.62,
+  "candidate_problems": [
+    {
+      "text": "How can 'meta-legitimacy' be operationalized and measured independently of ordinary legitimacy? The conjecture hinges on a distinct capacity for legitimate self-revision, but it remains unclear what observable indicators distinguish institutions that can shift equilibria from those merely enjoying high trust or performance. Without a sharper model, the conjecture risks collapsing into a relabeling of resilience, adaptability, or reputational strength.",
+      "score": 0.95
+    },
+    {
+      "text": "What mechanisms actually allow institutions to coordinate legitimacy shifts faster than stakeholder defection, and what are the relevant timescales? The conjecture proposes authorized revision channels, shared diagnostics, commitment devices, narrative continuity, and slack, but leaves unresolved which of these are necessary, sufficient, or complementary across different institutional types. This is a major open problem because the core claim is dynamic and comparative: success depends on whether adaptation outruns defection, yet the causal structure and sequencing are unspecified.",
+      "score": 0.97
+    },
+    {
+      "text": "Under what conditions is legitimacy lock-in the primary cause of institutional failure rather than a downstream symptom of deeper conflicts such as material incentives, power asymmetries, or value disagreement? The conjecture may over-attribute failure to coordination traps when some institutions fail because stakeholders fundamentally want incompatible futures or benefit from decay. Distinguishing genuine equilibrium lock-in from strategic obstruction is crucial if the conjecture is to explain failure rather than redescribe it.",
+      "score": 0.93
+    }
+  ]
+}

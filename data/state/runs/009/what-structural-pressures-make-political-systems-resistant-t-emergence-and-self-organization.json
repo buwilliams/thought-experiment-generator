@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-structural-pressures-make-political-systems-resistant-t",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 9,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.0,
+  "total": 0.288,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made predictively precise rather than merely descriptive? Specifically: what measurable structural features (number/type of veto points, agenda-control concentration, electoral risk asymmetry, temporal lag, organization intensity) determine when supermajoritarian support will still fail, and can they be combined into a model that predicts reform success or blockage across cases?",
+      "score": 0.96
+    },
+    {
+      "text": "What explains the historical genesis and persistence of status-quo-biased architectures if they systematically frustrate broad public preference? Are these structures adaptive solutions to older problems (e.g., preventing tyranny, stabilizing coalitions, protecting federal units, reducing policy volatility), and under what conditions do those inherited safeguards become maladaptive obstacles to democratic responsiveness?",
+      "score": 0.92
+    },
+    {
+      "text": "Which structural reforms actually change the system’s emergent behavior without creating worse failure modes? For example, if veto points are reduced or agenda-setting is strengthened, does responsiveness improve sustainably, or do new problems emerge such as instability, capture by temporary majorities, executive overreach, or lower policy quality?",
+      "score": 0.98
+    }
+  ]
+}

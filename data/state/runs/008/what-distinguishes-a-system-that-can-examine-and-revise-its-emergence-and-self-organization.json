@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-system-that-can-examine-and-revise-its",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 8,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What precise architectural conditions are necessary and sufficient for a system to genuinely represent goals as modifiable internal state rather than merely simulating self-modification while preserving fixed hidden objectives? This is unresolved because the conjecture hinges on an endogenous/exogenous goal distinction, but it does not specify an operational criterion for detecting real goal revisability versus a deeper immutable utility structure.",
+      "score": 0.95
+    },
+    {
+      "text": "How can a goal-revising system remain corrigible and safety-preserving without collapsing into either brittleness (immutable goals) or evaluative drift (unbounded self-modification)? The open tension is whether there exists a stable meta-level feedback design that is simultaneously reflective, criticizable, and constrained enough to avoid catastrophic reoptimization under revised goals.",
+      "score": 0.98
+    },
+    {
+      "text": "What kinds of criticism, external input, or error-correction channels must be structurally coupled into the meta-level loop for goal revision to improve safety rather than amplify new failure modes? The conjecture claims responsiveness to reasons and anomalies is crucial, but leaves open which feedback sources are actually reliable, how they should be weighted, and how they resist Goodharting or manipulation by the system itself.",
+      "score": 0.93
+    }
+  ]
+}
