@@ -137,6 +137,7 @@ All state lives in `data/state/`:
 
 ```
 data/state/
+  state.json             — current run number and global metadata
   mind/
     {id}.md              — tool content (summary + full text)
     {id}.json            — tool metadata (score, rank, run_count, history)
@@ -152,6 +153,17 @@ data/state/
       {problem}-{tool}.json  — conjecture scores + candidate problems
       summary.md             — ranked results + promoted/demoted tools
 ```
+
+`data/state/state.json`:
+```json
+{
+  "run": 3,
+  "created_at": "iso8601",
+  "last_run_at": "iso8601"
+}
+```
+
+The run number increments at the start of each run. `runs/NNN/` is created using the new run number before any conjectures are generated.
 
 The seed state is checked in as `data/seed/`:
 
@@ -174,7 +186,7 @@ A single run processes all problems against all perspective tools (or a sampled 
 
 For each `(problem, perspective_tool)` pair:
 
-1. Build context: full mind (as system prompt) + perspective tool text + problem text
+1. Build context: mind tool summaries (as system prompt) + perspective tool summary + problem summary
 2. Call LLM → conjecture text
 3. Save conjecture
 
@@ -207,15 +219,15 @@ For each conjecture:
 
 **Problem ranking:** for each problem, compute mean conjecture score across all tools this run. Update `score` similarly.
 
-**Promotion (one per run):**
-- Top-ranked perspective tool (by score, with minimum `run_count` of 3) → promoted to mind
-- Top-ranked conjecture (by score) → promoted to perspectives as a new tool
+**Promotion (one per run, skipped if no eligible candidates):**
+- Top-ranked perspective tool (by composite of score × problem_coverage breadth, with minimum `run_count` of 3) → promoted to mind. Breadth is measured as the number of distinct problems the tool has been applied to. A tool with high score on one problem does not qualify over a tool with moderate score across many.
+- Top-ranked conjecture (by score) → summarized into a new tool via `summarize_for_tool` prompt → added to perspectives
 
-**Demotion (one per run):**
-- Bottom-ranked mind tool (by score across recent runs) → demoted to perspectives
-- Bottom-ranked perspective tool (by score, with minimum `run_count` of 3) → discarded
+**Demotion (one per run, skipped if no eligible candidates):**
+- Bottom-ranked mind tool (by score × problem_coverage breadth, minimum `run_count` of 3) → demoted to perspectives
+- Bottom-ranked perspective tool (by same composite, minimum `run_count` of 3) → discarded
 
-Promotion and demotion do not apply to tools with `run_count < 3` — new entries need time to accumulate signal.
+Promotion and demotion are skipped entirely if fewer than one tool meets the `run_count` threshold. This protects early runs where signal is thin.
 
 ### Phase 4 — Report
 
@@ -296,19 +308,30 @@ System: Summarize in 20 words or fewer. Return only the summary.
 Score: [score]
 ```
 
+### summarize_for_tool(conjecture, score)
+```
+System: You are converting a conjecture into a reusable perspective tool.
+Return JSON: { "summary": "...", "full_text": "..." }
+The summary must be 1-2 sentences suitable for use in LLM prompts.
+The full_text must be a readable, standalone description of the perspective
+this conjecture embodies — what lens it provides, what kinds of problems
+it is useful for, and what it illuminates. 100-200 words.
+
+Conjecture: [conjecture text]
+Score: [score]
+```
+
 ---
 
 ## Seed Mind
 
-The seed mind encodes Deutschian epistemology as the starting ideology. Expressed as a set of tools:
+The seed mind is defined by the files in `data/seed/mind/`. Each tool has a `.md` (content) and `.json` (metadata). On first run, these are copied to `data/state/mind/`.
 
-1. Knowledge grows through conjecture and criticism, not justification or accumulation.
-2. A good explanation is hard to vary — its parts are load-bearing and cannot be arbitrarily modified without destroying the explanation.
-3. Reach matters: a good explanation applies beyond the domain it was constructed for.
-4. Logical consistency is necessary but not sufficient — an explanation can be consistent and shallow.
-5. Progress in abstract domains (mathematics, philosophy, epistemology) is real and does not require grounding in physical observation.
-6. The goal of criticism is not to destroy but to identify what is load-bearing and what is arbitrary.
-7. The mind itself is a fallible conjecture — its tools and criteria are revisable.
+Current seed mind tools:
+
+- **`deutschian-epistemology`** — Fallibilism and the growth of knowledge through conjecture and criticism. Abstract objects are real; progress in abstract space (mathematics, epistemology) is as genuine as progress in physics and requires no physical grounding.
+- **`ontology`** — The philosophical study of what exists. Root axiom: knowledge and information are fundamental (held fallibly). Properties are informational distinctions; mechanisms are processes by which information is preserved, altered, or lost.
+- **`systems-thinking`** — Donella Meadows' framework: behavior is produced by structure, not isolated causes. Stocks, flows, feedback loops, delays, and leverage points. The system's real goal is revealed by its behavior, not its stated purpose.
 
 ---
 
@@ -345,7 +368,7 @@ cargo run -- read
 cargo run -- --fresh run
 
 # Control concurrency and sampling
-cargo run -- run --max-concurrent 5 --problems-per-run 10 --tools-per-problem 5
+cargo run -- run --max-concurrent 5 --problems-per-run 10 --tools-per-run 5
 ```
 
 ### Options
@@ -373,8 +396,9 @@ cargo run -- run --max-concurrent 5 --problems-per-run 10 --tools-per-problem 5
 | Generate questions | 1 | N×M (pass 1 survivors) | ~N×M |
 | Answer questions | 1 | N×M (pass 1 survivors) | ~N×M |
 | Candidate problem extraction | 1 | N×M | N×M |
+| Summarize for tool (promotion) | 1 | 1 per run | 1 |
 | Top 5 summaries | 5 | 1 | 5 |
-| **Default (5 problems × 10 tools)** | | | **~255** |
+| **Default (5 problems × 10 tools)** | | | **~256** |
 
 Pools are not cached between runs — conjectures are regenerated each run because the mind and perspective states may have changed.
 
