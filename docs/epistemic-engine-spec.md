@@ -352,18 +352,15 @@ Current seed mind tools:
 
 ## Seed Perspectives
 
-A curated starting set of perspective tools — concepts that have proven generative across many domains:
+The seed perspectives are defined by the files in `data/seed/perspectives/`. Each tool has a `.md` (content) and `.json` (metadata). On first run, these are copied to `data/state/perspectives/`.
 
-1. Universality: what would it mean for this to apply to all cases, not just some?
-2. Emergence: what properties appear at the level of the whole that are not present in the parts?
-3. Compression: what is the shortest explanation that preserves the essential structure?
-4. Inversion: what does the opposite of this claim imply? Does the inversion illuminate anything?
-5. Abstraction ladder: can this be stated at a higher level of abstraction without losing content?
-6. Analogical transfer: what domain uses a structurally identical mechanism? What does the analogy reveal?
-7. Tension identification: what two claims in this space are in unresolved tension?
-8. Boundary conditions: where does this explanation break down? What does the boundary reveal?
-9. Minimal assumption: what is the weakest set of assumptions that generates this conclusion?
-10. Second-order: what does this claim imply about the process that generated it?
+Current seed perspective tools:
+
+- **`thought-experiments`** — Construct a hypothetical scenario, isolate the key variable, stipulate it as real, and follow the logic strictly to wherever it leads. Strangeness is information.
+- **`mathematical-formalism`** — Translate the problem into mathematical structure (variables, invariants, transformations). Let the structure reveal what is preserved, what varies, and what constraints are non-negotiable.
+- **`counterfactual-reasoning`** — Systematically vary assumptions: remove one, invert one, replace one with its opposite. What breaks is load-bearing. What survives is incidental.
+- **`extreme-cases`** — Push to limits: infinity, zero, maximum, minimum, phase transitions. Boundary behavior reveals the structure hidden in the comfortable middle range.
+- **`historical-genesis`** — Ask how the problem came to exist, what it replaced, and what it inherited without examination. Origin stories make invisible constraints visible.
 
 ---
 
