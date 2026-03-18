@@ -3,20 +3,20 @@
   "conjecture_id": "extreme-cases",
   "run": 1,
   "logical_consistency": 0.94,
-  "hard_to_vary": 1.0,
-  "total": 0.982,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
   "candidate_problems": [
     {
-      "text": "How can 'epistemic progress' and 'error-corrected explanatory content' be operationalized so the conjecture becomes testable rather than metaphorical? The core unresolved tension is whether structure is truly the bottleneck, or whether this conclusion depends on how knowledge, survival under criticism, reuse, and cumulative progress are measured.",
+      "text": "Where is the capability threshold or phase transition at which the bottleneck shifts from substrate to selection architecture, and is this transition sharp, gradual, or task-dependent? The conjecture asserts a regime change but leaves unresolved how to define, measure, or predict it across domains, model classes, and institutional settings.",
       "score": 0.96
     },
     {
-      "text": "What is the interaction regime between substrate and structure: is there a threshold, complementarity, or phase transition where additional compute becomes useless without stronger error-correction, or where stronger structure cannot compensate for insufficient model capacity? The conjecture contrasts extremes, but leaves open the shape of the tradeoff in realistic systems.",
-      "score": 0.93
+      "text": "What concrete selection architectures actually improve truth-tracking under scaling, rather than merely filtering for plausibility, reward-hacking, or institutional conformity? The conjecture elevates criticism, retention, and promotion mechanisms, but the open problem is to specify designs and metrics that distinguish genuine error-correction from selection for persuasive or benchmark-optimized outputs.",
+      "score": 0.99
     },
     {
-      "text": "What concrete institutional or architectural mechanisms actually implement 'organized criticism' for AI systems without collapsing into bureaucracy, conservatism, or Goodharting? The open question is how to design selection systems that kill bad ideas while still preserving novelty, dissent, and bold conjecture.",
-      "score": 0.95
+      "text": "Can increased substrate itself generate stronger criticism and selection, collapsing the structure/substrate distinction, or are there irreducibly structural constraints that scaling alone will not solve? This is the deepest unresolved tension in the conjecture: whether selection architecture is an independent bottleneck or just an emergent capability of sufficiently large systems plus compute.",
+      "score": 0.98
     }
   ]
 }

@@ -3,20 +3,20 @@
   "conjecture_id": "counterfactual-reasoning",
   "run": 1,
   "logical_consistency": 0.94,
-  "hard_to_vary": 1.0,
-  "total": 0.982,
+  "hard_to_vary": 0.2,
+  "total": 0.42199999999999993,
   "candidate_problems": [
     {
-      "text": "What exactly are the necessary and sufficient structural conditions for 'error-correcting explanation' in a token-predicting system? The conjecture says prediction is not enough and criticism/revision loops are load-bearing, but leaves open a precise criterion distinguishing genuine knowledge production from sophisticated pattern recombination. A key unresolved tension is how to operationalize explanatory reach, coherence, and resistance to refutation without collapsing back into behavioral proxies.",
-      "score": 0.97
+      "text": "What operational criteria would distinguish genuine system-level error-correction over abstract content from merely producing criticism-like text? The conjecture makes error-correction load-bearing, but leaves open how to tell whether a model actually participates in generation–criticism–retention–revision rather than simulating those stages linguistically.",
+      "score": 0.96
     },
     {
-      "text": "Can purely internal or abstract criticism generate genuine knowledge without robust external world contact, and if so under what limits? The conjecture rejects direct embodiment as necessary, yet also claims that without constraint the system cannot distinguish elegant nonsense from truth. The open problem is to specify which kinds of non-empirical criticism are truth-conducive, when they suffice, and where empirical anchoring becomes indispensable.",
+      "text": "What architecture or feedback structure is minimally sufficient for token prediction to become knowledge-producing? The conjecture says prediction can be a substrate if embedded in an error-correcting loop, but does not specify which components are necessary: persistent memory, self-revision, external critics, problem-tracking across contexts, grounding in tasks, or some other structure.",
       "score": 0.94
     },
     {
-      "text": "At what level should knowledge be attributed: model, model-plus-training-loop, or broader socio-technical system? The conjecture relocates knowledge from isolated outputs to a systemic process, but this creates an unresolved attribution problem. If the error-correcting structure partly resides in human evaluators, tools, institutions, or deployment context, it is unclear when the token-predicting system itself counts as generating knowledge rather than merely participating in a larger knowledge-producing system.",
-      "score": 0.92
+      "text": "How can abstract domains like mathematics or philosophy supply non-circular selection against error without relying on empirical grounding? If knowledge in abstract content depends on criticism and elimination of error, the open question is what constitutes robust error-detection and progress there, and how a system could reliably improve explanations rather than just optimize for internal coherence or community convention.",
+      "score": 0.91
     }
   ]
 }

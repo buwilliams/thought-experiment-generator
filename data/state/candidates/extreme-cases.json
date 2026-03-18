@@ -14,17 +14,17 @@
   "history": [
     {
       "run": 1,
-      "score": 0.8419999999999999,
+      "score": 0.903,
       "problem_id": "what-makes-an-explanation-hard-to-vary"
     },
     {
       "run": 1,
-      "score": 0.7629999999999999,
+      "score": 0.7719999999999999,
       "problem_id": "can-llms-create-new-knowledge"
     },
     {
       "run": 1,
-      "score": 0.982,
+      "score": 0.912,
       "problem_id": "does-architecture-matter-more-than-model-scale"
     }
   ]

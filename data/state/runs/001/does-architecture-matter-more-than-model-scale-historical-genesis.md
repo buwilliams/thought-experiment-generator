@@ -2,50 +2,40 @@
 
 ## Conjecture
 
-**Conjecture:** The current bottleneck is increasingly **structural rather than substrate-level**: more compute still helps, but the dominant constraint on epistemic progress is that AI systems inherited an architecture optimized for **next-step plausibility**, not for the **generation, criticism, and selective retention of explanations**.
+**Conjecture:** The current bottleneck is increasingly **structural rather than substrate-level**: more compute still buys capability, but epistemic progress is constrained mainly by inherited institutions of training, evaluation, and deployment that were built to optimize prediction and product performance, not error-correction in the Deutschian sense.
 
-Ask how the present paradigm came to exist. Large models were not invented to solve “How do we create agents that make epistemic progress?” They emerged from a different problem: **how to compress and predict human-produced symbol streams at scale**. This replaced earlier, more hand-built AI approaches that tried to encode reasoning directly. In doing so, it inherited several assumptions that now function as hidden constraints:
+**Origin story of the current paradigm:** Modern AI scaling arose as a solution to an earlier problem: hand-built symbolic systems were brittle, narrow, and costly to extend. Large-scale statistical learning replaced explicit theory-building with gradient-driven compression of vast regularities. What it inherited, mostly unexamined, was the assumption that **success at next-step prediction is a sufficient proxy for knowledge formation**. That assumption was reasonable when the main goal was fluency, classification, and benchmark progress. It becomes constraining when the goal shifts to genuine epistemic advance.
 
-1. **Prediction is a sufficient proxy for understanding.**  
-   This was a productive wager for scaling capabilities, but it quietly equates fitting distributions with producing good explanations.
+**What this reveals:** The substrate—model size, compute, data—solved the problem of *getting systems to know a lot implicitly*. But it did not solve the harder problem of *how knowledge should grow*: through bold conjecture, exposure to criticism, and survival under error-correcting tests. Current systems are trained to minimize loss over distributions, then tuned to satisfy human preference signals and benchmark incentives. That creates a structure optimized for **plausibility, recall, and local coherence**, not for generating rival explanations and subjecting them to severe criticism.
 
-2. **Benchmark success tracks knowledge growth.**  
-   Benchmarks descend from engineering traditions of measurable task performance. But epistemic progress is not mere accuracy on fixed tests; it is the creation of better conjectures and better criticism.
+So the key bottleneck is not that models are too small to contain more knowledge; it is that the surrounding system poorly supports the **selection dynamics of better explanations**. We have weak mechanisms for:
+- preserving explicit conjectures as objects,
+- generating genuine alternatives,
+- designing discriminating tests,
+- tracking why one idea defeated another,
+- promoting explanations for surviving criticism rather than for sounding convincing.
 
-3. **Training is where “learning” happens; deployment is where “application” happens.**  
-   This separates model formation from live error-correction. It inherits a static view of knowledge from supervised optimization rather than an evolutionary one.
+From a systems perspective, scaling compute is a reinforcing loop: more capability yields better products, more investment, more capability. But epistemic progress depends on balancing loops of criticism and correction. Those loops are underbuilt. Benchmarks saturate, RLHF smooths outputs toward acceptability, and retrieval tools improve access to existing knowledge more than they improve the creation of new explanations.
 
-From this origin story, the collision becomes clear. Scaling substrate improved performance because the old bottleneck really was representational capacity and search over patterns. But once models became broadly competent, the unresolved problem reappeared at a higher layer: **how are candidate explanations generated, how are they exposed to severe criticism, and how do institutions decide which survive?**
+**What follows:** If this conjecture is true, then beyond some threshold, adding substrate yields diminishing epistemic returns unless the upper structure changes. The highest-leverage interventions are not merely bigger models but institutions and architectures that make conjecture and criticism explicit: adversarial idea generation, traceable hypothesis trees, test markets, automated construction of severe experiments, and promotion rules based on explanatory resilience rather than aggregate preference.
 
-So what follows?
-
-- If you increase compute without changing the structure above it, you mostly get **more fluent recycling of existing conjectural material**, plus some broader recombination.
-- If you improve the structure of conjecture-criticism-selection, you get gains that look more like **knowledge creation** rather than capability smoothing.
-- Therefore, current frontier progress will depend less on raw substrate scaling alone and more on building systems that can:
-  - formulate explicit, rival explanations,
-  - design discriminating tests,
-  - preserve error-correcting feedback,
-  - and resist promotion by popularity, reward hacking, or benchmark overfitting.
-
-In systems terms, compute is a stock; epistemic institutions are the feedback structure governing how errors are discovered and corrected. Once the stock is large enough, changing the feedback loop has higher leverage than merely enlarging the stock.
-
-So the deepest claim is not “compute no longer matters.” It is: **compute solved the earlier problem that gave rise to this paradigm, but that success concealed a different unsolved problem.** The inherited architecture of modern AI still lacks a robust theory of how explanations are conjectured and criticized. That missing structure is now the bottleneck.
+In short: **scale created the conditions for epistemic progress, but now also masks the absence of a proper epistemic engine**. The inherited constraint is treating intelligence as compressed prediction when the next bottleneck is organized criticism.
 
 ## Questions
 
-1. Does the conjecture specifically depend on the historical claim that large language models were developed primarily to compress and predict human-produced symbol streams, rather than to solve the problem of building systems that make epistemic progress? — **yes**
-2. If prediction on symbol streams were shown to directly produce robust explanatory knowledge rather than merely next-step plausibility, would that undermine the conjecture’s central bottleneck claim? — **yes**
-3. Is the distinction between 'next-step plausibility' and 'generation, criticism, and selective retention of explanations' essential to the conjecture, such that collapsing that distinction would destroy the explanation? — **yes**
-4. Does the conjecture require that benchmark success systematically fails to track genuine knowledge growth, rather than this being only an occasional failure mode? — **no**
-5. If deployment-time systems could perform continuous error-correction and model revision without changing the underlying predictive architecture, would that weaken the claim that the bottleneck is structural? — **yes**
-6. Is the training-vs-deployment separation a load-bearing part of the conjecture’s explanation for why current systems lack evolutionary error-correction? — **yes**
-7. Does the conjecture depend on the idea that scaling compute now mainly yields more fluent recycling and recombination of existing conjectural material, rather than qualitatively better mechanisms for criticism and explanation? — **yes**
-8. If larger models with more compute alone began reliably formulating explicit rival explanations and designing discriminating tests, would that falsify the claim that the dominant bottleneck is structural rather than substrate-level? — **yes**
-9. Is the systems-thinking analogy—compute as a stock and epistemic institutions as feedback structure—doing essential explanatory work, rather than being a dispensable metaphor? — **no**
-10. Does the conjecture require the stronger historical-sequential claim that compute scaling solved an earlier representational/search bottleneck and only then revealed the missing structure for conjecture-criticism-selection as the new dominant constraint? — **yes**
+1. 1. If benchmark scores, product metrics, and human preference ratings continued to improve with scale, but systems still failed to produce traceable rival explanations that survive discriminating tests, would that count as evidence for the conjecture's claim that the bottleneck is structural rather than substrate-level? — **yes**
+2. 2. Does the conjecture require that the institutions of training, evaluation, and deployment were specifically inherited from an era optimizing prediction and product performance, rather than merely being any imperfect current setup? — **yes**
+3. 3. If next-step prediction turned out to be sufficient by itself to generate robust conjecture, criticism, and explanatory selection dynamics at larger scales, would that directly falsify the conjecture? — **yes**
+4. 4. Is the claim that current models already contain enough implicit knowledge that the main missing ingredient is not more stored content but mechanisms for preserving explicit conjectures, generating alternatives, and tracking criticism? — **yes**
+5. 5. Would the conjecture be undermined if adding compute alone reliably produced better severe-test design, clearer hypothesis lineage, and stronger promotion of explanations for surviving criticism without changing institutions or architecture? — **yes**
+6. 6. Does the explanation depend on RLHF and benchmark optimization doing more than adding noise—namely, systematically selecting for plausibility, acceptability, and local coherence over explanatory resilience? — **yes**
+7. 7. If one built a smaller or equal-sized model system with explicit hypothesis trees, adversarial idea generation, and test markets, and it outperformed a larger conventional model on genuine explanatory progress, would that be the kind of result the conjecture predicts? — **yes**
+8. 8. Is the distinction between 'knowing a lot implicitly' and 'having a mechanism by which knowledge grows through criticism' essential to the conjecture, rather than just a rhetorical contrast? — **yes**
+9. 9. Does the conjecture commit to a threshold story: that compute continues to buy capability, but beyond some point epistemic returns diminish unless balancing loops of criticism and correction are strengthened? — **yes**
+10. 10. Would replacing the Deutschian notion of knowledge growth through conjecture and criticism with a weaker goal like improved recall, fluency, or benchmark generalization remove the main force of the conjecture? — **yes**
 
 ## Candidate Problems
 
-- How can we operationalize and measure 'epistemic progress'—generation, criticism, and selective retention of explanations—in a way that is not reducible to next-step prediction or benchmark performance? The conjecture depends on a usable distinction between fluent pattern completion and genuine explanatory knowledge growth, but it leaves open what observable criteria would discriminate them in AI systems. (score: 0.97)
-- What concrete architectural and institutional mechanisms would enable AI systems to generate explicit rival explanations, subject them to severe criticism, and retain the survivors under live deployment rather than only during static training? The conjecture identifies the bottleneck as structural, but it remains unresolved which feedback-loop designs, memory/update schemes, and evaluation institutions would actually outperform scaling alone. (score: 0.95)
-- Under what conditions does substrate scaling cease to be the dominant driver of progress and structural change become the higher-leverage intervention? The conjecture asserts a phase shift from compute bottlenecks to epistemic-architecture bottlenecks, but it does not specify how to detect that transition, whether it is domain-specific, or how much apparent 'knowledge creation' can still emerge from scaling and recombination alone. (score: 0.92)
+- How can 'epistemic progress' and 'organized criticism' be operationalized in AI systems without collapsing back into proxy metrics like prediction accuracy, preference scores, or benchmark performance? The conjecture depends on a measurable distinction between systems that merely produce plausible outputs and systems that genuinely improve through conjecture and criticism, but it leaves open what concrete observables, protocols, or institutional signals would track that distinction. (score: 0.97)
+- What system architectures and institutional arrangements would actually create effective selection dynamics for explanations—preserving conjectures, generating serious rivals, designing severe tests, and recording why ideas survive—rather than just adding another layer of optimization theater? The conjecture identifies missing feedback loops, but it is unresolved whether these loops can be engineered in practice, at scale, under real product, safety, and economic constraints. (score: 0.94)
+- Where is the empirical threshold at which substrate scaling begins to show diminishing epistemic returns relative to structural interventions, and how would one causally disentangle the two? The conjecture asserts a shift from substrate bottlenecks to structural bottlenecks, but it remains an open question whether this is already true, domain-specific, or only true for certain kinds of knowledge creation. (score: 0.91)

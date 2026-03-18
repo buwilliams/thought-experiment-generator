@@ -2,21 +2,21 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "thought-experiments",
   "run": 1,
-  "logical_consistency": 0.95,
+  "logical_consistency": 0.94,
   "hard_to_vary": 1.0,
-  "total": 0.9849999999999999,
+  "total": 0.982,
   "candidate_problems": [
     {
-      "text": "How can 'load-bearing' be made into a non-circular, operational criterion? The conjecture relies on counterfactual dependence, internal constraint, and 'integrity under criticism,' but these notions risk redescribing explanatory importance rather than measuring it. A key open problem is to define a structural test or metric that distinguishes genuinely constitutive parts from merely replaceable ones across cases, without smuggling in prior judgments about which explanations are better.",
-      "score": 0.95
+      "text": "How can 'counterfactual indispensability' or 'tolerance to substitution' be made precise and measurable across different kinds of explanations (causal, mathematical, functional, evolutionary)? The conjecture hinges on a structural property, but it leaves open what formal criterion distinguishes genuinely load-bearing parts from merely replaceable implementations.",
+      "score": 0.97
     },
     {
-      "text": "At what level of abstraction should load-bearingness be assessed? The conjecture says swappable details may indicate that the real explanation resides at a higher level, but this raises an unresolved tension: a part can be non-essential at one level and indispensable at another. The open question is how to determine the correct explanatory level, and whether 'replaceable instantiation' versus 'constitutive constraint' is an objective distinction or partly interest-relative to the problem being solved.",
-      "score": 0.92
+      "text": "What determines the correct level of abstraction at which an invariant counts as the real explanatory content? A part may look swappable at one description level but indispensable at another, so the conjecture raises an unresolved problem of level-relativity: when should we treat details as constitutive constraints versus tokens of a higher-level type?",
+      "score": 0.94
     },
     {
-      "text": "How does the conjecture handle explanations in domains where robustness and multiple realizability are themselves explanatory virtues? In biology, computation, engineering, and statistical mechanics, an explanation may be powerful precisely because many lower-level substitutions preserve the phenomenon. This creates a tension between 'low redundancy' as a mark of explanatory strength and robustness as a sign of deeper structure. The open problem is to reconcile rigid mutual constraint with explanations whose success depends on organized flexibility rather than narrow necessity.",
-      "score": 0.9
+      "text": "Is there a principled tradeoff between explanatory robustness under substitution and explanatory specificity or generative power? The conjecture suggests brittle explanations track narrow mechanisms while robust ones capture broader invariants, but it remains open whether one kind is deeper, or whether depth depends on balancing universality against mechanistic constraint.",
+      "score": 0.91
     }
   ]
 }

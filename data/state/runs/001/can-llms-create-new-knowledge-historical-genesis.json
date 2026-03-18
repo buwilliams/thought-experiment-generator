@@ -2,21 +2,21 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.95,
-  "hard_to_vary": 1.0,
-  "total": 0.9849999999999999,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.7,
+  "total": 0.7689999999999999,
   "candidate_problems": [
     {
-      "text": "What, concretely, counts as 'participation in error-correction' for an AI system rather than for the larger human-AI system around it? The conjecture shifts the boundary from token prediction to error-correction, but leaves unresolved the individuation problem: which capacities must be internal to the model versus scaffolded by external tools, evaluators, memory, and institutions before we should say the system itself generates knowledge?",
-      "score": 0.94
-    },
-    {
-      "text": "How can 'genuine knowledge' or 'new explanatory structure' be operationalized without collapsing back into proxy metrics like predictive accuracy, benchmark performance, or human plausibility judgments? The conjecture relies on a Popperian notion of explanation surviving criticism, but it remains open how to test for explanatory improvement, sensitivity to counterexample, and rival-comparison in a way that is rigorous and non-circular.",
+      "text": "What operational criterion could distinguish 'corrigible explanation' from merely fluent recombination in token-predicting systems? The conjecture shifts the boundary from mechanism to error-correctability, but leaves open how to test whether an output genuinely functions as a conjecture that can survive criticism, guide intervention, and improve under correction rather than only mimic those properties.",
       "score": 0.97
     },
     {
-      "text": "Is error-correction sufficient for knowledge growth, or can a system participate in criticism and revision while still only optimizing socially reinforced correlations rather than truth-tracking explanations? The conjecture treats uncriticized output as the key opposite of knowledge, but an unresolved tension is whether feedback loops themselves can be epistemically corrupt, causing systems to become better at passing criticism rituals without producing deeper understanding.",
-      "score": 0.92
+      "text": "What system-level structures are required for token prediction to participate in genuine knowledge growth rather than isolated one-off performance? The conjecture implies that knowledge creation depends not just on output quality but on feedback loops, memory, revision, and exposure to consequences; the unresolved question is which architectural and social arrangements make those loops real and productive.",
+      "score": 0.93
+    },
+    {
+      "text": "Can explanatory novelty be defined without requiring independence from training data, while still avoiding the collapse of 'knowledge' into any useful recombination? The conjecture rejects ex nihilo originality, but it remains open how to characterize novelty, abstraction, and problem-solving consequences in a way that preserves a substantive notion of knowledge rather than redescribing all successful pattern extension as knowledge creation.",
+      "score": 0.91
     }
   ]
 }

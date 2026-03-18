@@ -2,21 +2,21 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "counterfactual-reasoning",
   "run": 1,
-  "logical_consistency": 0.95,
-  "hard_to_vary": 0.0,
-  "total": 0.285,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.9,
+  "total": 0.9179999999999999,
   "candidate_problems": [
     {
-      "text": "How can we non-circularly distinguish genuine explanatory necessity from accidental narrative brittleness? The conjecture says 'what breaks' under variation reveals load-bearing structure, but also admits that some breakage is merely overfit storytelling. A major open problem is to formulate criteria or tests that separate real counterfactual dependence from artifact of representation, without presupposing the very explanatory quality being evaluated.",
+      "text": "How can 'explanatory success' and 'what breaks' be made non-circular and operational across domains? The conjecture relies on swap sensitivity judged by losses in prediction, retrodiction, unification, or constraint, but it leaves open how to measure these consistently in science, mathematics, history, or everyday explanation without presupposing the very explanatory quality under evaluation.",
       "score": 0.96
     },
     {
-      "text": "What is the right formal unit of substitution or variation when applying the test? The conjecture relies on removing, inverting, or replacing 'parts,' but it is unresolved how to individuate parts across levels of abstraction, grain sizes, and equivalent redescriptions. Different decompositions of the same explanation may yield different judgments of constraint density, swappability, and mutual dependency.",
-      "score": 0.92
+      "text": "How do we distinguish genuinely load-bearing components from replaceable formulations at the wrong level of abstraction? If inversion or substitution leaves an explanation intact, that may show ornamentation—but it may also show that the real explanatory core is a higher-level invariant realized by multiple lower-level variants. The open problem is to identify principled criteria for the 'right' decomposition of an explanation into parts before testing swap sensitivity.",
+      "score": 0.94
     },
     {
-      "text": "How should explanatory value trade off between abstraction and discriminatory power? The conjecture treats swappability as signaling either deeper invariant structure or emptiness, but leaves open how to evaluate explanations that gain compression and generality while losing local specificity, or vice versa. A key unresolved tension is whether there is a principled frontier between fruitful abstraction and underconstrained vacuity.",
-      "score": 0.9
+      "text": "What is the relation between counterfactual dependence and truth or causality? A tightly coupled story can be highly swap-sensitive yet false, overfit, or merely internally coherent, while some true explanations may tolerate substitutions because of robustness, redundancy, or multiple realizability. The unresolved tension is whether load-bearing structure tracks explanatory depth itself, or only one dimension of it that must be combined with independent tests of truth and causal contact.",
+      "score": 0.93
     }
   ]
 }

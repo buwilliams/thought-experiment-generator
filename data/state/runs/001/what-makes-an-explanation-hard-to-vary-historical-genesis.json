@@ -2,21 +2,21 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.91,
-  "hard_to_vary": 0.7,
-  "total": 0.7629999999999999,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
   "candidate_problems": [
     {
-      "text": "How can 'load-bearing' status be operationalized without collapsing into circularity? The conjecture defines load-bearing parts by the exclusion work they do under criticism, but it remains open how to identify and measure that work independently of already judging the explanation good. A new problem is to develop non-circular criteria or procedures for testing whether a component genuinely rules out alternatives, changes derivations, or alters counterfactual structure.",
-      "score": 0.96
+      "text": "How can the conjecture distinguish genuinely load-bearing parts from merely historically entrenched survivals when the problem-history is incomplete, distorted, or inaccessible? The core tension is whether genealogical reconstruction can reliably track explanatory necessity, or whether it risks confusing contingent historical selection with real counterfactual dependence.",
+      "score": 0.95
     },
     {
-      "text": "What is the relation between historical origin and present explanatory necessity? The conjecture ties swappability to inherited narrative, pedagogical, or rhetorical residues, but many features may originate in those contexts and later become genuinely indispensable, while some criticism-forged details may become obsolete. The unresolved tension is whether genealogy is evidentially relevant or merely suggestive, and how to distinguish origin from current functional role in an explanation.",
-      "score": 0.91
+      "text": "What is the relation between origin-constraints and present explanatory structure: can a component be load-bearing now even if it was not introduced to solve the original anomaly, or cease to be load-bearing despite its historical role? This tests whether explanatory necessity is fundamentally historical, structural, or some evolving combination of both.",
+      "score": 0.93
     },
     {
-      "text": "Is productive explanatory power always associated with brittleness and compression, or do some domains require redundancy, multiple realizability, or audience-relative scaffolding as part of the explanation itself? The conjecture risks overvaluing minimal exclusion structures and undervaluing explanatory forms in biology, social systems, law, or education where robustness, abstraction, and interchangeable representations may be essential rather than ornamental. The open question is where the load-bearing/swappable distinction genuinely tracks truth-seeking versus where it misclassifies legitimate explanatory pluralism.",
-      "score": 0.89
+      "text": "How should the conjecture handle explanations that were not produced through a single criticism-driven lineage but through recombination, abstraction, or mathematical reformulation across multiple traditions? The open question is whether 'problem-history' scales to plural, branching, or merged genealogies without losing the ability to identify essential versus swappable components.",
+      "score": 0.88
     }
   ]
 }

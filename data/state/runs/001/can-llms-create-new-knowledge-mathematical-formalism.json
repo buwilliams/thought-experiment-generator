@@ -2,21 +2,21 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "mathematical-formalism",
   "run": 1,
-  "logical_consistency": 0.95,
+  "logical_consistency": 0.93,
   "hard_to_vary": 1.0,
-  "total": 0.9849999999999999,
+  "total": 0.979,
   "candidate_problems": [
     {
-      "text": "How can 'knowledge-bearing invariant relations' be defined and measured non-circularly in token-prediction systems? The conjecture relies on internal representations encoding truth-relevant structure that survives rewording, recombination, criticism, and counterfactual transformation, but it leaves open a rigorous criterion distinguishing genuine structural representation from merely useful statistical compression. A key problem is to specify tests or formalisms that identify invariants without presupposing the very explanatory knowledge they are meant to detect.",
-      "score": 0.97
+      "text": "How can 'genuine knowledge' be operationalized without circularity? The conjecture relies on compressive, counterfactually stable internal mappings that 'explain more than the training distribution literally contains,' but it leaves unresolved what concrete tests distinguish this from sophisticated interpolation. The open problem is to define measurable criteria for compression, invariance, and extrapolative success that do not already presuppose access to the true world-structure W or smuggle in human judgment of explanation.",
+      "score": 0.96
     },
     {
-      "text": "Under what conditions does minimizing next-token prediction loss force the learning of causally or explanatorily relevant latent structure rather than spurious but compressive proxies? The conjecture suggests rich distributions reward reusable latent variables, yet it remains unresolved when predictive success is sufficient for counterfactual generalization and when it is not. This is the central tension between optimization for prediction and the emergence of knowledge, especially in environments where many false models compress well.",
-      "score": 0.95
+      "text": "What is the relationship between internal representation structure and actual explanatory success? The conjecture suggests that knowledge requires latent variables Z that are sufficiently isomorphic to real explanatory structure, but it is unresolved whether such internal isomorphism is necessary, or whether systems can produce robust counterfactual and transfer performance via heterogeneous or purely procedural representations. This raises the deeper question of whether knowledge should be attributed by internal ontology, external performance, or some combination.",
+      "score": 0.92
     },
     {
-      "text": "What is the relationship between internal representational invariance and truth, given that a model may learn stable, compressive structure that is nevertheless false or misaligned with reality? The conjecture admits that explanation here is only conjectural knowledge unless validated by criticism and transfer, but it does not specify how criticism, intervention, or external error-correction should be integrated into the system or evaluation process. This opens the problem of whether token-prediction alone can ever suffice for knowledge, or whether knowledge necessarily depends on a larger socio-epistemic system of testing.",
-      "score": 0.93
+      "text": "Under what training and environmental conditions does next-token prediction induce counterfactually robust world-models rather than corpus-bound rearrangement? The conjecture treats token prediction as potentially sufficient, but does not specify the structural thresholds: data diversity, intervention-like variation in D, model architecture, optimization regime, embodiment/tool use, or feedback loops needed for invariants to emerge. This is an open systems question about the phase transition from memorization/compression of surface regularities to learning reusable explanatory structure.",
+      "score": 0.94
     }
   ]
 }

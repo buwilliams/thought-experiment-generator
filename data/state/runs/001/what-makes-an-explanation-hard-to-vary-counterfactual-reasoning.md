@@ -2,47 +2,38 @@
 
 ## Conjecture
 
-Conjecture: The difference is not “amount of detail” but counterfactual dependence. An explanation is all load-bearing when its parts are tightly coupled by necessity relations: removing, inverting, or substituting any nontrivial part changes what the explanation predicts, excludes, or makes intelligible. An explanation has freely swappable details when many of its elements are only decorative labels attached to a more abstract invariant structure.
+**Conjecture:**  
+The structural difference is not “amount of detail” but **counterfactual dependence**: in an explanation whose parts are all load-bearing, changing, removing, or inverting any part alters what the explanation can successfully account for; in a freely swappable explanation, many details are merely decorative because the account’s success does not depend on them.
 
-Apply the variation test directly:
+To test this, vary assumptions systematically.
 
-- Remove a part. If the account loses explanatory reach, coherence, or its ability to rule out alternatives, that part was load-bearing.
-- Invert a part. If the explanation now implies the opposite behavior or becomes inconsistent, the original part was structurally essential.
-- Replace a part with a different one. If little changes, then the explanation was operating at a higher level of abstraction than its wording suggested.
+If we **remove** a component from a purported explanation and nothing important breaks—its predictions, retrodictions, unifications, or constraints remain intact—then that component was not structurally necessary. It may aid presentation, intuition, or rhetoric, but it is not doing explanatory work. A truly load-bearing explanation is more like a tightly coupled mechanism or proof: each part constrains the others, and loss of one part creates a gap that cannot be repaired without changing the whole.
 
-What breaks is revealing. In an all-load-bearing explanation, the parts participate in a dense network of constraints. Each element helps solve multiple explanatory problems at once: why this happened, why not otherwise, and how the parts fit together. Such explanations are “brittle” to arbitrary substitution, but that brittleness is often a virtue: it shows the details are doing real work.
+If we **invert** a component and the explanation still works, then the original component was underdetermined by the explanatory task. For example, if an account says a phenomenon happens because of “competition,” but replacing that with “coordination” leaves the explanatory reach largely unchanged, then the account was operating at too loose a level of abstraction. Its apparent content was not the specific detail but a vaguer structural role. What survives inversion reveals the real explanatory core; what fails reveals what was genuinely load-bearing.
 
-By contrast, in a swappable explanation, details are exchangeable because they are instances of a type, not indispensable tokens. The account’s real content lies in pattern, relation, or mechanism, while many surface details merely fill roles. Swappability therefore indicates either:
-1. genuine abstraction — the explanation captures a deeper invariant, or
-2. emptiness — the details are interchangeable because the explanation constrains nothing.
+If we **replace** a detail with an opposite or arbitrary alternative and little changes, that signals a modular or ornamental layer. Such explanations often rely on narrative coherence rather than necessity. They can absorb substitutions because their elements are not tightly bound by constraints from the phenomenon. In systems terms, there are weak feedbacks between parts: the details do not regulate one another strongly enough to matter.
 
-So the key structural properties are:
+So the distinguishing property is this: **load-bearing explanations are highly constrained networks of mutually supporting and mutually vulnerable commitments**. Their parts are not interchangeable because each part narrows the space of viable accounts. Freely swappable explanations have **low constraint density**: many details can vary without changing the explanatory outcome because the details are not what generates the account’s success.
 
-1. Constraint density: how many consequences depend on each part.
-2. Counterfactual sensitivity: whether changing a part changes the explanatory outcome.
-3. Mutual dependency: whether parts support one another or stand isolated.
-4. Compression with losslessness: whether a detail can be replaced by a variable or role-term without explanatory loss.
-5. Discriminatory power: whether the explanation rules out nearby alternatives.
+What this illuminates is that explanatory strength is not identical with specificity. An explanation may contain many specific details and still be weak if those details are optional. Conversely, a compact explanation may be strong if every element is indispensable. The relevant question is therefore not “How detailed is it?” but “How much would break if this changed?”
 
-This perspective also exposes a common mistake: treating all resistance to substitution as strength. Some explanations are fragile not because every part is meaningful, but because they are overfit to a narrative. If changing a detail breaks the story while not affecting the underlying phenomenon, that signals accidental specificity, not load-bearing structure.
-
-So: load-bearing explanations are distinguished by non-arbitrary necessity within the explanatory system; swappable explanations are distinguished by invariance across substitutions. The test is not whether details can change, but whether the explanation’s problem-solving content survives. What survives marks the abstract structure. What breaks marks either genuine explanatory dependence or mere narrative scaffolding. The task of criticism is to tell which.
+A practical criterion follows: evaluate explanations by **swap sensitivity**. The more an explanation resists deletion, inversion, and arbitrary substitution without loss of explanatory power, the more its parts are genuinely load-bearing. Where swapping is cheap, the explanation is carrying excess description rather than necessity.
 
 ## Questions
 
-1. If the conjecture drops 'counterfactual dependence' and instead says the difference is just 'amount of detail,' does it still explain why some highly detailed stories are empty while some abstract explanations are strong? — **no**
-2. If 'constraint density' is removed from the listed structural properties, can the conjecture still distinguish an explanation where each part does multiple explanatory jobs from one where details are merely decorative? — **no**
-3. If 'counterfactual sensitivity' is inverted so that changing a part need not change the explanatory outcome, does the conjecture still have any basis for calling parts load-bearing rather than swappable? — **no**
-4. If 'mutual dependency' among parts is replaced with a model where parts stand independently, can the conjecture still account for its claim that all-load-bearing explanations form a dense network of constraints? — **no**
-5. If 'compression with losslessness' is removed, can the conjecture still tell the difference between a genuinely abstract invariant structure and an explanation that is simply vague or empty? — **no**
-6. If 'discriminatory power' is replaced by mere fit to the observed case, does the conjecture still explain how a good explanation rules out nearby alternatives rather than just retelling what happened? — **no**
-7. If the 'remove / invert / replace' variation test is omitted, does the conjecture retain any operational method for deciding whether a broken detail reveals genuine explanatory dependence or only narrative scaffolding? — **no**
-8. If the conjecture's claim that brittleness can be a virtue is replaced with the view that brittleness always indicates weakness, can it still explain why arbitrary substitution failure sometimes shows that details are doing real explanatory work? — **no**
-9. If the distinction between 'instances of a type' and 'indispensable tokens' is removed, can the conjecture still explain when swappability signals genuine abstraction rather than unconstrained emptiness? — **no**
-10. If the final criterion is changed from 'whether the explanation's problem-solving content survives variation' to 'whether the wording survives paraphrase,' does the conjecture still address the stated problem about structural properties of load-bearing versus freely swappable parts? — **no**
+1. If the conjecture’s central distinction is changed from counterfactual dependence to mere amount of detail, would it still explain why some highly detailed explanations remain weak while some compact explanations are strong? — **no**
+2. If the criterion of explanatory strength is altered so that only successful prediction matters, not retrodiction, unification, or constraint, does the conjecture lose an essential part of what makes a component count as load-bearing? — **yes**
+3. If removing a component leaves predictions intact but reduces unification across cases, does the conjecture require treating that component as still explanatory rather than merely rhetorical? — **yes**
+4. If inverting a component such as replacing 'competition' with 'coordination' leaves the account’s explanatory reach unchanged, does the conjecture force the conclusion that the original contrast was not genuinely load-bearing? — **yes**
+5. If a deleted component can be restored by adding an ad hoc patch without changing the rest of the account, does the conjecture treat that as evidence against the original explanation being tightly coupled? — **yes**
+6. If the explanation’s parts do not constrain one another—so each can vary independently while the phenomenon is still 'explained'—does the conjecture classify this as low constraint density rather than a load-bearing structure? — **yes**
+7. If an explanation contains many specific details, but each can be arbitrarily substituted one at a time with little loss of explanatory power, does the conjecture deny that specificity alone makes it strong? — **yes**
+8. If a compact explanation has only a few elements, and changing any one of them destroys its ability to account for the phenomenon, does the conjecture count that as stronger than a more detailed but swappable account? — **yes**
+9. If swap sensitivity is high for deletions but low for inversions and arbitrary replacements, does the conjecture still have the resources to say the explanation is only partially load-bearing rather than fully hard to vary? — **yes**
+10. If the language of 'weak feedbacks' between parts is removed from the systems framing, does the conjecture still explain why freely swappable explanations can absorb substitutions without changing their explanatory outcome? — **yes**
 
 ## Candidate Problems
 
-- How can we non-circularly distinguish genuine explanatory necessity from accidental narrative brittleness? The conjecture says 'what breaks' under variation reveals load-bearing structure, but also admits that some breakage is merely overfit storytelling. A major open problem is to formulate criteria or tests that separate real counterfactual dependence from artifact of representation, without presupposing the very explanatory quality being evaluated. (score: 0.96)
-- What is the right formal unit of substitution or variation when applying the test? The conjecture relies on removing, inverting, or replacing 'parts,' but it is unresolved how to individuate parts across levels of abstraction, grain sizes, and equivalent redescriptions. Different decompositions of the same explanation may yield different judgments of constraint density, swappability, and mutual dependency. (score: 0.92)
-- How should explanatory value trade off between abstraction and discriminatory power? The conjecture treats swappability as signaling either deeper invariant structure or emptiness, but leaves open how to evaluate explanations that gain compression and generality while losing local specificity, or vice versa. A key unresolved tension is whether there is a principled frontier between fruitful abstraction and underconstrained vacuity. (score: 0.90)
+- How can 'explanatory success' and 'what breaks' be made non-circular and operational across domains? The conjecture relies on swap sensitivity judged by losses in prediction, retrodiction, unification, or constraint, but it leaves open how to measure these consistently in science, mathematics, history, or everyday explanation without presupposing the very explanatory quality under evaluation. (score: 0.96)
+- How do we distinguish genuinely load-bearing components from replaceable formulations at the wrong level of abstraction? If inversion or substitution leaves an explanation intact, that may show ornamentation—but it may also show that the real explanatory core is a higher-level invariant realized by multiple lower-level variants. The open problem is to identify principled criteria for the 'right' decomposition of an explanation into parts before testing swap sensitivity. (score: 0.94)
+- What is the relation between counterfactual dependence and truth or causality? A tightly coupled story can be highly swap-sensitive yet false, overfit, or merely internally coherent, while some true explanations may tolerate substitutions because of robustness, redundancy, or multiple realizability. The unresolved tension is whether load-bearing structure tracks explanatory depth itself, or only one dimension of it that must be combined with independent tests of truth and causal contact. (score: 0.93)

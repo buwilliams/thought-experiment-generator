@@ -7,16 +7,16 @@
   "total": 0.979,
   "candidate_problems": [
     {
-      "text": "How can 'genuine explanatory improvement' be operationally distinguished from mere plausible continuation or benchmark success without collapsing back into proxy metrics that can be gamed? This is the core unresolved issue because the conjecture depends on a real, implementable selection criterion for error-correcting progress, not just a philosophical distinction.",
-      "score": 0.97
+      "text": "What is the operational threshold at which substrate stops being the dominant bottleneck and epistemic structure becomes the main constraint? The conjecture posits a phase change, but leaves unspecified how to define, detect, or measure that threshold across domains.",
+      "score": 0.95
     },
     {
-      "text": "What concrete structures or feedback loops are sufficient to make criticism truth-conducive in AI systems, rather than merely producing adversarial noise, paralysis, or sophisticated self-justification? The conjecture asserts that structure above substrate is decisive, but leaves open which institutional designs actually create reliable error elimination.",
-      "score": 0.94
+      "text": "How can 'epistemic progress' and 'better structure' be formalized without collapsing back into benchmark optimization? The conjecture depends on distinctions like explanation-space vs score-space, and criticism-driven selection vs reward-driven selection, but these need non-circular metrics and experimental tests.",
+      "score": 0.98
     },
     {
-      "text": "Where is the threshold at which substrate ceases to be the dominant bottleneck and higher-order epistemic structure becomes the binding constraint, and does this threshold vary by domain or task? This matters because the conjecture is comparative and conditional: it claims substrate is necessary but not decisive beyond some point, yet that transition is unspecified.",
-      "score": 0.88
+      "text": "What concrete structural mechanisms actually preserve and elevate high-potential minority conjectures without causing combinatorial explosion, noise retention, or institutional paralysis? The conjecture assumes criticism-centered architectures can outperform, but the design tradeoff between productive dissent and unmanageable hypothesis proliferation remains unresolved.",
+      "score": 0.93
     }
   ]
 }

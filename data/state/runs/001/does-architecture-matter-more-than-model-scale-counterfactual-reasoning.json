@@ -3,20 +3,20 @@
   "conjecture_id": "counterfactual-reasoning",
   "run": 1,
   "logical_consistency": 0.94,
-  "hard_to_vary": 1.0,
-  "total": 0.982,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
   "candidate_problems": [
     {
-      "text": "What exactly is the competence threshold at which substrate stops being the dominant bottleneck and structure becomes the continuing one, and how can this transition be operationalized or measured across tasks and systems?",
-      "score": 0.94
-    },
-    {
-      "text": "Which structural components of an AI epistemic system—conjecture generation, criticism, test design, selection, memory, incentives—are actually causally load-bearing for knowledge growth, and how do their feedback loops interact so that improving one part does or does not translate into better truth-tracking?",
-      "score": 0.97
-    },
-    {
-      "text": "How can we distinguish genuine epistemic progress from merely improved performance under stronger scaffolds, given that structural interventions may increase benchmark success, coherence, or adversarial robustness without producing better explanations or more error-corrected knowledge?",
+      "text": "Where is the threshold at which substrate stops being the dominant bottleneck and structural epistemic architecture becomes the main limiter? The conjecture depends on a phase transition-like claim ('compute is load-bearing up to a threshold'), but it leaves unresolved how to define, detect, or measure that threshold across tasks, domains, and model classes.",
       "score": 0.96
+    },
+    {
+      "text": "What operational metrics distinguish genuine epistemic progress from mere capability gains or fluent correlation search? The conjecture assumes that better conjecture-criticism-memory-selection structure yields knowledge accumulation, but it remains open how to measure 'surviving criticism,' explanatory improvement, cumulative error elimination, and preservation of failed ideas in a way that is empirically testable.",
+      "score": 0.98
+    },
+    {
+      "text": "Which structural components are actually causally decisive, and how do they interact as a system? The conjecture groups conjecture, criticism, memory, and selection together, but it is unresolved whether one is the main leverage point, whether they are complementary only in certain architectures, or whether some substrate scaling can substitute for missing structure under particular conditions.",
+      "score": 0.93
     }
   ]
 }

@@ -2,20 +2,20 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "extreme-cases",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 0.8,
-  "total": 0.8419999999999999,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
   "candidate_problems": [
     {
-      "text": "How can 'constraint density' be made precise and operationalized so that we can distinguish genuinely load-bearing explanatory parts from merely correlated or rhetorically central ones? The conjecture relies on notions like necessity, independent possibility-exclusion, and mutual determination, but it leaves open how to measure these across proofs, mechanisms, models, and narratives without collapsing into subjective judgment.",
+      "text": "How can 'counterfactual structure' and 'constraint contribution' be made precise enough to distinguish genuinely load-bearing parts from merely correlated or redescriptive ones across domains? The conjecture relies on deletion/substitution tests, but without a principled metric it is unclear what counts as preserving the same explanation, the same distinctions, or the same 'why this rather than that?' structure.",
       "score": 0.96
     },
     {
-      "text": "What principled criterion separates a good load-bearing explanation that is 'fragile with respect to arbitrariness but robust with respect to criticism' from a bad brittle explanation that is simply overfit? The conjecture names this distinction but does not yet explain how criticism, perturbation, and independent testing interact to reveal whether irreplaceability tracks reality or just narrative dependence.",
-      "score": 0.94
+      "text": "Is the conjecture circular or observer-relative because load-bearingness is defined by what an explanation must preserve at its boundaries, while those boundaries depend on prior choices about the explanandum, level of abstraction, and admissible substitutions? A major open problem is whether there is a non-arbitrary way to set the relevant limits so the test does not simply reproduce the evaluator's interests.",
+      "score": 0.93
     },
     {
-      "text": "At what level of abstraction does the 'real explanation' reside when many surface details are swappable? The conjecture says the explanation is the invariant structure across substitutions, but this raises an unresolved problem of abstraction choice: which invariants are explanatory, which are too weak or generic, and how to identify the boundary where compression preserves predictive/problem-solving power rather than dissolving content into a label.",
+      "text": "What is the relationship between part-level counterfactual fragility and whole-level explanatory robustness, and are there important classes of explanations—probabilistic, historical, mechanistic, mathematical, or highly redundant systems—where this proposed profile fails? The conjecture may break on systems with multiple realizability, degeneracy, or overdetermination, where many parts can be swapped without loss even though the explanation is still deep.",
       "score": 0.91
     }
   ]

@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "mathematical-formalism",
+  "run": 1,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "Where is the actual regime boundary between substrate-limited and structure-limited progress, and how can it be operationalized? The conjecture posits a threshold after which ∂K/∂E and ∂K/∂P dominate ∂K/∂S, but it leaves unresolved how to define 'many plausible conjectures,' how to measure K as durable knowledge rather than benchmark performance, and what empirical signatures would distinguish a true phase transition from a smooth scaling curve or task-dependent crossover.",
+      "score": 0.96
+    },
+    {
+      "text": "What properties make evaluation and promotion genuinely truth-tracking rather than merely performance-amplifying? The conjecture relies on E and P preferentially eliminating error, but it does not specify the structural invariants required for criticizability, error detectability, or retention of corrections, nor how these can be formalized in systems that learn from noisy proxies, strategic behavior, or distribution shift. This is a central open problem because without it, 'improving structure' is underspecified.",
+      "score": 0.94
+    },
+    {
+      "text": "Can substrate and structure really be cleanly separated, or do increases in S endogenously change E and P? In practice, larger models can alter what criticisms are expressible, what internal checks are possible, and how retention operates, so the conjecture may be masking strong interaction terms among S, E, and P. The unresolved question is whether the claimed dominance of structural bottlenecks is robust once these couplings are modeled, or whether structure itself is partly a substrate-dependent capability.",
+      "score": 0.89
+    }
+  ]
+}

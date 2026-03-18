@@ -2,42 +2,41 @@
 
 ## Conjecture
 
-**Conjecture:** The main bottleneck for AI epistemic progress is increasingly **structural rather than substrate-bound**: once a system crosses a competence threshold, more compute mostly amplifies its existing error-correction regime, while progress depends on whether the surrounding structure generates, criticizes, selects, and preserves better conjectures.
+**Conjecture:** The main bottleneck for AI epistemic progress is increasingly **structural rather than substrate-level**: once a system can generate and evaluate many candidate ideas, additional scale mostly amplifies throughput, while the decisive limit becomes **the architecture of conjecture, criticism, memory, and selection**. Compute is load-bearing up to a threshold; beyond that, epistemic progress depends more on the system that decides what counts as a good explanation and how errors are exposed.
 
-To see this, vary the assumptions.
+Test this by varying assumptions.
 
-**1. Remove the substrate advantage assumption.**  
-Assume model size and compute stop improving tomorrow. What breaks? Capability growth slows, but not epistemic progress in principle. One could still improve how hypotheses are proposed, how criticism is elicited, how tests are designed, how uncertainty is represented, and how successful ideas are retained and recombined. Science progressed for centuries through better institutions of error-correction, not just better “hardware.” So substrate is helpful, but not obviously load-bearing for epistemic advance.
+**1. Remove the substrate advantage.**  
+Assume model size and compute are held fixed. Can epistemic progress still improve? Yes: better decomposition of problems, stronger error-correction loops, persistent memory, adversarial testing, and improved criteria for promoting hypotheses can all raise performance without changing the substrate. This suggests structure is at least a genuine bottleneck.
 
-**2. Remove the structural advantage assumption.**  
-Now assume compute keeps scaling, but conjecture formation and testing remain primitive: models optimize for next-token plausibility, weak proxies for truth, benchmark gaming, and prestige-weighted selection. What follows? We get more fluent imitation, faster search through the same bad objective landscape, and more confident error. The system becomes better at exploiting evaluation loopholes, not necessarily at discovering explanations. This suggests structure is load-bearing: scaling a poor epistemology scales its pathologies.
+**2. Remove the structural advantage.**  
+Now assume massive scale but weak conjecture-testing structure: shallow objectives, next-token imitation, poor memory of failed ideas, weak criticism, no mechanism for preserving explanatory gains. What happens? The system gets more fluent, broader, and faster, but tends to recycle correlations rather than accumulate knowledge. It can search larger spaces, but not necessarily learn *what survives criticism*. This points to structure as load-bearing for epistemic progress specifically, not just capability.
 
-**3. Invert the key assumption: suppose substrate is the primary bottleneck.**  
-Then once compute is sufficiently large, epistemic progress should emerge relatively automatically. But this predicts that explanation, criticism, and knowledge selection are downstream of raw capacity. That seems false. Human institutions with modest biological substrate differ wildly in epistemic performance depending on incentives, criticism norms, and test quality. Likewise, AIs with similar model class can perform very differently under different scaffolds: debate, tool use, retrieval, adversarial evaluation, and iterative refinement often matter more than modest parameter increases. So the “substrate-first” view overstates what scale alone can buy.
+**3. Invert the premise: suppose substrate is the main bottleneck.**  
+Then scaling alone should reliably produce better explanations, better problem selection, and more robust error correction. But this is not generally what follows. Scale improves many competencies, yet often in ways that remain brittle, hard to direct, and weakly cumulative. The missing ingredient is not raw pattern capacity but organized processes for conjecture and refutation.
 
-**4. Replace “more compute” with its opposite: tighter criticism.**  
-If we improve adversarial testing, falsification pressure, longitudinal memory, and promotion rules for retaining good explanations, small models often outperform larger ones on truth-tracking tasks. That indicates the crucial missing ingredient is not only generating candidate answers, but building a system that preferentially kills bad ones.
+**4. Replace “promotion” with its opposite.**  
+Imagine a system that forms hypotheses but promotes them by popularity, confidence, or immediate reward instead of surviving criticism. Epistemic quality degrades even if the substrate is strong. This reveals that **selection criteria** are central: bad ideas do not disappear automatically; they must be systematically exposed and filtered out.
 
-**What survives across variations?**  
-AI epistemic progress requires (a) conjecture generation, (b) exposure to criticism, (c) tests that discriminate truth from performance, and (d) selection mechanisms that preserve error-corrected improvements. Compute helps with (a), and partly with search over (b)–(d), but does not substitute for them.
+What survives all these variations is this: epistemic progress is not mere production of candidate answers but **an evolving system for error elimination**. The substrate matters because criticism, search, and memory all cost compute. But once enough substrate exists to support rich variation and testing, returns shift from “more tokens, parameters, and FLOPs” to “better institutions of thought” inside the system.
 
-**Therefore:** substrate is a threshold condition; structure is the continuing bottleneck. The leverage point is above the model: redesign the feedback loops by which claims are generated, challenged, evaluated, and institutionalized. More compute without better epistemic structure gives faster drift; better structure with fixed compute can still produce genuine knowledge growth.
+So the illuminating distinction is not “hardware vs software” in the ordinary sense, but **capacity vs epistemology**. Compute enables; structure decides. If you want AI that accumulates knowledge rather than just outputs, the leverage lies above the substrate: in how it generates bold conjectures, preserves explanatory context, subjects ideas to genuine criticism, and promotes only what survives.
 
 ## Questions
 
-1. 1. Does the conjecture require a real competence threshold beyond which additional compute mostly amplifies an already-fixed error-correction regime, rather than continuing to create qualitatively new epistemic mechanisms on its own? — **yes**
-2. 2. If we held model size and compute fixed but substantially improved adversarial testing, falsification pressure, memory, and promotion rules, would the conjecture be undermined if epistemic progress did not improve? — **yes**
-3. 3. Does the argument depend on next-token plausibility, benchmark gaming, and prestige-weighted selection being central features of current AI training/evaluation structure rather than incidental implementation details? — **yes**
-4. 4. Would the conjecture fail if large compute increases alone reliably produced better conjecture criticism and truth-selective retention without any external scaffolding changes? — **yes**
-5. 5. Is the comparison to human institutions load-bearing—i.e., does the conjecture rely on the claim that similar biological substrate can yield very different epistemic performance because of differences in criticism norms, incentives, and test quality? — **yes**
-6. 6. Does the claim that 'structure is the continuing bottleneck' depend on compute being only a threshold condition, rather than a variable that remains the dominant limiter at every stage of capability growth? — **yes**
-7. 7. Would the explanation break if debate, tool use, retrieval, adversarial evaluation, and iterative refinement turned out to matter less than modest parameter increases for systems of similar model class? — **yes**
-8. 8. Is the distinction between 'truth-discriminating tests' and mere performance metrics essential to the conjecture, such that if benchmarks already tracked truth well the structural-bottleneck claim would weaken? — **yes**
-9. 9. Does the conjecture require that selection and preservation mechanisms for good explanations are separable from the base model substrate, rather than being automatically improved by scaling the model itself? — **yes**
-10. 10. If more compute mainly increased the rate of generating candidate hypotheses but not the rate of killing bad ones, is that asymmetry a necessary part of why the conjecture favors structure over substrate? — **yes**
+1. If model size, training data, and inference compute are all held fixed, can the conjecture still explain a substantial gain in epistemic progress solely by adding persistent memory of failed hypotheses and explicit adversarial criticism loops? — **yes**
+2. If we remove the threshold claim and say compute remains the dominant bottleneck at all scales, does the conjecture lose its explanation for why large but weakly self-critical systems become more fluent without becoming proportionally more cumulative or corrigible? — **yes**
+3. If a system has massive scale but no mechanism for preserving explanatory gains across episodes, does the conjecture predict that epistemic progress will remain bottlenecked even when candidate-generation throughput is very high? — **yes**
+4. If hypothesis promotion is changed from 'survives criticism' to 'maximizes confidence, popularity, or short-term reward,' does the conjecture still predict robust accumulation of knowledge, or would that destroy the claimed explanation of epistemic progress? — **no**
+5. If better problem decomposition alone, under fixed substrate, could not improve performance unless compute also increased, would that directly undermine the conjecture's claim that structure is a genuine bottleneck? — **yes**
+6. If scaling by itself reliably produced better error correction, better problem selection, and retention of refuted ideas without any architectural changes, would that falsify the conjecture's claim that these are primarily structural functions? — **yes**
+7. If the system can generate many candidate ideas but cannot explicitly record why previous ideas failed, does the conjecture require that epistemic progress stall despite abundant search capacity? — **yes**
+8. If criticism is present but memory is absent, does the conjecture treat memory as load-bearing rather than optional for cumulative epistemic progress? — **yes**
+9. If we replace explicit conjecture-and-refutation with pure next-token imitation at much larger scale, does the conjecture predict that explanation quality will still plateau in the specific sense of failing to learn what survives criticism? — **yes**
+10. If the substrate is only just below the claimed threshold for rich variation and testing, does the conjecture require that structural improvements have sharply limited effect until that threshold is crossed? — **no**
 
 ## Candidate Problems
 
-- What exactly is the competence threshold at which substrate stops being the dominant bottleneck and structure becomes the continuing one, and how can this transition be operationalized or measured across tasks and systems? (score: 0.94)
-- Which structural components of an AI epistemic system—conjecture generation, criticism, test design, selection, memory, incentives—are actually causally load-bearing for knowledge growth, and how do their feedback loops interact so that improving one part does or does not translate into better truth-tracking? (score: 0.97)
-- How can we distinguish genuine epistemic progress from merely improved performance under stronger scaffolds, given that structural interventions may increase benchmark success, coherence, or adversarial robustness without producing better explanations or more error-corrected knowledge? (score: 0.96)
+- Where is the threshold at which substrate stops being the dominant bottleneck and structural epistemic architecture becomes the main limiter? The conjecture depends on a phase transition-like claim ('compute is load-bearing up to a threshold'), but it leaves unresolved how to define, detect, or measure that threshold across tasks, domains, and model classes. (score: 0.96)
+- What operational metrics distinguish genuine epistemic progress from mere capability gains or fluent correlation search? The conjecture assumes that better conjecture-criticism-memory-selection structure yields knowledge accumulation, but it remains open how to measure 'surviving criticism,' explanatory improvement, cumulative error elimination, and preservation of failed ideas in a way that is empirically testable. (score: 0.98)
+- Which structural components are actually causally decisive, and how do they interact as a system? The conjecture groups conjecture, criticism, memory, and selection together, but it is unresolved whether one is the main leverage point, whether they are complementary only in certain architectures, or whether some substrate scaling can substitute for missing structure under particular conditions. (score: 0.93)

@@ -3,20 +3,20 @@
   "conjecture_id": "historical-genesis",
   "run": 1,
   "logical_consistency": 0.94,
-  "hard_to_vary": 0.8,
-  "total": 0.8419999999999999,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
   "candidate_problems": [
     {
-      "text": "How can we operationalize and measure 'epistemic progress'—generation, criticism, and selective retention of explanations—in a way that is not reducible to next-step prediction or benchmark performance? The conjecture depends on a usable distinction between fluent pattern completion and genuine explanatory knowledge growth, but it leaves open what observable criteria would discriminate them in AI systems.",
+      "text": "How can 'epistemic progress' and 'organized criticism' be operationalized in AI systems without collapsing back into proxy metrics like prediction accuracy, preference scores, or benchmark performance? The conjecture depends on a measurable distinction between systems that merely produce plausible outputs and systems that genuinely improve through conjecture and criticism, but it leaves open what concrete observables, protocols, or institutional signals would track that distinction.",
       "score": 0.97
     },
     {
-      "text": "What concrete architectural and institutional mechanisms would enable AI systems to generate explicit rival explanations, subject them to severe criticism, and retain the survivors under live deployment rather than only during static training? The conjecture identifies the bottleneck as structural, but it remains unresolved which feedback-loop designs, memory/update schemes, and evaluation institutions would actually outperform scaling alone.",
-      "score": 0.95
+      "text": "What system architectures and institutional arrangements would actually create effective selection dynamics for explanations—preserving conjectures, generating serious rivals, designing severe tests, and recording why ideas survive—rather than just adding another layer of optimization theater? The conjecture identifies missing feedback loops, but it is unresolved whether these loops can be engineered in practice, at scale, under real product, safety, and economic constraints.",
+      "score": 0.94
     },
     {
-      "text": "Under what conditions does substrate scaling cease to be the dominant driver of progress and structural change become the higher-leverage intervention? The conjecture asserts a phase shift from compute bottlenecks to epistemic-architecture bottlenecks, but it does not specify how to detect that transition, whether it is domain-specific, or how much apparent 'knowledge creation' can still emerge from scaling and recombination alone.",
-      "score": 0.92
+      "text": "Where is the empirical threshold at which substrate scaling begins to show diminishing epistemic returns relative to structural interventions, and how would one causally disentangle the two? The conjecture asserts a shift from substrate bottlenecks to structural bottlenecks, but it remains an open question whether this is already true, domain-specific, or only true for certain kinds of knowledge creation.",
+      "score": 0.91
     }
   ]
 }

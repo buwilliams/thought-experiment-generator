@@ -2,21 +2,21 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "extreme-cases",
   "run": 1,
-  "logical_consistency": 0.91,
+  "logical_consistency": 0.94,
   "hard_to_vary": 0.7,
-  "total": 0.7629999999999999,
+  "total": 0.7719999999999999,
   "candidate_problems": [
     {
-      "text": "What is the non-circular criterion for the proposed 'boundary' between rearrangement and genuine knowledge? The conjecture appeals to compression, unification, portability, and survival under criticism across indefinitely many contexts, but it leaves open how to define or test this without presupposing the very notion of explanation it aims to explain. A new problem is to formulate a principled operational discriminator: what observable capacities, failure modes, or structural invariants would distinguish error-correcting explanation from high-order interpolation in finite systems?",
+      "text": "How can 'explanatory structure that survives boundary tests' be defined operationally and non-circularly, so that it distinguishes genuine knowledge from mere high-quality imitation without presupposing human judgment of what counts as an explanation?",
       "score": 0.97
     },
     {
-      "text": "Does token prediction by itself tend to produce explanatory abstractions, or are additional selection pressures, architectures, or interactive criticism loops necessary? The conjecture says the substrate and objective are not the key, yet also says knowledge emerges only under severe universality and criticism constraints. This creates a tension about sufficiency: can next-token training alone induce such structures in the limit, or must systems be embedded in adversarial evaluation, tool use, world feedback, or explicit error-correction mechanisms?",
-      "score": 0.95
+      "text": "Is counterfactual reach actually sufficient for knowledge production, or can a system pass extreme adversarial transfer, self-critique, and intervention tests while still lacking genuine understanding because its success is only a broad statistical artifact?",
+      "score": 0.93
     },
     {
-      "text": "What internal organization would make a predictor's outputs genuinely 'error-correcting explanations' rather than merely robust continuations? The conjecture implies that knowledge corresponds to internal structures encoding deep invariants that survive distribution shift and hostile probing, but it does not specify the ontology of those structures. A worthwhile problem is to characterize the mechanisms—e.g. causal models, modular abstractions, counterfactual simulators, compression hierarchies, or criticism-generating subsystems—that could support indefinite cross-context resilience, and to ask whether such organization is even possible in purely predictive systems.",
-      "score": 0.92
+      "text": "What training dynamics, architectures, or feedback loops are necessary for next-token optimization to reliably produce error-correctable, hard-to-vary explanations rather than brittle compressions—and are there principled limits where token prediction alone cannot cross the boundary?",
+      "score": 0.95
     }
   ]
 }
