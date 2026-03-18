@@ -489,6 +489,14 @@ cargo run -- ask "What causes institutional decay?"
 cargo run -- ask --file question.md
 cat question.md | cargo run -- ask
 
+# Check whether conjectures are novel or restatements of known theories
+# Scores each conjecture 0–1 for novelty and names the closest known analog
+cargo run -- novelty-check
+
+# Show score trajectory across all runs and per-conjecture score history
+# No LLM calls — reads run data directly
+cargo run -- trajectory
+
 # Read last run summary without running
 cargo run -- read
 
