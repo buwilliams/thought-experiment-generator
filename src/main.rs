@@ -121,6 +121,9 @@ pub enum Command {
     /// Full system review: mind, candidates, score trajectory, problem sets, and LLM self-assessment
     Review,
 
+    /// Reset all scores, run counts, and history — keeps conjectures and problem sets
+    Reset,
+
     /// Add a new conjecture to the mind or candidates layer
     AddConjecture {
         /// Target layer: "mind" or "candidates"
@@ -199,6 +202,31 @@ async fn main() -> Result<()> {
 
         Command::Read => {
             teg::runner::read(&config).await?;
+        }
+
+        Command::Reset => {
+            let mind = teg::state::load_conjectures(&teg::types::Layer::Mind)?;
+            let candidates = teg::state::load_conjectures(&teg::types::Layer::Candidates)?;
+            let problemsets = teg::state::load_problemsets()?;
+            println!("This will reset all scores, run counts, and history to zero.");
+            println!(
+                "Conjectures: {} mind, {} candidates. Problem sets: {}.",
+                mind.len(), candidates.len(), problemsets.len()
+            );
+            println!("All run directories will be deleted.");
+            println!("Conjectures and problem sets will be kept.");
+            println!();
+            print!("Continue? [y/N] ");
+            use std::io::Write;
+            std::io::stdout().flush()?;
+            let mut input = String::new();
+            std::io::stdin().read_line(&mut input)?;
+            if input.trim().eq_ignore_ascii_case("y") {
+                teg::state::reset_scores()?;
+                println!("Reset complete.");
+            } else {
+                println!("Cancelled.");
+            }
         }
 
         Command::Review => {

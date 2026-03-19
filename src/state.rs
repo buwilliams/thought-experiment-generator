@@ -82,6 +82,49 @@ fn copy_dir_all(src: &Path, dst: &Path) -> Result<()> {
     Ok(())
 }
 
+/// Reset all scores, run counts, history, and problem coverage to zero.
+/// Clears all run directories. Conjectures and problem sets are preserved.
+pub fn reset_scores() -> Result<()> {
+    ensure_initialized()?;
+
+    for layer in &[Layer::Mind, Layer::Candidates] {
+        let mut conjectures = load_conjectures(layer)?;
+        for c in &mut conjectures {
+            c.meta.score = 0.0;
+            c.meta.run_count = 0;
+            c.meta.problem_coverage = vec![];
+            c.meta.history = vec![];
+        }
+        for c in &conjectures {
+            save_conjecture(c)?;
+        }
+    }
+
+    let mut problemsets = load_problemsets()?;
+    for ps in &mut problemsets {
+        ps.meta.run_count = 0;
+        for p in &mut ps.meta.problems {
+            p.meta.score = 0.0;
+            p.meta.run_count = 0;
+        }
+        save_problemset(ps)?;
+    }
+
+    let runs_dir = state_dir().join("runs");
+    if runs_dir.exists() {
+        std::fs::remove_dir_all(&runs_dir)?;
+    }
+
+    let state = StateInfo {
+        run: 0,
+        created_at: now_iso8601(),
+        last_run_at: now_iso8601(),
+    };
+    save_state_info(&state)?;
+
+    Ok(())
+}
+
 // --- State info ---
 
 pub fn load_state_info() -> Result<StateInfo> {

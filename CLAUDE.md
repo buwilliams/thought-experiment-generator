@@ -22,6 +22,7 @@ cargo run -- --fresh run-all                                              # rese
 cargo run -- ask "question"                                               # ask the system; all lenses run concurrently, then consolidated
 cargo run -- review                                                       # data report + adversarial LLM self-assessment
 cargo run -- read                                                         # read last summary
+cargo run -- reset                                                        # reset scores/history, keep conjectures and problem sets (prompts y/N)
 cargo run -- --fresh run                                                  # reset to seed and run
 RUST_LOG=debug cargo run -- run                                           # debug logging
 cargo run -- add-conjecture --layer mind --title "Title" --text "..."

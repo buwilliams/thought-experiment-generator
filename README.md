@@ -60,6 +60,9 @@ cargo run -- review
 # Read last run summary without running
 cargo run -- read
 
+# Reset scores, run counts, and history — keeps conjectures and problem sets (prompts for confirmation)
+cargo run -- reset
+
 # Reset state to seed and run immediately (seed is runnable out of the box)
 cargo run -- --fresh run
 
