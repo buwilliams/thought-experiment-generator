@@ -128,31 +128,10 @@ pub async fn run(
     problemset.meta.problems.retain(|p| !removed_ids.contains(&p.meta.id));
     info!("Deduplication removed {} problems from set", removed_ids.len());
 
-    // Problem review: enforce cap — drop bottom-ranked until ≤ PROBLEMSET_MAX_SIZE
-    let mut cap_removed: usize = 0;
-    while problemset.meta.problems.len() > PROBLEMSET_MAX_SIZE {
-        match promoter::find_problem_to_remove(&problemset.meta.problems, config.min_run_count)
-            .map(|p| p.meta.id.clone())
-        {
-            Some(id) => {
-                info!("Cap enforcement: removing '{}' from set", id);
-                problemset.meta.problems.retain(|p| p.meta.id != id);
-                cap_removed += 1;
-            }
-            None => {
-                tracing::warn!(
-                    "Problem set exceeds cap ({}) but no eligible problems to remove (all below min_run_count={}). Accepting overage.",
-                    PROBLEMSET_MAX_SIZE, config.min_run_count
-                );
-                break;
-            }
-        }
-    }
-
     problemset.meta.run_count += 1;
     state::save_problemset(&problemset)?;
 
-    let problems_removed = removed_ids.len() + cap_removed;
+    let problems_removed = removed_ids.len();
 
     // Promote top generated output → candidates layer
     let promoted_generated_summary =
@@ -271,6 +250,10 @@ fn admit_candidates_to_set(
 
     for (score, text) in &pool {
         if admitted >= MAX_ADMISSIONS_PER_RUN {
+            break;
+        }
+        if problemset.meta.problems.len() >= PROBLEMSET_MAX_SIZE {
+            info!("Problem set at capacity ({}), skipping further admissions this run", PROBLEMSET_MAX_SIZE);
             break;
         }
         let id = state::slugify(&text.chars().take(60).collect::<String>());
