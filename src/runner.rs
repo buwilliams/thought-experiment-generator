@@ -215,6 +215,12 @@ pub async fn run_all(client: Arc<LlmClient>, config: &Config) -> Result<()> {
         println!("\n=== Problem set: {} — {} ===", ps.meta.id, display);
         run(Arc::clone(&client), config, Some(&ps.meta.id), None).await?;
     }
+
+    println!("\n=== Review ===");
+    let templates = PromptTemplates::load()?;
+    let writer = crate::review::report()?;
+    crate::review::assess(client, config, &templates, writer).await?;
+
     Ok(())
 }
 
