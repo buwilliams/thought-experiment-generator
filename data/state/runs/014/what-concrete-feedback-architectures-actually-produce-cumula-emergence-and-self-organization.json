@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient architectural conditions for a feedback loop to count as genuinely 'closed' and persistence-bearing, rather than merely adding local optimization? The conjecture names four loops, but it remains unresolved which components are indispensable, what degree of independence or durability they require, and whether weaker or alternative structures could also yield cumulative error-correction.",
+      "score": 0.95
+    },
+    {
+      "text": "How can cumulative epistemic error-correction be operationalized and empirically distinguished from benchmark overfitting, short-horizon adaptation, or improved surface behavior? The conjecture hinges on a real difference between recurring-error elimination and ordinary performance gains, but it leaves open what measurements, experimental designs, or longitudinal signatures would demonstrate that future reasoning topology has actually changed.",
+      "score": 0.98
+    },
+    {
+      "text": "What failure modes emerge when durable criticism memory is introduced, and how can systems preserve corrigibility without becoming rigid, self-confirming, or cluttered by obsolete refutations? The conjecture assumes persistent error memory is a key enabler, but unresolved tensions remain around memory quality, retrieval relevance, critic reliability, and how revision can remain open to new conjectures rather than freezing past mistakes into dogma.",
+      "score": 0.92
+    }
+  ]
+}

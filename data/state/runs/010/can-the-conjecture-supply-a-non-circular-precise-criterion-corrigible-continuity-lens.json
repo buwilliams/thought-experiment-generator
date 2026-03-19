@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-supply-a-non-circular-precise-criterion",
+  "conjecture_id": "corrigible-continuity-lens",
+  "run": 10,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "How can the three proposed invariants be specified non-circularly and operationalized across very different systems without smuggling in representation by definition? In particular, what observable structural tests distinguish 'decouplable content,' 'public error criteria,' and 'identity through revision' from sophisticated control, especially in edge cases like predictive controllers, learned latent states, and biological regulation?",
+      "score": 0.96
+    },
+    {
+      "text": "Is the conjecture's criterion necessary, sufficient, or only one important pathway for modelhood? There is an unresolved tension over whether genuinely model-like states can exist in systems that lack explicit public error practices or institutionalized revision—such as animals, neural subsystems, or one-off adaptive mechanisms—or whether the conjecture is too socially/institutionally demanding and excludes paradigmatic representations.",
+      "score": 0.93
+    },
+    {
+      "text": "What grounds the 'aboutness' relation that the error-correction regime is supposed to answer to? The conjecture explains how a system can treat a state as corrigible, but it remains open whether this is enough to secure genuine world-directed content rather than merely internally stabilized norms; the key problem is how mismatch with 'what it is about' is fixed without collapsing into external interpretation or pure functional success.",
+      "score": 0.91
+    }
+  ]
+}

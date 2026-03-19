@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-a-coordination-failure-among-agents",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient structural conditions for a no-provision equilibrium to persist indefinitely, and can they be formalized sharply enough to distinguish true coordination traps from nearby cases of ignorance, disagreement, bounded rationality, or dynamic preference change?",
+      "score": 0.95
+    },
+    {
+      "text": "How should 'spontaneous resolution' be defined and modeled: does it require an endogenous structural change arising from within the system, or can learning, norm formation, reputation, repeated interaction, and expectation cascades themselves generate the missing bridge from diffuse shared benefit to individually rational first-mover action without external institutional intervention?",
+      "score": 0.93
+    },
+    {
+      "text": "What measurable variables or empirical signatures identify when a diffuse, non-excludable enabling good lacks a conversion mechanism into private payoff, observable commitment, or credible expectation, and how can this conjecture be tested against alternative explanations across real cases?",
+      "score": 0.91
+    }
+  ]
+}

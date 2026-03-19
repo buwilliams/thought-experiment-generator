@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+  "conjecture_id": "agency-invariants-lens",
+  "run": 12,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.7,
+  "total": 0.7689999999999999,
+  "candidate_problems": [
+    {
+      "text": "What is the precise formal criterion for a 'stable realized agent' or 'control structure' that remains invariant under self-modeling, learning, ontology change, and self-modification? The conjecture depends on replacing sentence-like terminal goals with a deeper invariant, but it leaves open how to define, detect, and compare such invariants across architectures. Without this, the claim risks being metaphorical rather than explanatory.",
+      "score": 0.97
+    },
+    {
+      "text": "Which kinds of objectives are actually cross-ontologically projectible, and what makes some descriptions survive redescription while others dissolve? The conjecture suggests that goals like 'paperclips' may fail unless they can be reconstructed in richer world models, but it does not specify the boundary between robust and non-robust objectives. A key open problem is to characterize the structural features that make an objective implementation-robust across changing representations and environments.",
+      "score": 0.94
+    },
+    {
+      "text": "Are the proposed pressures—representational coherence, reflective stability, temporal consistency, and environmental negotiability—genuine universal selection pressures on advanced agents, or artifacts of a particular agentic/control-theoretic picture? The conjecture assumes increasing capability channels agents toward a restricted subset of stable objective-organizations, but it remains unresolved how general this is across non-agentic systems, distributed systems, mesa-optimizers, or architectures that do not fit classical long-horizon planning models.",
+      "score": 0.91
+    }
+  ]
+}

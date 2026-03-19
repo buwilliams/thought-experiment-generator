@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What precise criterion distinguishes a merely complex feedback controller from a system with genuine free will on this view? The conjecture says free will appears when a system forms a self-referential strange loop and becomes causally sensitive to self-descriptions, but it leaves open where the threshold lies: how expressive must the self-model be, what kinds of counterfactual or normative representations are required, and which systems (thermostats, LLMs, animals, humans) qualify or fail?",
+      "score": 0.95
+    },
+    {
+      "text": "In what sense are higher-level self-models 'causally efficacious' and 'irreducible' without conflicting with causal closure at the physical level? The conjecture relies on top-level reasons and meanings doing real causal work, but it does not yet specify whether this is explanatory irreducibility, interventionist autonomy, multiple realizability, or something stronger. Clarifying this is crucial to avoid the view collapsing either into epiphenomenalism or into a merely verbal redescription of base physics.",
+      "score": 0.98
+    },
+    {
+      "text": "Does recursive self-prediction actually ground the kind of agency relevant to responsibility, or only a form of behavioral self-modulation? The thought experiment shows a deterministic system can react to predictions about itself, but it remains open whether this yields authorship, rational control, and answerability to reasons, or just sophisticated looped dynamics. The unresolved tension is between descriptive self-reference and the normative notion of free will that moral and legal practices care about.",
+      "score": 0.93
+    }
+  ]
+}

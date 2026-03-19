@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-information-processing-and",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "What, exactly, is the minimal load-bearing architecture that is jointly sufficient for reportability, unity, perspective, and felt difference, and can it be specified in a way that rules out merely functionally equivalent but phenomenally empty implementations?",
+      "score": 0.96
+    },
+    {
+      "text": "Does the conjecture collapse phenomenal consciousness into a sophisticated form of self-model-based access and control, or is there still an unresolved explanatory gap between representing internal states as appearances and those states actually being felt?",
+      "score": 0.94
+    },
+    {
+      "text": "How can the claim that perspectival, self-referential, multimodally bound organization is necessary be tested against edge cases—dreams, blindsight, depersonalization, split-brain conditions, non-reporting humans, animals, and AI systems—where some load-bearing clauses appear weakened or dissociated?",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 14,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What precise institutional mechanisms are sufficient to transform token-prediction outputs from cheap plausible discourse into genuinely error-correcting knowledge production, and how can those mechanisms be specified, compared, and measured across domains?",
+      "score": 0.95
+    },
+    {
+      "text": "How should knowledge be individuated if it is treated as a socially stabilized process rather than an intrinsic property of an utterance: can a model output count as knowledge before communal uptake, or only as a candidate conjecture, and where exactly is the boundary?",
+      "score": 0.91
+    },
+    {
+      "text": "Can token-prediction systems contribute novel explanatory content that exceeds recombination of prior discourse once embedded in strong correction institutions, or do such institutions merely select from human-originated knowledge already latent in the training distribution?",
+      "score": 0.89
+    }
+  ]
+}

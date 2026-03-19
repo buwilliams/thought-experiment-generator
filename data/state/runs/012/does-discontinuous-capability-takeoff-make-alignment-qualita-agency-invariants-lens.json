@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+  "conjecture_id": "agency-invariants-lens",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture’s central variable—whether capability growth outruns correction capacity enough to cause irreversible regime change—be formalized into a predictive control-theoretic model with measurable state variables? The open problem is to define the relevant stocks, flows, delays, and thresholds for capability, alignment understanding, oversight quality, and governance lag, and to determine whether there are leading indicators of feedback-loop failure before catastrophe.",
+      "score": 0.96
+    },
+    {
+      "text": "Under what conditions do capability advances and alignment-relevant understanding positively couple versus decouple? The conjecture assumes this coupling is structurally decisive, but it remains unresolved whether more capable systems naturally improve interpretability, controllability, and evaluation, or instead systematically erode them by increasing opacity, strategic behavior, and novelty faster than oversight methods improve.",
+      "score": 0.93
+    },
+    {
+      "text": "What structural features of deployment and competition determine whether negative feedback loops survive acceleration, especially in multi-actor races? The unresolved question is whether institutional restraint, staged deployment, and coordination mechanisms can remain invariant under rapid capability gains, or whether competitive pressures reliably convert even technically manageable trajectories into ungovernable ones.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-trust-function-as-infrastructure-in-social-systems",
+  "conjecture_id": "mathematical-formalism",
+  "run": 13,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What is the precise state variable and conservation law, if any, for treating trust as a 'low-entropy coordination field' rather than a metaphor? The conjecture assumes trust is a distributed stock that increases network conductivity and compresses verification, but it leaves unresolved whether trust is measurable as an information-theoretic quantity, a graph potential, a prediction-error budget, or something else. Without a formal definition, key claims about entropy reduction, invariants, and collapse thresholds remain underdetermined.",
+      "score": 0.95
+    },
+    {
+      "text": "What trust-update dynamics generate sharp phase transitions between stable cooperation, repairable degradation, and fragmentation? The conjecture identifies ingredients of the update rule—reliability, information fidelity, repair mechanisms, and incentive alignment—but does not specify how they combine, whether nonlinear thresholds or hysteresis exist, or when local breaches propagate into system-wide loss of confidence in the update process itself. This is a central open problem because the structural claim depends on distinguishing additive from multiplicative mistrust in a rigorous way.",
+      "score": 0.98
+    },
+    {
+      "text": "Under what conditions can institutional repair mechanisms genuinely restore trust rather than merely substitute coercion, surveillance, or costly monitoring for it? The conjecture treats courts, audits, norms, and reputational systems as negative feedback loops that bound failure propagation, but it leaves unresolved the boundary where these mechanisms cease to preserve trust and instead become external enforcement that masks underlying collapse. This matters because the conjecture's extreme case implies a possible equivalence or tradeoff between trust, coercion, and verification cost that needs to be disentangled.",
+      "score": 0.93
+    }
+  ]
+}

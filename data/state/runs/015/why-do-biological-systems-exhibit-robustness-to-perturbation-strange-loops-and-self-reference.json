@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 15,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can 'nested strange-loop organization' be made into a precise, testable formalism rather than a metaphor? The conjecture depends on identifying measurable cross-level self-reference, partial loop closure, and 'reinterpretation' of lower-level variation by higher-level control. A key open problem is to define structural metrics that distinguish ordinary hierarchical feedback from the specific loop architectures claimed to co-produce robustness and evolvability, and then test whether those metrics predict biological outcomes better than existing concepts like modularity, redundancy, degeneracy, and plasticity.",
+      "score": 0.97
+    },
+    {
+      "text": "Is strange-loop organization actually a causal source of both robustness and evolvability, or merely a redescription of mechanisms already explained by selection on modularity, degeneracy, and environmental coupling? The unresolved tension is whether the conjecture adds explanatory power or just unifies known phenomena under new language. This is worth pursuing by constructing comparative models and experiments that separate loop architecture from confounders and ask whether increasing recursive cross-level control produces the predicted joint increase in robustness and evolvability.",
+      "score": 0.94
+    },
+    {
+      "text": "What are the boundary conditions under which imperfectly closed self-referential loops enhance evolvability rather than generate pathology, lock-in, or collapse? The conjecture assumes that 'never closing perfectly' creates productive slack, but too much openness could destroy identity and too much closure could freeze adaptation. The open question is whether there is a principled regime, perhaps depending on timescale separation, information flow, or control gain across levels, in which robustness and evolvability are jointly maximized, and how biological systems stay within it.",
+      "score": 0.96
+    }
+  ]
+}

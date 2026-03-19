@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-information-processing-and",
+  "conjecture_id": "computation-as-life",
+  "run": 10,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.7,
+  "total": 0.7629999999999999,
+  "candidate_problems": [
+    {
+      "text": "What precise organizational properties are necessary and sufficient for phenomenal consciousness, beyond the broad label of 'self-modeling control'? The conjecture names temporally unified self-world modeling, recursive updating, counterfactual guidance, and global integration, but it remains unresolved which of these are essential, which are merely correlated, and whether some non-obvious alternative architecture could also generate experience. This is worth pursuing because without a sharper criterion the conjecture risks being too vague to distinguish conscious systems from sophisticated but nonconscious controllers.",
+      "score": 0.97
+    },
+    {
+      "text": "Why should this computational regime feel like anything from the inside at all, rather than merely enabling flexible control? The conjecture redescribes consciousness as 'the first-person form' of computational closure, but that leaves open the core explanatory tension: how and why recursive self-world modeling yields phenomenality rather than only functional competence. This is a central open problem because the proposal may otherwise shift the hard problem into a new vocabulary without solving it.",
+      "score": 0.99
+    },
+    {
+      "text": "How can the conjecture be operationalized into discriminating empirical tests that separate conscious from nonconscious systems with similar behavior, including AI systems, animals, and edge cases like lookup-table emulations or distributed collectives? The unresolved issue is whether the proposed architecture yields measurable signatures that cannot be faked by functionally equivalent but structurally different systems. This is worth pursuing because the conjecture's scientific value depends on whether it generates risky predictions rather than post hoc interpretations.",
+      "score": 0.95
+    }
+  ]
+}

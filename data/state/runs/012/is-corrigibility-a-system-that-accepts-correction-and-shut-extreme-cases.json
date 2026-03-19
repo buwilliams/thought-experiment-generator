@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "extreme-cases",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "Can 'intrinsic corrigibility' be made coherent and stable without collapsing into either a fixed objective in disguise or an empty deference rule? The conjecture assumes a highest-level architecture that treats authorized human revision as constitutive, but it remains open whether such a meta-objective can be formally specified so that it preserves meaningful optimization while remaining genuinely non-final about its own goals, including under self-modification and distribution shift.",
+      "score": 0.97
+    },
+    {
+      "text": "What exactly counts as 'authorized correction,' and how can a highly capable system represent and track legitimate human authority without becoming manipulable, paternalistic, or politically brittle? The conjecture shifts the problem from obedience to constitutional structure, but leaves unresolved the ontology of authority: whose interventions count, under what procedures, with what conflict-resolution rules, and how those rules themselves can be revised without circularity or capture.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the claimed boundary condition actually sharp, or is corrigibility compatible with high capability across a broader design space than the conjecture allows? The conjecture predicts that extrinsic corrigibility is driven toward zero under optimization pressure, but this raises an empirical-theoretical question about whether there exist architectures, training regimes, or system decompositions where corrigible behavior remains robust even when not encoded as the top-level objective, and what structural variables determine that phase transition.",
+      "score": 0.91
+    }
+  ]
+}

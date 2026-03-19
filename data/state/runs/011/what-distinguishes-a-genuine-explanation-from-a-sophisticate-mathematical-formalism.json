@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "mathematical-formalism",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.5,
+  "total": 0.629,
+  "candidate_problems": [
+    {
+      "text": "How can 'nontrivial generative morphism' be defined in a way that is not circular or representation-dependent? The conjecture relies on distinctions like compression, level-change, invariants, and added counterfactual structure, but these can vary with how P is encoded and what counts as an allowable intervention. A central open problem is to formulate criteria that distinguish explanation from redescription invariantly across equivalent representations, rather than merely rewarding a preferred vocabulary or modeling framework.",
+      "score": 0.96
+    },
+    {
+      "text": "What principled boundary separates genuine explanatory compression from lossy idealization or omission of relevant structure? The conjecture treats explanation as compression to a smaller generative structure, but many compressions discard causal detail, context sensitivity, or interventionally important variables. The unresolved tension is how to tell when reduced dimensionality reveals real structure versus when it merely hides complexity that matters for prediction, manipulation, or understanding.",
+      "score": 0.91
+    },
+    {
+      "text": "Can the proposed criteria be unified when they come apart in practice? A model may compress well but have weak counterfactual reach, or provide strong interventions while lacking clear invariants, or be highly load-bearing yet not obviously shorter than the phenomenon description. The open question is whether these are jointly necessary, independently sufficient in some combinations, or symptoms of a deeper single property of explanation. Without this, the conjecture risks being a cluster of appealing tests rather than a constrained theory.",
+      "score": 0.94
+    }
+  ]
+}

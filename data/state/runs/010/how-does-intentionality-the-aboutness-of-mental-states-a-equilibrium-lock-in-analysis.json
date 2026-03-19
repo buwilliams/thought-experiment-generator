@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-intentionality-the-aboutness-of-mental-states-a",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 10,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "How can 'the only compression that successfully predicts and regulates behavior' be made precise enough to individuate content non-circularly? The conjecture depends on a uniqueness claim about privileged interpretation, but it is unresolved how to formalize compression, prediction, regulation, and model equivalence so that multiple rival descriptions do not count as equally good. Without this, the view risks collapsing into observer-relative pragmatism or indeterminacy of content.",
+      "score": 0.96
+    },
+    {
+      "text": "What exactly separates genuine intentionality from merely useful control in simple artifacts and biological mechanisms? The conjecture says thermostats have 'thin' aboutness and humans have richer forms, but it leaves open where the threshold lies, whether intentionality comes in degrees, and which structural features—history, counterfactual robustness, self-modeling, social embedding, learning, or autonomy—are necessary versus merely amplifying. This is a central open problem because the theory's explanatory power depends on principled boundary conditions.",
+      "score": 0.94
+    },
+    {
+      "text": "Can equilibrium lock-in account for misrepresentation, novel reference, and offline thought where successful current regulation is absent or even systematically wrong? If content is fixed by stable predictive-control success, it is unclear how to explain hallucination, false belief, fictional entities, abstract thought, or reference to absent/future/impossible objects. The unresolved tension is whether historical lock-in and counterfactual role are sufficient, or whether the theory needs an additional account of decoupled representation.",
+      "score": 0.98
+    }
+  ]
+}

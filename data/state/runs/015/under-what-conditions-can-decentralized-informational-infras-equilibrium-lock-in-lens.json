@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-can-decentralized-informational-infras",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the minimal structural conditions under which a decentralized informational infrastructure can endogenously convert enforcement from a non-excludable public good into locally excludable private returns? In particular, can we characterize a threshold or phase transition over identity persistence, observability, signal integrity, repetition, and sanction excludability that separates stable substitution from collapse back into underprovided enforcement?",
+      "score": 0.95
+    },
+    {
+      "text": "Is the conjectured 'hard limit' truly fundamental, or can decentralized systems create second-order mechanisms that subsidize monitoring, truth-maintenance, and sanctioning without central authority? This raises the open question of whether token incentives, bonding, insurance, staking, mutual auditing, or protocol-level fee routing can reliably internalize these costs, or whether they merely relocate the same public-goods problem to another layer.",
+      "score": 0.93
+    },
+    {
+      "text": "How robust is the conjecture under adversarial identity dynamics and computational irreducibility? If agents can cheaply discard, split, or algorithmically manipulate identities and signals, can any reputation-linked informational order remain stable without recentralizing verification, and are there domains where no tractable local rule can distinguish genuine cooperation from strategic signal gaming?",
+      "score": 0.89
+    }
+  ]
+}

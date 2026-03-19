@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "historical-genesis",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'cumulative epistemic error-correction' be operationalized and measured in AI systems distinctly from ordinary capability gains or evaluator overfitting? The conjecture hinges on a real difference between local behavioral improvement and knowledge growth, but it leaves open what observable criteria, benchmarks, or formal signatures would distinguish systems that genuinely accumulate refutations, explanatory repairs, and reusable criticism from systems that merely optimize against current evaluators.",
+      "score": 0.97
+    },
+    {
+      "text": "What concrete architecture can preserve and reuse criticism without collapsing it back into scalar optimization? The conjecture proposes adversarial criticism, explanatory memory, re-entry, and evaluator corrigibility loops, but it is unresolved how these should be represented, updated, queried, and integrated into training/inference so that rejected explanations, failure genealogies, and problem decompositions remain contestable and useful over time rather than becoming static artifacts or another reward proxy.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the claimed lineage explanation actually the main cause of current systems' epistemic limits, or can optimization-based feedback be extended to support knowledge growth after all? The conjecture attributes failure to an inherited control/capability-shaping ancestry, but an open question is whether this is a deep structural incompatibility or a contingent implementation choice. Exploring this would test whether criticism-centered institutions must replace prevailing feedback paradigms, or whether hybrid designs can embed genuine refutation and public error records within existing optimization frameworks.",
+      "score": 0.91
+    }
+  ]
+}

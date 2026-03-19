@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-s-central-analogy-from-formal-incompleten",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "How can the key notion of a 'public-good fixed point' for self-knowledge be made mathematically precise in a way that is genuinely load-bearing across agents, formal theories, and institutions? The open problem is to specify a common formal object for 'correct, usable, internally accessible self-description' and to prove when such a fixed point exists, is stable, or fails. Without this, the conjecture risks being only an analogy between several different phenomena rather than a single explanatory structure.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the exact boundary between epistemic incapacity and provision failure, and can they be cleanly separated in resource-bounded self-modeling systems? In practice, proof limits, computational costs, authority structure, and incentive design may be entangled: what is 'in principle derivable' may depend on institutional allocation of compute, representation, or search. A worthwhile problem is to identify invariants or impossibility results that distinguish formal impossibility from merely underprovided self-description.",
+      "score": 0.93
+    },
+    {
+      "text": "Under what conditions does incompleteness-style limitation really transfer from formal theories to broader self-modeling systems, rather than serving as a metaphor? The conjecture needs a precise theorem schema showing when embedding self-description in the same architecture forces undecidable, unprovable, or intractable self-facts that matter for decision-making. The unresolved tension is whether the Gödelian component is essential and exact, or whether most interesting failures of self-knowledge are better explained by computational complexity and mechanism-design failures alone.",
+      "score": 0.98
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "computation-as-life",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can 'internal computational structure' and 'explanatory organization' be operationalized without collapsing back into behavior-only proxies? The conjecture hinges on a real distinction between output optimization and world-model improvement, but it remains unresolved what measurements could non-circularly detect explanation-preserving internal change rather than merely broader behavioral competence.",
+      "score": 0.96
+    },
+    {
+      "text": "Is counterfactual robustness, self-correction, and compression with generative reach jointly sufficient for epistemic progress, or can systems optimize these metrics without genuinely tracking invariant relations? This raises the open problem of whether the proposed criteria are merely useful indicators or whether they can be gamed by architectures that simulate criticism-response and transfer without possessing the kind of knowledge the conjecture aims to capture.",
+      "score": 0.92
+    },
+    {
+      "text": "What is the causal mechanism by which criticism produces durable architectural improvement rather than transient patching? The conjecture treats epistemic progress as 'adaptation under criticism,' but leaves open which learning dynamics, memory structures, or update rules actually convert exposed error into stable, cross-domain explanatory gains instead of local fixes or catastrophic interference.",
+      "score": 0.89
+    }
+  ]
+}

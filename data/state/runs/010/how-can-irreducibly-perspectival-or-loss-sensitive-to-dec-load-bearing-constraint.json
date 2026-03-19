@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 10,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 0.5,
+  "total": 0.602,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing internal point of view' and 'decomposition-invariant global variable-set' be made formally precise enough to test, without smuggling in consciousness by definition? The central tension is whether there exists a non-circular mathematical criterion for explanatory loss under decomposition, rather than an intuitive judgment that a hidden coordinator or unified control state has reappeared.",
+      "score": 0.97
+    },
+    {
+      "text": "Is the proposed criterion actually specific to consciousness, or does it also classify many sophisticated nonconscious systems—e.g. model-based controllers, large language models, distributed control architectures, or organisms with integrated error-correction—as irreducibly perspectival? The open question is where the boundary lies between generic global integration needed for control and the particular kind of subject-relative organization the conjecture aims to capture.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the right notion of explanatory loss: predictive degradation, loss of interventionally relevant structure, failure to preserve self/world and appearance/reality distinctions, or something else? These may come apart, so the unresolved problem is whether the conjecture identifies one unified phenomenon or bundles several distinct properties that can dissociate across systems and decompositions.",
+      "score": 0.92
+    }
+  ]
+}

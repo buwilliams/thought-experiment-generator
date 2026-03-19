@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "computation-as-life",
+  "run": 10,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "What precise computational properties are necessary and sufficient for 'free will' rather than merely sophisticated control? The conjecture lists capacities like counterfactual modeling, self-modeling, memory integration, and adaptive goal maintenance, but it leaves unresolved how to define a non-arbitrary threshold, metric, or structure that distinguishes genuine agency from complex but non-agentic computation.",
+      "score": 0.96
+    },
+    {
+      "text": "How can internally generated representations be shown to be genuinely causally efficacious at the agent level without collapsing into either reductionism ('only microphysics really causes') or empty relabeling ('the computation just redescribes the physics')? The open problem is to articulate a rigorous cross-level account of causation that explains when and why deliberative computations count as real causes.",
+      "score": 0.94
+    },
+    {
+      "text": "If free will comes in degrees and responsibility depends on responsiveness to reasons, how should moral and legal responsibility be calibrated across humans, impaired persons, children, animals, and AI systems? The conjecture suggests a continuum but does not resolve how to operationalize responsibility, excuse, and accountability in borderline or mixed-capacity cases.",
+      "score": 0.92
+    }
+  ]
+}

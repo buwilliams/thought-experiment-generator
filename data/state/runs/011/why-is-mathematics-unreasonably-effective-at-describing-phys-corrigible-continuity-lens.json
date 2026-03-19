@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys",
+  "conjecture_id": "corrigible-continuity-lens",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.7,
+  "total": 0.76,
+  "candidate_problems": [
+    {
+      "text": "The conjecture relies on an analogy between mathematics and physics as 'institutions of error correction,' but it leaves unresolved whether this is merely a sociological similarity or a genuine explanatory mechanism. What exactly is the shared constraint that both domains optimize, and can it be specified non-circularly enough to predict when mathematics should or should not fit physics?",
+      "score": 0.94
+    },
+    {
+      "text": "The notion of 'invariance' is doing most of the explanatory work, but it remains underspecified. Which invariants are essential in mathematics and physics respectively, and by what criterion do we distinguish deep, load-bearing invariants from superficial regularities? Without this, the conjecture risks explaining success retrospectively rather than generating new constraints.",
+      "score": 0.97
+    },
+    {
+      "text": "The conjecture explains successful alignments by common selection for structure-preservation, but it does not yet explain the failures, mismatches, and massive surplus of mathematically legitimate structures with no known physical instantiation. Why do only some mathematically stable structures map onto reality, and what additional principle selects the physically realized subset?",
+      "score": 0.99
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 16,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "What is the precise mechanism linking low-entropy boundary conditions to uniquely oriented knowledge-bearing irreversibility, rather than merely to entropy increase? The conjecture claims that records, memories, prediction, control, and knowledge growth all become locked to one temporal orientation, but it remains open whether this follows generically from statistical mechanics alone or requires additional assumptions about computation, decoherence, agency, and the physical criteria for a system to count as a stable record.",
+      "score": 0.96
+    },
+    {
+      "text": "Can the proposed 'equilibrium lock-in' be formulated rigorously enough to distinguish structural impossibility for local agents from mere extreme practical difficulty? The conjecture uses Nash-like and lock-in language, but it is unresolved what the exact state-space, payoff, and admissible-action structure are, and whether one can prove no subsystem can reverse the arrow by acting alone except under exponentially fine-tuned environmental control.",
+      "score": 0.93
+    },
+    {
+      "text": "How much of the temporal arrow is explained by past boundary conditions alone, and how much requires a special account of why the universe had such a low-entropy beginning in the first place? The conjecture shifts emphasis from asymmetric laws to emergent lock-in, but leaves open whether it genuinely explains time’s direction or only redescribes the arrow conditional on an unexplained cosmological asymmetry, making the status of the Past Hypothesis and possible alternative boundary-condition theories a central unresolved tension.",
+      "score": 0.98
+    }
+  ]
+}

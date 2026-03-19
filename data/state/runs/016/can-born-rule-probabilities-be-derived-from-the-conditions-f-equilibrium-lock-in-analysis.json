@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 16,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 1.0,
+  "total": 0.964,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made into a precise theorem that derives the Born measure uniquely from explicit dynamical and structural conditions on durable records? The central open problem is to formalize 'record-formation equilibrium,' 'durable/reproducible record,' 'branch refinement invariance,' and 'equilibrium consistency' in Hilbert-space terms, then prove that squared amplitude is the only weighting satisfying them. Without this, the proposal risks redescribing the Born rule rather than explaining it.",
+      "score": 0.98
+    },
+    {
+      "text": "Is there a genuine non-circular link between decoherence-selected record stability and probabilistic weight, rather than an implicit smuggling-in of the 2-norm through standard quantum dynamics? The unresolved tension is whether the argument explains why stable records should be counted by squared amplitude, or merely notes that unitary evolution preserves the Born measure and then labels that preservation 'record persistence.' A key new problem is to identify whether alternative norms, measures, or coarse-grainings can support comparable notions of redundancy and persistence.",
+      "score": 0.95
+    },
+    {
+      "text": "How observer-independent is the notion of a 'record-supporting branch,' especially under different factorizations, pointer-basis choices, and coarse-grainings of system/apparatus/environment? The conjecture depends on branches being physically meaningful insofar as they host stable records, but branch structure in Everettian settings is approximate and decomposition-sensitive. The open question is whether the proposed equilibrium measure is robust across admissible decompositions, or whether its uniqueness depends on contingent modeling choices about what counts as a record.",
+      "score": 0.92
+    }
+  ]
+}

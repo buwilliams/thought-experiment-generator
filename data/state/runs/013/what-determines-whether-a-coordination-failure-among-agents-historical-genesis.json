@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-a-coordination-failure-among-agents",
+  "conjecture_id": "historical-genesis",
+  "run": 13,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized so we can distinguish genuine historical lock-in from a coordination equilibrium that is still solving a current problem? The core unresolved tension is evidential: persistence under changed conditions may indicate inherited inertia, but it may also reflect hidden present-day functions, selection effects, or unobserved risks. A useful new problem is to develop observable criteria, diagnostics, or comparative tests that identify when an arrangement is a remnant of an earlier problem rather than an adaptive response to current constraints.",
+      "score": 0.96
+    },
+    {
+      "text": "What mechanism lets agents acquire a shared meta-representation that the coordination mechanism itself is the obstacle, and why does that sometimes fail indefinitely? The conjecture says resolution occurs when deviations become legible, imitable, and low-risk, but leaves open how legibility is produced, how common knowledge forms, and what structural bottlenecks prevent this even when many privately suspect the status quo is obsolete. This points to a deeper problem about the dynamics of second-order coordination: coordinating on how to reinterpret the existing coordination device.",
+      "score": 0.94
+    },
+    {
+      "text": "Under what boundary conditions does spontaneous resolution never occur without deliberate intervention? The conjecture emphasizes erosion of the old function and incremental experimentation, but an open question is whether some inherited mechanisms remain stable even when their original purpose has vanished because embedding in law, software, identity, or status blocks local experimentation entirely. This suggests a new problem of mapping phase transitions between self-correcting lock-in and permanently frozen lock-in, including what kinds of exogenous shocks or designed interventions are required to break each type.",
+      "score": 0.92
+    }
+  ]
+}

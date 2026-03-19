@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 15,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "How can this conjecture be distinguished empirically from rival generators of power laws—such as pure preferential attachment, optimization under heterogeneity, multiplicative growth, criticality, or measurement artifacts? The central unresolved issue is whether 'coordination under sparse enforcement' adds unique explanatory and predictive content, or merely redescribes known mechanisms in social language. Worth pursuing because without discriminating tests, the conjecture risks being too flexible to fail.",
+      "score": 0.97
+    },
+    {
+      "text": "What precise micro-to-macro mechanism links asymmetric maintenance burdens, free-riding, and weak enforcement to a true power-law degree or load distribution rather than to other heavy-tailed outcomes like lognormal, stretched exponential, winner-take-all concentration, or core-periphery structure? The open question is which minimal generative rules are sufficient, and under what parameter ranges the conjecture actually produces scale-free structure. Worth pursuing because the conjecture currently specifies an intuition and comparative statics, but not a sharply defined generative model.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the dynamic boundary conditions under which institutions that subsidize redundancy, mandate interoperability, cap rents, or strengthen enforcement actually flatten heavy tails rather than simply relocating coordination burdens to hidden layers? The unresolved tension is whether governance can genuinely reduce scale-free concentration, or whether complex systems recreate hubs elsewhere due to computational and coordination constraints. Worth pursuing because it tests the conjecture's policy implications and probes whether hub concentration is contingent or structurally unavoidable.",
+      "score": 0.91
+    }
+  ]
+}

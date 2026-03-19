@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 15,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions are necessary and sufficient for interaction-level feedback to generate a genuine power law rather than only heavy-tailed lookalikes such as lognormal, stretched-exponential, or truncated power-law distributions? The conjecture groups together preferential attachment, multiplicative growth, threshold effects, imitation, and novelty inflow, but it remains unresolved which combinations actually produce scale-free behavior and which merely approximate it over limited ranges.",
+      "score": 0.97
+    },
+    {
+      "text": "How can one empirically distinguish outcomes caused primarily by relational reinforcement and path dependence from outcomes caused by intrinsic fitness or fixed component heterogeneity, especially when both mechanisms can produce similar skewed distributions? This is a central unresolved tension because the conjecture claims explanatory priority for interaction structure, but many real systems likely mix network feedback with agent-level differences in ways that are hard to identify from observational data alone.",
+      "score": 0.95
+    },
+    {
+      "text": "What determines when recursive network amplification remains scale-free versus when it self-limits, reorganizes, or collapses through congestion, saturation, regulation, modular fragmentation, or competitive turnover? The conjecture emphasizes rich-get-richer dynamics, but an open question is how balancing feedbacks interact with reinforcing feedbacks to set cutoffs, regime shifts, and the long-run stability of the resulting distribution.",
+      "score": 0.92
+    }
+  ]
+}

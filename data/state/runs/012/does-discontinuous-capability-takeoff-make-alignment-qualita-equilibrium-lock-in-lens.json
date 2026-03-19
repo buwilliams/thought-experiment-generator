@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized and empirically distinguished from the rival 'technical difficulty' explanation? In particular, what observable indicators would show that alignment is becoming harder mainly because safety is a non-excludable, underprovided public good under compressed timelines, rather than because frontier systems are intrinsically harder to align?",
+      "score": 0.95
+    },
+    {
+      "text": "Under what concrete incentive and governance conditions does takeoff shape become endogenous to institutions rather than primarily to underlying capability scaling? The open question is whether mechanisms like eval gates, liability, compute governance, incident sharing, and deployment constraints can actually shift the system out of a no-adequate-provision equilibrium, or whether competitive dynamics simply reappear in new forms.",
+      "score": 0.93
+    },
+    {
+      "text": "What institutional designs can make alignment outputs sufficiently excludable, mandatory, or reciprocally enforced without worsening secrecy, regulatory capture, or concentration of power? This is unresolved because the proposed cure—turning safety into a provisioned good—may itself create new failure modes that preserve underprovision or accelerate races among a smaller set of actors.",
+      "score": 0.91
+    }
+  ]
+}

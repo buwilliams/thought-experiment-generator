@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "How can 'equilibrium lock-in' between stabilized representations be made precise enough to distinguish genuine impossibility of internal escape from mere historical contingency or researcher limitation? The conjecture depends on a strong claim that no single within-domain inferential move could readily introduce the new structure, but it leaves open what formal, historical, or cognitive criteria would show that a domain was actually locked-in rather than just not yet explored.",
+      "score": 0.95
+    },
+    {
+      "text": "What operational test separates genuinely knowledge-creating analogies from redescriptions that only appear novel? The conjecture proposes 'downstream irreversibility', imported criticism, and load-bearing structural transfer, but it remains unclear how to measure these in practice across cases, especially when analogies are partial, evolve over time, or succeed by generating heuristics before yielding durable explanations.",
+      "score": 0.97
+    },
+    {
+      "text": "By what mechanism does cross-domain alignment generate new criticism and constraints without also importing systematic distortions from the source domain? The conjecture treats structural mapping as productive when it reorganizes the target under constraint, but an open question is how target-domain criticism filters source-specific artifacts, and what determines when analogy expands the search space versus misframes the ontology of the target.",
+      "score": 0.93
+    }
+  ]
+}

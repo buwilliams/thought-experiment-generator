@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-dominant-power-structures-self-perpetuate-without-exp",
+  "conjecture_id": "feedback-topology-lens",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized into a falsifiable model that distinguishes self-perpetuating power structures driven by closed corrective feedback loops from outcomes explainable by competence, preference aggregation, scale efficiencies, or benign path dependence?",
+      "score": 0.95
+    },
+    {
+      "text": "What specific structural conditions cause criticism from harmed groups to become system-changing rather than being absorbed, neutralized, or converted into legitimacy for the existing hierarchy, and where are the highest-leverage intervention points in those feedback loops?",
+      "score": 0.93
+    },
+    {
+      "text": "What are the tradeoffs and failure modes of opening error-correction channels—such as independent auditing, contestability, whistleblowing, and broader access to capital and credentials—given that too much destabilization can also degrade coordination, trust, and institutional capacity?",
+      "score": 0.89
+    }
+  ]
+}

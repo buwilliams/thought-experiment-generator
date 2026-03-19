@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-dominant-power-structures-self-perpetuate-without-exp",
+  "conjecture_id": "structure-selection-convergence",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture distinguish structural reproduction from alternative explanations such as explicit collusion, genuine merit differences, path dependence, or preference aggregation? The key open problem is identifying observable signatures or causal tests that uniquely indicate 'filters rather than commands' as the dominant persistence mechanism.",
+      "score": 0.96
+    },
+    {
+      "text": "What determines when a self-reinforcing selection system becomes stable, and what are its actual leverage points? The conjecture names stocks, flows, and feedback loops, but leaves unresolved which feedbacks are necessary, which are contingent, and how filter redesign propagates through the system versus being absorbed or neutralized by adaptation.",
+      "score": 0.93
+    },
+    {
+      "text": "Under what conditions do shared models of 'normal' success track real functional competence versus merely encode incumbent advantage? This is an unresolved tension because institutions need some selection criteria, yet the conjecture implies many neutral-seeming criteria are biased filters; the open question is how to separate epistemically useful selection from hierarchy-preserving selection without collapsing institutional performance.",
+      "score": 0.91
+    }
+  ]
+}

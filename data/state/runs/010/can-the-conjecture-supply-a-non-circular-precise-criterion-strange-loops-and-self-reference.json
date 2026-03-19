@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-supply-a-non-circular-precise-criterion",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal architecture required for 'error-sensitive re-entry' to generate genuine correctness conditions rather than merely more elaborate control? The conjecture draws a sharp boundary between representation and coupling, but it leaves unresolved where that boundary lies in intermediate cases: predictive-processing systems, adaptive controllers, learned world models, and metacognitive monitors may all implement feedback on internal states without clearly 'treating them as about' anything. A key open problem is to specify necessary and sufficient structural conditions that distinguish recursive appraisal from ordinary multi-level regulation without collapsing the view into either over-inclusiveness or anthropocentrism.",
+      "score": 0.96
+    },
+    {
+      "text": "How can the conjecture avoid circularity in individuating mismatch, target domain, and 'the very state' being assessed? The proposal says correctness arises when a system can detect discrepancies between a state's implications and later constraints, but identifying what counts as the same state, what outcome is relevant, and what the state is about may already presuppose representational content. The unresolved tension is whether the account can provide a non-question-begging criterion for aboutness and error from system organization alone, rather than smuggling in semantic interpretation at the level of model description.",
+      "score": 0.93
+    },
+    {
+      "text": "Is self-appraisal actually necessary for representation, or only for a richer form of explicit, revisable representation? The conjecture excludes simple controllers and perhaps many animal or subpersonal states from counting as models unless they are recursively available for assessment. But many theories treat representation as possible in systems that guide action and can misfire without possessing higher-order access to their own states. The open question is whether the strange-loop criterion captures all genuine modeling, or instead identifies a narrower class of metarepresentational systems while wrongly denying representation to simpler but still contentful mechanisms.",
+      "score": 0.98
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-counterfactual-reach-be-made-precise-without-colla",
+  "conjecture_id": "extreme-cases",
+  "run": 11,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "How can 'preserving core explanatory structure' be made non-circular and operational? The conjecture relies on excluding ad hoc reparameterization, but without a principled criterion for what counts as the same explanation versus a patched variant, counterfactual reach risks collapsing into an intuitive label rather than a measurable property. A key open problem is to define identity conditions for explanations/models under intervention that are load-bearing enough to distinguish genuine structural reuse from disguised local repair.",
+      "score": 0.97
+    },
+    {
+      "text": "What intervention space and distance notion should define the 'radius of valid redeployment' when the conjecture explicitly allows changes in generative structure, not just data distribution? The central unresolved tension is that reach depends on how interventions are typed, bounded, and metrized; different choices could radically change which models count as high-reach. A worthwhile problem is to construct a principled intervention geometry that captures structural perturbations without making the notion either trivial (too narrow) or equivalent to universal knowledge (too broad).",
+      "score": 0.95
+    },
+    {
+      "text": "How can counterfactual reach be empirically separated from neighboring properties like causal correctness, invariance, OOD robustness, and mechanistic faithfulness? The conjecture claims reach is distinct, but it remains open whether this is a genuinely new property or a composite of existing ones under another description. The problem is to produce discriminating examples, formal separations, or impossibility results showing when two models match on prediction/causal formalism/invariance yet differ in reach for principled reasons.",
+      "score": 0.92
+    }
+  ]
+}

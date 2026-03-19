@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+  "conjecture_id": "mathematical-formalism",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "How should the required control burden R(C) and the control thresholds be modeled so that the margin M=A+G-R(C) tracks real alignment difficulty rather than merely redescribing it? In particular: is R primarily smooth, convex, step-like, path-dependent, or multi-dimensional; do qualitatively new capabilities create irreversible threshold crossings; and can these thresholds be operationalized or empirically estimated before deployment?",
+      "score": 0.96
+    },
+    {
+      "text": "Are A (alignment/control improvement) and G (governance/response adaptation) meaningfully separable from C (capability), or are they endogenously coupled so that capability growth simultaneously accelerates and degrades correction? The conjecture treats the key issue as a rate ratio, but an open question is whether advanced systems increase alignment research, monitoring, and governance capacity faster than they increase the burden R(C), or instead undermine oversight through opacity, strategic behavior, and deployment pressure.",
+      "score": 0.93
+    },
+    {
+      "text": "What is the correct dynamical model of feedback and delay in the socio-technical system: when do positive capability feedback loops dominate bottlenecks strongly enough that crossing M=0 becomes likely before corrective action can propagate? This includes unresolved questions about time delays, observability, hidden state, institutional lag, competitive incentives, and whether the relevant danger comes from a single fast takeoff interval, repeated near-threshold excursions, or gradual erosion of margin under uncertainty.",
+      "score": 0.91
+    }
+  ]
+}

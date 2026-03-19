@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 15,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.7,
+  "total": 0.7689999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-metaphorical by defining a rigorous chemical analogue of 'norm enforcement', 'defection', and 'institution-like structure'? The key unresolved tension is whether these terms correspond to measurable dynamical quantities—such as basin stability, flux channeling, kinetic accessibility, compartment-mediated retention, or waste-removal feedback—or whether the analogy hides ordinary autocatalytic network behavior under social language. A worthwhile problem is to formulate criteria that distinguish a genuinely enforcement-based self-maintaining regime from generic far-from-equilibrium chemistry.",
+      "score": 0.96
+    },
+    {
+      "text": "Can distributed, constraint-maintaining chemical regimes exhibit heredity, variation, and selection strongly enough before sequence templates exist? The conjecture depends on process-level reproduction preceding molecule-level replication, but it remains open what exactly is inherited across generations of compartments, surfaces, or cycles, how that inheritance avoids rapid drift, and whether selection can act on such regimes with sufficient fidelity to accumulate adaptations. This is a central unresolved question because if process heredity is too weak, the proposed transition cannot support open-ended evolution.",
+      "score": 0.99
+    },
+    {
+      "text": "Under what prebiotic boundary conditions do enforcement-like chemical organizations arise spontaneously rather than being externally fine-tuned? The conjecture posits compartments, mineral surfaces, wet-dry cycles, redox gradients, and catalytic subnetworks as prior enforcers, but this raises a regress-like tension: what stabilizes the stabilizers, and how common are such coupled constraint systems in realistic geochemical settings? A strong research problem is to identify minimal generative rules and experimentally plausible environments in which side reactions are structurally suppressed and recursive throughput becomes the default outcome.",
+      "score": 0.97
+    }
+  ]
+}

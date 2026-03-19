@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What is the non-arbitrary threshold at which a multilayer, self-correcting system genuinely has meaning rather than merely sophisticated classification or control? The conjecture says meaning 'begins' when syntax, statistics, memory, feedback, and cross-context constraint become tightly coupled, but it leaves open a principled criterion for this transition. Without such a criterion, the view risks vagueness about borderline cases such as current language models, animals, thermostats, or distributed institutions.",
+      "score": 0.96
+    },
+    {
+      "text": "How can emergent semantic roles secure genuine aboutness or world-directed reference rather than only internally coherent functional organization? The conjecture appeals to prediction, error-correction, social correction, and success conditions, but it remains unresolved whether these system-level dynamics are sufficient to explain why an internal state is about a particular external feature instead of merely playing a useful role within the system. This is the central tension between internal constraint-based semantics and external reference.",
+      "score": 0.94
+    },
+    {
+      "text": "What formal architecture or dynamical model can unify syntax, statistics, pattern recognition, memory, and recursive feedback into a testable theory of meaning? The conjecture is explanatorily attractive at a systems level, but it does not yet specify the relevant variables, feedback loops, invariants, or failure modes. A precise model is needed to distinguish this proposal from neighboring views, generate predictions, and identify which organizational features are necessary versus incidental for semantic emergence.",
+      "score": 0.91
+    }
+  ]
+}

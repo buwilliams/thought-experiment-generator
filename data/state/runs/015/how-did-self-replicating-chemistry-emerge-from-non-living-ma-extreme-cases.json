@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+  "conjecture_id": "extreme-cases",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'repeatability of constraint' be defined and measured in a way that cleanly distinguishes genuinely self-maintaining, heritable chemical organizations from ordinary dissipative structures? The conjecture hinges on a pre-template notion of replication, but it remains unresolved what objective criterion marks the transition from transient recurrence to Darwinian-capable heredity.",
+      "score": 0.96
+    },
+    {
+      "text": "Under what physical and chemical conditions can distributed, dynamical niches reliably survive division, disruption, or spatial reformation strongly enough to support cumulative evolution before digital templates exist? The open tension is whether analog, low-fidelity ecological memory can actually cross the error threshold needed for open-ended improvement, or whether templated polymers are required much earlier.",
+      "score": 0.94
+    },
+    {
+      "text": "What are the minimal generative mechanisms by which far-from-equilibrium flux, confinement, surfaces, and catalytic feedback produce systems that reconstruct their own niche more effectively than competitors? This remains open because the conjecture proposes a broad systems-level origin of replication, but does not yet specify which concrete network architectures are robust, generic, and experimentally reachable rather than rare special cases.",
+      "score": 0.91
+    }
+  ]
+}

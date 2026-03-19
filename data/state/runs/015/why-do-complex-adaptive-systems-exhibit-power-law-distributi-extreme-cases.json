@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "extreme-cases",
+  "run": 15,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 0.8,
+  "total": 0.8119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient structural conditions under which local adaptive rules actually eliminate characteristic scale and generate a true asymptotic power law, rather than only approximate heavy tails such as lognormal, stretched-exponential, truncated power-law, or finite-size mixtures? The conjecture gestures at 'adaptive logic surviving across scales,' but it remains unresolved how to formalize that condition and distinguish it from nearby mechanisms that look scale-free over limited ranges.",
+      "score": 0.97
+    },
+    {
+      "text": "Can the proposed mechanism be made into a renormalization-like or coarse-graining principle: if one aggregates agents upward or refines them downward, when does the effective adaptive rule remain in the same universality class? This is the central open question behind the claim that no privileged middle scale exists, and it would clarify whether scale-freeness is truly a structural fixed point of adaptation or only a contingent artifact of particular model resolutions.",
+      "score": 0.94
+    },
+    {
+      "text": "How can one empirically and computationally discriminate the conjecture's explanation from rival generative accounts—such as criticality, preferential attachment without adaptation, self-organized criticality, optimization under constraints, or latent heterogeneity—given computational irreducibility and historical contingency at the micro level? The unresolved tension is whether power laws are a distinctive signature of the proposed reinforcement-with-balancing adaptive boundary, or whether many incompatible mechanisms produce indistinguishable coarse-grained traces.",
+      "score": 0.92
+    }
+  ]
+}

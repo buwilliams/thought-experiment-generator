@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "computation-as-life",
+  "run": 15,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 1.0,
+  "total": 0.952,
+  "candidate_problems": [
+    {
+      "text": "What precise minimal generative conditions make the conjecture true rather than merely suggestive? In particular, are local selection, replication, and resource-constrained information flow jointly sufficient to produce robust power laws across substrates, or are additional ingredients such as preferential attachment, modular reuse, criticality, or specific network topologies necessary?",
+      "score": 0.96
+    },
+    {
+      "text": "How can the conjecture be made falsifiable against rival explanations of power laws? Many non-adaptive or non-computational mechanisms also generate heavy-tailed distributions, so the open problem is to identify distinctive empirical signatures of 'open-ended computation under selection' that separate it from null models like random multiplicative growth, self-organized criticality, optimization, or aggregation artifacts.",
+      "score": 0.98
+    },
+    {
+      "text": "What exactly is the tradeoff between compressibility and open-ended adaptability, and does it mathematically explain scale-free hierarchy? The conjecture relies on patterns being simple enough to replicate yet rich enough to keep adapting, but it is unresolved how to formalize this balance, how selection acts on it across levels, and whether it predicts specific exponents, phase transitions, or breakdown conditions for scale-free organization.",
+      "score": 0.94
+    }
+  ]
+}

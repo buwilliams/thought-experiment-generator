@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What exactly is the mechanism that turns a 'public good' of shared latent structure into genuine semantics rather than merely more efficient compression or coordination? The conjecture risks collapsing meaning into any reusable internal abstraction, so the unresolved tension is to specify necessary and sufficient conditions that distinguish semantic content from generic amortized predictive structure.",
+      "score": 0.95
+    },
+    {
+      "text": "Can the public-goods framing be made precise enough to yield testable phase-transition criteria for when a learner or community exits the 'no-provision equilibrium' and begins building concepts? The open problem is to identify measurable variables—task structure, architectural bottlenecks, incentives, communication bandwidth, error-correction loops—that predict concept formation rather than post hoc redescribe it.",
+      "score": 0.93
+    },
+    {
+      "text": "How far does the analogy between individual cognition and linguistic communities really go? The conjecture treats both as provisioning shared inferential infrastructure, but it remains unresolved whether intra-agent latent variables and inter-agent public meanings are the same kind of thing or only superficially similar coordination phenomena, with different ontologies and dynamics.",
+      "score": 0.88
+    }
+  ]
+}

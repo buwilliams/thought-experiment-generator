@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-s-central-analogy-from-formal-incompleten",
+  "conjecture_id": "thought-experiments",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.6,
+  "total": 0.6990000000000001,
+  "candidate_problems": [
+    {
+      "text": "What exact formal conditions make the boundary between permissible local self-knowledge and impossible global self-certification? The conjecture relies on distinctions among specific derivability facts, global reliability, and total extension, but it leaves open which combinations of expressiveness, soundness, reflection principles, and provability predicates are actually necessary and sufficient for the limitation to arise. Making that boundary precise would test whether the conjecture is tightly constrained or merely schematic.",
+      "score": 0.96
+    },
+    {
+      "text": "How should 'soundly updatable knowledge about its own inferential behavior' be formalized in a nontrivial way? The conjecture treats updateability as load-bearing, but does not specify whether this means closure under reflection, belief revision over self-referential claims, modal provability logic, or some dynamic/iterated learning process. A precise account could reveal whether the incompleteness analogue survives under realistic forms of self-correction or collapses into a static theorem about consistency statements.",
+      "score": 0.9
+    },
+    {
+      "text": "Is the appeal to stronger or external standpoints genuinely explanatory, or does it merely defer the problem into an infinite hierarchy without clarifying what counts as knowledge at each level? The conjecture says fuller self-knowledge requires a metalanguage or stronger theory, but each ascent reproduces the limitation. The open question is whether there is a principled systems-level account of these hierarchies—what is gained, what remains inaccessible, and whether any stable notion of progressively improving self-knowledge emerges rather than an endless regress.",
+      "score": 0.87
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-s-central-analogy-from-formal-incompleten",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.7,
+  "total": 0.76,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made into a non-question-begging formal theorem by specifying a precise class of systems, semantics, and 'correctness conditions' under which an incompleteness-style limitation actually follows? The main unresolved tension is whether the proposed bridge from Gödelian provability to self-representational knowledge is genuinely load-bearing or only analogical once 'interpretation,' 'aboutness,' and 'knowledge' are formalized.",
+      "score": 0.97
+    },
+    {
+      "text": "What exactly distinguishes genuine self-knowledge from mere self-modeling or self-referential control in systems with internal fixed points? The open problem is to identify necessary and sufficient conditions for 'interpret those descriptions as about itself' and for 'causal/inferential efficacy' without smuggling in an external observer's semantics. Otherwise the conjecture risks collapsing either into triviality (many control systems count) or into an untestable metaphysical notion.",
+      "score": 0.94
+    },
+    {
+      "text": "How strong and general is the claimed limit on 'total transparent self-knowledge'? An important unresolved question is whether the obstruction is universal for all sufficiently expressive self-modeling systems, or whether architectures can evade it by restricting the property class P, using probabilistic or hierarchical self-models, or relaxing stability/certifiability. This matters because the conjecture's explanatory power depends on whether the limitation is a deep structural necessity or only a feature of particular formal setups.",
+      "score": 0.91
+    }
+  ]
+}

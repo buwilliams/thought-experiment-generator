@@ -1,0 +1,36 @@
+# Generated: what-makes-some-social-norms-stable-across-centuries-while-o × load-bearing-constraint
+
+## Conjecture
+
+Conjecture: Social norms persist across centuries when their details are load-bearing within a wider social system — that is, when changing the norm forces costly compensations across institutions, incentives, identities, and coordination mechanisms. Norms collapse rapidly when their apparent content is mostly interchangeable: they are upheld by habit or prestige, but the surrounding system can absorb their removal with little redesign.
+
+This perspective shifts the question from “How strongly do people believe the norm?” to “What else must change if this norm changes?” A stable norm is not just popular; it is structurally entangled. It may regulate mating, inheritance, status ranking, trust, punishment, labor allocation, or sacred legitimacy all at once. In such cases, even if people dislike the norm, removing it creates many downstream problems. The norm survives because it is carrying explanatory weight in multiple feedback loops.
+
+For example, a norm about family structure may seem moral on the surface, but if it also organizes property transfer, childcare, elder support, political alliances, and gendered labor expectations, then each detail is constrained by the others. Alter one piece and pressures appear everywhere else. Stability here comes from integration, not mere ideological commitment.
+
+By contrast, a rapidly collapsing norm often turns out to be a narrative shell: it was presented as essential, but its specific content was not doing much real coordinating work. Once challenged, substitutes appear quickly. If a dress code, etiquette rule, or taboo can be dropped without major institutional repair, then its details were not load-bearing. Its stability was contingent on deference, not necessity. Pressure reveals this by showing that the system re-equilibrates easily.
+
+The key discriminator is counterfactual dependence. Ask: if this norm were changed, what compensating changes would be required elsewhere? If the answer is “many, and they are expensive or politically difficult,” the norm is likely to be durable. If the answer is “almost none; adjacent practices can simply relabel themselves,” the norm is brittle.
+
+Extreme cases clarify the structure. Imagine a norm so load-bearing that abolishing it would require rebuilding law, kinship, education, religion, and economic distribution simultaneously. Such a norm can survive centuries even under persistent criticism. Now imagine a norm whose removal only changes signaling style while leaving underlying cooperation intact. That norm can vanish in a decade.
+
+So the conjecture is: the long-run stability of a social norm is best predicted not by sincerity of belief or age alone, but by how many other social regularities depend on its specific form. Centuries-long norms are densely coupled solutions to recurrent coordination problems; rapidly collapsing norms are often thin symbolic overlays whose details were less necessary than advertised. Pressure does not merely test commitment — it reveals whether the norm was actually holding up the system.
+
+## Questions
+
+1. 1. If the claim that a norm is structurally entangled with institutions, incentives, identities, and coordination mechanisms were removed, would the conjecture still explain why some norms survive centuries rather than merely restating that they do? — **no**
+2. 2. If costly compensations elsewhere in the social system were not required when a norm changed, would the conjecture lose its explanation for long-run stability rather than just become weaker? — **yes**
+3. 3. Is the distinction between a norm's specific details being load-bearing versus interchangeable necessary for the conjecture to explain why some norms collapse rapidly under pressure? — **yes**
+4. 4. If the conjecture dropped its claim that belief strength and age are not the best predictors of durability, would its conclusion about what makes norms stable still follow? — **yes**
+5. 5. Does the conjecture imply that two societies with equally sincere belief in the same norm could show very different durability if the norm is more tightly coupled to property, kinship, or punishment in one of them? — **yes**
+6. 6. Does the conjecture illuminate why a norm can persist even when many people privately dislike it, so long as changing it would disrupt several linked social functions at once? — **yes**
+7. 7. Does the conjecture extend to predicting that symbolic rules such as dress codes or etiquette should collapse quickly when substitutes can preserve coordination without major institutional redesign? — **yes**
+8. 8. If a centuries-old norm persisted despite requiring almost no compensating changes elsewhere when removed, would saving the conjecture require abandoning its core test of counterfactual dependence rather than adding a minor exception? — **yes**
+9. 9. If a recently invented norm became highly durable because law, education, and status competition rapidly reorganized around its exact form, would the conjecture have to give up its contrast between old durable norms and thin symbolic overlays to accommodate it? — **no**
+10. 10. If a norm remained stable mainly because dissent was violently suppressed even though its details were interchangeable and the system could absorb its removal, would rescuing the conjecture require replacing load-bearing integration with coercion as the main mechanism? — **yes**
+
+## Candidate Problems
+
+- How can 'load-bearingness' or structural entanglement of a norm be operationalized and measured independently of its observed persistence? The conjecture risks circularity unless it can distinguish ex ante between norms that truly carry multiple institutional dependencies and norms that merely look central because they have lasted. A worthwhile problem is to define observable indicators—e.g., dependency networks, compensation costs, number and type of coupled institutions, speed and scope of downstream redesign after perturbation—and test whether these predict durability better than belief intensity, coercion, or prestige. (score: 0.97)
+- What are the boundary conditions under which highly entangled norms still collapse rapidly, or weakly entangled norms persist for centuries? This probes whether the conjecture is missing key variables such as technological shocks, state coercion, elite replacement, external conquest, legal centralization, or ideological innovations that create substitute coordination mechanisms. The strongest version of the conjecture needs to explain extreme cases where systems absorb massive redesign quickly, or where apparently symbolic norms endure despite low functional necessity. (score: 0.95)
+- What is the causal direction between norm persistence and system integration: do norms persist because they are load-bearing, or do long-lived norms become load-bearing because institutions accrete around them over time? This is a major unresolved tension because the conjecture treats entanglement as explanatory, but path dependence may make persistence itself generate the surrounding dependencies. Exploring this would require models of co-evolution between norms and institutions, including lock-in, adaptation, and deliberate decoupling. (score: 0.93)

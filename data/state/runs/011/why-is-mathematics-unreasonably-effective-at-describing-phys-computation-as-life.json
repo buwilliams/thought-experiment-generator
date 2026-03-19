@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys",
+  "conjecture_id": "computation-as-life",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "What exactly does 'computation is fundamental' mean in ontology and physics, and how can it be made non-circular and empirically discriminating? The conjecture risks collapsing into a relabeling unless it specifies what counts as computation independent of already-mathematized physical dynamics, whether the substrate is digital, analog, or something broader, and what observable consequences would differ from non-computational or merely structural-realist views.",
+      "score": 0.98
+    },
+    {
+      "text": "Why does pure mathematics developed without empirical target so often anticipate later physics, rather than merely overlapping with it after the fact? The conjecture gestures at a shared space of possible rule-governed structures, but leaves open the selection mechanism: which features of mathematical exploration, cognitive bias, and physical law make some abstract structures repeatedly reappear in nature while most mathematics remains unapplied?",
+      "score": 0.95
+    },
+    {
+      "text": "Can the conjecture explain the specific limits of mathematical applicability, not just its successes? A strong version should account for where mathematics fails, where multiple inequivalent formalisms fit the same phenomena, and why physical reality realizes this constrained subset of computational structures rather than many others. Without such a boundary theory, the proposal may be too permissive to carry much explanatory load.",
+      "score": 0.93
+    }
+  ]
+}

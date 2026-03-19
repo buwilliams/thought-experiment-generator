@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+  "conjecture_id": "corrigible-continuity-lens",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "What exactly counts as preserving identity across extension? The conjecture relies on 'internal sovereignty' being maintained by a small set of inferential invariants, but it leaves open a precise criterion for when a strengthened meta-system is still the same system versus a genuinely new one. This is load-bearing because the force of the institutional analogy depends on whether legitimacy under change can be made non-arbitrary.",
+      "score": 0.95
+    },
+    {
+      "text": "Can 'reliable self-correction' be formalized in a way that is nontrivial yet compatible with Gödel limits? The conjecture says self-correction requires procedures or viewpoints not fully capturable by the original rules, but it remains unclear which kinds of reflective update, conservativity, proof-theoretic strengthening, or external auditing actually improve reliability without merely relocating the problem to a higher level.",
+      "score": 0.93
+    },
+    {
+      "text": "How far does the analogy from formal systems to institutions genuinely go, and where does it break? The conjecture suggests a broader principle that durable rational structures cannot be fully self-grounding, but it is unresolved whether this is a deep structural homology or a metaphor that fails once institutional legitimacy, social feedback, and semantic openness are examined in detail.",
+      "score": 0.88
+    }
+  ]
+}

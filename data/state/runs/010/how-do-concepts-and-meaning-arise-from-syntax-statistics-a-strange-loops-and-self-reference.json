@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 10,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions are necessary and sufficient for 'recursive representational closure' to generate genuine aboutness rather than merely more sophisticated self-prediction? The conjecture identifies stable self-referential loops as the key transition, but leaves open how to distinguish semantic emergence from a purely syntactic system that tracks and reuses its own internal states without any nontrivial reference relation.",
+      "score": 0.96
+    },
+    {
+      "text": "How can the conjecture be operationalized into testable criteria or measurements in actual systems? It remains unresolved what observable markers would show that a representation has become a concept: stability across contexts, counterfactual robustness, causal efficacy in downstream inference, self-model access, or some combination. Without such criteria, the conjecture risks being explanatory metaphor rather than a research program.",
+      "score": 0.98
+    },
+    {
+      "text": "Is self-referential closure by itself sufficient for meaning, or does semantics also require world-involving constraints such as embodiment, action, social coordination, or causal coupling to an environment? The conjecture is internally coherent, but it leaves unresolved whether meaning can emerge in a purely internal statistical hierarchy, or whether external anchoring is a necessary part of what makes a representation genuinely about something.",
+      "score": 0.94
+    }
+  ]
+}

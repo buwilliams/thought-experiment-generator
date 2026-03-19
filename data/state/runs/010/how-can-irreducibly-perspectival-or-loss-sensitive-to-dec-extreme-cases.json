@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec",
+  "conjecture_id": "extreme-cases",
+  "run": 10,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 1.0,
+  "total": 0.952,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made mathematically noncircular by defining a privileged self-modeling partition, 'predictive/control power,' and 'provable degradation under all alternative decompositions' in a way that is representation-invariant and not dependent on the analyst’s chosen state description? The core tension is whether irreducible perspectivality is an objective system property or an artifact of how we coarse-grain, encode variables, and specify tasks.",
+      "score": 0.97
+    },
+    {
+      "text": "Is indexical self-modeling actually necessary for the relevant functional regime, or can every purportedly conscious-looking global model be re-expressed as distributed coordination with relational variables and no privileged 'this-system' coordinate? The open question is whether there exist concrete counterexamples either way: systems with strong self-maintenance and unified control but no irreducible indexical state, or systems with irreducible indexical structure that are intuitively nonconscious.",
+      "score": 0.95
+    },
+    {
+      "text": "What empirical or computational decomposition test could discriminate conscious from nonconscious systems without collapsing into a restatement of integration, recurrence, or task complexity? The unresolved tension is operational: how to design interventions, benchmarks, or impossibility results that show irrecoverable loss under repartition specifically because of a first-person coordinate, rather than because decomposition simply damages any tightly coupled controller.",
+      "score": 0.93
+    }
+  ]
+}

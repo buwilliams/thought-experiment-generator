@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'predictive equilibrium' and 'shortcut equilibrium' be formalized so the conjecture becomes testable rather than metaphorical? In particular, what are the right mathematical objects for the interaction among data distribution, model class, optimizer, and token-level loss, and how can one characterize when an invariant-representing solution is uniquely stable versus merely one basin among many?",
+      "score": 0.96
+    },
+    {
+      "text": "What precise conditions make a latent invariant unavoidable for next-token prediction? The conjecture lists factors like cross-context variation, proxy breakdown, long-range dependence, compression advantage, and optimization power, but it remains open whether there is a necessary-and-sufficient criterion, or at least a hierarchy of conditions, that predicts when invariant learning will occur across architectures and scales.",
+      "score": 0.94
+    },
+    {
+      "text": "How much of the failure to learn real invariants is due to the objective/data structure versus the optimization dynamics and inductive biases of specific models? Even if shortcut strategies are available in principle, it is unresolved whether larger models, different parameterizations, regularization, curriculum, or alternative optimizers spontaneously move toward invariant-based representations anyway, implying that equilibrium lock-in may be architecture-dependent rather than purely structural.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-trust-function-as-infrastructure-in-social-systems",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 13,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.7,
+  "total": 0.7779999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the minimal structural conditions and threshold dynamics that cause a system to tip from a high-trust equilibrium into a distrust lock-in, and are there reliable early-warning indicators of that transition?",
+      "score": 0.95
+    },
+    {
+      "text": "How can trust as 'coordination infrastructure' be operationalized and measured separately from its substitutes (audits, contracts, surveillance, platforms), especially when those substitutes can both compensate for and further erode trust?",
+      "score": 0.92
+    },
+    {
+      "text": "Under what conditions do trust-repair interventions actually shift payoffs back toward stable high-trust equilibria rather than merely adding more compliance machinery, and what sequence of changes creates durable escape from distrust traps?",
+      "score": 0.97
+    }
+  ]
+}

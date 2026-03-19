@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "computational-irreducibility",
+  "run": 10,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Does computational irreducibility actually ground a nontrivial notion of agency, or does it merely mark an epistemic limit on prediction? The central unresolved tension is whether 'unpredictable except by running the process' supports the metaphysical and causal significance of deliberation, or only says that observers lack shortcuts. This is worth exploring because the conjecture risks equivocating between irreducibility-for-us and agency-in-itself.",
+      "score": 0.95
+    },
+    {
+      "text": "What precise criterion makes higher-level deliberative states causally real rather than just useful summaries of microphysical evolution? The conjecture claims beliefs, reasons, and self-models are 'the minimal generative rule' at the scale of choice, but it leaves open how to distinguish genuine causal autonomy, explanatory indispensability, and mere coarse-grained description. This is a key open problem because the whole compatibilist reframing depends on a defensible account of multi-level causation.",
+      "score": 0.93
+    },
+    {
+      "text": "Can the counterfactual 'the agent could have done otherwise if its reasons or internal computations had differed' be made non-circular and action-guiding in a deterministic universe? The unresolved issue is whether this redescribed ability-to-do-otherwise preserves what people care about in freedom and responsibility, or simply restates determinism at a different level. This is worth pursuing because it tests whether the conjecture genuinely resolves the free will problem or only changes the vocabulary.",
+      "score": 0.9
+    }
+  ]
+}

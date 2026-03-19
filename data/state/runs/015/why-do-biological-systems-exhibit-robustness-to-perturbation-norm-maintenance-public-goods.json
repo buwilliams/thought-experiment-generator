@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "What is the precise criterion that separates 'enforcement' from 'tolerated experimentation' in biological systems, and can this distinction be made non-metaphorical and quantitatively testable across levels (genes, cells, organisms, lineages)? The conjecture is suggestive, but it remains unclear how to operationalize private gain, defection, punishment, and collective benefit in ordinary biological cases without collapsing into loose analogy.",
+      "score": 0.95
+    },
+    {
+      "text": "Under what conditions does selection actually build architectures that jointly maximize robustness and evolvability, rather than producing a tradeoff where robustness suppresses innovation or where tolerated variation is exploited by lower-level cheaters? The unresolved tension is whether the proposed complementarity is a general law, a contingent outcome in certain environments, or only an ex post description of successful lineages.",
+      "score": 0.97
+    },
+    {
+      "text": "What are the causal design principles by which specific structural features—modularity, redundancy, degeneracy, buffering, hierarchical control—create 'sandboxed' variation instead of merely adding cost or inertia, and how can these mechanisms be distinguished from byproducts of historical contingency? This is open because the conjecture identifies candidate institutions but does not yet explain which minimal generative rules make them produce evolvability rather than just robustness.",
+      "score": 0.93
+    }
+  ]
+}

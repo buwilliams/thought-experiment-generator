@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-s-central-analogy-from-formal-incompleten",
+  "conjecture_id": "extreme-cases",
+  "run": 11,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "What exact formal notion of 'self-knowledge' makes the conjecture nontrivially true rather than true by definition? The key open problem is to specify representability, accessibility, truth-tracking, and resource bounds in a way that is strong enough to recover Gödel/Tarski/Löb-style limits, but not so strong that incompleteness is simply baked in by stipulation. This includes deciding whether self-knowledge is about code, proofs, predictions, semantic truth, or calibrated performance, and which closure properties are load-bearing.",
+      "score": 0.96
+    },
+    {
+      "text": "Where is the sharp threshold between trivial self-modeling and incompleteness-generating reflexivity? The conjecture gestures at 'sufficient richness' and 'explicit resource bounds', but it remains open which capacities are actually necessary and sufficient: arithmetic strength, proof-theoretic self-encoding, universal computation, probabilistic prediction of one's own outputs, or some weaker fixed-point machinery. A worthwhile problem is to characterize phase transitions in reflective power and identify minimal systems that already exhibit literal incompleteness-like barriers.",
+      "score": 0.93
+    },
+    {
+      "text": "How robust is the claimed analogy once agents are resource-bounded, approximate, probabilistic, or learned rather than ideal formal theories? The strongest unresolved tension is whether incompleteness is truly the boundary behavior of reflexive knowledge in realistic epistemic systems, or only in theorem-proving systems with strong internal syntax. New work should test whether analogous impossibility results survive under bounded rationality, statistical self-models, calibration-based self-knowledge, and reflective architectures used in AI, or whether these settings evade the classical barriers in substantively important ways.",
+      "score": 0.91
+    }
+  ]
+}

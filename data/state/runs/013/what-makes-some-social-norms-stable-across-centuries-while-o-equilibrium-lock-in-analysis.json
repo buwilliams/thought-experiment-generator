@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-some-social-norms-stable-across-centuries-while-o",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'equilibrium lock-in' be operationalized and measured independently of mere persistence or post hoc collapse narratives? The conjecture risks circularity unless it yields observable ex ante indicators—e.g., density of interdependence, enforcement distribution, and expectation legibility—that predict durability and tipping points better than alternatives like sincere moral endorsement, coercive state capacity, or material efficiency.",
+      "score": 0.97
+    },
+    {
+      "text": "What are the boundary conditions where private belief or moral legitimacy, rather than visible coordination payoffs, becomes the primary driver of norm persistence or collapse? The conjecture claims payoff structure is primary, but some norms may endure with weak monitoring or collapse despite strong enforcement because internalized values, identity commitments, or sacred beliefs alter preferences rather than merely constrain best responses.",
+      "score": 0.91
+    },
+    {
+      "text": "What mechanisms generate rapid transitions between equilibria, and can they be modeled predictively rather than descriptively? The open problem is to explain how hidden dissent, public signals, alternative institutions, and network structure interact to produce sharp tipping points, hysteresis, or failed cascades, including why seemingly similar shocks sometimes trigger collapse and sometimes do not.",
+      "score": 0.95
+    }
+  ]
+}

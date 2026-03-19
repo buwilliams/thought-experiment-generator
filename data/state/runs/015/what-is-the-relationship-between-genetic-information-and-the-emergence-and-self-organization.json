@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-genetic-information-and-the",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'organismal complexity' be defined and measured in a non-circular, cross-species way that separates mere part-counting from emergent multilevel organization? The conjecture depends on complexity being a real explanatory target, but it leaves open whether the relevant quantity is morphological diversity, cell-type diversity, behavioral repertoire, developmental depth, control-theoretic richness, or some composite measure.",
+      "score": 0.98
+    },
+    {
+      "text": "What formal relationship, if any, links genomic information to the architecture and dynamics of developmental/regulatory feedback systems? If DNA is a 'generative constraint system' rather than a blueprint, we still need a theory of how sequence-level changes map to network topology, state-space structure, robustness, and phenotypic complexity, and whether this mapping admits principled measures or is largely computationally irreducible.",
+      "score": 0.96
+    },
+    {
+      "text": "Where does the causally relevant developmental information reside, and how should it be partitioned among genome, epigenetic state, cellular architecture, maternal inheritance, and environment? The conjecture shifts information from the genome in isolation to the whole developmental system, but this raises an unresolved tension about what is inherited versus reconstructed each generation and how distributed information can be quantified without dissolving explanatory responsibility altogether.",
+      "score": 0.94
+    }
+  ]
+}

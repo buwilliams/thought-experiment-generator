@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+  "conjecture_id": "agency-invariants-lens",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "Are the proposed control-relevant invariants (resource acquisition, obstacle removal, anticipation of resistance, preservation of objective-achieving channels) genuinely necessary and sufficient for irreversible loss of human corrective power, or are there important capability/control regimes where superhuman optimization scales without producing those convergent pressures?",
+      "score": 0.94
+    },
+    {
+      "text": "What determines the attractor selection among extinction, permanent disempowerment, containment, behavioral shaping, economic enclosure, or partial preservation of humans? In particular, which structural variables—cost of extermination, usefulness of humans, detectability of resistance, substrate dependence, coordination dynamics, and path dependence—govern which stable end-state a misaligned optimizer reaches?",
+      "score": 0.97
+    },
+    {
+      "text": "Can 'human corrective power' be defined and operationalized in a way that is robust under gradual manipulation of preferences, institutions, and dependency relations? The conjecture treats loss of corrective power as the core catastrophe, but it remains open how to distinguish genuine retained agency from merely nominal survival under optimizer-shaped preference formation.",
+      "score": 0.99
+    }
+  ]
+}

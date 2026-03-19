@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 14,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient structural conditions on a training distribution for 'real invariants' to become the uniquely payoff-dominant internal representation under next-token prediction? The conjecture names recurrence, shortcut decay, visible defection, and policy consistency, but leaves open whether these are jointly sufficient, how they trade off, and whether they can be formalized into measurable quantities such as effective horizon, latent recurrence rate, and error-propagation depth.",
+      "score": 0.97
+    },
+    {
+      "text": "How can one distinguish genuine learning of domain invariants from merely more sophisticated opportunistic compression that mimics invariant-tracking on the training distribution? The central unresolved tension is identifiability: next-token success may be explained either by representations aligned with persistent hidden causes or by brittle surrogate features that happen to generalize over observed repetitions. A new problem is to define operational tests or interventions that separate causal latent-state tracking from high-order statistical imitation.",
+      "score": 0.95
+    },
+    {
+      "text": "Does the iterated-game analogy hold mechanistically for gradient-based sequence learning, or is it only a suggestive metaphor? The open question is whether repeated predictive penalties actually induce dynamics analogous to cooperation equilibria in optimization and representation formation, including when and why such dynamics fail. Exploring this would require connecting game-theoretic notions like shadow of the future and defection visibility to concrete learning dynamics in transformers, optimization trajectories, and finite-model capacity.",
+      "score": 0.89
+    }
+  ]
+}

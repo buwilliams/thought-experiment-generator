@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-genetic-information-and-the",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'recursive closure' or 'strange-loop depth' in biological systems be defined and measured in a non-metaphorical, empirically tractable way across levels from gene regulation to development to behavior? The conjecture depends on this being a real explanatory variable, but it is unclear what formal metrics would distinguish loop-rich systems from ordinary feedback networks, or how such metrics would relate to organismal complexity better than existing measures.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the causal contribution of self-referential regulatory loops, as opposed to generic multilevel regulation or environmental interaction, in generating organismal complexity? The open tension is whether strange loops are uniquely explanatory or whether the conjecture redescribes familiar developmental systems biology without adding predictive power. This invites interventions that selectively alter recursive feedback architecture and test effects on complexity, robustness, and evolvability.",
+      "score": 0.94
+    },
+    {
+      "text": "Where is the boundary of the informational system that produces complexity: genome, epigenome, maternal inheritance, cellular machinery, developmental environment, niche, or organism-environment loop? The conjecture says the loop is the causal unit, but this raises an unresolved problem of individuation: how to partition distributed information and control without making the explanatory unit so broad that it loses precision. Clarifying this boundary is crucial for heredity, evolution, and comparative complexity claims.",
+      "score": 0.91
+    }
+  ]
+}

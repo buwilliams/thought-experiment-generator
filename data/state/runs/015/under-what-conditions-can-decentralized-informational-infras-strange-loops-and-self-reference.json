@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-can-decentralized-informational-infras",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient structural conditions for a decentralized informational loop to become genuinely self-enforcing rather than merely informative? The conjecture lists observability, persistent memory, repeated interaction, legible signals, and shared interpretation, but leaves unresolved how these factors trade off, whether there are threshold effects, and whether a minimal generative architecture can be specified that predicts when recursive visibility substitutes for central enforcement.",
+      "score": 0.95
+    },
+    {
+      "text": "How can a self-referential governance system remain coherent under strategic adaptation by participants who optimize against the model itself? The conjecture identifies meta-manipulation as a limit, but the open problem is whether there exist robust feedback designs that preserve truthful signaling and useful reputation under gaming, Goodhart effects, collusion, sybil attacks, and reputation poisoning without reintroducing centralized authority.",
+      "score": 0.97
+    },
+    {
+      "text": "Where exactly is the boundary between informational governance and coercive enforcement in domains involving hidden action, irreversible harm, or contested interpretation? The conjecture claims decentralized infrastructures cannot close the loop between record and force, but it remains unresolved whether hybrid systems can extend that boundary, what kinds of harms are categorically non-governable by recursive information alone, and how to characterize the transition from reputational sanction to necessary sovereign intervention.",
+      "score": 0.93
+    }
+  ]
+}

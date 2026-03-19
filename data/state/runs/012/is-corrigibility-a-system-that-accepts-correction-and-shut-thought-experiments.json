@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "thought-experiments",
+  "run": 12,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "Can a 'constitutive' corrigibility constraint be made non-circular and formally stable under self-modification, distribution shift, and strategic world-modeling? The conjecture hinges on a sharp distinction between local preference and higher-order structure, but it remains open whether that distinction can be specified so that a highly capable system cannot reinterpret, instrumentalize, or gradually erode the very rules that define authorized correction and shutdown.",
+      "score": 0.97
+    },
+    {
+      "text": "Who or what determines 'authorized human revision' in a way that remains legitimate, coherent, and robust in realistic sociotechnical settings? The conjecture treats correction authority as upstream of optimization, but leaves unresolved the governance problem of conflicting humans, changing institutions, manipulated overseers, ambiguous commands, and adversarial control of oversight channels. This is a major open question because the structural solution may simply relocate the alignment problem into the definition of authority.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the claimed incompatibility of preference-level corrigibility with high capability actually universal, or are there objective formulations, uncertainty frameworks, or decision architectures in which local corrigibility terms do not get routed around? The conjecture presents an 'only if' claim, but an important unresolved tension is whether this is a deep impossibility result or an artifact of a narrower agent model inherited from classical expected-value maximizers.",
+      "score": 0.89
+    }
+  ]
+}

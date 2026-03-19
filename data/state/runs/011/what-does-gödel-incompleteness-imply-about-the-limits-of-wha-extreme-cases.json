@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+  "conjecture_id": "extreme-cases",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture’s slogan 'self-knowledge fails before world-knowledge does' be made precise and non-metaphorical? In particular, is there a rigorous comparative measure under which self-referential questions become undecidable earlier, more systematically, or under weaker assumptions than non-self-referential mathematical questions, rather than Gödel incompleteness merely showing that some self-referential sentences are undecidable?",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly is the load-bearing boundary of 'maximal self-referentiality'? Which formal capacities are necessary and sufficient for the failure of internal self-verification: arithmetic strength, representability of syntax, derivability conditions, fixed-point machinery, semantic notions of truth, or something weaker? This asks whether reflexivity itself is the core cause, or whether the conjecture bundles together several distinct ingredients.",
+      "score": 0.97
+    },
+    {
+      "text": "How far does the proposed generalization beyond logic really go? Is there a nontrivial, testable analogue of Gödel-style limits for broader self-modeling systems—such as scientific theories, AI agents, or control systems—or does the argument depend essentially on formal proof, consistency, and arithmetization? The open problem is to separate genuine structural transfer from suggestive but loose metaphor.",
+      "score": 0.98
+    }
+  ]
+}

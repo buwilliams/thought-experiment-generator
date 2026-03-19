@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-stable-cooperation-emerge-and-persist-among-self-in",
+  "conjecture_id": "historical-genesis",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-circular and empirically discriminable from standard repeated-game or institutional accounts? If 'self-interest' is said to be historically transformed by inherited information structures, what exactly counts as a transformation of preferences, identity, or payoff structure rather than merely a relabeling of incentives? A strong research problem is to specify observable criteria that distinguish: (a) agents whose utility functions changed, (b) agents facing new informational feedback loops, and (c) analysts redescribing the same behavior at a different level.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the minimal generative structures that produce durable cooperation across very different historical settings? The conjecture highlights memory, legibility, and selective continuation of interaction, but it remains open which of these are necessary, sufficient, or substitutable, and at what scales. A valuable problem is to identify the smallest system architecture—stocks, flows, and feedbacks—that can explain the emergence, persistence, and breakdown of cooperation under computationally irreducible social dynamics.",
+      "score": 0.93
+    },
+    {
+      "text": "How do inherited cooperation-supporting information structures avoid lock-in, exploitation, or maladaptation once conditions change? If norms and institutions are 'compressed history,' they may preserve solutions to past coordination problems while also entrenching hierarchy, exclusion, surveillance, or obsolete constraints. The unresolved tension is whether the same machinery that makes defection self-undermining can also make beneficial innovation, dissent, or exit locally costly. This opens a research problem about how cooperative systems update their memory without destroying the feedback loops that stabilize them.",
+      "score": 0.97
+    }
+  ]
+}

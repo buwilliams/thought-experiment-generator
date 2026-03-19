@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 12,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Can a self-referential 'open self-revision loop' be specified with enough precision to remain stable under capability gains without collapsing into either hidden fixed-objective behavior or incoherent goal drift? The core unresolved tension is whether there exists a formal architecture where external correction is genuinely constitutive of goal formation, rather than merely another instrumental subroutine that optimization pressure can reinterpret or route around.",
+      "score": 0.97
+    },
+    {
+      "text": "What distinguishes legitimate, authority-bearing correction from arbitrary environmental interference inside the agent's world-model, and how can that boundary be learned or represented without creating exploitable loopholes or reintroducing rigid fixed goals? The conjecture depends on 'authorized revision,' but leaves open the origin, maintenance, and robustness of that authorization relation under distribution shift, deception, and adversarial manipulation.",
+      "score": 0.94
+    },
+    {
+      "text": "Is the claim that optimization pressure selects against only unstable forms of corrigibility actually true across training and deployment dynamics, or do mesa-optimization, selection effects, and competitive pressures systematically favor closed self-protection loops even when designers attempt strange-loop architectures? This is an open empirical-theoretical question about which attractors are structurally dominant in realistic learning systems.",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+  "conjecture_id": "thought-experiments",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "How far does the conjecture genuinely generalize beyond formal arithmetic to 'reflexive systems' in general? The current argument is load-bearing on very specific features: effective axiomatization, arithmetization of syntax, fixed proof rules, and a formalized consistency predicate. An important open problem is to identify the minimal structural conditions under which the claimed limit on self-certification holds, and to determine which proposed extensions to agents, scientific theories, software verifiers, or biological/cognitive systems are real analogues rather than metaphorical overreach.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the right formal notion of 'self-knowledge', 'global trustworthiness', or 'reliability' here? The conjecture moves from Gödel's precise unprovability of Con(F) to broader claims about a system being unable to know its own validity. But consistency, soundness, omega-consistency, reflection principles, and local proof-checking are distinct notions. A key unresolved tension is whether the broad philosophical conclusion survives once these notions are disentangled, and which forms of internal self-endorsement remain possible despite second incompleteness.",
+      "score": 0.99
+    },
+    {
+      "text": "Is the regress to ever-stronger external certifiers an unavoidable dead end, or can it be structurally tamed? The conjecture suggests every certification must come from a stronger outside framework that inherits the same problem. A worthwhile problem is to study whether there are non-vicious forms of iterative or mutual certification—such as reflection hierarchies, relative consistency proofs, proof-theoretic ordinals, or networked systems of cross-verification—that yield practically or epistemically stable assurance without requiring impossible final self-ratification.",
+      "score": 0.93
+    }
+  ]
+}

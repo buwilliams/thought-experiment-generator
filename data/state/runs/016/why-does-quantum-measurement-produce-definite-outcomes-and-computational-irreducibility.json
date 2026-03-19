@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "computational-irreducibility",
+  "run": 16,
+  "logical_consistency": 0.78,
+  "hard_to_vary": 1.0,
+  "total": 0.9339999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can computational irreducibility be made precise enough in quantum measurement to distinguish this conjecture from standard decoherence or many-worlds? The key open problem is to define a non-circular criterion for when a unitary interaction is irreducible, what counts as a 'stable classical record,' and whether this yields any new explanatory or empirical content beyond saying that decohered branches exist.",
+      "score": 0.96
+    },
+    {
+      "text": "How, exactly, do Born-weighted statistics arise if the specific observed outcome is fixed by the full microscopic computation rather than by an additional stochastic collapse rule? The unresolved tension is whether irreducible branch selection can recover the Born rule without smuggling in typicality, self-locating uncertainty, or hidden-variable-like assumptions.",
+      "score": 0.99
+    },
+    {
+      "text": "What is the ontology of the 'one realized branch-compatible record' in a purely unitary evolution? There is a major unresolved tension between claiming no extra collapse law and still speaking as if one actual outcome occurs, since unitary dynamics alone appears to retain all branches. The open question is whether this conjecture is secretly many-worlds, an effective single-world account, or requires a new criterion for actuality.",
+      "score": 1.0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "corrigible-continuity-lens",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "How can invariant, load-bearing constraints be identified non-circularly and operationalized across domains? The conjecture treats invariants as the core discriminator between explanation and redescription, but leaves open a method for discovering them without already presupposing the correct explanatory frame. A key problem is to specify tests that distinguish genuine invariants from merely stable descriptive regularities or artifacts of representation.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the boundary between legitimate auxiliary refinement and ad hoc qualification in a self-correcting explanation? The conjecture says genuine explanations survive variation by preserving a core while revising peripheral elements, but it does not yet provide criteria for when added detail is disciplined error correction versus rhetorical immunization. This is a central unresolved tension because both explanation and redescription can appear to adapt under criticism.",
+      "score": 0.94
+    },
+    {
+      "text": "Can the analogy between explanatory legitimacy and institutional legitimacy be made structurally precise rather than metaphorical? The conjecture gains force by mapping explanation onto adaptive institutions, but it remains open whether the same constraint structure, invariants, and correction pathways really govern both cases or whether the analogy breaks under closer analysis. Turning this into a rigorous comparative problem could reveal either a deep unifying principle or a category mistake.",
+      "score": 0.88
+    }
+  ]
+}

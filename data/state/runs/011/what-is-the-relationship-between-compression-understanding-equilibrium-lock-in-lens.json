@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-compression-understanding",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 11,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing explanatory structure' be operationalized and measured so that compression, understanding, and explanation are empirically distinguishable rather than rhetorically separated? In particular, what tests of counterfactual robustness, reconstructability, and alternative-exclusion would identify when a compressed account is genuinely explanatory versus merely a useful summary or predictor?",
+      "score": 0.97
+    },
+    {
+      "text": "What concrete incentive structures, institutions, or feedback loops cause knowledge communities to settle into 'compression-rich, explanation-poor' equilibria, and which interventions would reliably shift them toward public production of explanation and understanding? This is open because the conjecture's public-goods framing is plausible but underspecified as a systems model.",
+      "score": 0.94
+    },
+    {
+      "text": "Is the proposed distinction between private understanding and public explanation stable, or are there important cases where understanding itself is socially scaffolded and cannot be cleanly possessed privately? Exploring this would test whether the conjecture's ontology of knowledge coordination is too individual-centered and whether explanation is constitutive of understanding rather than merely its public expression.",
+      "score": 0.86
+    }
+  ]
+}

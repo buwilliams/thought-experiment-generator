@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-can-decentralized-informational-infras",
+  "conjecture_id": "historical-genesis",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can we rigorously distinguish 'epistemic' from 'coercive' enforcement functions in real institutions, given that most systems bundle recordkeeping, adjudication, sanction, and deterrence together? The conjecture is strongest if this boundary can be operationalized rather than stated intuitively; otherwise its core substitution claim risks being unfalsifiable or too coarse to guide design.",
+      "score": 0.96
+    },
+    {
+      "text": "What minimal structural conditions allow decentralized informational systems to generate effective sanctions without a central enforcer—for example through asset lock-in, identity persistence, interoperability of reputation, or automated exclusion—and where do these mechanisms break under anonymity, cheap exit, collusion, and one-shot predation? This probes whether the conjecture's 'hard limit' is truly coercion itself or the absence of durable leverage points inside the system.",
+      "score": 0.94
+    },
+    {
+      "text": "How should ambiguous facts, contested interpretation, and strategic manipulation be handled in decentralized infrastructures when shared memory is not enough to produce common knowledge of what actually happened? The open question is whether adjudication can itself be decentralized in a robust way, or whether irreducible interpretive disputes force reintroduction of trusted authorities, making epistemic substitution much narrower than the conjecture suggests.",
+      "score": 0.91
+    }
+  ]
+}

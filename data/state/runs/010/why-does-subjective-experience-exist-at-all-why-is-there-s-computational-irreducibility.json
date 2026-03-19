@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "computational-irreducibility",
+  "run": 10,
+  "logical_consistency": 0.87,
+  "hard_to_vary": 0.7,
+  "total": 0.7509999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'irreducible internal computation' be defined and detected in a non-question-begging way that distinguishes genuinely conscious systems from merely complex or opaque ones? The conjecture depends on a principled criterion for irreducibility, relevant state-transitions, and loss under compression, but it is unresolved whether these notions can be made observer-independent and empirically usable rather than relative to a modeling choice or current computational limits.",
+      "score": 0.97
+    },
+    {
+      "text": "Why should irreducible self-modeling computation have a first-person aspect at all, rather than just being a sophisticated causal process? The conjecture redescribes consciousness as the inside of certain computations, but the core explanatory gap may remain: what bridges the move from uncompressible self-updating organization to felt experience, and what additional structural features, if any, are necessary for intrinsic point of view?",
+      "score": 0.99
+    },
+    {
+      "text": "What would decide between behaviorally equivalent systems with different internal organization, such as a lookup table versus an ongoing generative process, if both are physically realizable? This raises unresolved tensions about substrate, counterfactual structure, temporal unfolding, and whether consciousness depends on actual causal history, online self-maintenance, or merely implemented functional relations. Clarifying this would test whether the conjecture truly departs from functionalism or only refines it.",
+      "score": 0.95
+    }
+  ]
+}

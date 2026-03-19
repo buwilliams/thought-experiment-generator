@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-supply-a-non-circular-precise-criterion",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Is iterated interaction actually necessary for modelhood, or only a common sufficient condition? The conjecture risks excluding plausible one-shot cases where a state seems to have correctness conditions because it tracks latent structure used for planning or inference even without repeated rounds. A key open problem is to formulate and test a necessity claim against edge cases such as single high-stakes decisions, offline simulation, and one-trial organisms or devices.",
+      "score": 0.96
+    },
+    {
+      "text": "How can 'counterfactually discriminating expectations' and 'detachable correctness' be specified non-circularly and operationally? The conjecture depends on being able to distinguish mere causal control from genuine accuracy-sensitive representation, but the proposed tests may smuggle in representational notions through terms like 'latent structure,' 'misclassification,' or 'being right.' A worthwhile problem is to derive measurable criteria from system dynamics alone that separate representation from sophisticated control architectures.",
+      "score": 0.94
+    },
+    {
+      "text": "What is the minimal system structure that makes correctness conditions emerge, and where is the boundary with memory-based policy optimization? Repeated interaction can reward stored information without that information obviously constituting a model; simple reinforcement learners, lookup tables, and dynamical controllers may exploit history-dependent payoffs while lacking anything intuitively representational. The open question is whether the conjecture can identify a principled threshold—perhaps involving abstraction, compression, generalization, or intervention sensitivity—rather than collapsing modelhood into any payoff-relevant state variable.",
+      "score": 0.98
+    }
+  ]
+}

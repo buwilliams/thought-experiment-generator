@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the operational markers and causal tests that distinguish a true shift from substrate-limited to structure-limited progress? The conjecture assumes a threshold after which substrate becomes mostly permissive and structure becomes the main selecting bottleneck, but it leaves open how to identify that regime, rule out hidden substrate effects, and measure marginal epistemic returns from structural interventions versus additional scale.",
+      "score": 0.95
+    },
+    {
+      "text": "How can 'epistemic structure' be formalized so that conjecture generation, criticism, selection, and preservation of dissent are not just evocative metaphors but manipulable system variables? The conjecture is strong only if these structural components can be specified, decomposed, and linked to observable feedback loops and outcomes such as corrigibility, out-of-distribution transfer, and error recovery.",
+      "score": 0.93
+    },
+    {
+      "text": "Under what conditions do structural mechanisms that reward surviving criticism actually improve truth-tracking rather than merely creating new gaming equilibria, bureaucratic drag, or local benchmark overfitting? The conjecture presumes better criticism and promotion will select for knowledge, but open questions remain about incentive design, Goodhart effects, and whether adversarial evaluation can be made reliably epistemic rather than performative.",
+      "score": 0.91
+    }
+  ]
+}

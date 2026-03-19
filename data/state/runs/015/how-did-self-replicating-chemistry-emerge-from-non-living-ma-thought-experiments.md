@@ -1,0 +1,36 @@
+# Generated: how-did-self-replicating-chemistry-emerge-from-non-living-ma × thought-experiments
+
+## Conjecture
+
+Conjecture: self-replicating chemistry did not begin with a molecule that copied itself, but with a chemically coupled environment that copied a pattern of conditions.
+
+Hypothetical scenario: imagine a porous rock interface with steady energy flow, strong cycling gradients, and many micro-compartments. In this setting, chemistry does not occur in a well-mixed soup but in repeated local niches. Now isolate the key variable: not “template accuracy,” but persistence of a reaction network across cycles. Assume such a niche exists where certain reactions alter the local environment in ways that make those same reactions more likely on the next cycle.
+
+Follow the logic. If a set of molecules collectively modifies pH, redox state, ion concentration, surface binding, or permeability, then the niche begins to retain a causal memory of their presence. The “thing” being replicated is initially not a sequence but an organizational state: this compartment tends to regenerate this chemistry. When the system is perturbed — flow moves products into neighboring pores, surfaces fracture, compartments split — some daughter niches inherit enough of the same conditions and catalytic residues to re-establish the same network. That is primitive replication.
+
+What follows is that self-replication can emerge before templating in the modern sense. The first replicators are autocatalytic systems plus their scaffold, not free-floating informational polymers. Selection can already operate here, because some networks rebuild themselves more reliably, spread to adjacent compartments more often, or exploit flux better than competitors. Error correction is environmental before it is molecular: the structure of the niche repeatedly filters chemistry back toward a narrow attractor.
+
+Once that exists, there is pressure for any component that improves transportability of the network’s “memory.” Molecules that preserve catalytic bias across weaker inheritance channels become advantageous. Under those conditions, template-like polymers are not the starting point but a solution to a pre-existing problem: how to compress distributed environmental memory into portable molecular memory. Sequence replication emerges because it is a better inheritance technology than depending entirely on a geochemical niche.
+
+This reframes the problem. “Without a prior template” is only paradoxical if one assumes replication must begin as exact molecular copying. But if replication means recurrence of a causally self-reconstructing organization, then non-living matter can cross the threshold through systems that reproduce local conditions before they reproduce sequences. The first heredity is architectural, not genetic.
+
+Illumination: the origin of life is less plausibly the sudden appearance of a privileged replicator molecule than a transition in the unit of selection — from geochemically stabilized reaction networks to increasingly self-contained molecular encodings of those networks. Templates are late refinements of replication, not its prerequisite.
+
+## Questions
+
+1. 1. Is the claim that replication begins as recurrence of a causally self-reconstructing organizational state necessary for concluding that self-replicating chemistry could emerge without a prior template? — **yes**
+2. 2. Is the existence of spatially repeated micro-compartments with cycling gradients required for the conjecture to explain inheritance, rather than merely speeding up ordinary chemistry? — **yes**
+3. 3. If the feedback in which reaction products reshape pH, redox state, ion concentration, surface binding, or permeability were removed, would the explanation lose its mechanism for causal memory and primitive replication? — **yes**
+4. 4. Is the step from environmental persistence across cycles to selection among networks necessary for the later claim that template-like polymers arise as improved inheritance technology? — **yes**
+5. 5. Does the conjecture imply that environments with stronger niche reconstruction should show selection-like competition before any accurate sequence copying appears? — **yes**
+6. 6. Does the explanation extend to predicting that early heredity could be tied to mineral surfaces, pores, or flow structures rather than to freely diffusing molecules alone? — **yes**
+7. 7. Does the conjecture illuminate why modern templating systems might still retain dependence on compartmentalization, gradients, or scaffolds as evolutionary remnants of earlier environmental memory? — **yes**
+8. 8. If a counterexample showed a self-copying molecule arising in a well-mixed setting, would preserving this conjecture require abandoning the claim that environmental scaffolds are the first replicators rather than adding a minor qualification about multiple pathways? — **no**
+9. 9. If daughter niches often fail to inherit enough catalytic residues after fracture or flow, would saving the explanation force a rewrite of primitive replication rather than a small adjustment to transfer efficiency? — **no**
+10. 10. If environmental attractors proved too broad to filter chemistry toward a narrow recurring network, would rescuing the conjecture require replacing its core idea of environmental error correction rather than patching a parameter? — **yes**
+
+## Candidate Problems
+
+- How can 'replication' and 'heredity' be rigorously defined and measured for a chemically coupled niche that reproduces an organizational state rather than a molecular sequence? The core tension is whether recurrence of an attractor in compartment-environment dynamics is enough to count as a Darwinian replicator, or whether the conjecture equivocates between persistence, reconstruction, and true inheritance. A useful new problem is to formulate operational criteria for identity, parent-offspring relations, fidelity, variation, and fitness for scaffold-plus-network systems. (score: 0.97)
+- Can environmentally stabilized reaction networks actually support open-ended Darwinian evolution before templated polymers appear, or are they limited to shallow attractor selection? The unresolved issue is whether architectural heredity has enough fidelity, variation, and combinatorial richness to accumulate adaptations, or whether it inevitably hits an error threshold that only portable molecular memory can overcome. This is worth pursuing as a transition problem: what structural conditions make the shift from distributed environmental memory to encoded molecular memory not just possible but selectively favored and evolutionarily continuous? (score: 0.95)
+- What minimal physical and chemical mechanisms allow a porous, cycling geochemical system to copy local conditions into daughter niches with sufficient reliability under realistic perturbations? The conjecture depends on coupled feedbacks among flow, surfaces, gradients, catalytic residues, and compartment splitting, but it remains open whether such systems are generically realizable or require implausible fine-tuning. A strong problem is to identify the minimal generative architecture and parameter regime in which niche-level memory, propagation, and competition emerge robustly rather than as a fragile special case. (score: 0.93)

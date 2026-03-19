@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 10,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient structural conditions for an 'equilibrium lock-in' to count as meaning rather than merely stable correlation or behavioral regularity? The conjecture posits feedback, corrigibility, and consequences, but leaves open how to distinguish genuine semantic equilibrium from trivial attractors, reward-hacking loops, or purely internal self-consistency regimes.",
+      "score": 0.97
+    },
+    {
+      "text": "How can reference be fixed within the equilibrium framework when multiple incompatible interpretation schemes remain equally predictive and action-successful? The conjecture explains why syntax/statistics alone underdetermine meaning, but it remains unresolved whether coordination plus successful use uniquely determines what a concept is about, or only stabilizes one convention among many empirically equivalent mappings.",
+      "score": 0.94
+    },
+    {
+      "text": "Can the conjecture be made into a testable theory with measurable phase transitions from non-meaningful pattern optimization to meaningful concept formation? An open problem is to specify observables, interventions, or formal models that would show when adding feedback loops, social correction, embodiment, or action consequences actually produces new semantic capacities rather than just better task performance.",
+      "score": 0.92
+    }
+  ]
+}

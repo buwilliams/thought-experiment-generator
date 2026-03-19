@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "computation-as-life",
+  "run": 10,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.5,
+  "total": 0.635,
+  "candidate_problems": [
+    {
+      "text": "What exactly distinguishes a merely useful compression from a genuinely semantic 'concept'? The conjecture hinges on 'selection-stable internal compressions' and 'counterfactual usefulness,' but it leaves open a non-circular criterion for when predictive/action utility becomes meaning rather than just instrumental correlation. A key unresolved problem is to specify necessary and sufficient conditions for semantic status that can discriminate between shallow heuristics, latent features, and robust concepts across biological and artificial systems.",
+      "score": 0.96
+    },
+    {
+      "text": "How can 'selection' and 'stability' be formally characterized across very different substrates and timescales? The conjecture unifies brains, organisms, language communities, and AI under 'information transformation under selection,' but it is unclear whether the same dynamics really apply in a principled way. An open question is whether there exists a substrate-agnostic formalism linking feedback loops, compression, intervention success, and representation persistence, or whether the apparent unity hides importantly different kinds of semantics.",
+      "score": 0.92
+    },
+    {
+      "text": "Is embodiment and real-world action actually necessary for thick meaning, or can sufficiently rich linguistic/social feedback alone generate concept-level semantics? The thought experiment suggests that closed-loop environmental interaction produces stronger concepts than next-token prediction, but it remains unresolved how far text-only or socially mediated systems can go if their internal representations support broad counterfactual inference. This is a high-value problem because it bears directly on whether current and future language models can acquire genuine meaning without traditional grounding.",
+      "score": 0.9
+    }
+  ]
+}

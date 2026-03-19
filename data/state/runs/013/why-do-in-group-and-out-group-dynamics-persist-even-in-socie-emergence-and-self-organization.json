@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-in-group-and-out-group-dynamics-persist-even-in-socie",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.5,
+  "total": 0.635,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular by specifying a principled distinction between unavoidable functional boundary-making and the phenomenon it calls 'tribalism'? As stated, there is a tension between claiming anti-tribal systems inevitably recreate boundaries and avoiding the trivial conclusion that any coordination mechanism counts as tribalism. The open problem is to define measurable criteria—such as permeability, error-correction, dominance, inheritance, or punishment asymmetry—that separate necessary social classification from pathological in-group/out-group formation.",
+      "score": 0.96
+    },
+    {
+      "text": "What institutional designs actually change the attractor structure of these feedback loops so that boundary-making remains corrigible instead of hardening into enemy classes? The conjecture proposes 'low-stakes, revisable' boundaries as leverage, but leaves unresolved which mechanisms—appeals processes, rotating roles, anonymity, cross-cutting memberships, decentralized sanctioning limits, reputation design, or constitutional protections—work, under what conditions, and with what tradeoffs in trust, coordination cost, and resilience to exploitation.",
+      "score": 0.94
+    },
+    {
+      "text": "Under what conditions can anti-tribal norms reduce destructive tribalism rather than merely displace it into new moralized identities? The conjecture strongly suggests structural inevitability, but an open question is whether there are threshold effects, extreme cases, or empirical counterexamples where anti-tribal ideology genuinely lowers the intensity, stability, or violence of group boundaries instead of just renaming them. This matters because without such conditions the conjecture risks being unfalsifiable or too strong to guide intervention.",
+      "score": 0.91
+    }
+  ]
+}

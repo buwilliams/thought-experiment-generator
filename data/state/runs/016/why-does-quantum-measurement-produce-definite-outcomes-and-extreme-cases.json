@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "extreme-cases",
+  "run": 16,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "How, exactly, do Born-rule probabilities arise from branch-relative self-location alone? The conjecture explains definiteness via decoherence and stable records, but it leaves open the central quantitative link between branch structure and the observed frequency law. Why should rational credence or empirical frequencies track squared amplitudes rather than branch counting or some other measure over successor observers?",
+      "score": 0.98
+    },
+    {
+      "text": "What is the precise ontology and individuation criterion for branches and observers in the decohering universal state? The conjecture relies on 'stable record' branches and successor observers, but branch boundaries are approximate, basis-dependent, and dynamically emergent. This raises an unresolved tension: if branch structure is only fuzzy or scale-relative, in what sense can branch-relative outcome selection and self-location be well-defined enough to do explanatory work?",
+      "score": 0.94
+    },
+    {
+      "text": "Can emergent irreversibility from environmental record formation fully replace collapse without residue, especially in finite realistic systems rather than idealized infinite-environment limits? The conjecture leans on a boundary where recoherence goes to zero and records become effectively permanent, but actual systems are finite and only approximately irreversible. The open question is whether the explanatory move survives away from the limit, and what exact threshold of redundancy, stability, or uncontrollability is sufficient for a genuine measurement event.",
+      "score": 0.91
+    }
+  ]
+}

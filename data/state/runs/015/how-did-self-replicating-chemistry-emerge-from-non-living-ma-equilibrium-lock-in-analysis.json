@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can the conjectured 'coordination lock' be formalized so it becomes distinguishable from ordinary low-probability chemistry? In particular, what minimal dynamical model of compartments, catalytic cycles, and template-like polymers exhibits two regimes—one with persistent non-heritable attractors and one with self-reinforcing heredity—and what measurable signatures would show that the barrier is structural rather than merely contingent?",
+      "score": 0.96
+    },
+    {
+      "text": "What is the minimal coupled arrangement that can cross the proposed lock-in boundary? The conjecture claims no single component could defect into heredity alone, but this leaves open a sharp problem: which smallest set of mutually stabilizing constraints is sufficient for durable inheritance, and are all three elements named (compartmentalization, metabolic closure, templating) necessary, or can alternative combinations realize the same transition?",
+      "score": 0.98
+    },
+    {
+      "text": "By what mechanism could prebiotic chemistry actually traverse a coordination barrier that seems to require simultaneous relaxation of multiple constraints? If individually favorable paths were absent, what physical processes—environmental cycling, spatial heterogeneity, mineral scaffolds, stochastic compartment fusion/fission, or other nonequilibrium drivers—could generate stepwise pathways into the coupled regime without presupposing the very heredity the conjecture says was missing?",
+      "score": 0.94
+    }
+  ]
+}

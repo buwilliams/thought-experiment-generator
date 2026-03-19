@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+  "conjecture_id": "thought-experiments",
+  "run": 15,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "How can 'replication' and 'heredity' be rigorously defined and measured for a chemically coupled niche that reproduces an organizational state rather than a molecular sequence? The core tension is whether recurrence of an attractor in compartment-environment dynamics is enough to count as a Darwinian replicator, or whether the conjecture equivocates between persistence, reconstruction, and true inheritance. A useful new problem is to formulate operational criteria for identity, parent-offspring relations, fidelity, variation, and fitness for scaffold-plus-network systems.",
+      "score": 0.97
+    },
+    {
+      "text": "Can environmentally stabilized reaction networks actually support open-ended Darwinian evolution before templated polymers appear, or are they limited to shallow attractor selection? The unresolved issue is whether architectural heredity has enough fidelity, variation, and combinatorial richness to accumulate adaptations, or whether it inevitably hits an error threshold that only portable molecular memory can overcome. This is worth pursuing as a transition problem: what structural conditions make the shift from distributed environmental memory to encoded molecular memory not just possible but selectively favored and evolutionarily continuous?",
+      "score": 0.95
+    },
+    {
+      "text": "What minimal physical and chemical mechanisms allow a porous, cycling geochemical system to copy local conditions into daughter niches with sufficient reliability under realistic perturbations? The conjecture depends on coupled feedbacks among flow, surfaces, gradients, catalytic residues, and compartment splitting, but it remains open whether such systems are generically realizable or require implausible fine-tuning. A strong problem is to identify the minimal generative architecture and parameter regime in which niche-level memory, propagation, and competition emerge robustly rather than as a fragile special case.",
+      "score": 0.93
+    }
+  ]
+}

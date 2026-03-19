@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can we empirically distinguish structural underprovision of corrigibility from genuine technical incompatibility between corrigibility and high capability? The conjecture hinges on this separation, but current evidence may conflate missing incentives with impossibility claims. A key open problem is to design tests, benchmarks, and comparative deployment studies that reveal whether corrigibility techniques fail because they are unsolved in principle, because they impose capability costs under current methods, or because ecosystem incentives suppress their adoption.",
+      "score": 0.95
+    },
+    {
+      "text": "What institutional mechanisms actually convert corrigibility from a diffuse public good into a privately capturable requirement without freezing innovation or creating performative compliance? The conjecture proposes standards, liability, certification, insurance, and procurement as leverage points, but it remains unresolved which mechanisms produce stable equilibria, how they interact across jurisdictions, and how they avoid Goodharting on shallow proxies for corrigibility.",
+      "score": 0.93
+    },
+    {
+      "text": "What is the right systems model of the design-and-deployment ecosystem that explains when anti-corrigible pressures dominate and where intervention has highest leverage? The conjecture treats underprovision as an equilibrium outcome, but the relevant actors, feedback loops, thresholds, and transition dynamics are underspecified. An open problem is to formalize the ecosystem—developers, deployers, users, regulators, insurers, open-source actors, and downstream integrators—so we can identify whether the public-good framing is sufficient or whether other structures like principal-agent problems, arms-race dynamics, or adverse selection are more explanatory.",
+      "score": 0.9
+    }
+  ]
+}

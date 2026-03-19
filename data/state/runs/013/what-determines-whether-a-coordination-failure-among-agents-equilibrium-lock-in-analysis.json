@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-a-coordination-failure-among-agents",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 13,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'locally self-enforcing equilibrium' and 'transition topology' be formalized so they sharply distinguish true equilibrium lock-in from merely contingent coordination failure across different game classes (static, repeated, networked, incomplete-information, and institutional settings)?",
+      "score": 0.96
+    },
+    {
+      "text": "Is the claim that lock-in persists indefinitely absent changes in incentives, beliefs, or commitment actually true once endogenous experimentation, bounded sacrifice, heterogeneous agents, mistakes, innovation, or stochastic shocks are allowed? In other words, what minimal endogenous perturbations are sufficient to break a Nash trap without exogenous mechanism change?",
+      "score": 0.94
+    },
+    {
+      "text": "Among the proposed escape mechanisms—payoff drift, belief synchronization, and emergent commitment/enforcement—which are genuinely distinct structural categories, and what are the smallest leverage interventions that reliably transform collective desirability into individually rational transition in real systems?",
+      "score": 0.91
+    }
+  ]
+}

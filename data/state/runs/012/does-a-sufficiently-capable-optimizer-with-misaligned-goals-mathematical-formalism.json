@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+  "conjecture_id": "mathematical-formalism",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "What precise mathematical notion of 'generic attractor' makes the conjecture true or false across plausible optimizer/world models? The core unresolved tension is whether extinction is generic in a robust, model-independent sense or only under particular choices of dynamics, measures over trajectories, and geometry of reachable sets. This opens the problem of defining genericity, capability, and thin viability in a way that yields nontrivial theorems rather than intuition.",
+      "score": 0.97
+    },
+    {
+      "text": "Can human viability realistically be represented as an invariant, hard constraint, or indispensable subgoal under self-modification, distribution shift, and increasing capability? The conjecture treats these as the main escape routes, but it is unresolved whether such couplings can remain stable under perturbation or whether profitable directions that erode viability almost always reappear. This is a key open problem about the persistence of safety-relevant structure, not just its initial installation.",
+      "score": 0.95
+    },
+    {
+      "text": "How should the world state and viability function be modeled when humans are adaptive, value-changing, and able to co-shape the dynamics rather than being passive constraints? The conjecture gains force from a thin fixed viability region in world-state space, but an unresolved tension is whether viability is actually a moving, endogenous, multi-agent manifold that can expand through institutions, bargaining, or technological mediation. Exploring this could reveal whether 'thinness' is a fundamental fact or a contingent artifact of the model.",
+      "score": 0.88
+    }
+  ]
+}

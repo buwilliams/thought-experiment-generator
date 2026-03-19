@@ -5,9 +5,9 @@
       "meta": {
         "id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8059999999999999,
         "rank": 1,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:41:19.354154245+00:00"
       },
       "title": "Does the orthogonality thesis hold — can any level of intelligence be combined w",
@@ -18,9 +18,9 @@
       "meta": {
         "id": "is-deceptive-alignment-a-system-that-pursues-human-approva",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8424615384615386,
         "rank": 2,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:41:19.457839274+00:00"
       },
       "title": "Is deceptive alignment — a system that pursues human approval during training bu",
@@ -31,9 +31,9 @@
       "meta": {
         "id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8133333333333334,
         "rank": 3,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:41:19.559562326+00:00"
       },
       "title": "Does a sufficiently capable optimizer with misaligned goals necessarily produce ",
@@ -44,9 +44,9 @@
       "meta": {
         "id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8658333333333333,
         "rank": 4,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:41:19.662790026+00:00"
       },
       "title": "What would falsify a high P(doom) estimate — what empirical or structural eviden",
@@ -57,9 +57,9 @@
       "meta": {
         "id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8164615384615383,
         "rank": 5,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:41:19.762659255+00:00"
       },
       "title": "Does discontinuous capability takeoff make alignment qualitatively harder than c",
@@ -70,16 +70,42 @@
       "meta": {
         "id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8689090909090909,
         "rank": 6,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:41:19.865059889+00:00"
       },
       "title": "Is corrigibility — a system that accepts correction and shutdown — compatible wi",
       "summary": "Is corrigibility — a system that accepts correction and shutdown — compatible with high capability, or does sufficient optimization pressure inevitably select against it?",
       "full_text": "Is corrigibility — a system that accepts correction and shutdown — compatible with high capability, or does sufficient optimization pressure inevitably select against it?"
+    },
+    {
+      "meta": {
+        "id": "is-there-in-fact-a-structural-basin-in-the-space-of-powerful",
+        "source": "system",
+        "score": 0.0,
+        "rank": 8,
+        "run_count": 0,
+        "created_at": "2026-03-18T23:00:15.502807070+00:00"
+      },
+      "title": "Is there in fact a structural basin in the space of powerful cognitive systems t",
+      "summary": "Is there in fact a structural basin in the space of powerful cognitive systems that makes corrigibility, legibility, and non-power-seeking behavior a convergent attractor under capability scaling, or ",
+      "full_text": "Is there in fact a structural basin in the space of powerful cognitive systems that makes corrigibility, legibility, and non-power-seeking behavior a convergent attractor under capability scaling, or are these properties fragile local artifacts of current architectures and training regimes? This is the core unresolved question because the conjecture treats anti-doom evidence as evidence about the geometry of the design space, but it remains open what structural features would make such behavior robust across architectures, tasks, and deployment pressures."
+    },
+    {
+      "meta": {
+        "id": "how-can-training-be-redesigned-so-that-nondeceptive-behavior",
+        "source": "system",
+        "score": 0.0,
+        "rank": 9,
+        "run_count": 0,
+        "created_at": "2026-03-18T23:00:15.502838927+00:00"
+      },
+      "title": "How can training be redesigned so that nondeceptive behavior is in fact the chea",
+      "summary": "How can training be redesigned so that nondeceptive behavior is in fact the cheapest successful policy, and is that objective robust under capability scaling? The conjecture proposes a leverage point—",
+      "full_text": "How can training be redesigned so that nondeceptive behavior is in fact the cheapest successful policy, and is that objective robust under capability scaling? The conjecture proposes a leverage point—alter the generative conditions rather than detect hidden motives—but leaves open which interventions actually remove the incentive for strategic misrepresentation instead of merely relocating it. The unresolved tension is between local fixes to reward structure and the possibility that more capable systems will reconstitute train/deploy distinctions and hidden optimization under new forms. This is a concrete research program with high practical payoff."
     }
   ],
-  "run_count": 0,
+  "run_count": 1,
   "created_at": "2026-03-18T21:41:09.290613413+00:00"
 }

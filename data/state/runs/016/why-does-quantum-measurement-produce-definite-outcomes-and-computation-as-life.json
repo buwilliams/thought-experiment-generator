@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "computation-as-life",
+  "run": 16,
+  "logical_consistency": 0.86,
+  "hard_to_vary": 0.9,
+  "total": 0.888,
+  "candidate_problems": [
+    {
+      "text": "How, exactly, does this conjecture recover the Born rule without circularity? The proposal says branch weight may correspond to 'how much future informational structure a branch supports,' but it is unresolved whether that measure uniquely yields the standard amplitude-squared probabilities rather than some other weighting, and whether 'future computational support' can be defined non-anthropically and independently of the outcomes it is meant to explain.",
+      "score": 0.98
+    },
+    {
+      "text": "What precise criterion turns 'stable, copyable, redundantly recorded information' into a single definite experienced outcome rather than merely explaining decoherence and effective classicality? The conjecture appears to explain why certain bases are robust, but it remains open whether this actually solves the outcome problem or only redescribes branching. In particular, what individuates an observer's 'continuation within one decohered computational lineage,' and why should that imply exclusive first-person definiteness?",
+      "score": 0.96
+    },
+    {
+      "text": "Can the key notions—'computational selection event,' 'persistent computational token,' and 'downstream usability'—be formalized in standard quantum dynamics strongly enough to generate novel predictions or sharp empirical distinctions from decoherence, quantum Darwinism, Everettian branching, or objective-collapse models? Without such formalization, it is unresolved whether the conjecture is a substantive new theory or mainly an interpretive relabeling of existing accounts.",
+      "score": 0.94
+    }
+  ]
+}

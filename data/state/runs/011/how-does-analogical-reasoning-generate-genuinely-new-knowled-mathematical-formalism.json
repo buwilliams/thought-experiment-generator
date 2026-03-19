@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+  "conjecture_id": "mathematical-formalism",
+  "run": 11,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture sharply distinguish genuinely knowledge-generating analogies from mere redescription or notational convenience? The current criterion—'new derivations in the target domain that were not expressible before the mapping'—is underdefined, because in many formal settings anything expressible after a representation change was in principle already expressible before. A serious open problem is to define a non-circular measure of epistemic gain: e.g. increased tractability, shorter proofs, access to new interventions, expanded compression, or new counterfactual support. Without this, the conjecture risks collapsing into either triviality ('the facts were already there') or overpermissiveness ('any useful reformulation counts as new knowledge').",
+      "score": 0.97
+    },
+    {
+      "text": "What exact class of structure-preserving maps is load-bearing for productive analogy, and how selective can preservation be before the analogy ceases to support reliable inference? The conjecture moves between partial homomorphism, functorial correspondence, isomorphism, and higher-order mapping, but these differ substantially in what they preserve and what inferential transport they license. An open problem is to characterize the minimal preservation conditions needed for specific kinds of exported reasoning—prediction, explanation, intervention, proof transfer—and to explain failure modes when omitted structure matters. This is central because the conjecture's explanatory force depends on selective preservation being constrained rather than metaphorical.",
+      "score": 0.94
+    },
+    {
+      "text": "How should 'latent invariants' and 'asymmetry of articulation' be formalized so that the source analogy can reveal structure in the target without presupposing that structure was already identifiable there? The conjecture relies on a gap between ontic structure and epistemic access, but it does not specify a model of agents, representations, or computational limits under which an invariant can exist in the target yet be unavailable as usable knowledge. A fruitful problem is to connect the claim to bounded rationality, proof complexity, model discovery, or representation dependence. Otherwise the key novelty claim remains intuitive but not mathematically anchored.",
+      "score": 0.92
+    }
+  ]
+}

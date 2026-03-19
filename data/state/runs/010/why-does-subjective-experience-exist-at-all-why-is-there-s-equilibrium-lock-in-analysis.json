@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 10,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 0.8,
+  "total": 0.8119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture distinguish the functional necessity of a privileged coordination standpoint from the existence of subjective experience itself, rather than merely redescribing global control architecture in phenomenological terms? The core unresolved tension is the explanatory gap: why should equilibrium lock-in yield 'what it is like' instead of only centralized access, salience weighting, and action selection?",
+      "score": 0.97
+    },
+    {
+      "text": "Under what precise structural conditions is equilibrium lock-in actually unavoidable, and are there counterexamples of highly capable systems that achieve unified, adaptive behavior through plural, shifting, or fully decentralized control without a stable first-person interface? This is crucial because the conjecture depends on a strong inevitability claim that may fail if alternative architectures scale.",
+      "score": 0.94
+    },
+    {
+      "text": "What empirical or computational signatures would uniquely support the coordination-trap theory over rival theories of consciousness, especially in cases like split-brain patients, dissociative states, metacognitive deficits, multi-agent AI systems, or organisms with minimal nervous systems? The open question is whether the conjecture generates discriminating predictions about when unity, ownership, and subjectivity should fragment, persist, or disappear.",
+      "score": 0.92
+    }
+  ]
+}

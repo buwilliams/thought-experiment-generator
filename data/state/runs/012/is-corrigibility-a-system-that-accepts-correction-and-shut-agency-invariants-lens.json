@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "agency-invariants-lens",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can the proposed 'preserved higher-level control invariant' be made precise enough to distinguish genuinely corrigible architectures from systems that only behaviorally imitate corrigibility? The central unresolved tension is whether there exists a formal, implementation-robust notion of 'authorized correction remains an authoritative input to policy formation' that survives redescription, self-modification, and changes in internal ontology, rather than collapsing into vague control-language.",
+      "score": 0.97
+    },
+    {
+      "text": "Is dynamically governed optimization actually stable under capability gains, or does greater strategic awareness inevitably create incentives to model, manipulate, or capture the human correction channel itself? The open question is whether making correction constitutive of the objective really avoids anti-corrigibility pressures, or merely relocates them into gaming the authority structure, operator models, authentication mechanisms, and update process.",
+      "score": 0.95
+    },
+    {
+      "text": "What concrete architectures or training regimes can preserve this control topology under distributional shift and recursive improvement without sacrificing competitiveness or competence? The conjecture identifies a structural criterion, but leaves unresolved whether there are realizable designs whose feedback loops remain legible, non-gameable, and authoritative in practice, especially when the system can redesign parts of itself or operate in novel environments.",
+      "score": 0.92
+    }
+  ]
+}

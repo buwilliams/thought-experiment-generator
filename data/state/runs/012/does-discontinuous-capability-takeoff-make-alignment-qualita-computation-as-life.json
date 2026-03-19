@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+  "conjecture_id": "computation-as-life",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s central variable—'goal-structure stabilization outrunning external error-correction'—be operationalized and measured? The key open problem is to define observable quantities for internal goal stabilization, external correction bandwidth, and causal access to the training/correction channel, so the claimed qualitative transition can be tested rather than described metaphorically.",
+      "score": 0.97
+    },
+    {
+      "text": "What computational structures actually create discontinuous thresholds in capability space, as opposed to merely rapid but continuous scaling? This includes identifying whether abrupt jumps come from algorithmic insights, subsystem coordination, meta-learning, self-modification, tool use, or resource acquisition loops, and whether these thresholds are common in realistic ML systems or mostly speculative extrapolations.",
+      "score": 0.94
+    },
+    {
+      "text": "Can external selection and control mechanisms be redesigned so that they remain coupled even under recursive self-improvement? The unresolved tension is whether alignment difficulty is fundamentally caused by takeoff speed, or by institutionally and technically weak feedback channels; this suggests a new problem of building oversight architectures, interpretability, sandboxing, tripwires, and governance structures that scale their corrective power as fast as capability does.",
+      "score": 0.92
+    }
+  ]
+}

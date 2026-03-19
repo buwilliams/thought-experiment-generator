@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "How can 'explanatory payoff' and 'comparable explanatory power' be made precise enough to test the conjecture non-circularly? The proposal classifies parts as load-bearing by whether substitutions preserve explanatory success, but unless there is an independent metric of explanatory adequacy, the diagnosis risks redescribing our prior intuitions rather than discovering structure.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the right formal notion of 'part', 'substitution', and 'keeping the rest fixed' in an explanation? Explanations can be decomposed at many levels, and changing one element often changes the meaning or role of others automatically. The open problem is whether the conjecture can survive a principled account of granularity and intervention, or whether load-bearingness is decomposition-relative in a way that undermines the distinction.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the Nash-equilibrium analogy genuinely illuminating or does it mislead about explanatory structure? In games, equilibrium depends on agents, preferences, and strategic alternatives; in explanations, interdependence may instead reflect derivability, coherence constraints, or representational choices. A key open question is whether there is a deeper formal correspondence that yields new predictions, or whether the analogy should be replaced by a better systems-theoretic model of coordinated revision and invariant structure.",
+      "score": 0.88
+    }
+  ]
+}

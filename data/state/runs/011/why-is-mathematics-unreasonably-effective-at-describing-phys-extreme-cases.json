@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys",
+  "conjecture_id": "extreme-cases",
+  "run": 11,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "Can the core claim be made non-circular and testable: that 'intelligibility requires compressible regularity' and 'mathematics is the study of what survives arbitrary variation'? The unresolved tension is whether this is a deep explanatory reduction or a redescription of applicability in epistemic terms. A worthwhile problem is to formulate explicit criteria for compressibility, invariance, and knowability, then derive risky predictions about where mathematization should succeed or fail across domains.",
+      "score": 0.95
+    },
+    {
+      "text": "What principled mechanism selects the particular mathematics physics uses from the vast space of internally fertile mathematical structures? The conjecture explains overlap by shared attraction to invariants, but it leaves open a major selection problem: many highly compressive, symmetry-rich, generative structures appear physically unused. A new problem is to identify additional load-bearing constraints—such as computability, stability under error, locality, renormalizability, or observer-constructibility—that narrow the overlap beyond mere invariance.",
+      "score": 0.93
+    },
+    {
+      "text": "Is the proposed boundary law—'where reality becomes intelligible, it becomes mathematical'—actually universal, or are there intelligible but weakly mathematizable regimes? The tension is whether domains like biology, history, cognition, or complex adaptive systems resist mathematization because we lack the right variables, or because intelligibility can sometimes be narrative, algorithmic, or model-based without strong invariant structure. This is worth pursuing as a comparative research program on different kinds of explanation and whether mathematics captures all of them or only the universality-class cases.",
+      "score": 0.91
+    }
+  ]
+}

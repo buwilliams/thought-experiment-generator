@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "computational-irreducibility",
+  "run": 14,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "How can 'all load-bearing' be defined invariantly across levels of abstraction, so that we can distinguish genuinely nonessential descriptive variation from changes that alter the explanatory target? The conjecture risks conflating representation-dependence with structural necessity: a detail may be swappable at one level yet indispensable at another, so a precise criterion for explanatory equivalence classes is missing.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the formal relationship between computational irreducibility and explanatory minimality? The conjecture suggests that irreducible phenomena require explanations that mirror the minimal generative process, but it remains open whether irreducibility really implies near-minimal, non-substitutable explanation, or whether higher-level explanations can remain explanatory without reproducing the full operative computation.",
+      "score": 0.98
+    },
+    {
+      "text": "Can 'load-bearingness' be operationalized and measured in real explanatory systems, perhaps via substitution sensitivity, degeneracy, or algorithmic information, without collapsing into intractability or observer-relative judgments? The conjecture proposes structural markers, but it is unresolved how to turn them into a usable test that separates essential constraints from merely convenient modeling choices.",
+      "score": 0.93
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-can-decentralized-informational-infras",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Is the conjectured boundary really a sharp phase transition, and if so what are the control parameters and order parameters? The conjecture claims structural breakdown once iterability conditions weaken, but it remains open whether failure is discontinuous or gradual, whether different missing conditions are substitutable or complementary, and how to formally characterize thresholds in identity persistence, observability, attribution accuracy, information diffusion speed, and discount factors across heterogeneous networks.",
+      "score": 0.96
+    },
+    {
+      "text": "Can decentralized informational infrastructures endogenously create the repeated-game conditions they require, rather than merely presupposing them? The conjecture treats persistent identity, observability, attribution, and common reaction rules as prerequisites, but an unresolved tension is whether protocols, cryptography, interface design, staking, interoperability, or governance can generate durable memory and credible future dependence in environments that initially look one-shot or anonymous.",
+      "score": 0.93
+    },
+    {
+      "text": "How robust is decentralized enforcement under adversarial manipulation of information itself? The conjecture notes false accusations, reputation cartels, sybil attacks, and cascades, but leaves open a deeper problem: when observability and attribution are mediated by strategic actors, can any decentralized reputation system avoid capture without reintroducing centralized trust anchors, and what minimal trusted components are structurally unavoidable?",
+      "score": 0.95
+    }
+  ]
+}

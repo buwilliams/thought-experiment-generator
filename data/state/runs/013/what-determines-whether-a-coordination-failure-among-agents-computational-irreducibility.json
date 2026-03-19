@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-a-coordination-failure-among-agents",
+  "conjecture_id": "computational-irreducibility",
+  "run": 13,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.6,
+  "total": 0.6930000000000001,
+  "candidate_problems": [
+    {
+      "text": "How can 'computational irreducibility' of a coordination problem be defined and detected in a way that is non-circular, empirically usable, and distinct from ordinary incomplete information, bounded rationality, or equilibrium multiplicity? The conjecture hinges on irreducibility doing real explanatory work, but it remains open what formal criterion would show that no shortcut exists for agents or observers.",
+      "score": 0.95
+    },
+    {
+      "text": "Under what precise structural conditions do 'compressible pathways' emerge, and can institutions, signals, or protocol changes systematically transform an irreducible coordination landscape into a compressible one without requiring the very search they are meant to avoid? This is a key leverage question because the conjecture suggests rule structure, not preferences alone, determines persistence and resolution.",
+      "score": 0.93
+    },
+    {
+      "text": "Is indefinite persistence actually a robust consequence of irreducible local update rules, or do stochastic exploration, learning, imitation, and rare shocks almost always generate eventual escape on long enough timescales? The open tension is between practical persistence and true indefinite failure, especially in finite populations where noise may substitute for computation.",
+      "score": 0.91
+    }
+  ]
+}

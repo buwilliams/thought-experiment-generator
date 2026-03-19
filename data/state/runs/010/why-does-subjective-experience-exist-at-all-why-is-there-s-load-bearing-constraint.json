@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular and independently testable? It identifies consciousness with a load-bearing first-person modeling loop, but the key notions—'appearance-for-the-system', 'first-person', and 'what it is like'—risk redescribing consciousness rather than explaining it. The open problem is to specify operational and explanatory criteria that distinguish genuine irreducible perspectival self-modeling from sophisticated metacognition, self-monitoring, or uncertainty tracking in systems we would still regard as nonconscious.",
+      "score": 0.97
+    },
+    {
+      "text": "Is the claimed necessity result actually true: does open-ended error correction under uncertainty really require appearance/reality representations, or can functionally equivalent architectures avoid them? The conjecture hinges on a hard-to-vary claim, but it remains unresolved whether alternative designs—predictive controllers, distributed confidence systems, model-free learners, or externally scaffolded agents—could preserve adaptive competence, reportability, and self-revision without any irreducible first-person loop. This is the central adversarial design problem for the view.",
+      "score": 0.95
+    },
+    {
+      "text": "What grounds the step from load-bearing self-representation to phenomenology rather than merely to better control architecture? Even if perspectival self-models are explanatorily indispensable, it remains open why that should entail real subjective experience instead of only a functional organization that talks and acts as if things seem a certain way. The unresolved tension is whether the conjecture bridges the explanatory gap or only relocates it to a special class of self-models.",
+      "score": 0.99
+    }
+  ]
+}

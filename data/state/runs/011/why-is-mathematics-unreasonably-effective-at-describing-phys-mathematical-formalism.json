@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys",
+  "conjecture_id": "mathematical-formalism",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What principled criterion picks out the 'relevant relations' or invariants that make a mathematical structure physically explanatory rather than merely formally isomorphic? The conjecture relies on structure preservation, but many non-equivalent mathematical descriptions can preserve some relations. A major open problem is to specify how empirical accessibility, intervention, measurement, approximation, and scale determine which structure is load-bearing for physics.",
+      "score": 0.95
+    },
+    {
+      "text": "Why does the world instantiate especially deep, generative, and reusable mathematical structures rather than only shallow local regularities? The conjecture explains applicability given regularity, but it does not explain the strength, hierarchy, and cross-domain unification of actual physical invariants. An open question is what accounts for the universe lying in a highly compressible region of structure-space rich enough for theories like gauge symmetry, differential geometry, and Hilbert-space methods to work so broadly.",
+      "score": 0.92
+    },
+    {
+      "text": "How far can the conjecture be extended beyond cleanly isolable invariants to messy, multiscale, path-dependent domains such as turbulence, biology, and economics? This is a significant tension because the proposal may risk becoming partly selection-based: mathematics works where physics has already filtered for mathematizable structure. A new problem is to determine whether there is a more general notion of admissible structure that covers approximate, emergent, computational, or non-isomorphic correspondences in complex systems.",
+      "score": 0.89
+    }
+  ]
+}

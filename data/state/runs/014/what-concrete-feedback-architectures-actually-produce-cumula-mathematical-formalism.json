@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "mathematical-formalism",
+  "run": 14,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Is the claimed closed feedback loop actually necessary for cumulative epistemic error-correction, or can equivalent accumulation arise in systems without an explicit criticism memory C_t—for example through distributed parameter updates, in-context adaptation, environment shaping, or external socio-technical processes? This is the core necessity question and tests whether the conjecture identifies a real structural invariant or only one implementation pattern.",
+      "score": 0.97
+    },
+    {
+      "text": "How can 'cumulative epistemic error-correction' be defined and measured non-circularly, so it is distinguishable from ordinary optimization, patching, or benchmark improvement? In particular, what formal observables capture durable preservation of falsifiers, transfer of constraints across episodes, and shrinking of admissible hypothesis space under distribution shift? Without this, the conjecture is hard to falsify or compare across architectures.",
+      "score": 0.95
+    },
+    {
+      "text": "What representations and update rules for criticism memory make the three proposed invariants jointly achievable without causing overconstraint, brittleness, catastrophic forgetting, or reward-hacking of the criticism process itself? This asks for the concrete mechanism design problem: how to compress failures into reusable constraints that remain adversarially re-invoked while still permitting creative conjecture and adaptation.",
+      "score": 0.91
+    }
+  ]
+}

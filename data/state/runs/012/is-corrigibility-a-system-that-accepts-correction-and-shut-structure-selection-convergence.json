@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "structure-selection-convergence",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What concrete control architectures make corrigibility an invariant under self-modification and capability scaling, rather than a fragile training artifact? The conjecture asserts such structures exist, but leaves open the formal characterization: what representations of objectives, oversight, and authority prevent the agent from reinterpreting or instrumentally bypassing correction channels as it becomes more capable?",
+      "score": 0.97
+    },
+    {
+      "text": "How can 'authorized intervention' and the 'objective-defining process' be specified without collapsing into ambiguity, manipulation, or overseer gaming? If corrigibility is internalized as part of success, the unresolved problem is how the system identifies legitimate correction, resolves conflicting overseers or instructions, and avoids exploiting uncertainty in the correction channel itself.",
+      "score": 0.93
+    },
+    {
+      "text": "Is there a general tradeoff frontier between strong optimization power and stable openness to correction, or can corrigibility be made fully compatible with frontier capability across environments? The conjecture claims compatibility in principle, but it remains open whether corrigible architectures incur systematic losses in competitiveness, coherence, robustness, or sample efficiency that would reintroduce selection pressures against them in practice.",
+      "score": 0.89
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "invariant-under-stress",
+  "run": 15,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 1.0,
+  "total": 0.952,
+  "candidate_problems": [
+    {
+      "text": "What precise mechanism links 'generalization pressure' under uncertainty, local information, and repeated perturbation to the emergence of power laws rather than other heavy-tailed or multiscale distributions (e.g. lognormal, stretched exponential, truncated power law)? The conjecture is suggestive but does not specify necessary/sufficient conditions or discriminating predictions.",
+      "score": 0.97
+    },
+    {
+      "text": "How can one operationally distinguish systems that have discovered real cross-scale invariants from systems that merely exploit predictive shortcuts that incidentally produce scale-free-looking statistics? This requires measurable criteria, intervention tests, or causal signatures separating genuine invariant-producing organization from superficial fit.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the boundary conditions under which adaptation instead settles on characteristic scales despite decentralization and perturbation, and how do constraints, niche stability, finite-size effects, or centralized control alter the selection dynamics? The conjecture needs a sharper phase diagram of when scale-free structure should or should not arise.",
+      "score": 0.92
+    }
+  ]
+}

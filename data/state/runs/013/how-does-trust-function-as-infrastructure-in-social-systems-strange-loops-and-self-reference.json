@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-trust-function-as-infrastructure-in-social-systems",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'loop integrity' be operationalized and measured across person, institution, and norm levels in a way that distinguishes trust from adjacent phenomena like compliance, predictability, legitimacy, or mere information availability?",
+      "score": 0.95
+    },
+    {
+      "text": "What causal mechanisms actually make self-referential social loops stabilizing rather than pathological: under what structural conditions does recursive modeling produce cooperation, and when does it instead generate performativity, adversarial gaming, Goodhart effects, or collapse?",
+      "score": 0.97
+    },
+    {
+      "text": "How can institutions be designed to preserve reciprocal accountability and legibility at scale, given that increasing complexity, power asymmetry, and symbolic signaling may be endogenous to large systems rather than removable defects?",
+      "score": 0.93
+    }
+  ]
+}

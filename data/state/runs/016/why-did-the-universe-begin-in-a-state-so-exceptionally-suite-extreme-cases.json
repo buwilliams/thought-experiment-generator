@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-did-the-universe-begin-in-a-state-so-exceptionally-suite",
+  "conjecture_id": "extreme-cases",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular by defining a principled measure of 'algorithmic simplicity' for cosmological boundary conditions that is invariant enough to do explanatory work? The core unresolved tension is that Kolmogorov-style description length depends on representation, background language, coarse-graining, and the split between 'laws' and 'state'. Without a robust notion of simplicity, the claim that only low-complexity laws-and-state pairs have explanatory standing risks collapsing into a restatement of our preferred description. A new problem is to formulate a representation-stable complexity criterion for whole-universe initial data, and to show whether the observed early universe is actually near-minimal under it rather than merely simple in hindsight.",
+      "score": 0.97
+    },
+    {
+      "text": "Does boundary simplicity generically imply a low-entropy arrow of time once gravity and realistic dynamics are included, or is the observed universe still highly non-generic even within the class of simple beginnings? The conjecture's main explanatory move is that with gravity, smoothness is both simple and thermodynamically deep, but it remains open whether 'simple yet far from equilibrium' is truly a narrow, fertile attractor or whether additional hidden fine-tuning is still required in inflation, matter content, constants, dimensionality, or quantum state selection. A strong research problem is to characterize the ensemble of simple cosmological boundaries and determine whether irreversible structure formation, records, and knowledge are generic outcomes or rare exceptions.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly justifies the meta-law that 'explanatory boundaries favor only simple starting points,' and can it be derived rather than stipulated? This is the deepest philosophical tension: the conjecture rejects anthropics and teleology by elevating explanatory admissibility itself into a selection principle, but why should reality obey that principle rather than merely our standards of explanation? The open problem is to determine whether this simplicity-at-the-boundary rule follows from a deeper theory of explanation, from constraints on self-locating knowledge, from quantum cosmology, or from some no-go result against high-complexity primordial facts. Otherwise the conjecture may just relocate the fine-tuning problem from physics into epistemology.",
+      "score": 0.93
+    }
+  ]
+}

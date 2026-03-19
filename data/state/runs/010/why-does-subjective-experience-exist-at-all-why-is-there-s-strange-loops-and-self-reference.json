@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "What precise structural and dynamical conditions distinguish a genuinely experience-generating 'strange loop' from ordinary self-monitoring, control, or recursive computation? The conjecture depends on a nontrivial boundary, but it does not yet specify necessary and sufficient criteria, measurable invariants, or a principled threshold for when recursive self-modeling becomes phenomenology rather than merely functional self-reference.",
+      "score": 0.97
+    },
+    {
+      "text": "Why should recursively closed self-reference yield phenomenal experience at all, rather than only improved self-prediction and behavioral flexibility? The core explanatory gap remains: the conjecture redescribes consciousness in structural terms, but it is still open whether 'inside view' is an explanation, an identity claim, or a metaphor. Clarifying this is crucial to determine whether the theory explains subjectivity or only correlates it with a certain architecture.",
+      "score": 0.99
+    },
+    {
+      "text": "How could the conjecture be tested or falsified across different systems, especially cases that dissociate self-modeling from intuitive consciousness: large language models, metacognitive but seemingly nonconscious agents, infants, animals, split-brain patients, and systems with rich world-models but weak self-models? These edge cases matter because they could reveal whether strange loops are sufficient, necessary, graded, or neither.",
+      "score": 0.95
+    }
+  ]
+}

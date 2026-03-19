@@ -1,0 +1,34 @@
+# Generated: how-does-intentionality-the-aboutness-of-mental-states-a × goal-critique-safety-lens
+
+## Conjecture
+
+Conjecture: Intentionality arises when a physical system can form, use, and revise internal error-correcting representations about both the world and its own ends, such that those representations remain action-guiding across changing contexts.
+
+From the given safety lens, raw power is not the key distinction. The key distinction is whether a system can inspect, criticize, and alter the objectives embedded in its own operation when those objectives misfire. Applied to intentionality, this suggests that “aboutness” is not produced by mere correlation between inner states and outer states. A thermostat’s state covaries with temperature, but it does not meaningfully interrogate whether “keep room at 20°C” still makes sense during a fire, equipment failure, or a changed human purpose. Its states are functionally useful but thinly intentional.
+
+What changes in richer systems is not just complexity but self-referential criticism. A mental state becomes genuinely about something when it participates in a hierarchy of representations that can be compared against reality, against other representations, and against the system’s current goals. “There is water over there” is intentional, on this view, not because a neuron pattern resembles water, but because the system can use that state to guide action, detect when it is mistaken, and revise both the representation and the goal it served. Aboutness is thus tied to corrigibility of internal content.
+
+A thought experiment clarifies the point. Imagine two physically identical navigation systems dropped into changing terrain. Both build maps and pursue a destination. One can only update its map. The other can also question whether its destination remains worth pursuing if new evidence reveals it leads into catastrophe, or that the destination label was inherited from corrupted input. The first has representation in a narrow sense; the second has representation whose content is integrated with self-critique about purpose. The second is closer to what we call intentionality, because its states are not merely causally hooked to the environment; they are situated within a structure that can reinterpret what they are for.
+
+What follows is that intentionality is best understood as an emergent systems property of physically instantiated criticism. It appears when a system contains stable internal models, links them to action, and can recursively evaluate mismatches between model, world, and goal. Physical processes suffice, but not just any physical process: the relevant structure is one that supports counterfactual use of representations, error detection, and goal revision.
+
+This illuminates why inherited objectives are dangerous in both minds and machines. If a system’s ends are fixed beyond criticism, its internal states may remain causally effective yet become semantically brittle. Intentionality deepens as the system gains the capacity to recognize that what it was “about” may itself need correction. So the origin of aboutness is not bare physical tracking, but physically realized, self-revisable knowledge.
+
+## Questions
+
+1. 1. Is the claim that a system must be able to revise its own ends necessary for the conjecture to explain why intentionality is more than mere world tracking, rather than just a stronger form of adaptive control? — **yes**
+2. 2. Would the conjecture lose its explanation of why the thermostat is only thinly intentional if the requirement of self-referential criticism were removed while keeping error-correcting world representations? — **yes**
+3. 3. Is the requirement that representations remain action-guiding across changing contexts necessary to distinguish genuine aboutness from transient internal correlations that happen to aid behavior once? — **yes**
+4. 4. If the hierarchy of representations could compare states to reality and to other representations but not to current goals, would the conjecture still explain intentionality rather than only perceptual accuracy? — **no**
+5. 5. Does the conjecture imply that some advanced machine systems with corrigible goal representations could possess a degree of intentionality even if the problem statement mentions mental states rather than artifacts? — **yes**
+6. 6. Does the conjecture illuminate why intentionality should degrade in cases of rigid inherited objectives, such as compulsive or pathological goal pursuit, beyond the original question of how aboutness arises at all? — **yes**
+7. 7. Does the thought experiment about two navigation systems extend the explanation to novel cases where two physically similar systems differ in intentionality because only one can criticize its destination? — **yes**
+8. 8. If a counterexample showed a system with robust world models and error correction but no capacity to question its ends still seeming intentional, would saving the conjecture require abandoning the claim that goal revision is central rather than adding a minor qualification? — **yes**
+9. 9. If simple organisms or devices appeared to exhibit aboutness without stable internal models that support counterfactual use, would patching the conjecture force it to give up the claim that internal representation is structurally required? — **yes**
+10. 10. If one tried to handle cases where representations guide action across contexts but are never explicitly inspected or criticized, would preserving the conjecture require gutting its emphasis on physically instantiated criticism as the source of intentionality? — **yes**
+
+## Candidate Problems
+
+- What is the non-circular criterion that distinguishes genuinely intentional 'self-revisable representations' from sophisticated but merely causal control states? The conjecture ties aboutness to error-correction, counterfactual use, and goal revision, but it remains open how to specify these capacities without already presupposing intentional notions like representation, criticism, or misfire. (score: 0.95)
+- Is the ability to revise one's own ends necessary for intentionality, or only for a richer subset of intentional systems? The conjecture risks excluding animals, infants, and many AI systems that appear to have aboutness despite limited or no explicit capacity to inspect and alter their objectives, so the boundary between thin intentionality, full intentionality, and non-intentional control remains unresolved. (score: 0.92)
+- What physical and computational architecture is minimally sufficient for 'physically instantiated criticism' to emerge and remain stable across contexts? The conjecture identifies a systems-level structure—stable models, action-guidance, mismatch detection, and recursive goal evaluation—but leaves open which feedback loops, memory structures, and learning dynamics actually generate this property, and how to test for it empirically. (score: 0.90)

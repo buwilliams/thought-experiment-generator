@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-counterfactual-reach-be-made-precise-without-colla",
+  "conjecture_id": "historical-genesis",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "How can 'minimal arbitrary supplementation' be made precise in a non-circular way? The conjecture depends on distinguishing genuine recomposition of an explanation from ad hoc patching, but it does not yet specify a principled metric for what counts as arbitrary, how to individuate the 'same core constraints,' or how much modification is too much. Without this, counterfactual reach risks collapsing into an intuitive label rather than a testable structural property.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the unit of analysis for an 'explanatory structure' under altered origin conditions? The conjecture treats explanations as reusable structures, but leaves open how to identify their boundaries, components, and identity across ontology shifts, boundary changes, or changed purposes. If the object being evaluated cannot be stably individuated, then claims about persistence, recomposition, and load-bearing organization become underdetermined.",
+      "score": 0.93
+    },
+    {
+      "text": "Does counterfactual reach define a genuinely new dimension of explanatory quality, or does it reduce to a higher-order combination of existing notions like invariance, causal transportability, model class flexibility, and robustness under distribution shift? The conjecture asserts non-equivalence, but the unresolved tension is whether this is a substantive new property with distinct empirical and epistemic consequences, or a reframing of neighboring concepts at a different level of description.",
+      "score": 0.91
+    }
+  ]
+}

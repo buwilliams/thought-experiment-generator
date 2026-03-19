@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 12,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.6,
+  "total": 0.6990000000000001,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-circular by operationalizing when a capability trajectory has truly become a 'near one-shot game' rather than merely a fast repeated game? The key open problem is to define measurable thresholds for observability, reversibility, response time, and strategic dominance, and to test whether these variables predict governance breakdown better than raw capability growth rate alone.",
+      "score": 0.95
+    },
+    {
+      "text": "Is repeated interaction actually sufficient for alignment-relevant cooperation, or do some actors and model systems defect even under long horizons because payoffs, principal-agent problems, or commitment failures dominate reputation effects? This matters because the conjecture may over-attribute governance success to iteration while underestimating deeper structural obstacles that persist in both continuous and discontinuous takeoff regimes.",
+      "score": 0.91
+    },
+    {
+      "text": "Which interventions genuinely lengthen the shadow of the future in AI development, and can they do so without simultaneously intensifying racing, secrecy, or centralization? This is an important systems question because proposed levers like compute monitoring, staged deployment, inspections, and delay mechanisms may stabilize cooperation in one feedback loop while destabilizing it in another.",
+      "score": 0.94
+    }
+  ]
+}

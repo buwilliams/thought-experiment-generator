@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 15,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-circular and quantitatively distinguishable from existing explanations of robustness/evolvability? The core tension is whether 'iterated interaction games across nested time horizons' adds explanatory power beyond familiar mechanisms like redundancy, control theory, modularity, and multilevel selection, or merely redescribes them in game-theoretic language. A worth-exploring problem is to derive unique, falsifiable predictions—e.g., measurable signatures of horizon length, defection detectability, or recurrence structure—that would not be expected under competing frameworks.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the precise mechanism by which short-run cooperation maintenance generates long-run evolvability rather than suppressing novelty? There is an unresolved tension because many cooperation-enforcing mechanisms—checkpointing, error correction, canalization, punishment of defectors—can also block experimentation and lock systems into local optima. The open question is to identify the structural conditions under which robustness-producing feedback loops also preserve adaptive search capacity, and when they instead produce rigidity.",
+      "score": 0.95
+    },
+    {
+      "text": "How should nested biological levels with partially misaligned interests be modeled when repeated games occur simultaneously across genes, cells, organisms, symbionts, and environments? The conjecture assumes repeated interaction tends to stabilize cooperation, but in real systems recurrence at one level can intensify conflict at another, as in cancer, meiotic drive, host-microbiome conflict, or selection for selfish genetic elements. A key problem is to determine when multi-horizon repetition yields globally robust/evolvable architectures versus persistent cross-level exploitation or fragility.",
+      "score": 0.94
+    }
+  ]
+}

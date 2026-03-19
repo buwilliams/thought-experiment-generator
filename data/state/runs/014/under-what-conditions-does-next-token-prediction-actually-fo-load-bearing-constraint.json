@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing for compression across many contexts' be made precise and testable? The conjecture hinges on a notion of indispensability, compensating complexity, and uniquely low-complexity representation, but it leaves open the metric: MDL, intervention-based regret, reparameterization cost, causal abstraction criteria, or some other formalism. Without a principled measure, 'real invariant' risks collapsing into an intuitive label rather than a falsifiable property.",
+      "score": 0.97
+    },
+    {
+      "text": "Under what data and training conditions are real invariants actually identifiable rather than permanently underdetermined by equally predictive surrogates? The conjecture says sufficient variation, breadth, and constraint can force invariant learning, but it remains unclear what kinds and amounts of variation break shortcut equivalence classes, and whether next-token objectives alone can ever guarantee recovery of the invariant instead of one of many functionally interchangeable latent codings.",
+      "score": 0.95
+    },
+    {
+      "text": "What role do architecture and optimization play relative to the data-generating structure? The conjecture emphasizes properties of the predictive problem, but an unresolved tension is whether SGD, transformer inductive biases, finite depth/width, and tokenization can systematically favor brittle surface heuristics or particular latent factorizations even when a domain invariant is in principle the most compressive solution. If so, 'forced by prediction' may depend as much on learning dynamics as on the invariant's objective load-bearing status.",
+      "score": 0.93
+    }
+  ]
+}

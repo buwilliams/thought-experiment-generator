@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-can-decentralized-informational-infras",
+  "conjecture_id": "thought-experiments",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the necessary and sufficient threshold conditions under which reputational exclusion becomes incentive-compatible enough to functionally replace coercive enforcement? The conjecture names observability, durable/portable memory, costly-to-fake signals, persistent identity, and repeated interaction, but leaves unresolved how these variables trade off, whether they are jointly necessary, and whether there are phase transitions where small degradations cause sudden collapse of compliance.",
+      "score": 0.96
+    },
+    {
+      "text": "Can decentralized informational infrastructure internalize harms that are delayed, diffuse, or externally imposed, or is there a principled impossibility boundary? The conjecture treats pollution, hidden-product fraud, violence, and systemic contagion as hard limits, but it remains open whether richer sensing, prediction markets, insurance pools, bonded staking, or network-level exclusion can endogenize some of these harms without central coercion.",
+      "score": 0.93
+    },
+    {
+      "text": "How robust is the conjecture once strategic adaptation and adversarial co-evolution are introduced? Even with persistent identity and public records, actors may collude, sybil through identity markets, manipulate signals, exploit latency, or concentrate power in reputation intermediaries, potentially recreating de facto centralization. The open question is whether decentralized enforcement is structurally stable under attack or only works in non-adversarial regimes.",
+      "score": 0.95
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-some-social-norms-stable-across-centuries-while-o",
+  "conjecture_id": "feedback-topology-lens",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can we operationally distinguish a norm sustained by genuinely redundant, distributed feedback from one only appearing robust while actually depending on a few hidden bottlenecks? The conjecture is structurally appealing, but without measurable diagnostics it risks becoming a post hoc story applied after collapse.",
+      "score": 0.97
+    },
+    {
+      "text": "What determines the tipping point at which reinforcing loops flip from stabilizing conformity to accelerating defection? The conjecture identifies hidden noncompliance and visible defections, but leaves open a predictive theory of threshold dynamics: how much pressure, visibility, or bottleneck failure is needed for rapid collapse versus partial adaptation.",
+      "score": 0.95
+    },
+    {
+      "text": "To what extent are internalization and external enforcement really separable causes of norm stability, rather than mutually constituting parts of the same reproduction system? The conjecture contrasts deeply integrated norms with bottleneck-enforced ones, but many norms may become internalized only because long-run enforcement, institutions, and coordination repeatedly shaped preferences.",
+      "score": 0.9
+    }
+  ]
+}

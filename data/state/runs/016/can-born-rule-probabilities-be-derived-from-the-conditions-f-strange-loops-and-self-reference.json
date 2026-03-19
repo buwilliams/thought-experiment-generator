@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 16,
+  "logical_consistency": 0.78,
+  "hard_to_vary": 1.0,
+  "total": 0.9339999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made into a non-circular, quantitative derivation of the Born rule? The central unresolved tension is whether 'stable, recursively confirmable records' can be defined independently of probabilistic assumptions and then shown to select exactly amplitude-squared weighting rather than smuggling the Born rule in through notions like redundancy, durability, or typicality. This is the key open problem because without a precise fixed-point theorem or dynamical model, the proposal risks being an evocative redescription rather than an explanation.",
+      "score": 0.98
+    },
+    {
+      "text": "What is the exact physical threshold by which low-amplitude branches fail to sustain record ecologies, given that in unitary quantum mechanics even tiny-amplitude branches still formally exist and can contain internally coherent observers? The unresolved tension is between the conjecture's claim that insufficient amplitude undermines recursive record stability and the standard Everettian picture in which branch coherence, not amplitude size alone, governs quasi-classical persistence. A worthwhile problem is to identify a concrete mechanism linking amplitude to record reliability, memory retention, redundancy, or error correction.",
+      "score": 0.94
+    },
+    {
+      "text": "How observer-independent is the notion of a 'record ecology' and its fixed point? The conjecture relies on a hierarchy of system, apparatus, memory, report, and theory, but it is unclear whether this structure is fundamental, emergent, or anthropocentric. The open question is whether the proposed measure is invariant across different decompositions into observers, subsystems, and coarse-grainings, or whether different representational architectures would induce different 'stable loop' measures. If not resolved, the account may explain only human-style epistemology rather than quantum probability itself.",
+      "score": 0.91
+    }
+  ]
+}

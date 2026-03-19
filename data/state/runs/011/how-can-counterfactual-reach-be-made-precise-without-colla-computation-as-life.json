@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-counterfactual-reach-be-made-precise-without-colla",
+  "conjecture_id": "computation-as-life",
+  "run": 11,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "How can 'the same internal program remains valid under structural intervention' be formalized non-circularly? The conjecture depends on load-bearing notions—core rule, boundary-condition update, latent generative structure, ontology rewrite, and adjacency among worlds—but without a principled criterion these can be redescribed to make reach arbitrarily high or low. A key open problem is to define equivalence classes of models and interventions so that counterfactual reach is invariant to superficial reparameterization yet sensitive to genuine explanatory structure.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the right measure over the space of structurally transformed worlds, and how can it avoid trivialization? If reach is 'how large/diverse' the valid world-subset is, the result depends entirely on how neighboring worlds are generated, weighted, and bounded for computability. Too permissive a space rewards vacuous universal models; too narrow a space collapses back to ordinary robustness or domain generalization. The unresolved tension is whether there exists a non-arbitrary intervention distribution or complexity-weighted geometry of world-variants that makes the concept empirically and mathematically substantive.",
+      "score": 0.95
+    },
+    {
+      "text": "How does counterfactual reach differ in a load-bearing way from existing notions such as causal abstraction, transportability, out-of-distribution generalization, mechanistic invariance, and minimum description length? The conjecture asserts non-equivalence, but it remains open whether reach is a genuinely new property or a recombination of known ones under different language. A worthwhile problem is to derive separating examples and impossibility/results showing cases where these notions come apart, and to identify whether reach predicts explanatory or scientific success better than existing measures.",
+      "score": 0.93
+    }
+  ]
+}

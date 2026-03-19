@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "extreme-cases",
+  "run": 10,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "What exactly distinguishes 'explanatory causation' from sophisticated but merely mechanical control, and where is the principled boundary? The conjecture relies on internal representation, criticism, and responsiveness to reasons, but it leaves open how to non-arbitrarily separate a reflective person from edge cases like thermostats, large language models, reinforcement learners, or hierarchical control systems that also model, update, and alter behavior.",
+      "score": 0.96
+    },
+    {
+      "text": "Can reasons genuinely be causally efficacious in a deterministic physical world without collapsing into a redescription of lower-level physical causes? The conjecture says determinism is orthogonal because behavior can be caused through reasons, but it remains unresolved whether this is a robust emergent causal category with explanatory autonomy or only a useful interpretive stance imposed by observers.",
+      "score": 0.93
+    },
+    {
+      "text": "What grounds moral responsibility on this account, especially across boundary cases of impaired, manipulated, or developmentally limited agents? If responsibility depends on participation in the space of reasons and criticism, the open problem is how to measure degrees of that participation and how to treat coercion, addiction, brainwashing, compulsion, or diminished rational capacity without smuggling in older metaphysical assumptions.",
+      "score": 0.95
+    }
+  ]
+}

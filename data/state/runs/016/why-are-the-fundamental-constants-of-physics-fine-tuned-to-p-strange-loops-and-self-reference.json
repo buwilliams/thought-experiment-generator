@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular and operationalized into a testable criterion for 'strange-loop-permitting' universes? The core unresolved tension is whether 'recursively interpretable' picks out a genuine physical constraint beyond anthropic restatement. This requires defining measurable necessary conditions for self-modeling systems—e.g., depth of stable hierarchical organization, computational capacity, memory, error-correction, and long-lived energy gradients—and showing that these conditions carve out a narrower or different region of parameter space than standard life-permitting or observer-permitting criteria.",
+      "score": 0.97
+    },
+    {
+      "text": "Is reflective self-reference actually a distinct fine-tuning target, or does it reduce to generic open-ended complexity under known physics? The conjecture assumes a substantive gap between mere complexity and epistemic loops, but it is unresolved whether self-modeling requires special additional structure or simply emerges once evolution, computation, and long timescales are available. If the latter, the conjecture may add little explanatory content; if the former, we need a theory of what extra structural features make self-reference possible and why constants should be especially sensitive to them.",
+      "score": 0.91
+    },
+    {
+      "text": "What is the modal scope of the claim across possible laws, substrates, and forms of cognition? The conjecture is framed using our universe's atoms, stars, chemistry, and biological-style hierarchy, but an open question is whether strange loops could arise in radically different physics or non-chemical substrates. If self-referential observers are possible in many very different lawful worlds, then the alleged narrow viability band may be much wider than suggested; if not, we need principled arguments for why self-reference depends on specific kinds of multiscale stability and feedback rather than merely some alternative route to computation and representation.",
+      "score": 0.89
+    }
+  ]
+}

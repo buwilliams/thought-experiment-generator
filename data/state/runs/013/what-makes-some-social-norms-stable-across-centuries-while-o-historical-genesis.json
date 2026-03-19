@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-some-social-norms-stable-across-centuries-while-o",
+  "conjecture_id": "historical-genesis",
+  "run": 13,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.7,
+  "total": 0.7689999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can one distinguish norms that persist because they still solve a live coordination problem from norms that persist mainly through path dependence, power, or preference-shaping by institutions? The conjecture risks explaining stability functionally even when the current 'problem-solution fit' is only retrospective or ideological. A strong version needs criteria or tests that separate genuine ongoing function from exaptation, coercive lock-in, and post hoc rationalization.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the causal mechanism of rapid norm collapse, and under what structural conditions does disappearance of the original problem actually produce fast change rather than long lag, symbolic persistence, or replacement by new justifications? The conjecture predicts sharp collapse when fit breaks, but many norms survive long after their original conditions vanish. The open problem is to model the thresholds, feedback loops, and institutional dependencies that turn misfit into cascade.",
+      "score": 0.93
+    },
+    {
+      "text": "How should the conjecture handle norms whose durability seems driven by identity, sacred value, or moral truth-claims rather than coordination efficiency? If rationales can mutate while practice remains, then the theory may become too elastic unless it specifies whether identity and moral endorsement are independent causes, downstream stabilizers of older functions, or new functions in their own right. Clarifying this boundary is crucial for explanatory power.",
+      "score": 0.9
+    }
+  ]
+}

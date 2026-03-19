@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-supply-a-non-circular-precise-criterion",
+  "conjecture_id": "mathematical-formalism",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can the 'relevant' world structure and invariants be specified non-circularly and uniquely enough to ground correctness conditions? The conjecture appeals to independently specifiable task structure, but it remains open how to choose W, T, and the privileged invariants without smuggling in the agent’s success criteria, observer interests, or semantic assumptions. A key problem is whether there is a principled procedure for individuating the structure that makes an internal state a model rather than an arbitrary homomorphic redescription.",
+      "score": 0.97
+    },
+    {
+      "text": "Is the existence of an approximate structure-preserving map actually sufficient for genuine representation, or only necessary? Many simple controllers, dynamical systems, and even thermostats may admit some nontrivial homomorphism under a cleverly chosen state space and transformation family. The unresolved tension is how to prevent trivialization: what additional constraints on counterfactual richness, decoupled use, explanatory indispensability, or action-guiding generalization are needed so that the criterion distinguishes robust model-based representation from mere useful covariance.",
+      "score": 0.99
+    },
+    {
+      "text": "What is the right formal treatment of approximation, granularity, and misrepresentation in real systems? The conjecture relies on approximate commutation and invariant preservation, but leaves open how much distortion, abstraction, or lossy compression is compatible with correctness conditions. This raises a new problem: defining metrics or equivalence classes under which internal states can be systematically wrong while still counting as models, especially in stochastic, partial, hierarchical, or learned representations where exact homomorphism is unavailable.",
+      "score": 0.94
+    }
+  ]
+}

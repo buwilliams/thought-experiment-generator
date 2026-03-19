@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "historical-genesis",
+  "run": 14,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.8,
+  "total": 0.824,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing parts' be operationalized without collapsing into a merely historical or rhetorical criterion? The conjecture ties explanatory necessity to the specific failures an account was built to solve, but this raises an unresolved tension: many genuinely good explanations are reused, generalized, or reconstructed outside their original historical context. What principled test distinguishes real counterfactual necessity from post hoc stories about why a component was introduced?",
+      "score": 0.95
+    },
+    {
+      "text": "Is the proposed genealogy of explanation too sharp or overly dichotomous? The conjecture contrasts truth-tracking, criticism-surviving explanation with older forms like myth, taxonomy, narrative, analogy, and curve-fitting, but in practice these often contribute to discovery, constraint, and criticism. The open question is whether swappability and load-bearingness are genuinely different kinds, or whether they lie on a continuum where classification, compression, and persuasion can sometimes scaffold explanation rather than merely masquerade as it.",
+      "score": 0.91
+    },
+    {
+      "text": "What is the relation between load-bearingness and truth? The conjecture suggests that parts are explanatory when they exclude alternatives and survive criticism, yet false theories can also have tightly interdependent, non-swappable components. This creates a major open problem: does non-arbitrariness under variation track truth, progress, and explanatory depth, or only internal structural rigidity? A stronger account is needed of how criticism-shaped necessity connects to reality rather than just to coherent but mistaken systems.",
+      "score": 0.97
+    }
+  ]
+}

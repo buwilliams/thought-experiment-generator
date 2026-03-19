@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "How can 'decomposition destroys payoff-relevant strategic information' be made mathematically precise in a way that distinguishes genuine whole-system perspectivality from mere implementation dependence or bandwidth limits? The core open problem is to define an invariant decomposition test: what counts as an admissible partition, what communication between parts is allowed, and how to measure whether lost performance reflects irreducible strategic unity rather than a poorly chosen interface or insufficient recombination scheme.",
+      "score": 0.97
+    },
+    {
+      "text": "Is irreducible perspectivality actually sufficient for consciousness, or does it also characterize many clearly nonconscious systems such as sophisticated RL agents, firms, markets, immune systems, or distributed control architectures operating in repeated games? The major tension is whether the conjecture identifies consciousness specifically or only a broader class of temporally integrated adaptive systems.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the status of the 'single unified strategic horizon' requirement in systems that are internally plural, hierarchical, or partially decomposable? Many candidate conscious systems appear modular, conflicted, and multi-timescale rather than governed by one clean locus. The open question is whether perspectivality comes in degrees, whether multiple overlapping perspectives can coexist within one system, and how decomposition failure should be analyzed in such cases.",
+      "score": 0.91
+    }
+  ]
+}

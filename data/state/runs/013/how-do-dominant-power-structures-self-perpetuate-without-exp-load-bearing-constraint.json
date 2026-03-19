@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-dominant-power-structures-self-perpetuate-without-exp",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized so that 'load-bearing couplings' are distinguished from merely correlated features of a power system? The central unresolved issue is identification: what observable tests, interventions, or comparative cases would show that gatekeeping criteria, compounding resources, local rationality, or narrative framing are causally necessary for self-repair rather than just common accompaniments?",
+      "score": 0.97
+    },
+    {
+      "text": "Under what conditions does a self-perpetuating structure fail to reproduce itself once explicit collusion is absent? The conjecture is strongest if it can specify boundary conditions and failure modes: levels of looseness in coupling, shocks, rival institutions, technological change, norm shifts, or redistribution beyond which ordinary action no longer reproduces dominance. Without this, the claim risks becoming too universal to be informative.",
+      "score": 0.94
+    },
+    {
+      "text": "What is the relative causal role of ideology versus material/institutional feedback loops in maintaining dominance, and can one substitute for the other? The conjecture treats narrative framing as load-bearing, but also suggests prejudice, greed, and tradition are replaceable shells if incentive architecture remains. This raises a real tension: when do legitimacy narratives actively stabilize the system, and when can structures persist with weak belief, cynicism, or open disbelief?",
+      "score": 0.9
+    }
+  ]
+}

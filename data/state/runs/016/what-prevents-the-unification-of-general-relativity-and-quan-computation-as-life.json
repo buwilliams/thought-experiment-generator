@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan",
+  "conjecture_id": "computation-as-life",
+  "run": 16,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "Can one formulate a single mathematically precise framework in which both quantum state evolution and the causal/update structure itself are dynamical, while still recovering the core consistency conditions of both theories—unitarity or an adequate generalization of it, relativistic causal structure, gauge/diffeomorphism invariance, and a viable notion of observables? This is the central unresolved tension because the conjecture identifies the blockage as a substrate mismatch, but does not yet specify what formal architecture avoids circularity when the rules governing computation are themselves part of the computation.",
+      "score": 0.98
+    },
+    {
+      "text": "By what mechanism can smooth, approximately local Lorentzian spacetime emerge from an underlying informational or computational network, especially given quantum entanglement and potentially discrete microdynamics? The open problem is to explain continuity, dimensionality, locality, and the equivalence-principle-like universality of gravitational coupling as robust emergent features rather than assumptions. Without this, the conjecture remains a suggestive metaphor rather than an explanatory theory.",
+      "score": 0.95
+    },
+    {
+      "text": "What empirical signatures would distinguish 'self-organizing computation with emergent geometry' from existing approaches to quantum gravity and from standard effective quantum field theory on curved spacetime? The conjecture raises many explanatory targets—Planck scale, black hole information, arrow of time, emergence of classicality—but it is unresolved which of these yield novel, testable deviations or sharp retrodictions. Turning the idea into a problem of discriminating predictions is crucial for progress.",
+      "score": 0.91
+    }
+  ]
+}

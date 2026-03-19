@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-some-social-norms-stable-across-centuries-while-o",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 13,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How far can repeated-game structure alone explain norm persistence, versus requiring independent causal roles for internalized values, legitimacy, identity, sacredness, or moral emotions? The conjecture treats belief as secondary, but many norms appear to survive even when monitoring is weak, while others fail despite dense repeated interaction. The unresolved tension is whether these 'non-strategic' factors are reducible to iterated-game mechanisms or are distinct stabilizing variables.",
+      "score": 0.96
+    },
+    {
+      "text": "What determines the boundary conditions under which norms can be reconstituted after major shocks versus irreversibly collapse? The conjecture says norms return if repetition networks remain intact, but this leaves open a sharper problem: which structural thresholds of memory, observability, mobility, anonymity, and enforcement are sufficient for recovery, and are there tipping points or hysteresis effects where small losses in reputational continuity produce permanent norm change?",
+      "score": 0.94
+    },
+    {
+      "text": "Are there important classes of long-lived norms that persist without dense repeated interaction, through one-to-many institutions such as states, law, mass media, schooling, archives, or algorithmic surveillance? This raises a tension in the conjecture between interpersonal repeated play and impersonal institutional memory: perhaps modern norm stability can be sustained by centralized record-keeping and enforcement even when local reciprocity is weak, implying a different mechanism than classic iterated interaction.",
+      "score": 0.92
+    }
+  ]
+}

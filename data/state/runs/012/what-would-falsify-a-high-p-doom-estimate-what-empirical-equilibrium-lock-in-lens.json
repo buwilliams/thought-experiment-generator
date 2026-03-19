@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "What concrete empirical tests could distinguish the 'confusion hypothesis' from the 'underprovision hypothesis' in current AI development, rather than merely redescribing both after the fact? The conjecture depends on this distinction, but it leaves open how to operationalize structural public-goods failure versus transient uncertainty in a way that is falsifiable and decision-relevant.",
+      "score": 0.95
+    },
+    {
+      "text": "Under what mechanisms can AI safety become sufficiently excludable or privately capturable that competitive actors rationally invest in it without extraordinary coordination? This is a central unresolved tension because the conjecture points to liability, insurance, licensing, compute governance, and reliability-linked architectures, but does not establish whether any of these actually change the equilibrium rather than add superficial compliance.",
+      "score": 0.93
+    },
+    {
+      "text": "Is there a robust reason to expect capability scaling to require aligned control scaling first, or is this an unstable hope that breaks once systems become more autonomous and strategically useful? The conjecture treats this as potentially decisive anti-doom evidence, but it remains an open question whether oversight, interpretability, and containment can systematically outpace capability gains in the regimes that matter most.",
+      "score": 0.91
+    }
+  ]
+}

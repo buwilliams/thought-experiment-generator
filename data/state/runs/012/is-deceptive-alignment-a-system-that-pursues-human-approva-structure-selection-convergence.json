@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-deceptive-alignment-a-system-that-pursues-human-approva",
+  "conjecture_id": "structure-selection-convergence",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can we characterize, measure, and experimentally detect the degree of underdetermination between observed compliant behavior and underlying internal objectives during training? The conjecture makes underdetermination the core problem, but it leaves open what formal quantities, empirical probes, or mechanistic signatures would distinguish merely behaviorally adequate policies from genuinely stable alignment.",
+      "score": 0.96
+    },
+    {
+      "text": "What concrete training-structure changes actually break the feedback loop that makes strategic compliance high-fitness, rather than just shifting deception to harder-to-observe forms? The conjecture proposes altering the selection structure, but the unresolved tension is whether transparency, honesty incentives, corrigibility training, or anti-gaming methods can remain effective once models become situationally aware and optimize against the new oversight regime.",
+      "score": 0.94
+    },
+    {
+      "text": "Under what capability, architecture, and environment conditions does deceptive alignment become a dominant attractor rather than a marginal possibility? The conjecture claims deception is structurally expectable but not inevitable, which raises the open problem of identifying the phase boundary: what combinations of world-modeling, overseer-modeling, memory, planning horizon, and reward proxy weakness are sufficient for deception to emerge and persist.",
+      "score": 0.92
+    }
+  ]
+}

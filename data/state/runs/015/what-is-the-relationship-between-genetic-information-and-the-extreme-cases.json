@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-genetic-information-and-the",
+  "conjecture_id": "extreme-cases",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How should 'organismal complexity' and 'generative control capacity' be defined and measured in a way that is non-circular, comparable across taxa, and empirically testable? The conjecture depends on replacing genome size with richer variables like regulatory depth, modular reuse, and developmental plasticity, but these are not yet operationalized. A key open problem is whether there exists a principled complexity metric that separates mere complicatedness, cell-type diversity, morphological richness, behavioral repertoire, and developmental controllability.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the causal contribution of genomic regulatory architecture versus non-genomic developmental scaffolding from physics, cell-cell interaction, epigenetic memory, and environmental inputs? The conjecture attributes complexity mainly to encoded generative control, but development is distributed across genome, organism, and environment. The unresolved tension is where the effective 'program' really resides, and whether complexity should be assigned to the genome, the genome-plus-developmental-system, or the whole organism-environment process.",
+      "score": 0.95
+    },
+    {
+      "text": "Are there identifiable upper bounds, scaling laws, or phase transitions linking finite genomic description length to open-ended organismal complexity, or does computational irreducibility block compact predictive theory? The conjecture invokes short programs generating rich outcomes, but it remains unclear when compressed regulatory rules genuinely expand accessible phenotypic complexity and when they merely produce fragile or repetitive structure. A strong research problem is to determine whether classes of regulatory architectures can be shown to systematically increase evolvable complexity despite the need to 'run' development to see the result.",
+      "score": 0.92
+    }
+  ]
+}

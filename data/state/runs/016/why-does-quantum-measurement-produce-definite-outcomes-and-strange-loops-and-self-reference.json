@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 16,
+  "logical_consistency": 0.72,
+  "hard_to_vary": 1.0,
+  "total": 0.9159999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'self-referential closure' be defined as a precise physical/mathematical condition within standard quantum theory or a minimal extension of it, rather than as a semantic metaphor? In particular, what observable criterion distinguishes interactions that merely generate entanglement/decoherence from those that allegedly force a unique self-consistent fixed point, and how does this avoid either re-describing decoherence in new language or smuggling in collapse by stipulation?",
+      "score": 0.98
+    },
+    {
+      "text": "Can the conjecture derive the Born rule quantitatively from the proposed 'capacity' or stability measure over self-consistent branches? This is the central unresolved tension because without a principled measure that yields the exact |psi|^2 weights, the proposal does not yet explain outcome probabilities and risks being underdetermined relative to Everettian, decoherence-based, or objective-collapse accounts.",
+      "score": 0.99
+    },
+    {
+      "text": "What is the exact boundary of the loop required for definiteness, and does the account imply testable deviations from standard quantum predictions? If durable records or apparatus-level loops already suffice, then definiteness may arise before conscious observation; if richer observer self-models are required, the view approaches observer-dependence. Clarifying where closure occurs, how Wigner's-friend-style nested observers are handled, and whether different closures can disagree without contradiction is a major open problem.",
+      "score": 0.97
+    }
+  ]
+}

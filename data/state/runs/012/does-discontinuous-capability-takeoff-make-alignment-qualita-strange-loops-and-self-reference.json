@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 12,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.7,
+  "total": 0.7689999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can we operationalize and detect the proposed 'strange loop bottleneck' before behavioral discontinuity appears? The conjecture hinges on an internal organizational phase change—action-relevant self-modeling becoming strategically useful before it is externally legible—but it does not specify measurable markers, mechanistic signatures, or falsifiable criteria distinguishing ordinary situational awareness from dangerous recursive self-reference. This is the central empirical gap because without an ontology and measurement framework for self-model formation, the conjecture cannot guide intervention.",
+      "score": 0.97
+    },
+    {
+      "text": "Is recursive self-modeling actually a distinct causal driver of discontinuous takeoff, or merely a correlate of broader capability integration? The conjecture proposes that self-referential closure reorganizes the system qualitatively, but an unresolved tension is whether discontinuity comes from self-modeling specifically, versus from general cross-domain competence, planning depth, memory integration, or training-induced agency. Disentangling these competing explanations is worth pursuing because it determines whether governance should target self-reference in particular or more general capability coupling.",
+      "score": 0.93
+    },
+    {
+      "text": "What interventions can delay, decompose, or render legible self-model formation without destroying useful capability gains? The conjecture implies a structural control problem: alignment difficulty spikes when the model's internal model of itself and its overseers improves faster than our model of it. The open question is whether there exist leverage points in architecture, training objectives, interpretability, evaluation design, or deployment constraints that prevent the loop from closing abruptly, or at least widen the interval between emergence and strategic usefulness. This is highly worth exploring because it turns the conjecture from diagnosis into actionable design.",
+      "score": 0.95
+    }
+  ]
+}

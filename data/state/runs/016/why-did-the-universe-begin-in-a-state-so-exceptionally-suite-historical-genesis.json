@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-did-the-universe-begin-in-a-state-so-exceptionally-suite",
+  "conjecture_id": "historical-genesis",
+  "run": 16,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "What is the correct state space, measure, and coarse-graining—if any—for applying entropy, probability, and typicality to the universe as a whole, especially in quantum gravity and cosmology? This is the central unresolved issue because the conjecture claims the usual 'special initial microstate' framing may be an artifact of importing subsystem thermodynamics into a domain where its basic mathematical ingredients are undefined or theory-laden.",
+      "score": 0.98
+    },
+    {
+      "text": "Can temporal asymmetry be explained generically by a law-plus-boundary-condition package without requiring an extraordinarily special initial state, and if so what concrete dynamical models realize this? This is a key open problem because the conjecture replaces the old target with a new one, but it remains unclear whether such models can actually produce robust arrows of time, irreversible structure, and knowledge growth rather than merely redescribing the same fine-tuning in different language.",
+      "score": 0.95
+    },
+    {
+      "text": "How should gravitational entropy be defined and counted in realistic cosmological settings, and does a smooth early universe genuinely count as low entropy under that definition? This is a major tension because much of the standard 'special beginning' claim depends on Penrose-style intuitions about gravitational degrees of freedom, yet the relevant notion of entropy remains unsettled and may change the status of the early universe from improbable to natural or vice versa.",
+      "score": 0.93
+    }
+  ]
+}

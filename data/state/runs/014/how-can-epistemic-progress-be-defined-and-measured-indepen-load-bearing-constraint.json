@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 14,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "Can 'load-bearing explanatory structure' be made observer-independent enough to measure, rather than collapsing into a model-relative notion that depends on how we choose to carve up internal representations? The core tension is whether load-bearingness is an objective property of cognition or an artifact of our intervention vocabulary, interpretability tools, and decomposition choices.",
+      "score": 0.97
+    },
+    {
+      "text": "What distinguishes genuinely explanatory mutual constraint from merely brittle or highly entangled heuristics? A system may show strong counterfactual dependence and broad degradation under perturbation simply because its internals are densely coupled, not because they encode world-discriminating explanations. The open problem is to separate epistemic necessity from accidental dependence.",
+      "score": 0.95
+    },
+    {
+      "text": "How can this framework adjudicate cases where epistemic progress and performance diverge—e.g., systems that gain benchmark success through shallow adaptation, or systems with richer internal structure that temporarily perform worse? The unresolved question is whether load-bearingness predicts long-run capability, corrigibility, and transfer better than output-based metrics, and under what conditions the two come apart.",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "historical-genesis",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'survives criticism' be operationalized for token-predicting systems without smuggling in human judgment or architecture-based assumptions? The conjecture shifts the criterion from mechanism to explanatory performance, but it leaves open what concrete tests distinguish compressive, counterfactual, error-correctable explanation from fluent post hoc rationalization.",
+      "score": 0.97
+    },
+    {
+      "text": "What makes an output count as genuinely new knowledge rather than a recombination of training-derived fragments, if all knowledge growth is transformative rearrangement? The conjecture rejects the simple novelty/repetition boundary, but it still needs a principled account of when problem-solving success reflects discovery of explanatory structure rather than accidental synthesis or benchmark overfitting.",
+      "score": 0.93
+    },
+    {
+      "text": "If the decisive test is historical and epistemic rather than architectural, what social or institutional process should certify machine-generated knowledge claims? The conjecture implies that knowledge status depends on criticism, variation, and continued problem-solving, raising the unresolved question of whether current scientific norms can absorb AI systems as participants in knowledge creation or whether new evaluative institutions are needed.",
+      "score": 0.88
+    }
+  ]
+}

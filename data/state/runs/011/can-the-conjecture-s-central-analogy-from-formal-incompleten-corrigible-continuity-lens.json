@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-s-central-analogy-from-formal-incompleten",
+  "conjecture_id": "corrigible-continuity-lens",
+  "run": 11,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be formalized tightly enough to distinguish a genuine incompleteness-style limit from ordinary practical limits of auditing and governance? The key unresolved issue is what counts as a 'sufficiently expressive institution,' what the analogue of proof/derivation is for institutional decisions, and whether there is a theorem-level result showing unavoidable internal undecidability about legitimacy rather than just a persuasive metaphor.",
+      "score": 0.96
+    },
+    {
+      "text": "How can an institution specify identity-preserving invariants that are both stable enough to ground legitimacy and revisable enough to permit adaptation without covertly changing the institution's identity? The open tension is whether the proposed architecture can non-arbitrarily separate constitutional invariants from operational rules and revision rules, or whether disputes over that boundary simply relocate the self-knowledge problem to a higher layer.",
+      "score": 0.93
+    },
+    {
+      "text": "What exact role must external criticism play for disciplined recursive accountability to work, and how can it be structured without undermining institutional autonomy or creating performative rather than truth-tracking oversight? The unresolved systems question is how to design feedback loops so that external critique is genuinely load-bearing against closed-loop self-affirmation, rather than merely another internalized ritual or a destabilizing external veto.",
+      "score": 0.91
+    }
+  ]
+}

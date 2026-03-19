@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-circular and empirically discriminating? It posits that both mathematics and physics converge on compressible, transformation-stable structures, but this risks redescribing success after the fact unless it yields independent criteria for which mathematical domains should later become physically useful, which should remain sterile, and under what conditions the overlap should fail.",
+      "score": 0.97
+    },
+    {
+      "text": "What exactly is the selection mechanism on mathematics, and is 'epistemic sterility' a real structural filter rather than a sociological artifact? The conjecture assumes mathematical branches that lack compression, rich inferential connectivity, or generalization power cannot persist as reusable knowledge, but many areas survive for long periods without known applications. A key open problem is to specify the load-bearing constraints that distinguish genuinely selected mathematical structure from historically contingent research fashion.",
+      "score": 0.92
+    },
+    {
+      "text": "Why should the world itself be describable by highly compressible, transformation-stable regularities accessible to finite agents? The conjecture shifts the mystery from math's fit to the existence and accessibility of deep regularity in nature, but does not explain that regularity. This leaves an unresolved tension between an epistemic-selection story and an ontological account of why reality offers the kinds of invariants and symmetries that make the equilibrium possible at all.",
+      "score": 0.95
+    }
+  ]
+}

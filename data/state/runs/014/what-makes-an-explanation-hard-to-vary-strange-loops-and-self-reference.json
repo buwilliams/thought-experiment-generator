@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 14,
+  "logical_consistency": 0.86,
+  "hard_to_vary": 0.9,
+  "total": 0.888,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-circular and operational? The core notions—'closed self-referential constraint network', 'return path', 'constraint density', and 'reenactment'—risk redescribing explanatory success rather than distinguishing it. A key open problem is to formulate criteria or measures that can tell, independently of prior judgment, when an explanation is genuinely load-bearing versus merely rhetorically holistic.",
+      "score": 0.97
+    },
+    {
+      "text": "Is recursive structural similarity between explanans and explanandum actually necessary for deep explanation, or only for a special subclass? The conjecture claims that load-bearing explanations are those where the explanation and phenomenon share the same recursive organization, but many powerful explanations in mathematics and physics seem explanatory without obvious self-referential closure. The unresolved tension is whether the conjecture identifies a universal feature of explanation or overfits to strange-loop cases like consciousness and self-reference.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the relationship between 'load-bearing' structure and multiple realizability or explanatory pluralism? The conjecture treats swappability as evidence that parts are non-constitutive, yet in many domains an explanation can be robust precisely because different lower-level realizations instantiate the same higher-level constraints. The open question is whether underdetermined descent shows explanatory weakness, or whether it instead marks a deeper invariant structure that the conjecture currently misclassifies as modular rather than genuinely explanatory.",
+      "score": 0.93
+    }
+  ]
+}

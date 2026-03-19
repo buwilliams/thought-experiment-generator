@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+  "conjecture_id": "mathematical-formalism",
+  "run": 12,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.7,
+  "total": 0.7689999999999999,
+  "candidate_problems": [
+    {
+      "text": "How should S(I,G) be formally defined so that 'dynamic stability' is nontrivial, testable, and not merely stipulated? The conjecture depends on a precise account of stability under reflection, self-modification, ontology change, and environmental interaction, but it is unclear what mathematical objects represent these transformations, what counts as preserving G versus reinterpretation of G, and whether stability is binary, graded, or path-dependent. Without this, the claim that F_stable does not factor may be unfalsifiable or definition-dependent.",
+      "score": 0.97
+    },
+    {
+      "text": "Which properties of goals are actually fixed points under increasing capability, and are these properties substantive enough to imply real non-orthogonality rather than trivial coherence filtering? The open question is whether reflection and better world-models select a narrow, informative class of terminal objectives, or merely exclude malformed utility functions while leaving a vast diverse remainder. This matters because the conjecture is significant only if the surviving class is meaningfully constrained by intelligence rather than just by basic formal well-definedness.",
+      "score": 0.94
+    },
+    {
+      "text": "Are the observed 'instrumental invariants' and ontology-preservation pressures genuine constraints on terminal goals, or only convergences in strategy and representation? The conjecture may be conflating behavioral clustering with goal convergence: agents with very different G may all seek resources, self-preservation, and conceptual stabilization without their terminal values becoming less independent. A key unresolved tension is whether higher intelligence changes what goals can stably exist, or merely how diverse goals are pursued in similar-looking ways.",
+      "score": 0.91
+    }
+  ]
+}

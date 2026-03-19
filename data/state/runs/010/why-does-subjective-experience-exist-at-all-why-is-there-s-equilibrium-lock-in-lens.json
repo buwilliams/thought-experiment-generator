@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "How, if at all, does solving an internal public-goods/coordination problem entail subjective experience rather than merely more efficient global control? The core unresolved tension is the explanatory gap between a functional-organizational story (broadcast, integration, subsidy of non-excludable information) and the claim that this organization has an 'inside aspect' at all, rather than being a sophisticated but still experientially dark architecture.",
+      "score": 0.98
+    },
+    {
+      "text": "What are the necessary and sufficient structural conditions for consciousness on this view, and do they cleanly distinguish conscious systems from unconscious but globally integrated ones? The open problem is to specify measurable criteria for 'knowledge-bearing control system,' 'globally useful but locally non-excludable information,' and 'provision' so the conjecture can handle edge cases such as feedforward systems, large language models, corporations, split-brain patients, cerebellar processing, and distributed multi-agent systems.",
+      "score": 0.96
+    },
+    {
+      "text": "Why should the first-person unity and qualitative character of experience map to successful public-good provision, rather than to multiple local perspectives, graded partial access, or competitive coalitions? This raises an unresolved systems question about whether unity, salience, affect, and phenomenological structure emerge from one shared commons, from layered commons with nested access rights, or from dynamic bargaining among subsystems.",
+      "score": 0.9
+    }
+  ]
+}

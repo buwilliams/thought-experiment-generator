@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture distinguish genuinely load-bearing components from multiply realizable functions? If different concrete details can substitute for one another while preserving the same enforcement/transmission role, then swappability may indicate functional equivalence rather than ornamental description. The open problem is to define the right individuation level for explanatory parts: token details, functional roles, or whole mechanism classes.",
+      "score": 0.95
+    },
+    {
+      "text": "What operational test could reliably identify whether a detail changes the maintained equilibrium rather than merely co-varies with it? The conjecture proposes counterfactual substitution, but in real social systems feedback loops, redundancy, and adaptation make it hard to tell whether a component is causally necessary, historically contingent, or only temporarily important. A new problem is to develop intervention or comparative methods that can separate necessity, redundancy, and path dependence.",
+      "score": 0.93
+    },
+    {
+      "text": "Does every deep explanation of norms have to be reducible to coordination, incentive, enforcement, and maintenance structure, or are there cases where meaning, identity, legitimacy, or cognition are themselves irreducible load-bearing factors? The unresolved tension is whether the framework is a powerful unifying abstraction or an overly narrow reduction that may miss mechanisms operating through internalized reasons rather than explicit collective-action maintenance.",
+      "score": 0.91
+    }
+  ]
+}

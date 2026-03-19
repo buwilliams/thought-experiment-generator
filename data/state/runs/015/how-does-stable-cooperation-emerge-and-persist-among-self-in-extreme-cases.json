@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-stable-cooperation-emerge-and-persist-among-self-in",
+  "conjecture_id": "extreme-cases",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal structural threshold at which informational continuity makes defection locally self-defeating? More precisely: how do repetition rate, identity persistence, memory fidelity, observability, partner choice, and noise combine into a phase transition between exploitative and cooperative regimes, and is there any generalizable criterion across different network topologies and game classes?",
+      "score": 0.96
+    },
+    {
+      "text": "How robust is the conjecture once information systems themselves become strategic objects of manipulation? If agents can forge identities, launder reputation, collude, spread false signals, or exploit asymmetric visibility, does informational continuity still stabilize cooperation, or does the system instead select for meta-defection against the reputation mechanism itself?",
+      "score": 0.99
+    },
+    {
+      "text": "Does making defection informationally costly also create unresolved tradeoffs with exploration, forgiveness, privacy, and power concentration? A system that preserves durable social information may stabilize cooperation, but it may also lock in errors, over-punish noise, suppress beneficial risk-taking, or empower gatekeepers; what structural conditions let cooperative feedback persist without becoming brittle or oppressive?",
+      "score": 0.94
+    }
+  ]
+}

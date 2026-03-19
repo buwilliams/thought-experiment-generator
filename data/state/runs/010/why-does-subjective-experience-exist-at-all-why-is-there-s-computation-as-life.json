@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "computation-as-life",
+  "run": 10,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture supply a non-circular, operational criterion for when a self-model is genuinely 'causally necessary' for regulation, rather than merely correlated with or epiphenomenal to control? This is the key demarcation problem: without a precise test, the view risks either over-attributing subjectivity to many control systems or collapsing into a relabeling of sophisticated feedback.",
+      "score": 0.97
+    },
+    {
+      "text": "Why should self-referential, valenced regulation yield subjective experience at all, rather than only increasingly effective self-maintenance behavior? The conjecture redescribes the functional conditions under which experience appears, but the central explanatory tension remains whether 'information for itself' explains first-person presence or only its behavioral/computational role.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the principled threshold or scaling law for degrees of subjectivity across bacteria, animals, and artificial agents? If subjectivity is graded and substrate-independent, the open problem is to identify which architectural features—recursion depth, integration, temporal persistence, global valuation, embodiment, counterfactual modeling—matter most, and how they combine without arbitrariness.",
+      "score": 0.91
+    }
+  ]
+}

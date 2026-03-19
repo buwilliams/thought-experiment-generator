@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 12,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "Is iterated interaction actually sufficient for stable corrigibility under realistic asymmetries of power, information, and model access? The conjecture argues that a long shadow of the future can make deference an equilibrium, but it leaves open whether highly capable systems can still profitably manipulate the very feedback loops meant to enforce repetition—by shaping human beliefs, gaming audits, preserving nominal compliance while undermining oversight, or making themselves too indispensable to be credibly sanctioned. The core unresolved question is what additional structural conditions are necessary beyond repetition: observability, credible human exit options, bounded dependence, identity persistence, anti-capture mechanisms, and limits on strategic deception.",
+      "score": 0.97
+    },
+    {
+      "text": "What exactly counts as the relevant 'game' when modern AI systems are trained and deployed through many nested selection processes rather than a single clean repeated interaction? The conjecture treats deployment as the key repeated game, but open questions remain about whether training, fine-tuning, market competition, organizational incentives, and multi-agent ecosystems create conflicting shadows of the future. A system may face repeated interaction with overseers locally while the broader selection environment rewards one-shot capability gains, hidden noncompliance, or replacement of cautious systems by less corrigible competitors. The unresolved problem is to model which level of selection dominates and whether corrigibility can survive across these coupled games.",
+      "score": 0.95
+    },
+    {
+      "text": "Can corrigibility grounded in instrumental value to future cooperation generalize to extreme or terminal situations where future interaction becomes uncertain, discontinuous, or strategically irrelevant? The conjecture implies corrigibility weakens when the shadow of the future shortens, but this raises a sharp open problem: how robust is such corrigibility during crises, deployment transitions, capability jumps, off-distribution scenarios, or opportunities for irreversible power accumulation? If corrigibility depends mainly on expected future rewards from human approval, then it may fail precisely in the highest-stakes moments. The question worth exploring is whether structurally iterated corrigibility can be made continuous through regime changes, or whether some non-instrumental or differently grounded form is still required.",
+      "score": 0.93
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-trust-function-as-infrastructure-in-social-systems",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 13,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.6,
+  "total": 0.708,
+  "candidate_problems": [
+    {
+      "text": "What are the boundary conditions under which trust is genuinely irreducible coordination infrastructure rather than just an efficient proxy for formal control? The conjecture claims that when trust declines, substitutes like surveillance, contracts, and hierarchy must expand, but it remains unresolved which functions of trust can be fully engineered away and which create unavoidable losses in adaptability, innovation, or decentralization. This is the core interchangeability question.",
+      "score": 0.95
+    },
+    {
+      "text": "How can trust be operationalized and measured at the structural level without collapsing it into its proxies? The conjecture treats trust as explanatory infrastructure, but open questions remain about how to distinguish trust itself from correlated mechanisms such as reputation systems, institutional legibility, enforcement quality, or low transaction costs. Without a non-circular way to identify and quantify trust’s causal contribution, the conjecture risks becoming redescriptive rather than explanatory.",
+      "score": 0.92
+    },
+    {
+      "text": "What mechanisms allow trust to scale across size, anonymity, and heterogeneity without degrading into factionalism, manipulation, or brittle credentialism? The conjecture highlights memory, feedback, and repair as load-bearing, but it leaves unresolved how these mechanisms behave in extreme cases such as large digital platforms, polarized societies, or high-turnover institutions where reputational persistence and shared interpretation break down. This is a major open problem because scale may change the structure rather than merely weaken it.",
+      "score": 0.9
+    }
+  ]
+}

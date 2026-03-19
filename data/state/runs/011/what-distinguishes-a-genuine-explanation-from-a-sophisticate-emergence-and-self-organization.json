@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 11,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "How can 'generative interaction structure' be defined non-circularly and operationalized across domains so that the explanation/redescription distinction is testable rather than itself a redescription? The open tension is that the conjecture relies on notions like load-bearing organization, right level, and structural intervention, but without a principled criterion for individuating the relevant structure, different analysts may project different mechanisms onto the same phenomenon.",
+      "score": 0.96
+    },
+    {
+      "text": "Are there genuine explanations that do not primarily work by exposing manipulable interaction architecture, especially in mathematics, fundamental physics, historical sciences, or highly idealized theories? The unresolved question is whether the conjecture is too narrow: it may exclude explanations that unify, derive, or show necessity without offering intervention on feedbacks, topology, or information flow.",
+      "score": 0.92
+    },
+    {
+      "text": "What separates explanatory counterfactual grip from merely predictive model sensitivity? A model can correctly say how outputs change when parameters or topology change while still failing to identify the real load-bearing dependencies of the target system. The open problem is to distinguish structural interventions that reveal genuine organization from parameter tweaks in empirically successful but merely instrumental models.",
+      "score": 0.94
+    }
+  ]
+}

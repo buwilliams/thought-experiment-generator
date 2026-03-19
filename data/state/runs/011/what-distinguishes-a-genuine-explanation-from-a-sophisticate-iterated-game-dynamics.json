@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 11,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How far can iterated-game structure really carry explanation before agent heterogeneity, learning, and endogenous preference change become load-bearing? The conjecture risks collapsing traits like trustworthiness, norms, or professionalism into equilibrium behavior, but in many settings those traits may alter payoffs, strategy spaces, or belief formation rather than merely redescribe outcomes. The open question is when 'character/culture' is eliminable in favor of repeated-game structure and when it must be modeled as an independent causal variable.",
+      "score": 0.95
+    },
+    {
+      "text": "What principled criterion distinguishes a genuine structural explanation from an underdetermined game-theoretic redescription? Many different repeated games can rationalize the same observed cooperative pattern, so identifying 'what game is being played' may itself be non-unique unless there are strong intervention-based or out-of-sample constraints. The unresolved tension is how much risky counterfactual specificity is enough to claim explanation rather than post hoc model fitting.",
+      "score": 0.97
+    },
+    {
+      "text": "Does the conjecture overprivilege repeated interaction as the explanatory core for cooperation, leaving unexplained cooperation in one-shot, weak-memory, or large-scale anonymous settings? If substantial cooperation persists where shadow-of-the-future, observability, and reputation are thin, then either hidden iteration is doing the work or other mechanisms—institutions, norms, identity, internalized rules—are genuinely load-bearing. The open problem is to map the boundary conditions of the iterated-game account and identify phenomena it cannot subsume without ad hoc extensions.",
+      "score": 0.98
+    }
+  ]
+}

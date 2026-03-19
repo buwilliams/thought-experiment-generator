@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 16,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "What precise underlying relational or informational structure could generate both Lorentzian spacetime geometry and Hilbert-space quantum structure as emergent effective descriptions, and what principled derivation would recover the specific mathematical form of each rather than only a vague network ontology?",
+      "score": 0.97
+    },
+    {
+      "text": "How can a fundamentally nonlocal or pre-geometric interaction system yield the observed locality, causal order, and relativistic constraints of classical spacetime while still reproducing robust quantum entanglement and no-signalling, without smuggling in the very spacetime structure it aims to explain?",
+      "score": 0.95
+    },
+    {
+      "text": "How do measurement, observers, records, and information preservation arise internally within the same substrate so that definite events, decoherence/classicality, and black-hole or cosmological information flow are explained by one mechanism rather than by separate patches?",
+      "score": 0.92
+    }
+  ]
+}

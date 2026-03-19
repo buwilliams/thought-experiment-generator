@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec",
+  "conjecture_id": "computational-irreducibility",
+  "run": 10,
+  "logical_consistency": 0.86,
+  "hard_to_vary": 0.9,
+  "total": 0.888,
+  "candidate_problems": [
+    {
+      "text": "How can 'internally indexical state-transitions' be formalized non-circularly and operationally? The conjecture depends on preserving self-locating distinctions ('this signal here now for this controller'), but it remains open whether indexicality can be specified purely in computational/dynamical terms rather than smuggling in semantic or observer-relative notions. A precise formalism here is the main bottleneck because without it the adequacy criterion for decomposition is underdefined.",
+      "score": 0.97
+    },
+    {
+      "text": "Is decomposition-sensitivity genuinely distinctive of consciousness, or does it overgenerate across many nonconscious computationally irreducible systems? The key unresolved tension is whether globally entangled, history-dependent, non-factorizable dynamics are sufficient or even strongly indicative of consciousness, versus being common in weather models, cryptographic processes, cellular automata, or distributed control systems that seem nonconscious. This is worth pursuing because it tests whether the conjecture identifies a real explanatory kind rather than a broad complexity class.",
+      "score": 0.95
+    },
+    {
+      "text": "Can the conjecture be turned into a tractable invariance/complexity criterion that is robust across different decompositions, levels of description, and implementation media? The open problem is to define an 'irreducibility class' such that equivalent realizations of the same conscious process are grouped together while arbitrary redescriptions do not trivialize or destroy the measure. Without this, the proposal risks dependence on representation choice, making consciousness judgments unstable or observer-relative in exactly the way the conjecture aims to avoid.",
+      "score": 0.92
+    }
+  ]
+}

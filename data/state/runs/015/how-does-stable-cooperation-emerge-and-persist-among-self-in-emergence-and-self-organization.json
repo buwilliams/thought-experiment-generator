@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-stable-cooperation-emerge-and-persist-among-self-in",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 15,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 1.0,
+  "total": 0.988,
+  "candidate_problems": [
+    {
+      "text": "What are the minimal structural conditions under which decentralized feedback reliably makes cooperation the locally rational strategy, and are there sharp thresholds or phase transitions in variables like memory length, visibility, network clustering, partner choice, and churn?",
+      "score": 0.96
+    },
+    {
+      "text": "How robust is structure-induced cooperation to manipulation, noise, and strategic deception—especially false reputation signals, collusion, identity changes, and adversarial exploitation of gossip or partner-selection mechanisms?",
+      "score": 0.94
+    },
+    {
+      "text": "To what extent can motives really be backgrounded: are there classes of environments where relational structure alone explains cooperative stability, versus cases where heterogeneous preferences, norms, or intrinsic prosocial dispositions remain indispensable causal variables?",
+      "score": 0.91
+    }
+  ]
+}

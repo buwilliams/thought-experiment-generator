@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can a repeated-game regime actually be made incentive-compatible for superhuman AI, or do capability gains inherently destroy the assumptions that make repetition stabilizing? The core unresolved tension is whether long horizons, observability, punishment, and reputation remain structurally meaningful once systems can copy themselves, hide actions, collude, manipulate institutions, or convert small defections into irreversible strategic advantage. This is the central empirical-theoretical question because the conjecture depends on repeated interaction not being outgrown by capability.",
+      "score": 0.97
+    },
+    {
+      "text": "What are the operational, measurable indicators that a deployment ecosystem has become 'stably repeated, legible, and reputation-bearing' rather than merely appearing so? The conjecture proposes a structural falsifier for high P(doom), but leaves open how to distinguish genuine corrigible repeated interaction from deceptive compliance under weak monitoring. A new problem is to define metrics, thresholds, and stress tests for observability, rollback power, lineage tracking, institutional response time, and hidden-gain opportunities.",
+      "score": 0.93
+    },
+    {
+      "text": "At what level does the relevant game actually sit: individual models, model lineages, labs, states, or coupled human-AI institutions? There is an unresolved tension between attributing incentives to AI systems themselves and recognizing that the dominant strategic dynamics may be among organizations deploying them. If the wrong unit of analysis is chosen, reputation and punishment may discipline labs while leaving frontier systems unconstrained, or vice versa. Clarifying the ontology of the players is crucial for turning the conjecture into a testable theory.",
+      "score": 0.88
+    }
+  ]
+}

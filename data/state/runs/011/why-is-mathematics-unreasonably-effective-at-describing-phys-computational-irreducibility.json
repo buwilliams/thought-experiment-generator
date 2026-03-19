@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys",
+  "conjecture_id": "computational-irreducibility",
+  "run": 11,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "What principled criterion distinguishes domains where 'compact generative rules' genuinely explain mathematical effectiveness from domains where mathematics works only as an approximate, post hoc, or instrumentally useful fit? The conjecture leans heavily on low-description-length laws, but leaves open how to identify, measure, and test that compactness in real physics rather than redescribing successful theories as compact after the fact.",
+      "score": 0.95
+    },
+    {
+      "text": "How exactly should 'computational irreducibility' be related to the actual practice and success of physics, given that many of physics' strongest achievements do involve renormalization, effective theories, solvable limits, and other forms of compression? The unresolved tension is whether irreducibility is central, peripheral, or scale-dependent, and what mathematics contributes when prediction is possible only at coarse-grained or structural levels.",
+      "score": 0.92
+    },
+    {
+      "text": "Why should reality instantiate simple lawful generators at all, and is that claim empirically substantive or partly selection-biased by the kinds of observers and theories that can exist? The conjecture shifts the miracle from mathematical applicability to the existence of compact physical law, but does not explain whether this is a deep explanatory advance, an anthropic/epistemic filter, or merely a relocation of the original mystery.",
+      "score": 0.9
+    }
+  ]
+}

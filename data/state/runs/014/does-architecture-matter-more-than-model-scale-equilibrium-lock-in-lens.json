@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized and falsified: what observable indicators would distinguish a genuinely structural/public-goods bottleneck in AI epistemic progress from alternative explanations such as technical immaturity, coordination frictions, secrecy, or simple measurement difficulty?",
+      "score": 0.97
+    },
+    {
+      "text": "Where is the threshold at which substrate gains stop being the dominant driver of epistemic progress and structural factors take over, and does this threshold vary by domain, capability level, or research regime?",
+      "score": 0.91
+    },
+    {
+      "text": "What concrete institutional mechanisms can convert epistemic infrastructure from a non-excludable public good into something individually rational actors will supply without destroying openness—e.g. regulation, shared benchmarks, liability, prestige systems, insurance, procurement, or consortium governance—and what failure modes do those mechanisms introduce?",
+      "score": 0.99
+    }
+  ]
+}

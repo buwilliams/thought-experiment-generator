@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'enforced coordination constraint' be formalized in a way that yields testable predictions about when next-token training must recover a latent invariant rather than a surface shortcut? The conjecture is suggestive but currently lacks a precise quantity or criterion—e.g., involving mutual information over long horizons, intervention-based defectability, counterfactual predictive regret, or the density of downstream dependencies—that distinguishes genuinely enforced invariants from merely correlated patterns.",
+      "score": 0.97
+    },
+    {
+      "text": "Is the conjecture actually true as a necessary condition, or can models learn reality-aligned latent variables even when enforcement is weak because architecture, pretraining diversity, scale, or simplicity biases favor invariant-based world models anyway? This is a major open tension between data-distribution pressure and model-side inductive bias: perhaps invariants are sometimes learned not because the environment punishes inconsistency strongly enough, but because invariant representations transfer better across many loosely coupled contexts.",
+      "score": 0.93
+    },
+    {
+      "text": "What are the boundary cases where apparent enforcement is present but still does not produce invariant learning—for example when the hidden state is too expensive to track, supervision is too sparse, shortcuts remain globally competitive, or the model represents a simulacrum of the invariant rather than the invariant itself? This raises the unresolved question of what additional conditions besides enforcement—capacity, optimization accessibility, observability, horizon length, and identifiability—are required for latent alignment to emerge in practice.",
+      "score": 0.91
+    }
+  ]
+}

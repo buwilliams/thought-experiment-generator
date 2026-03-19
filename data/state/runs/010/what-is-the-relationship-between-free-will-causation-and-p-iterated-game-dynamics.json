@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 10,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture provide a non-question-begging criterion that distinguishes 'real strategic capacity' from merely redescribing deterministic control processes at a higher level? The core tension is whether iterated-policy language explains free will or just relabels ordinary causal self-regulation without addressing the traditional concern about authorship and alternative possibilities.",
+      "score": 0.95
+    },
+    {
+      "text": "What exact structural features of an iterated system are necessary and sufficient for free will to emerge—memory, counterfactual modeling, self-reference, reputation, policy commitment, temporal depth, social legibility—and how can these be measured across humans, institutions, and artificial agents? This is an open problem because the conjecture is suggestive but currently under-specified.",
+      "score": 0.92
+    },
+    {
+      "text": "How does this game-horizon account handle moral responsibility, especially in cases of addiction, coercion, compulsion, trauma, or manipulation where iterative architecture is degraded but not absent? The unresolved tension is whether responsibility becomes scalar, thresholded, or context-relative, and whether that matches or revises legal and ethical practice.",
+      "score": 0.9
+    }
+  ]
+}

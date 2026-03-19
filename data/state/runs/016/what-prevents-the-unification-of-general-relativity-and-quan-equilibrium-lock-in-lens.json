@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 16,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "How can we distinguish a genuinely sociostructural bottleneck from the possibility that unification is mainly blocked by the objective hardness or even ill-posedness of the physics problem itself? The conjecture risks over-attributing stagnation to incentive structure unless it specifies observable signatures that separate coordination failure from intrinsic explanatory difficulty.",
+      "score": 0.95
+    },
+    {
+      "text": "What institutional or epistemic mechanisms would actually increase the production of integrative explanatory work without merely subsidizing low-accountability speculation? The open problem is to design and test funding, training, evaluation, and collaboration structures that reward long-horizon unification efforts while preserving strong criticism and error-correction.",
+      "score": 0.93
+    },
+    {
+      "text": "If unification is a public good, what counts as the relevant unit of progress and payoff, and how should integrative success be measured before a final theory exists? The conjecture raises an unresolved question about metrics: whether explanatory integration, cross-domain constraint satisfaction, recovery of limiting cases, or novel problem-reframing can be operationalized well enough to guide collective investment.",
+      "score": 0.9
+    }
+  ]
+}

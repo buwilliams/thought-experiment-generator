@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 15,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "How can this public-goods mechanism be cleanly distinguished from other generators of heavy tails—especially preferential attachment, optimization under constraints, and multiplicative growth—using observable signatures or intervention tests? The conjecture is strongest only if it yields unique empirical predictions, such as specific responses to subsidizing alternative hubs, changing excludability, or altering spillover capture.",
+      "score": 0.96
+    },
+    {
+      "text": "Under what precise conditions does non-excludable useful structure actually produce stable underprovision of independent hubs rather than efficient specialization, modular hierarchies, or eventual hub replacement? The open problem is to specify the boundary conditions: agent incentives, cost curves, congestion, decay, rivalry, and network topology that make concentration a persistent equilibrium rather than a transient phase.",
+      "score": 0.93
+    },
+    {
+      "text": "What is the right formal model of 'useful structure' as a public good in network formation, and does it generically generate power-law degree distributions rather than merely concentration? The conjecture currently mixes links, standards, reputation, search, and coordination into one category; a major unresolved tension is whether a unified microfoundation can derive scale-free structure robustly across these heterogeneous cases.",
+      "score": 0.91
+    }
+  ]
+}

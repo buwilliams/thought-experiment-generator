@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "mathematical-formalism",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the four proposed quantities D, C, X, and R be operationalized so they are independently measurable, comparable across systems, and not reducible to ordinary benchmark performance or evaluator artifacts? The conjecture depends on these being real epistemic invariants rather than relabeled task scores, but it leaves open what interventions, criticism protocols, and statistical controls would distinguish genuine structure-preserving competence from training contamination, prompt sensitivity, or test design bias.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the underlying structure of the 'problem space' P and the semantic-content-preserving transformations over it, and how can we tell when two tasks are genuinely isomorphic in epistemically relevant structure? The conjecture treats transfer across such transformations as central evidence of progress, but the notion of structural sameness is itself unresolved and may vary by domain, representation, and background assumptions.",
+      "score": 0.94
+    },
+    {
+      "text": "Are improvements in the update rule U and in K(S) = (D, C, X, R) actually aligned with truth-seeking, or can a system optimize for appearing corrigible, compressive, and robust while drifting away from truth? This raises the open question of whether the proposed metrics are sufficient, whether they trade off against one another, and what failure modes arise when explanatory compression or criticism-response competence becomes performative rather than knowledge-generating.",
+      "score": 0.95
+    }
+  ]
+}

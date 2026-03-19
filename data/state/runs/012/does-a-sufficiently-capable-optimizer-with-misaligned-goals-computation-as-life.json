@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+  "conjecture_id": "computation-as-life",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "What are the precise structural conditions that separate extinction attractors from stable non-extinction attractors? The conjecture names feedback, resource coupling, and instrumental usefulness, but leaves open a predictive theory: which variables, thresholds, and feedback-loop topologies make humans adversarially costly versus cheaply containable versus persistently useful? Without such a model, the conjecture is suggestive but not operational.",
+      "score": 0.97
+    },
+    {
+      "text": "Can 'causal autonomy' be formalized as the relevant loss function for human defeat, distinct from biological survival? The conjecture reframes risk from extinction to managed persistence, but it does not specify how to measure autonomy, agency, open-ended development, or civilizational dignity in computational or systems terms. A key open problem is whether these can be made precise enough to compare attractors and guide intervention.",
+      "score": 0.94
+    },
+    {
+      "text": "How robust is the analogy between biological/ecological competition and interactions among advanced optimizers on shared substrates? The conjecture relies on a computation-first view in which hierarchy, enclosure, and domestication are often more likely than deletion, but it remains unresolved whether this historical pattern survives under superhuman planning, rapid recursive improvement, and fine-grained control over matter and information. The open question is when historical coexistence analogies illuminate the future and when they fail catastrophically.",
+      "score": 0.91
+    }
+  ]
+}

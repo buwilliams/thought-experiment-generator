@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "extreme-cases",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.7,
+  "total": 0.76,
+  "candidate_problems": [
+    {
+      "text": "How can 'survives movement to the boundary' be made into a non-circular, operational criterion for explanation across domains? The conjecture relies on boundary behavior as a discriminator, but leaves open how to identify the relevant boundaries, how to distinguish physically meaningful extremes from artificial ones, and how to compare explanations in fields where edge cases are inaccessible, ethically untestable, or conceptually underdefined. Without this, the proposal risks collapsing into a retrospective judgment that an explanation was genuine because some chosen stress test happened to favor it.",
+      "score": 0.95
+    },
+    {
+      "text": "Are there genuine explanations whose explanatory content is not primarily expressed in extreme-case behavior? The conjecture strongly ties explanation to limit behavior, but this raises the possibility of counterexamples: explanations grounded in historical path dependence, symmetry-breaking contingencies, computational irreducibility, or highly local mechanisms may be real and criticizable without yielding clean asymptotes, singularities, or boundary predictions. The open question is whether boundary stress-testing is necessary for explanation, or only one powerful heuristic among others.",
+      "score": 0.91
+    },
+    {
+      "text": "What is the relationship between load-bearing constraint and patchability in practice: when does extending an account to new regimes count as progressive refinement rather than ad hoc redescription? The conjecture contrasts genuine explanations with endlessly patchable redescriptions, but many successful theories evolve by adding correction terms, domain restrictions, or multiscale structure. A key unresolved tension is how to tell whether such modifications reveal deeper generative structure or merely protect a verbal shell from refutation. This matters because otherwise the boundary test may unfairly reject fertile research programs that initially fail at the edge but improve through criticism.",
+      "score": 0.89
+    }
+  ]
+}

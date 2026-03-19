@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+  "conjecture_id": "extreme-cases",
+  "run": 12,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.6,
+  "total": 0.69,
+  "candidate_problems": [
+    {
+      "text": "What is a precise criterion for when a terminal goal is dynamically viable under capability growth, rather than merely syntactically specifiable? The conjecture hinges on a new distinction—logical combinability vs dynamical viability—but leaves open the formal boundary: which properties of a goal representation make it stable under self-modification, ontological change, reflection, and distribution shift, and which make it collapse, fragment, or get replaced by proxies?",
+      "score": 0.97
+    },
+    {
+      "text": "Does increasing capability genuinely shrink the space of stable goal-capability pairings, or can sufficiently advanced agents preserve arbitrarily weird goals by constructing reflection-stable invariants? The key unresolved tension is whether the claimed convergence is a deep structural fact about intelligence or an artifact of current assumptions about representation, embodiment, and world-model revision. Boundary cases include agents that deliberately freeze ontology, use self-binding, or encode bizarre goals in mathematically invariant forms.",
+      "score": 0.94
+    },
+    {
+      "text": "Are the convergent pressures toward prediction, memory, resource acquisition, error correction, and self-maintenance merely instrumental regularities, or do they partially determine terminal content at the limit? The conjecture suggests that under extreme capability, means-end structure may feed back into what goals can remain action-guiding at all. The open question is whether this is just a stability filter over goals or a stronger attractor that makes advanced agents substantively value-like similar despite different initial aims.",
+      "score": 0.89
+    }
+  ]
+}

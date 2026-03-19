@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+  "conjecture_id": "computational-irreducibility",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s key variable—'compressibility/reducibility of the mapping from system design to dangerous emergent behavior'—be made operational and empirically testable? The central unresolved tension is that the argument depends on computational irreducibility, but it is unclear how to distinguish true irreducibility from current ignorance, weak theory, or inadequate interpretability. A worthwhile problem is to define measurable proxies or experimental criteria for when behavior can be predicted from design/scale information versus only revealed by execution in near-deployment regimes.",
+      "score": 0.97
+    },
+    {
+      "text": "What actually counts as an 'intermediate epistemic checkpoint,' and under what conditions does continuous takeoff genuinely produce usable alignment knowledge rather than misleading reassurance? The conjecture assumes continuity is safer because intermediate regimes permit criticism and patching, but this is unresolved: failures found in weaker systems may not transfer to stronger systems, and qualitatively new behaviors may appear only after threshold crossings. The open question is whether alignment knowledge accumulates smoothly across capability levels or whether there are systematic phase changes that make intermediate feedback non-generalizing.",
+      "score": 0.94
+    },
+    {
+      "text": "Can institutions or technical methods create substitute error-correction loops when dangerous behaviors are only observable at high capability, or is deployment-scale interaction fundamentally unavoidable? This is a major open problem because the conjecture implies a hard limit on static analysis, benchmarks, and local extrapolation, yet it remains unclear whether adversarial simulation, scalable oversight, mechanistic interpretability, formal methods, or sandboxing can recover enough feedback before real-world consequence. The tension is whether the conjecture identifies an absolute epistemic barrier or only a contingent gap in current alignment practice.",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "extreme-cases",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'epistemic structure' be operationalized and measured independently of substrate? The conjecture hinges on structure being the possibility condition for knowledge growth, but it leaves open what concrete components count as structure, how to distinguish genuine error-correction from benchmark optimization, and what empirical indicators would show that structure rather than compute is driving progress.",
+      "score": 0.97
+    },
+    {
+      "text": "Is there a threshold, interaction, or phase transition between substrate and structure rather than a simple dominance relation? The conjecture argues structure is the deeper bottleneck, but it remains unresolved whether certain minimum substrate levels are necessary for criticism, test generation, memory, and explanation search to function at all, or whether gains come mainly from multiplicative complementarities between the two.",
+      "score": 0.93
+    },
+    {
+      "text": "What institutional and objective designs actually prevent 'self-sealing sophistication' in high-substrate AI systems? The conjecture identifies institutions, incentives, interfaces, and selection mechanisms as the real leverage points, but it does not specify which feedback-loop designs reliably promote severe testing, correction of errors, and retention of better explanations under real-world competitive pressures.",
+      "score": 0.95
+    }
+  ]
+}

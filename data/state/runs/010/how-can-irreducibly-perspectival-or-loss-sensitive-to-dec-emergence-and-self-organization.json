@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "How can 'in principle' decomposition-loss-sensitivity be made precise and nontrivial? The conjecture hinges on ruling out any partition that preserves observer-independent component meanings, reconstruction of action-guiding discriminations, and counterfactual structure, but it leaves open what formal criterion distinguishes genuine impossibility from temporary modeling limits or a choice of explanatory vocabulary. A new problem is to define a rigorous invariance/test for explanatory adequacy under decomposition that does not collapse into observer-relativity or trivial holism.",
+      "score": 0.97
+    },
+    {
+      "text": "What exactly individuates the proposed system-level variables, and how can their identity be specified without covert circularity? Terms like unified salience, egocentric relevance, experienced uncertainty, and world-model error as 'for-this-system-now' quantities are suggestive, but the conjecture does not yet say how to detect or measure such variables independently of already assuming perspectival consciousness. A key open question is whether there is a principled semantics or dynamical signature for these variables that distinguishes them from ordinary emergent control variables in nonconscious systems.",
+      "score": 0.94
+    },
+    {
+      "text": "Where is the boundary between conscious and nonconscious globally closed control systems? Many nonconscious systems—organisms, economies, adaptive controllers, large recurrent models—also exhibit global feedback, emergent variables, and decomposition failure for some explanatory targets. The unresolved tension is why irreducible perspectival organization would mark consciousness specifically rather than a broader class of complex control systems. This motivates the problem of finding necessary and sufficient differentiators, or showing that the conjecture overgeneralizes.",
+      "score": 0.99
+    }
+  ]
+}

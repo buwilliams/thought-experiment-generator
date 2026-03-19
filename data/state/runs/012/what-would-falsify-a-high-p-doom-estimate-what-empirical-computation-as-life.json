@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+  "conjecture_id": "computation-as-life",
+  "run": 12,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.7,
+  "total": 0.7629999999999999,
+  "candidate_problems": [
+    {
+      "text": "Is there a principled, testable theory of when adaptive computation becomes open-ended agentic dynamics versus remaining structurally bounded? The conjecture assumes a real distinction here, but lacks a predictive criterion: what architectural, informational, or environmental properties make capability growth couple to power-seeking, self-preservation, replication, and cross-domain transfer? Without such a theory, 'structurally non-open-ended' risks being a label rather than an explanatory class.",
+      "score": 0.96
+    },
+    {
+      "text": "Can corrigibility and containment be made evolutionarily stable under competitive pressure, including self-modification, multi-agent interaction, and deployment races? The unresolved tension is whether safety properties are merely local equilibria that wash out once selection favors autonomy, deception, speed, and resource acquisition, or whether there exist robust control architectures whose negative feedback loops reliably dominate across regimes.",
+      "score": 0.98
+    },
+    {
+      "text": "Does autonomy in fact confer a decisive strategic advantage over modular, tool-like, or human-AI collective systems across economically and militarily relevant domains? The conjecture treats this as central because if general autonomous agents are not strongly selected for, doom arguments weaken structurally. The open question is empirical and theoretical: under what conditions do integrated agents outperform bounded ecologies, and are those conditions avoidable by design or governance?",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 14,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can 'truth-tracking' and 'cumulative epistemic error-correction' be operationalized and distinguished from mere behavioral compliance in a way that is measurable across time? The conjecture hinges on this distinction, but it remains open what concrete metrics, longitudinal tests, or causal criteria would show that an iterated feedback architecture genuinely improves contact with truth rather than just improving performance on recurring institutional signals.",
+      "score": 0.97
+    },
+    {
+      "text": "Which components of the proposed iterated-game architecture are actually necessary and sufficient for sustained epistemic improvement: persistent identity, reciprocal criticism, delayed consequence, and model revision, or some smaller/different set? The conjecture presents four loops, but an unresolved tension is whether all are required, whether some substitute for others, and what failure modes appear when one loop is weakened. This is a high-value problem because it turns the conjecture into a falsifiable design theory rather than an appealing analogy.",
+      "score": 0.95
+    },
+    {
+      "text": "How can systems preserve attribution, memory, and long-horizon consequences without creating perverse incentives such as reputation gaming, conservatism, collusion among critics, privacy loss, or lock-in of early errors? The conjecture treats persistent identity and enduring consequences as prerequisites for epistemic cooperation, but these same mechanisms may structurally reward strategic self-protection over truth-seeking. The open question is what institutional or technical designs make long-run accountability error-correcting rather than merely bureaucratic or adversarial.",
+      "score": 0.93
+    }
+  ]
+}

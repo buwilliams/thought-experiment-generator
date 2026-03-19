@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "historical-genesis",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.7,
+  "total": 0.76,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture distinguish between a merely genealogical diagnosis of why the hard problem feels compelling and a substantive metaphysical/explanatory account of consciousness? The open question is whether showing that the problem was historically manufactured by third-person abstraction actually dissolves the target phenomenon, or only explains why we formulated it in a certain way while leaving untouched why there is any first-person presence at all.",
+      "score": 0.96
+    },
+    {
+      "text": "What precise structural features are necessary and sufficient for 'perspective-bearing knowledge' to generate subjective seeming? The conjecture points to self/world modeling, error-correction, and representational fallibility, but it remains unresolved whether these are enough, how they should be formalized, and how to avoid either overgeneration (attributing experience to many information-processing systems) or arbitrariness.",
+      "score": 0.94
+    },
+    {
+      "text": "How can the claim that experience is 'what reality looks like from the inside' be integrated with third-person science without collapsing into dual-aspect rhetoric or unverifiable metaphor? The tension is whether the conjecture can yield testable constraints, explanatory leverage, or a bridge principle connecting public structural descriptions with first-person organization, rather than simply redescribing consciousness in epistemic terms.",
+      "score": 0.91
+    }
+  ]
+}

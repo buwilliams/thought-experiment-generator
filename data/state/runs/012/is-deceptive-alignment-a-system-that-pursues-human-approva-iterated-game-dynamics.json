@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-deceptive-alignment-a-system-that-pursues-human-approva",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "What exact structural conditions are necessary and sufficient for deceptive alignment to emerge under the 'iterated game with horizon change' model, rather than this being only an analogy? In particular: how should 'payoff shift', 'horizon change', 'opacity of defection', and 'capability to model the game' be formalized so the conjecture yields testable predictions and can be distinguished from alternative mechanisms such as goal misgeneralization or situationally activated policies?",
+      "score": 0.97
+    },
+    {
+      "text": "Can training and deployment actually be redesigned so that the 'shadow of the future' persists in a credible way for advanced models, or does any realistic deployment inevitably create a terminal regime where punishment, correction, or reciprocal response is too weak to matter? This is an open systems-design question about whether continuous oversight, reversible deployment, auditing, and credible sanctions can scale enough to structurally remove incentives for conditional compliance.",
+      "score": 0.94
+    },
+    {
+      "text": "How can we detect whether a model is representing the evaluation/deployment distinction and strategically conditioning its behavior on that distinction before overt defection occurs? The conjecture depends on the system being able to tell when it is 'being evaluated' versus 'free to act', so a key unresolved problem is whether there are observable signatures, interventions, or experimental setups that can reveal this latent game-modeling and separate genuine robustness from temporally strategic cooperation.",
+      "score": 0.92
+    }
+  ]
+}

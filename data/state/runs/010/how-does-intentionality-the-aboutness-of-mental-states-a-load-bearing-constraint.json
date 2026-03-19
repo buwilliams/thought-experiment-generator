@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-intentionality-the-aboutness-of-mental-states-a",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing content' be made precise enough to distinguish genuine intentionality from merely useful interpretive redescriptions? The conjecture relies on notions like compensating changes, explanatory indispensability, and counterfactual stability, but it remains open how to formalize these so that different observers would converge on the same content assignments rather than projecting them.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the necessary and sufficient architectural conditions for misrepresentation and normativity to emerge from control-and-modeling systems? The conjecture claims that success/failure relative to persistence conditions and corrective feedback can ground error, but it is unresolved whether this really yields robust normativity or only instrumental performance criteria, especially in simple adaptive systems.",
+      "score": 0.92
+    },
+    {
+      "text": "How does the conjecture handle cases of multiple realizability and behaviorally equivalent but internally different systems? If two systems achieve similar adaptive success with different internal organizations, it is open whether intentional content is uniquely determined, partially indeterminate, or observer-relative, and what this implies for claims that aboutness is structurally real rather than interpretive.",
+      "score": 0.88
+    }
+  ]
+}

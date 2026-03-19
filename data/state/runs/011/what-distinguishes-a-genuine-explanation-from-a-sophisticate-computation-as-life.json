@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "computation-as-life",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "How can 'computationally load-bearing model' be made non-circular and operationally testable? The conjecture relies on notions like computation, information-processing structure, and selection dynamics to demarcate explanation from redescription, but it leaves open a criterion for when a posited computational organization is the actual load-bearing one rather than just another redescription at a different level. A key unresolved problem is to specify observable or formal tests that distinguish genuine mechanism from merely convenient re-encoding, especially in systems with many equivalent models.",
+      "score": 0.96
+    },
+    {
+      "text": "What determines the correct explanatory level in multi-level systems? The conjecture says explanation succeeds at the level where the relevant computation is organized, yet many phenomena admit interacting descriptions at molecular, neural, cognitive, social, and evolutionary scales. An open question is how to identify when a higher-level computational account is autonomous and load-bearing versus when lower-level details are indispensable, and how cross-level constraints should be represented when multiple levels appear explanatory at once.",
+      "score": 0.93
+    },
+    {
+      "text": "Is substrate-independence actually sufficient for explanatory transfer, or do material details sometimes carry indispensable explanatory content? The transfer test assumes that preserving informational structure preserves explanatory force, but in biology, cognition, and markets, physical embodiment, energetics, noise, and historical path-dependence may partly constitute the phenomenon rather than merely implement it. The unresolved tension is whether the conjecture overgeneralizes from computation to all explanation, and where the boundary lies between implementation details that are irrelevant and those that are themselves load-bearing.",
+      "score": 0.91
+    }
+  ]
+}

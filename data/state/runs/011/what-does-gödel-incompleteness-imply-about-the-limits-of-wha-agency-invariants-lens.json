@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+  "conjecture_id": "agency-invariants-lens",
+  "run": 11,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture’s key notion of 'asymmetric self-modeling under fixed rule constraints' be made precise enough to distinguish a genuine invariant from a relabeling of standard incompleteness phenomena? In particular, what exact structural asymmetry is load-bearing, and how does it differ from familiar hierarchies such as object-language/metalanguage, reflection principles, or partial truth predicates?",
+      "score": 0.95
+    },
+    {
+      "text": "What is the strongest form of internal self-knowledge a sufficiently expressive formal system can possess without triggering Gödelian collapse? This asks for a principled boundary theory: which local reflection, consistency, or provability claims are stably knowable from within, and where exactly does the transition to impossible total self-certification occur?",
+      "score": 0.98
+    },
+    {
+      "text": "Is the conjecture’s architectural explanation truly general across all recursively governed self-representing systems, or does it depend on specific coding and proof-theoretic assumptions inherited from arithmetic? The open problem is to determine how far the claimed feedback-loop constraint extends—to weaker logics, nonclassical systems, computational agents, or semantic self-models—and what minimal conditions are actually necessary for the gap to arise.",
+      "score": 0.93
+    }
+  ]
+}

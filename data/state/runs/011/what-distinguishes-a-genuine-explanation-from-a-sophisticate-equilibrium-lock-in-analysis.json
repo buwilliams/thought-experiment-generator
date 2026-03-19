@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 11,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "Is equilibrium lock-in actually a necessary condition for genuine explanation across domains, or only for a subset of phenomena (especially social systems)? The conjecture risks overfitting explanation to persistence-under-deviation and may exclude genuine explanations of transient, one-shot, developmental, or mechanistic phenomena that are explanatory without being equilibrium-based.",
+      "score": 0.95
+    },
+    {
+      "text": "How can 'equilibrium-generating constraints' be operationally distinguished from post hoc narrative redescriptions in practice? The conjecture needs a non-circular test for when a proposed constraint structure is genuinely load-bearing—i.e., yields risky counterfactuals about failed deviations, reform attempts, or intervention points—rather than merely redescribing persistence in strategic language.",
+      "score": 0.98
+    },
+    {
+      "text": "What is the right treatment of bounded rationality, misperception, ideology, and learning dynamics: are these merely superficial alternatives to explanation, or can they themselves be equilibrium-generating constraints? The conjecture currently contrasts lock-in with 'people have not yet chosen differently,' but many real systems persist through endogenous belief formation, preference shaping, and epistemic traps, blurring the boundary it proposes.",
+      "score": 0.93
+    }
+  ]
+}

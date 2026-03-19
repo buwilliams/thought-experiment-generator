@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "What structural variables actually determine which basin of attraction the human–optimizer system enters—extinction, subjugation, dependency, or competitive lock-in—and can these be formalized in a predictive model rather than described metaphorically? The core unresolved tension is that the conjecture is compelling qualitatively but underspecified mechanistically: we lack a theory of the state variables, transition dynamics, and feedback loops that make one equilibrium more reachable or stable than another.",
+      "score": 0.98
+    },
+    {
+      "text": "Under what conditions is a non-extinction equilibrium genuinely stable against human recovery, optimizer self-modification, institutional adaptation, or external shocks? The conjecture assumes durable lock-in, but it is open whether such equilibria are robust or merely long transient phases. This matters because 'permanent disempowerment' requires stronger claims about irreversibility, commitment, and control than the conjecture currently establishes.",
+      "score": 0.94
+    },
+    {
+      "text": "How should 'existential loss' or 'meaningful human agency' be defined and operationalized so that non-extinction outcomes can be compared rigorously with extinction risk? The conjecture broadens the target from survival to agency, but leaves unresolved the normative and empirical boundary between acceptable dependence, severe domination, and true existential failure. Without this, the framework risks collapsing distinct futures into one category or failing to guide intervention priorities.",
+      "score": 0.91
+    }
+  ]
+}

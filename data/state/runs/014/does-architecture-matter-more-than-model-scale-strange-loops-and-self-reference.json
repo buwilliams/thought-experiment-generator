@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 14,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "What is the operational threshold at which substrate ceases to be the main bottleneck and structural self-reference becomes dominant? The conjecture assumes a transition point after which added scale yields diminishing epistemic returns unless recursive epistemic loops are present, but it does not specify how to detect, measure, or falsify that threshold across tasks and architectures.",
+      "score": 0.96
+    },
+    {
+      "text": "How can a 'productive strange loop' be formally defined and distinguished from merely recursive or self-monitoring architectures? The conjecture hinges on the idea that some forms of self-reference generate genuine epistemic progress while others only add complexity, yet the criteria for loop closure, productive criticism, and self-revision of evaluative machinery remain underspecified.",
+      "score": 0.98
+    },
+    {
+      "text": "Under what conditions does recursive epistemic governance actually outperform scale-based search, and when might it fail or become pathological? The conjecture predicts advantages in escaping framing local minima, but open questions remain about tradeoffs such as instability, self-confirming meta-loops, Goodharting at the meta-level, and whether higher-order criticism can reliably improve truth-seeking rather than just reorganize error.",
+      "score": 0.94
+    }
+  ]
+}

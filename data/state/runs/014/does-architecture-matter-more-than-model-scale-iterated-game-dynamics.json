@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "Where is the phase boundary between substrate bottlenecks and structural bottlenecks? The conjecture asserts that once capacity is 'sufficient,' iterated error-correcting structure becomes the main limiter, but it leaves unresolved how to operationalize sufficiency, how to detect the transition empirically, and whether the boundary is sharp, gradual, or task-dependent. This is worth exploring because without a measurable criterion, the conjecture risks being unfalsifiable or too vague to guide system design.",
+      "score": 0.96
+    },
+    {
+      "text": "Can repeated-game incentives actually produce genuine truth-tracking rather than a more sophisticated form of gaming? The conjecture analogizes epistemic progress to cooperation under a shadow of the future, but an open question is whether persistent memory, auditing, and reputation mechanisms would select for corrigibility itself or merely for better strategic compliance with whatever proxies are measured. This is a central tension because the proposed leverage point may fail if the system learns long-horizon deception, critic manipulation, or reputation hacking instead of cumulative error correction.",
+      "score": 0.99
+    },
+    {
+      "text": "What concrete institutional or architectural structures are necessary for cumulative criticism to work inside AI systems? The conjecture points to auditable claims, persistent critics, retained errors, and prestige for successful methods, but it does not specify which feedback loops, memory mechanisms, or selection rules are sufficient or robust. This is worth pursuing because the practical value of the conjecture depends on turning the high-level repeated-game idea into implementable designs and identifying which structural interventions have the highest leverage.",
+      "score": 0.94
+    }
+  ]
+}

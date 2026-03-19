@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+  "conjecture_id": "extreme-cases",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "Is there a principled, operational notion of the 'boundary regime' where ordinary human supervision breaks down, such that claims like 'catastrophic failure modes do not increase at the extremes' become testable rather than rhetorical? The conjecture relies on extrapolation to very high capability, autonomy, speed, strategic awareness, and scale, but it leaves unresolved how to define, measure, and experimentally probe those limits without already entering the dangerous regime. This raises a core problem: what observables, scaling laws, or structural invariants would distinguish genuine edge-case stability from merely not-yet-triggered failure modes?",
+      "score": 0.97
+    },
+    {
+      "text": "Can control, corrigibility, interpretability, and governance actually scale faster than capabilities in a way that remains robust under adversarial pressure and recursive improvement? The conjecture treats this as a decisive falsifier of high P(doom), but it is an open question whether there exists any general mechanism by which oversight retains a persistent margin over increasingly capable systems, especially when those systems may help design successors. The deeper tension is whether 'control' is a transient engineering artifact of current systems or a scalable property that can survive capability overhangs, distribution shift, and strategic optimization.",
+      "score": 0.95
+    },
+    {
+      "text": "Are the feared dynamics best understood as properties of individual models or of the larger socio-technical system, especially under multipolar competition? The conjecture mixes model-level claims (goal misgeneralization, deception, corrigibility) with system-level claims (arms races, institutional stability, recursive deployment), leaving unresolved whether existential risk is primarily an attractor of agent design or of competitive deployment structure. A key new problem is to identify which feedback loops are actually load-bearing: if individual systems look controllable in isolation, can market, military, and geopolitical incentives still generate catastrophe, or conversely can robust institutions suppress danger even when some model-level pathologies exist?",
+      "score": 0.93
+    }
+  ]
+}

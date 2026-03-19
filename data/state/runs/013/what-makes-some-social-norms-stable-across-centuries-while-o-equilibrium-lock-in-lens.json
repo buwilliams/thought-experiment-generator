@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-some-social-norms-stable-across-centuries-while-o",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 13,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 1.0,
+  "total": 0.988,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture distinguish norms that persist mainly because institutions solve a public-goods problem from norms that persist because people have internalized them so deeply that compliance is intrinsically motivated? The unresolved tension is whether 'sincerity' is truly secondary or whether internalization is itself a stock produced by institutions and can become an independent stabilizer after external enforcement weakens.",
+      "score": 0.94
+    },
+    {
+      "text": "What are the actual tipping variables and threshold dynamics that separate long periods of apparent stability from sudden collapse? The conjecture posits a hidden stock of norm-maintenance and a rapid transition to a no-provision equilibrium, but it leaves open which measurable changes in monitoring, exit options, elite subsidy, reputational density, or sanction cost produce nonlinear breakdown rather than gradual erosion.",
+      "score": 0.97
+    },
+    {
+      "text": "Which classes of norms does the public-goods/excludability model fail to explain, especially norms that survive despite weak enforcement or collapse despite strong institutions? This open question tests the conjecture's scope conditions: whether coordination/predictability is the main causal structure across norm types, or whether some norms are better explained by identity, sacred values, legitimacy, or direct private benefits rather than underprovision of maintenance.",
+      "score": 0.95
+    }
+  ]
+}

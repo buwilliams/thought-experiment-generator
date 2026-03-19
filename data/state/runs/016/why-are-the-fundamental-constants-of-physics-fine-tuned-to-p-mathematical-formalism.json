@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "mathematical-formalism",
+  "run": 16,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can a non-arbitrary, physically meaningful measure or coordinate-invariant notion of 'size' be defined on the parameter space \\(\\mathcal{P}\\), so that claims that the viability region \\(V\\) is 'small', 'narrow', or 'fine-tuned' are well-posed rather than artifacts of parametrization or unjustified priors?",
+      "score": 0.98
+    },
+    {
+      "text": "Can the predicate \\(C(c)\\) be replaced by a mathematically tractable set of necessary and/or sufficient conditions for multiscale information-bearing structure—e.g. inequalities for bound states, metastability, free-energy gradients, and open-ended error-correcting dynamics—and do these conditions actually define a robust universality class rather than an anthropically tailored list?",
+      "score": 0.95
+    },
+    {
+      "text": "If a deeper theory constrains or generates the low-energy constants, what structural properties of the map from fundamental theory to effective parameter space determine whether its image generically intersects, concentrates on, or is attracted toward the viability region \\(V\\); and can this explain apparent fine-tuning without reintroducing it at a higher level?",
+      "score": 0.93
+    }
+  ]
+}

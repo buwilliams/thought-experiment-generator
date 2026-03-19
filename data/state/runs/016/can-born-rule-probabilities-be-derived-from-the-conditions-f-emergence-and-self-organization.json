@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 16,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 1.0,
+  "total": 0.952,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular by defining 'durable records,' 'redundancy,' and 'record survivability' in purely dynamical terms that do not already smuggle in the Born measure? The key open problem is whether one can derive amplitude-squared weighting uniquely from unitary interaction structure and decoherence alone, rather than merely redescribing standard Born-weighted branches as the durable ones after the fact.",
+      "score": 0.97
+    },
+    {
+      "text": "Is there a precise theorem showing that, across repeated branching and coarse-graining, squared amplitude is the unique measure preserved by record-production dynamics? This includes testing whether alternative measures could also track stability, compositionality, and observer agreement, or whether amplitude-squared is singled out by invariance under branch recombination, environmental copying, and multi-step record formation.",
+      "score": 0.94
+    },
+    {
+      "text": "What exactly is the status of 'maverick' branches in this framework: are they dynamically unable to sustain long-lived observer-memory-environment alignment, and can that be quantified independently of subjective typicality arguments? The open question is whether one can model a record ecology in which anomalous-frequency branches formally exist but provably fail to maintain cross-checkable science over time, thereby explaining empirical Born frequencies without appealing to primitive probability.",
+      "score": 0.89
+    }
+  ]
+}

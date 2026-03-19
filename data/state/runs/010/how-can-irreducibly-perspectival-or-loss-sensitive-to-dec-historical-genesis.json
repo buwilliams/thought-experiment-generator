@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec",
+  "conjecture_id": "historical-genesis",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.7,
+  "total": 0.76,
+  "candidate_problems": [
+    {
+      "text": "Can indexical indispensability be specified in a non-circular, operational way that cleanly distinguishes conscious systems from merely self-regulating ones? The conjecture says 'necessary for self-regulation under uncertainty' is independently testable, but many nonconscious systems also use self-locating variables, egocentric coordinates, or internal state estimates. The open problem is to formulate criteria strong enough to avoid overgeneration while not covertly presupposing consciousness.",
+      "score": 0.97
+    },
+    {
+      "text": "Is decomposition-sensitive self-locating control architecture sufficient for consciousness, or only necessary? The conjecture narrows the target from generic holism to privileged internal models used in action-selection, but it remains unresolved whether such architecture explains consciousness itself or only a functional precondition often associated with it. This is the central tension between a control-theoretic account and the original explanatory gap about what experience is like for the system.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly counts as 'cannot be preserved under decomposition without reintroducing the system-relative coordinate frame,' and is this a substantive ontological claim or just a redescription constraint? The conjecture risks collapsing into the claim that some explanations must retain indexicals to model certain control dynamics. The open question is whether this marks a deep feature of consciousness or merely the familiar fact that some systems are best modeled from an embedded perspective.",
+      "score": 0.91
+    }
+  ]
+}

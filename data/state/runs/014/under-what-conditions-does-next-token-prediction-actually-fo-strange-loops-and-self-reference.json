@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 14,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal formal criterion for a 'strange loop' or 'cross-level closure' that distinguishes tasks where next-token prediction must recover reusable latent invariants from tasks where shallow heuristics suffice? The conjecture is suggestive but underdefined: without a precise characterization, it is unclear how to test, falsify, or compare against alternative explanations based on mutual information, partial observability, recurrence depth, or compression alone.",
+      "score": 0.97
+    },
+    {
+      "text": "Under what conditions does predictive success force representations that are actually aligned with real domain invariants, rather than merely supporting equivalent but non-interpretable, simulator-specific, or shortcut internal states? The conjecture moves from functional necessity to ontological alignment, but that step is unresolved: many distinct internal representations could close the predictive loop while differing in whether they correspond to human-recognizable or interventionally real latent variables.",
+      "score": 0.95
+    },
+    {
+      "text": "How much of the claimed effect comes from the data-generating process versus the model architecture and training dynamics? Even if the environment contains cross-level closure, it remains open whether standard next-token training reliably finds the invariant, or whether emergence depends on recurrence, context length, optimization bias, memory mechanisms, scale, or curriculum. This is a key tension between sufficiency in principle and learnability in practice.",
+      "score": 0.93
+    }
+  ]
+}

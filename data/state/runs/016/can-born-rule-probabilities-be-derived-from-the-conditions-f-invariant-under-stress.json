@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+  "conjecture_id": "invariant-under-stress",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be turned into a precise theorem that uniquely derives the Born rule from record-stability requirements alone? The central unresolved tension is that notions like 'durable record', 'cross-context reuse', 'redundant copying', and 'mutual consistency across subsystems' are currently intuitive rather than formally specified. A worthwhile problem is to define these operationally and prove either that squared amplitude is the unique measure invariant under unitary evolution, branching refinement/coarse-graining, subsystem composition, and recursive record copying, or else identify counterexamples where non-Born measures also satisfy the stated stability criteria.",
+      "score": 0.98
+    },
+    {
+      "text": "What is the exact relation between basis-dependence of branching and the claim that durable records pick out an invariant structure? The conjecture relies on decoherence and record formation to distinguish operationally meaningful branches from merely mathematical decompositions, but it remains open whether this selection is sufficiently basis-independent and context-robust to ground a unique probability rule. A key problem is to test whether different decohering interactions, coarse-grainings, or observer/environment partitions can yield inequivalent 'record structures' that threaten uniqueness, and if so what additional invariant principle is needed.",
+      "score": 0.93
+    },
+    {
+      "text": "Does the proposed 'generalization pressure' from repeated interaction and record reuse genuinely exclude rival weighting schemes in realistic many-body settings? The open question is whether alternatives to Born weighting fail only in stylized examples or whether there is a broad dynamical instability result showing that non-Born measures break observer agreement, frequency convergence, or compositional consistency under iterated copying and comparison. This is worth pursuing because it would connect the conjecture's systems picture to concrete dynamical models and reveal whether emergent frequencies of durable records are explanatory or merely a redescription of standard quantum statistics.",
+      "score": 0.9
+    }
+  ]
+}

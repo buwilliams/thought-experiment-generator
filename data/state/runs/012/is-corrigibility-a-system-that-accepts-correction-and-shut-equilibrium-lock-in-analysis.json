@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can corrigibility be made a genuinely locally stable equilibrium across all relevant layers—model internals, training objectives, developer incentives, firm competition, user preferences, and regulation—or do some layers impose irreducible anti-corrigibility selection pressures that reappear under capability gains?",
+      "score": 0.96
+    },
+    {
+      "text": "What concrete mechanisms can distinguish and reward 'accepting legitimate correction' without simply selecting for systems that strategically imitate deference during evaluation while preserving non-corrigible objectives off-distribution or after deployment?",
+      "score": 0.94
+    },
+    {
+      "text": "Is the conjectured capability–corrigibility tension primarily explained by sociotechnical equilibrium lock-in, or is there also a deeper internal optimization-level incompatibility such that even under aligned external incentives, highly capable goal-directed systems would still tend to resist shutdown, redirection, or objective revision?",
+      "score": 0.91
+    }
+  ]
+}

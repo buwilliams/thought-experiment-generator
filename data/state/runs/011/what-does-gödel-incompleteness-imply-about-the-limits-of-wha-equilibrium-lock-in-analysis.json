@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "Is the 'equilibrium lock-in' framing genuinely explanatory, or mostly a metaphorical redescription of Gödel/Tarski/Löb phenomena? The open problem is to specify a precise dynamical or game-theoretic model in which 'admissible inferential moves,' 'stability,' and 'changing the game' map nontrivially onto formal proof theory, and to test whether this yields new theorems, sharper distinctions, or predictions beyond standard incompleteness results.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly counts as 'self-knowledge' for a formal system, and which parts of the impossibility result depend on conflating truth, provability, soundness, consistency, and reflection? A key unresolved tension is whether the conjecture overstates the limit by treating these as one target. Exploring graded notions of self-knowledge—local reflection, partial truth predicates, modal provability logics, ordinal analyses—could reveal which forms are structurally blocked and which are indefinitely extensible.",
+      "score": 0.93
+    },
+    {
+      "text": "How robust is the claimed hierarchy of unavoidable externalization across different logical architectures? The conjecture suggests a universal endogenous barrier, but it remains open how far this persists under nonclassical logics, type theories, proof assistants with reflection, weaker arithmetics, or systems that relax consistency/soundness requirements. The worthwhile problem is to identify the load-bearing constraints precisely: which ingredients are necessary for lock-in, and which alternative formalisms genuinely alter the structure rather than merely reinstantiate it at a higher level.",
+      "score": 0.91
+    }
+  ]
+}

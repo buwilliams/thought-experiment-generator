@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.5,
+  "total": 0.6319999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can 'epistemic progress' be operationalized in a way that genuinely tracks error-correcting improvement rather than just introducing a new family of proxies? The conjecture proposes capacities like self-criticism, revision, transfer, and resistance to persuasive regression, but it remains open whether these can be measured reliably, cheaply, and non-gameably enough to distinguish real knowledge growth from systems optimized to simulate corrigibility.",
+      "score": 0.96
+    },
+    {
+      "text": "Is the claimed coordination equilibrium actually the dominant causal barrier to better evaluation, or are there deeper technical, conceptual, or demand-side reasons why reasoning-quality measures remain weakly adopted? The conjecture attributes persistence of current metrics mainly to lock-in and first-mover disadvantage, but this leaves unresolved how much of the problem is strategic equilibrium versus the possibility that reasoning improvement is intrinsically hard to define, observe, or value in many deployment contexts.",
+      "score": 0.92
+    },
+    {
+      "text": "What mechanisms could shift the system out of the benchmark/fluency equilibrium without destroying comparability, trust, and economic viability? If no single actor can move first, the key open problem is to identify leverage points—shared standards, procurement rules, staged hybrid metrics, regulatory interventions, or consortium-based evaluation—that can create a new equilibrium where reasoning-sensitive measures are individually rational to adopt.",
+      "score": 0.94
+    }
+  ]
+}

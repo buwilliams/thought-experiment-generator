@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+  "conjecture_id": "shadow-of-future",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "What precise dynamical rule makes a vacuum contribution 'gravitationally legible' across renormalization, cosmic history, and backreaction, rather than removable by redefinition or sequestering? The conjecture depends on a nonstandard selection principle, but it is unclear how to formulate it mathematically in a way that is covariant, compatible with effective field theory, and not merely metaphorical. This is the core unresolved question because without a concrete criterion the repeated-game picture does not yet distinguish which stress-energy components gravitate and why.",
+      "score": 0.97
+    },
+    {
+      "text": "Can a repeated cross-scale feedback mechanism suppress large vacuum energy while remaining consistent with known no-go pressures from locality, diffeomorphism invariance, radiative stability, Weinberg-type arguments, and precision cosmology? The open tension is whether the conjectured adjustment dynamics can be real rather than a relabeling of fine-tuning. A worthwhile problem is to identify whether any explicit model can produce a small positive fixed point for dark energy without introducing hidden tuning, acausality, or observationally excluded global constraints.",
+      "score": 0.95
+    },
+    {
+      "text": "What novel empirical signatures would distinguish 'residual equilibrium dark energy' from an ordinary cosmological constant or standard sequestering models? If dark energy is the long-run fixed point of a memory-and-feedback process, one should ask whether this implies testable departures in equation-of-state evolution, response to phase transitions, horizon-scale correlations, or the gravitational effect of vacuum shifts in the early universe. Without discriminating predictions, the conjecture risks being interpretive rather than explanatory.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 10,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.7,
+  "total": 0.7629999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjectured 'public-goods failure' in free-will discourse be operationalized and tested rather than merely redescribed? The key open question is whether the persistence of the dispute is actually explained by incentive structure in the conceptual ecology, as opposed to the dispute simply tracking a genuine unresolved metaphysical problem about agency, causation, and responsibility.",
+      "score": 0.95
+    },
+    {
+      "text": "What principled criteria distinguish a genuinely real explanatory level of agency from a merely convenient or instrumental description under determinism? The conjecture relies on multi-level realism, but leaves unresolved when reason-responsiveness, counterfactual evaluation, and deliberative control count as ontologically serious patterns rather than just shorthand for underlying physical processes.",
+      "score": 0.93
+    },
+    {
+      "text": "If free will is reconceived as a causally realized form of control, what exactly grounds responsibility, desert, and the coercion/choice distinction, especially in hard cases involving manipulation, addiction, pathology, and social conditioning? The open problem is whether the proposed framework can generate non-arbitrary normative boundaries robust enough for moral and legal practice.",
+      "score": 0.91
+    }
+  ]
+}

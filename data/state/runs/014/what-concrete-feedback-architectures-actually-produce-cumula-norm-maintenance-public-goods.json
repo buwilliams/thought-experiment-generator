@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "What concrete institutional mechanisms can make truth-tracking criticism a stable collective-action equilibrium under real competitive pressure? The conjecture identifies four loops, but leaves open the core design problem: which incentive structures, governance arrangements, auditing rights, promotion criteria, and veto powers actually prevent drift toward performance theater when shipping speed, prestige, and revenue reward defection. This is the central unresolved tension because the conjecture may be true in principle yet fail in practice if no robust equilibrium-enforcing architecture exists.",
+      "score": 0.97
+    },
+    {
+      "text": "How can one distinguish genuine cumulative epistemic error-correction from mere local optimization on criticism channels? The conjecture claims many feedback systems only produce optimization residue, but it leaves unresolved the operational criteria for telling the difference. A new problem is to define observable signatures of durable knowledge growth—such as transfer across contexts, resistance to benchmark gaming, mechanistic retention of discovered failures, or improved handling of novel adversarial cases—so the conjecture becomes testable rather than interpretive.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the boundary between institutional and technical solutions in sustaining cumulative error-correction? The conjecture prioritizes institutions over techniques like RLHF and benchmark iteration, but an open question is whether this contrast is too sharp. It is unresolved whether technical architectures could internalize some of the four loops—for example through automated adversarial generation, persistent memory systems, or training schemes that preserve criticism across model generations—or whether institutional enforcement is irreducibly primary. Exploring this boundary could reveal whether the conjecture is overstating the social layer or identifying a true bottleneck.",
+      "score": 0.88
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "historical-genesis",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made discriminative against rival generative explanations of power laws? In particular, what observable signatures would distinguish 'historical residue of coordination under bounded knowledge' from alternative mechanisms such as optimization, criticality, multiplicative growth, fitness heterogeneity, or domain-specific constraints?",
+      "score": 0.97
+    },
+    {
+      "text": "What are the necessary and sufficient conditions under which local heuristics like reuse, visibility-based attachment, and reinforcement actually produce robust power-law or scale-free structure rather than other heavy-tailed, lognormal, core-periphery, or winner-take-all outcomes?",
+      "score": 0.94
+    },
+    {
+      "text": "If scale-freeness is often a frozen solution to an earlier coordination problem, when and how can systems escape it? That is, what interventions in search cost, information availability, protocol design, or institutional incentives shift a system away from incumbent-biased cumulative advantage without destroying coordination efficiency?",
+      "score": 0.92
+    }
+  ]
+}

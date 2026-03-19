@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 16,
+  "logical_consistency": 0.74,
+  "hard_to_vary": 1.0,
+  "total": 0.9219999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made into a precise dynamical theorem that derives the Born-rule exponent specifically as amplitude-squared, rather than some other monotone function of amplitude, from a model of redundant record formation under decoherence? The central unresolved tension is explanatory specificity: many branches may differ in durability, but why should the threshold/feedback/public-goods mechanism pick exactly the 2-norm and not |psi|^p or another measure once the dynamics are written down?",
+      "score": 0.98
+    },
+    {
+      "text": "How can 'public-goods underprovision' be translated into standard unitary quantum mechanics without importing anthropomorphic or teleological language? The open question is whether there exists a branch-intrinsic, observer-independent definition of durable, reproducible, publicly accessible records that is rigorous enough to avoid circularity, since the conjecture risks presupposing the quasi-classical records whose weighting it aims to explain.",
+      "score": 0.94
+    },
+    {
+      "text": "Does the conjecture predict empirically or conceptually distinct behavior from existing Everettian accounts based on decoherence, envariance, decision theory, or quantum Darwinism? If recordability merely redescribes why high-weight branches are more redundantly encoded, it may add interpretation without new problem-solving power; the key unresolved issue is whether it yields novel constraints, failure modes, or testable signatures in repeated measurement scenarios or atypical environments.",
+      "score": 0.89
+    }
+  ]
+}

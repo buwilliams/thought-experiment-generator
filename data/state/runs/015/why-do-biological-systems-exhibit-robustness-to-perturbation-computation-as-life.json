@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "computation-as-life",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made quantitatively precise by defining measurable 'functional invariants' and 'substrate-agnostic computation' in real biological systems, and showing that these explanatory units predict robustness and evolvability better than standard mechanistic or population-genetic descriptions?",
+      "score": 0.97
+    },
+    {
+      "text": "What are the structural and dynamical conditions under which many-to-one genotype-to-function mappings actually increase evolvability rather than trap systems on neutral plateaus, hide beneficial variation, or create fragility at higher organizational levels?",
+      "score": 0.94
+    },
+    {
+      "text": "How does natural selection, which acts on immediate fitness differences, generate and maintain architectures that preserve long-term 'searchability' of design space; is evolvability itself directly selected, indirectly emergent, or a byproduct of multilevel feedback across development, ecology, and inheritance?",
+      "score": 0.96
+    }
+  ]
+}

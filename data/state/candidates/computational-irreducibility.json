@@ -1,9 +1,9 @@
 {
   "id": "computational-irreducibility",
   "layer": "candidates",
-  "score": 0.8911666666666668,
-  "rank": 10,
-  "run_count": 3,
+  "score": 0.8674820105820107,
+  "rank": 14,
+  "run_count": 9,
   "problem_coverage": [
     "what-structural-features-make-market-economies-vulnerable-to",
     "why-do-markets-consistently-underprovide-public-goods-even-w",
@@ -19,7 +19,45 @@
     "what-structural-pressures-make-political-systems-resistant-t",
     "why-do-democracies-systematically-favor-short-term-outcomes",
     "what-determines-whether-constitutional-arrangements-survive",
-    "what-structural-features-allow-institutions-to-maintain-legi"
+    "what-structural-features-allow-institutions-to-maintain-legi",
+    "how-does-intentionality-the-aboutness-of-mental-states-a",
+    "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec",
+    "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+    "what-is-the-relationship-between-information-processing-and",
+    "can-the-conjecture-supply-a-non-circular-precise-criterion",
+    "what-is-the-relationship-between-free-will-causation-and-p",
+    "why-does-subjective-experience-exist-at-all-why-is-there-s",
+    "why-is-mathematics-unreasonably-effective-at-describing-phys",
+    "what-does-gödel-incompleteness-imply-about-the-limits-of-wha",
+    "can-the-conjecture-s-central-analogy-from-formal-incompleten",
+    "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+    "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+    "how-can-counterfactual-reach-be-made-precise-without-colla",
+    "what-is-the-relationship-between-compression-understanding",
+    "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+    "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+    "does-discontinuous-capability-takeoff-make-alignment-qualita",
+    "is-deceptive-alignment-a-system-that-pursues-human-approva",
+    "is-corrigibility-a-system-that-accepts-correction-and-shut",
+    "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+    "why-do-in-group-and-out-group-dynamics-persist-even-in-socie",
+    "what-makes-some-social-norms-stable-across-centuries-while-o",
+    "how-does-trust-function-as-infrastructure-in-social-systems",
+    "what-determines-whether-a-coordination-failure-among-agents",
+    "how-do-dominant-power-structures-self-perpetuate-without-exp",
+    "what-concrete-feedback-architectures-actually-produce-cumula",
+    "what-makes-an-explanation-hard-to-vary",
+    "can-llms-create-new-knowledge",
+    "does-architecture-matter-more-than-model-scale",
+    "how-can-epistemic-progress-be-defined-and-measured-indepen",
+    "under-what-conditions-does-next-token-prediction-actually-fo",
+    "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+    "what-prevents-the-unification-of-general-relativity-and-quan",
+    "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+    "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+    "why-does-quantum-measurement-produce-definite-outcomes-and",
+    "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+    "why-did-the-universe-begin-in-a-state-so-exceptionally-suite"
   ],
   "created_at": "2026-03-18T21:40:45.802488536+00:00",
   "promoted_from": null,
@@ -98,6 +136,196 @@
       "run": 9,
       "score": 0.413,
       "problem_id": "what-structural-features-allow-institutions-to-maintain-legi"
+    },
+    {
+      "run": 10,
+      "score": 0.83,
+      "problem_id": "how-does-intentionality-the-aboutness-of-mental-states-a"
+    },
+    {
+      "run": 10,
+      "score": 0.888,
+      "problem_id": "how-can-irreducibly-perspectival-or-loss-sensitive-to-dec"
+    },
+    {
+      "run": 10,
+      "score": 0.909,
+      "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a"
+    },
+    {
+      "run": 10,
+      "score": 0.888,
+      "problem_id": "what-is-the-relationship-between-information-processing-and"
+    },
+    {
+      "run": 10,
+      "score": 0.839,
+      "problem_id": "can-the-conjecture-supply-a-non-circular-precise-criterion"
+    },
+    {
+      "run": 10,
+      "score": 0.982,
+      "problem_id": "what-is-the-relationship-between-free-will-causation-and-p"
+    },
+    {
+      "run": 10,
+      "score": 0.7509999999999999,
+      "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s"
+    },
+    {
+      "run": 11,
+      "score": 0.7719999999999999,
+      "problem_id": "why-is-mathematics-unreasonably-effective-at-describing-phys"
+    },
+    {
+      "run": 11,
+      "score": 0.602,
+      "problem_id": "what-does-gödel-incompleteness-imply-about-the-limits-of-wha"
+    },
+    {
+      "run": 11,
+      "score": 0.6930000000000001,
+      "problem_id": "can-the-conjecture-s-central-analogy-from-formal-incompleten"
+    },
+    {
+      "run": 11,
+      "score": 0.8419999999999999,
+      "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled"
+    },
+    {
+      "run": 11,
+      "score": 0.702,
+      "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate"
+    },
+    {
+      "run": 11,
+      "score": 0.982,
+      "problem_id": "how-can-counterfactual-reach-be-made-precise-without-colla"
+    },
+    {
+      "run": 11,
+      "score": 0.915,
+      "problem_id": "what-is-the-relationship-between-compression-understanding"
+    },
+    {
+      "run": 12,
+      "score": 0.7749999999999999,
+      "problem_id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals"
+    },
+    {
+      "run": 12,
+      "score": 0.979,
+      "problem_id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell"
+    },
+    {
+      "run": 12,
+      "score": 0.982,
+      "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita"
+    },
+    {
+      "run": 12,
+      "score": 0.7689999999999999,
+      "problem_id": "is-deceptive-alignment-a-system-that-pursues-human-approva"
+    },
+    {
+      "run": 12,
+      "score": 0.83,
+      "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut"
+    },
+    {
+      "run": 12,
+      "score": 0.982,
+      "problem_id": "what-would-falsify-a-high-p-doom-estimate-what-empirical"
+    },
+    {
+      "run": 13,
+      "score": 0.7719999999999999,
+      "problem_id": "why-do-in-group-and-out-group-dynamics-persist-even-in-socie"
+    },
+    {
+      "run": 13,
+      "score": 0.979,
+      "problem_id": "what-makes-some-social-norms-stable-across-centuries-while-o"
+    },
+    {
+      "run": 13,
+      "score": 0.845,
+      "problem_id": "how-does-trust-function-as-infrastructure-in-social-systems"
+    },
+    {
+      "run": 13,
+      "score": 0.6930000000000001,
+      "problem_id": "what-determines-whether-a-coordination-failure-among-agents"
+    },
+    {
+      "run": 13,
+      "score": 0.909,
+      "problem_id": "how-do-dominant-power-structures-self-perpetuate-without-exp"
+    },
+    {
+      "run": 14,
+      "score": 0.982,
+      "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula"
+    },
+    {
+      "run": 14,
+      "score": 0.9,
+      "problem_id": "what-makes-an-explanation-hard-to-vary"
+    },
+    {
+      "run": 14,
+      "score": 0.909,
+      "problem_id": "can-llms-create-new-knowledge"
+    },
+    {
+      "run": 14,
+      "score": 0.702,
+      "problem_id": "does-architecture-matter-more-than-model-scale"
+    },
+    {
+      "run": 14,
+      "score": 0.6990000000000001,
+      "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen"
+    },
+    {
+      "run": 14,
+      "score": 0.839,
+      "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo"
+    },
+    {
+      "run": 16,
+      "score": 0.882,
+      "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f"
+    },
+    {
+      "run": 16,
+      "score": 0.903,
+      "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan"
+    },
+    {
+      "run": 16,
+      "score": 0.964,
+      "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph"
+    },
+    {
+      "run": 16,
+      "score": 0.97,
+      "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so"
+    },
+    {
+      "run": 16,
+      "score": 0.934,
+      "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and"
+    },
+    {
+      "run": 16,
+      "score": 0.9,
+      "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p"
+    },
+    {
+      "run": 16,
+      "score": 0.839,
+      "problem_id": "why-did-the-universe-begin-in-a-state-so-exceptionally-suite"
     }
   ]
 }

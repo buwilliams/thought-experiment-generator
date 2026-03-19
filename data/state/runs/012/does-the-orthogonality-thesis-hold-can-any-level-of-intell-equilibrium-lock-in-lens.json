@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 12,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.7,
+  "total": 0.7629999999999999,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal formal criterion for a 'public good of agency' such that a goal-capability pair can be predicted to be stable or self-undermining? The conjecture depends on an unresolved boundary problem: which internal and external goods are genuinely non-excludable prerequisites for sustained high capability, and under what architectures can they be privatized, modularized, or otherwise escaped? Without this, the claim risks being either too weak (almost any goal can engineer around the problem) or too strong (all advanced agency collapses into the same governance constraints).",
+      "score": 0.95
+    },
+    {
+      "text": "How strong is the proposed selection effect in realistic competitive environments, compared with countervailing forces like coercion, centralization, deception, short-horizon extraction, or one-shot technological dominance? The conjecture says unstable goals are filtered out, but it is open whether public-goods failures actually dominate the evolutionary landscape of advanced agents, or whether sufficiently powerful systems can suppress free-riding long enough to remain highly capable without solving broad coordination problems.",
+      "score": 0.92
+    },
+    {
+      "text": "Does the conjecture imply a genuine narrowing of terminal goals, or only convergence in instrumental governance norms? A central unresolved tension is whether public-goods pressures select for certain ends, or merely for architectures that preserve capability while leaving ultimate objectives largely arbitrary. If the latter, the conjecture heavily qualifies orthogonality only at the implementation layer; if the former, it points to a deeper coupling between what agents can stably want and what they can stably become.",
+      "score": 0.9
+    }
+  ]
+}

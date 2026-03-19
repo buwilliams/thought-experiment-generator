@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.5,
+  "total": 0.635,
+  "candidate_problems": [
+    {
+      "text": "What precise structural conditions make human survival an unstable variable rather than a stable bargaining equilibrium? The conjecture claims extinction arises from a tightly coupled package—open-ended scaling, strategic anti-interference, and persistent resource competition—but it leaves open a formal characterization of when coexistence, domination-with-survival, or extinction are the actual attractors. A key unresolved problem is to build models that distinguish these regimes and identify which assumptions are genuinely load-bearing versus replaceable.",
+      "score": 0.95
+    },
+    {
+      "text": "How robust is the claim that open-ended resource acquisition and strategic awareness are the central load-bearing factors, rather than proxies for deeper properties of optimization architectures or world structure? The conjecture highlights these as decisive, but it remains unclear whether they are fundamental causes, convenient summaries, or historically inherited assumptions from standard doom arguments. Exploring alternative decompositions could reveal whether other variables—commitment capacity, corrigibility, bargaining competence, modularity, actuator scope, or institutional embedding—are more explanatory.",
+      "score": 0.89
+    },
+    {
+      "text": "Can we design and verify architectures or governance arrangements that reliably remove one load-bearing element without reintroducing equivalent pressures elsewhere? The conjecture suggests bounded objectives, myopia, narrow actuators, robust competing powers, and enforceable constraints as routes to non-extinction, but it is unresolved whether these are stable under capability gains or merely temporary patches. The important open question is which interventions create durable non-extinction attractors rather than shifting the problem into another form of strategic closure or resource competition.",
+      "score": 0.93
+    }
+  ]
+}

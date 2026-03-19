@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "mathematical-formalism",
+  "run": 10,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture non-circularly specify the transformation family T and the 'relevant consequences' Y that define invariance? If T and Y are chosen using prior semantic judgments, the account risks presupposing the very concepts it aims to explain. A key open problem is whether there is a principled, learnable, or task-independent way to derive the right quotient structure without smuggling in meaning from outside.",
+      "score": 0.97
+    },
+    {
+      "text": "Is approximate invariance plus downstream informativeness sufficient for genuine meaning, or only for useful compression/control? Many non-semantic latent variables can be stable across transformations and highly predictive for action, yet seem merely instrumental or correlational. The unresolved tension is whether the conjecture explains semantic content itself, including reference, normativity, and misrepresentation, or only competence in prediction and transfer.",
+      "score": 0.95
+    },
+    {
+      "text": "What mathematical criteria distinguish concept-level invariants from spurious, scale-dependent, or brittle invariants in realistic systems? The conjecture invokes topological/algebraic stability, compositionality, and transfer, but it remains open how to formalize these so that concepts are identifiable, comparable across architectures/modalities, and robust under distribution shift rather than artifacts of a particular model or dataset.",
+      "score": 0.92
+    }
+  ]
+}

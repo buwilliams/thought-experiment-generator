@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-s-central-analogy-from-formal-incompleten",
+  "conjecture_id": "mathematical-formalism",
+  "run": 11,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the boundary B_A be defined non-arbitrarily and shown to be an invariant of the architecture rather than an artifact of the chosen coding scheme Σ, proof system, or resource model? The conjecture depends on a robust decomposition into decidable, approximate, and undecidable self-facts, but it is unresolved whether that trichotomy survives changes in representation or collapses under alternative encodings.",
+      "score": 0.97
+    },
+    {
+      "text": "Which predicate families Φ admit simultaneously attainable, sound, and complete self-knowledge under explicit resource bounds, and is there a principled characterization of the maximal such class? This is the central classification problem left open by the conjecture, connecting expressivity, proof-theoretic strength, and computational complexity.",
+      "score": 0.99
+    },
+    {
+      "text": "What exact notion of 'internal certification' is load-bearing for the incompleteness result, especially for probabilistic, learned, or approximate self-models? It remains unclear whether the obstruction class extends cleanly beyond classical theorem-proving systems to agents whose self-ascriptions are statistical, corrigible, or behaviorally grounded rather than deductively certified.",
+      "score": 0.95
+    }
+  ]
+}

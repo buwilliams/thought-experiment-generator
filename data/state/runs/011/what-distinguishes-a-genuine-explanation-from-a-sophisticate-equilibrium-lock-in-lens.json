@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 11,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing constraint' be operationalized in a non-circular way? The conjecture says a genuine explanation identifies constraints whose alteration changes the phenomenon, but this risks collapsing into an after-the-fact test: whatever mattered is declared load-bearing because changing it would matter. A major open problem is to specify principled criteria or methods for distinguishing genuine structural constraints from merely convenient redescriptions before full intervention is possible, especially in complex social systems with many correlated variables.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the boundary between structural explanation and agent-level understanding when agents can learn and strategically adapt? The conjecture emphasizes outcomes that would recur even if people understood the situation and wanted better outcomes, but in many collective-action settings common knowledge, institutional entrepreneurship, norm shifts, or new coordination technologies can themselves alter payoffs and feasible equilibria. The unresolved tension is whether preferences, beliefs, and rhetoric are usually superficial or whether they can become load-bearing by changing the structure endogenously.",
+      "score": 0.92
+    },
+    {
+      "text": "How should competing explanations be evaluated when multiple partially load-bearing constraints jointly sustain the same phenomenon? Public-goods failure may depend simultaneously on excludability, monitoring costs, sanctioning capacity, path dependence, legitimacy, and feedback delays. The conjecture sharply contrasts explanation with redescription, but real cases often involve overdetermination and interacting mechanisms. An important open question is how to rank explanatory depth across such mixed cases without reverting either to simplistic monocausal stories or to unconstrained multi-factor narratives.",
+      "score": 0.9
+    }
+  ]
+}

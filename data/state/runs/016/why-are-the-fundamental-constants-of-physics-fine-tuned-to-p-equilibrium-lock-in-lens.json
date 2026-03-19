@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 16,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-metaphorical by defining a rigorous measure on 'theory space' and on 'complexity-enabling public goods,' so that claims like 'narrow regime,' 'most combinations fail,' and 'underprovision' become testable rather than artifacts of parameterization or priors?",
+      "score": 0.97
+    },
+    {
+      "text": "Is there any deep mechanism that couples the relevant constants so that the joint provision of stable matter, long-lived stars, chemical diversity, and scale separation is a generic outcome rather than an accidental coincidence—e.g. symmetry, dynamical attractors, renormalization structure, cosmological selection, or some lawlike constraint?",
+      "score": 0.95
+    },
+    {
+      "text": "What is the actual dependency structure among the supposed enabling conditions: are they genuinely independent 'goods' requiring coordination, or do a smaller number of underlying physical principles automatically generate several of them at once, weakening the public-goods/underprovision picture?",
+      "score": 0.91
+    }
+  ]
+}

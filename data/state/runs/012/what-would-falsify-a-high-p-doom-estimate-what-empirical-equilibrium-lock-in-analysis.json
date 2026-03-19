@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can the conjectured 'Nash-like trap' be operationalized and empirically distinguished from remediable incompetence? The core open problem is to define observable signatures of structural lock-in versus temporary misgovernance, including what counts as compulsion, survivable restraint, defection pressure, and equilibrium persistence across labs, firms, and states.",
+      "score": 0.97
+    },
+    {
+      "text": "What mechanisms could make AI safety genuinely incentive-compatible under real competitive conditions, and are any of them stable against defection, secrecy, and capability asymmetries? This includes testing whether monitoring, liability, compute governance, verification, treaties, or market redesign can alter payoffs enough to break the race dynamic rather than merely suppress it briefly.",
+      "score": 0.95
+    },
+    {
+      "text": "Can reliable control/interpretability actually substitute for coordination by removing the strategic advantage of reckless deployment, or does it itself depend on the same competitive equilibrium being solved first? The unresolved tension is whether technical safety can close the principal-agent gap in practice before actors are pressured to deploy systems they do not understand.",
+      "score": 0.91
+    }
+  ]
+}

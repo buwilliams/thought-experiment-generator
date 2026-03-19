@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+  "conjecture_id": "shadow-of-future",
+  "run": 16,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 0.9,
+  "total": 0.882,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made into a precise theorem: given a formal model of repeated measurement, decoherence, memory, copying, and cross-checking, is squared-amplitude weighting uniquely singled out as the only rule that yields dynamically stable, compositionally consistent records? This is the core unresolved issue because the argument currently relies on intuitive notions like 'durability,' 'visibility,' and 'self-consistency' that need exact definitions and a proof of uniqueness against alternatives such as |psi|^p weighting.",
+      "score": 0.98
+    },
+    {
+      "text": "What is the exact mechanism linking branch weight to record robustness? In standard unitary quantum theory, decoherence explains persistence of quasi-classical records, but it is not obvious that higher squared amplitude makes a record more dynamically stable rather than merely more heavily weighted in observer counting. The open question is whether amplitude affects survivability/copyability of records in a physically non-circular way, or whether the conjecture covertly reintroduces the Born rule in the notion of 'which records matter.'",
+      "score": 0.95
+    },
+    {
+      "text": "How interpretation-dependent is the conjecture? Does the proposed derivation work only in Everettian branching language, or can 'stable reproducible records imply Born probabilities' be formulated in an interpretation-neutral way that also applies to collapse models, consistent histories, QBist-style operational reconstructions, or quantum Darwinism? If not, the conjecture may be less a derivation of the Born rule than a restatement of assumptions specific to one ontology of records and branches.",
+      "score": 0.87
+    }
+  ]
+}

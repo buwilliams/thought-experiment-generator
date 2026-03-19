@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-in-group-and-out-group-dynamics-persist-even-in-socie",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "Is the conjectured recursion truly unavoidable for all explicit anti-tribal norms, or only for systems that centralize interpretation and enforcement? The key open question is to identify necessary and sufficient conditions under which a norm against tribalism does or does not crystallize into a higher-order tribe. This includes testing whether weak norms, decentralized institutions, anonymity, fluid membership, or cross-cutting affiliations can break the loop rather than merely disguise it.",
+      "score": 0.95
+    },
+    {
+      "text": "How can one distinguish ordinary coordination around universal norms from genuinely tribal in-group/out-group dynamics? The conjecture risks collapsing all norm enforcement into 'tribalism,' so a major unresolved tension is whether there are principled criteria separating functional boundary maintenance, epistemic quality control, or rule enforcement from identity-based exclusion. Without such a distinction, the conjecture may become unfalsifiable or trivial.",
+      "score": 0.93
+    },
+    {
+      "text": "What institutional designs actually weaken self-reinforcing identity loops once they emerge? The conjecture ends with a design implication, but leaves open the mechanism: which feedback structures reduce the conversion of anti-tribal ideals into status hierarchies, and under what conditions do interventions backfire by creating a new elite of 'properly nontribal' actors? This is a high-value systems question because it turns the conjecture into testable governance problems.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can 'capacity to generate, preserve, and apply error-correcting explanations across novel conditions' be operationalized without collapsing back into the very output proxies the conjecture rejects? The core tension is whether structural measures of epistemic infrastructure can be made precise, comparable, and manipulation-resistant, or whether any practical metric will be gamed into another benchmark of answer production.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the causal relationship between explanation quality and performance under novelty: does stronger public error-correcting infrastructure reliably produce better adaptation, or can high novelty-robust performance arise from opaque, non-explanatory systems? This is an open question about whether explanation-centered epistemic progress is necessary, sufficient, or only one pathway to generalizable capability.",
+      "score": 0.92
+    },
+    {
+      "text": "If epistemic progress is a partially non-excludable public good, what institutional designs actually overcome its underprovision without creating new failure modes such as bureaucracy, performative transparency, or slowed exploration? The unresolved problem is to identify mechanisms that reward preservation of negative knowledge, criticism, and interpretability while remaining compatible with competitive incentives and rapid innovation.",
+      "score": 0.95
+    }
+  ]
+}

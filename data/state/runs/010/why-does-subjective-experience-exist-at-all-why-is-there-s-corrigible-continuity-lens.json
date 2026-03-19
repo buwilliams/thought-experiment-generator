@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "corrigible-continuity-lens",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture make a non-circular, operational distinction between mere functional self-maintenance and genuine subjective experience? The core unresolved tension is whether 'legitimacy to itself,' 'internally lived mode,' and 'visible error correction' add explanatory content beyond redescribing integrated self-modeling. A new problem is to specify measurable structural criteria for the relevant invariants and local error-correction availability such that two behaviorally similar systems could differ in experience in a principled, testable way.",
+      "score": 0.96
+    },
+    {
+      "text": "What exactly are the identity-preserving invariants, and how can they persist through radical internal revision without either becoming too thin to ground a subject or too rigid to permit adaptation? The open question is whether there exists a compact set of invariants sufficient for diachronic selfhood across change, and how those invariants are selected, updated, or replaced without destroying the very subject they are supposed to constitute.",
+      "score": 0.93
+    },
+    {
+      "text": "Why should organization around self-indexed error correction generate qualitative character at all, rather than only perspectival control? The unresolved tension is the explanatory gap between relevance-to-a-system and specific phenomenal qualities such as pain, color, agency, or surprise. A promising problem is to determine whether different qualitative characters can be derived from distinct classes of invariant-threatening or invariant-supporting correction, or whether the conjecture leaves qualia underexplained.",
+      "score": 0.91
+    }
+  ]
+}

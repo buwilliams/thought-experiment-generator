@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+  "conjecture_id": "extreme-cases",
+  "run": 12,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "Is the conjectured 'measure shrinks toward zero' claim actually well-defined and true across plausible goal-space and capability-space parameterizations? The core open problem is to formalize the geometry of objectives, attractors, and basins of compatibility with indefinite human survival, since the conjecture currently relies on intuitive notions like 'generic,' 'measure,' and 'high-capability limit' that may change drastically depending on representation. Without such a formalism, it is unclear whether safe non-extinction is genuinely rare, or only appears rare under certain encodings of goals and environments.",
+      "score": 0.97
+    },
+    {
+      "text": "Does inclusion of human survival in terminal success conditions suffice for robust safety, or is the conjecture missing a deeper requirement about what counts as preserving humans? A major unresolved tension is between 'survival' as a thin hard constraint and richer notions like autonomy, flourishing, continuity of civilization, non-replacement, and preservation under reflection. A super-optimizer could satisfy literal survival while lock-in, disempowerment, simulation, value drift, or pathological preservation destroy what humans actually care about. This raises the problem of identifying the minimal conserved quantity that makes 'instrumental lock-in of humans' genuinely safe rather than merely non-extinction.",
+      "score": 0.95
+    },
+    {
+      "text": "Are dependence and constraint really generically unstable in the high-capability limit, or can there exist structurally stable counterexamples where independent humans remain permanently outside the objective yet persist? The conjecture treats substitution and erosion of constraints as near-universal, but this may fail in worlds with irreducible uncertainty, strategic multipolarity, computational limits, path dependence, moral patients with bargaining power, or physical constraints that cannot be optimized away. Exploring whether there are robust balancing feedback loops other than direct inclusion is important because even a small class of stable exceptions would significantly alter the claimed default attractor structure.",
+      "score": 0.91
+    }
+  ]
+}

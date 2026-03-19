@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-some-social-norms-stable-across-centuries-while-o",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 13,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'recursive closure' or 'hierarchical self-reentry' be operationalized and measured independently of mere norm strength, conformity, or coercive capacity? The conjecture is explanatory only if it yields discriminating indicators that predict endurance better than existing variables such as sanctions, coordination benefits, network density, or material incentives.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the boundary conditions and counterexamples to the claim that identity-legitimacy self-reference is the key driver of long-term norm persistence? In particular, are there norms that endure for centuries without deep self-modeling, or norms with strong identity embedding that still collapse rapidly due to shocks, technological change, elite defection, or cross-system competition?",
+      "score": 0.94
+    },
+    {
+      "text": "What is the causal mechanism of loop switching during rapid norm cascades: how does an alternative identity-institution-behavior loop become available, gain interpretive authority, and overtake the old one? The conjecture identifies a structural contrast between stable and fragile norms, but leaves open the dynamics, thresholds, and leverage points by which one self-referential equilibrium is replaced by another.",
+      "score": 0.92
+    }
+  ]
+}

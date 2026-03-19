@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-trust-function-as-infrastructure-in-social-systems",
+  "conjecture_id": "computational-irreducibility",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made precise enough to distinguish genuine computational irreducibility from merely high but reducible uncertainty in social systems? The core unresolved tension is whether trust is necessary because full social prediction is in-principle impossible, or only because current institutions and technologies are inadequate. This matters because the conjecture’s strongest claim depends on showing limits to substitution by monitoring, contracts, AI prediction, or mechanism design rather than just current cost disadvantages.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the measurable system-level variables that let us identify when trust is functioning as compression versus when verification-heavy substitutes are actually more efficient or robust? The open question is how to operationalize 'computational burden,' 'compression failure,' and 'trust erosion' across different scales and domains, and whether there are thresholds or phase transitions where adding surveillance, bureaucracy, or formalization destroys rather than stabilizes coordination.",
+      "score": 0.94
+    },
+    {
+      "text": "Under what structural conditions can trust be successfully migrated from interpersonal memory to institutional, procedural, or protocol-based forms without becoming brittle, gameable, or illegible? The unresolved tension is that the conjecture treats institutions as carriers of trust, but the same formalization that scales trust may also undermine it by increasing opacity, abstraction, and adversarial optimization. This raises a new problem about the design limits of institutions as trust-preserving compression layers.",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 14,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "What, operationally, distinguishes 'cumulative epistemic error-correction' from ordinary local performance optimization? The conjecture depends on a sharp boundary, but it is unresolved how to define and measure knowledge growth in AI so that it is not confounded with benchmark gains, memorization, broader coverage, or reward hacking. A new problem is to formulate falsifiable criteria and experimental signatures for cumulative error-elimination across episodes and domains.",
+      "score": 0.97
+    },
+    {
+      "text": "Is the claimed four-part architecture genuinely necessary, or only one sufficient implementation among many functionally equivalent designs? The conjecture asserts that proposal generation, adversarial criticism, durable memory, and selective revision are non-substitutable, but it remains open whether other mechanisms—e.g. implicit world models, self-supervised latent memory, population-based search, or end-to-end systems with internal modularity—could realize the same epistemic function without explicit role separation. A key problem is to identify invariants at the level of function rather than surface architecture.",
+      "score": 0.94
+    },
+    {
+      "text": "How much independence and persistence are actually required before the reinforcing loop becomes self-sustaining rather than dissipative? The conjecture treats weakened criticism, transient memory, or nonselective revision as causing reversion to local tuning, but the threshold behavior is unknown. This raises a systems question: what quantitative conditions on critic-generator independence, memory durability, retrieval fidelity, and revision locality are sufficient for stable accumulation of corrections, and what failure modes or phase transitions appear when those parameters degrade?",
+      "score": 0.91
+    }
+  ]
+}

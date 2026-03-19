@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can we operationally distinguish 'optimization feedback' from genuine 'epistemic error-correction' in AI organizations and systems? The conjecture assumes a real difference, but an open problem is to define observable criteria showing when a feedback loop actually improves truth-tracking rather than merely benchmark fit, safety theater, or local objective performance.",
+      "score": 0.95
+    },
+    {
+      "text": "What concrete institutional or market mechanisms can make criticism locally payoff-positive without crippling competitiveness? The conjecture identifies equilibrium lock-in, but leaves open which interventions—regulation, shared incident repositories, liability rules, insurance, procurement standards, audit mandates, reputation systems, or new governance structures—actually change incentives enough to sustain durable criticism loops.",
+      "score": 0.98
+    },
+    {
+      "text": "Under what conditions do durable public error records and independent veto powers improve long-run epistemic performance rather than generate gaming, bureaucracy, secrecy, or adversarial slowdown? The conjecture treats persistence and criticism rights as key leverage points, but an unresolved tension is whether these mechanisms remain effective once actors optimize against them, especially in highly competitive environments.",
+      "score": 0.93
+    }
+  ]
+}

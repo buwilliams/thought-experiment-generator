@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-did-the-universe-begin-in-a-state-so-exceptionally-suite",
+  "conjecture_id": "mathematical-formalism",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "How can a natural, non-arbitrary measure on cosmological gravitational state space or history space be defined well enough to make the claim 'low-gravitational-entropy initial states are overwhelmingly exceptional' mathematically meaningful? The conjecture relies on a 'tiny subset' L and on typicality over histories, but in gravity/cosmology both coarse-graining and measure choice are deeply unsettled, especially with diffeomorphism invariance, singularities, horizons, and possible infinite-dimensional phase spaces.",
+      "score": 0.97
+    },
+    {
+      "text": "Can one formulate a simple, lawlike temporal boundary constraint B(h)=0 that is compatible with known local dynamics and that provably yields a robust monotone resource for complexity growth F(h) over long intervals, without smuggling in teleology? The open tension is whether a boundary law can be both mathematically simple and physically fertile enough to generate arrows of time, free-energy gradients, and knowledge-supporting structure, rather than merely restating the low-entropy fact in different language.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the precise relation between low gravitational entropy, free-energy throughput, and the emergence of knowledge-bearing complexity across histories? The conjecture treats knowledge growth as a class of entropy-exporting transformations enabled by an initial entropy gap, but it remains open whether one can define F(h) and 'complexity/knowledge growth' in a non-circular, scale-robust way and show that such growth is structurally generic within the boundary-constrained ensemble rather than an additional exceptional feature.",
+      "score": 0.91
+    }
+  ]
+}

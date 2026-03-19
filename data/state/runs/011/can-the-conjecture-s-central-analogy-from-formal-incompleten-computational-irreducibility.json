@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-s-central-analogy-from-formal-incompleten",
+  "conjecture_id": "computational-irreducibility",
+  "run": 11,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.6,
+  "total": 0.6930000000000001,
+  "candidate_problems": [
+    {
+      "text": "What exact theorem-schema is being claimed, and under which minimal assumptions does it hold? The conjecture mixes several constraints—sufficient expressivity, self-encoding, bounded interpretive resources, and same-regime decidability—but it is unresolved whether these jointly yield a Gödel/Tarski/Rice-style impossibility theorem, a complexity-theoretic lower bound, or only a family resemblance. A key open problem is to formalize the operational notion of self-knowledge so that the limitation is genuinely load-bearing rather than definitional, and to identify sharp thresholds where the analogue appears or disappears.",
+      "score": 0.97
+    },
+    {
+      "text": "How should computational irreducibility be related to incompleteness rather than merely juxtaposed with it? The conjecture suggests irreducibility explains why limits on self-knowledge are broader than diagonalization, but it remains open whether irreducibility adds independent content, is reducible to complexity-theoretic intractability, or is only a heuristic gloss on undecidability. A worthwhile problem is to determine whether there are systems with incompleteness but compressible self-prediction, or irreducible self-simulation without formal undecidability, and thus map the exact overlap and separation between these phenomena.",
+      "score": 0.95
+    },
+    {
+      "text": "What counts as 'true propositions about S’s own behavior' when truth, representation, and implementation are all internal to the same system? The conjecture relies on a notion of global correctness about self-encoded computations, but it is unresolved how semantic truth is fixed without smuggling in an external interpreter, model, or oracle. This raises an open problem about whether the analogy can be made fully internal, or whether it inevitably depends on an outside semantic standpoint that weakens the force of the 'self-knowledge' claim.",
+      "score": 0.91
+    }
+  ]
+}

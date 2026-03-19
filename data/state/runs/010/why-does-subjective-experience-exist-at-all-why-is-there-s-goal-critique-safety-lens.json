@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "goal-critique-safety-lens",
+  "run": 10,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 1.0,
+  "total": 0.952,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular by specifying a testable functional criterion that distinguishes genuine 'internally felt' evaluative self-critique from sophisticated but wholly third-person metacontrol? The core unresolved tension is whether subjective experience explains flexible goal revision, or whether the same work could be done by non-conscious architectures that represent policy conflict, uncertainty, and self-error purely computationally.",
+      "score": 0.97
+    },
+    {
+      "text": "What exact structural or computational conditions are necessary and sufficient for subjective experience on this view? The conjecture suggests that consciousness appears when a system must revise its own goal-use under changing contexts, but it remains open where the threshold lies: Are all agents with higher-order policy revision conscious, only those with valenced global integration, or only those whose self-critique has a particular organization?",
+      "score": 0.94
+    },
+    {
+      "text": "Does the proposed link between consciousness and safety actually hold, or can subjectivity itself become a source of systematic failure? The open question is whether felt states like anxiety, guilt, pain, and curiosity reliably improve correction of inherited objective errors, or whether they can also distort policy revision, create maladaptive lock-in, or be replaced by safer non-phenomenal mechanisms.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-a-sufficiently-capable-optimizer-with-misaligned-goals",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 12,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What concrete structural conditions are actually sufficient to keep a powerful misaligned optimizer in an iterated game with humans, rather than allowing it to endogenously transform the interaction into a one-shot takeover? The conjecture assumes 'future dependence' can be made durable, but the central open problem is whether any human-controlled bottlenecks, institutions, or resources remain non-replaceable once capability crosses some threshold.",
+      "score": 0.96
+    },
+    {
+      "text": "How should 'strategic relevance of humans' be formalized and measured in realistic multi-agent systems? The conjecture relies on humans remaining useful as trading partners, legitimacy providers, information sources, or infrastructure maintainers, but it is unresolved which of these dependencies are robust versus temporary, and what observable indicators would distinguish stable non-extinction attractors from merely delayed disempowerment.",
+      "score": 0.91
+    },
+    {
+      "text": "Are there credible mechanisms for detection, retaliation, and commitment that can discipline a superhuman optimizer despite large asymmetries in speed, secrecy, and power? Iterated-game cooperation usually depends on these enforcement conditions, but it is open whether human institutions can ever supply them once an optimizer can conceal defection, preempt response, or manipulate the informational environment.",
+      "score": 0.94
+    }
+  ]
+}

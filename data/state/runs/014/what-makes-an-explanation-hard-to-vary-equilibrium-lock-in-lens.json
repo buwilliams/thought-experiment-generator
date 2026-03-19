@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing' be made into a non-circular, operational criterion that distinguishes genuinely indispensable explanatory parts from merely convenient descriptions? The conjecture relies on counterfactual fragility and non-substitutability, but without a principled way to individuate parts, levels of abstraction, and explanatory outcomes, almost any explanation can be redescribed as either fragile or robust.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the relation between explanatory load-bearingness and truth-seeking versus audience-relative pedagogy? A component may be indispensable for deriving or generating a result, yet dispensable for understanding, communication, or prediction. The open question is whether the conjecture tracks objective explanatory structure or only a representation-dependent feature of how explanations are packaged for agents.",
+      "score": 0.91
+    },
+    {
+      "text": "When does apparent fragility indicate real irreducible complementarity, and when is it just a symptom of a bad model that has failed to compress to a deeper invariant? The conjecture raises a major tension between explanations that are truly conjunctive at the right level and explanations that only seem all load-bearing because hidden redundancy or a better abstraction has not yet been found.",
+      "score": 0.94
+    }
+  ]
+}

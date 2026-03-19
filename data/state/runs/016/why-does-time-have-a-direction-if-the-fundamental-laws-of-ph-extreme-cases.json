@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+  "conjecture_id": "extreme-cases",
+  "run": 16,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture make the link between thermodynamic asymmetry and epistemic asymmetry non-circular and quantitatively precise? It claims that knowledge growth, memory, and records exist only in the direction away from a low-entropy boundary, but this risks redescribing the arrow in epistemic language rather than explaining it. A key open problem is to define observer-independent criteria for 'record', 'memory', and 'knowledge-bearing system' in time-symmetric physics, and to show whether these necessarily align with entropy increase under realistic dynamics rather than only by stipulation.",
+      "score": 0.95
+    },
+    {
+      "text": "What explains the low-entropy boundary itself, and can that explanation avoid simply relocating the mystery? The conjecture treats the boundary condition as the true leverage point, but it remains unresolved whether such a boundary should be explained by cosmological dynamics, selection effects, a lawlike constraint, a measure over histories, or something else. The major tension is that without a principled account of why this boundary is natural, probable, or explanatory, the conjecture may successfully shift the problem from 'flow' to 'initial condition' without solving it.",
+      "score": 0.99
+    },
+    {
+      "text": "Does the conjecture really unify causal, thermodynamic, and experiential arrows, or are these only partially coupled phenomena? It assumes that once a low-entropy boundary is given, causation, memory, agency, and experienced temporal direction all line up. An important open question is whether there are physically possible regimes—such as fluctuation-driven observers, recohering systems, closed timelike structures, or exotic cosmologies with multiple entropy minima—where entropy gradients exist but stable causal or epistemic asymmetries do not align cleanly. If such cases exist, the proposed unification is incomplete.",
+      "score": 0.91
+    }
+  ]
+}

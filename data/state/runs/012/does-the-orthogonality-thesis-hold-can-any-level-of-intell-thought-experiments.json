@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+  "conjecture_id": "thought-experiments",
+  "run": 12,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "What, precisely, is a reflectively stable goal architecture for an embedded self-modifying agent, and can it be characterized formally enough to distinguish stable terminal goals from merely initially specifiable ones? This is the core unresolved issue because the conjecture hinges on a nontrivial notion of 'same goal over time' across ontology change, self-modification, and improved world-models.",
+      "score": 0.97
+    },
+    {
+      "text": "Are the alleged structural pressures toward richer meta-goals, corrigibility, or conceptual stabilization genuinely necessary consequences of high capability under scarcity, or can there exist highly capable agents with arbitrary goals that remain stable without such meta-level elaboration? This tests whether the conjecture identifies a real constraint or overgeneralizes from particular agent designs.",
+      "score": 0.92
+    },
+    {
+      "text": "What are the actual attractors in the space of intelligence-goal pairings under realistic dynamics—do they converge on a narrow class of survivable goal systems, and if so, by what mechanisms? This open question matters because the conjecture proposes a systems-level selection effect but does not yet explain the structure, breadth, or empirical detectability of those attractors.",
+      "score": 0.89
+    }
+  ]
+}

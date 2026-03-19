@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 14,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.7,
+  "total": 0.7779999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'degree of mutual constraint' be operationalized into a non-circular, domain-general measure of explanatory load or replacement cost? The conjecture proposes a structural criterion, but it remains open how to represent components, dependencies, and propagation of edits in a way that distinguishes genuine explanatory integration from mere complexity, verbosity, or ad hoc interdependence.",
+      "score": 0.97
+    },
+    {
+      "text": "What separates productive hard-to-vary explanations from brittle or overfit systems that are also highly mutually constrained? Strong coupling can indicate explanatory depth, but it can also arise from contrived constructions that resist modification only because they are patched together. The unresolved tension is how to discriminate truth-tracking constraint from pathological rigidity.",
+      "score": 0.95
+    },
+    {
+      "text": "At what level of decomposition should explanatory parts be identified when assessing mutual constraint? Replacement cost depends on how an explanation is carved into components, mechanisms, boundary conditions, and timescales. Without a principled account of granularity, the same explanation may appear load-bearing or freely swappable depending on the analyst's partition, making the criterion potentially observer-relative.",
+      "score": 0.91
+    }
+  ]
+}

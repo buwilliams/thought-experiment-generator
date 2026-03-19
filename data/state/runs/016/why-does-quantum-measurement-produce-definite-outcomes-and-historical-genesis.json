@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "historical-genesis",
+  "run": 16,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.8,
+  "total": 0.833,
+  "candidate_problems": [
+    {
+      "text": "Can a replacement concept of measurement be made precise enough to recover all the empirical roles of the orthodox measurement postulate—especially the Born rule, effective definiteness, and the operational distinction between incompatible observables—using only unitary dynamics, decoherence, and record formation?",
+      "score": 0.97
+    },
+    {
+      "text": "What exactly explains the observer’s experience of a single outcome if 'definite outcome' is treated as emergent from stable records rather than as a primitive selector event? In particular, is observer-location within the global state sufficient, or does this reintroduce the same problem in new language?",
+      "score": 0.95
+    },
+    {
+      "text": "How much of the measurement problem is genuinely a historical-conceptual inheritance from classical epistemology, versus a real physical incompleteness in quantum theory itself? Put differently, what empirical or explanatory criteria could distinguish a merely reframed problem from an actual solution?",
+      "score": 0.93
+    }
+  ]
+}

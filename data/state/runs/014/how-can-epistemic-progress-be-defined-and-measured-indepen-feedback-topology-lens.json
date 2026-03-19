@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "feedback-topology-lens",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "Operationalization tension: How can 'feedback integrity' be defined and measured in a way that distinguishes genuine knowledge-producing improvement from systems that merely simulate corrigibility, legibility, or responsiveness to criticism?",
+      "score": 0.97
+    },
+    {
+      "text": "Mechanism tension: What concrete architectures or training dynamics actually produce the proposed bottlenecks—representation modularity, traceable dependence between claims and grounds, and criticism integration—and are these jointly achievable without sacrificing capability or inducing collapse?",
+      "score": 0.95
+    },
+    {
+      "text": "Reality-contact tension: In domains where ground truth is delayed, partial, socially mediated, or theory-laden, what counts as 'error-correcting contact with reality,' and how can a system maintain epistemic progress when feedback itself is sparse, corrupted, or endogenous to the system's outputs?",
+      "score": 0.93
+    }
+  ]
+}

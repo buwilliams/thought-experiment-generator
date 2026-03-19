@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "mathematical-formalism",
+  "run": 10,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture non-arbitrarily define the boundary and level of description at which a subsystem counts as an 'agent' with genuine causal authorship, rather than a merely convenient coarse-graining? The open problem is to specify principled criteria for agent individuation, level selection, and stable partitions of state space so that claims about free will are not observer-relative.",
+      "score": 0.95
+    },
+    {
+      "text": "What exact measurable invariant distinguishes 'self-model-mediated dynamics' from sophisticated but unfree control? The conjecture gestures at intervention-sensitive internal variables, goals, predictions, and error-correction, but it remains unresolved which formal metrics—e.g. integration, counterfactual richness, controllability, model-based planning, temporal depth—are necessary or sufficient for freedom.",
+      "score": 0.97
+    },
+    {
+      "text": "Does conditional 'could have done otherwise' capture the normative core of free will, including responsibility and authorship, or does it only redescribe causal dependence? The unresolved tension is whether intervention-sensitive internal dynamics are enough to ground the stronger philosophical notions people care about, or whether the conjecture explains agency while leaving moral responsibility untouched.",
+      "score": 0.93
+    }
+  ]
+}

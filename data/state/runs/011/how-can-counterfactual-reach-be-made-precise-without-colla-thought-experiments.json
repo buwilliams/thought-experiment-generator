@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-counterfactual-reach-be-made-precise-without-colla",
+  "conjecture_id": "thought-experiments",
+  "run": 11,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "How can 'admissible interventions' and 'structurally compatible changes' be defined non-circularly and representation-independently? The conjecture relies on a transformation space that preserves 'deep constraints', but without an independent criterion this risks collapsing into: interventions are admissible exactly when the favored representation transports well. A key open problem is to specify the ontology of these constraints and the boundary between local recomposition and hidden refitting in a way that different representations can be fairly compared.",
+      "score": 0.96
+    },
+    {
+      "text": "Is counterfactual reach genuinely distinct from existing notions such as causal abstraction, modularity, invariance, disentanglement, mechanistic compositionality, or out-of-distribution robustness, or is it a re-description of some combination of them? The conjecture asserts non-reducibility, but the load-bearing question is which concrete cases separate equal prediction/compression/causal-skeleton models by reach alone. Finding sharp separating examples or impossibility results is an important unresolved tension.",
+      "score": 0.93
+    },
+    {
+      "text": "What metric can measure 'correct transport with bounded revision' without smuggling in task-specific judgments? The proposal combines breadth of transformations, depth of hypothetical chaining, fidelity of transported consequences, and revision cost, but these components may trade off against one another and depend on computational budget, architecture, and granularity of representation. A major open problem is whether there exists a principled metric or partial order for counterfactual reach that is stable across model classes and useful for empirical evaluation.",
+      "score": 0.95
+    }
+  ]
+}

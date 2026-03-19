@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "What precise structural invariants of multi-scale interaction networks jointly generate robustness and evolvability, rather than merely correlating with them? The conjecture names modularity, degeneracy, feedback, redundancy, and loose coupling, but leaves unresolved which combinations are necessary, sufficient, or scale-dependent, and how to formalize the preserved 'higher-order dynamical regime' across genotype, development, physiology, and environment.",
+      "score": 0.96
+    },
+    {
+      "text": "By what mechanisms can selection act on architecture itself, given computational irreducibility and the fact that robustness/evolvability are emergent system-level properties only visible over long timescales? This raises an unresolved tension between local selection on immediate fitness effects and the conjecture's claim that evolution favors network organizations that preserve future adaptive potential.",
+      "score": 0.92
+    },
+    {
+      "text": "Where are the boundaries of the co-production claim: under what conditions do robustness and evolvability cease to align and instead trade off? The conjecture dissolves the paradox in many cases, but it remains open when buffering suppresses useful variation, when modularity blocks beneficial integration, or when environmental coupling makes local changes propagate catastrophically, implying architecture-dependent failure modes.",
+      "score": 0.9
+    }
+  ]
+}

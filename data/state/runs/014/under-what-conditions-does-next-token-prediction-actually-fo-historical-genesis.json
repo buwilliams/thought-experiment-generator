@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "historical-genesis",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s key notion of 'historically forced' be made precise and testable? In particular, what formal criterion distinguishes environments where shortcut features are merely available from environments where they are structurally eliminated by interventions, re-descriptions, or distributional stress, so that invariant-tracking latents become the cheapest surviving predictive strategy?",
+      "score": 0.96
+    },
+    {
+      "text": "What is the relationship between predictive indispensability and ontological correctness of learned latents? Even if a latent variable is necessary for robust low-loss prediction across contexts, under what conditions does that imply it corresponds to a real domain invariant rather than a model-specific, compressed surrogate that is only instrumentally stable?",
+      "score": 0.94
+    },
+    {
+      "text": "Which training and evaluation regimes actually create the conjectured forcing conditions in practice for large language models? The open problem is to identify whether finite capacity, long-horizon prediction, OOD testing, multimodal grounding, intervention-rich corpora, or architectural constraints are the main leverage points that convert next-token prediction from shortcut learning into invariant discovery.",
+      "score": 0.92
+    }
+  ]
+}

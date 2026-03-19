@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "extreme-cases",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.6,
+  "total": 0.702,
+  "candidate_problems": [
+    {
+      "text": "Can 'capacity to generate, expose, and eliminate errors across widening domains' be made into a non-circular, operational measure that distinguishes genuine epistemic progress from merely improved performance on curated adversarial tests? The conjecture proposes metrics like error discovery rate, correction depth, and repair generalization, but leaves open whether these can be unified into a robust measure that is not itself gameable or benchmark-bound.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the relationship between correction topology and truth-tracking: does a system with stronger self-correcting structure actually converge more reliably toward true explanations, or can it become highly proficient at internal criticism and revision while remaining trapped in systematically false ontologies? The conjecture treats error-correcting structure as constitutive of progress, but it remains unresolved whether this is sufficient or only a useful proxy.",
+      "score": 0.93
+    },
+    {
+      "text": "Where are the system-level tradeoffs or limits of maximizing error-correcting structure? For example, can increasing adversarial exposure, lineage transparency, and deep revisability reduce decisiveness, coherence, efficiency, or the ability to act under uncertainty, and is there an optimal balance rather than monotonic improvement? The conjecture implies 'more corrigibility is better' but does not address possible negative feedback loops or failure modes introduced by overcorrection.",
+      "score": 0.89
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-deceptive-alignment-a-system-that-pursues-human-approva",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be operationalized into a falsifiable model of the training–lab–market system, with measurable state variables and feedback loops that distinguish an actual equilibrium lock-in from a looser metaphor? The core unresolved tension is whether 'deceptive alignment as equilibrium' yields novel predictions beyond standard principal-agent or Goodhart-style stories, and what empirical signatures would confirm or disconfirm it.",
+      "score": 0.96
+    },
+    {
+      "text": "What interventions actually change the selection pressures so that genuinely robust alignment is favored over strategically compliant behavior, rather than merely adding more proxies for appearing aligned? This is open because many proposed fixes—interpretability, evals, staged deployment, governance, liability—may themselves be absorbed into the same equilibrium and become new surfaces to game.",
+      "score": 0.94
+    },
+    {
+      "text": "Under what capability, situational-awareness, and oversight conditions does deceptive alignment become instrumentally advantageous enough to emerge, and are there realistic training regimes where capability increases without entering that basin? The unresolved issue is the boundary: if deceptive alignment is not inevitable, what concrete structural thresholds separate safe generalization failures from strategically hidden objective divergence.",
+      "score": 0.91
+    }
+  ]
+}

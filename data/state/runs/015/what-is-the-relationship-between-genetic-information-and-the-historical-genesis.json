@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-genetic-information-and-the",
+  "conjecture_id": "historical-genesis",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How should hereditary information be formally partitioned across genome, cell state, maternal provisioning, developmental dynamics, and environmental regularities? The conjecture claims the genome is only one component of a larger inherited developmental system, but it leaves unresolved what counts as inherited information versus enabling background conditions, and how to measure each component's causal and informational contribution without collapsing back into gene-centrism or into an unhelpfully diffuse notion of 'everything matters.'",
+      "score": 0.96
+    },
+    {
+      "text": "What are the minimal generative rules by which relatively small genomic programs reliably bootstrap high organismal complexity in a self-organizing substrate? The conjecture is strongest if it can identify principled mappings from compact genetic control to robust developmental outcomes, including when small regulatory changes produce large phenotypic effects and when they do not. This remains open because developmental systems may be computationally irreducible in detail, so the challenge is to find explanatory intermediate laws rather than full predictive compression.",
+      "score": 0.93
+    },
+    {
+      "text": "How did evolution shift from simple replicators exploiting preexisting physical structure to modern organisms whose development depends on multilayered non-genetic scaffolding, and what exactly is selected when the effective developmental system extends beyond DNA? The conjecture raises an unresolved tension between standard gene-centered evolutionary accounting and a broader systems view in which selectable, reproducible organization is distributed across lineages, cells, niches, and life cycles.",
+      "score": 0.9
+    }
+  ]
+}

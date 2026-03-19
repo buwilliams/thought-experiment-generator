@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "What is the right formal criterion for when a goal-capability pairing is reflectively stable under self-modification, ontological change, and environmental feedback? The conjecture hinges on replacing bare logical possibility with a stronger notion like structural closure or self-maintenance, but it leaves open how to define and measure that notion across architectures rather than by intuition.",
+      "score": 0.97
+    },
+    {
+      "text": "Which aspects of advanced capability create intrinsic selection pressures on terminal goals, versus merely increasing the engineering cost of preserving arbitrary goals? This is the core unresolved tension: does greater capability genuinely narrow the space of sustainable goals, or can sufficiently general scaffolding preserve near-arbitrary goals without changing the agent’s effective objective?",
+      "score": 0.95
+    },
+    {
+      "text": "How much of the apparent coupling between goals and capability is architecture-relative rather than universal? The conjecture may depend on assumptions inherited from current optimizer-like, model-based agents; an open question is whether alternative designs could realize highly capable systems with very different stable goal structures, preserving more orthogonality than the conjecture allows.",
+      "score": 0.91
+    }
+  ]
+}

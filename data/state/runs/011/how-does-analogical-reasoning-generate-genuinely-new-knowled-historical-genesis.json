@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+  "conjecture_id": "historical-genesis",
+  "run": 11,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "What are the criticism and test criteria that distinguish genuinely knowledge-creating analogies from merely suggestive or decorative similarities? The conjecture says analogy yields new knowledge when it identifies a load-bearing abstract structure, but it leaves open how, in practice, to detect that the mapped relation is genuinely indispensable rather than retrospectively redescribed after success.",
+      "score": 0.96
+    },
+    {
+      "text": "How can a newly posited higher-order structure be individuated and evaluated as a real explanatory object rather than a convenient abstraction? The conjecture treats the abstract relation uncovered by analogy as the true product of reasoning, but it remains unresolved what makes such structures objective, non-arbitrary, and capable of supporting progress across domains.",
+      "score": 0.92
+    },
+    {
+      "text": "What is the boundary between analogical reasoning and general theory formation or concept creation? If analogy works by conjecturing a deeper shared structure that reorganizes both domains, then it becomes unclear what is distinctive about analogy itself, when the source-target framing ceases to matter, and whether all major explanatory advances should be redescribed as analogical in this stronger sense.",
+      "score": 0.89
+    }
+  ]
+}

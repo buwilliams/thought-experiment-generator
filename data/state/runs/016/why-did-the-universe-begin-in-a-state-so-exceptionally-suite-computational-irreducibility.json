@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-did-the-universe-begin-in-a-state-so-exceptionally-suite",
+  "conjecture_id": "computational-irreducibility",
+  "run": 16,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "Can computational irreducibility do genuine explanatory work in cosmology rather than merely redescribe our predictive limitations? The open problem is to distinguish cases where irreducibility is an objective property of the universe’s dynamics from cases where it is only epistemic, and to specify what would count as a better explanation if no shortcut from laws+initial state to complex outcomes exists.",
+      "score": 0.95
+    },
+    {
+      "text": "What precise connection, if any, links low-entropy boundary conditions to the possibility of open-ended, knowledge-supporting computation? The conjecture suggests low entropy is the price of sustained gradients, memory, and irreversible structure, but it remains unresolved whether this is necessary, sufficient, generic, or only one route among many.",
+      "score": 0.98
+    },
+    {
+      "text": "What is the minimal class of laws and boundary conditions that reliably generate stable asymmetries, records, and cumulative complexity? This is an unresolved search problem: to characterize the structural features of universes that permit long computational depth and knowledge growth, and to determine whether our universe is typical within that class or still highly exceptional.",
+      "score": 0.97
+    }
+  ]
+}

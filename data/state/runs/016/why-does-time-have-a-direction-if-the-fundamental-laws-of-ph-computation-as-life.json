@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-time-have-a-direction-if-the-fundamental-laws-of-ph",
+  "conjecture_id": "computation-as-life",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "Does the conjecture genuinely explain the arrow of time, or does it merely redescribe it while presupposing the low-entropy/special-boundary-condition asymmetry it needs? The key open problem is to specify whether 'history-dependent, resource-dissipating, selection-shaped computation' can be derived from generic time-symmetric dynamics plus boundary conditions, or whether the account covertly imports the very temporal asymmetry it aims to explain.",
+      "score": 0.97
+    },
+    {
+      "text": "Can 'computational stability/copyability/accumulation' be formalized in a way that yields testable criteria distinguishing forward-going from reverse-going trajectories in realistic physical systems? The unresolved tension is between the conjecture's intuitive systems-level language and the need for a precise measure linking thermodynamic irreversibility, memory formation, replication, and knowledge growth.",
+      "score": 0.93
+    },
+    {
+      "text": "Is the claimed unification of thermodynamic, biological, and epistemic arrows actually necessary and universal, or are there regimes where these arrows decouple? The open question is whether selection and knowledge growth are consequences of the thermodynamic arrow only in a contingent subset of worlds, rather than constituting the same structural phenomenon across scales.",
+      "score": 0.88
+    }
+  ]
+}

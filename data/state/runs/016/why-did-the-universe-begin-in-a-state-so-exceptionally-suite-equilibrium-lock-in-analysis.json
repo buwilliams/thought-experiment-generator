@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-did-the-universe-begin-in-a-state-so-exceptionally-suite",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 16,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "Can the vague notion of 'equilibrium lock-in avoidance' be made into a precise, lawlike criterion on cosmological states and dynamics that is both necessary and nontrivially sufficient for open-ended structure formation? The key unresolved tension is whether the conjecture is genuinely explanatory or just a redescription of low-entropy initial conditions in new language. A worthwhile problem is to formalize anti-lock-in in terms of gravitational entropy, free-energy gradients, metastability, and persistence of non-equilibrium subsystems, then test whether this criterion picks out a narrower and more explanatory class of universes than standard fine-tuning talk.",
+      "score": 0.96
+    },
+    {
+      "text": "What fundamental mechanism, if any, selects or generates the required anti-lock-in initial condition without reintroducing teleology, ad hoc boundary conditions, or hidden anthropic reasoning? The conjecture shifts the question from 'fine-tuned for us' to 'not born in dead equilibrium,' but it remains open whether any known cosmological framework actually explains that asymmetry rather than assuming it. This is a major open problem because the conjecture's value depends on whether inflation, bounce models, cosmological natural selection, measure proposals, or new lawlike boundary principles can produce such states generically.",
+      "score": 0.99
+    },
+    {
+      "text": "Is the link from anti-lock-in conditions to knowledge-bearing complexity actually robust across nearby possible universes, or does it smuggle in additional fine-tuning from microphysics, chemistry, and timescale structure? The unresolved tension is between claiming that knowledge growth is a generic consequence of avoiding equilibrium and the possibility that many anti-lock-in universes still fail to produce stable stars, rich chemistry, error correction, or long horizons for cumulative evolution. Exploring this would clarify whether anti-lock-in is the main bottleneck or only one necessary condition among many equally special constraints.",
+      "score": 0.94
+    }
+  ]
+}

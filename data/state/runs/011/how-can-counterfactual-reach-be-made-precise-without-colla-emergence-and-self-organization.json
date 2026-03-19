@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-counterfactual-reach-be-made-precise-without-colla",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 11,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.7,
+  "total": 0.7689999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'counterfactual reach' be made into a non-circular, operational measure that genuinely distinguishes breadth, coherence, and recomposability from neighboring notions like predictive generalization, compression, causal identifiability, or invariance? The conjecture gestures at an intervention algebra and a load-bearing dependency network, but it remains open what formal objects, metrics, and test procedures would make this precise without collapsing back into existing frameworks or becoming representation-dependent in a trivial way.",
+      "score": 0.97
+    },
+    {
+      "text": "What are the necessary structural conditions in a representation-world-model system for recomposed interventions to remain semantically stable and internally coherent? The conjecture relies on abstract variables that preserve meaning under recombination, but it is unresolved when such variables can exist, how they relate to latent structure, modularity, compositionality, and causal abstraction, and what failure modes cause apparent reach to break under novel intervention combinations.",
+      "score": 0.93
+    },
+    {
+      "text": "Where exactly does counterfactual reach reside: in the representation, in the coupled generative model plus intervention operators, or only in an equivalence class of whole systems under transformations that preserve counterfactual competence? This raises an unresolved tension between the claim that reach is a systems-level emergent property and the desire to attribute it to specific load-bearing variables or structures. Clarifying this is crucial for deciding what kinds of internal changes genuinely alter reach versus merely reparameterize it.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-can-decentralized-informational-infras",
+  "conjecture_id": "invariant-under-stress",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "total": 0.9119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'stable behavioral structure' or 'underlying dispositions' be operationalized and distinguished from context-sensitive strategy? The conjecture depends on decentralized systems learning real invariants about agents, but it is unresolved whether such invariants exist in a robust, measurable form across domains, or whether behavior is too situational for reputation systems to track anything deeper than local correlations.",
+      "score": 0.95
+    },
+    {
+      "text": "What are the necessary and sufficient structural conditions under which informational mechanisms outperform or substitute for central enforcement? The conjecture lists persistence, observability, cross-context linkage, costly signaling, and network propagation, but leaves open the threshold question: which combinations are actually required, how they trade off, and whether there is a principled boundary separating regimes where gaming remains competitively adequate from regimes where it is suppressed.",
+      "score": 0.98
+    },
+    {
+      "text": "Can decentralized informational infrastructures be made robust against low-loss mimicry, sybil attacks, collusion, and metric gaming without reintroducing centralized power? This is a core unresolved tension because the conjecture claims failure occurs when cheap imitation remains viable, yet many proposed fixes—audit authorities, identity binding, adjudication, challenge mechanisms—seem to smuggle central enforcement back in. The open problem is whether there is a genuine decentralized solution or an unavoidable centralization frontier.",
+      "score": 0.99
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-dominant-power-structures-self-perpetuate-without-exp",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the strange-loop account be made empirically discriminable from rival explanations of persistence such as explicit elite coordination, simple path dependence, rational adaptation to real skill differences, or generic institutional inertia? The core tension is whether 'self-description' adds explanatory power or merely redescribes familiar feedback effects.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly are the causal mechanisms and boundary conditions by which system self-descriptions become action-guiding for agents across levels of hierarchy? The open question is when recursive closure is strong enough to reproduce domination, when it breaks down, and how much internal dissent, misrecognition, or counter-modeling a system can absorb before reproduction fails.",
+      "score": 0.92
+    },
+    {
+      "text": "If the main leverage point is changing self-descriptions, measures, defaults, and pathways, which interventions actually disrupt the loop rather than being reabsorbed as new legitimating narratives? This raises the unresolved problem of identifying robust intervention points in a self-stabilizing system that can convert reform into proof of fairness while leaving underlying advantage intact.",
+      "score": 0.97
+    }
+  ]
+}

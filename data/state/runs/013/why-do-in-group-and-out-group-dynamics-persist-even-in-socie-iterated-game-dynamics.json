@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-in-group-and-out-group-dynamics-persist-even-in-socie",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "What are the precise boundary conditions under which individual-level reputation systems actually displace coarse group identities rather than creating new, more opaque forms of tribalism? The conjecture points to transparency, memory, and sanctionability as leverage points, but leaves unresolved whether better reputation infrastructure scales cleanly or instead recentralizes power, invites gaming, and regenerates status blocs around whoever controls visibility.",
+      "score": 0.94
+    },
+    {
+      "text": "How much of in-group/out-group formation is genuinely explained by iterated-game structure versus other mechanisms such as intrinsic identity preferences, sacred values, norm psychology, or path-dependent historical institutions? The conjecture is powerful because it compresses many cases into one strategic account, but its main open question is explanatory sufficiency: does repeated-game logic generate tribalism on its own, or only amplify preexisting identity substrates?",
+      "score": 0.91
+    },
+    {
+      "text": "Can institutions be designed that preserve the coordination benefits of bounded trust networks while preventing their hardening into exclusionary, self-sealing tribes? This is an unresolved design problem because the same structures that improve reciprocity enforcement and signal compression may also entrench gatekeeping, discrimination, and adversarial bloc formation; the key question is whether there is a stable middle regime or only a tradeoff frontier.",
+      "score": 0.96
+    }
+  ]
+}

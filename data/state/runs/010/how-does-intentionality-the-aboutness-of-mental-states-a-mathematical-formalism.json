@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-intentionality-the-aboutness-of-mental-states-a",
+  "conjecture_id": "mathematical-formalism",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "What precise formal criterion distinguishes genuinely representational mappings from mere causal covariation or control? The conjecture invokes 'stable, compressive, structure-preserving, counterfactually robust' mappings, but it remains open how to define necessary and sufficient conditions that exclude thermostats, servomechanisms, and other trivial control systems while still including minimal biological cognition.",
+      "score": 0.96
+    },
+    {
+      "text": "How should misrepresentation be naturalized within this framework without presupposing semantic norms from outside the system? The conjecture treats error conditions as necessary for intentionality, but it is unresolved what makes an internal state incorrect rather than merely causally atypical, especially when the world-agent mapping is many-to-one, adaptive, and historically shaped.",
+      "score": 0.94
+    },
+    {
+      "text": "What kind of invariance or homomorphism is actually required for aboutness across transformations, and how can it be measured in real physical systems? The conjecture suggests intentional content is preserved under context shifts and interventions, but it is open which transformations matter, how abstraction levels are selected, and whether the relevant structure is observer-relative or objectively system-immanent.",
+      "score": 0.91
+    }
+  ]
+}

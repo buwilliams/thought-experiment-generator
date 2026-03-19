@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-in-group-and-out-group-dynamics-persist-even-in-socie",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 13,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.8,
+  "total": 0.8479999999999999,
+  "candidate_problems": [
+    {
+      "text": "What concrete institutional substitutes can actually outperform group heuristics at the functions tribes serve—trust allocation, reciprocity prediction, insurance, coalition signaling, and conflict avoidance—and under what conditions do they become stable enough to displace identity-based coordination rather than merely layering on top of it?",
+      "score": 0.97
+    },
+    {
+      "text": "How can one distinguish empirically between genuine reduction of tribalism and mere mutation into higher-status or more morally legible forms (for example politics, education, taste, or anti-bias signaling)? In other words, what observable markers would show that boundary-making has structurally declined rather than been renamed?",
+      "score": 0.94
+    },
+    {
+      "text": "What are the threshold and transition dynamics of the claimed equilibrium lock-in: how much simultaneous adoption, information quality, enforcement capacity, or reduction in uncertainty is required before group-blind behavior stops being individually punishable? Is there a tipping point, multiple equilibria, or path dependence that makes some societies effectively unable to exit tribal coordination?",
+      "score": 0.96
+    }
+  ]
+}

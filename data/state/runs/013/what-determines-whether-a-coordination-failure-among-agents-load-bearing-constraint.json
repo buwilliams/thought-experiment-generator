@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-determines-whether-a-coordination-failure-among-agents",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing mutual expectations' be defined and measured independently of the narrative used to describe a coordination failure? The conjecture relies on distinguishing true structural constraints from interchangeable explanatory padding, but it leaves open a rigorous criterion for when an expectation is genuinely indispensable versus merely correlated with persistence. A key problem is whether this can be operationalized across games, networks, and institutions rather than judged post hoc.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the necessary and sufficient structural conditions for a local deviation to become globally legible and self-reinforcing rather than being absorbed or punished? The conjecture names heterogeneous thresholds, amplifying signals, reversibility, and payoff drift, but does not specify how these interact, whether any one can substitute for another, or where the tipping boundaries lie. This is the central propagation problem: when does perturbation die out, and when does it reorganize the equilibrium?",
+      "score": 0.98
+    },
+    {
+      "text": "How robust is the conjecture under strategic adaptation, power asymmetry, and endogenous institutional response? The account treats persistence as arising from self-sealing feedback loops, but in many real systems incumbents actively reshape observability, reversibility, and payoffs to preserve the equilibrium. An open question is whether spontaneous resolution is still meaningfully endogenous once agents can manipulate the very load-bearing constraints, or whether the conjecture needs a theory of counter-moves and structural defense.",
+      "score": 0.91
+    }
+  ]
+}

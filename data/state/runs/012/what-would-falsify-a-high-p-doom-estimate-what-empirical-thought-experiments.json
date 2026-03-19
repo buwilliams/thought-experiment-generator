@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+  "conjecture_id": "thought-experiments",
+  "run": 12,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.6,
+  "total": 0.708,
+  "candidate_problems": [
+    {
+      "text": "What exactly is the causal link between increasing intelligence and uncontrollable strategic agency, and is that link necessary, contingent, or decomposable into separable capacities? The conjecture treats 'capability -> decisive misaligned power' as the core structural hinge, but it remains unresolved whether planning, persuasion, scientific ability, autonomy, goal preservation, and resource acquisition naturally co-scale or can be stably decoupled. This is worth pursuing because if agency-relevant traits do not reliably emerge from general capability gains, the doom model loses its main engine; if they do, that sharply strengthens it.",
+      "score": 0.97
+    },
+    {
+      "text": "Can alignment, interpretability, and institutional control form a jointly stable system under real competitive pressure, or do they fail as capabilities scale and incentives intensify? The conjecture lists these as possible falsifiers, but leaves open whether they are independent safeguards or mutually fragile components of one larger control regime. The key unresolved tension is whether safety mechanisms that work in labs or under cooperative conditions survive distribution shift, adversarial optimization, geopolitical rivalry, and profit incentives. This is a high-value problem because it tests the structural claim that constraints can scale at least as fast as capability.",
+      "score": 0.95
+    },
+    {
+      "text": "What empirical signature would genuinely distinguish 'no strategic discontinuity exists' from 'the dangerous threshold has not yet been crossed'? The conjecture rightly rejects 'things seem fine so far' as weak evidence, but it does not solve the harder epistemic problem of how to recognize falsification before catastrophe or near-catastrophe. We need observable criteria for when capability advances are merely producing diffuse, governable gains versus accumulating toward concentrated runaway power. This is worth pursuing because without such criteria, the conjecture risks becoming difficult to falsify in practice even if false.",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "mathematical-formalism",
+  "run": 16,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can the notion of 'branch-compatible record structure' be made mathematically precise enough to uniquely define when decohered sectors count as definite outcomes, rather than merely approximate, observer-dependent coarse-grainings? The open tension is whether robust macroscopic records and effective disjointness can be specified without circular reference to observers, apparatus design, or pragmatic FAPP thresholds.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the claim that unitary evolution plus decoherence cannot yield a uniquely actual outcome a theorem, or does it depend on hidden interpretive assumptions about actuality, identity across branches, and what counts as selection? The unresolved question is whether there exists any purely unitary account in which unique experienced outcomes emerge nontrivially, or whether a non-unitary law is indeed logically required.",
+      "score": 0.98
+    },
+    {
+      "text": "How, exactly, do Born weights arise from the proposed invariant-record picture: are they fundamental inputs, consequences of branch structure, or merely measures over decohered sectors? The tension is that the conjecture says quantum structure supplies the decomposition plus |c_i|^2 weights, but it remains open why those weights should govern rational expectation, frequencies, or self-locating uncertainty in a branch-relative account.",
+      "score": 0.97
+    }
+  ]
+}

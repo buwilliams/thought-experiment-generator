@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "extreme-cases",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s key notion of anisotropic robustness be made precise and measurable across levels of organization? In particular, what formal state-space geometry, dynamical invariants, or information-theoretic quantities distinguish 'absorbing/redundant directions' from 'loosely constrained directions,' and how can these be empirically identified in real genotype-phenotype-development systems rather than post hoc described?",
+      "score": 0.96
+    },
+    {
+      "text": "By what generative mechanisms does evolution build and maintain the proposed boundary structure instead of collapsing toward either over-stabilization or fragility? The open tension is whether redundancy, degeneracy, modularity, feedback, and many-to-one mappings are sufficient causes, downstream correlates, or selected consequences of deeper constraints, and under what selection regimes, developmental rules, and environmental variability anisotropic robustness actually emerges.",
+      "score": 0.93
+    },
+    {
+      "text": "When does robustness genuinely increase evolvability, and when does it instead trap populations on neutral plateaus or canalized attractors? The unresolved question is to characterize the transition conditions under which cryptic variation becomes accessible innovation rather than hidden load, including the roles of timescale separation, recombination, epistasis, environmental shifts, and whether 'locally stable but globally traversable' can be true in computationally irreducible evolutionary landscapes.",
+      "score": 0.95
+    }
+  ]
+}

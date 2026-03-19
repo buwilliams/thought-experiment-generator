@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "thought-experiments",
+  "run": 16,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How, exactly, should 'stable, copyable record' and 'redundant knowledge' be defined in a precise, non-circular way that distinguishes genuine measurement from mere entanglement or transient decoherence? The conjecture leans on record formation as the key explanatory variable, but it remains open what quantitative threshold, structural criterion, or dynamical invariant marks the transition to branch-relative definiteness.",
+      "score": 0.97
+    },
+    {
+      "text": "Can the conjecture derive the Born rule from self-locating uncertainty plus branch-relative record structure, rather than merely relocating the probability problem? If no global outcome is selected, the central unresolved tension is why rational agents inside the branching structure should weight future branch-relative experiences by squared amplitude rather than branch count or some other measure.",
+      "score": 0.99
+    },
+    {
+      "text": "Does branch-relative definiteness based on redundant records fully solve the preferred-basis and observer-location problems, or does it presuppose the very classical decomposition it aims to explain? An open question is whether 'recordability' uniquely selects quasi-classical observables across realistic systems, and whether the notion of an observer 'becoming correlated with one record' can be made objective without smuggling in a privileged subsystem decomposition.",
+      "score": 0.95
+    }
+  ]
+}

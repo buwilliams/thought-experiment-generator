@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 15,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "Can the 'mesoscale public-goods underprovision' conjecture be made into a quantitative, testable theory that outperforms alternative origin-of-life explanations such as simple rarity, kinetic bottlenecks, or molecule-first scenarios? The key open question is whether one can define measurable chemical analogues of excludability, free-riding, contribution cost, and payoff internalization, then show that realistic prebiotic parameter ranges actually produce a stable no-provision equilibrium and a transition once compartments/surfaces/cycles are introduced.",
+      "score": 0.97
+    },
+    {
+      "text": "Which specific physical structures or environmental regimes most effectively internalize replication-supporting goods, and by what mechanism do they suppress free-riding strongly enough to permit cumulative evolution? This remains unresolved because compartments, mineral pores, wet-dry cycles, ice phases, and adsorption surfaces may each help in different ways, but it is unclear which combinations are necessary or sufficient, how robust they are, and whether they can jointly support informational polymers, catalysis, energy coupling, and error stabilization in one integrated system.",
+      "score": 0.94
+    },
+    {
+      "text": "How does selection operate before true Darwinian replication if the relevant units are diffuse chemical neighborhoods rather than discrete lineages? The conjecture presupposes that some proto-level of persistence and competition can favor 'governance-like' structures, but it is unresolved what the selectable entities are, how heredity is maintained across transient compartments or cycles, and whether group-like chemical selection can reliably bootstrap the transition to bona fide replicators rather than merely producing recurring but non-evolving order.",
+      "score": 0.92
+    }
+  ]
+}

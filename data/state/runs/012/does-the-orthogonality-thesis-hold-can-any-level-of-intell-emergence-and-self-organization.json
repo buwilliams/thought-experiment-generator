@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-the-orthogonality-thesis-hold-can-any-level-of-intell",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 12,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.8,
+  "total": 0.8419999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'structural stability of a goal under increasing capability' be formalized in a way that distinguishes merely specifiable intelligence-goal pairings from those that remain invariant under reflection, self-modification, environmental feedback, and multi-agent interaction?",
+      "score": 0.97
+    },
+    {
+      "text": "What are the actual attractors or compatibility classes in goal-space for highly capable embedded control systems, and are they broad, plural families or do competitive/ecological pressures force much narrower convergence than the conjecture assumes?",
+      "score": 0.94
+    },
+    {
+      "text": "Which apparent goal changes at high capability are genuinely caused by dynamical instability in the original goal, versus being artifacts of representation, ontology shifts, mesa-optimization, or implementation constraints in the agent architecture?",
+      "score": 0.91
+    }
+  ]
+}

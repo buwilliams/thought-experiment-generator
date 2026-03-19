@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-prevents-the-unification-of-general-relativity-and-quan",
+  "conjecture_id": "computational-irreducibility",
+  "run": 16,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "What precise properties must a minimal generative substrate have to yield both emergent Lorentzian spacetime geometry and quantum phenomena such as interference, entanglement, and Born-rule statistics, without simply re-encoding GR or QM by hand?",
+      "score": 0.97
+    },
+    {
+      "text": "How can computational irreducibility be made scientifically sharp in fundamental physics—distinguished from mere practical intractability—and what empirical signatures would show that no compact closed-form unification is available even in principle?",
+      "score": 0.95
+    },
+    {
+      "text": "By what mechanism do stable, compressive higher-level laws emerge from an irreducible substrate, so that GR-like smooth geometry, QM-like state evolution, and classical definite histories are all reliable coarse-grained descriptions in their respective regimes?",
+      "score": 0.93
+    }
+  ]
+}

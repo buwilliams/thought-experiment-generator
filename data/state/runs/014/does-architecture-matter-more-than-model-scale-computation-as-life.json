@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "computation-as-life",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "What operational criterion distinguishes genuine epistemic progress or explanation-formation from mere predictive performance, compression, or benchmark success? The conjecture depends on a nontrivial notion of 'better explanations' and 'surviving criticism,' but it leaves open how to define and measure these in AI systems without collapsing back into proxy metrics that reward plausibility or local fit.",
+      "score": 0.97
+    },
+    {
+      "text": "Is there in fact a regime transition where computational organization of criticism dominates raw scale, and if so what are its boundary conditions? The conjecture asserts that after some capability threshold, architectural selection dynamics matter more than additional compute, but it is unresolved how to identify that threshold, whether it varies by domain, and whether scale and epistemic structure are complements rather than substitutes.",
+      "score": 0.94
+    },
+    {
+      "text": "What concrete selection mechanisms can make AI systems accumulate corrigible knowledge across episodes rather than optimize for short-horizon usefulness? The conjecture points to generators, critics, experiment-designers, memory, and promotion rules, but the open problem is how to design feedback loops that reliably preserve error-correcting hypotheses, resist Goodharting and gaming, and connect criticism to reality rather than to internally self-reinforcing evaluators.",
+      "score": 0.96
+    }
+  ]
+}

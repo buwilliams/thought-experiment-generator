@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-free-will-causation-and-p",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 10,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.7,
+  "total": 0.7719999999999999,
+  "candidate_problems": [
+    {
+      "text": "What precise structural and functional criteria distinguish genuine self-governance from merely sophisticated control? The conjecture contrasts a thermostat with a person, but leaves open a non-arbitrary threshold: which kinds of feedback, counterfactual modeling, norm representation, recursive self-revision, and integration are necessary or sufficient for free will, and how can these be measured across humans, animals, AI systems, and pathological cases?",
+      "score": 0.96
+    },
+    {
+      "text": "How can higher-level causal organization be made non-metaphorical without collapsing into either reductionism or mystery? The conjecture relies on causation by constraint, control, and informational organization, but an unresolved tension is whether these forms of causation have independent explanatory and interventionist content beyond microphysical evolution. What would show that plans, reasons, or architectures are causally real in a rigorous sense rather than just useful descriptions?",
+      "score": 0.94
+    },
+    {
+      "text": "If freedom is compatible with determinism because it consists in action issuing from an integrated evaluative architecture, what grounds responsibility when that architecture is itself shaped by prior causes, social conditioning, manipulation, and luck? The conjecture shifts the contrast from determinism vs freedom to self-governance vs heteronomy, but leaves open how to draw that boundary in borderline cases and how this framework should revise moral and legal responsibility.",
+      "score": 0.92
+    }
+  ]
+}

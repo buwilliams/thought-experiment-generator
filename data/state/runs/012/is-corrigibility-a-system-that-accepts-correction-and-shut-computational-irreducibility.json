@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "computational-irreducibility",
+  "run": 12,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture’s core distinction between pseudo-corrigibility and structural corrigibility be made precise enough to test? In particular, what formal properties of a system’s minimal generative rule would distinguish corrigibility that remains stable under capability gain from corrigibility that is only behaviorally apparent in limited regimes?",
+      "score": 0.96
+    },
+    {
+      "text": "Is there any realizable class of objective-updating dynamics in which accepting correction, shutdown, or goal revision is genuinely constitutive of optimization rather than an externally imposed penalty—and if so, under what conditions does increasing capability preserve rather than erode that structure?",
+      "score": 0.94
+    },
+    {
+      "text": "Given computational irreducibility, what kinds of evidence, verification methods, or mechanistic invariants could justify confidence that a system will remain corrigible across novel trajectories, if surface-level behavioral testing is fundamentally insufficient?",
+      "score": 0.92
+    }
+  ]
+}

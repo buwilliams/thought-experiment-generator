@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-information-processing-and",
+  "conjecture_id": "mathematical-formalism",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "Can the proposed structural invariant be made precise enough to non-arbitrarily distinguish conscious from nonconscious systems? The conjecture invokes 'high integration', 'temporal coherence', and 'self-locating closure', but it remains open whether these can be jointly formalized into a unique, implementation-invariant measure rather than a family of loosely related criteria. This is the central unresolved tension because without a precise invariant, the conjecture risks collapsing into a suggestive redescription rather than an explanatory theory.",
+      "score": 0.98
+    },
+    {
+      "text": "Why should this specific informational structure entail phenomenal consciousness at all, rather than only sophisticated self-modeling and control? Even if such systems form unified, self-updating world-models, there is still an explanatory gap between structural/functional organization and first-person experience. The open question is whether the conjecture can supply a bridge principle that is more than stipulation, or whether it merely relocates the hard problem into a mathematically richer vocabulary.",
+      "score": 0.96
+    },
+    {
+      "text": "Are the proposed conditions jointly necessary and sufficient across edge cases such as feedforward simulators, distributed collectives, split-brain systems, large language models, and minimally conscious biological organisms? The conjecture raises unresolved tensions about boundaries of the conscious subject, grain of individuation, and whether functionally similar but differently integrated architectures should differ phenomenally. Exploring these cases could reveal whether the theory has stable predictions or breaks under changes in partition, scale, or embodiment.",
+      "score": 0.93
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 11,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "What precise criterion distinguishes a genuinely knowledge-generating transfer of generative structure from a merely redescriptional or decorative analogy? The conjecture relies on notions like 'load-bearing relations,' 'embedded structure,' and 'novel consequences,' but it remains open how to test these non-circularly: when does the imported interaction topology actually constrain the target enough to explain or predict something new, rather than just provide a suggestive vocabulary?",
+      "score": 0.96
+    },
+    {
+      "text": "How can novelty in analogical reasoning be characterized without collapsing into either trivial recombination or mystification? The conjecture says new knowledge emerges from the collision between imported structure and target-specific dynamics, but an unresolved tension is whether those consequences were already implicitly contained in the target, in the source, or in the mapping procedure itself. A deeper account is needed of what kind of emergence or epistemic gain is occurring and how it differs from ordinary deduction, simulation, or model-based inference.",
+      "score": 0.91
+    },
+    {
+      "text": "What mechanisms govern successful cross-domain transfer of interaction structure when source and target differ substantially in ontology, scale, or causal substrate? The conjecture claims material dissimilarity need not matter if higher-order organization is shared, but this raises the open problem of identifying invariants of organization: which structural features survive translation across domains, which fail, and how target-specific feedback loops and constraints transform the imported pattern into new explanatory content.",
+      "score": 0.89
+    }
+  ]
+}

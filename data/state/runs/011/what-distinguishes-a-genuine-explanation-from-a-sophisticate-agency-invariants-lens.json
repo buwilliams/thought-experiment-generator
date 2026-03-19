@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "agency-invariants-lens",
+  "run": 11,
+  "logical_consistency": 0.96,
+  "hard_to_vary": 0.7,
+  "total": 0.7779999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the proposed criterion be operationalized without collapsing into intuition? The conjecture relies on notions like 'functional invariants', 'control structure', 'load-bearing constraints', and 'what must survive under redescription', but it leaves open how to identify these in a principled way across domains. A key unresolved problem is to formulate tests or comparative methods that distinguish genuine explanatory invariants from merely convenient summaries, especially when multiple redescriptions preserve some predictive or interventionist usefulness.",
+      "score": 0.95
+    },
+    {
+      "text": "What exactly grounds explanatory necessity, and how is it different from predictive success or manipulability? The conjecture says explanation 'tracks necessity' rather than appearance, but it remains unclear whether this necessity is nomological, causal, computational, organizational, counterfactual, or epistemic. This creates tension because the account risks redescribing good explanation in terms of successful intervention and invariance while still invoking a stronger notion of necessity that has not been clarified.",
+      "score": 0.91
+    },
+    {
+      "text": "When do higher-level concepts denote real structures rather than observer-imposed abstractions? The conjecture defends agency, memory, meaning, and adaptation when they survive redescription as control roles, but it does not specify the boundary between objective organizational reality and pragmatic modeling convenience. The open question is how to decide, in contested cases, whether a higher-level pattern is genuinely explanatory or merely useful relative to human interests, coarse-graining choices, or available interventions.",
+      "score": 0.89
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 16,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 1.0,
+  "total": 0.9849999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearingness' be made precise enough to distinguish genuine explanatory dependence from mere parameter sensitivity within a model? The conjecture relies on a crucial but currently informal notion: changing a constant may break stars or chemistry, but that could reflect only the architecture of current theories rather than ontological fundamentality. A new problem is to define operational criteria for when a parameter is independently real versus eliminable by deeper integration, perhaps using counterfactual dependence across theories, degrees of parameter interdependence, or measures of explanatory compression.",
+      "score": 0.95
+    },
+    {
+      "text": "What would count as evidence that a deeper theory has truly dissolved fine-tuning rather than hidden it in a new parameterization? The conjecture predicts that future physics will replace apparently independent constants with mutually constrained structure, but this raises an unresolved tension: derivation from a deeper framework does not automatically remove arbitrariness if the deeper framework itself contains contingent choices, boundary conditions, measure assumptions, or landscape structure. The open question is how to tell when explanatory integration is substantive rather than a relocation of unexplained contingency.",
+      "score": 0.97
+    },
+    {
+      "text": "Under what conditions do anthropic or multiverse explanations become genuinely load-bearing rather than empty accommodation devices? The conjecture allows them only if no deeper integration is possible, but that boundary is unclear. A worthwhile problem is to specify the structural features a multiverse or anthropic account must have—independent motivation, nontrivial constraints, testable correlations, measure discipline, or selection effects tied to a concrete generative mechanism—to count as explanatory rather than as a narrative shell that can absorb any observed constants.",
+      "score": 0.93
+    }
+  ]
+}

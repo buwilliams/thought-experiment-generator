@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "extreme-cases",
+  "run": 10,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "What precise criterion distinguishes mere compression or memorization from genuinely semantic, reusable internal structure? The conjecture relies on notions like 'error-correcting,' 'counterfactual,' 'reusable,' and 'invariant under distributional deformation,' but it leaves open how to define or measure the boundary where prediction becomes model-building rather than larger-scale statistical competence.",
+      "score": 0.96
+    },
+    {
+      "text": "Is semantics really forced by unlimited predictive success, or can a sufficiently powerful system achieve indefinite transfer through non-semantic strategies such as massive interpolation, procedural heuristics, or brittle ensembles of local rules? The core unresolved tension is whether invariance-tracking is necessary in principle, or only one effective route among others.",
+      "score": 0.93
+    },
+    {
+      "text": "What is the ontological status of the 'underlying reality' or latent invariants that concepts are said to track? The thought experiment assumes stable relational structure across paraphrases, distortions, and contexts, but it remains open whether meaning depends on mind-independent structure, task-relative abstractions, or observer-imposed decompositions of data.",
+      "score": 0.88
+    }
+  ]
+}

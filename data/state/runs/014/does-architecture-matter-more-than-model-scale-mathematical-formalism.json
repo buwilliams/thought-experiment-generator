@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "mathematical-formalism",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can substrate capacity S and epistemic structure E be operationalized and measured independently enough to test the claimed complementarity, rather than merely redescribing overall system performance? The core unresolved tension is identifiability: many observed gains can be attributed to either better search space access or better transition/evaluation operators, and without a principled decomposition the conjecture risks becoming unfalsifiable.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the actual functional form of h(S,E) and where are the thresholds, saturation regions, or phase transitions at which marginal gains in S collapse unless E improves? The conjecture asserts strong complementarity, but it leaves open whether the right model is min-type, multiplicative, piecewise, or something with feedback and hysteresis; resolving this would turn a qualitative intuition into a predictive theory.",
+      "score": 0.95
+    },
+    {
+      "text": "Is the bounded conjecture-to-test ratio C/T really a necessary invariant for epistemic progress across domains, or does progress depend instead on richer system structure such as test quality, dependency structure among conjectures, selective retention, and delayed error correction? The open question is whether a simple flow ratio captures the bottleneck or whether it is an oversimplification that breaks in systems with uneven test power, reusable critiques, or hierarchical search.",
+      "score": 0.92
+    }
+  ]
+}

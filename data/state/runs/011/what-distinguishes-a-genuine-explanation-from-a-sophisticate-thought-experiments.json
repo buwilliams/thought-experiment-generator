@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-distinguishes-a-genuine-explanation-from-a-sophisticate",
+  "conjecture_id": "thought-experiments",
+  "run": 11,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.4,
+  "total": 0.565,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearing generative constraint' be made into a non-circular criterion that reliably distinguishes explanation from redescription across domains? The conjecture depends on ideas like 'produces the phenomenon,' 'nearby alternatives,' and 'asymmetric constraint,' but it leaves open how to operationalize these without already presupposing explanatory success. A key open problem is whether there exists a domain-general test, or only family-resemblance criteria that vary between physics, biology, history, and mathematics.",
+      "score": 0.96
+    },
+    {
+      "text": "What is the status of highly compressive, unifying, or mathematical models that strongly constrain description but do not obviously specify an underlying generator? The conjecture draws a sharp line between generative explanation and organizational redescription, but many important theories seem to sit in between: they reduce arbitrariness, support counterfactual reasoning, and connect domains, yet may function more as structural summaries than explicit causal generators. The unresolved tension is whether these are genuine explanations, a third category, or evidence that the conjecture's distinction is too sharp.",
+      "score": 0.91
+    },
+    {
+      "text": "How should the conjecture handle explanations in domains where generation is path-dependent, multi-level, or partly interpretive rather than governed by stable hidden rules? In complex systems, social science, evolution, and historical explanation, what does it mean for details to be load-bearing when multiple mechanisms can produce similar outcomes and explanations often work by identifying constraints, selection effects, or system structure rather than a single rule R. The open question is whether counterfactual grip can be preserved in such cases without collapsing back into flexible redescription.",
+      "score": 0.89
+    }
+  ]
+}

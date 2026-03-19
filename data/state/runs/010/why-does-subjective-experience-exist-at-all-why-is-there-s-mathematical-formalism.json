@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "mathematical-formalism",
+  "run": 10,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made non-circular and operationalized so that 'nontrivial self-model', 'functionally indispensable', 'valuation-laden', and 'preserving invariants under transformation' jointly yield a testable criterion for when experience is present, rather than redescribing consciousness in control-theoretic language?",
+      "score": 0.97
+    },
+    {
+      "text": "Does the claimed move from irreducible system-internal coordinate structure to 'what it is like' actually follow, or is there still an explanatory gap between perspectival self-modeling for control and phenomenal character? In other words, why should privileged self-locating variables imply experience rather than merely sophisticated self-representation?",
+      "score": 0.99
+    },
+    {
+      "text": "What are the true necessity and sufficiency boundaries of the proposed architecture: are there systems with recursive valuation-guided self-models and viability constraints that are plausibly not conscious, or conscious systems whose experience persists despite weak self-modeling, low planning depth, or disrupted boundary-maintenance? This includes edge cases such as thermostats, large language models, split-brain systems, dream states, and minimal organisms.",
+      "score": 0.96
+    }
+  ]
+}

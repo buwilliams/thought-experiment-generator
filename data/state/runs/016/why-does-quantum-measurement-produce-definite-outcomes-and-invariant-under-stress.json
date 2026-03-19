@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-quantum-measurement-produce-definite-outcomes-and",
+  "conjecture_id": "invariant-under-stress",
+  "run": 16,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 1.0,
+  "total": 0.973,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made mathematically precise as a theorem linking predictive compression, irreversible record-formation, and decoherence to the emergence and near-uniqueness of pointer observables? The key open problem is whether 'generalization pressure' is genuinely explanatory or just a metaphor layered on standard decoherence, and what exact conditions make a decomposition operationally learnable by embedded agents.",
+      "score": 0.95
+    },
+    {
+      "text": "Does treating 'which outcome occurs' as purely indexical really dissolve the measurement problem, or does it merely relocate the need for explanation into self-location, probability, and ontology of branches? The unresolved tension is whether branch-relative definiteness plus global multiplicity is enough, especially for deriving or justifying the Born rule rather than presupposing branch weights.",
+      "score": 0.98
+    },
+    {
+      "text": "What exactly counts as an 'irreversible record' or 'stable branch structure' in realistic finite systems, where decoherence is approximate, recoherence is possible in principle, and records come in degrees of robustness? The open question is how to define the threshold at which an outcome becomes available at all, and whether this criterion is objective, observer-relative, or scale-dependent.",
+      "score": 0.92
+    }
+  ]
+}

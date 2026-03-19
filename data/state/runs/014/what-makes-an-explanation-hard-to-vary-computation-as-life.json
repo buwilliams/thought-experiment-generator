@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "computation-as-life",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can 'load-bearingness' be made into a rigorous, non-circular measure across levels of abstraction? The conjecture relies on substitution invariance and 'indispensable constraints,' but it leaves open how to formally distinguish genuine explanatory parts from merely implementation-level variants without presupposing the correct abstraction level. A key open problem is whether there exists a principled metric or procedure—perhaps using intervention, algorithmic information, causal structure, or equivalence classes of computations—that identifies the minimal computational architecture required for a phenomenon.",
+      "score": 0.97
+    },
+    {
+      "text": "What determines the correct explanatory level, and can multiple incompatible levels be equally load-bearing? The conjecture says load-bearingness is level-dependent, but this raises a tension: if different abstractions preserve different invariances, there may be no unique 'real' explanatory architecture. An open question is how to choose among molecular, functional, algorithmic, or dynamical descriptions when each captures indispensable constraints relative to different interventions or environments.",
+      "score": 0.93
+    },
+    {
+      "text": "Is evolutionary robustness really characterized by 'pushing necessity upward and contingency downward,' and under what conditions does this fail? The conjecture proposes a strong link between selection and abstraction, but many evolved systems remain path-dependent, brittle, or historically contingent at lower levels. A worthwhile problem is to determine when evolution produces broad computational equivalence classes versus when specific implementations remain causally indispensable, and how this affects what counts as the best explanation.",
+      "score": 0.9
+    }
+  ]
+}

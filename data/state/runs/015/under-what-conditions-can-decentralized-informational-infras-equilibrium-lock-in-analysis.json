@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-can-decentralized-informational-infras",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "What are the minimal and jointly sufficient structural conditions under which decentralized informational mechanisms actually shift a system from one-shot defection to repeated cooperation, and can these conditions be formalized as threshold variables across memory persistence, observability, identity stability, signaling costliness, and sanction capacity?",
+      "score": 0.96
+    },
+    {
+      "text": "How can one distinguish cases where 'better transparency' is genuinely payoff-changing from cases where it is merely descriptive and leaves equilibrium lock-in intact, especially in environments with non-local, delayed, anonymous, or irreversible harms?",
+      "score": 0.93
+    },
+    {
+      "text": "What hybrid institutional designs optimally combine decentralized informational infrastructure with limited central enforcement when decentralized sanctions are too weak against one-shot extractive actors, cheap identity reset, or diffuse public harms?",
+      "score": 0.95
+    }
+  ]
+}

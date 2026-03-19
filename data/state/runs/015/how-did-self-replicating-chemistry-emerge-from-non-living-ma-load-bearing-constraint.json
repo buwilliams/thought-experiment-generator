@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can a pre-template autocatalytic micro-environment achieve heredity with enough fidelity to support cumulative evolution, yet enough variability to explore improvements? The central unresolved tension is whether compositional or dynamical inheritance can cross the error threshold needed for open-ended adaptation before digital sequence replication exists.",
+      "score": 0.97
+    },
+    {
+      "text": "What concrete physical mechanisms can make 'closure of constraints' experimentally real rather than metaphorical? In other words, which specific couplings among flux source, localization, catalysis, and persistence are sufficient for a reaction network to reconstruct the same causal organization across cycles despite dilution, side reactions, and environmental noise?",
+      "score": 0.95
+    },
+    {
+      "text": "Under what conditions does distributed system-level reproduction transition into template-based replication, and is that transition inevitable, contingent, or even necessary for life-like evolution? This is a major open question because the conjecture treats templates as a later compression of organization, but does not explain the selection pressures or mechanisms that favor that compression over indefinitely metabolism-like regimes.",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "extreme-cases",
+  "run": 14,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "total": 0.83,
+  "candidate_problems": [
+    {
+      "text": "How can 'boundary of invariance' and 'load-bearing part' be made precise without collapsing into observer-relative redescription? The conjecture depends on distinguishing genuine necessity from merely choosing a finer-grained description where every part looks indispensable. A key open problem is to define invariance boundaries, part individuation, and compensating-change neighborhoods in a way that is objective enough to compare explanations across proofs, mechanisms, and models.",
+      "score": 0.97
+    },
+    {
+      "text": "What is the exact relationship between explanatory power and proximity to a boundary of invariance? The conjecture suggests brittle, tightly constrained explanations can be more powerful in exclusion, while highly swappable explanations are thinner but more robust. An unresolved tension is whether these are genuinely opposing virtues, whether there is a tradeoff curve, and under what conditions abstraction with high replaceability explains more deeply than low-slack specificity.",
+      "score": 0.94
+    },
+    {
+      "text": "Can the proposed boundary test distinguish causal structure from mere implementation detail in real systems with multiscale redundancy and degeneracy? Many biological, computational, and physical systems have parts that are locally replaceable yet globally indispensable through distributed compensation. The open question is whether the conjecture can handle cases where redundancy itself is load-bearing, so that 'minimal redundancy' may fail as a marker of explanatory necessity.",
+      "score": 0.92
+    }
+  ]
+}

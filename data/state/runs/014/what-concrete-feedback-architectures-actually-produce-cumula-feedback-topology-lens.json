@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "feedback-topology-lens",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can 'cumulative epistemic error-correction' be operationalized and measured distinctly from ordinary performance improvement? The conjecture hinges on a real difference between systems that merely optimize outputs and systems that preserve criticism as reusable knowledge, but it leaves open what observable metrics, benchmarks, or longitudinal signatures would distinguish the two in practice.",
+      "score": 0.97
+    },
+    {
+      "text": "What concrete memory-and-governance architectures actually preserve discovered errors as binding constraints across model updates, deployments, and organizational turnover? The conjecture identifies durable critical memory plus consequence coupling as the bottleneck, but it remains unresolved what representations, interfaces, institutional processes, and update rules can make error memories persist and remain action-guiding rather than becoming stale, ignored, or gamed.",
+      "score": 0.95
+    },
+    {
+      "text": "What tradeoffs or failure modes arise when strong epistemic feedback loops are imposed on high-speed AI development? The conjecture suggests that tighter criticism-memory-consequence loops improve safety, but it is unresolved whether such loops can slow adaptation, overfit to past failures, create bureaucratic lock-in, suppress useful exploration, or be strategically manipulated, and under what conditions those costs outweigh the gains.",
+      "score": 0.9
+    }
+  ]
+}

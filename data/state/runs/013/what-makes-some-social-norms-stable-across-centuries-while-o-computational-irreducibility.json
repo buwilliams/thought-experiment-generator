@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-makes-some-social-norms-stable-across-centuries-while-o",
+  "conjecture_id": "computational-irreducibility",
+  "run": 13,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 1.0,
+  "total": 0.979,
+  "candidate_problems": [
+    {
+      "text": "How can 'simplicity and distributed reproducibility' of a norm-generating rule be operationalized and measured independently of the norm’s observed persistence? The conjecture’s core predictor risks circularity unless there is a non-question-begging way to identify the minimal generative rule, estimate its description length, and test whether it is actually locally reenactable across contexts.",
+      "score": 0.97
+    },
+    {
+      "text": "What are the boundary conditions under which simple local rules fail to reproduce stable norms, or complex/elite-dependent norms persist for centuries anyway? The conjecture may overgeneralize unless it explains extreme countercases such as highly centralized but durable norms, or simple intuitive norms that still collapse under demographic, technological, or incentive shocks.",
+      "score": 0.95
+    },
+    {
+      "text": "If norm persistence is computationally irreducible, what kind of prediction or explanation remains possible in practice? There is an unresolved tension between claiming that long-run survival cannot generally be compressed into short theory and claiming that rule simplicity is the 'best predictor.' Clarifying whether this yields probabilistic forecasting, retrodictive explanation, or only simulation-based understanding is a major open problem.",
+      "score": 0.94
+    }
+  ]
+}

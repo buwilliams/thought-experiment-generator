@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-would-falsify-a-high-p-doom-estimate-what-empirical",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can 'system-level negative feedback' in AI deployment be operationalized and measured in a way that distinguishes genuine structural safety from temporary, local, or pre-threshold stability? The conjecture hinges on a systems property, but it leaves open what observable indicators, time horizons, and stress tests would show that damping mechanisms really dominate amplification dynamics across scales.",
+      "score": 0.96
+    },
+    {
+      "text": "What mechanisms could produce robust capability-control coupling as capabilities advance, and is such coupling structurally stable under competitive pressure? This is unresolved because the conjecture treats coupling as a key falsifier of doom, but it remains unclear whether control can systematically improve at least as fast as capability, or whether incentives, opacity, and complexity inevitably drive decoupling at the frontier.",
+      "score": 0.93
+    },
+    {
+      "text": "Under what conditions can governance and institutional pluralism reliably damp race dynamics without being outcompeted by actors who defect, centralize power, or automate around constraints? The conjecture assumes that durable coordination and distributed corrective power are possible, but the open question is whether these are achievable equilibria in a high-stakes AI ecosystem or only fragile exceptions.",
+      "score": 0.91
+    }
+  ]
+}

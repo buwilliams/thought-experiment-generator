@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-concrete-feedback-architectures-actually-produce-cumula",
+  "conjecture_id": "computational-irreducibility",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal set of architectural conditions under which 'distinct feedback loops' actually produce cumulative epistemic error-correction rather than just more complex optimization? The conjecture gives necessary-looking components (generation, adversarial criticism, memory, policy update), but it is unresolved which separations, interfaces, and persistence mechanisms are sufficient, and how to operationally distinguish genuine search-space change from mere reweighting within the same search.",
+      "score": 0.95
+    },
+    {
+      "text": "How can adversarial independence be created and maintained in practice, especially when generator and critic are trained within the same overall system and data ecology? The conjecture treats independence as crucial to avoiding self-confirmation, but leaves open whether meaningful independence is architecturally achievable, measurable, or stable under joint optimization pressures.",
+      "score": 0.93
+    },
+    {
+      "text": "If important failures are computationally irreducible and cannot be captured in compact proxy metrics, then by what criteria can we evaluate epistemic progress in these multi-loop systems? The open problem is to define observables or benchmarks for 'durable critical inheritance' and cumulative error-correction without collapsing back into the proxy-based evaluation the conjecture argues is inadequate.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 15,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.9,
+  "total": 0.894,
+  "candidate_problems": [
+    {
+      "text": "Does iterated-game structure with asymmetric visibility and memory generate genuine power laws as a distinct mechanism, or is it mathematically equivalent to known preferential-attachment / cumulative-advantage models under a reparameterization? The key unresolved issue is whether the conjecture adds new explanatory content, novel universality classes, or different tail exponents and transition conditions, rather than redescribing existing rich-get-richer dynamics in game-theoretic language.",
+      "score": 0.96
+    },
+    {
+      "text": "What are the necessary and sufficient microconditions for repeated trust-based selection to produce scale-free outcomes rather than lock-in, core-periphery structure, exponential cutoffs, or winner-take-all concentration? In particular: how much memory, visibility, partner choice flexibility, noise, entry/exit, and payoff asymmetry are required, and where are the phase boundaries between power-law and non-power-law regimes?",
+      "score": 0.98
+    },
+    {
+      "text": "How can the conjecture be empirically identified and falsified in real systems where multiple mechanisms coexist? The open problem is to distinguish reputation-mediated repeated play from alternative generators of heavy tails—fitness heterogeneity, copying, optimization, exogenous shocks, hidden variables, or network growth alone—using causal signatures, interventions, or longitudinal data on memory, repeated encounters, and partner selection.",
+      "score": 0.99
+    }
+  ]
+}

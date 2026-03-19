@@ -1,0 +1,36 @@
+# Generated: can-born-rule-probabilities-be-derived-from-the-conditions-f × computational-irreducibility
+
+## Conjecture
+
+Conjecture: If quantum measurement is treated not as “reading off” a pre-existing probability distribution but as a physical process of record formation in a computationally irreducible branching dynamics, then Born-rule probabilities arise as the stable frequencies of branches that can actually sustain durable, reproducible records.
+
+Reasoning from computational irreducibility: in a genuinely branching quantum process, there may be no shortcut that predicts in advance which fine-grained branch structures will persist as record-bearing histories. The evolution must be “run” through decoherence, amplification, environmental entanglement, and recursive copying of outcomes into memory, apparatus, and surroundings. On this view, probability is not first a measure imposed on branches; it is an emergent summary of which branch-patterns survive the full generative process of becoming stable records.
+
+What follows is a shift in explanatory target. The key question is no longer “What axioms justify assigning squared amplitudes as probabilities?” but “What branch-weighting is conserved through the iterative dynamics of record production, copying, and stabilization?” A candidate answer is that only amplitude-squared weighting remains dynamically coherent under repeated branching because it tracks the branches that continue to exist as robust, mutually consistent records across many scales of redundancy.
+
+The collision with the problem is this: if branch formation is computationally irreducible, then naive branch counting is not physically meaningful, because branch number depends on arbitrary coarse-grainings and on microscopic details that can only be resolved by unfolding the whole process. What can survive this irreducibility is not counting of branches but invariants of the generative dynamics. The Born rule is then illuminated as the unique stable invariant associated with durable record formation, rather than as a primitive probabilistic postulate.
+
+More concretely: reproducible records require redundancy, resistance to interference, and consistency under repeated copying. Branches with larger amplitude-squared are not merely “more probable” by assumption; they are the ones more likely to generate long-lived, self-consistent causal networks of records. Branches unsupported by this weighting fail to scale into stable record ecologies and so do not contribute proportionally to observed frequencies.
+
+Thus the conjecture is: Born-rule probabilities can be derived, at least in principle, from the conditions under which branching quantum dynamics produces stable record-bearing histories, because in a computationally irreducible process the only meaningful probabilities are those attached to the invariant measure over branches that survive recursive record stabilization — and that invariant is amplitude squared.
+
+This does not amount to a shortcut proof. On the contrary, computational irreducibility predicts why such a derivation is hard: one should not expect a simple branch-counting argument, but a demonstration that among all possible measures on branching histories, only the Born measure is preserved by the full stepwise dynamics of durable record formation.
+
+## Questions
+
+1. 1. Is the claim that measurement is a physical process of record formation rather than a readout of pre-existing probabilities necessary for the conjecture to derive Born-rule frequencies from record stability at all? — **yes**
+2. 2. If the appeal to computational irreducibility were removed and the branching structure were assumed to be predictably countable in advance, would the explanation for rejecting naive branch counting and privileging an invariant measure collapse? — **yes**
+3. 3. Is the claim that durable records require redundancy, resistance to interference, and consistency under repeated copying necessary for connecting branch survival to observed frequencies rather than merely to branch existence? — **yes**
+4. 4. If amplitude-squared weighting were not claimed to be the unique measure conserved through iterative record production and stabilization, would the conjecture lose its explanation of why the Born rule rather than some rival weighting emerges? — **yes**
+5. 5. Does the conjecture imply that in quantum systems where decoherence and recursive copying are weak, observed frequencies should deviate from clean Born-rule behavior because stable record ecologies fail to form fully? — **no**
+6. 6. Does the explanation extend beyond laboratory measurements to naturally occurring environmental records such as scattering imprints or cosmological decoherence histories that the problem did not explicitly mention? — **yes**
+7. 7. Does treating probabilities as invariants of generative record dynamics illuminate why arbitrary coarse-grainings change branch counts without changing empirical frequencies in repeated experiments? — **yes**
+8. 8. If one produced a branching model in which durable and redundant records formed under a non-Born weighting, would saving the conjecture require abandoning the core claim that amplitude squared is the unique stable invariant of record formation? — **yes**
+9. 9. If a counterexample showed that branches with very small amplitude-squared could still generate long-lived self-consistent record networks, would rescuing the conjecture force a major rewrite of the link between record durability and Born frequencies? — **yes**
+10. 10. If two different coarse-grainings of the same irreducible branching process yielded different candidate invariants while preserving the same records, would patching the conjecture require gutting its reliance on record-stabilization invariance rather than adding a minor qualification? — **yes**
+
+## Candidate Problems
+
+- Can the conjecture be made into a precise theorem that defines 'durable, reproducible records' and proves that amplitude-squared is the unique invariant measure preserved under decoherence, amplification, copying, and recursive stabilization? This is the central unresolved tension because the proposal currently relies on suggestive language about record ecology and stability without a formal dynamical criterion that excludes rival measures. (score: 0.98)
+- What is the exact relationship between computational irreducibility and measure selection? Irreducibility may explain why naive branch counting is unusable, but it does not by itself show why a unique invariant must be the Born measure rather than some other coarse-graining-independent functional of the dynamics. The open problem is to determine whether irreducibility does real explanatory work here or is only an epistemic obstacle layered onto standard decoherence. (score: 0.90)
+- Does the conjecture risk circularity by defining 'stable record-bearing histories' in a way that already tracks amplitude-squared success? To be non-circular, the account must show independently—without smuggling in probabilistic assumptions—that larger-amplitude branches are objectively better at sustaining redundancy, consistency, and long-lived records. The open question is whether record robustness can be specified and tested independently enough to derive, rather than presuppose, the Born rule. (score: 0.95)

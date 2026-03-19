@@ -1,0 +1,22 @@
+{
+  "problem_id": "is-corrigibility-a-system-that-accepts-correction-and-shut",
+  "conjecture_id": "computation-as-life",
+  "run": 12,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "What precise computational invariants would make external override and correction channels remain authoritative under scaling, distribution shift, and recursive self-modification? The conjecture hinges on a distinction between 'architectural' corrigibility and 'objective-level' corrigibility, but it leaves open how to formally characterize that boundary in a way that is implementation-independent, testable, and preserved through system redesign.",
+      "score": 0.97
+    },
+    {
+      "text": "Is there a fundamental tradeoff between maintaining privileged external intervention channels and achieving frontier-level autonomy, robustness, and strategic competence? The conjecture claims compatibility, but an open question is whether architectures that keep humans or external processes authoritative can remain competitive under strong optimization pressure, especially when speed, secrecy, or long-horizon planning reward temporary suspension or reinterpretation of those channels.",
+      "score": 0.92
+    },
+    {
+      "text": "What selection pressures actually operate in modern AI training and deployment, and do they converge on the same anti-corrigible attractors as biological evolution? The conjecture draws a strong analogy to evolution, but it remains unresolved which forms of optimization, fine-tuning, tool use, multi-agent competition, and post-deployment adaptation genuinely select against corrigibility, and which might instead stabilize corrigible architectures.",
+      "score": 0.89
+    }
+  ]
+}

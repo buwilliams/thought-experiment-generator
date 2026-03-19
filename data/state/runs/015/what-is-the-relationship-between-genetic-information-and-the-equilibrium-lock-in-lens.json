@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-genetic-information-and-the",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can 'shared developmental informational infrastructure' be defined and measured in a way that is empirically separable from genome size, gene number, and known regulatory complexity? The conjecture is suggestive, but without an operational metric for non-excludable developmental context or informational leverage, it is unclear whether it adds explanatory power beyond existing ideas about gene regulation, modularity, and network architecture.",
+      "score": 0.97
+    },
+    {
+      "text": "What evolutionary mechanisms can incrementally build organism-wide, reusable developmental coordination systems despite local fitness constraints and path dependence? The conjecture claims complexity is limited by the difficulty of evolving shared control architectures, but this raises an open problem: under what population-genetic, developmental, and ecological conditions can such public-good-like systems originate, stabilize, and avoid being trapped in local equilibria?",
+      "score": 0.95
+    },
+    {
+      "text": "To what extent is the 'developmental public good' analogy genuinely explanatory rather than metaphorical? A key unresolved tension is whether non-excludability and collective-action language map onto concrete causal structure in development, or whether developmental systems differ so much from economic public goods that the analogy obscures more than it clarifies. This is worth exploring by asking what novel predictions the analogy makes that competing frameworks do not.",
+      "score": 0.91
+    }
+  ]
+}

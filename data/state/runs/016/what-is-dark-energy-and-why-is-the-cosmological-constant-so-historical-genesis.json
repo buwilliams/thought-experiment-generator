@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+  "conjecture_id": "historical-genesis",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "What precise coupling rule determines which quantum degrees of freedom or informational structures gravitate, and how can that rule be formulated so it reproduces known semiclassical gravity results while excluding naive bulk vacuum-energy contributions?",
+      "score": 0.97
+    },
+    {
+      "text": "If the cosmological constant problem is a category error rather than a fine-tuning problem, what empirical signatures would distinguish 'selective gravitational responsiveness' from standard Lambda-CDM with a true cosmological constant or dynamical dark energy?",
+      "score": 0.95
+    },
+    {
+      "text": "What deeper ontology or interface theory can consistently relate GR's geometric source terms to QFT's renormalized quantities without ad hoc bookkeeping, and explain why vacuum energy is physically meaningful in some contexts (for example Casimir-like effects) but not as a universal source of spacetime curvature?",
+      "score": 0.93
+    }
+  ]
+}

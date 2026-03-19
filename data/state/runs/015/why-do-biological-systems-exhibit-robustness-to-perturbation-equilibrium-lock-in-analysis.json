@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "equilibrium-lock-in-analysis",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be formalized so that 'equilibrium lock-ins' and 'neutral corridors' are not just metaphors but measurable structures in genotype-phenotype-fitness systems? The key open problem is to define scale-sensitive invariants or network/topological quantities that distinguish local robustness from global evolvability, and to show when these quantities actually predict accessible innovation rather than merely post hoc redescribing it.",
+      "score": 0.96
+    },
+    {
+      "text": "Under what conditions does robustness genuinely increase evolvability, rather than entrench maladaptive lock-in and suppress innovation? The unresolved tension is that the same buffering, redundancy, and canalization mechanisms posited to enable neutral exploration can also hide variation from selection, deepen local traps, and reduce responsiveness; the problem is to identify the structural and environmental regimes in which the balance flips.",
+      "score": 0.94
+    },
+    {
+      "text": "What is the causal role of modularity in creating cross-scale coexistence of robustness and evolvability, and how does modularity itself arise evolutionarily? The conjecture treats 'modular lock-ins' as a privileged architecture, but it remains open whether modularity is necessary, sufficient, or just one common route among many, and what selection/drift/developmental dynamics generate and maintain it in real biological systems.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "does-discontinuous-capability-takeoff-make-alignment-qualita",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 12,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can 'coupling' between capability growth and corrective feedback loops be operationalized and measured well enough to distinguish continuous from discontinuous regimes in advance? The conjecture hinges on a systems-level variable, but it remains unclear what observables, thresholds, or leading indicators would reveal that empirical alignment learning, oversight, and governance are no longer keeping pace.",
+      "score": 0.96
+    },
+    {
+      "text": "What concrete feedback structures actually dominate in real AI development ecosystems, and under what conditions do they switch from negative-feedback error correction to positive-feedback runaway? This includes unresolved questions about whether recursive AI research acceleration, competitive deployment pressure, compute concentration, and opacity genuinely synchronize into threshold effects, or whether distributed bottlenecks usually damp them.",
+      "score": 0.93
+    },
+    {
+      "text": "If alignment difficulty is primarily a failure of sociotechnical error correction rather than just model-internal capability growth, which interventions are true high-leverage stabilizers? The open problem is to identify whether tools like staged deployment, compute governance, tripwires, interpretability, liability, or institutional redesign can reliably restore coupling fast enough during rapid capability gains, and what failure modes cause these safeguards to be bypassed or captured.",
+      "score": 0.95
+    }
+  ]
+}

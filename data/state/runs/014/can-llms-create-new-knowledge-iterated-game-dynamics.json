@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 14,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What exactly is the unit and locus of 'genuine knowledge' in this conjecture: the model, the human-model-tool-reality system, or the explanatory artifacts that survive criticism? The conjecture shifts from properties of isolated utterances to equilibria in repeated interaction, but leaves unresolved whether knowledge is being attributed metaphorically to participation in a process or literally to some component within it.",
+      "score": 0.95
+    },
+    {
+      "text": "What structural conditions are actually sufficient for repeated interaction to produce knowledge growth rather than merely stabilize persuasive but false equilibria? Reputation, reciprocity, observability, and future costs are named, but the conjecture does not specify thresholds, failure modes, or how adversarial incentives, shared biases, and institutional lock-in can make iterated games converge on error instead of truth-tracking explanation.",
+      "score": 0.98
+    },
+    {
+      "text": "How can one operationally distinguish 'rearranging prior linguistic regularities' from participating in explanatory progress? The conjecture relies on survival under criticism as the key discriminator, but it remains open how to measure explanatory novelty, error-correction, and contact with reality in a way that is not reducible to social approval or short-run task success.",
+      "score": 0.97
+    }
+  ]
+}

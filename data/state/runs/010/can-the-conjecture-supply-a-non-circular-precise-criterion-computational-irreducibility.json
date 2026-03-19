@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-the-conjecture-supply-a-non-circular-precise-criterion",
+  "conjecture_id": "computational-irreducibility",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture non-circularly distinguish a genuinely 'counterfactually reusable internal mapping' from a highly compressed but still non-representational policy? The core open problem is whether there exists an operational criterion that separates model-based internal structure from sophisticated reactive control without presupposing the very notion of correctness conditions it aims to explain.",
+      "score": 0.96
+    },
+    {
+      "text": "Is computational irreducibility actually necessary for modelhood, or only one common route to it? A major unresolved tension is whether systems can possess genuine models with correctness conditions even in environments that are reducible, predictable, or shortcut-friendly, which would weaken the conjecture's proposed link between irreducible task structure and the emergence of internal models.",
+      "score": 0.91
+    },
+    {
+      "text": "What counts as an 'independent' mismatch test between internal structure and world structure in real systems? The conjecture relies on adequacy being evaluable against the domain itself, but it remains open how to specify such tests for noisy, learned, distributed, or action-dependent representations where the target domain is partly constituted by the agent's own interventions.",
+      "score": 0.94
+    }
+  ]
+}

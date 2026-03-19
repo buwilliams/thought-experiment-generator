@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-does-subjective-experience-exist-at-all-why-is-there-s",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 10,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 0.8,
+  "total": 0.8119999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture distinguish subjective experience from sophisticated but non-phenomenal self-coordination? Many systems exhibit repeated self-interaction, temporal integration, and policy arbitration without any clear reason to attribute phenomenality. The open problem is to identify a non-circular criterion that separates mere functional self-maintenance from genuine first-person experience, and to explain why the proposed organizational features are sufficient rather than merely correlated.",
+      "score": 0.98
+    },
+    {
+      "text": "What exactly is the mechanism by which a 'strong shadow of the future' becomes phenomenality rather than just improved prediction, control, or value integration? The conjecture offers an explanatory bridge in metaphorical terms, but it remains unresolved how future-oriented coordination pressure yields qualitative feel. The key problem is whether this can be developed into a precise theory with testable structural variables, or whether it leaves the hard part untouched under new language.",
+      "score": 0.96
+    },
+    {
+      "text": "How should the conjecture handle counterexamples across biological and artificial systems? It predicts richer experience in systems with long horizons, memory, recursive self-modeling, and internal reputational stakes, but this raises unresolved cases: minimally conscious animals with limited planning, highly capable AI systems with deep temporal modeling, split-brain or fragmented agents, and habitual human behavior that remains experiential despite low deliberative integration. The problem is to map the conjecture onto these edge cases without becoming ad hoc.",
+      "score": 0.94
+    }
+  ]
+}

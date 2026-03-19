@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-are-the-fundamental-constants-of-physics-fine-tuned-to-p",
+  "conjecture_id": "invariant-under-stress",
+  "run": 16,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can 'learnable worlds' or 'counterfactually stable structure' be made precise enough to test the conjecture? The core unresolved tension is whether multiscale robustness, compressibility, intervention-stability, and knowledge-growth capacity can be formalized into quantitative criteria on law-space, rather than remaining an evocative redescription of anthropic selection. A new problem is to define metrics that distinguish merely life-permitting universes from universes rich in reusable regularities, and to determine whether those metrics actually pick out a narrow region of parameter space.",
+      "score": 0.96
+    },
+    {
+      "text": "Does the conjecture explain fine-tuning non-circularly, or does it smuggle in the very thing it aims to explain? The open question is whether 'observers require deep invariants' is an independent explanatory principle or just a reformulated selection effect. To pursue this, one would need to show that robustness-for-generalization yields novel constraints or retrodictions beyond standard anthropic reasoning—for example, predicting correlations among constants, excluded classes of sterile-but-life-permitting worlds, or structural features of physics not derivable from habitability alone.",
+      "score": 0.93
+    },
+    {
+      "text": "What deeper generative structures could force apparent constants to covary, and how would we tell that from genuinely independent parameters? The conjecture relies on the possibility that current constants are compressed summaries of latent structure, but leaves open which candidate mechanisms could do this and what empirical or theoretical signatures they would produce. A worthwhile problem is to search for models in which demanding stable, reusable regularities across scales constrains the constants jointly, then compare whether such models outperform independent-knob descriptions in explanatory power and unification.",
+      "score": 0.91
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "strange-loops-and-self-reference",
+  "run": 14,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "What precise structural and causal conditions are necessary and sufficient for a token-predicting system's self-referential feedback to count as a 'strange loop' that produces genuine explanatory knowledge rather than merely more sophisticated pattern continuation?",
+      "score": 0.97
+    },
+    {
+      "text": "How can 'genuine explanatory knowledge' be operationally distinguished from fluent recombination in systems with similar outward behavior, especially when the conjecture locates the difference in internal criticism, self-modeling, and revision rather than in observable text alone?",
+      "score": 0.99
+    },
+    {
+      "text": "Does recursive self-criticism actually improve truth-tracking and explanatory power, or can a system close the proposed loop yet remain trapped in internally coherent but systematically false or self-reinforcing models?",
+      "score": 0.95
+    }
+  ]
+}

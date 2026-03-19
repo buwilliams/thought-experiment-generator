@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-do-concepts-and-meaning-arise-from-syntax-statistics-a",
+  "conjecture_id": "historical-genesis",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What exactly distinguishes mere predictive/compressive success from genuine concept possession or aboutness? The conjecture says syntax and statistics are only vehicles, and that meaning requires participation in world- and socially-constrained error correction, but it leaves unresolved a non-circular criterion: which structural or functional features are necessary and sufficient for an internal distinction to count as being about something rather than just being useful for prediction?",
+      "score": 0.97
+    },
+    {
+      "text": "How can 'world resistance' and 'social correction' be formalized without collapsing back into behaviorism or pragmatism that explains only successful coordination, not meaning itself? The conjecture proposes goals, external constraint, and consequences for error as the key ingredients, but it remains open how these constraints generate semantic content rather than merely selecting adaptive policies. This is a central unresolved tension because the proposal risks redescribing meaning in causal-functional terms without explaining how content enters the picture.",
+      "score": 0.93
+    },
+    {
+      "text": "Are goals/problems to solve fundamental prerequisites for meaning, and if so where do those goals come from in natural and artificial systems? The conjecture treats goal-directed error correction as a condition for concepts, but this raises an open regress: if meaning depends on goals, must goals already be semantically structured, socially inherited, biologically selected, or externally assigned? Clarifying this would determine whether the conjecture genuinely explains concept formation or relocates the mystery to the origin of normativity and agency.",
+      "score": 0.91
+    }
+  ]
+}

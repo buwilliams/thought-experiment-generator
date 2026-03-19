@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-intentionality-the-aboutness-of-mental-states-a",
+  "conjecture_id": "emergence-and-self-organization",
+  "run": 10,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "total": 0.909,
+  "candidate_problems": [
+    {
+      "text": "What exactly are the necessary and sufficient organizational conditions for genuine intentionality, as opposed to mere control or information processing? The conjecture points to self-maintenance, feedback, prediction, and action-guidance, but it remains unresolved which of these are essential, in what combination, and where to draw the boundary between thermostats, adaptive controllers, animals, and reflective agents.",
+      "score": 0.97
+    },
+    {
+      "text": "How are correctness conditions and misrepresentation objectively grounded in a system-level account without smuggling in external teleology or observer-relative purposes? The conjecture says error arises from regulatory organization tied to continued existence, but it is still open whether survival, goal-maintenance, or learned norms can non-circularly determine what a state is about and when it is wrong.",
+      "score": 0.95
+    },
+    {
+      "text": "Can this organizational account explain semantic content with enough specificity to distinguish different but behaviorally similar internal states, especially in cases involving absent, hypothetical, social, or abstract objects? The open tension is whether closed-loop control explains only pragmatic success or whether it can also generate determinate reference to food, tomorrow, another agent's belief, or mathematical entities.",
+      "score": 0.91
+    }
+  ]
+}

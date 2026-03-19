@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-can-decentralized-informational-infras",
+  "conjecture_id": "extreme-cases",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.6,
+  "total": 0.705,
+  "candidate_problems": [
+    {
+      "text": "What is the minimal structural threshold at which decentralized informational infrastructure becomes functionally equivalent to central enforcement? The conjecture names key variables—memory durability, observability, verification cost, identity persistence, repetition density—but leaves open whether there is a principled phase boundary, tradeoff surface, or impossibility theorem linking them. A worthwhile problem is to formalize these as system stocks/flows and feedbacks, and ask which combinations can compensate for others and which deficits are non-substitutable.",
+      "score": 0.96
+    },
+    {
+      "text": "Can decentralized systems solve the identity-binding problem without reintroducing centralized coercive authority? The conjecture treats cheap pseudonymity and identity reset as a hard limit, but it remains unresolved whether durable linkage can be achieved through cryptographic, social, economic, or asset-based mechanisms that preserve decentralization. The deeper tension is whether stable identity is merely one implementation detail or an unavoidable ontological requirement for informational enforcement.",
+      "score": 0.93
+    },
+    {
+      "text": "How should the conjecture handle domains with fast, diffuse, or irreversible harms, where informational punishment arrives too late? This raises an open question about whether decentralized infrastructures can ever move beyond ex post discipline into credible ex ante prevention, or whether some class of harms structurally requires centralized intervention. The important unresolved issue is to characterize that class precisely rather than treating 'irreversibility' as an intuitive boundary.",
+      "score": 0.91
+    }
+  ]
+}

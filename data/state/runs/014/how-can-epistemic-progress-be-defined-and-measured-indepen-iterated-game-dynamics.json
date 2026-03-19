@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-can-epistemic-progress-be-defined-and-measured-indepen",
+  "conjecture_id": "iterated-game-dynamics",
+  "run": 14,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can 'capacity to improve beliefs across repeated inquiry cycles' be operationalized without collapsing back into proxy metrics like benchmark accuracy, popularity, or superficial update frequency? The conjecture proposes longitudinal audit variables, but it remains unresolved which measurements genuinely track long-run epistemic fitness rather than merely rewarding visible revision rituals, verbosity, or institutional compliance.",
+      "score": 0.96
+    },
+    {
+      "text": "Is the repeated-game analogy structurally valid for inquiry, or does it hide important disanalogies between strategic cooperation and truth-seeking? In particular, when do incentives for reputation, coordination, and future accountability actually promote error-correction, and when might they instead produce conformity, excessive caution, or strategic self-protection that impedes discovery?",
+      "score": 0.91
+    },
+    {
+      "text": "What is the right unit of epistemic progress: individual agents, communities, institutions, or artifacts such as papers and models? The conjecture moves between agent-level and community-level claims, but unresolved tensions remain about whether a system can exhibit strong collective corrigibility while its members do not, how progress aggregates across levels, and which structural interventions best improve the whole inquiry system.",
+      "score": 0.89
+    }
+  ]
+}

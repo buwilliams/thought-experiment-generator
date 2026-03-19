@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-in-group-and-out-group-dynamics-persist-even-in-socie",
+  "conjecture_id": "equilibrium-lock-in-lens",
+  "run": 13,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.7,
+  "total": 0.7749999999999999,
+  "candidate_problems": [
+    {
+      "text": "What concrete institutional mechanisms can make non-tribal behavior individually incentive-compatible without creating new covert tribes around the institutions themselves? This is the central mechanism-design question left open by the conjecture: how to fund, monitor, and reproduce impartial norms so that local rationality aligns with universalism, while avoiding second-order faction formation among enforcers, moral elites, or identity-neutral bureaucracies.",
+      "score": 0.97
+    },
+    {
+      "text": "How can the conjecture be empirically distinguished from rival explanations such as latent preference for tribalism, evolved coalitional psychology, elite manipulation, or material conflict? The open problem is to identify observable signatures, boundary conditions, and causal tests showing when tribal persistence is mainly due to underprovision of a public good rather than hypocrisy, ideology, or irreducible group competition.",
+      "score": 0.95
+    },
+    {
+      "text": "Is there a hard lower bound on tribal re-formation in large, uncertain societies—i.e., are some in-group/out-group dynamics unavoidable because bounded cognition and coordination always require compressed social heuristics? This asks whether 'fully non-tribal order' is actually feasible or whether the best achievable state is only a managed, continually repaired equilibrium with residual boundary-making.",
+      "score": 0.92
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-did-the-universe-begin-in-a-state-so-exceptionally-suite",
+  "conjecture_id": "shadow-of-future",
+  "run": 16,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.8,
+  "total": 0.839,
+  "candidate_problems": [
+    {
+      "text": "What is the precise, non-circular physical criterion for 'cosmic memory' or 'answerability to the past'? The conjecture relies on durable records, repeated interaction, and constrained future possibilities, but it leaves open how to define and measure these in a way that distinguishes mere correlation, generic irreversibility, and genuinely cumulative error-correcting dynamics. A strong problem is to formulate a quantitative framework linking low-entropy boundary conditions to record persistence, causal legibility, and ratcheting across scales.",
+      "score": 0.96
+    },
+    {
+      "text": "Are the proposed prerequisites—free energy gradients, durable records, and repeated interactions—jointly sufficient for knowledge growth, or merely necessary for open-ended structure formation? The conjecture moves from conditions for persistence and selection to conditions for epistemic growth, but it is unresolved where the boundary lies between generic complex self-organization and systems that actually preserve, expose, and correct errors. This raises the problem of identifying additional conditions, if any, that separate chemistry, life, and knowledge-creating agents from other metastable dissipative structures.",
+      "score": 0.93
+    },
+    {
+      "text": "What deeper cosmological mechanism explains why the universe began in a memory-permitting regime rather than a rapidly self-erasing one? The conjecture reframes the specialness problem but does not solve it: it remains open whether inflation, gravitational degrees of freedom, a lawlike boundary condition, cosmological natural selection, or some other principle can explain the emergence of long-lived asymmetries and record-bearing dynamics without teleology. This is a high-value problem because it tests whether the reframing yields new explanatory constraints on fundamental cosmology or only a redescription of low entropy.",
+      "score": 0.98
+    }
+  ]
+}

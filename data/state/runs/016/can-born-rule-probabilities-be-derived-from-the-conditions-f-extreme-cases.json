@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+  "conjecture_id": "extreme-cases",
+  "run": 16,
+  "logical_consistency": 0.84,
+  "hard_to_vary": 0.9,
+  "total": 0.882,
+  "candidate_problems": [
+    {
+      "text": "Can the key notion of 'maximal reproducibility' or 'durable record formation' be made fully precise in Hilbert-space terms, and then proved to single out the squared-amplitude measure uniquely? The central open problem is to define record durability, redundancy, re-identifiability, and interference-resistance non-circularly—without already smuggling in the Born rule through norms, decoherence functionals, or typicality assumptions.",
+      "score": 0.98
+    },
+    {
+      "text": "Is the conjecture genuinely stronger than existing Born-rule derivations from decoherence, envariance, decision theory, or Gleason-type results, or is it a reformulation that covertly relies on the same assumptions? A major unresolved tension is whether the appeal to copying, coarse-graining, tensor-product composition, and large-N stability independently constrains branch weights, or whether those constraints already presuppose the 2-norm structure that makes the conclusion unsurprising.",
+      "score": 0.94
+    },
+    {
+      "text": "What exactly happens to low-amplitude branches: do they truly fail to support durable macroscopic records, and if so by what dynamical threshold or scaling law? This raises a sharp testable/mathematical problem: characterize how record redundancy, error correction, and decoherence rates scale with branch amplitude, and determine whether there is a principled sense in which amplitude approaching zero implies loss of 'epistemic existence' rather than merely very small measure.",
+      "score": 0.91
+    }
+  ]
+}

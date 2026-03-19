@@ -1,0 +1,22 @@
+{
+  "problem_id": "can-born-rule-probabilities-be-derived-from-the-conditions-f",
+  "conjecture_id": "load-bearing-constraint",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.9,
+  "total": 0.9,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made into a non-circular derivation of the Born rule from record-theoretic constraints alone? The central tension is whether notions like 'stable persistence,' 'redundancy,' 'durable branch proliferation,' and 'observer-accessible frequencies' can be defined without already smuggling in Hilbert-space norm structure or probabilistic assumptions equivalent to the Born rule. A worthwhile problem is to formalize these record conditions and test whether squared amplitude is uniquely forced, rather than merely redescribed.",
+      "score": 0.97
+    },
+    {
+      "text": "What exact dynamical mechanism links decoherence and redundant record formation to a unique measure over branches, rather than just to effective classicality? The open question is whether alternative weighting rules could coexist with decoherence if one adjusted the ontology of branches, coarse-graining, or readout criteria, or whether squared amplitude is uniquely selected by invariance under decomposition/recombination and repeated measurement composition. This is worth pursuing because it targets the conjecture's strongest empirical and explanatory claim: uniqueness.",
+      "score": 0.93
+    },
+    {
+      "text": "How should 'branch' and 'record' be defined in a decomposition-independent way robust enough to ground objective frequencies? The unresolved tension is that branch counting is criticized as basis- and grain-dependent, but the conjecture also relies on branch-record structure; unless records can be individuated canonically enough, the proposed measure may inherit the same ambiguity it aims to solve. A new problem is to identify whether quantum Darwinism, consistent histories, or another framework can supply decomposition-invariant record ontology sufficient for the argument.",
+      "score": 0.91
+    }
+  ]
+}

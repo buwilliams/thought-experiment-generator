@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-analogical-reasoning-generate-genuinely-new-knowled",
+  "conjecture_id": "corrigible-continuity-lens",
+  "run": 11,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "How can one non-circularly identify and test the purported invariant set in an analogy before success in the target domain is already known? The conjecture relies on 'load-bearing' invariants, but it leaves open a criterion for distinguishing genuine structural identity from retrospectively selected similarities or rhetorically privileged abstractions.",
+      "score": 0.96
+    },
+    {
+      "text": "What exactly makes the resulting knowledge 'genuinely new' rather than merely a redescription or heuristic prompt? The conjecture claims novelty arises when imported constraints interact with target-specific facts, but it does not yet specify a sharp boundary between true knowledge growth, problem reformulation, and useful but non-knowledge-generating model transfer.",
+      "score": 0.92
+    },
+    {
+      "text": "How should explicit error-correction be operationalized across domains so that analogy remains criticizable without becoming too weak or too rigid? The conjecture says legitimacy depends on publicly stating what is invariant, revisable, and falsifying, but it leaves unresolved what institutional or methodological structure can reliably do this in practice, especially in domains with weak feedback or contested standards of failure.",
+      "score": 0.9
+    }
+  ]
+}

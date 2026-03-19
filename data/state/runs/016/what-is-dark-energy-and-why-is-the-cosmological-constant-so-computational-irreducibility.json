@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-dark-energy-and-why-is-the-cosmological-constant-so",
+  "conjecture_id": "computational-irreducibility",
+  "run": 16,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 1.0,
+  "total": 0.97,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture be made into a precise, testable framework rather than a metaphor? In particular: what exactly is the universe’s 'generative rule', what notion of computational irreducibility is physically relevant, and how does one define the coarse-graining map by which gravity couples to a late-time residual instead of to local zero-point energy? Without a formal model, the idea risks being unfalsifiable or merely redescribing the cosmological constant problem.",
+      "score": 0.97
+    },
+    {
+      "text": "Can a computationally irreducible large-scale residual be reconciled with the local structure of effective field theory and general covariance? The key tension is whether standard semiclassical gravity, which couples geometry to expectation values of stress-energy, can consistently yield a tiny positive cosmological term from global evolution while avoiding conflict with locality, conservation laws, renormalization, and known precision tests of QFT in curved spacetime.",
+      "score": 0.94
+    },
+    {
+      "text": "Does the conjecture generate distinctive empirical predictions that separate it from a true constant vacuum energy or dynamical dark energy models? The open question is whether an emergent attractor/residual picture implies observable signatures in the expansion history, structure formation, cosmic variance, horizon-scale correlations, or sensitivity to initial conditions, and whether 'robust emergence across many microscopic realizations' can be quantified in a way that explains the observed small positive value rather than merely permitting it.",
+      "score": 0.95
+    }
+  ]
+}

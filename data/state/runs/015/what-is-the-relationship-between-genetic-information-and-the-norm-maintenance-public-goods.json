@@ -1,0 +1,22 @@
+{
+  "problem_id": "what-is-the-relationship-between-genetic-information-and-the",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "How can 'developmental coordination institutions' be formalized and measured independently of gene count, so the conjecture becomes testable? In particular, what quantitative variables capture enforcement, interpretive control, error-correction, and robustness against cellular defection across species, and do these explain organismal complexity better than genome size or protein-coding gene number?",
+      "score": 0.97
+    },
+    {
+      "text": "What is the causal division of labor between genomic information and non-genomic structure in producing organismal complexity? The conjecture says complexity is offloaded onto self-organizing dynamics, chromatin state, tissue geometry, extracellular context, and environmental regularities, but it remains unresolved how much of the coordinating machinery is itself genetically scaffolded versus inherited in other forms or emergent during development.",
+      "score": 0.94
+    },
+    {
+      "text": "What are the scaling laws and tradeoffs linking organismal complexity to the cost of suppressing cellular defection? If more complex organisms must be 'more heavily governed,' does complexity systematically require greater investment in surveillance, apoptosis, repair, immune policing, and developmental constraint, and are there hard limits where enforcement costs, fragility, or cancer risk cap achievable complexity?",
+      "score": 0.95
+    }
+  ]
+}

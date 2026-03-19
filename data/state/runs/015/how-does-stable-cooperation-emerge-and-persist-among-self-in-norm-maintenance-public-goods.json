@@ -1,0 +1,22 @@
+{
+  "problem_id": "how-does-stable-cooperation-emerge-and-persist-among-self-in",
+  "conjecture_id": "norm-maintenance-public-goods",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "total": 0.915,
+  "candidate_problems": [
+    {
+      "text": "What are the precise boundary conditions under which decentralized enforcement outcompetes central enforcement or no enforcement at all? The conjecture identifies repeated interaction, visibility, reversibility of gains, and distributed sanctioning costs, but leaves unresolved how these variables trade off, whether there are threshold effects, and which combinations are sufficient versus merely helpful across different network structures, scales, and mobility/anonymity regimes.",
+      "score": 0.95
+    },
+    {
+      "text": "How is the second-order enforcement problem itself stabilized against free-riding, retaliation, and capture? The conjecture says beneficiaries distribute monitoring and punishment costs, but it remains open why individuals would reliably bear even small enforcement costs, how sanctioners avoid becoming targets, and how decentralized enforcement avoids degenerating into under-provision, vendettas, cartelization, or norm enforcement that serves local power rather than cooperation.",
+      "score": 0.98
+    },
+    {
+      "text": "How can one distinguish cooperative norms from merely persistent or oppressive norms within the same enforcement framework? The conjecture explains stickiness through decentralized sanctioning even when private endorsement is weak, but this raises the unresolved question of what structural features separate welfare-enhancing cooperation from path-dependent conformity, exclusionary equilibria, or harmful norms that remain stable because enforcement is cheap and dissent is costly.",
+      "score": 0.93
+    }
+  ]
+}

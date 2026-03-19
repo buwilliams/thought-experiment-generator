@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
+  "conjecture_id": "historical-genesis",
+  "run": 15,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.8,
+  "total": 0.845,
+  "candidate_problems": [
+    {
+      "text": "What precise causal mechanisms make some implementations of robustness generate evolvability while others suppress it? The conjecture hinges on a distinction between robustness via degeneracy, modularity, buffering, and distributed control versus robustness via rigid canalization, but it does not specify a general criterion for predicting which architectures open neutral spaces and which create lock-in. A worthwhile problem is to formulate measurable structural properties that distinguish 'evolvable robustness' from 'anti-evolvable robustness' across biological systems.",
+      "score": 0.97
+    },
+    {
+      "text": "How much of the robustness→evolvability relationship is a genuine historical path-dependent consequence versus an inevitable property of certain abstract system architectures? The conjecture emphasizes origin stories and contingency, but leaves unresolved whether historical sequence is essential or whether any system with many-to-one genotype-to-phenotype mappings, layered feedback, and degeneracy would display the same effect regardless of how it arose. This matters because it separates a historical explanation from a deeper structural law.",
+      "score": 0.92
+    },
+    {
+      "text": "Under what environmental and evolutionary conditions does selection for immediate survivability actually build architectures that preserve hidden variation instead of eliminating it? The conjecture assumes that surviving noise tends to produce neutral or quasi-neutral spaces, but this may depend on mutation rates, population size, developmental constraints, ecological volatility, and costs of redundancy or repair. An open question is to identify the regimes in which local selection for robustness reliably produces long-run innovation capacity, and the regimes in which it instead produces brittle stabilization.",
+      "score": 0.95
+    }
+  ]
+}

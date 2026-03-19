@@ -3,24 +3,11 @@
   "problems": [
     {
       "meta": {
-        "id": "how-did-self-replicating-chemistry-emerge-from-non-living-ma",
-        "source": "user",
-        "score": 0.7427999999999999,
-        "rank": 1,
-        "run_count": 1,
-        "created_at": "2026-03-18T20:54:29.961894660+00:00"
-      },
-      "title": "How did self-replicating chemistry emerge from non-living matter without a prior",
-      "summary": "How did self-replicating chemistry emerge from non-living matter without a prior template?",
-      "full_text": "How did self-replicating chemistry emerge from non-living matter without a prior template?"
-    },
-    {
-      "meta": {
         "id": "why-do-complex-adaptive-systems-exhibit-power-law-distributi",
         "source": "user",
-        "score": 0.819,
+        "score": 0.8610416666666667,
         "rank": 2,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T20:54:30.066160295+00:00"
       },
       "title": "Why do complex adaptive systems exhibit power-law distributions and scale-free b",
@@ -31,9 +18,9 @@
       "meta": {
         "id": "how-does-stable-cooperation-emerge-and-persist-among-self-in",
         "source": "user",
-        "score": 0.8434999999999999,
+        "score": 0.8977954545454545,
         "rank": 3,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T20:54:30.171879747+00:00"
       },
       "title": "How does stable cooperation emerge and persist among self-interested agents with",
@@ -44,9 +31,9 @@
       "meta": {
         "id": "what-is-the-relationship-between-genetic-information-and-the",
         "source": "user",
-        "score": 0.7861666666666668,
+        "score": 0.7884294871794872,
         "rank": 4,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T20:54:30.276399134+00:00"
       },
       "title": "What is the relationship between genetic information and the complexity of the o",
@@ -57,9 +44,9 @@
       "meta": {
         "id": "why-do-biological-systems-exhibit-robustness-to-perturbation",
         "source": "user",
-        "score": 0.6904,
+        "score": 0.7717833333333333,
         "rank": 5,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T20:54:30.381564636+00:00"
       },
       "title": "Why do biological systems exhibit robustness to perturbation while remaining evo",
@@ -70,16 +57,42 @@
       "meta": {
         "id": "under-what-conditions-can-decentralized-informational-infras",
         "source": "system",
-        "score": 0.0,
+        "score": 0.9086923076923076,
         "rank": 8,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-18T21:14:38.098682184+00:00"
       },
       "title": "Under what conditions can decentralized informational infrastructures substitute",
       "summary": "Under what conditions can decentralized informational infrastructures substitute for central enforcement, and where are their hard limits? The conjecture treats memory, observability, signaling, repea",
       "full_text": "Under what conditions can decentralized informational infrastructures substitute for central enforcement, and where are their hard limits? The conjecture treats memory, observability, signaling, repeated interaction, and peer punishment as load-bearing, but it remains open how much of each is necessary, how they trade off, and when scale, anonymity, mobility, noise, or adversarial manipulation break the system. This is a strong new problem because it turns the conjecture into a testable structural theory rather than a broad narrative."
+    },
+    {
+      "meta": {
+        "id": "can-distributed-constraint-maintaining-chemical-regimes-exh",
+        "source": "system",
+        "score": 0.0,
+        "rank": 8,
+        "run_count": 0,
+        "created_at": "2026-03-18T23:31:47.087822560+00:00"
+      },
+      "title": "Can distributed, constraint-maintaining chemical regimes exhibit heredity, varia",
+      "summary": "Can distributed, constraint-maintaining chemical regimes exhibit heredity, variation, and selection strongly enough before sequence templates exist? The conjecture depends on process-level reproductio",
+      "full_text": "Can distributed, constraint-maintaining chemical regimes exhibit heredity, variation, and selection strongly enough before sequence templates exist? The conjecture depends on process-level reproduction preceding molecule-level replication, but it remains open what exactly is inherited across generations of compartments, surfaces, or cycles, how that inheritance avoids rapid drift, and whether selection can act on such regimes with sufficient fidelity to accumulate adaptations. This is a central unresolved question because if process heredity is too weak, the proposed transition cannot support open-ended evolution."
+    },
+    {
+      "meta": {
+        "id": "how-can-the-conjecture-be-empirically-identified-and-falsifi",
+        "source": "system",
+        "score": 0.0,
+        "rank": 9,
+        "run_count": 0,
+        "created_at": "2026-03-18T23:31:47.087870910+00:00"
+      },
+      "title": "How can the conjecture be empirically identified and falsified in real systems w",
+      "summary": "How can the conjecture be empirically identified and falsified in real systems where multiple mechanisms coexist? The open problem is to distinguish reputation-mediated repeated play from alternative ",
+      "full_text": "How can the conjecture be empirically identified and falsified in real systems where multiple mechanisms coexist? The open problem is to distinguish reputation-mediated repeated play from alternative generators of heavy tails—fitness heterogeneity, copying, optimization, exogenous shocks, hidden variables, or network growth alone—using causal signatures, interventions, or longitudinal data on memory, repeated encounters, and partner selection."
     }
   ],
-  "run_count": 1,
+  "run_count": 2,
   "created_at": "2026-03-18T20:54:17.297094088+00:00"
 }

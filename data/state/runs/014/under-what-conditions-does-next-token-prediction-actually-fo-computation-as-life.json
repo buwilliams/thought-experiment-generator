@@ -1,0 +1,22 @@
+{
+  "problem_id": "under-what-conditions-does-next-token-prediction-actually-fo",
+  "conjecture_id": "computation-as-life",
+  "run": 14,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 1.0,
+  "total": 0.982,
+  "candidate_problems": [
+    {
+      "text": "How can the conjecture’s structural condition be made precise and testable? In particular, what formal criterion distinguishes streams where future tokens are compressible only through stable hidden state from streams where shallow surface statistics suffice, and how can this be measured independently of a specific model architecture?",
+      "score": 0.97
+    },
+    {
+      "text": "When does optimization actually recover invariant-tracking latents rather than equally predictive but non-interpretable or shortcut representations? The conjecture assumes prediction pressure selects the shortest reusable programs, but it remains open how objective, architecture, data mixture, and training dynamics determine which internal solution is found among many functionally equivalent compressions.",
+      "score": 0.95
+    },
+    {
+      "text": "What is the relationship between learned latent variables and 'real domain invariants' under lossy or socially mediated channels? Even if hidden-state tracking improves prediction, it is unresolved when the learned variables correspond to causally conserved structure in the generator versus artifacts of the observation channel, conventions, or observer-relative summaries.",
+      "score": 0.92
+    }
+  ]
+}

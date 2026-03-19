@@ -1,0 +1,22 @@
+{
+  "problem_id": "why-did-the-universe-begin-in-a-state-so-exceptionally-suite",
+  "conjecture_id": "invariant-under-stress",
+  "run": 16,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.9,
+  "total": 0.903,
+  "candidate_problems": [
+    {
+      "text": "Can the conjecture be made non-circular and quantitatively discriminating? It claims low-entropy initial conditions are special because they enable durable, truth-tracking prediction, but it lacks a precise measure of 'epistemic richness,' 'shortcut prediction,' and 'real structure.' A central open problem is to define these in physical/information-theoretic terms and show that far-from-equilibrium beginnings uniquely or robustly maximize them, rather than merely redescribing our universe after the fact.",
+      "score": 0.97
+    },
+    {
+      "text": "Is a low-entropy beginning actually necessary for open-ended knowledge growth, or only one sufficient route? The conjecture risks overclaiming unless it rules out alternative cosmological structures—e.g. stationary but locally non-equilibrium worlds, cyclic universes, fluctuation-driven pockets, or other substrates where memory, intervention, and cross-context generalization might also arise. The unresolved tension is between 'our universe supports epistemic depth this way' and 'any epistemically rich universe must begin this way.'",
+      "score": 0.95
+    },
+    {
+      "text": "How does the proposed 'selection effect over explanatory adequacy' avoid anthropic or observer-selection ambiguity? The conjecture says only in such universes could embedded knowers uncover laws rather than exploit accidental correlations, but this leaves open what is being selected, by what ensemble, and whether explanatory adequacy is doing real explanatory work versus restating that knowers can exist only where knowledge is possible. Clarifying this is crucial to distinguish a genuine explanation from a reformulated anthropic principle.",
+      "score": 0.92
+    }
+  ]
+}
