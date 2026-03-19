@@ -208,9 +208,9 @@ async fn main() -> Result<()> {
         }
 
         Command::Review => {
-            teg::review::report()?;
             let templates = teg::prompts::PromptTemplates::load()?;
-            teg::review::assess(client, &config, &templates).await?;
+            let writer = teg::review::report()?;
+            teg::review::assess(client, &config, &templates, writer).await?;
         }
 
         Command::NoveltyCheck => {

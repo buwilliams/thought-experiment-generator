@@ -12,8 +12,51 @@ use crate::types::{Conjecture, Layer, NoveltyResponse};
 
 const TOP_CANDIDATES: usize = 5;
 const TOP_OUTPUTS_FOR_ASSESS: usize = 3;
+const REVIEW_PATH: &str = "data/state/review.md";
 
-pub fn report() -> Result<()> {
+/// Builds markdown and plain-text outputs simultaneously.
+/// Markdown gets relative links to state files; plain text is clean for stdout.
+pub struct ReviewWriter {
+    md: String,
+    plain: String,
+}
+
+impl ReviewWriter {
+    fn new() -> Self {
+        Self { md: String::new(), plain: String::new() }
+    }
+
+    /// Write different text to each output.
+    fn line(&mut self, md: &str, plain: &str) {
+        self.md.push_str(md);
+        self.md.push('\n');
+        self.plain.push_str(plain);
+        self.plain.push('\n');
+    }
+
+    /// Write identical text to both outputs.
+    fn both(&mut self, text: &str) {
+        self.line(text, text);
+    }
+
+    /// Section heading: `## Heading` in markdown, plain text in stdout.
+    fn section(&mut self, heading: &str) {
+        self.md.push_str(&format!("## {}\n", heading));
+        self.plain.push_str(&format!("{}\n{}\n", heading, "-".repeat(heading.len())));
+    }
+
+    fn blank(&mut self) {
+        self.md.push('\n');
+        self.plain.push('\n');
+    }
+}
+
+/// Produce a markdown link for the md output; just the label for plain text.
+fn md_link(label: &str, path: &str) -> (String, String) {
+    (format!("[{}]({})", label, path), label.to_string())
+}
+
+pub fn report() -> Result<ReviewWriter> {
     state::ensure_initialized()?;
 
     let info = state::load_state_info()?;
@@ -21,57 +64,72 @@ pub fn report() -> Result<()> {
     let mut candidates = state::load_conjectures(&Layer::Candidates)?;
     let problemsets = state::load_problemsets()?;
 
-    println!("=== System Review — Run {:03} ===\n", info.run);
+    let mut w = ReviewWriter::new();
+
+    w.line(
+        &format!("# System Review — Run {:03}\n", info.run),
+        &format!("System Review — Run {:03}\n{}\n", info.run, "=".repeat(30)),
+    );
 
     // --- Mind ---
-    println!("## Mind ({} conjecture{})\n", mind.len(), if mind.len() == 1 { "" } else { "s" });
+    w.section(&format!("Mind ({} conjecture{})", mind.len(), plurals(mind.len())));
+    w.blank();
     if mind.is_empty() {
-        println!("  (empty)\n");
+        w.both("  (empty)");
     } else {
         for c in &mind {
-            println!(
-                "  {:<40} score: {:.2}  runs: {:>3}  coverage: {} problem{}",
-                truncate(&c.title, 40),
+            let path = format!("mind/{}.md", c.meta.id);
+            let (md_name, plain_name) = md_link(&c.title, &path);
+            let stats = format!(
+                "score: {:.2}  runs: {:>3}  coverage: {} problem{}",
                 c.meta.score,
                 c.meta.run_count,
                 c.meta.problem_coverage.len(),
-                if c.meta.problem_coverage.len() == 1 { "" } else { "s" },
+                plurals(c.meta.problem_coverage.len()),
+            );
+            w.line(
+                &format!("- {} — {}", md_name, stats),
+                &format!("  {:<40} {}", truncate(&plain_name, 40), stats),
             );
         }
-        println!();
     }
+    w.blank();
 
     // --- Top candidates ---
-    candidates.sort_by(|a, b| {
-        promoter::composite(b)
-            .partial_cmp(&promoter::composite(a))
-            .unwrap()
-    });
-    println!(
-        "## Candidates — Top {} by Composite (of {})\n",
+    candidates.sort_by(|a, b| promoter::composite(b).partial_cmp(&promoter::composite(a)).unwrap());
+    w.section(&format!(
+        "Candidates — Top {} by Composite (of {})",
         TOP_CANDIDATES.min(candidates.len()),
         candidates.len()
-    );
+    ));
+    w.blank();
     if candidates.is_empty() {
-        println!("  (empty)\n");
+        w.both("  (empty)");
     } else {
         for c in candidates.iter().take(TOP_CANDIDATES) {
-            println!(
-                "  {:<40} composite: {:.2}  score: {:.2}  runs: {:>3}",
-                truncate(&c.title, 40),
+            let path = format!("candidates/{}.md", c.meta.id);
+            let (md_name, plain_name) = md_link(&c.title, &path);
+            let stats = format!(
+                "composite: {:.2}  score: {:.2}  runs: {:>3}",
                 promoter::composite(c),
                 c.meta.score,
                 c.meta.run_count,
             );
+            w.line(
+                &format!("- {} — {}", md_name, stats),
+                &format!("  {:<40} {}", truncate(&plain_name, 40), stats),
+            );
         }
-        println!();
     }
+    w.blank();
 
     // --- Score trajectory ---
     if info.run > 0 {
-        println!("## Score Trajectory\n");
-        println!("{:<6} {:>10} {:>10}", "Run", "Avg Score", "Outputs");
-        println!("{}", "-".repeat(30));
+        w.section("Score Trajectory");
+        w.blank();
+        w.both(&format!("{:<6} {:>10} {:>10}", "Run", "Avg Score", "Outputs"));
+        w.both(&"-".repeat(30));
+
         let mut run_avgs: Vec<(u32, f64, usize)> = vec![];
         for run in 1..=info.run {
             let outputs = state::load_run_generated(run)?;
@@ -80,34 +138,46 @@ pub fn report() -> Result<()> {
             }
             let avg = outputs.iter().map(|o| o.meta.total).sum::<f64>() / outputs.len() as f64;
             run_avgs.push((run, avg, outputs.len()));
-            println!("{:<6} {:>10.3} {:>10}", run, avg, outputs.len());
+
+            let summary_path = format!("runs/{:03}/summary.md", run);
+            let run_label = format!("{:03}", run);
+            let (md_run, plain_run) = md_link(&run_label, &summary_path);
+            w.line(
+                &format!("{:<6} {:>10.3} {:>10}", md_run, avg, outputs.len()),
+                &format!("{:<6} {:>10.3} {:>10}", plain_run, avg, outputs.len()),
+            );
         }
+
         if run_avgs.len() >= 2 {
             let first = run_avgs.first().unwrap().1;
             let last = run_avgs.last().unwrap().1;
             let delta = last - first;
-            println!(
-                "\nOverall trend: {}{:.3} from run {} to run {}",
+            w.blank();
+            w.both(&format!(
+                "Overall trend: {}{:.3} from run {} to run {}",
                 if delta >= 0.0 { "+" } else { "" },
                 delta,
                 run_avgs.first().unwrap().0,
                 run_avgs.last().unwrap().0,
-            );
+            ));
         }
-        println!();
+        w.blank();
 
         // --- Per-conjecture score history ---
         let has_history = mind.iter().chain(candidates.iter()).any(|c| !c.meta.history.is_empty());
         if has_history {
-            println!("## Conjecture Score History\n");
+            w.section("Conjecture Score History");
+            w.blank();
             for c in mind.iter().chain(candidates.iter()) {
                 if c.meta.history.is_empty() {
                     continue;
                 }
-                let layer_tag = match c.meta.layer {
-                    Layer::Mind => "[mind]",
-                    Layer::Candidates => "[cand]",
+                let (layer_dir, layer_tag) = match c.meta.layer {
+                    Layer::Mind => ("mind", "[mind]"),
+                    Layer::Candidates => ("candidates", "[cand]"),
                 };
+                let path = format!("{}/{}.md", layer_dir, c.meta.id);
+                let (md_name, plain_name) = md_link(&c.title, &path);
                 let scores: Vec<String> = c.meta.history.iter().map(|h| format!("{:.2}", h.score)).collect();
                 let trend = if c.meta.history.len() >= 2 {
                     let first = c.meta.history.first().unwrap().score;
@@ -116,61 +186,81 @@ pub fn report() -> Result<()> {
                 } else {
                     ""
                 };
-                println!("{} {}{} (runs: {})", layer_tag, c.title, trend, c.meta.run_count);
-                println!("    {}", scores.join(" → "));
+                let score_str = scores.join(" → ");
+                w.line(
+                    &format!("**{}** {}{} (runs: {})\n    {}", layer_tag, md_name, trend, c.meta.run_count, score_str),
+                    &format!("{} {}{} (runs: {})\n    {}", layer_tag, plain_name, trend, c.meta.run_count, score_str),
+                );
             }
-            println!();
+            w.blank();
         }
     }
 
     // --- Problem sets ---
-    println!("## Problem Sets ({} set{})\n", problemsets.len(), if problemsets.len() == 1 { "" } else { "s" });
+    w.section(&format!("Problem Sets ({} set{})", problemsets.len(), plurals(problemsets.len())));
+    w.blank();
     if problemsets.is_empty() {
-        println!("  (none)\n");
+        w.both("  (none)");
     } else {
         for ps in &problemsets {
             let title = ps.content.lines().next().unwrap_or("").trim().trim_start_matches('#').trim();
-            println!(
-                "  [{}] {} — {} problem{}, {} run{}",
-                ps.meta.id,
+            let ps_path = format!("problemsets/{}.md", ps.meta.id);
+            let (md_ps, plain_ps) = md_link(&ps.meta.id, &ps_path);
+            let header = format!(
+                "{} — {} — {} problem{}, {} run{}",
+                md_ps,
                 truncate(title, 50),
                 ps.meta.problems.len(),
-                if ps.meta.problems.len() == 1 { "" } else { "s" },
+                plurals(ps.meta.problems.len()),
                 ps.meta.run_count,
-                if ps.meta.run_count == 1 { "" } else { "s" },
+                plural(ps.meta.run_count),
             );
+            let plain_header = format!(
+                "  [{}] {} — {} problem{}, {} run{}",
+                plain_ps,
+                truncate(title, 50),
+                ps.meta.problems.len(),
+                plurals(ps.meta.problems.len()),
+                ps.meta.run_count,
+                plural(ps.meta.run_count),
+            );
+            w.line(&format!("- {}", header), &plain_header);
             let mut problems = ps.meta.problems.clone();
             problems.sort_by(|a, b| b.meta.score.partial_cmp(&a.meta.score).unwrap());
             for p in &problems {
-                println!(
-                    "    • {:<50} score: {:.2}  runs: {}",
-                    truncate(&p.meta.id, 50),
-                    p.meta.score,
-                    p.meta.run_count,
+                w.line(
+                    &format!("  - {} — score: {:.2}  runs: {}", p.meta.id, p.meta.score, p.meta.run_count),
+                    &format!("    • {:<50} score: {:.2}  runs: {}", truncate(&p.meta.id, 50), p.meta.score, p.meta.run_count),
                 );
             }
         }
-        println!();
     }
+    w.blank();
 
     // --- Last run changes ---
     if let Some(summary) = state::load_last_summary()? {
         if let Some(changes) = extract_changes_section(&summary) {
-            println!("## Last Run Changes\n");
+            let summary_path = format!("runs/{:03}/summary.md", info.run);
+            w.section("Last Run Changes");
+            w.line(
+                &format!("\n_See [last run summary]({}) for full details._\n", summary_path),
+                "",
+            );
             for line in changes.lines() {
-                println!("  {}", line);
+                w.both(line);
             }
-            println!();
+            w.blank();
         }
     }
 
-    Ok(())
+    Ok(w)
 }
 
 pub async fn assess(
     client: Arc<LlmClient>,
     config: &Config,
     templates: &PromptTemplates,
+    mut w: ReviewWriter,
 ) -> Result<()> {
     state::ensure_initialized()?;
 
@@ -186,43 +276,33 @@ pub async fn assess(
 
     let mind_system = templates.format_mind_system(&mind);
 
-    // Full mind text for assessment
     let mind_full = mind
         .iter()
         .map(|c| format!("### {}\n\n{}", c.title, c.full_text))
         .collect::<Vec<_>>()
         .join("\n\n---\n\n");
 
-    // Top outputs from most recent run
     let top_outputs = if info.run > 0 {
         let mut outputs = state::load_run_generated(info.run)?;
         outputs.sort_by(|a, b| b.meta.total.partial_cmp(&a.meta.total).unwrap());
         outputs
             .into_iter()
             .take(TOP_OUTPUTS_FOR_ASSESS)
-            .map(|o| {
-                format!(
-                    "### {} × {} (total: {:.2})\n\n{}",
-                    o.meta.problem_id,
-                    o.meta.conjecture_id,
-                    o.meta.total,
-                    o.text.trim(),
-                )
-            })
+            .map(|o| format!(
+                "### {} × {} (total: {:.2})\n\n{}",
+                o.meta.problem_id, o.meta.conjecture_id, o.meta.total, o.text.trim(),
+            ))
             .collect::<Vec<_>>()
             .join("\n\n---\n\n")
     } else {
         "(no runs yet)".to_string()
     };
 
-    // Score trajectory string
     let trajectory = if info.run > 0 {
         let mut lines = vec![];
         for run in 1..=info.run {
             let outputs = state::load_run_generated(run)?;
-            if outputs.is_empty() {
-                continue;
-            }
+            if outputs.is_empty() { continue; }
             let avg = outputs.iter().map(|o| o.meta.total).sum::<f64>() / outputs.len() as f64;
             lines.push(format!("Run {:03}: {:.3} ({} outputs)", run, avg, outputs.len()));
         }
@@ -234,45 +314,60 @@ pub async fn assess(
     // --- Novelty check ---
     let all: Vec<&Conjecture> = mind.iter().chain(candidates_for_assess.iter()).collect();
     if !all.is_empty() {
-        println!("## Novelty Check\n");
+        eprintln!("Running novelty check ({} conjectures)...", all.len());
         let novelty_futures: Vec<_> = all
             .iter()
             .map(|c| {
                 let client = Arc::clone(&client);
                 let p = templates.novelty_check(&mind_system, &c.title, &c.summary);
                 let title = c.title.clone();
+                let id = c.meta.id.clone();
                 let layer = c.meta.layer.clone();
                 async move {
                     let resp: NoveltyResponse = client.call(Some(&p.system), &p.user, 0.3).await?;
-                    Ok::<(String, Layer, NoveltyResponse), anyhow::Error>((title, layer, resp))
+                    Ok::<(String, String, Layer, NoveltyResponse), anyhow::Error>((title, id, layer, resp))
                 }
             })
             .collect();
-        let mut novelty_entries: Vec<(String, Layer, NoveltyResponse)> = join_all(novelty_futures)
+        let mut novelty_entries: Vec<(String, String, Layer, NoveltyResponse)> = join_all(novelty_futures)
             .await
             .into_iter()
             .filter_map(|r| r.ok())
             .collect();
-        novelty_entries.sort_by(|a, b| b.2.novelty_score.partial_cmp(&a.2.novelty_score).unwrap());
-        for (title, layer, resp) in &novelty_entries {
-            let layer_tag = match layer {
-                Layer::Mind => "[mind]",
-                Layer::Candidates => "[cand]",
-            };
+        novelty_entries.sort_by(|a, b| b.3.novelty_score.partial_cmp(&a.3.novelty_score).unwrap());
+
+        w.section("Novelty Check");
+        w.blank();
+        for (title, id, layer, resp) in &novelty_entries {
+            let layer_dir = match layer { Layer::Mind => "mind", Layer::Candidates => "candidates" };
+            let layer_tag = match layer { Layer::Mind => "[mind]", Layer::Candidates => "[cand]" };
+            let path = format!("{}/{}.md", layer_dir, id);
+            let (md_name, plain_name) = md_link(title, &path);
             let novel_tag = if resp.is_novel { "NOVEL" } else { "KNOWN " };
-            println!("{} {} {:.2}  {}", layer_tag, novel_tag, resp.novelty_score, title);
+            w.line(
+                &format!("{} {} {:.2}  {}", layer_tag, novel_tag, resp.novelty_score, md_name),
+                &format!("{} {} {:.2}  {}", layer_tag, novel_tag, resp.novelty_score, plain_name),
+            );
             if let Some(ref analog) = resp.closest_analog {
-                println!("         Closest: {}", analog);
+                w.both(&format!("         Closest: {}", analog));
             }
-            println!("         {}\n", resp.explanation);
+            w.both(&format!("         {}", resp.explanation));
+            w.blank();
         }
     }
 
     // --- Self-assessment ---
-    println!("## Self-Assessment\n");
+    eprintln!("Running self-assessment...");
+    w.section("Self-Assessment");
+    w.blank();
     let p = templates.review_assess(&mind_system, &mind_full, &top_outputs, &trajectory);
     let assessment = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
-    println!("{}", assessment);
+    w.both(&assessment);
+    w.blank();
+
+    // --- Save and print ---
+    std::fs::write(REVIEW_PATH, &w.md)?;
+    print!("{}", w.plain);
 
     Ok(())
 }
@@ -283,6 +378,14 @@ fn truncate(s: &str, max: usize) -> String {
     } else {
         format!("{}…", s.chars().take(max - 1).collect::<String>())
     }
+}
+
+fn plural(n: u32) -> &'static str {
+    if n == 1 { "" } else { "s" }
+}
+
+fn plurals(n: usize) -> &'static str {
+    if n == 1 { "" } else { "s" }
 }
 
 fn extract_changes_section(summary: &str) -> Option<String> {
