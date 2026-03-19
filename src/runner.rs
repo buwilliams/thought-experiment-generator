@@ -48,30 +48,32 @@ pub async fn run(
     println!("\n=== Epistemic Engine — Run {:03} ===", run);
     let ps_display = problemset.content.lines().next().unwrap_or("").trim();
     println!("Problem set:           {} — {}", problemset.meta.id, ps_display);
+    let total_lenses = mind.len() + candidates.len();
     println!("Mind conjectures:      {}", mind.len());
     println!("Candidate conjectures: {}", candidates.len());
     println!("Problems:              {}", problemset.meta.problems.len());
-    println!("Pairs to process:      {}\n", problemset.meta.problems.len() * candidates.len());
+    println!("Pairs to process:      {}\n", problemset.meta.problems.len() * total_lenses);
 
     let mind_system = templates.format_mind_system(&mind);
 
-    // Phase 1 + 2: Generate and evaluate all (problem, candidate conjecture) pairs concurrently
+    // Phase 1 + 2: Generate and evaluate all (problem, lens) pairs concurrently.
+    // Lenses = candidates + mind conjectures (mind is tested directly, not just used as context).
     let mut handles = vec![];
     for problem in &problemset.meta.problems {
-        for candidate in &candidates {
-            if state::generated_exists(run, &problem.meta.id, &candidate.meta.id) {
-                info!("Resuming: skipping existing output {}-{}", problem.meta.id, candidate.meta.id);
+        for lens in candidates.iter().chain(mind.iter()) {
+            if state::generated_exists(run, &problem.meta.id, &lens.meta.id) {
+                info!("Resuming: skipping existing output {}-{}", problem.meta.id, lens.meta.id);
                 continue;
             }
             let client = Arc::clone(&client);
             let templates = Arc::clone(&templates);
             let config = config.clone();
             let mind_system = mind_system.clone();
-            let conjecture_summary = candidate.summary.clone();
+            let conjecture_summary = lens.summary.clone();
             let problemset_context = problemset.content.clone();
             let problem_summary = problem.summary.clone();
             let problem_id = problem.meta.id.clone();
-            let conjecture_id = candidate.meta.id.clone();
+            let conjecture_id = lens.meta.id.clone();
 
             handles.push(tokio::spawn(async move {
                 let p = templates.generate_output(&mind_system, &conjecture_summary, &problemset_context, &problem_summary);
@@ -102,13 +104,21 @@ pub async fn run(
 
     // Phase 3: Rank and promote
     let mut candidates_mut = candidates.clone();
+    let mut mind_mut = mind.clone();
 
     promoter::update_conjecture_scores(&mut candidates_mut, &generated);
+    promoter::update_mind_scores(&mut mind_mut, &generated);
     promoter::update_problem_scores(&mut problemset.meta.problems, &generated);
 
     for conjecture in &candidates_mut {
         state::save_conjecture(conjecture)?;
     }
+    for conjecture in &mind_mut {
+        state::save_conjecture(conjecture)?;
+    }
+
+    let mind_ids: std::collections::HashSet<String> =
+        mind.iter().map(|c| c.meta.id.clone()).collect();
 
     // Admit candidate problems into the problem set
     admit_candidates_to_set(&generated, &mut problemset, config.problem_admission_threshold)?;
@@ -146,14 +156,14 @@ pub async fn run(
 
     // Promote top generated output → candidates layer
     let promoted_generated_summary =
-        promote_top_generated(&client, &templates, &mind_system, &generated, run).await;
+        promote_top_generated(&client, &templates, &mind_system, &generated, &mind_ids).await;
 
     // Promote top candidate conjecture → mind
     let (promoted_candidate_name, promoted_candidate_id) =
         promote_top_candidate(&candidates_mut, config.min_run_count)?;
 
-    // Demote bottom mind conjecture → candidates
-    let demoted_mind_name = demote_bottom_mind(&mind, config.min_run_count)?;
+    // Demote bottom mind conjecture → candidates (requires 2× min_run_count)
+    let demoted_mind_name = demote_bottom_mind(&mind_mut, config.min_run_count)?;
 
     // Discard bottom candidate conjecture (excluding what was just promoted)
     let discarded_name =
@@ -321,9 +331,9 @@ async fn promote_top_generated(
     templates: &PromptTemplates,
     mind_system: &str,
     generated: &[Generated],
-    _run: u32,
+    mind_ids: &std::collections::HashSet<String>,
 ) -> Option<String> {
-    let top = promoter::find_top_generated(generated)?;
+    let top = promoter::find_top_generated(generated, mind_ids)?;
     let p = templates.promote_generated(mind_system, &top.text, top.meta.total);
     match client
         .call::<PromoteResponse>(Some(&p.system), &p.user, 0.3)
