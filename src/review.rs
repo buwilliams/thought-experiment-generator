@@ -1,13 +1,14 @@
 use std::sync::Arc;
 
 use anyhow::Result;
+use futures::future::join_all;
 
 use crate::config::Config;
 use crate::llm::LlmClient;
 use crate::promoter;
 use crate::prompts::PromptTemplates;
 use crate::state;
-use crate::types::Layer;
+use crate::types::{Conjecture, Layer, NoveltyResponse};
 
 const TOP_CANDIDATES: usize = 5;
 const TOP_OUTPUTS_FOR_ASSESS: usize = 3;
@@ -69,6 +70,8 @@ pub fn report() -> Result<()> {
     // --- Score trajectory ---
     if info.run > 0 {
         println!("## Score Trajectory\n");
+        println!("{:<6} {:>10} {:>10}", "Run", "Avg Score", "Outputs");
+        println!("{}", "-".repeat(30));
         let mut run_avgs: Vec<(u32, f64, usize)> = vec![];
         for run in 1..=info.run {
             let outputs = state::load_run_generated(run)?;
@@ -77,22 +80,47 @@ pub fn report() -> Result<()> {
             }
             let avg = outputs.iter().map(|o| o.meta.total).sum::<f64>() / outputs.len() as f64;
             run_avgs.push((run, avg, outputs.len()));
-        }
-        for (run, avg, count) in &run_avgs {
-            println!("  Run {:03}  {:.3}  ({} outputs)", run, avg, count);
+            println!("{:<6} {:>10.3} {:>10}", run, avg, outputs.len());
         }
         if run_avgs.len() >= 2 {
             let first = run_avgs.first().unwrap().1;
             let last = run_avgs.last().unwrap().1;
             let delta = last - first;
             println!(
-                "\n  Overall trend: {}{:.3} over {} runs",
+                "\nOverall trend: {}{:.3} from run {} to run {}",
                 if delta >= 0.0 { "+" } else { "" },
                 delta,
-                run_avgs.len(),
+                run_avgs.first().unwrap().0,
+                run_avgs.last().unwrap().0,
             );
         }
         println!();
+
+        // --- Per-conjecture score history ---
+        let has_history = mind.iter().chain(candidates.iter()).any(|c| !c.meta.history.is_empty());
+        if has_history {
+            println!("## Conjecture Score History\n");
+            for c in mind.iter().chain(candidates.iter()) {
+                if c.meta.history.is_empty() {
+                    continue;
+                }
+                let layer_tag = match c.meta.layer {
+                    Layer::Mind => "[mind]",
+                    Layer::Candidates => "[cand]",
+                };
+                let scores: Vec<String> = c.meta.history.iter().map(|h| format!("{:.2}", h.score)).collect();
+                let trend = if c.meta.history.len() >= 2 {
+                    let first = c.meta.history.first().unwrap().score;
+                    let last = c.meta.history.last().unwrap().score;
+                    if last > first + 0.05 { " ↑" } else if last < first - 0.05 { " ↓" } else { " →" }
+                } else {
+                    ""
+                };
+                println!("{} {}{} (runs: {})", layer_tag, c.title, trend, c.meta.run_count);
+                println!("    {}", scores.join(" → "));
+            }
+            println!();
+        }
     }
 
     // --- Problem sets ---
@@ -148,6 +176,9 @@ pub async fn assess(
 
     let info = state::load_state_info()?;
     let mind = state::load_conjectures(&Layer::Mind)?;
+    let mut candidates_for_assess = state::load_conjectures(&Layer::Candidates)?;
+    candidates_for_assess.sort_by(|a, b| promoter::composite(b).partial_cmp(&promoter::composite(a)).unwrap());
+    candidates_for_assess.truncate(TOP_CANDIDATES);
 
     if mind.is_empty() {
         anyhow::bail!("No mind conjectures yet. Run first.");
@@ -200,6 +231,44 @@ pub async fn assess(
         "(no runs yet)".to_string()
     };
 
+    // --- Novelty check ---
+    let all: Vec<&Conjecture> = mind.iter().chain(candidates_for_assess.iter()).collect();
+    if !all.is_empty() {
+        println!("## Novelty Check\n");
+        let novelty_futures: Vec<_> = all
+            .iter()
+            .map(|c| {
+                let client = Arc::clone(&client);
+                let p = templates.novelty_check(&mind_system, &c.title, &c.summary);
+                let title = c.title.clone();
+                let layer = c.meta.layer.clone();
+                async move {
+                    let resp: NoveltyResponse = client.call(Some(&p.system), &p.user, 0.3).await?;
+                    Ok::<(String, Layer, NoveltyResponse), anyhow::Error>((title, layer, resp))
+                }
+            })
+            .collect();
+        let mut novelty_entries: Vec<(String, Layer, NoveltyResponse)> = join_all(novelty_futures)
+            .await
+            .into_iter()
+            .filter_map(|r| r.ok())
+            .collect();
+        novelty_entries.sort_by(|a, b| b.2.novelty_score.partial_cmp(&a.2.novelty_score).unwrap());
+        for (title, layer, resp) in &novelty_entries {
+            let layer_tag = match layer {
+                Layer::Mind => "[mind]",
+                Layer::Candidates => "[cand]",
+            };
+            let novel_tag = if resp.is_novel { "NOVEL" } else { "KNOWN " };
+            println!("{} {} {:.2}  {}", layer_tag, novel_tag, resp.novelty_score, title);
+            if let Some(ref analog) = resp.closest_analog {
+                println!("         Closest: {}", analog);
+            }
+            println!("         {}\n", resp.explanation);
+        }
+    }
+
+    // --- Self-assessment ---
     println!("## Self-Assessment\n");
     let p = templates.review_assess(&mind_system, &mind_full, &top_outputs, &trajectory);
     let assessment = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
