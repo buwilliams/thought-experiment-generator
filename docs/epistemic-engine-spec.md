@@ -41,7 +41,7 @@ Conjectures (mind and candidates) are shared across all problem sets.
 
 **Problem Sets** are scoped collections of problems (cap: 10). Problems only exist within sets — there is no global problem pool. Problem sets are not in the promotion hierarchy but are scored and pruned by the system each run.
 
-**Evaluations** are a stable, separately-governed set of scoring criteria. They sit outside the promotion hierarchy entirely — the system never adds, removes, or reweights them. Users extend or refine evaluations manually by editing `data/state/evaluations/`. Each evaluation defines a scoring criterion and a weight; combined output score = normalized weighted sum across all active evaluations.
+**Evaluations** are a stable, separately-governed set of scoring criteria. They sit outside the promotion hierarchy entirely — the system never modifies them. Users extend or refine evaluations manually by editing `data/state/evaluations/`. These files are for human reference and documentation; evaluation weights are hardcoded in `evaluator.rs` (0.20 consistency, 0.35 htv, 0.30 reach, 0.15 refutation).
 
 ---
 
@@ -108,7 +108,7 @@ Full description of the criterion — what it tests, how the LLM should score it
 }
 ```
 
-Evaluations are manually managed. The system reads them at the start of each run to build the Phase 2 scoring pipeline. The combined output score is a weighted sum: `Σ(evaluation.weight × evaluation_score)`. Weights need not sum to 1.0 — the system normalizes internally. The system never writes to `evaluations/`.
+Evaluations are manually managed for reference. The system never reads or writes to `evaluations/` — weights are hardcoded in `evaluator.rs`.
 
 ---
 
@@ -136,26 +136,17 @@ Raw text content describing the set's scope and theme. No sections — just the 
 
 The ID is the first 8 characters of `sha256(content)`. A problem set is capped at **10 problems**. Problems are embedded directly in the problemset JSON — there is no separate `problems/` directory. Conjectures (mind/perspectives) are shared across all sets.
 
-### Candidate content — `runs/NNN/{problem_id}-{conjecture_id}.md`
+### Generated output content — `runs/NNN/{problem_id}-{conjecture_id}.md`
 
 ```markdown
-# Candidate: {problem_id} × {conjecture_id}
+# Generated: {problem_id} × {conjecture_id}
 
-## Conjecture
+## Output
 
-Full candidate text.
-
-## Questions
-
-1. Question text — **yes**
-2. Question text — **no**
-
-## Candidate Problems
-
-- Candidate problem text
+Full generated output text.
 ```
 
-### Candidate metadata — `runs/NNN/{problem_id}-{conjecture_id}.json`
+### Generated output metadata — `runs/NNN/{problem_id}-{conjecture_id}.json`
 
 ```json
 {
@@ -164,6 +155,8 @@ Full candidate text.
   "run": 1,
   "logical_consistency": 0.0,
   "hard_to_vary": 0.0,
+  "explanatory_reach": 0.0,
+  "resistance_to_refutation": 0.0,
   "total": 0.0,
   "candidate_problems": [{ "text": "...", "score": 0.0 }]
 }
@@ -192,9 +185,10 @@ data/state/
     {id}.json            — set metadata + embedded problems (score, rank, run_count per problem)
   runs/
     NNN/
-      {problem}-{conjecture}.md    — candidate content
-      {problem}-{conjecture}.json  — candidate scores + candidate problems
+      {problem}-{conjecture}.md    — generated output content
+      {problem}-{conjecture}.json  — scores + candidate problems
       summary.md                   — ranked results + promoted/demoted conjectures
+  review.md                      — latest full review output (markdown with relative links)
 ```
 
 `data/state/state.json`:
@@ -228,43 +222,43 @@ On first run, seed state is copied to `data/state/`. `--fresh` resets `data/stat
 
 A single run processes all problems against all **lenses** — every candidate conjecture plus every mind conjecture — generating one output per (problem × lens) pair.
 
-### Phase 1 — Generate Outputs
+### Phase 1+2 — Generate and Evaluate Outputs
 
-For each `(problem, lens)` pair, where lens = every candidate conjecture ∪ every mind conjecture:
+The system iterates over all **lenses** — every candidate conjecture ∪ every mind conjecture. Mind conjectures participate as lenses alongside candidates: they are tested directly, not just used as background context.
 
-1. Build context: mind conjecture summaries (as system prompt) + lens summary + problem set context (full `.md` content) + problem summary
-2. Call LLM → generated output text
-3. Save generated output
+**For each lens (one concurrent task per lens):**
 
-Mind conjectures participate as lenses alongside candidates. This makes the mind accountable — its conjectures are tested directly, not just used as background context.
+1. Generate all problem outputs concurrently:
+   - Build context: mind conjecture summaries (system prompt) + lens summary + problem set context + problem summary
+   - Call LLM → generated output text (one call per problem, all in parallel)
+2. Evaluate all outputs for this lens in a single comparative call:
+   - The LLM receives all outputs together and scores them calibrated against each other
+   - Returns scores for all four dimensions plus candidate problems for each output
 
-Runs concurrently up to `--max-concurrent`.
+All lens tasks run concurrently up to `--max-concurrent`. Already-generated outputs are skipped per (problem, lens) pair, so runs are resumable.
 
-### Phase 2 — Evaluate Outputs
+**Evaluation** uses a fallibilist frame: seek to falsify, not confirm. Genericness is a failure mode — a conjecture too vague to commit to specific claims scores low, not because it is wrong but because it cannot be wrong. Combined score = `0.20 × consistency + 0.35 × htv + 0.30 × reach + 0.15 × refutation`.
 
-Each generated output passes through four evaluation passes in sequence. Combined score = `0.20 × consistency + 0.35 × hard_to_vary + 0.30 × explanatory_reach + 0.15 × resistance_to_refutation`.
+**Logical Consistency** (weight 0.20)
+- Is the output internally self-consistent? Does it contradict itself or rely on incompatible premises?
+- Note: consistency is necessary but not virtuous. A vague output that commits to nothing cannot contradict itself — that earns no credit.
+- If score < threshold (default 0.3), all remaining scores are zeroed.
 
-The `data/state/evaluations/` directory documents the criteria and weights but is not read by the code — weights are implemented directly in `evaluator.rs`. Users can add new criteria files for reference and manually adjust weights in the source.
+**Hard to Vary** (weight 0.35)
+- Are the output's claims load-bearing? Apply substitution tests on specific named elements: if you replaced a component with its negation or a generic alternative, would the conclusion change?
+- Components that survive substitution are decorative, not load-bearing. Generic language that could describe almost anything scores near 0.
 
-**Pass 1 — Logical Consistency** (weight 0.20)
-- Ask: is this output internally self-consistent? Score 0.0–1.0.
-- If score < threshold (default 0.3), mark failed and skip all remaining passes.
+**Explanatory Reach** (weight 0.30)
+- Does the output commit to specific claims about cases the problem did not raise — claims specific enough that they could be false in those adjacent cases?
+- Generic assertions of broad applicability do not count. Near 0 for outputs that only make local claims or merely assert breadth without committing to anything.
 
-**Pass 2 — Hard to Vary** (weight 0.35)
-- Generate 10 yes/no questions distributed across three dimensions: necessity (4 questions — is this part structurally required?), reach (3 questions — does the explanation extend beyond the immediate problem?), resistance to ad hoc patching (3 questions — would a counterexample require gutting the core structure?).
-- Answer each question. Score = yes_count / 10.
-
-**Pass 3 — Explanatory Reach** (weight 0.30)
-- Ask: does this output make claims, predictions, or connections that extend beyond what the problem literally asked for? Score 0.0–1.0.
-- Near 0: purely local description. Near 1: illuminates adjacent phenomena, makes predictions in cases the problem did not mention.
-
-**Pass 4 — Resistance to Refutation** (weight 0.15)
-- Adversarially attempt to construct a minimal counterexample or thought experiment that breaks the explanation. Score how hard that was.
-- Near 0: trivially refuted or too vague to refute. Near 1: held up under adversarial pressure.
+**Resistance to Refutation** (weight 0.15)
+- Attempt to construct a specific falsifying case. Score near 0 in either of two cases: (a) a specific falsifying case was found, or (b) the output never committed to anything specific enough to be falsifiable.
+- Vagueness is not robustness — it is emptiness. Score near 1 only if specific claims survived a genuine falsification attempt.
 
 **Candidate Problem Extraction**
-- After evaluations, the mind also identifies unresolved tensions or unexplored implications in the output.
-- Each candidate problem is evaluated: is this worth adding to the problem set? Score 0.0–1.0. Threshold 0.6 for admission.
+- The same comparative call also extracts candidate problems from each output: unresolved tensions or unexplored implications specific enough that a subsequent conjecture could be wrong about them.
+- Generic open questions score near 0. Score each candidate 0.0–1.0. Threshold 0.6 for admission.
 
 ### Phase 3 — Rank and Promote
 
@@ -278,11 +272,10 @@ The `data/state/evaluations/` directory documents the criteria and weights but i
 
 **Problem ranking:** for each problem, compute mean output score across all lenses this run. Update `score` as rolling average.
 
-**Admit candidate problems:** candidate problems extracted during Phase 2 are evaluated for admission to the current problem set (admission threshold 0.6). The top 3 qualifying candidates per run are admitted, embedded directly in the problemset JSON.
+**Admit candidate problems:** candidate problems extracted during Phase 2 are evaluated for admission to the current problem set (admission threshold 0.6). The top 3 qualifying candidates per run are admitted, embedded directly in the problemset JSON. Cap is enforced at admission: if the set is already at 10 problems, new system-generated problems are not admitted. Problems are never ejected to make room — low score may mean genuinely hard, not unimportant.
 
 **Problem review (one LLM call per run, scoped to the current set):**
 - The mind receives summaries of all problems in the set (id + summary) and identifies any that are exact duplicates of or fully subsumed by another problem in the set. Identified problems are removed from the set's embedded problem list.
-- Cap enforcement: if the set exceeds 10 problems after deduplication, the bottom-ranked problem (minimum `run_count` of 3) is removed from the set. This repeats until the set is at or below 10. If all remaining problems are below min_run_count (newly added, unscored), the cap overage is accepted until the next run.
 
 **Promotion (one per run, skipped if no eligible conjectures):**
 - Top-ranked candidate conjecture (by composite, minimum `run_count` of 3) → promoted to mind.
@@ -310,115 +303,80 @@ Write `data/state/runs/NNN/summary.md`:
 
 ## Prompts
 
-### generate_output(mind, perspective_conjecture, problem)
+All prompt templates live in `data/prompts/*.md`. Each file has `## System` and `## User` sections with `{{variable}}` placeholders. Edit these to tune LLM behavior without touching Rust code.
+
+### generate_output(mind_system, lens_summary, problemset_context, problem_summary)
 ```
 System: [mind conjectures as a structured set of principles and perspectives]
 
-You are reasoning from a specific perspective. Your perspective is:
-[perspective_conjecture summary]
-
-Apply this perspective to the following problem and generate a conjecture — a structured claim about what is true, what follows, or what is illuminated when this perspective meets this problem. Follow the logic of the collision. Do not invent novelty for its own sake. 500 words or fewer.
-
-Problem: [problem summary]
+User: Apply [lens_summary] to [problem_summary]. Generate a structured thought experiment
+exploring what is illuminated when this lens meets this problem. 500 words or fewer.
+Problem set context: [problemset_context]
 ```
 
-### logical_consistency_check(candidate)
-```
-System: [mind conjectures]
+### comparative_evaluate(mind_system, lens_summary, formatted_outputs)
 
-Evaluate whether the following conjecture is internally self-consistent — does it contradict itself, rely on incompatible premises, or make claims that cannot simultaneously be true?
+One call per lens, evaluates all problem outputs together for calibrated scoring across four dimensions plus candidate problem extraction.
 
-Return JSON: { "score": 0.0, "reason": "..." }
-
-Conjecture: [candidate text]
-```
-
-### generate_questions(candidate, problem)
 ```
 System: [mind conjectures]
 
-Generate 10 yes/no questions that probe whether the following conjecture is "hard to vary" — meaning its parts are load-bearing and cannot be arbitrarily modified without destroying the explanation. Questions should be specific to this conjecture and this problem, not generic.
+User: Evaluate the following outputs. They were all generated by the same lens applied
+to different problems. Score comparatively — 0.8 on one output means the same as 0.8 on another.
 
-Return JSON: { "questions": ["...", ...] }
+Lens: [lens_summary]
 
-Conjecture: [candidate text]
-Problem: [problem summary]
+Score each output on:
+- consistency: internal self-consistency (necessary but not virtuous — vague commits-to-nothing earns no credit)
+- hard_to_vary: substitution tests on named elements; generic language scores near 0
+- explanatory_reach: specific claims in adjacent cases that could independently fail; asserted breadth scores near 0
+- resistance_to_refutation: near 0 for trivially falsified OR unfalsifiable-because-vague
+
+Also extract candidate_problems: specific unresolved tensions a subsequent conjecture could be wrong about.
+
+Return JSON: {"evaluations": [{"problem_id": "slug", "consistency": 0.0, "hard_to_vary": 0.0,
+  "explanatory_reach": 0.0, "resistance_to_refutation": 0.0,
+  "candidate_problems": [{"text": "...", "score": 0.0}]}]}
 ```
 
-### answer_questions(candidate, questions)
+### promote_generated(mind_system, generated, score)
+
+Promotes a generated output into a reusable candidate conjecture. Preserves specific claims exactly — does not generalize into empty universal language.
+
 ```
-System: [mind conjectures]
-
-Answer each of the following yes/no questions about this conjecture. Return JSON:
-{ "answers": [{ "question": "...", "answer": true }] }
-
-Conjecture: [candidate text]
-Questions: [questions]
+Return JSON: { "title": "...", "summary": "...", "full_text": "..." }
 ```
 
-### extract_candidate_problems(candidate)
+### conjecture_summary(mind_system, title, full_text)
 ```
-System: [mind conjectures]
-
-Identify unresolved tensions, unexplored implications, or open questions raised by this conjecture that are worth exploring as new problems. For each candidate, score 0.0–1.0 whether it is worth pursuing.
-
-Return JSON: { "candidates": [{ "text": "...", "score": 0.0 }] }
-
-Conjecture: [candidate text]
-```
-
-### summarize_generated(candidate, score)
-```
-System: You are summarizing a thought experiment. Return only a 20-word summary of what the thought experiment claims or illuminates. No preamble, no meta-commentary.
-
-Thought experiment (quality score [score]/1.0):
-
-[candidate text]
-```
-
-### conjecture_summary(title, full_text)
-```
-System: [mind conjecture summaries]
-
-Summarize the following conjecture into 1-2 sentences suitable for use as context in LLM prompts. The summary should capture the core lens or principle the conjecture provides.
-
 Return JSON: { "summary": "..." }
-
-Title: [title]
-Full text: [full_text]
 ```
 
-### promote_generated(candidate, score)
+### summarize_generated(generated, score)
 ```
-System: [mind conjectures]
-
-Convert the following conjecture into a reusable candidate conjecture.
-
-Return JSON: { "summary": "...", "full_text": "..." }
-
-The summary must be 1-2 sentences suitable for use in LLM prompts.
-The full_text must be a readable, standalone description of the perspective this conjecture embodies — what lens it provides, what kinds of problems it is useful for, and what it illuminates. 100-200 words.
-
-Conjecture: [candidate text]
-Score: [score]
+Return JSON: { "summary": "..." }
+# 20-word summary of what the output claims or illuminates
 ```
 
-### deduplicate_problems(problems)
+### deduplicate_problems(mind_system, formatted_problems)
 ```
-System: [mind conjectures]
-
-Review the following problems and identify any that are exact duplicates of or
-fully subsumed by another problem in the list. A problem is subsumed if its
-core question is already captured by a broader problem in the list.
-When in doubt, keep the problem. Return only the IDs to remove.
-
 Return JSON: { "remove": ["id1", "id2"] }
-
-Problems:
-- id1: summary
-- id2: summary
-...
+# Only exact duplicates or fully subsumed problems. When in doubt, keep.
 ```
+
+### novelty_check(mind_system, title, conjecture)
+```
+Return JSON: { "is_novel": true, "novelty_score": 0.0, "closest_analog": "...", "explanation": "..." }
+```
+
+### ask(mind_system, conjecture_summary, question)
+One call per lens. Each lens answers the question from its perspective.
+
+### ask_consolidate(mind_system, question, perspectives)
+Consolidates all lens answers into a single best explanation.
+
+### review_assess(mind_system, mind_full, top_outputs, trajectory)
+Adversarial self-assessment of mind quality and output quality.
 
 ---
 
@@ -460,12 +418,16 @@ The seed problem set (`default`) contains three starter problems:
 
 ## Seed Evaluations
 
-The seed evaluations are defined by the files in `data/seed/evaluations/`. On first run, these are copied to `data/state/evaluations/`. They are never modified by the system — users manage them directly.
+The seed evaluations are defined by the files in `data/seed/evaluations/`. On first run, these are copied to `data/state/evaluations/`. They are never modified by the system — users manage them directly for reference.
 
-Current seed evaluations:
+Evaluation weights are hardcoded in `evaluator.rs`, not read from these files:
 
-- **`logical-consistency`** (weight 0.3) — Is the output internally self-consistent? Does it contradict itself, rely on incompatible premises, or make claims that cannot simultaneously be true?
-- **`hard-to-vary`** (weight 0.7) — Does each part of the output do load-bearing work? Can the explanation be arbitrarily modified without destroying its explanatory force?
+| Dimension | Weight |
+|---|---|
+| Logical Consistency | 0.20 |
+| Hard to Vary | 0.35 |
+| Explanatory Reach | 0.30 |
+| Resistance to Refutation | 0.15 |
 
 ---
 
@@ -493,8 +455,9 @@ cargo run -- run                              # works if only one set exists
 # Run with a new problem added before running
 cargo run -- run --problemset a1b2c3d4 --problem "your problem text"
 
-# Run on every problem set sequentially
+# Run on all problem sets that have not yet been run (run_count == 0)
 cargo run -- run-all
+cargo run -- --fresh run-all                    # reset to seed, then run all
 
 # Ask the system a question
 # Runs all mind conjectures + top 3 candidates concurrently as separate lenses,
@@ -503,22 +466,18 @@ cargo run -- ask "What causes institutional decay?"
 cargo run -- ask --file question.md
 cat question.md | cargo run -- ask
 
-# Full system review: data report + adversarial LLM self-assessment
-# Shows mind, top candidates, score trajectory, problem sets, last run changes,
-# then asks the system to assess its own mind quality and output quality critically
+# Full system review: mind, candidates, score trajectory, conjecture score history,
+# problem sets, novelty check, and adversarial LLM self-assessment
+# Output saved to data/state/review.md (markdown with links) and printed to stdout (plain text)
 cargo run -- review
-
-# Check whether conjectures are novel or restatements of known theories
-# Scores each conjecture 0–1 for novelty and names the closest known analog
-cargo run -- novelty-check
-
-# Show score trajectory across all runs and per-conjecture score history (no LLM calls)
-cargo run -- trajectory
 
 # Read last run summary without running
 cargo run -- read
 
-# Reset state to seed
+# Reset scores, run counts, and history — keeps conjectures and problem sets (prompts for confirmation)
+cargo run -- reset
+
+# Reset state to seed and run
 cargo run -- --fresh run
 
 # Add a new conjecture by inline text
@@ -542,11 +501,12 @@ The `add-conjecture` command:
 | Flag | Default | Description |
 |---|---|---|
 | `--max-concurrent` | 5 | Max concurrent LLM calls |
-| `--consistency-threshold` | 0.3 | Minimum logical consistency score to proceed to Pass 2 |
+| `--consistency-threshold` | 0.3 | Minimum logical consistency score; outputs below threshold are zeroed |
 | `--problem-admission-threshold` | 0.6 | Minimum score for candidate problems to enter the set |
 | `--min-run-count` | 3 | Minimum runs before a conjecture or problem is eligible for promotion/demotion |
 | `--provider` | anthropic | `anthropic`, `anthropic-token`, or `openai` |
 | `--model` | claude-sonnet-4-6 | Model name |
+| `--temperature` | 0.9 | LLM temperature |
 | `--fresh` | false | Reset state to seed |
 
 **`add-conjecture` options:**
@@ -563,19 +523,18 @@ The `add-conjecture` command:
 
 ## LLM Call Budget (per run, default settings)
 
-| Phase | Calls per pair | Pairs | Total |
-|---|---|---|---|
-| Output generation | 1 | problems × conjectures | N×M |
-| Logical consistency | 1 | N×M | N×M |
-| Generate questions | 1 | N×M (pass 1 survivors) | ~N×M |
-| Answer questions | 1 | N×M (pass 1 survivors) | ~N×M |
-| Candidate problem extraction | 1 | N×M | N×M |
-| Problem deduplication | 1 | 1 per run | 1 |
-| Promote generated output | 1 | 1 per run | 1 |
-| Top 5 summaries | 5 | 1 | 5 |
-| **Default (5 problems × 10 conjectures)** | | | **~257** |
+Phase 1+2 is structured per-lens: all problem outputs for a lens are generated concurrently, then evaluated in one comparative call.
 
-Generated outputs are not cached between runs — they are regenerated each run because the mind and candidate states may have changed.
+| Phase | Calls | Notes |
+|---|---|---|
+| Output generation | N × M | N problems × M lenses, all concurrent |
+| Comparative evaluation | M | 1 call per lens, covers all N problems |
+| Problem deduplication | 1 | 1 per run |
+| Promote generated output | 1 | 1 per run |
+| Top 5 summaries | 5 | |
+| **Default (5 problems × 10 lenses)** | | **~57** |
+
+Generated outputs are not cached between runs — they are regenerated each run because the mind and candidate states may have changed. Already-generated outputs for a lens are skipped (resumable).
 
 ---
 
@@ -584,12 +543,14 @@ Generated outputs are not cached between runs — they are regenerated each run 
 ```
 src/
   main.rs         — CLI parsing, dispatch
-  runner.rs       — orchestrates phases 1–4
-  state.rs        — load/save mind, perspectives, problems, candidates, runs
-  prompts.rs      — all prompt templates
-  evaluator.rs    — logical consistency + hard-to-vary scoring
-  promoter.rs     — ranking, promotion, demotion logic
-  types.rs        — Conjecture, Generated, Problem, ProblemSet structs
+  runner.rs       — orchestrates phases 1–4; per-lens generation + comparative evaluation
+  state.rs        — load/save mind, candidates, problems, generated outputs, runs
+  prompts.rs      — all prompt templates (loaded from data/prompts/*.md)
+  evaluator.rs    — comparative evaluation: one call per lens covers all four dimensions
+  promoter.rs     — ranking, promotion, demotion logic; resistance model
+  review.rs       — data report + adversarial self-assessment; writes data/state/review.md
+  ask.rs          — multi-lens question answering with consolidation
+  types.rs        — Conjecture, Generated, Problem, ProblemSet, LLM response structs
   llm/            — LlmClient (Anthropic + OpenAI)
 ```
 
@@ -598,10 +559,13 @@ src/
 ## Resolved Decisions
 
 1. **Context efficiency:** Prompts always use summaries, never full text. Mind conjectures serialize as their `summary` fields into the system prompt. This keeps context lean regardless of database size.
-2. **All problems × all conjectures per run.** No sampling. Optimize later.
-3. **Candidate → conjecture promotion:** Candidate is summarized into a short, readable conjecture-like statement before promotion. Full candidate text is retained in the run file and expandable by ID.
-4. **Score stability:** Not addressed yet. Revisit if early conjectures dominate rankings after many runs.
+2. **All problems × all lenses per run.** No sampling. Lens = candidates ∪ mind.
+3. **Promotion preserves specificity:** `promote_conjecture.md` explicitly instructs against generalization — preserve specific claims exactly. Breadth is tested by running the candidate against new problems, not written in upfront.
+4. **Problem cap at admission:** The 10-problem cap is enforced when new system-generated problems arrive. If at capacity, new problems are blocked. Problems are only removed by deduplication or manually. Low score ≠ unimportant.
+5. **Comparative evaluation:** All outputs for a lens are evaluated in one call for calibrated scoring. Four dimensions plus candidate problem extraction in a single pass.
+6. **Evaluation weights hardcoded:** `evaluator.rs` owns the weights directly. `data/state/evaluations/` is for human reference only.
 
 ## Open Questions
 
-1. **Perspective conjecture selection:** Currently all conjectures apply to all problems every run. A future improvement would have the mind select which conjecture to apply to which problem — but that adds complexity and requires signal that doesn't exist yet.
+1. **Lens selection:** Currently all conjectures apply to all problems every run. A future improvement would have the mind select which conjecture to apply to which problem — but that adds complexity and requires signal that doesn't exist yet.
+2. **Invalid problem detection:** A problem is invalid if it is self-defeating (the question is its own answer, or progress is impossible in principle). Hard problems are not invalid. Needs a detection mechanism distinct from deduplication.
