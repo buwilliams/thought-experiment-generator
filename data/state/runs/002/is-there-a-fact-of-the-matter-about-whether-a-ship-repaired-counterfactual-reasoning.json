@@ -1,0 +1,24 @@
+{
+  "problem_id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.88,
+  "explanatory_reach": 0.86,
+  "resistance_to_refutation": 0.78,
+  "total": 0.871,
+  "candidate_problems": [
+    {
+      "text": "Can continuity criteria such as material, structural, historical, legal, and cultural continuity be organized into a principled hierarchy for different explanatory tasks?",
+      "score": 0.9
+    },
+    {
+      "text": "Are there cases where multiple continuity relations are equally relevant yet still force incompatible practical decisions, showing the limits of context-relative identity?",
+      "score": 0.88
+    },
+    {
+      "text": "How far does the plural-criteria treatment of identity extend to persons, organisms, and institutions before it loses explanatory power?",
+      "score": 0.84
+    }
+  ]
+}

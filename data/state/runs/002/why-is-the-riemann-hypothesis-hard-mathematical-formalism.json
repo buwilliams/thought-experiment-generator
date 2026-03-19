@@ -1,0 +1,28 @@
+{
+  "problem_id": "why-is-the-riemann-hypothesis-hard",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.82,
+  "explanatory_reach": 0.79,
+  "resistance_to_refutation": 0.69,
+  "total": 0.8075,
+  "candidate_problems": [
+    {
+      "text": "Identify a mediating structure—spectral, geometric, or operator-theoretic—that simultaneously preserves the Dirichlet-series, Euler-product, and functional-equation aspects of zeta.",
+      "score": 0.94
+    },
+    {
+      "text": "Determine whether any known partial results on zero-free regions, random matrix analogies, or trace formulas instantiate the sought transformation principle or merely approximate it.",
+      "score": 0.86
+    },
+    {
+      "text": "Test the conjecture that RH requires converting zero locations into an eigenvalue constraint by analyzing candidate Hilbert-Polya style operators and why existing constructions fail.",
+      "score": 0.9
+    },
+    {
+      "text": "Clarify whether the hardness comes from lack of the right object, or from the possibility that no single invariant framework can force all zeros onto the critical line.",
+      "score": 0.84
+    }
+  ]
+}

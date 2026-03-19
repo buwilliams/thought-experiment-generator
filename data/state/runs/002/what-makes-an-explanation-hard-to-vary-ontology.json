@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "ontology",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.89,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.72,
+  "total": 0.8564999999999999,
+  "candidate_problems": [
+    {
+      "text": "Develop a concrete metric for 'mutual constraint' or 'consequence density' that separates genuinely load-bearing explanations from rhetorically tight but false ones.",
+      "score": 0.93
+    },
+    {
+      "text": "Test whether problem-solution isomorphism is necessary for explanatory hardness-to-vary in domains where successful explanations are highly abstract or statistical rather than structurally mirroring the phenomenon.",
+      "score": 0.84
+    },
+    {
+      "text": "Determine how much linguistic reformulation an explanation can tolerate before apparent counterfactual fragility is revealed to be presentation-dependent rather than structural.",
+      "score": 0.79
+    }
+  ]
+}

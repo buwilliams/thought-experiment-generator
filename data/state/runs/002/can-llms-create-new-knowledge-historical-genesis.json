@@ -1,0 +1,24 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.82,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.62,
+  "total": 0.7939999999999999,
+  "candidate_problems": [
+    {
+      "text": "What specific architectural components are sufficient to turn token prediction from a proposal mechanism into part of a genuine conjecture-criticism knowledge-generating system, rather than a more elaborate remix pipeline?",
+      "score": 0.9
+    },
+    {
+      "text": "Under what conditions does criticism applied to LLM-generated candidates actually increase explanatory quality rather than merely selecting for human-legible plausibility?",
+      "score": 0.86
+    },
+    {
+      "text": "Can a system built from predictive components generate hard-to-vary explanations in domains where training data contains no near-precedent, or does it remain bounded by historically represented conceptual moves?",
+      "score": 0.88
+    }
+  ]
+}

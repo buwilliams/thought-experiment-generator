@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-distinguishes-grief-from-depression",
+  "conjecture_id": "ontology",
+  "run": 2,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.82,
+  "resistance_to_refutation": 0.68,
+  "total": 0.826,
+  "candidate_problems": [
+    {
+      "text": "Identify borderline cases—such as bereavement-triggered major depression—where suffering begins as loss-indexed updating but becomes global informational shutdown, and specify the transition markers.",
+      "score": 0.93
+    },
+    {
+      "text": "Test whether the proposed distinction predicts differential response to interventions: meaning-centered social rituals for grief versus treatments that restore agency, motivation, or valuation processes in depression.",
+      "score": 0.89
+    },
+    {
+      "text": "Clarify whether depression without obvious cognitive distortion but with severe anhedonia fits the 'informational failure' model or requires a different explanatory layer.",
+      "score": 0.82
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-is-the-riemann-hypothesis-hard",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.89,
+  "explanatory_reach": 0.9,
+  "resistance_to_refutation": 0.69,
+  "total": 0.8730000000000001,
+  "candidate_problems": [
+    {
+      "text": "What would count as a boundary-preserving ontology in which zeros, primes, and symmetry are represented as one object and off-line zeros become structurally impossible?",
+      "score": 0.95
+    },
+    {
+      "text": "Which existing equivalent formulations of RH most nearly function as truth-preserving scoring rules at infinity rather than merely restating the conjecture?",
+      "score": 0.89
+    },
+    {
+      "text": "Can an AI system be designed to search specifically for invariants that eliminate infinite families of off-line-zero failure modes instead of searching proof strings?",
+      "score": 0.91
+    }
+  ]
+}

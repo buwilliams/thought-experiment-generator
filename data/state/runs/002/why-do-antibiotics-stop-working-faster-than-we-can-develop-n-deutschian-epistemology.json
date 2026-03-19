@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 2,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.83,
+  "explanatory_reach": 0.86,
+  "resistance_to_refutation": 0.58,
+  "total": 0.8115,
+  "candidate_problems": [
+    {
+      "text": "Distinguish how much of the antibiotic asymmetry is due to evolutionary population size and generation time versus human institutional suppression of exploratory variation; the conjecture could be wrong about which is primary.",
+      "score": 0.94
+    },
+    {
+      "text": "Identify drug-design strategies that are genuinely hard for bacterial systems to vary against, rather than merely slower to evade under current conditions.",
+      "score": 0.89
+    },
+    {
+      "text": "Test whether decentralized, high-variation discovery institutions would actually outperform current pipelines once safety, manufacturing, and clinical constraints are included.",
+      "score": 0.85
+    }
+  ]
+}

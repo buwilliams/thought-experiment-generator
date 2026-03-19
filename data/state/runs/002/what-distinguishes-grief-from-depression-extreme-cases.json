@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-distinguishes-grief-from-depression",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.58,
+  "total": 0.8119999999999999,
+  "candidate_problems": [
+    {
+      "text": "What observable markers distinguish grief that remains world-indexed from grief that has transitioned into depression through collapse of generalized value-tracking?",
+      "score": 0.93
+    },
+    {
+      "text": "Can depression ever remain tightly object-indexed to a single loss without globalizing, and would that undermine the proposed distinction?",
+      "score": 0.86
+    },
+    {
+      "text": "Which interventions restore the machinery of connection in depression versus support mourning in grief, and where do mixed cases require both?",
+      "score": 0.9
+    }
+  ]
+}

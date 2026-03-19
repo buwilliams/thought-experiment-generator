@@ -1,0 +1,24 @@
+{
+  "problem_id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.88,
+  "explanatory_reach": 0.86,
+  "resistance_to_refutation": 0.76,
+  "total": 0.87,
+  "candidate_problems": [
+    {
+      "text": "Can the family of continuity relations—material, structural, historical, institutional, narrative—be systematically ordered or unified, or are they irreducibly plural in artifact identity judgments?",
+      "score": 0.9
+    },
+    {
+      "text": "Are there cases where ordinary and philosophical practice genuinely require a single context-independent identity fact, contrary to the output's pluralist diagnosis?",
+      "score": 0.87
+    },
+    {
+      "text": "What determines which continuity relation should dominate in mixed cases where legal, functional, and historical criteria diverge sharply?",
+      "score": 0.91
+    }
+  ]
+}

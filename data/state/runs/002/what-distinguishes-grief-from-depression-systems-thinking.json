@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-distinguishes-grief-from-depression",
+  "conjecture_id": "systems-thinking",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.87,
+  "explanatory_reach": 0.89,
+  "resistance_to_refutation": 0.72,
+  "total": 0.8675,
+  "candidate_problems": [
+    {
+      "text": "What observable markers best distinguish object-linked reorganization from generalized self-sealing withdrawal in ambiguous mixed cases?",
+      "score": 0.93
+    },
+    {
+      "text": "How should the model handle prolonged grief that remains tightly loss-linked yet becomes chronically impairing?",
+      "score": 0.91
+    },
+    {
+      "text": "Which interventions help grief reorganize adaptively without prematurely suppressing processes that would be pathological only in depression?",
+      "score": 0.89
+    }
+  ]
+}

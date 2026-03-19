@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-distinguishes-grief-from-depression",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.89,
+  "hard_to_vary": 0.82,
+  "explanatory_reach": 0.84,
+  "resistance_to_refutation": 0.58,
+  "total": 0.8039999999999999,
+  "candidate_problems": [
+    {
+      "text": "What observable markers best distinguish loss-centered reorganization from generalized collapse of meaning and agency in bereavement?",
+      "score": 0.92
+    },
+    {
+      "text": "Under what conditions does grief transition into depression-like dynamics, and are these best modeled as threshold effects in feedback loops of withdrawal and hopelessness?",
+      "score": 0.89
+    },
+    {
+      "text": "Which interventions help grief by supporting reality-updating and meaning-making without suppressing a knowledge-bearing mourning process?",
+      "score": 0.9
+    }
+  ]
+}

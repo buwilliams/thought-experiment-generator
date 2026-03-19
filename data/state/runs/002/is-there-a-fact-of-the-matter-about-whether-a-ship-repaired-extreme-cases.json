@@ -1,0 +1,24 @@
+{
+  "problem_id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.85,
+  "explanatory_reach": 0.88,
+  "resistance_to_refutation": 0.72,
+  "total": 0.8555,
+  "candidate_problems": [
+    {
+      "text": "Can there be cases where multiple continuity criteria are equally legitimate yet yield incompatible verdicts with no higher-order rule for choosing among them?",
+      "score": 0.92
+    },
+    {
+      "text": "What determines which invariants matter in a given explanatory context: practical purpose, institutional convention, causal structure, or something else?",
+      "score": 0.9
+    },
+    {
+      "text": "Are there identity questions in science or law where a context-free fact of the matter does exist, and what structurally distinguishes them from Theseus cases?",
+      "score": 0.87
+    }
+  ]
+}

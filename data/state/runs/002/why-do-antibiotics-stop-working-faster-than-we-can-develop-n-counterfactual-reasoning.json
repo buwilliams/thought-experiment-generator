@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.92,
+  "explanatory_reach": 0.9,
+  "resistance_to_refutation": 0.82,
+  "total": 0.905,
+  "candidate_problems": [
+    {
+      "text": "Which interventions most effectively reduce resistance growth by changing selection pressure and transmission structure rather than merely slowing prescribing volume?",
+      "score": 0.94
+    },
+    {
+      "text": "How should reimbursement and regulation be redesigned if antibiotics are treated as exhaustible infrastructure rather than ordinary products?",
+      "score": 0.92
+    },
+    {
+      "text": "Which alternative therapies actually reduce selection pressure in practice compared with conventional bactericidal strategies, and under what ecological conditions?",
+      "score": 0.87
+    }
+  ]
+}

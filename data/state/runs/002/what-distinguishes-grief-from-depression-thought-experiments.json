@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-distinguishes-grief-from-depression",
+  "conjecture_id": "thought-experiments",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.87,
+  "resistance_to_refutation": 0.68,
+  "total": 0.866,
+  "candidate_problems": [
+    {
+      "text": "What specific markers show that suffering remains organized around integrating a particular loss rather than having generalized into a self-maintaining depressive world-model?",
+      "score": 0.95
+    },
+    {
+      "text": "How should mixed cases be understood where grief remains object-specific but also recruits global self-condemnation and hopelessness?",
+      "score": 0.93
+    },
+    {
+      "text": "Can prolonged grief disorder be explained within this framework without collapsing back into duration-based distinctions the account rejects as primary?",
+      "score": 0.9
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-distinguishes-grief-from-depression",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 2,
+  "logical_consistency": 0.87,
+  "hard_to_vary": 0.8,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.49,
+  "total": 0.7615,
+  "candidate_problems": [
+    {
+      "text": "Determine whether the grief/depression distinction can be captured by explanatory structure in cases of non-bereavement depression, chronic grief, and culturally variable mourning practices.",
+      "score": 0.91
+    },
+    {
+      "text": "Explain cases where depression is tightly anchored to a real loss or circumstance, which challenges the claim that depression is characteristically generalized rather than reality-tracking.",
+      "score": 0.9
+    },
+    {
+      "text": "Specify what observable markers would distinguish a painful but reality-tracking reorganization of meaning from a self-sealing depressive explanatory regime in clinical practice.",
+      "score": 0.88
+    }
+  ]
+}

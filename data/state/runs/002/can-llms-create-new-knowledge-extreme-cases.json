@@ -1,0 +1,24 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.82,
+  "resistance_to_refutation": 0.62,
+  "total": 0.813,
+  "candidate_problems": [
+    {
+      "text": "What specific criticism mechanisms are sufficient to turn LLM proposal generation into a genuinely self-revising conjecture-and-criticism system rather than a more elaborate recombination engine?",
+      "score": 0.9
+    },
+    {
+      "text": "Where is the threshold between constraints that reduce search to explanatory structure and constraints that merely collapse novelty back into reproduction of priors?",
+      "score": 0.87
+    },
+    {
+      "text": "Can recursive improvement of conjecture filters occur without external grounding, or does it eventually stall in self-referential selection loops?",
+      "score": 0.83
+    }
+  ]
+}

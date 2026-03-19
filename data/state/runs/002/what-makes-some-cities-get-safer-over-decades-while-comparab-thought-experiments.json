@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+  "conjecture_id": "thought-experiments",
+  "run": 2,
+  "logical_consistency": 0.89,
+  "hard_to_vary": 0.79,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.49,
+  "total": 0.777,
+  "candidate_problems": [
+    {
+      "text": "What concrete institutional features make a city's safety system genuinely error-correcting rather than merely data-rich or rhetorically adaptive?",
+      "score": 0.93
+    },
+    {
+      "text": "Can long-run safety gains be sustained when civic learning improves but broader structural drivers such as regional inequality or state-level policy remain hostile?",
+      "score": 0.86
+    },
+    {
+      "text": "How can one distinguish accumulated civic knowledge from temporary crime declines caused by exogenous demographic or economic shifts?",
+      "score": 0.9
+    }
+  ]
+}

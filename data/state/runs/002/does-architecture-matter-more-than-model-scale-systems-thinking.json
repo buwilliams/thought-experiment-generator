@@ -1,0 +1,24 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "systems-thinking",
+  "run": 2,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.82,
+  "explanatory_reach": 0.84,
+  "resistance_to_refutation": 0.68,
+  "total": 0.825,
+  "candidate_problems": [
+    {
+      "text": "On which classes of novel explanatory tasks would added criticism/promotion structure let a smaller model outperform a larger model, and where would scale still dominate?",
+      "score": 0.93
+    },
+    {
+      "text": "What measurable system properties distinguish 'more fluent variation' from cumulative epistemic progress in model-plus-architecture systems?",
+      "score": 0.86
+    },
+    {
+      "text": "How should retention and promotion loops be designed so that intermediate abstractions improve future search rather than ossify errors?",
+      "score": 0.88
+    }
+  ]
+}

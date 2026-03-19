@@ -1,0 +1,28 @@
+{
+  "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.87,
+  "hard_to_vary": 0.78,
+  "explanatory_reach": 0.84,
+  "resistance_to_refutation": 0.58,
+  "total": 0.7859999999999999,
+  "candidate_problems": [
+    {
+      "text": "Identify measurable latent state variables—trust, legitimacy, gang-network connectivity, institutional learning, youth opportunity—that best predict basin shifts between high- and low-violence regimes.",
+      "score": 0.9
+    },
+    {
+      "text": "Test whether reducing the effective reproduction number of serious violence below 1 across key subnetworks predicts durable citywide safety gains better than conventional crime-rate metrics.",
+      "score": 0.87
+    },
+    {
+      "text": "Estimate how specific interventions alter the Jacobian of the urban safety system rather than merely suppress incidents temporarily.",
+      "score": 0.85
+    },
+    {
+      "text": "Determine why apparently comparable cities occupy different hidden coordinates despite similar observed crime levels, and whether those coordinates can be shifted directly.",
+      "score": 0.83
+    }
+  ]
+}

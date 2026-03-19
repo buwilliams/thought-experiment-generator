@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-is-the-riemann-hypothesis-hard",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.87,
+  "explanatory_reach": 0.85,
+  "resistance_to_refutation": 0.66,
+  "total": 0.8425,
+  "candidate_problems": [
+    {
+      "text": "What kind of new representation could make wrong explanations of RH easy to refute—spectral, dynamical, geometric, or something not yet formalized?",
+      "score": 0.93
+    },
+    {
+      "text": "Which existing equivalent formulations of RH preserve the same error modes, and what does that reveal about the invariant source of difficulty?",
+      "score": 0.9
+    },
+    {
+      "text": "Are there historical examples of major mathematical problems that remained hard across many reformulations until a new ontology or object class was introduced, and is RH structurally similar?",
+      "score": 0.86
+    }
+  ]
+}

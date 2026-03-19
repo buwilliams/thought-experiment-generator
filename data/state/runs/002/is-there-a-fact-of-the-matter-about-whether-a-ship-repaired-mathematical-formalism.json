@@ -1,0 +1,28 @@
+{
+  "problem_id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.88,
+  "explanatory_reach": 0.77,
+  "resistance_to_refutation": 0.84,
+  "total": 0.855,
+  "candidate_problems": [
+    {
+      "text": "Specify criteria under which one equivalence relation over ships should be privileged in practical or metaphysical contexts rather than treating all as equally admissible.",
+      "score": 0.9
+    },
+    {
+      "text": "Analyze mixed identity criteria that weight matter, form, function, and causal history, and determine whether they yield stable verdicts or context-sensitive indeterminacy.",
+      "score": 0.86
+    },
+    {
+      "text": "Extend the framework to cases with branching continuities—such as reconstructed-from-original-parts versus continuously repaired objects—and test whether any non-arbitrary identity rule handles both.",
+      "score": 0.89
+    },
+    {
+      "text": "Determine whether there are domains where the bare description itself fixes the relevant invariant, contrary to the claim of underdetermination.",
+      "score": 0.82
+    }
+  ]
+}

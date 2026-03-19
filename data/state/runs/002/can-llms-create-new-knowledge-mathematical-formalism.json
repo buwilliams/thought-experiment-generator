@@ -1,0 +1,28 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.86,
+  "hard_to_vary": 0.72,
+  "explanatory_reach": 0.74,
+  "resistance_to_refutation": 0.55,
+  "total": 0.7285,
+  "candidate_problems": [
+    {
+      "text": "Specify a concrete representation for explanatory objects E=(O,R,P,C) and test whether systems searching that space can generate structures satisfying constraints not explicitly instantiated in training data.",
+      "score": 0.88
+    },
+    {
+      "text": "Determine whether remaining in the image of the language map L:E->text is sufficient to block genuine novelty, or whether novel explanatory structure can be implicitly realized without explicit nonlinguistic search over E.",
+      "score": 0.82
+    },
+    {
+      "text": "Define and operationalize Q(E) so that explanatory adequacy, invariance, novelty, and criticizability can be jointly evaluated without collapsing into surface plausibility.",
+      "score": 0.85
+    },
+    {
+      "text": "Identify transformations on explanatory graphs that preserve deep constraints while varying assumptions, and test whether current LLM-based systems can reliably traverse them.",
+      "score": 0.8
+    }
+  ]
+}

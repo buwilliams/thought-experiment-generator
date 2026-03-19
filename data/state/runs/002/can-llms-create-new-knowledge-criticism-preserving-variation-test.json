@@ -1,0 +1,24 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "criticism-preserving-variation-test",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.58,
+  "total": 0.7809999999999999,
+  "candidate_problems": [
+    {
+      "text": "Specify a criticism set for machine-generated explanations that distinguishes genuine explanatory constraint from mere performance on benchmarks, and test whether any current LLM-based system retains success when central claims are systematically varied.",
+      "score": 0.9
+    },
+    {
+      "text": "Determine whether token prediction plus external verification can ever be sufficient for knowledge creation without an explicit internal representation of mutually constraining explanatory parts.",
+      "score": 0.82
+    },
+    {
+      "text": "Identify domains where adversarial variation of central explanatory claims correlates with human judgments of genuine discovery rather than stylistic novelty.",
+      "score": 0.74
+    }
+  ]
+}

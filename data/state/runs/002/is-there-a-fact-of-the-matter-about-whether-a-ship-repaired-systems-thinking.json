@@ -1,0 +1,24 @@
+{
+  "problem_id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+  "conjecture_id": "systems-thinking",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.85,
+  "explanatory_reach": 0.88,
+  "resistance_to_refutation": 0.76,
+  "total": 0.8615,
+  "candidate_problems": [
+    {
+      "text": "Are there any contexts in which one continuity criterion should dominate all others as the uniquely correct identity rule, rather than merely a purpose-relative one?",
+      "score": 0.89
+    },
+    {
+      "text": "How should conflicts between material, functional, structural, and social continuity be adjudicated in legal or conservation practice?",
+      "score": 0.9
+    },
+    {
+      "text": "Does the same multi-loop account generalize to personal identity, or do persons require additional continuity dimensions not present in artifacts?",
+      "score": 0.87
+    }
+  ]
+}

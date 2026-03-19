@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.91,
+  "explanatory_reach": 0.85,
+  "resistance_to_refutation": 0.72,
+  "total": 0.8714999999999999,
+  "candidate_problems": [
+    {
+      "text": "Formalize the proposed dependency-structure criterion well enough to distinguish genuinely load-bearing abstract components from merely correlated ones across multiple explanations.",
+      "score": 0.93
+    },
+    {
+      "text": "Determine when two explanations share the same hard-to-vary core despite different surface narratives, and when apparent paraphrase actually changes the dependency graph.",
+      "score": 0.87
+    },
+    {
+      "text": "Test whether generativity is necessary for hard-to-vary status, or whether some explanations can be highly constrained yet narrow and non-generative.",
+      "score": 0.8
+    }
+  ]
+}

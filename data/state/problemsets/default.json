@@ -5,9 +5,9 @@
       "meta": {
         "id": "can-llms-create-new-knowledge",
         "source": "user",
-        "score": 0.7730624999999999,
+        "score": 0.7809756944444444,
         "rank": 1,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T00:00:00Z"
       },
       "title": "Can LLMs create new knowledge?",
@@ -18,9 +18,9 @@
       "meta": {
         "id": "does-architecture-matter-more-than-model-scale",
         "source": "user",
-        "score": 0.8015625,
+        "score": 0.81078125,
         "rank": 2,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T00:00:00Z"
       },
       "title": "Does architecture matter more than model scale?",
@@ -31,9 +31,9 @@
       "meta": {
         "id": "what-makes-an-explanation-hard-to-vary",
         "source": "user",
-        "score": 0.8525,
+        "score": 0.8501388888888889,
         "rank": 3,
-        "run_count": 1,
+        "run_count": 2,
         "created_at": "2026-03-18T00:00:00Z"
       },
       "title": "What makes an explanation hard to vary?",
@@ -44,9 +44,9 @@
       "meta": {
         "id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8836666666666666,
         "rank": 4,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-19T12:17:03.422116469+00:00"
       },
       "title": "Why do antibiotics stop working faster than we can develop new ones?",
@@ -57,9 +57,9 @@
       "meta": {
         "id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
         "source": "user",
-        "score": 0.0,
+        "score": 0.7863888888888888,
         "rank": 5,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-19T12:17:03.532514064+00:00"
       },
       "title": "What makes some cities get safer over decades while comparable ones don't?",
@@ -70,9 +70,9 @@
       "meta": {
         "id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8464999999999999,
         "rank": 6,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-19T12:17:03.637331013+00:00"
       },
       "title": "Is there a fact of the matter about whether a ship repaired plank-by-plank is th",
@@ -83,9 +83,9 @@
       "meta": {
         "id": "what-distinguishes-grief-from-depression",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8310555555555555,
         "rank": 7,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-19T12:17:03.740395357+00:00"
       },
       "title": "What distinguishes grief from depression?",
@@ -96,16 +96,42 @@
       "meta": {
         "id": "why-is-the-riemann-hypothesis-hard",
         "source": "user",
-        "score": 0.0,
+        "score": 0.8292777777777778,
         "rank": 8,
-        "run_count": 0,
+        "run_count": 1,
         "created_at": "2026-03-19T12:17:03.847702193+00:00"
       },
       "title": "Why is the Riemann hypothesis hard?",
       "summary": "Why is the Riemann hypothesis hard?",
       "full_text": "Why is the Riemann hypothesis hard?"
+    },
+    {
+      "meta": {
+        "id": "what-would-count-as-a-boundary-preserving-ontology-in-which",
+        "source": "system",
+        "score": 0.0,
+        "rank": 9,
+        "run_count": 0,
+        "created_at": "2026-03-19T12:23:03.898777525+00:00"
+      },
+      "title": "What would count as a boundary-preserving ontology in which zeros, primes, and s",
+      "summary": "What would count as a boundary-preserving ontology in which zeros, primes, and symmetry are represented as one object and off-line zeros become structurally impossible?",
+      "full_text": "What would count as a boundary-preserving ontology in which zeros, primes, and symmetry are represented as one object and off-line zeros become structurally impossible?"
+    },
+    {
+      "meta": {
+        "id": "how-can-dense-counterfactual-dependency-be-operationalized-s",
+        "source": "system",
+        "score": 0.0,
+        "rank": 10,
+        "run_count": 0,
+        "created_at": "2026-03-19T12:23:03.898877833+00:00"
+      },
+      "title": "How can dense counterfactual dependency be operationalized so that a critic can ",
+      "summary": "How can dense counterfactual dependency be operationalized so that a critic can distinguish genuine explanatory coupling from merely tangled or verbose prose?",
+      "full_text": "How can dense counterfactual dependency be operationalized so that a critic can distinguish genuine explanatory coupling from merely tangled or verbose prose?"
     }
   ],
-  "run_count": 1,
+  "run_count": 2,
   "created_at": "2026-03-18T00:00:00Z"
 }

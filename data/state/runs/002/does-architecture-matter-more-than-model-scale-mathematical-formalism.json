@@ -1,0 +1,28 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.89,
+  "hard_to_vary": 0.8,
+  "explanatory_reach": 0.81,
+  "resistance_to_refutation": 0.63,
+  "total": 0.7955,
+  "candidate_problems": [
+    {
+      "text": "Locate the substrate-capacity threshold above which architectural operators K and U dominate marginal gains from scale, and below which structure cannot compensate for insufficient representational capacity.",
+      "score": 0.91
+    },
+    {
+      "text": "Measure the compression ratios in the projections V^L -> G -> C -> E and test whether improvements at later projections predict epistemic performance better than increases in raw model size.",
+      "score": 0.87
+    },
+    {
+      "text": "Formalize 'hard to vary' as invariance under admissible transformations and test whether systems optimized for that invariant outperform larger pure sequence models on explanation-generation tasks.",
+      "score": 0.84
+    },
+    {
+      "text": "Characterize when the iteration S_{t+1}=U(K(F(S_t))) has attractors toward better explanations versus degenerates into self-reinforcing but low-truth equivalence classes.",
+      "score": 0.89
+    }
+  ]
+}

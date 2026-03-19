@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "thought-experiments",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.94,
+  "explanatory_reach": 0.8,
+  "resistance_to_refutation": 0.71,
+  "total": 0.8654999999999999,
+  "candidate_problems": [
+    {
+      "text": "How can dense counterfactual dependency be operationalized so that a critic can distinguish genuine explanatory coupling from merely tangled or verbose prose?",
+      "score": 0.95
+    },
+    {
+      "text": "Are there important explanations whose power comes from modularity rather than propagating fragility, and would this account misclassify them as weak?",
+      "score": 0.9
+    },
+    {
+      "text": "What search procedures can reliably find narrow basins of high explanatory coupling without collapsing into trivial overconstraint?",
+      "score": 0.87
+    }
+  ]
+}

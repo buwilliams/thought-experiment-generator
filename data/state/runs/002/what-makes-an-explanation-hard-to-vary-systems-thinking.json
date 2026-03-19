@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "systems-thinking",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.88,
+  "explanatory_reach": 0.8,
+  "resistance_to_refutation": 0.73,
+  "total": 0.8455,
+  "candidate_problems": [
+    {
+      "text": "How can 'constraint propagation' be operationalized so that an evaluator can distinguish principled reconstruction from ad hoc repair after perturbation?",
+      "score": 0.92
+    },
+    {
+      "text": "Are there important explanations with low apparent coupling at the verbal level but high underlying load-bearing structure, and how would the proposed test avoid misclassifying them?",
+      "score": 0.87
+    },
+    {
+      "text": "What representation of objects, relations, assumptions, and invariants is sufficient for perturbation tests to track explanatory stiffness rather than surface wording dependence?",
+      "score": 0.9
+    }
+  ]
+}

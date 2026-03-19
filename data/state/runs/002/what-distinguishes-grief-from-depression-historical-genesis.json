@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-distinguishes-grief-from-depression",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.89,
+  "explanatory_reach": 0.85,
+  "resistance_to_refutation": 0.71,
+  "total": 0.8590000000000001,
+  "candidate_problems": [
+    {
+      "text": "How can clinicians reliably distinguish suffering that remains organized around a loss from suffering that has become a self-sustaining depressive system, especially when both coexist?",
+      "score": 0.94
+    },
+    {
+      "text": "Which observable markers best track the proposed structural distinction—preserved capacity for attachment and moments of connection versus global degradation of agency, self-evaluation, and future-directedness?",
+      "score": 0.9
+    },
+    {
+      "text": "Are there forms of grief that become globally generalized without constituting depression, which would pressure the output's discriminator?",
+      "score": 0.86
+    }
+  ]
+}

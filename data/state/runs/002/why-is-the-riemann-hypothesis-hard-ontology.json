@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-is-the-riemann-hypothesis-hard",
+  "conjecture_id": "ontology",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.85,
+  "explanatory_reach": 0.87,
+  "resistance_to_refutation": 0.73,
+  "total": 0.8540000000000001,
+  "candidate_problems": [
+    {
+      "text": "Specify what would count as the missing 'generative model' of RH and how it would differ from existing equivalent formulations that already compress large amounts of information without yielding explanation.",
+      "score": 0.94
+    },
+    {
+      "text": "Test whether the hardness of RH is genuinely due to an interface between multiplicative and analytic regimes by comparing it with other major conjectures that also connect representations but differ in tractability.",
+      "score": 0.88
+    },
+    {
+      "text": "Assess whether Hilbert-Pólya, random matrix, or arithmetic-geometric programs are converging on the same underlying abstract object or merely offering non-unifying analogies.",
+      "score": 0.86
+    }
+  ]
+}

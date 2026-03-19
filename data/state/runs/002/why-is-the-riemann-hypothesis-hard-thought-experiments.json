@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-is-the-riemann-hypothesis-hard",
+  "conjecture_id": "thought-experiments",
+  "run": 2,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.52,
+  "total": 0.7899999999999999,
+  "candidate_problems": [
+    {
+      "text": "What would count as evidence that progress on RH requires a new ontology or representation rather than simply deeper development of existing analytic tools?",
+      "score": 0.93
+    },
+    {
+      "text": "Are there historical cases in mathematics where a conjecture with many partial compressions was solved by incremental extension of existing methods rather than by a new compression principle, and how analogous are they to RH?",
+      "score": 0.91
+    },
+    {
+      "text": "How can one distinguish a genuinely inevitability-generating explanation of RH from a proof that is correct but conceptually unilluminating?",
+      "score": 0.89
+    }
+  ]
+}

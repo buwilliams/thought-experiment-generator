@@ -1,0 +1,24 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "ontology",
+  "run": 2,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.81,
+  "explanatory_reach": 0.77,
+  "resistance_to_refutation": 0.66,
+  "total": 0.7975,
+  "candidate_problems": [
+    {
+      "text": "Identify domains where increased scale alone appears to generate better explanatory performance and determine whether those gains can be reduced to latent architectural effects or genuinely challenge the 'structure primary, substrate supportive' claim.",
+      "score": 0.91
+    },
+    {
+      "text": "Formulate a measurable threshold for when a system transitions from 'information transformer' to 'epistemic system' via recursive criticism and feedback.",
+      "score": 0.88
+    },
+    {
+      "text": "Test the claim that human participation in the critical loop is contingent rather than constitutive by comparing fully automated and hybrid systems on sustained error-correcting knowledge growth.",
+      "score": 0.82
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.86,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.74,
+  "total": 0.847,
+  "candidate_problems": [
+    {
+      "text": "Determine whether any criterion of identity can be justified as explanatorily privileged across legal, historical, biological, and artifact cases, contrary to the output's context-sensitive pluralism.",
+      "score": 0.9
+    },
+    {
+      "text": "Specify how to decide when two contexts are genuinely tracking different abstract objects versus merely disagreeing about the same one.",
+      "score": 0.87
+    },
+    {
+      "text": "Test whether the same under-specification diagnosis applies to personal identity cases, where moral and phenomenological stakes may resist the ship-style reframing.",
+      "score": 0.85
+    }
+  ]
+}

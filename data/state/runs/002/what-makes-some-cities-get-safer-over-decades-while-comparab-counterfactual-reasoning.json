@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.87,
+  "hard_to_vary": 0.76,
+  "explanatory_reach": 0.81,
+  "resistance_to_refutation": 0.52,
+  "total": 0.7609999999999999,
+  "candidate_problems": [
+    {
+      "text": "Which measurable feedback loops distinguish cities that cross into durable safety-improving dynamics from superficially similar cities that do not?",
+      "score": 0.89
+    },
+    {
+      "text": "How do legitimacy, street design, housing stability, and enforcement precision interact causally rather than correlationally in producing long-run safety gains?",
+      "score": 0.86
+    },
+    {
+      "text": "Can shared problem-solving capacity be quantified as a stock that predicts future violence reduction better than police headcount or spending alone?",
+      "score": 0.84
+    }
+  ]
+}

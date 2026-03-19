@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-is-the-riemann-hypothesis-hard",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.86,
+  "explanatory_reach": 0.82,
+  "resistance_to_refutation": 0.58,
+  "total": 0.816,
+  "candidate_problems": [
+    {
+      "text": "What would count as an explanation of why arithmetic generates the zero-geometry of zeta, rather than merely another technique for controlling zeros within the inherited analytic framework?",
+      "score": 0.93
+    },
+    {
+      "text": "Are there alternative representations of prime structure that preserve the power of the zeta translation while making the arithmetic-analytic bridge itself more intelligible?",
+      "score": 0.9
+    },
+    {
+      "text": "Could RH be proved entirely within existing analytic machinery without any deeper explanatory bridge, and if so would that undermine the claim that its hardness stems from representational mismatch?",
+      "score": 0.88
+    }
+  ]
+}

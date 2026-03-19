@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+  "conjecture_id": "ontology",
+  "run": 2,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.8,
+  "explanatory_reach": 0.86,
+  "resistance_to_refutation": 0.63,
+  "total": 0.8145,
+  "candidate_problems": [
+    {
+      "text": "Test whether measures of 'epistemic infrastructure' such as reporting fidelity, cross-agency learning, and trust predict long-run safety gains better than spending, staffing, or demographic variables in matched cities.",
+      "score": 0.94
+    },
+    {
+      "text": "Determine which feedback loops are most leverage-bearing: witness cooperation, hospital-police data integration, violence interruption networks, or administrative memory across political turnover.",
+      "score": 0.88
+    },
+    {
+      "text": "Examine cities that became safer despite weak legitimacy or fragmented institutions to see whether the knowledge-processing account is incomplete or whether alternative informational channels compensated.",
+      "score": 0.83
+    }
+  ]
+}

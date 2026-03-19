@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+  "conjecture_id": "criticism-preserving-variation-test",
+  "run": 2,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.77,
+  "explanatory_reach": 0.82,
+  "resistance_to_refutation": 0.46,
+  "total": 0.7605,
+  "candidate_problems": [
+    {
+      "text": "Identify a pair of comparable cities where one achieved durable safety gains and test whether differences in legitimacy, clearance, public-space governance, and adaptive learning jointly explain divergence better than single-factor accounts.",
+      "score": 0.9
+    },
+    {
+      "text": "Determine whether there are multiple distinct hard-to-vary safety equilibria, or one common constraint network underlying most long-run crime declines.",
+      "score": 0.84
+    },
+    {
+      "text": "Test whether cities can sustain long-run safety improvements when one proposed central element—such as legitimacy or case clearance—is weak, indicating the conjectured network may be less load bearing than claimed.",
+      "score": 0.87
+    }
+  ]
+}

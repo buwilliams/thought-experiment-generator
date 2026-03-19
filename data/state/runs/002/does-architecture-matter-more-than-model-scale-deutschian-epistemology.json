@@ -1,0 +1,24 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.87,
+  "explanatory_reach": 0.82,
+  "resistance_to_refutation": 0.66,
+  "total": 0.8374999999999999,
+  "candidate_problems": [
+    {
+      "text": "Identify domains where increased model scale alone appears to improve criticism rather than only proposal bandwidth, and determine whether those cases undermine the claim that the bottleneck is primarily structural.",
+      "score": 0.91
+    },
+    {
+      "text": "Specify which architectural components most increase epistemic performance: contradiction detection, invariance testing, decomposition of conjectures, memory of failed explanations, or empirical interfaces.",
+      "score": 0.88
+    },
+    {
+      "text": "Determine whether there is a threshold of substrate capability below which no criticism-centered architecture can work, making the architecture-vs-scale contrast less primary than claimed.",
+      "score": 0.84
+    }
+  ]
+}

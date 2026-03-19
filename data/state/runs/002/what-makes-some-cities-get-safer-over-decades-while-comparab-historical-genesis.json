@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.63,
+  "total": 0.8035,
+  "candidate_problems": [
+    {
+      "text": "Which specific feedback loops most reliably distinguish cities that become safer over decades from superficially comparable cities that do not: institutional legitimacy, youth opportunity, public-space maintenance, governance fragmentation, or dispute-resolution capacity?",
+      "score": 0.9
+    },
+    {
+      "text": "How can one test whether a city's apparent crime decline came from redesigning underlying coordination systems rather than from narrower enforcement tactics or demographic shifts?",
+      "score": 0.88
+    },
+    {
+      "text": "What inherited institutional structures—patronage, fiscal instability, fragmented governance, racial exclusion—most strongly condition whether the same safety intervention succeeds or fails across cities?",
+      "score": 0.9
+    }
+  ]
+}

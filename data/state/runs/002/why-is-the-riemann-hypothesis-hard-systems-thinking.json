@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-is-the-riemann-hypothesis-hard",
+  "conjecture_id": "systems-thinking",
+  "run": 2,
+  "logical_consistency": 0.89,
+  "hard_to_vary": 0.79,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.55,
+  "total": 0.786,
+  "candidate_problems": [
+    {
+      "text": "What kind of new representation could make the critical line emerge as an invariant, symmetry, or fixed-point property rather than an empirical regularity?",
+      "score": 0.95
+    },
+    {
+      "text": "Which existing subsystem pairings around RH are most lossy, and where would a structural bridge most likely yield explanatory closure?",
+      "score": 0.87
+    },
+    {
+      "text": "Can the claim that RH is hard because of underintegration be tested by comparison with other major problems that were solved after a unifying representation appeared?",
+      "score": 0.84
+    }
+  ]
+}

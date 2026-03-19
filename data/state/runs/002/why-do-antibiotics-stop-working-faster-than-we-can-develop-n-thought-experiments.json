@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
+  "conjecture_id": "thought-experiments",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.89,
+  "resistance_to_refutation": 0.76,
+  "total": 0.884,
+  "candidate_problems": [
+    {
+      "text": "Which interventions most effectively reduce bacterial evolutionary search throughput in real clinical and agricultural systems without imposing larger offsetting costs?",
+      "score": 0.95
+    },
+    {
+      "text": "When do measures that reduce selection pressure, such as narrower use or combination therapy, merely shift resistance evolution into different ecological niches rather than slowing it overall?",
+      "score": 0.89
+    },
+    {
+      "text": "How should human therapeutic design throughput be measured so that the claimed structural imbalance can be compared quantitatively across pathogens and treatment regimes?",
+      "score": 0.86
+    }
+  ]
+}

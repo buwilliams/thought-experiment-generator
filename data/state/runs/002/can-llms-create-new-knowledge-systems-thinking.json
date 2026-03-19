@@ -1,0 +1,24 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "systems-thinking",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.74,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.62,
+  "total": 0.766,
+  "candidate_problems": [
+    {
+      "text": "What specific memory-and-criticism architecture would make prior criticisms reshape future generation trajectories rather than merely rerank outputs after generation?",
+      "score": 0.89
+    },
+    {
+      "text": "Where is the threshold between a system that only recombines training regularities and one that genuinely accumulates reusable explanatory abstractions?",
+      "score": 0.84
+    },
+    {
+      "text": "Can a system with strong recursive criticism but weak external world contact still produce genuine new knowledge, and in which domains?",
+      "score": 0.8
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.93,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.74,
+  "total": 0.8605,
+  "candidate_problems": [
+    {
+      "text": "How can dependency density under counterfactual variation be operationalized so that two explanations can be compared quantitatively for hard-to-vary structure?",
+      "score": 0.94
+    },
+    {
+      "text": "Are there explanations that are genuinely hard to vary because they are overfit or brittle rather than because they capture deep structure, and how would the criterion distinguish them?",
+      "score": 0.91
+    },
+    {
+      "text": "What perturbation protocol best separates decorative components from load-bearing ones across different domains such as science, history, and everyday explanation?",
+      "score": 0.88
+    }
+  ]
+}

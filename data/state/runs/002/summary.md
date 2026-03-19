@@ -1,0 +1,97 @@
+# Run 002 Results
+
+| Rank | Problem | Conjecture | Consist. | HtV | Reach | Refut. | Total |
+|------|---------|------------|----------|-----|-------|--------|-------|
+| [1](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-historical-genesis.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [historical-genesis](../../candidates/historical-genesis.md) | 0.95 | 0.93 | 0.90 | 0.84 | 0.91 |
+| [2](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-counterfactual-reasoning.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.95 | 0.92 | 0.90 | 0.82 | 0.91 |
+| [3](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-systems-thinking.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [systems-thinking](../../candidates/systems-thinking.md) | 0.95 | 0.90 | 0.90 | 0.80 | 0.90 |
+| [4](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-extreme-cases.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [extreme-cases](../../candidates/extreme-cases.md) | 0.94 | 0.90 | 0.91 | 0.79 | 0.89 |
+| [5](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-criticism-preserving-variation-test.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md) | 0.94 | 0.90 | 0.90 | 0.78 | 0.89 |
+| [6](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-thought-experiments.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [thought-experiments](../../candidates/thought-experiments.md) | 0.94 | 0.90 | 0.89 | 0.76 | 0.88 |
+| [7](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-mathematical-formalism.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.93 | 0.90 | 0.88 | 0.79 | 0.88 |
+| [8](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-ontology.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [ontology](../../candidates/ontology.md) | 0.93 | 0.88 | 0.90 | 0.76 | 0.88 |
+| [9](why-is-the-riemann-hypothesis-hard-extreme-cases.md) | why-is-the-riemann-hypothesis-hard | [extreme-cases](../../candidates/extreme-cases.md) | 0.94 | 0.89 | 0.90 | 0.69 | 0.87 |
+| [10](what-makes-an-explanation-hard-to-vary-deutschian-epistemology.md) | what-makes-an-explanation-hard-to-vary | [deutschian-epistemology](../../candidates/deutschian-epistemology.md) | 0.95 | 0.91 | 0.85 | 0.72 | 0.87 |
+| [11](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-counterfactual-reasoning.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.94 | 0.88 | 0.86 | 0.78 | 0.87 |
+| [12](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-historical-genesis.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [historical-genesis](../../candidates/historical-genesis.md) | 0.95 | 0.88 | 0.86 | 0.76 | 0.87 |
+| [13](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-thought-experiments.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [thought-experiments](../../candidates/thought-experiments.md) | 0.95 | 0.87 | 0.88 | 0.74 | 0.87 |
+| [14](what-distinguishes-grief-from-depression-systems-thinking.md) | what-distinguishes-grief-from-depression | [systems-thinking](../../candidates/systems-thinking.md) | 0.94 | 0.87 | 0.89 | 0.72 | 0.87 |
+| [15](why-is-the-riemann-hypothesis-hard-deutschian-epistemology.md) | why-is-the-riemann-hypothesis-hard | [deutschian-epistemology](../../candidates/deutschian-epistemology.md) | 0.94 | 0.89 | 0.88 | 0.69 | 0.87 |
+| [16](what-distinguishes-grief-from-depression-thought-experiments.md) | what-distinguishes-grief-from-depression | [thought-experiments](../../candidates/thought-experiments.md) | 0.94 | 0.90 | 0.87 | 0.68 | 0.87 |
+| [17](what-makes-an-explanation-hard-to-vary-thought-experiments.md) | what-makes-an-explanation-hard-to-vary | [thought-experiments](../../candidates/thought-experiments.md) | 0.95 | 0.94 | 0.80 | 0.71 | 0.87 |
+| [18](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-systems-thinking.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [systems-thinking](../../candidates/systems-thinking.md) | 0.93 | 0.85 | 0.88 | 0.76 | 0.86 |
+| [19](what-makes-an-explanation-hard-to-vary-extreme-cases.md) | what-makes-an-explanation-hard-to-vary | [extreme-cases](../../candidates/extreme-cases.md) | 0.95 | 0.93 | 0.78 | 0.74 | 0.86 |
+| [20](what-distinguishes-grief-from-depression-historical-genesis.md) | what-distinguishes-grief-from-depression | [historical-genesis](../../candidates/historical-genesis.md) | 0.93 | 0.89 | 0.85 | 0.71 | 0.86 |
+| [21](what-makes-an-explanation-hard-to-vary-ontology.md) | what-makes-an-explanation-hard-to-vary | [ontology](../../candidates/ontology.md) | 0.94 | 0.89 | 0.83 | 0.72 | 0.86 |
+| [22](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-extreme-cases.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [extreme-cases](../../candidates/extreme-cases.md) | 0.93 | 0.85 | 0.88 | 0.72 | 0.86 |
+| [23](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-mathematical-formalism.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.95 | 0.88 | 0.77 | 0.84 | 0.85 |
+| [24](what-makes-an-explanation-hard-to-vary-historical-genesis.md) | what-makes-an-explanation-hard-to-vary | [historical-genesis](../../candidates/historical-genesis.md) | 0.94 | 0.91 | 0.80 | 0.72 | 0.85 |
+| [25](why-is-the-riemann-hypothesis-hard-ontology.md) | why-is-the-riemann-hypothesis-hard | [ontology](../../candidates/ontology.md) | 0.93 | 0.85 | 0.87 | 0.73 | 0.85 |
+| [26](what-makes-an-explanation-hard-to-vary-counterfactual-reasoning.md) | what-makes-an-explanation-hard-to-vary | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.93 | 0.90 | 0.83 | 0.68 | 0.85 |
+| [27](what-distinguishes-grief-from-depression-criticism-preserving-variation-test.md) | what-distinguishes-grief-from-depression | [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md) | 0.93 | 0.86 | 0.85 | 0.72 | 0.85 |
+| [28](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-deutschian-epistemology.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [deutschian-epistemology](../../candidates/deutschian-epistemology.md) | 0.93 | 0.86 | 0.83 | 0.74 | 0.85 |
+| [29](what-makes-an-explanation-hard-to-vary-systems-thinking.md) | what-makes-an-explanation-hard-to-vary | [systems-thinking](../../candidates/systems-thinking.md) | 0.94 | 0.88 | 0.80 | 0.73 | 0.85 |
+| [30](why-is-the-riemann-hypothesis-hard-counterfactual-reasoning.md) | why-is-the-riemann-hypothesis-hard | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.92 | 0.87 | 0.85 | 0.66 | 0.84 |
+| [31](does-architecture-matter-more-than-model-scale-historical-genesis.md) | does-architecture-matter-more-than-model-scale | [historical-genesis](../../candidates/historical-genesis.md) | 0.92 | 0.87 | 0.84 | 0.68 | 0.84 |
+| [32](does-architecture-matter-more-than-model-scale-deutschian-epistemology.md) | does-architecture-matter-more-than-model-scale | [deutschian-epistemology](../../candidates/deutschian-epistemology.md) | 0.94 | 0.87 | 0.82 | 0.66 | 0.84 |
+| [33](what-makes-an-explanation-hard-to-vary-criticism-preserving-variation-test.md) | what-makes-an-explanation-hard-to-vary | [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md) | 0.95 | 0.90 | 0.76 | 0.68 | 0.83 |
+| [34](what-distinguishes-grief-from-depression-mathematical-formalism.md) | what-distinguishes-grief-from-depression | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.92 | 0.84 | 0.83 | 0.71 | 0.83 |
+| [35](does-architecture-matter-more-than-model-scale-extreme-cases.md) | does-architecture-matter-more-than-model-scale | [extreme-cases](../../candidates/extreme-cases.md) | 0.92 | 0.86 | 0.84 | 0.64 | 0.83 |
+| [36](does-architecture-matter-more-than-model-scale-thought-experiments.md) | does-architecture-matter-more-than-model-scale | [thought-experiments](../../candidates/thought-experiments.md) | 0.91 | 0.88 | 0.85 | 0.58 | 0.83 |
+| [37](what-makes-some-cities-get-safer-over-decades-while-comparab-systems-thinking.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [systems-thinking](../../candidates/systems-thinking.md) | 0.91 | 0.83 | 0.86 | 0.66 | 0.83 |
+| [38](why-is-the-riemann-hypothesis-hard-criticism-preserving-variation-test.md) | why-is-the-riemann-hypothesis-hard | [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md) | 0.94 | 0.88 | 0.83 | 0.55 | 0.83 |
+| [39](can-llms-create-new-knowledge-thought-experiments.md) | can-llms-create-new-knowledge | [thought-experiments](../../candidates/thought-experiments.md) | 0.93 | 0.86 | 0.82 | 0.62 | 0.83 |
+| [40](what-distinguishes-grief-from-depression-ontology.md) | what-distinguishes-grief-from-depression | [ontology](../../candidates/ontology.md) | 0.92 | 0.84 | 0.82 | 0.68 | 0.83 |
+| [41](does-architecture-matter-more-than-model-scale-systems-thinking.md) | does-architecture-matter-more-than-model-scale | [systems-thinking](../../candidates/systems-thinking.md) | 0.92 | 0.82 | 0.84 | 0.68 | 0.82 |
+| [42](why-is-the-riemann-hypothesis-hard-historical-genesis.md) | why-is-the-riemann-hypothesis-hard | [historical-genesis](../../candidates/historical-genesis.md) | 0.91 | 0.86 | 0.82 | 0.58 | 0.82 |
+| [43](what-makes-some-cities-get-safer-over-decades-while-comparab-ontology.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [ontology](../../candidates/ontology.md) | 0.91 | 0.80 | 0.86 | 0.63 | 0.81 |
+| [44](can-llms-create-new-knowledge-counterfactual-reasoning.md) | can-llms-create-new-knowledge | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.90 | 0.86 | 0.80 | 0.62 | 0.81 |
+| [45](can-llms-create-new-knowledge-extreme-cases.md) | can-llms-create-new-knowledge | [extreme-cases](../../candidates/extreme-cases.md) | 0.90 | 0.84 | 0.82 | 0.62 | 0.81 |
+| [46](what-distinguishes-grief-from-depression-extreme-cases.md) | what-distinguishes-grief-from-depression | [extreme-cases](../../candidates/extreme-cases.md) | 0.91 | 0.84 | 0.83 | 0.58 | 0.81 |
+| [47](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-deutschian-epistemology.md) | why-do-antibiotics-stop-working-faster-than-we-can-develop-n | [deutschian-epistemology](../../candidates/deutschian-epistemology.md) | 0.88 | 0.83 | 0.86 | 0.58 | 0.81 |
+| [48](can-llms-create-new-knowledge-deutschian-epistemology.md) | can-llms-create-new-knowledge | [deutschian-epistemology](../../candidates/deutschian-epistemology.md) | 0.92 | 0.84 | 0.79 | 0.63 | 0.81 |
+| [49](does-architecture-matter-more-than-model-scale-counterfactual-reasoning.md) | does-architecture-matter-more-than-model-scale | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.91 | 0.84 | 0.79 | 0.64 | 0.81 |
+| [50](does-architecture-matter-more-than-model-scale-criticism-preserving-variation-test.md) | does-architecture-matter-more-than-model-scale | [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md) | 0.92 | 0.84 | 0.80 | 0.60 | 0.81 |
+| [51](why-is-the-riemann-hypothesis-hard-mathematical-formalism.md) | why-is-the-riemann-hypothesis-hard | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.90 | 0.82 | 0.79 | 0.69 | 0.81 |
+| [52](what-distinguishes-grief-from-depression-counterfactual-reasoning.md) | what-distinguishes-grief-from-depression | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.89 | 0.82 | 0.84 | 0.58 | 0.80 |
+| [53](what-makes-some-cities-get-safer-over-decades-while-comparab-historical-genesis.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [historical-genesis](../../candidates/historical-genesis.md) | 0.90 | 0.80 | 0.83 | 0.63 | 0.80 |
+| [54](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-criticism-preserving-variation-test.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md) | 0.90 | 0.79 | 0.84 | 0.62 | 0.80 |
+| [55](does-architecture-matter-more-than-model-scale-ontology.md) | does-architecture-matter-more-than-model-scale | [ontology](../../candidates/ontology.md) | 0.92 | 0.81 | 0.77 | 0.66 | 0.80 |
+| [56](does-architecture-matter-more-than-model-scale-mathematical-formalism.md) | does-architecture-matter-more-than-model-scale | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.89 | 0.80 | 0.81 | 0.63 | 0.80 |
+| [57](can-llms-create-new-knowledge-historical-genesis.md) | can-llms-create-new-knowledge | [historical-genesis](../../candidates/historical-genesis.md) | 0.90 | 0.82 | 0.78 | 0.62 | 0.79 |
+| [58](why-is-the-riemann-hypothesis-hard-thought-experiments.md) | why-is-the-riemann-hypothesis-hard | [thought-experiments](../../candidates/thought-experiments.md) | 0.92 | 0.84 | 0.78 | 0.52 | 0.79 |
+| [59](what-makes-an-explanation-hard-to-vary-mathematical-formalism.md) | what-makes-an-explanation-hard-to-vary | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.91 | 0.86 | 0.69 | 0.66 | 0.79 |
+| [60](is-there-a-fact-of-the-matter-about-whether-a-ship-repaired-ontology.md) | is-there-a-fact-of-the-matter-about-whether-a-ship-repaired | [ontology](../../candidates/ontology.md) | 0.89 | 0.76 | 0.79 | 0.71 | 0.79 |
+| [61](why-is-the-riemann-hypothesis-hard-systems-thinking.md) | why-is-the-riemann-hypothesis-hard | [systems-thinking](../../candidates/systems-thinking.md) | 0.89 | 0.79 | 0.83 | 0.55 | 0.79 |
+| [62](what-makes-some-cities-get-safer-over-decades-while-comparab-mathematical-formalism.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.87 | 0.78 | 0.84 | 0.58 | 0.79 |
+| [63](can-llms-create-new-knowledge-criticism-preserving-variation-test.md) | can-llms-create-new-knowledge | [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md) | 0.90 | 0.80 | 0.78 | 0.58 | 0.78 |
+| [64](what-makes-some-cities-get-safer-over-decades-while-comparab-thought-experiments.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [thought-experiments](../../candidates/thought-experiments.md) | 0.89 | 0.79 | 0.83 | 0.49 | 0.78 |
+| [65](what-makes-some-cities-get-safer-over-decades-while-comparab-deutschian-epistemology.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [deutschian-epistemology](../../candidates/deutschian-epistemology.md) | 0.90 | 0.78 | 0.81 | 0.52 | 0.77 |
+| [66](what-makes-some-cities-get-safer-over-decades-while-comparab-extreme-cases.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [extreme-cases](../../candidates/extreme-cases.md) | 0.88 | 0.78 | 0.80 | 0.55 | 0.77 |
+| [67](can-llms-create-new-knowledge-ontology.md) | can-llms-create-new-knowledge | [ontology](../../candidates/ontology.md) | 0.90 | 0.78 | 0.74 | 0.62 | 0.77 |
+| [68](can-llms-create-new-knowledge-systems-thinking.md) | can-llms-create-new-knowledge | [systems-thinking](../../candidates/systems-thinking.md) | 0.90 | 0.74 | 0.78 | 0.62 | 0.77 |
+| [69](what-distinguishes-grief-from-depression-deutschian-epistemology.md) | what-distinguishes-grief-from-depression | [deutschian-epistemology](../../candidates/deutschian-epistemology.md) | 0.87 | 0.80 | 0.78 | 0.49 | 0.76 |
+| [70](what-makes-some-cities-get-safer-over-decades-while-comparab-counterfactual-reasoning.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md) | 0.87 | 0.76 | 0.81 | 0.52 | 0.76 |
+| [71](what-makes-some-cities-get-safer-over-decades-while-comparab-criticism-preserving-variation-test.md) | what-makes-some-cities-get-safer-over-decades-while-comparab | [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md) | 0.88 | 0.77 | 0.82 | 0.46 | 0.76 |
+| [72](can-llms-create-new-knowledge-mathematical-formalism.md) | can-llms-create-new-knowledge | [mathematical-formalism](../../candidates/mathematical-formalism.md) | 0.86 | 0.72 | 0.74 | 0.55 | 0.73 |
+
+## Top 5
+
+**1. why-do-antibiotics-stop-working-faster-than-we-can-develop-n × [historical-genesis](../../candidates/historical-genesis.md)** ([output](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-historical-genesis.md)) (total: 0.91)  
+Antibiotic resistance reflects outdated acute-era system design: mass chemical suppression structurally selects resistance; lasting solutions require ecological governance, not faster discovery.
+
+**2. why-do-antibiotics-stop-working-faster-than-we-can-develop-n × [counterfactual-reasoning](../../candidates/counterfactual-reasoning.md)** ([output](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-counterfactual-reasoning.md)) (total: 0.91)  
+Antibiotic failure stems less from slow discovery than from use-driven selection, transmission, and incentives treating effectiveness as renewable instead of depleting commons.
+
+**3. why-do-antibiotics-stop-working-faster-than-we-can-develop-n × [systems-thinking](../../candidates/systems-thinking.md)** ([output](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-systems-thinking.md)) (total: 0.90)  
+Antibiotic resistance outpaces discovery because systemic incentives and feedbacks accelerate resistance generation while slowing, discouraging, and rapidly exhausting new drugs.
+
+**4. why-do-antibiotics-stop-working-faster-than-we-can-develop-n × [extreme-cases](../../candidates/extreme-cases.md)** ([output](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-extreme-cases.md)) (total: 0.89)  
+Antibiotic resistance is structurally inevitable because biosphere-wide bacterial evolution outsearches bottlenecked drug development; durable control requires redesigning selection environments.
+
+**5. why-do-antibiotics-stop-working-faster-than-we-can-develop-n × [criticism-preserving-variation-test](../../candidates/criticism-preserving-variation-test.md)** ([output](why-do-antibiotics-stop-working-faster-than-we-can-develop-n-criticism-preserving-variation-test.md)) (total: 0.89)  
+Resistance outpaces antibiotics because bacterial adaptation is robust and parallel, while antibiotic development is brittle, serial, tightly constrained, and structurally misincentivized.
+
+## Changes
+
+- Promoted generated output → candidates: "Antibiotic failure outpaces antibiotic discovery because the system is structured to generate resistance faster than it generates durable new treatments. Resistance is driven by fast reinforcing selection and transmission loops, while antibiotic innovation is slowed by costly development, stewardship constrained sales, weak revenues, and centralized bottlenecks."

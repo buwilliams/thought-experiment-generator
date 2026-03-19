@@ -1,0 +1,24 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.86,
+  "explanatory_reach": 0.8,
+  "resistance_to_refutation": 0.62,
+  "total": 0.814,
+  "candidate_problems": [
+    {
+      "text": "What specific architectural mechanisms can implement conjecture-and-criticism in an LLM-based system such that they eliminate errors rather than merely re-rank outputs for plausibility?",
+      "score": 0.91
+    },
+    {
+      "text": "Can an LLM-based system improve the space of future conjectures through retained criticism without human intervention, and under what measurable conditions would that count as knowledge creation?",
+      "score": 0.88
+    },
+    {
+      "text": "Are there domains where token prediction alone, without explicit rival-generation and criticism modules, nevertheless yields genuinely hard-to-vary explanations?",
+      "score": 0.78
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.87,
+  "explanatory_reach": 0.84,
+  "resistance_to_refutation": 0.68,
+  "total": 0.8425,
+  "candidate_problems": [
+    {
+      "text": "How can an AI system operationalize 'survivability under criticism' as a selection pressure distinct from linguistic plausibility, in a way that measurably changes which hypotheses are retained?",
+      "score": 0.93
+    },
+    {
+      "text": "When layered architectures still rely on LLM-generated candidate pools and evaluators, what mechanisms can prevent higher-level search from collapsing back into historically legible but non-novel explanations?",
+      "score": 0.9
+    },
+    {
+      "text": "Are there domains where scaling alone does approximate conjecture generation well enough that structural additions provide little marginal epistemic benefit, contrary to the output's main claim?",
+      "score": 0.79
+    }
+  ]
+}

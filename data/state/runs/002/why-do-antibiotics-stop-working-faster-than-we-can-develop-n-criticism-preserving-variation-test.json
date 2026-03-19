@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
+  "conjecture_id": "criticism-preserving-variation-test",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.9,
+  "resistance_to_refutation": 0.78,
+  "total": 0.89,
+  "candidate_problems": [
+    {
+      "text": "Quantify which parts of the resistance system are truly load bearing by testing whether reducing selection pressure, transmission, or incentive misalignment yields the largest durable change in resistance-versus-invention rates.",
+      "score": 0.93
+    },
+    {
+      "text": "Determine whether AI-assisted molecule discovery can materially change the overall asymmetry if paired with stewardship, surveillance, and incentive redesign rather than used in isolation.",
+      "score": 0.88
+    },
+    {
+      "text": "Identify pathogen classes or care settings where the conjectured asymmetry breaks down and discovery can outpace resistance for sustained periods.",
+      "score": 0.86
+    }
+  ]
+}

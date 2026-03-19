@@ -1,0 +1,24 @@
+{
+  "problem_id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+  "conjecture_id": "criticism-preserving-variation-test",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.79,
+  "explanatory_reach": 0.84,
+  "resistance_to_refutation": 0.62,
+  "total": 0.8015,
+  "candidate_problems": [
+    {
+      "text": "Specify criticism sets for legal, historical, and metaphysical identity judgments and test whether historical-causal continuity plus reference-stabilizing practice consistently outperforms matter- or structure-based criteria across puzzle cases.",
+      "score": 0.9
+    },
+    {
+      "text": "Determine whether any non-contextual identity criterion can survive variation tests across repaired originals, exact replicas, teletransportation, and organism turnover cases.",
+      "score": 0.92
+    },
+    {
+      "text": "Clarify whether framework-relativity here reflects genuine pluralism about identity or merely ambiguity in the word 'same'.",
+      "score": 0.83
+    }
+  ]
+}

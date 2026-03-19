@@ -1,0 +1,28 @@
+{
+  "problem_id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.88,
+  "resistance_to_refutation": 0.79,
+  "total": 0.8835,
+  "candidate_problems": [
+    {
+      "text": "Model the inequality L(t) > D(t) across pathogens, drug classes, and health systems to determine when it is structurally inevitable and when it can be reversed.",
+      "score": 0.93
+    },
+    {
+      "text": "Test which interventions most effectively change the mapping from antibiotic use u(t) to resistance growth dR/dt: stewardship, rapid diagnostics, narrow-spectrum drugs, combinations, anti-evolution adjuncts, or transmission control.",
+      "score": 0.9
+    },
+    {
+      "text": "Quantify how much horizontal gene transfer versus de novo mutation contributes to the accessible resistance state space for different bacterial ecologies.",
+      "score": 0.88
+    },
+    {
+      "text": "Determine whether some antibiotic designs can decouple consumption from depletion of future efficacy, weakening the claimed invariant that use erodes informational value.",
+      "score": 0.86
+    }
+  ]
+}

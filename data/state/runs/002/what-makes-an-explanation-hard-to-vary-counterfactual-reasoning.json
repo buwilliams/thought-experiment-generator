@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.68,
+  "total": 0.852,
+  "candidate_problems": [
+    {
+      "text": "Can dependency density, interchangeable redundancy, and failure under nearby alternatives be operationalized into a test that distinguishes hard-to-vary explanations from merely coherent narratives?",
+      "score": 0.93
+    },
+    {
+      "text": "In what kinds of explanations do cross-domain reach and low degrees of freedom come apart, producing accounts that are tightly coupled locally but weak globally?",
+      "score": 0.82
+    },
+    {
+      "text": "Can an AI system systematically discover load-bearing explanatory parts by structured assumption-variation better than human evaluators, and on what benchmark cases?",
+      "score": 0.85
+    }
+  ]
+}

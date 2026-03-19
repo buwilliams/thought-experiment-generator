@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-distinguishes-grief-from-depression",
+  "conjecture_id": "criticism-preserving-variation-test",
+  "run": 2,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.86,
+  "explanatory_reach": 0.85,
+  "resistance_to_refutation": 0.72,
+  "total": 0.85,
+  "candidate_problems": [
+    {
+      "text": "Test whether loss-centered constraint structure versus generalized agency-collapse structure better predicts treatment response, time course, and relapse than symptom checklists alone.",
+      "score": 0.92
+    },
+    {
+      "text": "Determine how to classify mixed cases where bereavement triggers a state that begins as grief but becomes robust to removal of loss-centered cues.",
+      "score": 0.89
+    },
+    {
+      "text": "Identify whether retained capacity for meaning and fluctuation with reminders are genuinely load-bearing discriminators across cultures and age groups.",
+      "score": 0.86
+    }
+  ]
+}

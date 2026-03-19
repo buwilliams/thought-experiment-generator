@@ -1,0 +1,24 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 2,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.79,
+  "resistance_to_refutation": 0.63,
+  "total": 0.8095,
+  "candidate_problems": [
+    {
+      "text": "Specify what kinds of criticism inside an LLM-containing system are genuinely sensitive to explanatory truth rather than merely correlating with human textual preferences, and identify cases where the two come apart.",
+      "score": 0.9
+    },
+    {
+      "text": "Determine whether a system can generate genuinely new explanatory structure without external human critics, or whether human-supplied problem selection and criticism remain indispensable parts of the knowledge-creating architecture.",
+      "score": 0.86
+    },
+    {
+      "text": "Test whether iterative self-critique by language models can reject elegant nonsense reliably enough to count as error-correction rather than style refinement.",
+      "score": 0.82
+    }
+  ]
+}

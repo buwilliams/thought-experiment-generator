@@ -1,0 +1,24 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "criticism-preserving-variation-test",
+  "run": 2,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.8,
+  "resistance_to_refutation": 0.6,
+  "total": 0.8079999999999999,
+  "candidate_problems": [
+    {
+      "text": "Find a domain where increased scale alone, without richer criticism-preserving architecture, produces explanations whose central parts become harder to vary under a fixed criticism set.",
+      "score": 0.9
+    },
+    {
+      "text": "Determine the threshold at which substrate quality becomes 'good enough' that architecture dominates further epistemic progress.",
+      "score": 0.83
+    },
+    {
+      "text": "Operationalize and compare 'criticism-space densification' versus search-space reduction in a controlled discovery task.",
+      "score": 0.88
+    }
+  ]
+}

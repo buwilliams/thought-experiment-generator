@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+  "conjecture_id": "systems-thinking",
+  "run": 2,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.83,
+  "explanatory_reach": 0.86,
+  "resistance_to_refutation": 0.66,
+  "total": 0.8295,
+  "candidate_problems": [
+    {
+      "text": "Which feedback loop is usually the highest-leverage entry point in declining cities: legitimacy, public-space order, youth opportunity, or cross-agency coordination?",
+      "score": 0.9
+    },
+    {
+      "text": "What specific structural thresholds mark the transition from fear-and-withdrawal dynamics to self-reinforcing trust-and-order dynamics?",
+      "score": 0.88
+    },
+    {
+      "text": "How can a city raise enforcement effectiveness without triggering legitimacy losses that reverse the intended feedback loop?",
+      "score": 0.92
+    }
+  ]
+}

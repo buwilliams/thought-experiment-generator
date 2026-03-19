@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
+  "conjecture_id": "systems-thinking",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.9,
+  "resistance_to_refutation": 0.8,
+  "total": 0.895,
+  "candidate_problems": [
+    {
+      "text": "Which intervention changes the resistance/innovation system most: reducing unnecessary exposure, agricultural restrictions, rapid diagnostics, infection prevention, or delinked payment models?",
+      "score": 0.94
+    },
+    {
+      "text": "Under what conditions could faster antibiotic innovation actually outrun resistance for a sustained period, if any?",
+      "score": 0.86
+    },
+    {
+      "text": "How should the antibiotic commons be governed internationally to prevent local stewardship from being undermined by global transmission and agricultural use?",
+      "score": 0.91
+    }
+  ]
+}

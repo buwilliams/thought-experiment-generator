@@ -1,0 +1,13 @@
+{
+  "id": "resistance-producing-system-asymmetry",
+  "layer": "candidates",
+  "score": 0.895,
+  "rank": 7,
+  "run_count": 1,
+  "problem_coverage": [
+    "why-do-antibiotics-stop-working-faster-than-we-can-develop-n"
+  ],
+  "created_at": "2026-03-19T12:23:07.887135560+00:00",
+  "promoted_from": null,
+  "history": []
+}

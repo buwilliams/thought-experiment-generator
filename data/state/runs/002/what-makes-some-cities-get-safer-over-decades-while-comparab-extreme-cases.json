@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+  "conjecture_id": "extreme-cases",
+  "run": 2,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.78,
+  "explanatory_reach": 0.8,
+  "resistance_to_refutation": 0.55,
+  "total": 0.7715,
+  "candidate_problems": [
+    {
+      "text": "What measurable indicators show that a city has crossed from a violence-reproducing feedback regime into a violence-suppressing one?",
+      "score": 0.91
+    },
+    {
+      "text": "Which interventions preserve and improve local knowledge for precision violence reduction without eroding legitimacy or trust?",
+      "score": 0.89
+    },
+    {
+      "text": "Can two cities with similar violence trends be shown to differ specifically in information-retention and error-correction architecture rather than in exogenous factors like migration or macroeconomics?",
+      "score": 0.86
+    }
+  ]
+}

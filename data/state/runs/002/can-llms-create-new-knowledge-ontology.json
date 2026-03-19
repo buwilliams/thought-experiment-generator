@@ -1,0 +1,24 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "ontology",
+  "run": 2,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.78,
+  "explanatory_reach": 0.74,
+  "resistance_to_refutation": 0.62,
+  "total": 0.7679999999999999,
+  "candidate_problems": [
+    {
+      "text": "Specify what operational criteria would distinguish 'novelty of explanatory structure' from mere recombination in LLM outputs, especially in cases where no corpus match exists but the generative path is still distribution-shaped.",
+      "score": 0.9
+    },
+    {
+      "text": "Test whether criticism-guided architectures with weaker base models can outperform larger unguided models specifically on producing explanations that are hard to vary, rather than merely preferred by human raters.",
+      "score": 0.86
+    },
+    {
+      "text": "Clarify whether 'bringing an abstract informational object into existence' requires independent validation beyond usefulness inside the system's own critical loop.",
+      "score": 0.74
+    }
+  ]
+}

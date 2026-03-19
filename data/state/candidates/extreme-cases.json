@@ -1,13 +1,18 @@
 {
   "id": "extreme-cases",
   "layer": "candidates",
-  "score": 0.8303333333333334,
+  "score": 0.8347291666666667,
   "rank": 4,
-  "run_count": 1,
+  "run_count": 2,
   "problem_coverage": [
     "what-makes-an-explanation-hard-to-vary",
     "can-llms-create-new-knowledge",
-    "does-architecture-matter-more-than-model-scale"
+    "does-architecture-matter-more-than-model-scale",
+    "why-is-the-riemann-hypothesis-hard",
+    "what-makes-some-cities-get-safer-over-decades-while-comparab",
+    "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+    "what-distinguishes-grief-from-depression",
+    "why-do-antibiotics-stop-working-faster-than-we-can-develop-n"
   ],
   "created_at": "2026-03-18T00:00:00Z",
   "promoted_from": null,
@@ -26,6 +31,46 @@
       "run": 1,
       "score": 0.806,
       "problem_id": "does-architecture-matter-more-than-model-scale"
+    },
+    {
+      "run": 2,
+      "score": 0.8730000000000001,
+      "problem_id": "why-is-the-riemann-hypothesis-hard"
+    },
+    {
+      "run": 2,
+      "score": 0.8605,
+      "problem_id": "what-makes-an-explanation-hard-to-vary"
+    },
+    {
+      "run": 2,
+      "score": 0.7715,
+      "problem_id": "what-makes-some-cities-get-safer-over-decades-while-comparab"
+    },
+    {
+      "run": 2,
+      "score": 0.8555,
+      "problem_id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired"
+    },
+    {
+      "run": 2,
+      "score": 0.813,
+      "problem_id": "can-llms-create-new-knowledge"
+    },
+    {
+      "run": 2,
+      "score": 0.833,
+      "problem_id": "does-architecture-matter-more-than-model-scale"
+    },
+    {
+      "run": 2,
+      "score": 0.8119999999999999,
+      "problem_id": "what-distinguishes-grief-from-depression"
+    },
+    {
+      "run": 2,
+      "score": 0.8945000000000001,
+      "problem_id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n"
     }
   ]
 }

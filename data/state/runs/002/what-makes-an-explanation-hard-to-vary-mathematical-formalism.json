@@ -1,0 +1,28 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "mathematical-formalism",
+  "run": 2,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.86,
+  "explanatory_reach": 0.69,
+  "resistance_to_refutation": 0.66,
+  "total": 0.7889999999999999,
+  "candidate_problems": [
+    {
+      "text": "Define the admissible transformation family T for a given domain so that 'hard to vary' distinguishes relevant from irrelevant perturbations rather than merely punishing any change.",
+      "score": 0.92
+    },
+    {
+      "text": "Quantify 'dependency density' in explanatory graphs and test whether higher density predicts better out-of-sample explanatory performance or merely brittleness.",
+      "score": 0.86
+    },
+    {
+      "text": "Evaluate whether small equivalence class size under T correlates with truth, or whether some false but tightly constrained explanations also score as hard to vary.",
+      "score": 0.9
+    },
+    {
+      "text": "Operationalize the ratio of derived necessity to replaceable detail and compare it across scientific, historical, and narrative explanations.",
+      "score": 0.81
+    }
+  ]
+}

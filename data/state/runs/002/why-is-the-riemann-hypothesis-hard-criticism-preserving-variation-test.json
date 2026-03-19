@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-is-the-riemann-hypothesis-hard",
+  "conjecture_id": "criticism-preserving-variation-test",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.88,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.55,
+  "total": 0.8275,
+  "candidate_problems": [
+    {
+      "text": "Identify a candidate representation of the zeta function in which moving zeros off the critical line would simultaneously break multiple established constraints, making RH nearly forced.",
+      "score": 0.94
+    },
+    {
+      "text": "Determine whether analogies to finite-field cases or random-matrix statistics can be strengthened into genuinely load-bearing components of an RH explanation rather than remaining suggestive heuristics.",
+      "score": 0.9
+    },
+    {
+      "text": "Develop a method for distinguishing promising explanatory cores in RH from programs that are merely hard to vary because they are technically rigid but explanatorily shallow.",
+      "score": 0.88
+    }
+  ]
+}

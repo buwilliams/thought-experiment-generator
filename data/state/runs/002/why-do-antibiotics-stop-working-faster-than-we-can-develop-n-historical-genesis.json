@@ -1,0 +1,24 @@
+{
+  "problem_id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.93,
+  "explanatory_reach": 0.9,
+  "resistance_to_refutation": 0.84,
+  "total": 0.9115000000000001,
+  "candidate_problems": [
+    {
+      "text": "Which interventions most effectively decouple the flow of antibiotic use from the flow of resistance selection at system scale: narrow diagnostics, stewardship, infection prevention, agricultural restrictions, or microbiome-preserving therapies?",
+      "score": 0.95
+    },
+    {
+      "text": "How should reimbursement and regulatory systems be redesigned so that preserving antibiotic effectiveness is rewarded more strongly than maximizing sales volume?",
+      "score": 0.92
+    },
+    {
+      "text": "In which infectious contexts does the inherited 'mass chemical suppression' architecture remain locally optimal despite its long-run resistance costs, and why?",
+      "score": 0.84
+    }
+  ]
+}

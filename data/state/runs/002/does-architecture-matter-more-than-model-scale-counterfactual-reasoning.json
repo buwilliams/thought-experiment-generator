@@ -1,0 +1,24 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 2,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.79,
+  "resistance_to_refutation": 0.64,
+  "total": 0.8089999999999999,
+  "candidate_problems": [
+    {
+      "text": "Where is the threshold of substrate adequacy beyond which additional scale yields sharply diminishing epistemic returns unless paired with criticism and retention loops?",
+      "score": 0.9
+    },
+    {
+      "text": "Which architectural selection mechanisms best convert candidate diversity into hard-to-vary explanations rather than benchmark overfitting or internal-score optimization?",
+      "score": 0.89
+    },
+    {
+      "text": "Can systems lacking strong semantic understanding still make durable epistemic progress if their criticism filters are only approximate, and how would failure modes differ from novelty engines?",
+      "score": 0.84
+    }
+  ]
+}

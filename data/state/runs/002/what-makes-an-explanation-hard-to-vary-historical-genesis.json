@@ -1,0 +1,24 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "historical-genesis",
+  "run": 2,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.91,
+  "explanatory_reach": 0.8,
+  "resistance_to_refutation": 0.72,
+  "total": 0.8544999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can 'counterfactual dependency on the originating problem' be formalized well enough to distinguish genuinely load-bearing explanatory parts from merely historically associated ones?",
+      "score": 0.94
+    },
+    {
+      "text": "Do there exist hard-to-vary explanations whose parts are load-bearing without being traceable to a clear historical path of prior problem replacements, which would challenge the proposed historical criterion?",
+      "score": 0.87
+    },
+    {
+      "text": "How should an architecture search over 'problem transformations' rather than texts, and what representation would preserve the constraint network that makes substitutions fail?",
+      "score": 0.91
+    }
+  ]
+}
