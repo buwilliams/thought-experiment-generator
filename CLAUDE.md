@@ -17,7 +17,8 @@ cargo run -- list-problemsets                                             # list
 cargo run -- run --problemset <id>                                        # run on a set
 cargo run -- run                                                          # run (if only one set)
 cargo run -- run --problemset <id> --problem "..."                        # add problem then run
-cargo run -- run-all                                                      # run all problem sets sequentially
+cargo run -- run-all                                                      # run all unprocessed problem sets (run_count == 0)
+cargo run -- --fresh run-all                                              # reset to seed, then run all
 cargo run -- ask "question"                                               # ask the system; all lenses run concurrently, then consolidated
 cargo run -- review                                                       # data report + adversarial LLM self-assessment
 cargo run -- read                                                         # read last summary

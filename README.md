@@ -42,8 +42,9 @@ cargo run -- run --problemset a1b2c3d4
 cargo run -- run                               # works if only one set exists
 cargo run -- run --problemset a1b2c3d4 --problem "new problem text"
 
-# Run on all problem sets sequentially
+# Run on all problem sets that have not yet been run (skips already-processed sets)
 cargo run -- run-all
+cargo run -- --fresh run-all                    # reset to seed, then run all
 
 # Ask the system a question — answered by running all mind conjectures + top candidates
 # concurrently as separate lenses, then consolidating into a single best explanation
