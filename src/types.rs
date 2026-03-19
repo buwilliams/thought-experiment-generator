@@ -143,31 +143,21 @@ pub struct ProblemSet {
 
 // --- LLM response types ---
 
+/// Per-output entry returned by comparative evaluation.
 #[derive(Debug, Deserialize)]
-pub struct ConsistencyResponse {
-    pub score: f64,
-    pub reason: String,
+pub struct ComparativeEvalEntry {
+    pub problem_id: String,
+    pub consistency: f64,
+    pub hard_to_vary: f64,
+    pub explanatory_reach: f64,
+    pub resistance_to_refutation: f64,
+    pub candidate_problems: Vec<CandidateProblem>,
 }
 
+/// Response from comparative evaluation of all outputs for one lens.
 #[derive(Debug, Deserialize)]
-pub struct QuestionsResponse {
-    pub questions: Vec<String>,
-}
-
-#[derive(Debug, Deserialize)]
-pub struct AnswerEntry {
-    pub question: String,
-    pub answer: bool,
-}
-
-#[derive(Debug, Deserialize)]
-pub struct AnswersResponse {
-    pub answers: Vec<AnswerEntry>,
-}
-
-#[derive(Debug, Deserialize)]
-pub struct CandidatesResponse {
-    pub candidates: Vec<CandidateProblem>,
+pub struct ComparativeEvalResponse {
+    pub evaluations: Vec<ComparativeEvalEntry>,
 }
 
 /// Response when promoting a generated output into a reusable candidate conjecture.
@@ -187,19 +177,6 @@ pub struct SummaryResponse {
 #[derive(Debug, Deserialize)]
 pub struct DeduplicateResponse {
     pub remove: Vec<String>,
-}
-
-#[derive(Debug, Deserialize)]
-pub struct ExplanatoryReachResponse {
-    pub score: f64,
-    pub reason: String,
-}
-
-#[derive(Debug, Deserialize)]
-pub struct ResistanceToRefutationResponse {
-    pub score: f64,
-    pub counterexample: String,
-    pub reason: String,
 }
 
 #[derive(Debug, Deserialize)]

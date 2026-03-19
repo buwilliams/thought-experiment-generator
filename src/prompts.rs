@@ -14,10 +14,7 @@ pub struct PromptTemplates {
     mind_system_item: String,
     mind_system_empty: String,
     generate_output: ParsedTemplate,
-    consistency_check: ParsedTemplate,
-    generate_questions: ParsedTemplate,
-    answer_questions: ParsedTemplate,
-    candidate_problems: ParsedTemplate,
+    comparative_evaluate: ParsedTemplate,
     summarize_output: ParsedTemplate,
     promote_conjecture: ParsedTemplate,
     deduplicate: ParsedTemplate,
@@ -25,8 +22,6 @@ pub struct PromptTemplates {
     ask: ParsedTemplate,
     ask_consolidate: ParsedTemplate,
     novelty_check: ParsedTemplate,
-    explanatory_reach: ParsedTemplate,
-    resistance_to_refutation: ParsedTemplate,
     review_assess: ParsedTemplate,
 }
 
@@ -43,10 +38,7 @@ impl PromptTemplates {
             mind_system_item: mind_sys.get_section("Item"),
             mind_system_empty: mind_sys.get_section("Empty"),
             generate_output: load_and_parse(PROMPTS_DIR, "generate_output.md")?.into_system_user()?,
-            consistency_check: load_and_parse(PROMPTS_DIR, "consistency_check.md")?.into_system_user()?,
-            generate_questions: load_and_parse(PROMPTS_DIR, "generate_questions.md")?.into_system_user()?,
-            answer_questions: load_and_parse(PROMPTS_DIR, "answer_questions.md")?.into_system_user()?,
-            candidate_problems: load_and_parse(PROMPTS_DIR, "candidate_problems.md")?.into_system_user()?,
+            comparative_evaluate: load_and_parse(PROMPTS_DIR, "comparative_evaluate.md")?.into_system_user()?,
             summarize_output: load_and_parse(PROMPTS_DIR, "summarize_output.md")?.into_system_user()?,
             promote_conjecture: load_and_parse(PROMPTS_DIR, "promote_conjecture.md")?.into_system_user()?,
             deduplicate: load_and_parse(PROMPTS_DIR, "deduplicate.md")?.into_system_user()?,
@@ -54,8 +46,6 @@ impl PromptTemplates {
             ask: load_and_parse(PROMPTS_DIR, "ask.md")?.into_system_user()?,
             ask_consolidate: load_and_parse(PROMPTS_DIR, "ask_consolidate.md")?.into_system_user()?,
             novelty_check: load_and_parse(PROMPTS_DIR, "novelty_check.md")?.into_system_user()?,
-            explanatory_reach: load_and_parse(PROMPTS_DIR, "explanatory_reach.md")?.into_system_user()?,
-            resistance_to_refutation: load_and_parse(PROMPTS_DIR, "resistance_to_refutation.md")?.into_system_user()?,
             review_assess: load_and_parse(PROMPTS_DIR, "review_assess.md")?.into_system_user()?,
         })
     }
@@ -87,39 +77,25 @@ impl PromptTemplates {
         ])
     }
 
-    pub fn logical_consistency_check(&self, mind_system: &str, generated: &str) -> Prompt {
-        self.consistency_check.apply(&[
-            ("mind_system", mind_system),
-            ("generated", generated),
-        ])
-    }
-
-    pub fn generate_questions(&self, mind_system: &str, generated: &str, problem_summary: &str) -> Prompt {
-        self.generate_questions.apply(&[
-            ("mind_system", mind_system),
-            ("generated", generated),
-            ("problem_summary", problem_summary),
-        ])
-    }
-
-    pub fn answer_questions(&self, mind_system: &str, generated: &str, questions: &[String]) -> Prompt {
-        let formatted = questions
+    /// Evaluate all outputs for one lens comparatively in a single call.
+    /// outputs: Vec<(problem_id, problem_summary, output_text)>
+    pub fn comparative_evaluate(
+        &self,
+        mind_system: &str,
+        lens_summary: &str,
+        outputs: &[(String, String, String)],
+    ) -> Prompt {
+        let formatted = outputs
             .iter()
-            .enumerate()
-            .map(|(i, q)| format!("{}. {}", i + 1, q))
+            .map(|(id, summary, text)| {
+                format!("--- Problem: {} ---\nSummary: {}\n\n{}", id, summary, text)
+            })
             .collect::<Vec<_>>()
-            .join("\n");
-        self.answer_questions.apply(&[
+            .join("\n\n");
+        self.comparative_evaluate.apply(&[
             ("mind_system", mind_system),
-            ("generated", generated),
-            ("formatted_questions", &formatted),
-        ])
-    }
-
-    pub fn extract_candidate_problems(&self, mind_system: &str, generated: &str) -> Prompt {
-        self.candidate_problems.apply(&[
-            ("mind_system", mind_system),
-            ("generated", generated),
+            ("lens_summary", lens_summary),
+            ("formatted_outputs", &formatted),
         ])
     }
 
@@ -170,22 +146,6 @@ impl PromptTemplates {
             ("mind_full", mind_full),
             ("top_outputs", top_outputs),
             ("trajectory", trajectory),
-        ])
-    }
-
-    pub fn explanatory_reach(&self, mind_system: &str, generated: &str, problem_summary: &str) -> Prompt {
-        self.explanatory_reach.apply(&[
-            ("mind_system", mind_system),
-            ("generated", generated),
-            ("problem_summary", problem_summary),
-        ])
-    }
-
-    pub fn resistance_to_refutation(&self, mind_system: &str, generated: &str, problem_summary: &str) -> Prompt {
-        self.resistance_to_refutation.apply(&[
-            ("mind_system", mind_system),
-            ("generated", generated),
-            ("problem_summary", problem_summary),
         ])
     }
 

@@ -56,46 +56,82 @@ pub async fn run(
 
     let mind_system = templates.format_mind_system(&mind);
 
-    // Phase 1 + 2: Generate and evaluate all (problem, lens) pairs concurrently.
-    // Lenses = candidates + mind conjectures (mind is tested directly, not just used as context).
+    // Phase 1 + 2: For each lens, generate all problem outputs concurrently then
+    // evaluate them comparatively in one call. One task per lens.
     let mut handles = vec![];
-    for problem in &problemset.meta.problems {
-        for lens in candidates.iter().chain(mind.iter()) {
-            if state::generated_exists(run, &problem.meta.id, &lens.meta.id) {
-                info!("Resuming: skipping existing output {}-{}", problem.meta.id, lens.meta.id);
-                continue;
-            }
-            let client = Arc::clone(&client);
-            let templates = Arc::clone(&templates);
-            let config = config.clone();
-            let mind_system = mind_system.clone();
-            let conjecture_summary = lens.summary.clone();
-            let problemset_context = problemset.content.clone();
-            let problem_summary = problem.summary.clone();
-            let problem_id = problem.meta.id.clone();
-            let conjecture_id = lens.meta.id.clone();
-
-            handles.push(tokio::spawn(async move {
-                let p = templates.generate_output(&mind_system, &conjecture_summary, &problemset_context, &problem_summary);
-                let text = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
-
-                info!("Generated: {}-{}", problem_id, conjecture_id);
-
-                let output = evaluator::evaluate(
-                    &client, &config, &templates, &mind_system,
-                    &text, &problem_summary,
-                    &problem_id, &conjecture_id, run,
-                ).await?;
-
-                state::save_generated(&output)?;
-                anyhow::Ok(output)
-            }));
+    for lens in candidates.iter().chain(mind.iter()) {
+        let all_exist = problemset.meta.problems.iter()
+            .all(|p| state::generated_exists(run, &p.meta.id, &lens.meta.id));
+        if all_exist {
+            info!("Resuming: all outputs exist for lens {}", lens.meta.id);
+            continue;
         }
+
+        let client = Arc::clone(&client);
+        let templates = Arc::clone(&templates);
+        let config = config.clone();
+        let mind_system = mind_system.clone();
+        let lens_id = lens.meta.id.clone();
+        let lens_summary = lens.summary.clone();
+        let problemset_context = problemset.content.clone();
+        let problems = problemset.meta.problems.clone();
+
+        handles.push(tokio::spawn(async move {
+            // Generate all problems for this lens concurrently.
+            let mut gen_handles = vec![];
+            for problem in &problems {
+                let client = Arc::clone(&client);
+                let templates = Arc::clone(&templates);
+                let mind_system = mind_system.clone();
+                let lens_summary = lens_summary.clone();
+                let problemset_context = problemset_context.clone();
+                let problem_id = problem.meta.id.clone();
+                let problem_summary = problem.summary.clone();
+                let config = config.clone();
+                let lens_id_log = lens_id.clone();
+
+                gen_handles.push(tokio::spawn(async move {
+                    let p = templates.generate_output(
+                        &mind_system, &lens_summary, &problemset_context, &problem_summary,
+                    );
+                    let text = client.call_raw(Some(&p.system), &p.user, config.temperature).await?;
+                    info!("Generated: {}-{}", problem_id, lens_id_log);
+                    anyhow::Ok((problem_id, problem_summary, text))
+                }));
+            }
+
+            let raw_outputs: Vec<(String, String, String)> = {
+                let mut out = vec![];
+                for h in gen_handles {
+                    match h.await? {
+                        Ok(entry) => out.push(entry),
+                        Err(e) => tracing::warn!("Generation failed: {e:#}"),
+                    }
+                }
+                out
+            };
+
+            if raw_outputs.is_empty() {
+                return anyhow::Ok(());
+            }
+
+            // Comparative evaluation: one call covers all problems for this lens.
+            let generated_list = evaluator::evaluate_comparative(
+                &client, &config, &templates, &mind_system,
+                &lens_id, &lens_summary, &raw_outputs, run,
+            ).await?;
+
+            for g in &generated_list {
+                state::save_generated(g)?;
+            }
+
+            anyhow::Ok(())
+        }));
     }
 
     for handle in handles {
         if let Err(e) = handle.await? {
-            tracing::warn!("Generation failed: {e:#}");
+            tracing::warn!("Lens evaluation failed: {e:#}");
         }
     }
 
