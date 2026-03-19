@@ -226,15 +226,17 @@ On first run, seed state is copied to `data/state/`. `--fresh` resets `data/stat
 
 ## The Run
 
-A single run processes all problems against all candidate conjectures, generating one output per (problem × candidate conjecture) pair.
+A single run processes all problems against all **lenses** — every candidate conjecture plus every mind conjecture — generating one output per (problem × lens) pair.
 
 ### Phase 1 — Generate Outputs
 
-For each `(problem, candidate_conjecture)` pair:
+For each `(problem, lens)` pair, where lens = every candidate conjecture ∪ every mind conjecture:
 
-1. Build context: mind conjecture summaries (as system prompt) + candidate conjecture summary + problem set context (full `.md` content) + problem summary
+1. Build context: mind conjecture summaries (as system prompt) + lens summary + problem set context (full `.md` content) + problem summary
 2. Call LLM → generated output text
 3. Save generated output
+
+Mind conjectures participate as lenses alongside candidates. This makes the mind accountable — its conjectures are tested directly, not just used as background context.
 
 Runs concurrently up to `--max-concurrent`.
 
@@ -268,9 +270,13 @@ The `data/state/evaluations/` directory documents the criteria and weights but i
 
 **Output ranking:** sort all generated outputs by combined score descending.
 
-**Candidate conjecture ranking:** for each candidate conjecture, compute mean score across all problems it was applied to this run. Update `score` as rolling average weighted by `run_count`.
+**Score updates:**
+- Candidate conjectures: rolling average updated at full weight — `(old×n + new) / (n+1)`.
+- Mind conjectures: updated at half weight (inertia) — `(old×n + new×0.5) / (n+0.5)`. New evidence moves mind scores less; the mind requires sustained evidence to shift, not a single run.
 
-**Problem ranking:** for each problem, compute mean output score across all conjectures this run. Update `score` similarly.
+**Composite score:** `score × √(problem_coverage_breadth) × layer_weight`, where `layer_weight = 1.5` for mind conjectures and `1.0` for candidates. Mind conjectures carry more weight in all ranking comparisons — ask, promotion selection, demotion selection.
+
+**Problem ranking:** for each problem, compute mean output score across all lenses this run. Update `score` as rolling average.
 
 **Admit candidate problems:** candidate problems extracted during Phase 2 are evaluated for admission to the current problem set (admission threshold 0.6). The top 3 qualifying candidates per run are admitted, embedded directly in the problemset JSON.
 
@@ -279,14 +285,16 @@ The `data/state/evaluations/` directory documents the criteria and weights but i
 - Cap enforcement: if the set exceeds 10 problems after deduplication, the bottom-ranked problem (minimum `run_count` of 3) is removed from the set. This repeats until the set is at or below 10. If all remaining problems are below min_run_count (newly added, unscored), the cap overage is accepted until the next run.
 
 **Promotion (one per run, skipped if no eligible conjectures):**
-- Top-ranked candidate conjecture (by composite of score × problem_coverage breadth, with minimum `run_count` of 3) → promoted to mind. Breadth is measured as the number of distinct problems the conjecture has been applied to.
-- Top-ranked generated output (by score) → summarized into a new conjecture via `promote_generated` prompt → added to candidates
+- Top-ranked candidate conjecture (by composite, minimum `run_count` of 3) → promoted to mind.
+- Top-ranked generated output → promoted to candidates. Outputs generated using a mind conjecture as lens receive a 1.1× bonus in this selection — a slight tilt toward mind-lens outputs without penalizing unrelated conjectures.
 
 **Demotion (one per run, skipped if no eligible conjectures):**
-- Bottom-ranked mind conjecture (by score × problem_coverage breadth, minimum `run_count` of 3) → demoted to candidates
-- Bottom-ranked candidate conjecture (by same composite, minimum `run_count` of 3) → discarded
+- Bottom-ranked mind conjecture (by composite, minimum `run_count` of **6** — twice the candidate threshold) → demoted to candidates. Mind conjectures need twice the run history before demotion is eligible.
+- Bottom-ranked candidate conjecture (by composite, minimum `run_count` of 3, excluding the just-promoted output) → discarded.
 
-Promotion and demotion are skipped entirely if fewer than one conjecture meets the `run_count` threshold. This protects early runs where signal is thin.
+Promotion and demotion are skipped entirely if fewer than one conjecture meets the threshold. This protects early runs where signal is thin.
+
+**Resistance model summary:** five layers of asymmetry protect the mind from noise without making it rigid: (1) composite ×1.5 multiplier in all rankings; (2) score inertia (0.5 vote weight) slows score drift; (3) 2× demotion run_count guard; (4) 1.1× promotion bonus for mind-lens outputs; (5) live testing in Phase 1 keeps the mind accountable.
 
 ### Phase 4 — Report
 
