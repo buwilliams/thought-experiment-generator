@@ -1,0 +1,28 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 1,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.82,
+  "resistance_to_refutation": 0.68,
+  "total": 0.851,
+  "candidate_problems": [
+    {
+      "text": "How can the proposed notion of a 'relevant criticism set' be specified non-circularly, so that hard-to-vary does not just mean 'resists the criticisms we happened to choose'?",
+      "score": 0.95
+    },
+    {
+      "text": "Can there be explanations that are genuinely hard to vary because of dense internal constraints yet still false, and if so what additional criterion separates robustly false systems from knowledge?",
+      "score": 0.93
+    },
+    {
+      "text": "How should load-bearing parts be identified in explanations that admit multiple equivalent formulations, where local wording changes do not matter but deeper structural substitutions do?",
+      "score": 0.88
+    },
+    {
+      "text": "What algorithm could systematically search for criticism-preserving transformations without collapsing into brute-force variation over representations rather than explanatory structure?",
+      "score": 0.91
+    }
+  ]
+}

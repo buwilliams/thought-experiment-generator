@@ -1,0 +1,28 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "ontology",
+  "run": 1,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.79,
+  "explanatory_reach": 0.76,
+  "resistance_to_refutation": 0.61,
+  "total": 0.776,
+  "candidate_problems": [
+    {
+      "text": "Under what conditions does architectural feedback dominate additional scale, and are there domains where increased substrate capacity contributes more to epistemic progress than criticism-and-memory structure?",
+      "score": 0.93
+    },
+    {
+      "text": "What is the threshold at which retained abstractions reliably improve a system's future criticism rather than merely enlarging its store of reusable patterns?",
+      "score": 0.9
+    },
+    {
+      "text": "Can the claim that combinatorial explosion undermines substrate-first views be made precise enough to compare architectures that differ in decomposition, memory, and heuristic narrowing?",
+      "score": 0.84
+    },
+    {
+      "text": "Are there tasks where scaling alone produces explanatory structures with genuine reach, contrary to the claim that models are mainly accelerants rather than the essence of knowledge growth?",
+      "score": 0.89
+    }
+  ]
+}

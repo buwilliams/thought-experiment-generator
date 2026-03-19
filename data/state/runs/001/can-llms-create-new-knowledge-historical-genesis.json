@@ -2,21 +2,31 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "historical-genesis",
   "run": 1,
-  "logical_consistency": 0.95,
-  "hard_to_vary": 0.9,
-  "total": 0.915,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.82,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.62,
+  "total": 0.7939999999999999,
   "candidate_problems": [
     {
-      "text": "How can 'explanatorily productive' be operationalized without collapsing back into surface-performance metrics? The conjecture shifts the criterion from origin ('mere rearrangement') to function ('good explanations' that compress, rule out alternatives, transfer, and survive criticism), but it leaves open how to distinguish genuine explanatory structure from persuasive pastiche in a principled, testable way.",
-      "score": 0.97
-    },
-    {
-      "text": "What minimal surrounding system of criticism, memory, experimentation, and revision is sufficient for token-predictive models to participate in knowledge creation? The conjecture treats knowledge as a role in an error-correcting system rather than a property of a standalone model, but the boundary conditions of that larger system remain unspecified.",
-      "score": 0.95
-    },
-    {
-      "text": "Is there a substantive difference between distributed compression of regularities and knowledge, or are they the same phenomenon at different levels of description? The conjecture argues that 'mere rearrangement' is not a decisive objection, but it leaves unresolved whether compression plus recombination can by itself generate novel explanatory content, or whether an additional ingredient is required for genuine conjecture.",
+      "text": "What concrete architectural mechanisms would let an LLM-based system generate candidate explanatory structures and subject them to criticism in a way that is not reducible to next-token continuation?",
       "score": 0.9
+    },
+    {
+      "text": "What operational criterion distinguishes 'participating in knowledge creation' from merely supplying conjectural variety within a larger epistemic system?",
+      "score": 0.86
+    },
+    {
+      "text": "Can a system optimized for plausible continuation be repurposed for explanatory search without inheriting failure modes that systematically block criticism-sensitive improvement?",
+      "score": 0.84
+    },
+    {
+      "text": "What kinds of criticism and selection pressures are sufficient to transform raw linguistic conjectures into hard-to-vary explanations?",
+      "score": 0.81
+    },
+    {
+      "text": "Is the claim that knowledge creation is substrate-independent compatible with cases where representational substrate constrains what criticisms can even be formulated?",
+      "score": 0.8
     }
   ]
 }

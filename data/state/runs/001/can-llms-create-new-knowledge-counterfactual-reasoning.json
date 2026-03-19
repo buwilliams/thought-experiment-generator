@@ -2,21 +2,27 @@
   "problem_id": "can-llms-create-new-knowledge",
   "conjecture_id": "counterfactual-reasoning",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 0.7,
-  "total": 0.7719999999999999,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.86,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.62,
+  "total": 0.8079999999999999,
   "candidate_problems": [
     {
-      "text": "What, precisely, are the necessary and sufficient mechanisms of 'criticism' for a token-predicting system to count as participating in genuine knowledge creation? The conjecture treats error-correcting criticism as load-bearing, but leaves open how to operationalize criticism: external evaluation only, internal self-critique, world-interaction, adversarial dialogue, experimental testing, or some combination. The unresolved tension is whether there is a principled threshold separating mere output filtering from bona fide epistemic error-correction.",
-      "score": 0.96
+      "text": "What concrete forms of criticism are sufficiently truth-conducive to distinguish explanatory success from stylistic plausibility in an LLM-centered system, and which proxy critics systematically fail this test?",
+      "score": 0.9
     },
     {
-      "text": "Can latent structure learned by next-token prediction already constitute a form of knowledge, or is it only ever proto-knowledge until embedded in a corrective feedback loop? The conjecture says prediction alone can generate novel explanatory candidates yet denies those candidates the status of knowledge without criticism. The open question is whether this boundary is real and sharp, or whether knowledge comes in degrees such that compression, abstraction, and reliable generalization already partially instantiate knowledge.",
-      "score": 0.91
+      "text": "Can a system built from token-predictive components search over conceptual structures rather than token strings in a way that measurably changes which explanations survive criticism?",
+      "score": 0.84
     },
     {
-      "text": "Where does epistemic credit reside: in the model, in the larger human-model-environment system, or only in the full closed loop of conjecture, test, and revision? The conjecture shifts from properties of token prediction to properties of system architecture, creating a tension about ontology and attribution. If criticism is supplied by users, tools, experiments, or institutions, is the model itself a knowledge creator, or merely a component in a distributed knowledge-producing system?",
-      "score": 0.89
+      "text": "Under what conditions does replacing human judgment with automated scoring cause optimization for seeming explanatory rather than being explanatory, and can this be detected from system behavior alone?",
+      "score": 0.88
+    },
+    {
+      "text": "What memory and feedback mechanisms are required for recursive improvement to preserve genuine error-correcting gains rather than merely reinforce prior stylistic biases?",
+      "score": 0.8
     }
   ]
 }

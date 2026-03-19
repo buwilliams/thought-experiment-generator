@@ -1,0 +1,28 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "counterfactual-reasoning",
+  "run": 1,
+  "logical_consistency": 0.95,
+  "hard_to_vary": 0.94,
+  "explanatory_reach": 0.88,
+  "resistance_to_refutation": 0.74,
+  "total": 0.8939999999999999,
+  "candidate_problems": [
+    {
+      "text": "Can dependency density be operationalized so that two explanations of the same phenomenon can be compared for how many consequences flow from how few mutually constraining principles?",
+      "score": 0.92
+    },
+    {
+      "text": "How can one distinguish principle-level counterfactual fragility from mere overfitting, where an explanation breaks under variation because it is brittle rather than because it is deeply constrained?",
+      "score": 0.91
+    },
+    {
+      "text": "Can an automated system reliably separate representational substitutions that preserve dependency structure from principle substitutions that destroy explanatory necessity?",
+      "score": 0.9
+    },
+    {
+      "text": "Are there domains where genuinely good explanations are not highly hard-to-vary, and if so, what structural feature replaces dependency density there?",
+      "score": 0.86
+    }
+  ]
+}

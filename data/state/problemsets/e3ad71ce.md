@@ -1,1 +1,0 @@
-Emergence and Life — how complexity and self-replication arise from simple rules

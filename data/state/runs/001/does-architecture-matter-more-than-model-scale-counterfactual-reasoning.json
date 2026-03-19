@@ -2,21 +2,27 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "counterfactual-reasoning",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 0.6,
-  "total": 0.702,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.84,
+  "resistance_to_refutation": 0.68,
+  "total": 0.855,
   "candidate_problems": [
     {
-      "text": "How can 'epistemic progress' be operationalized independently of behavioral performance, so the conjecture can be tested rather than merely redescribed? The core unresolved tension is that the argument distinguishes knowledge from behavior, but without clear measures of cumulative error-correction, explanatory depth, retention of refuted ideas, and robustness under adversarial criticism, 'structure matters more than substrate' risks becoming unfalsifiable.",
-      "score": 0.97
-    },
-    {
-      "text": "What specific structural mechanisms are actually load-bearing, and under what conditions do they dominate substrate effects? The conjecture groups together adversarial criticism, memory of errors, institutional incentives, decomposition, and modular interfaces, but it remains open which of these are necessary, sufficient, or complementary, and whether there are threshold or interaction effects where additional compute again becomes the main bottleneck.",
+      "text": "What kinds of criticism count as genuinely independent of the generation process, and how independent must they be to eliminate attractive mistakes rather than merely restate the model's priors?",
       "score": 0.94
     },
     {
-      "text": "Is there a principled causal account showing that stronger error-correcting structure can substitute for, rather than merely complement, model capability? A major open question is whether modest-substrate systems with strong criticism can reliably outperform high-substrate weak-structure systems on frontier knowledge creation, or whether substrate is often a hidden prerequisite for generating the diversity, abstraction, and testable conjectures that structure then filters.",
-      "score": 0.92
+      "text": "How much substrate capability is minimally necessary for a structurally well-designed system to generate conjectures rich enough for criticism to matter?",
+      "score": 0.87
+    },
+    {
+      "text": "Can cross-domain constraints, simulation, formal consistency checks, and rival-explanation testing be combined into a criticism loop that outperforms larger models lacking such independence?",
+      "score": 0.89
+    },
+    {
+      "text": "When does increasing model scale improve epistemic progress directly, versus only improving the diversity of candidate fragments available to a higher-level architecture?",
+      "score": 0.85
     }
   ]
 }

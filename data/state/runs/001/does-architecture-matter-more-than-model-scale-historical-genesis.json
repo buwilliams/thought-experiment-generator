@@ -1,0 +1,32 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "historical-genesis",
+  "run": 1,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.87,
+  "explanatory_reach": 0.84,
+  "resistance_to_refutation": 0.68,
+  "total": 0.8425,
+  "candidate_problems": [
+    {
+      "text": "How can an AI system explicitly construct problems from contradictions rather than waiting for externally supplied tasks or prompts?",
+      "score": 0.93
+    },
+    {
+      "text": "What system design would implement adversarial criticism, promotion, and retention of error-surviving structures as stable feedback loops rather than ad hoc evaluation stages?",
+      "score": 0.91
+    },
+    {
+      "text": "Under what conditions does increasing model scale materially improve epistemic progress, rather than merely increasing conjectural variety without better error-correction?",
+      "score": 0.88
+    },
+    {
+      "text": "Can the historical function of scientific institutions—making bad explanations easier to kill and good problems easier to notice—be reproduced inside a machine architecture?",
+      "score": 0.9
+    },
+    {
+      "text": "If substrate matters only by supplying variety, what specific failures appear when variety is abundant but problem formation and criticism are weak?",
+      "score": 0.85
+    }
+  ]
+}

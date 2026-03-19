@@ -1,0 +1,28 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "systems-thinking",
+  "run": 1,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.78,
+  "explanatory_reach": 0.74,
+  "resistance_to_refutation": 0.58,
+  "total": 0.7619999999999999,
+  "candidate_problems": [
+    {
+      "text": "What specific feedback-loop components are jointly sufficient for the claimed threshold transition from recombination to cumulative knowledge creation in an LLM-centered system, and which omitted component causes failure?",
+      "score": 0.92
+    },
+    {
+      "text": "Can a system with strong criticism and retention loops but a relatively weak base predictor outperform a much larger predictor with weak evaluative feedback on explanation discovery tasks?",
+      "score": 0.88
+    },
+    {
+      "text": "Does feeding accepted outputs back into the generator actually improve evaluative criteria over time, or does it instead create self-reinforcing error loops and epistemic lock-in?",
+      "score": 0.9
+    },
+    {
+      "text": "How can one operationally distinguish 'candidate explanations not explicitly present in training' from mere high-dimensional recombinations of training-derived patterns?",
+      "score": 0.84
+    }
+  ]
+}

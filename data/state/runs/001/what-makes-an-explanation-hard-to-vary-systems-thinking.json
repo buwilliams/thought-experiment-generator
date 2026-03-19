@@ -1,0 +1,28 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "systems-thinking",
+  "run": 1,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.87,
+  "explanatory_reach": 0.83,
+  "resistance_to_refutation": 0.68,
+  "total": 0.8434999999999999,
+  "candidate_problems": [
+    {
+      "text": "Which of the four proposed structural properties—dependency density, cross-constraint, error-amplifying feedback, compression of alternatives—are necessary versus merely correlated with hard-to-vary explanations?",
+      "score": 0.94
+    },
+    {
+      "text": "Can there exist explanations that are genuinely hard to vary despite being only weakly coupled globally, for example through a single indispensable principle with few explicit dependency loops?",
+      "score": 0.87
+    },
+    {
+      "text": "How can 'compression of alternatives' be measured without conflating genuine explanatory constraint with arbitrary formal rigidity or overfitting?",
+      "score": 0.91
+    },
+    {
+      "text": "Do feedback-rich systems that kill non-load-bearing combinations quickly also risk eliminating fruitful early variants before their supporting constraint network is developed?",
+      "score": 0.88
+    }
+  ]
+}

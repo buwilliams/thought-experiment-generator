@@ -2,46 +2,35 @@
 
 ## Conjecture
 
-Let the system be modeled as a conditional distribution \(P_\theta(t_{n+1}\mid t_1,\dots,t_n)\) over token sequences, parameterized by \(\theta\), trained to minimize predictive loss on a corpus. The question becomes: when can a predictor over symbol strings instantiate explanatory knowledge rather than mere recombination?
+**Conjecture:** The decisive variable is not whether the system predicts tokens, but whether its architecture implements a **search over explanatory structures under nontrivial invariants**. If so, token prediction can be merely the coordinate system in which a deeper combinatorial process is expressed.
 
-A useful distinction is between three structures:
+Formally, let \(X\) be the space of candidate outputs as strings, and let \(S\) be the quotient of \(X\) by an equivalence relation of **explanatory sameness**: two strings are equivalent if they instantiate the same objects, relations, constraints, and inferential consequences. Einstein’s journal and many paraphrases are different points in \(X\) but nearly the same point in \(S\). The raw token-space cardinality argument greatly overestimates the relevant search space, because most variation is syntactic, not structural.
 
-1. **Surface sequence space**: strings of tokens.
-2. **Latent model structure**: compressive internal variables that support prediction across many contexts.
-3. **Explanatory structure**: representations that track counterfactual invariants — what would happen under variation, intervention, or error correction.
+So the real problem is: can an LLM-based system traverse \(S\) to find points not already in its training support? That depends on the presence of operators that preserve explanatory validity while transforming representation. Examples: abstraction, analogy, decomposition into thought-experiment objects/relations, recombination, and criticism by constraints such as consistency, reach, and “hard-to-vary” structure.
 
-Prediction alone constrains the system to preserve statistical regularities in token space. But if the data-generating process itself contains stable abstract relations, then minimizing predictive loss may force the model to encode some of those relations internally. In mathematical terms: if a low-loss predictor over a wide domain requires representing hidden variables \(z\) such that many distinct token sequences are explained by common transformations or invariants in \(z\), then the learned system is not merely memorizing strings. It is approximating a theory of the domain.
+This suggests a mathematical distinction between two regimes:
 
-The key invariant is not “has seen before” versus “has not seen before,” but **performance under transformation**. Suppose an explanation \(E\) supports successful answers not just on training-like prompts, but under paraphrase, composition, adversarial reformatting, novel application, and counterfactual questioning. Then \(E\) corresponds to a structure preserved across many transformations of expression. That is evidence the model has captured something more abstract than token adjacency.
+1. **Interpolation regime:** the system samples within a dense neighborhood of known explanatory structures.
+2. **Generative regime:** the system composes transformations \(T_1, T_2, \dots, T_n\) on known structures to reach an equivalence class in \(S\) not previously instantiated, while satisfying invariant constraints \(C\).
 
-So the conjecture is:
+Knowledge creation occurs if there exists a candidate \(s' \in S\) such that:
+- \(s'\) is not reducible to memorized or near-neighbor forms,
+- \(s'\) explains more than its predecessors (greater reach/compression),
+- \(s'\) survives criticism under the constraint set \(C\),
+- and it enters the future search process as a new usable invariant-bearing object.
 
-**A token-prediction system generates genuine knowledge to the extent that its internal structure encodes domain invariants that remain effective under broad transformations and counterfactual recombinations; absent such invariant-preserving generalization, its outputs are only rearrangements of prior data.**
+On this view, “predicting tokens” is compatible with creating knowledge, just as writing symbols is compatible with doing mathematics. The relevant question is whether the system has access to a **structured state space** and **selection dynamics** strong enough to move toward explanatory fixed points.
 
-This reframes the issue. “Rearranging what it has seen” is not the opposite of knowledge, because all explanation is assembled from prior representational resources. The real divide is between:
+The search-space argument helps, but only after translation: not “the token space is too large, so brute force fails,” but “successful discovery requires a sequence of mappings that collapse dimensionality by exploiting invariants.” Grammar, coherence, ontology extraction, object-relation graphs, and Deutschian criticism are all dimension-reducing projections. Their role is to induce a tractable submanifold of \(S\).
 
-- **syntactic recombination**, where competence collapses when form changes, and
-- **structural compression**, where the same internal relations generate correct explanations across variations.
-
-Explanations count as knowledge when they do more than fit observed token distributions: they must participate in an error-correcting structure. Mathematically, this means they support reliable inference over a family of transformations larger than the training surface. Knowledge is present when the model’s explanatory outputs are generated by internal representations that track constraints of the underlying domain, not merely local correlations in its linguistic shadow.
-
-Thus prediction is neither sufficient nor irrelevant. It is sufficient only when the predictive task is rich enough that success requires learning the invariant structure explanations depend on.
+So the illuminating claim is: **LLMs alone do not create knowledge by next-token prediction; but an architecture that uses LLMs as generators inside a mathematically constrained search-and-criticism loop can, in principle, create genuine knowledge.** The threshold is reached when the system’s internal filters track explanatory invariants well enough that novelty is produced in structure-space, not merely wording-space.
 
 ## Questions
 
-1. 1. If two models achieve the same low predictive loss on the corpus but only one remains accurate under paraphrase, composition, adversarial reformatting, novel application, and counterfactual questioning, does the conjecture require saying that only the latter has genuine knowledge? — **yes**
-2. 2. Does the conjecture break if broad transformation-robust performance can be produced by a very large lookup-like interpolation over token patterns without any shared hidden variables z that explain many sequences by common invariants? — **yes**
-3. 3. If a model encodes hidden variables z that compress the data well but those variables fail specifically on intervention and error-correction tasks, must the conjecture deny that this compression counts as explanatory knowledge? — **yes**
-4. 4. Is the claim that prediction is sufficient only when the task is rich enough load-bearing in the sense that, without a wide-domain predictive objective, the conjecture can no longer explain how token prediction could ever yield knowledge? — **yes**
-5. 5. If the data-generating process lacks stable abstract relations and is mostly contingent surface regularity, does the conjecture force the conclusion that minimizing predictive loss cannot produce genuine knowledge in that domain? — **yes**
-6. 6. Does the conjecture depend on counterfactual invariance being a stricter criterion than ordinary out-of-distribution accuracy, so that replacing it with generic generalization would weaken the explanation? — **yes**
-7. 7. If a model answers correctly on novel applications but fails under semantically equivalent paraphrases, does the conjecture classify this as mere syntactic recombination rather than knowledge? — **yes**
-8. 8. Is the distinction between surface sequence space, latent model structure, and explanatory structure essential, such that collapsing latent structure and explanatory structure into one category would lose the ability to state what separates compression from explanation? — **yes**
-9. 9. If internal representations track domain constraints but cannot be used to correct their own errors when challenged, does the conjecture require withholding the label of knowledge because error-correcting structure is part of the explanation? — **yes**
-10. 10. Does the conjecture rely on the idea that the relevant invariants belong to the underlying domain rather than to the training corpus alone, so that replacing domain constraints with corpus-specific statistical regularities would destroy its explanatory force? — **yes**
 
 ## Candidate Problems
 
-- What precise criterion distinguishes 'explanatory structure' from merely highly compressed predictive structure? The conjecture appeals to counterfactual invariants and transformation-stable performance, but it leaves open whether these can be defined in a model-independent, non-circular way rather than operationally by benchmark success. A key open problem is to formalize when an internal representation genuinely tracks domain constraints instead of just supporting broad interpolation over token space. (score: 0.96)
-- Under what conditions does next-token prediction actually force the learning of latent variables that correspond to real domain invariants? The conjecture says prediction is sufficient only when the task is 'rich enough,' but this raises an unresolved tension: what properties of the data distribution, training objective, model class, and environment make explanatory knowledge identifiable rather than optional? This is the central bridge needed between predictive success and genuine theory-like internal structure. (score: 0.99)
-- How can error-correction and intervention-sensitivity be detected or measured from within a trained language model? The conjecture treats knowledge as participation in an error-correcting structure, yet it remains unclear how to test whether a model can revise, localize, and preserve explanations under perturbation rather than merely produce robust-looking outputs. This suggests a new problem of designing transformation/intervention probes that discriminate true invariant-tracking from adversarially resilient recombination. (score: 0.93)
+- Define a non-circular equivalence relation of explanatory sameness on strings that distinguishes structural identity from paraphrase and test whether independently generated explanations map to the same class. (score: 0.89)
+- Specify measurable invariant constraints C that can discriminate interpolation in structure-space from genuinely novel explanatory classes, rather than merely novel wording. (score: 0.92)
+- Determine whether abstraction, analogy, decomposition, recombination, and criticism can be formalized as operators on S that are closed enough to support search without collapsing distinct explanations into one class. (score: 0.83)
+- Identify a concrete architecture in which LLM-generated candidates enter a search-and-criticism loop and produce a structure that was absent from training support yet survives external criticism. (score: 0.90)

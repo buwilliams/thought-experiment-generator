@@ -2,21 +2,27 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "mathematical-formalism",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 0.9,
-  "total": 0.9119999999999999,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.8,
+  "explanatory_reach": 0.84,
+  "resistance_to_refutation": 0.58,
+  "total": 0.7989999999999999,
   "candidate_problems": [
     {
-      "text": "How can 'epistemic progress' K(t) be operationalized so the conjecture is testable rather than definitional? The proposal depends on distinguishing real knowledge growth from output volume or benchmark fit, but it leaves open what measurable invariants track explanatory depth, error-correction, transfer, and cumulative retention. Without a non-circular metric, claims about structural bottlenecks versus substrate bottlenecks are underdetermined.",
-      "score": 0.97
-    },
-    {
-      "text": "Where exactly is the substrate threshold at which bottlenecks shift from S to the conjecture-criticism-selection loop, and is such a threshold stable across domains? The conjecture asserts a regime change once substrate is 'sufficient,' but does not specify whether this is sharp, gradual, task-dependent, or continually moving as richer hypothesis classes become relevant. This is a central unresolved tension because if the threshold is elusive or endogenous, the main claim may collapse into a context-sensitive scaling law rather than a robust principle.",
+      "text": "Characterize the structured hypothesis space H and show, on a concrete task, that architectural changes alter navigability of H more than equivalent increases in parameters or compute.",
       "score": 0.94
     },
     {
-      "text": "What is the correct causal structure among S, G, T, and P: are they separable bottlenecks, or does substrate fundamentally reshape the quality of generation, testing, and selection? The conjecture treats S as largely distinct from the intensive variables, yet in real systems more compute and model capacity can improve test severity, enable better search over critiques, and alter promotion dynamics. Resolving whether structure is an independent leverage point or mostly an emergent function of substrate is crucial for deciding where intervention actually belongs.",
-      "score": 0.96
+      "text": "Test the claimed invariant that improving the criticism function shrinks the effective hypothesis space, including cases where stronger criticism may instead reject true but unconventional hypotheses.",
+      "score": 0.88
+    },
+    {
+      "text": "Determine the regime boundary where additional substrate ceases to be the main bottleneck and architectural feedback loops become dominant for epistemic progress.",
+      "score": 0.91
+    },
+    {
+      "text": "Formalize promotion operators that feed successful structures back into the hypothesis prior and evaluate whether this changes future search more than scaling the base model alone.",
+      "score": 0.86
     }
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 1,
+  "logical_consistency": 0.9,
+  "hard_to_vary": 0.78,
+  "explanatory_reach": 0.72,
+  "resistance_to_refutation": 0.56,
+  "total": 0.7529999999999999,
+  "candidate_problems": [
+    {
+      "text": "What specific forms of criticism must a conjecture-and-criticism architecture implement for an LLM-generated explanation to count as surviving criticism better than rivals, rather than merely surviving preference ranking or benchmark selection?",
+      "score": 0.9
+    },
+    {
+      "text": "Can an LLM-centered system generate genuinely new explanatory variants in domains where no external empirical test is available, such as mathematics or philosophy, using criticism alone?",
+      "score": 0.86
+    },
+    {
+      "text": "What distinguishes a merely associative generation process that later gets filtered by critics from a process that actually explores explanatory structure rather than lexical variation?",
+      "score": 0.8
+    },
+    {
+      "text": "Under what conditions would a closed-loop LLM critique system fail by converging on mutually reinforcing but false explanations that appear hard to vary within the loop?",
+      "score": 0.88
+    }
+  ]
+}

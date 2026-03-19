@@ -2,54 +2,39 @@
 
 ## Conjecture
 
-Let the problem be represented as a dynamical system.
+**Conjecture:** The bottleneck is primarily **structural, not substrate-level**, because epistemic progress is not well-modeled as sampling from an astronomically large token space, but as navigating a much smaller **structured hypothesis space** defined by invariants, constraints, and admissible transformations. Model size matters insofar as it helps represent and traverse that structure, but it is not the decisive variable.
 
-Define:
-- \(S\): substrate capacity — model size, compute, memory, bandwidth.
-- \(G\): conjecture-generation rate — production of candidate explanations/hypotheses.
-- \(T\): test severity — how strongly errors are exposed.
-- \(P\): promotion/selection quality — how well better conjectures survive and worse ones are discarded.
-- \(K(t)\): epistemic progress over time.
+Mathematically, the crucial move is to change the state space. If we define raw generation as sequences over a vocabulary \(V\), then the space of length-\(n\) outputs is \(|V|^n\), which is intractable. But explanations are not arbitrary strings. They are structured objects \(E\) with internal relations: entities, observables, symmetries, counterfactual dependencies, and consistency conditions. So the relevant space is not \(V^n\) but something like a constrained manifold \(H \subseteq G\), where \(G\) is the space of candidate generative models/explanations and \(H\) is carved out by filters such as:
 
-Then treat progress as a function not of \(S\) alone but of a pipeline:
-\[
-\dot K \propto \min\{f(S),\, G,\, T,\, P\}
-\]
-or more structurally,
-\[
-\dot K = F(S)\cdot H(G,T,P),
-\]
-where \(F\) gives expressive/search capacity and \(H\) gives epistemic efficiency.
+- logical consistency,
+- compatibility with background knowledge,
+- compression/unification,
+- hard-to-vary structure,
+- empirical and counterfactual adequacy.
 
-This already suggests an invariant: if \(H \approx 0\), then increasing \(S\) has vanishing returns. A larger substrate can enlarge the space of candidate outputs, but without strong formation, criticism, and selection, it mostly increases volume, not knowledge. In mathematical terms, substrate expands the state space; structure determines the flow through it.
+These filters are not post hoc decorations; they define the geometry of the search. The substrate question asks whether larger \(V\), more parameters, or more compute is enough. The structural view says: only if those resources improve movement through \(H\), not merely throughput in \(V^n\).
 
-A second useful distinction is between extensive and intensive variables. \(S\) is extensive: more chips, parameters, tokens. But epistemic quality in conjecture formation and testing is intensive: error-detection per unit computation, discriminative power per hypothesis, retention of truth-conducive structure. Bottlenecks in extensive variables can often be relieved by scaling; bottlenecks in intensive variables require reorganization of process.
+This yields a sharper claim: **knowledge creation occurs when the system implements operators over hypotheses that preserve explanatory invariants while exploring nontrivial transformations**. In other words, novelty is not random deviation but movement under constraint. Einstein did not search word strings; he transformed relational structures—simultaneity, observer frames, light propagation—while preserving deeper constraints from Maxwell and relativity principles.
 
-So the conjecture is:
+So the bottleneck is the absence of a strong enough architecture for:
 
-**Conjecture:** The dominant bottleneck for AI epistemic progress is structural, not substrate-level, once substrate exceeds a threshold sufficient to represent and manipulate rich candidate hypotheses. Beyond that threshold, progress is constrained mainly by the topology of the conjecture–criticism–selection loop: how hypotheses are generated, how errors are made legible, and how updates are promoted. Scaling substrate without improving this loop produces sublinear epistemic returns and can even worsen error persistence by amplifying poorly selected conjectures.
+1. **Representation:** encoding candidate explanations as structured objects, not just text;
+2. **Transformation:** generating variants by recombining relations, analogies, and thought-experiment frames;
+3. **Selection:** applying criticism via explicit criteria that reject easy-to-vary or weak explanations;
+4. **Promotion:** feeding successful structures back into the hypothesis prior, altering future search.
 
-Why? Because knowledge growth is not identical to output generation. It requires a transformation with asymmetry: good ideas must survive criticism more often than bad ones. That asymmetry lives in \(T\) and \(P\), and partly in \(G\), not merely in \(S\). If the selection mechanism cannot distinguish explanatory depth from surface fit, then extra compute mostly samples more of the wrong equivalence class.
+In systems terms, substrate provides capacity; structure defines feedback. Without the feedback loop, more capacity just samples more of the wrong space. With the loop, even modest substrate can outperform brute-force scaling by recursively collapsing the effective search volume.
 
-A structural prediction follows: systems with smaller \(S\) but better criticism and promotion protocols can outperform larger systems on cumulative epistemic tasks. Another: apparent gains from scaling will plateau unless accompanied by mechanisms that preserve invariants of good inquiry — falsifiability, cross-context consistency, and error-correctability.
+A useful invariant here is: **the better the criticism function, the smaller the effective hypothesis space**. Therefore recursive improvement does not require magical emergence; it requires a search process whose rejection and promotion operators increasingly align with explanatory truth-tracking criteria.
 
-So the collision of mathematics with the problem illuminates this: substrate sets feasible region; structure determines trajectory. The bottleneck to epistemic progress is therefore chiefly in the higher-order relations above the substrate.
+So the collision of mathematics and this problem suggests: **LLMs can contribute to knowledge creation if embedded in an architecture that shifts search from token combinatorics to structured hypothesis dynamics.** The limiting factor is not mainly how large the model is, but whether the system above it defines the right state space and update rules.
 
 ## Questions
 
-1. 1. Does the conjecture require a nontrivial substrate threshold beyond which further increases in S cease to be the dominant determinant of \(\dot K\), rather than allowing the threshold to be moved arbitrarily high or removed entirely? — **yes**
-2. 2. If \(H(G,T,P)\approx 0\), must the model predict near-zero epistemic progress even when \(F(S)\) is made very large, or could large S alone still rescue progress without changing the conjecture’s core explanation? — **yes**
-3. 3. Is the claim that the dominant bottleneck is structural tied specifically to cumulative epistemic tasks, such that replacing those tasks with one-shot output tasks would alter the conjecture’s prediction? — **yes**
-4. 4. Does the explanation depend on T and P carrying the asymmetry by which better hypotheses survive criticism more often than worse ones, rather than that asymmetry being relocatable entirely into S without loss? — **yes**
-5. 5. If selection cannot distinguish explanatory depth from surface fit, does the conjecture specifically predict that scaling S increases sampling from the wrong equivalence class rather than merely adding neutral diversity? — **yes**
-6. 6. Is the extensive–intensive distinction load-bearing here, such that treating G, T, and P as scalable extensive quantities like chips or parameters would undermine the conjecture’s bottleneck argument? — **yes**
-7. 7. Does the conjecture specifically require that poor promotion can make larger substrate worsen error persistence by amplifying bad conjectures, rather than only yielding harmlessly diminishing returns? — **no**
-8. 8. Would a system with smaller S but stronger falsifiability, cross-context consistency checks, and error-correctability have to be able to outperform a larger system on cumulative knowledge growth for the conjecture to hold? — **yes**
-9. 9. Is the claim 'substrate sets feasible region; structure determines trajectory' essential in the sense that changing it to 'substrate determines both feasible region and trajectory' would collapse the conjecture’s explanatory content? — **yes**
-10. 10. Does the use of a bottleneck form like \(\min\{f(S),G,T,P\}\) or separable \(F(S)\cdot H(G,T,P)\) matter to the argument, so that allowing arbitrary compensations among S, G, T, and P would make the conjecture too easy to vary? — **yes**
 
 ## Candidate Problems
 
-- How can 'epistemic progress' K(t) be operationalized so the conjecture is testable rather than definitional? The proposal depends on distinguishing real knowledge growth from output volume or benchmark fit, but it leaves open what measurable invariants track explanatory depth, error-correction, transfer, and cumulative retention. Without a non-circular metric, claims about structural bottlenecks versus substrate bottlenecks are underdetermined. (score: 0.97)
-- Where exactly is the substrate threshold at which bottlenecks shift from S to the conjecture-criticism-selection loop, and is such a threshold stable across domains? The conjecture asserts a regime change once substrate is 'sufficient,' but does not specify whether this is sharp, gradual, task-dependent, or continually moving as richer hypothesis classes become relevant. This is a central unresolved tension because if the threshold is elusive or endogenous, the main claim may collapse into a context-sensitive scaling law rather than a robust principle. (score: 0.94)
-- What is the correct causal structure among S, G, T, and P: are they separable bottlenecks, or does substrate fundamentally reshape the quality of generation, testing, and selection? The conjecture treats S as largely distinct from the intensive variables, yet in real systems more compute and model capacity can improve test severity, enable better search over critiques, and alter promotion dynamics. Resolving whether structure is an independent leverage point or mostly an emergent function of substrate is crucial for deciding where intervention actually belongs. (score: 0.96)
+- Characterize the structured hypothesis space H and show, on a concrete task, that architectural changes alter navigability of H more than equivalent increases in parameters or compute. (score: 0.94)
+- Test the claimed invariant that improving the criticism function shrinks the effective hypothesis space, including cases where stronger criticism may instead reject true but unconventional hypotheses. (score: 0.88)
+- Determine the regime boundary where additional substrate ceases to be the main bottleneck and architectural feedback loops become dominant for epistemic progress. (score: 0.91)
+- Formalize promotion operators that feed successful structures back into the hypothesis prior and evaluate whether this changes future search more than scaling the base model alone. (score: 0.86)

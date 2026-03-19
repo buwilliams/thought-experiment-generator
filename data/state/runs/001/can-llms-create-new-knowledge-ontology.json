@@ -1,0 +1,28 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "ontology",
+  "run": 1,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.74,
+  "explanatory_reach": 0.72,
+  "resistance_to_refutation": 0.58,
+  "total": 0.738,
+  "candidate_problems": [
+    {
+      "text": "What specific architectural additions are sufficient to turn token prediction into an information-selecting process governed by criticism, memory, and explanatory constraint, rather than merely a more elaborate recombination system?",
+      "score": 0.88
+    },
+    {
+      "text": "How can one distinguish, in operational terms, a system whose internal informational possibilities have genuinely changed from one that only appears more capable because external human critics are supplying the decisive selection?",
+      "score": 0.91
+    },
+    {
+      "text": "Does recursive search-and-critique with memory actually escape 'inductive closure,' or can it be shown to remain confined to transformations of already-implicit informational patterns in the training ecology?",
+      "score": 0.94
+    },
+    {
+      "text": "What would count as a concrete case of machine-generated explanation that solves a problem better than before without relying on human judgment for the critical step?",
+      "score": 0.86
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "problem_id": "what-makes-an-explanation-hard-to-vary",
+  "conjecture_id": "ontology",
+  "run": 1,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.8,
+  "resistance_to_refutation": 0.67,
+  "total": 0.8185,
+  "candidate_problems": [
+    {
+      "text": "Can 'low freedom of informational substitution without loss of explanatory power' be operationalized into a test that separates genuine explanations from merely coherent narratives across multiple domains?",
+      "score": 0.95
+    },
+    {
+      "text": "How should counterfactual fragility be balanced against robustness, given that some good explanations tolerate variation in presentation while preserving the same underlying structure?",
+      "score": 0.87
+    },
+    {
+      "text": "Do dense internal constraints reliably produce broad external reach, or can there be tightly constrained explanations that remain narrow and non-generative?",
+      "score": 0.9
+    },
+    {
+      "text": "What are the right units of analysis for informational structure—objects, relations, symmetries, invariants, criticisms—and can different choices change whether an explanation appears hard to vary?",
+      "score": 0.88
+    }
+  ]
+}

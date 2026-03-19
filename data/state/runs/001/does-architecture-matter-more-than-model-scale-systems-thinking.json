@@ -1,0 +1,28 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "systems-thinking",
+  "run": 1,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.82,
+  "explanatory_reach": 0.79,
+  "resistance_to_refutation": 0.62,
+  "total": 0.8009999999999999,
+  "candidate_problems": [
+    {
+      "text": "Across what task regimes does architectural feedback dominate model scale, and where does increased substrate become the primary bottleneck instead?",
+      "score": 0.93
+    },
+    {
+      "text": "What measurable properties of an evaluator-generator-retention loop predict cumulative explanatory improvement rather than just increased output filtering?",
+      "score": 0.91
+    },
+    {
+      "text": "Can explicit object/relation decomposition and iterative criticism break 'inductive closure' in practice, or do they merely re-express the same learned distribution in a more structured form?",
+      "score": 0.89
+    },
+    {
+      "text": "Is there a quantifiable threshold at which recursive criticism begins improving future search bias cycle-to-cycle, and how does that threshold scale with model capability?",
+      "score": 0.9
+    }
+  ]
+}

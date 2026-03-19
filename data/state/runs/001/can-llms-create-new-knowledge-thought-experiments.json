@@ -1,0 +1,28 @@
+{
+  "problem_id": "can-llms-create-new-knowledge",
+  "conjecture_id": "thought-experiments",
+  "run": 1,
+  "logical_consistency": 0.91,
+  "hard_to_vary": 0.79,
+  "explanatory_reach": 0.74,
+  "resistance_to_refutation": 0.58,
+  "total": 0.7675,
+  "candidate_problems": [
+    {
+      "text": "What specific criticism filters are sufficient to distinguish explanatory improvement from stylistic or benchmark-fitting improvement in a token-predictive system?",
+      "score": 0.92
+    },
+    {
+      "text": "Can a system built from token prediction plus structured criticism generate explanations that outperform all training-set-adjacent recombinations on genuinely novel problems, rather than only appearing novel to human judges?",
+      "score": 0.88
+    },
+    {
+      "text": "What forms of memory and recursive reuse actually change the search distribution toward rare explanatory configurations rather than merely reinforcing earlier mistakes or local optima?",
+      "score": 0.84
+    },
+    {
+      "text": "Is there a principled boundary between guided exploration of explanatory possibility and very sophisticated interpolation, or does the distinction collapse under some architectures?",
+      "score": 0.8
+    }
+  ]
+}

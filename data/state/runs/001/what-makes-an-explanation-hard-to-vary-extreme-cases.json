@@ -2,21 +2,27 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "extreme-cases",
   "run": 1,
-  "logical_consistency": 0.93,
-  "hard_to_vary": 0.2,
-  "total": 0.41900000000000004,
+  "logical_consistency": 0.94,
+  "hard_to_vary": 0.9,
+  "explanatory_reach": 0.88,
+  "resistance_to_refutation": 0.68,
+  "total": 0.869,
   "candidate_problems": [
     {
-      "text": "How can 'load-bearing' be made into a non-circular, operational criterion that distinguishes genuine explanatory necessity from artifacts of representation, decomposition, or coding choice? The conjecture relies on deletion/substitution/compression tests, but these outcomes may vary with how the explanation is partitioned, formalized, or described. A key open problem is to define invariants of load-bearingness across equivalent representations.",
+      "text": "How can 'small criticism-stable region of possibility space' be operationalized so that structurally equivalent variants are distinguished from genuinely different explanations?",
       "score": 0.95
     },
     {
-      "text": "How can we distinguish brittleness caused by real mechanism-specific constraints from brittleness caused by overfitting, narrow domain selection, or omitted higher-level invariants? The conjecture notes this risk but does not provide a principled test for when failure under perturbation indicates explanatory depth versus parochialism.",
+      "text": "Are there good explanations in probabilistic or highly redundant domains where many nearby variations survive, making low swappability an unreliable marker of explanatory depth?",
       "score": 0.93
     },
     {
-      "text": "What is the precise relationship between compression, minimal description, and explanatory adequacy? The conjecture suggests that compression-resistance marks essential constraint-sets, but minimal description length and explanatory power can come apart: highly compressed accounts may lose causal or generative content, while longer accounts may encode necessary mechanistic structure. Clarifying this tradeoff is an important open problem.",
-      "score": 0.9
+      "text": "What perturbation set is appropriate for testing load-bearingness without making the result arbitrary to the chosen variation operators?",
+      "score": 0.92
+    },
+    {
+      "text": "Can an explanation appear hard to vary only because it is underspecified at the right abstraction level, thereby passing perturbation tests without genuinely constraining the phenomenon?",
+      "score": 0.89
     }
   ]
 }

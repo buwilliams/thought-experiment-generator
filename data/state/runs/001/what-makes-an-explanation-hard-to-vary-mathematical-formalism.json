@@ -2,21 +2,27 @@
   "problem_id": "what-makes-an-explanation-hard-to-vary",
   "conjecture_id": "mathematical-formalism",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 0.7,
-  "total": 0.7719999999999999,
+  "logical_consistency": 0.93,
+  "hard_to_vary": 0.88,
+  "explanatory_reach": 0.82,
+  "resistance_to_refutation": 0.67,
+  "total": 0.8405,
   "candidate_problems": [
     {
-      "text": "How should explanatory equivalence and the symmetry group be defined non-circularly? The conjecture says a transformation is symmetry-like when it preserves explanatory success relative to constraints C, but what counts as 'the same explanation,' 'non-equivalent part,' or preservation of the explanatory map is itself unclear and theory-laden. A new problem is to construct a precise criterion of explanatory equivalence that does not merely restate the original notion of load-bearingness.",
-      "score": 0.97
+      "text": "Define explanatory rigidity rho(E) in a way that separates genuine load-bearing constraint from brittle overfitting, since both can make local perturbations fail.",
+      "score": 0.96
     },
     {
-      "text": "Does low automorphism actually track explanatory depth or essence across levels of abstraction, or does it confuse representation-rigidity with world-rigidity? The same explanation may look highly symmetric in one encoding and rigid in another, and higher-level explanations often intentionally ignore micro-differences while remaining powerful. A key open question is which symmetries are objective features of the explanatory structure versus artifacts of description, granularity, or modeling choice.",
-      "score": 0.94
+      "text": "Determine whether small invariant-preserving transformation sets reliably track explanatory quality across domains, including mathematics, physics, and historical explanation.",
+      "score": 0.9
     },
     {
-      "text": "What is the relation between minimal sufficiency, robustness, and truth-conduciveness? The conjecture links 'all parts load-bearing' with minimal sufficiency and structural rigidity, but many good explanations are robust, redundant, and multiply realizable; redundancy can increase error-correction and generality rather than indicate ornament. A worthwhile problem is to determine when redundancy is explanatory slack versus when it is itself part of the explanatory virtue.",
+      "text": "Construct perturbation tests that distinguish semantic rephrasings from structure-altering substitutions so that T*(E) is not contaminated by surface variation.",
       "score": 0.92
+    },
+    {
+      "text": "Investigate whether high explanatory reach and high rigidity can come apart—for example, explanations with broad scope but many interchangeable micro-realizations.",
+      "score": 0.87
     }
   ]
 }

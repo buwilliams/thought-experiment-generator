@@ -1,0 +1,28 @@
+{
+  "problem_id": "does-architecture-matter-more-than-model-scale",
+  "conjecture_id": "deutschian-epistemology",
+  "run": 1,
+  "logical_consistency": 0.92,
+  "hard_to_vary": 0.84,
+  "explanatory_reach": 0.76,
+  "resistance_to_refutation": 0.61,
+  "total": 0.7975,
+  "candidate_problems": [
+    {
+      "text": "What concrete architectural components are necessary for a system to externalize criticism in a way that improves explanatory content, rather than just optimizing for plausibility or benchmark performance?",
+      "score": 0.92
+    },
+    {
+      "text": "Are there domains where substrate improvements alone increase the system's ability to generate and recognize explanatory error, contrary to the claim that the bottleneck is primarily structural?",
+      "score": 0.89
+    },
+    {
+      "text": "How can one tell whether a gain from model scale is merely better stylistic search-space narrowing or a genuine increase in the system's capacity to represent explanatory objects under criticism?",
+      "score": 0.87
+    },
+    {
+      "text": "If understanding can be partially realized at the system level, what failure modes arise when the architecture supplies criticism but the substrate cannot represent the relevant abstractions?",
+      "score": 0.85
+    }
+  ]
+}

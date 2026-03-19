@@ -2,21 +2,27 @@
   "problem_id": "does-architecture-matter-more-than-model-scale",
   "conjecture_id": "thought-experiments",
   "run": 1,
-  "logical_consistency": 0.94,
-  "hard_to_vary": 1.0,
-  "total": 0.982,
+  "logical_consistency": 0.88,
+  "hard_to_vary": 0.72,
+  "explanatory_reach": 0.78,
+  "resistance_to_refutation": 0.49,
+  "total": 0.7355,
   "candidate_problems": [
     {
-      "text": "Where is the actual threshold at which substrate ceases to be the dominant bottleneck and epistemic structure becomes the limiting factor? The conjecture assumes a competence threshold beyond which more scale mostly increases proposal throughput, but it leaves unresolved whether such a threshold exists, how to detect it, and whether scaling itself changes criticism quality enough to move the threshold. This is central because if substrate improvements also improve evaluation, world-modeling, and self-critique, then the structure-vs-substrate distinction may be less clean than claimed.",
-      "score": 0.95
+      "text": "Under what task conditions can a smaller model with conjecture-criticism architecture outperform a much larger model lacking that structure on genuine explanation-generation rather than on proxy metrics?",
+      "score": 0.94
     },
     {
-      "text": "What concrete institutional or algorithmic structures genuinely improve error-correction rather than merely adding bureaucracy or new proxies? The conjecture proposes rival conjectures, adversarial criticism, explicit problem statements, and error histories, but it remains open which of these mechanisms actually produce more truth-conducive selection in practice, how they interact, and how they avoid Goodharting into performative criticism or benchmark-like meta-metrics. This is a key open problem because the thesis stands or falls on whether 'epistemic structure' can be operationalized without recreating the same anti-epistemic dynamics at a higher level.",
-      "score": 0.97
+      "text": "How much substrate capacity is minimally required before architectural search and criticism can operate over structured explanatory objects rather than collapsing into noise?",
+      "score": 0.9
     },
     {
-      "text": "How should epistemic progress be measured in open-ended AI research so that one can distinguish genuine knowledge creation from increased output, local usefulness, or benchmark gaming? The conjecture criticizes existing proxies as non-truth-tracking, but it does not specify a replacement criterion for comparing World S and World T. Without a workable measure of cumulative error-correction, explanatory depth, or cross-context survival of conjectures, the claim risks being unfalsifiable. Turning this into a rigorous evaluative framework is an important unresolved tension.",
-      "score": 0.93
+      "text": "Are there domains where scale itself effectively implements the needed search compression, making the architecture-vs-scale distinction weaker than the conjecture claims?",
+      "score": 0.86
+    },
+    {
+      "text": "Which feedback-loop designs for memory, criticism, and promotion actually produce cumulative epistemic progress instead of just better local selection among generated outputs?",
+      "score": 0.87
     }
   ]
 }
