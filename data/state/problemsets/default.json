@@ -39,6 +39,71 @@
       "title": "What makes an explanation hard to vary?",
       "summary": "What structural properties distinguish an explanation whose parts are all load-bearing from one where details can be swapped freely without damaging the account?",
       "full_text": "What makes an explanation hard to vary?"
+    },
+    {
+      "meta": {
+        "id": "why-do-antibiotics-stop-working-faster-than-we-can-develop-n",
+        "source": "user",
+        "score": 0.0,
+        "rank": 4,
+        "run_count": 0,
+        "created_at": "2026-03-19T12:17:03.422116469+00:00"
+      },
+      "title": "Why do antibiotics stop working faster than we can develop new ones?",
+      "summary": "Why do antibiotics stop working faster than we can develop new ones?",
+      "full_text": "Why do antibiotics stop working faster than we can develop new ones?"
+    },
+    {
+      "meta": {
+        "id": "what-makes-some-cities-get-safer-over-decades-while-comparab",
+        "source": "user",
+        "score": 0.0,
+        "rank": 5,
+        "run_count": 0,
+        "created_at": "2026-03-19T12:17:03.532514064+00:00"
+      },
+      "title": "What makes some cities get safer over decades while comparable ones don't?",
+      "summary": "What makes some cities get safer over decades while comparable ones don't?",
+      "full_text": "What makes some cities get safer over decades while comparable ones don't?"
+    },
+    {
+      "meta": {
+        "id": "is-there-a-fact-of-the-matter-about-whether-a-ship-repaired",
+        "source": "user",
+        "score": 0.0,
+        "rank": 6,
+        "run_count": 0,
+        "created_at": "2026-03-19T12:17:03.637331013+00:00"
+      },
+      "title": "Is there a fact of the matter about whether a ship repaired plank-by-plank is th",
+      "summary": "Is there a fact of the matter about whether a ship repaired plank-by-plank is the same ship?",
+      "full_text": "Is there a fact of the matter about whether a ship repaired plank-by-plank is the same ship?"
+    },
+    {
+      "meta": {
+        "id": "what-distinguishes-grief-from-depression",
+        "source": "user",
+        "score": 0.0,
+        "rank": 7,
+        "run_count": 0,
+        "created_at": "2026-03-19T12:17:03.740395357+00:00"
+      },
+      "title": "What distinguishes grief from depression?",
+      "summary": "What distinguishes grief from depression?",
+      "full_text": "What distinguishes grief from depression?"
+    },
+    {
+      "meta": {
+        "id": "why-is-the-riemann-hypothesis-hard",
+        "source": "user",
+        "score": 0.0,
+        "rank": 8,
+        "run_count": 0,
+        "created_at": "2026-03-19T12:17:03.847702193+00:00"
+      },
+      "title": "Why is the Riemann hypothesis hard?",
+      "summary": "Why is the Riemann hypothesis hard?",
+      "full_text": "Why is the Riemann hypothesis hard?"
     }
   ],
   "run_count": 1,
