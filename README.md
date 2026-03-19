@@ -54,11 +54,8 @@ cat question.md | cargo run -- ask
 
 # Full system review: mind, candidates, score trajectory, conjecture score history,
 # problem sets, novelty check, and adversarial LLM self-assessment
+# Output saved to data/state/review.md (markdown with links) and printed to stdout (plain text)
 cargo run -- review
-
-# Novelty check and trajectory are also available as standalone commands
-cargo run -- novelty-check
-cargo run -- trajectory
 
 # Read last run summary without running
 cargo run -- read

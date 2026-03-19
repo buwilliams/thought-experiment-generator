@@ -121,12 +121,6 @@ pub enum Command {
     /// Full system review: mind, candidates, score trajectory, problem sets, and LLM self-assessment
     Review,
 
-    /// Check all conjectures for novelty — are they restatements of known theories?
-    NoveltyCheck,
-
-    /// Show score trajectory across all runs and per-conjecture score history
-    Trajectory,
-
     /// Add a new conjecture to the mind or candidates layer
     AddConjecture {
         /// Target layer: "mind" or "candidates"
@@ -211,15 +205,6 @@ async fn main() -> Result<()> {
             let templates = teg::prompts::PromptTemplates::load()?;
             let writer = teg::review::report()?;
             teg::review::assess(client, &config, &templates, writer).await?;
-        }
-
-        Command::NoveltyCheck => {
-            let templates = teg::prompts::PromptTemplates::load()?;
-            teg::novelty::check(client, &config, &templates).await?;
-        }
-
-        Command::Trajectory => {
-            teg::trajectory::report()?;
         }
 
         Command::CreateProblemset { text, file } => {
