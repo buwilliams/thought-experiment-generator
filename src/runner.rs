@@ -204,12 +204,14 @@ pub async fn run_all(client: Arc<LlmClient>, config: &Config) -> Result<()> {
     if sets.is_empty() {
         anyhow::bail!("No problem sets found. Create one with:\n  cargo run -- create-problemset \"...\"");
     }
-    let pending: Vec<_> = sets.iter().filter(|ps| ps.meta.run_count == 0).collect();
+    let pending: Vec<_> = sets.iter()
+        .filter(|ps| ps.meta.problems.iter().any(|p| p.meta.run_count == 0))
+        .collect();
     if pending.is_empty() {
-        println!("All {} problem set(s) have already been run. Use --fresh to reset and re-run all.", sets.len());
+        println!("All {} problem set(s) are fully processed. Use --fresh to reset and re-run all.", sets.len());
         return Ok(());
     }
-    println!("Running {} of {} problem set(s) (skipping {} already run)...", pending.len(), sets.len(), sets.len() - pending.len());
+    println!("Running {} of {} problem set(s) ({} fully processed)...", pending.len(), sets.len(), sets.len() - pending.len());
     for ps in &pending {
         let display = ps.content.lines().next().unwrap_or("").trim();
         println!("\n=== Problem set: {} — {} ===", ps.meta.id, display);
